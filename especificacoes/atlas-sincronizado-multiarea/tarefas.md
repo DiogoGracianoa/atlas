@@ -116,3 +116,33 @@ Decisões de implementação:
 - Indicador: ponto no cabeçalho (celular) e linha no menu (computador, onde o cabeçalho some); campos com fonte de 16 px para o iOS não dar zoom.
 
 Não verificado: Supabase real (envio de e-mail, PKCE de verdade, template com código) — roteiro e2e-real após o passo manual.
+
+## Registro de implementação — Etapa 4 (2026-11-05)
+
+| Cenário / critério | Evidência | Resultado |
+|---|---|---|
+| S01–S05, S11 (tombstone), S12 | `tests/app/merge.test.mjs` (13 casos) | RED (módulo ausente) → verde |
+| S06, S07, S10 (fila) | `tests/app/queue.test.mjs` (6 casos) | RED → verde |
+| AC05, AC06, AC07, AC09, AC10, AC19, AC20, AC21, AC22, AC24, AC27, AC28, L03, S09, S13, 4xx/5xx | `tests/app/sync.test.mjs` (18 casos): dois "aparelhos" com armazenamento e relógio próprios contra um backend falso com PK, RLS por usuário e a regra do trigger | RED (18 falhas) → verde |
+| O01 | navegador: servidor local derrubado, recarregar | abriu do cache, navegou entre temas, marcou |
+| fiação no app | navegador com Supabase falso: login por código sobe 4 marcações e 1 nota locais; desmarcar sobe na hora; 3 edições de nota → 1 envio após o debounce; linha nova "de outro aparelho" aparece na capa ao reconectar | ok |
+| C02 (regressão) | 37 páginas × hash do texto, sem login | 37/37 idênticas ao original |
+| suíte | `node --test`: 115 testes; `validate.mjs` | verde |
+
+Defeitos encontrados pelos testes e corrigidos:
+
+- `flushing`/`pulling` ficavam presos quando o corpo assíncrono terminava antes da atribuição (fila vazia): `await null` no início.
+- Sair da conta com envio em andamento lia `state.user.id` nulo: envio e busca capturam o usuário no início e descartam o resultado se ele mudou.
+
+Decisões de implementação:
+
+- **Busca antes de enviar** ao abrir, ao voltar ao primeiro plano, ao reconectar e na nova tentativa: é o que permite detectar anotação alterada nos dois lados (RN31). Edição com o app online sobe direto.
+- `resetAt` no estado local: Zerar num aparelho que ainda não buscou o servidor também zera linhas que só existem lá.
+- Operação descartada por 4xx sai da fila, mas o estado local continua valendo e volta a subir na mescla seguinte (o estado local é a verdade do aparelho).
+- Nova tentativa após falha de rede/servidor: 30 s; status "offline" enquanto isso.
+- Dados recebidos redesenham a tela mantendo a rolagem; se a anotação está em edição, espera o campo perder o foco.
+- Service worker (`sw.js`): rede primeiro com 3 s para o próprio site; cache primeiro para jsDelivr e arquivos de fonte; CSS de fontes com revalidação; API do Supabase nunca passa pelo cache.
+
+Risco residual declarado: com os dois aparelhos **online editando a mesma anotação ao mesmo tempo**, a escrita mais nova vence sem marcador (não há busca entre as teclas). Edição offline ou em momentos diferentes é preservada.
+
+Não verificado: Supabase real (formato real das respostas, RLS com JWT real), iOS Safari real, área nunca aberta offline com mais de uma área disponível (só há política).

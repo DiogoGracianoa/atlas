@@ -61,12 +61,14 @@
 ```
 atlas-v3        { v:3, marks:{ "politica/m1e1:def": {done, at} },
                   notes:{ "politica/m1e1": {body, at, base:{body, at}|null} },
-                  lastAt:{route, at}|null, totals:{ politica: 94 },
+                  lastAt:{route, at}|null, resetAt:ISO|null, totals:{ politica: 89 },
                   size, theme }
 atlas-v3-queue  { "p|politica/m1e1|def": {table, row}, "n|politica/m1e1": {...} }
 ```
 
 - Chave v2 `atlas-estudos-v2` lida uma vez (L04) e preservada.
+- `resetAt` (acrescentado na Etapa 4): horário do último Zerar; na mescla, linha remota desconhecida e anterior a ele conta como desmarcada/vazia e é sobrescrita.
+- `base` de uma nota é atualizada quando o servidor confirma o envio, e na mescla.
 - `size ∈ {s,m,l,xl}`, `theme ∈ {auto,light,dark}`: nunca sincronizados.
 
 ## K5 — backup JSON · v3 (lê v2) · dono: app

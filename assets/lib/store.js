@@ -11,7 +11,7 @@ const THEMES = ["auto", "light", "dark"];
 const MARK_KEY = /^[a-z0-9-]+\/[A-Za-z0-9_-]+:(def|vid|book|do)$/;
 const ITEM_KEY = /^[a-z0-9-]+\/[A-Za-z0-9_-]+$/;
 
-const empty = () => ({ v: 3, marks: {}, notes: {}, lastAt: null, totals: {}, size: "m", theme: "auto" });
+const empty = () => ({ v: 3, marks: {}, notes: {}, lastAt: null, resetAt: null, totals: {}, size: "m", theme: "auto" });
 const isObj = (v) => !!v && typeof v === "object" && !Array.isArray(v);
 
 function sanitize(p) {
@@ -26,6 +26,7 @@ function sanitize(p) {
     s.notes[k] = { body: v.body, at: v.at, base };
   }
   if (isObj(p.lastAt) && ITEM_KEY.test(p.lastAt.route || "") && validAt(p.lastAt.at)) s.lastAt = { route: p.lastAt.route, at: p.lastAt.at };
+  if (validAt(p.resetAt)) s.resetAt = p.resetAt;
   if (isObj(p.totals)) for (const [k, v] of Object.entries(p.totals)) if (Number.isInteger(v) && v > 0) s.totals[k] = v;
   if (SIZES.includes(p.size)) s.size = p.size;
   if (THEMES.includes(p.theme)) s.theme = p.theme;
@@ -113,7 +114,7 @@ export function createStore({ storage, now = () => new Date().toISOString() }) {
       else if (op.type === "note") {
         const prev = state.notes[op.key];
         state.notes[op.key] = { body: op.value.body, at: op.value.at, base: op.value.base !== undefined ? op.value.base : (prev ? prev.base : null) };
-      }
+      } else if (op.type === "last") state.lastAt = { route: op.value.route, at: op.value.at };
     }
     save();
     emit({ type: "batch", ops, silent });
@@ -121,10 +122,19 @@ export function createStore({ storage, now = () => new Date().toISOString() }) {
 
   function resetAll() {
     const at = now();
+    state.resetAt = at;
     const ops = [];
     for (const key of Object.keys(state.marks)) ops.push({ type: "mark", key, value: { done: false, at } });
     for (const key of Object.keys(state.notes)) ops.push({ type: "note", key, value: { body: "", at } });
     applyOps(ops);
+  }
+
+  // Registra a última versão confirmada pelo servidor (sem avisar ninguém).
+  function setNoteBase(item, base) {
+    const n = state.notes[item];
+    if (!n) return;
+    n.base = { body: base.body, at: base.at };
+    save();
   }
 
   return {
@@ -132,6 +142,6 @@ export function createStore({ storage, now = () => new Date().toISOString() }) {
     on: (fn) => { subs.add(fn); return () => subs.delete(fn); },
     isDone: (item, mark) => !!(state.marks[item + ":" + mark] && state.marks[item + ":" + mark].done),
     note: (item) => (state.notes[item] ? state.notes[item].body : ""),
-    setMark, setNote, setPref, setLastAt, setTotal, applyOps, resetAll
+    setMark, setNote, setPref, setLastAt, setTotal, applyOps, resetAll, setNoteBase
   };
 }

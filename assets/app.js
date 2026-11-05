@@ -389,7 +389,7 @@ function notesHTML(n) {
   const v = store.note(n.key);
   return '<section class="block"><div class="block-h"><h2>Suas anotações</h2></div>' +
     '<textarea class="notes" id="notes" placeholder="Resuma com suas palavras: 3 conceitos, 1 exemplo concreto, 1 dúvida e 1 discordância."></textarea>' +
-    '<div class="note-meta"><span>Salvo neste navegador</span><span id="noteN">' + v.length + " caracteres</span></div></section>";
+    '<div class="note-meta"><span>' + (sync.state.user ? "Salva neste aparelho e sincronizada" : "Salvo neste navegador") + '</span><span id="noteN">' + v.length + " caracteres</span></div></section>";
 }
 
 /* ---------- capa da área ---------- */
@@ -432,7 +432,8 @@ function coverHTML() {
   return h.join("");
 }
 function backupNoteHTML() {
-  return '<p style="font-size:.88em;color:var(--muted);margin-top:26px">O progresso e as anotações ficam salvos apenas neste navegador. Use <b>Exportar</b> no menu para guardar uma cópia, e <b>Salvar em PDF</b> para gerar o roteiro inteiro em um arquivo de leitura.</p>';
+  const where = sync.state.user ? "ficam salvos neste aparelho e sincronizados com a sua conta" : "ficam salvos apenas neste navegador";
+  return '<p style="font-size:.88em;color:var(--muted);margin-top:26px">O progresso e as anotações ' + where + '. Use <b>Exportar</b> no menu para guardar uma cópia, e <b>Salvar em PDF</b> para gerar o roteiro inteiro em um arquivo de leitura.</p>';
 }
 
 /* ---------- mapa do Atlas ---------- */
@@ -641,7 +642,7 @@ $("fileIn").addEventListener("change", async e => {
   finally { e.target.value = ""; }
 });
 $("btnReset").addEventListener("click", () => {
-  if (!confirm("Apagar todas as marcações e anotações de todas as áreas? Exporte um backup antes, se precisar.")) return;
+  if (!confirm((sync.state.user ? "Apagar todas as marcações e anotações de todas as áreas, em todos os aparelhos sincronizados?" : "Apagar todas as marcações e anotações de todas as áreas?") + " Exporte um backup antes, se precisar.")) return;
   store.resetAll();
   navigate({ view: "mapa" });
   toast("Progresso zerado.");
@@ -815,9 +816,28 @@ sync.subscribe(s => {
   renderSyncIndicator(s);
   const uid = s.user ? s.user.id : null;
   if (uid && uid !== lastUserId) toast("Conectado como " + s.user.email + ".");
+  const changed = uid !== lastUserId;
   lastUserId = uid;
+  if (changed) rerenderKeepingPlace();
   if ($("acct").classList.contains("open")) renderAcct();
 });
+
+// Dados que chegaram de outro aparelho: redesenha mantendo a rolagem. Se a
+// pessoa está digitando uma anotação, espera ela sair do campo.
+let pendingRender = false;
+let started = false;
+function rerenderKeepingPlace() {
+  if (!started) return;
+  const ta = $("notes");
+  if (ta && document.activeElement === ta) {
+    if (!pendingRender) { pendingRender = true; ta.addEventListener("blur", () => { pendingRender = false; rerenderKeepingPlace(); }, { once: true }); }
+    return;
+  }
+  const pos = window.scrollY;
+  render();
+  window.scrollTo(0, pos);
+}
+store.on(e => { if (e.type === "batch" && e.silent) rerenderKeepingPlace(); });
 
 async function startSync() {
   await sync.init();
@@ -836,8 +856,15 @@ async function start() {
     return;
   }
   await navigate(parseRoute(location.hash), { scroll: false });
+  started = true;
 }
 start();
 startSync();
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch(err => console.warn("Service worker não registrado:", err && err.message));
+  });
+}
 
 export { store, content, sync };

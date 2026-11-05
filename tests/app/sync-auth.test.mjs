@@ -13,8 +13,10 @@ function fakeClient({ session = null } = {}) {
   const listeners = [];
   const calls = [];
   const emit = (ev, s) => listeners.forEach(l => l(ev, s));
+  const empty = async () => ({ data: [], error: null, status: 200 });
   return {
     calls, emit,
+    from: () => ({ select: empty, upsert: () => ({ select: empty }) }),
     auth: {
       getSession: async () => ({ data: { session }, error: null }),
       onAuthStateChange: (cb) => { listeners.push(cb); return { data: { subscription: { unsubscribe() {} } } }; },
@@ -62,7 +64,8 @@ function setup({ session = null, href, onLine = true, config = CONFIG, loaderFai
     if (loaderFails === true || (typeof loaderFails === "function" && loaderFails())) throw new Error("falha ao importar " + url);
     return { createClient: (u, k, opts) => { created = { u, k, opts }; return client; } };
   };
-  const sync = createSync({ config, store, win, loadSupabase });
+  const timers = { setTimeout: () => 0, clearTimeout: () => {} };
+  const sync = createSync({ config, store, win, loadSupabase, storage: memoryStorage(), timers });
   return { sync, client, win, store, getCreated: () => created, getLoads: () => loads };
 }
 
@@ -144,6 +147,7 @@ test("verificar código: formato, código errado e código certo", async () => {
   assert.deepEqual(await sync.verifyCode("eu@exemplo.com", " 123 456 "), { ok: true });
   assert.deepEqual(client.calls.at(-1), ["verify", { email: "eu@exemplo.com", token: "123456", type: "email" }]);
   assert.equal(sync.state.user.email, "eu@exemplo.com");
+  await sync.whenIdle();
   assert.equal(sync.state.status, "sincronizado");
 });
 
