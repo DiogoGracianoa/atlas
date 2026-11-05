@@ -76,3 +76,21 @@ Decisões de implementação:
 - Texto do mapa e do cartão "Continuar" é texto do app, não de área.
 - `.gitattributes` com `eol=lf` (o Git local usa `core.autocrlf=true`).
 - `.claude/launch.json` sobe `scripts/serve.mjs` na porta 8080 para o navegador embutido.
+
+## Registro de implementação — Etapa 2 (2026-11-04)
+
+| Cenário | Evidência | Resultado |
+|---|---|---|
+| D01 | `bash tests/db/run.sh` sem o trigger | RED: upsert de 10:00 sobrescreveu o de 10:05 |
+| D01, D02 | idem, com o trigger (`progress`, `notes`, `prefs`) | verde; escrita antiga não retorna linha (base do S10) |
+| D03 | RLS: U2 não lê, não insere, não altera linhas de U1 | verde |
+| D04 | `anon` lê `heartbeat`, sem acesso a `progress` | verde |
+| técnico | reenvio com mesmo horário aceito; `updated_at` padrão; `on delete cascade` | verde |
+
+19 asserções, PostgreSQL 16 (imagem `postgres:16-alpine`) com stub de `auth` em `tests/db/stub-auth.sql`.
+
+Decisões de implementação:
+
+- Função do trigger `public.descarta_escrita_antiga()` com `search_path = ''` e `execute` revogado de `public`, `anon` e `authenticated`: só o trigger a usa, ela não vira RPC.
+- Empate de horário é aceito (reenvio idempotente da fila).
+- O stub não reproduz o PostgREST nem o JWT real: a semântica do upsert foi testada com o SQL que o PostgREST gera (`on conflict … do update set … = excluded.…`). A confirmação contra o Supabase real fica no roteiro e2e-real.

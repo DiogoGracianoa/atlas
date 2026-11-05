@@ -22,3 +22,10 @@ jobs:
         run: node scripts/validate.mjs
       - name: Testes do app (node --test)
         run: node --test "tests/app/**/*.test.mjs"
+
+  banco:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Migration + testes SQL (PostgreSQL 16 em Docker)
+        run: bash tests/db/run.sh
