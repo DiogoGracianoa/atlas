@@ -1,0 +1,24 @@
+name: validate
+
+# Roda em todo push: valida o conteúdo de todas as áreas e a suíte de testes.
+# Não depende de exemplos/ (que não é versionada).
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  conteudo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validar conteúdo (scripts/validate.mjs)
+        run: node scripts/validate.mjs
+      - name: Testes do app (node --test)
+        run: node --test "tests/app/**/*.test.mjs"

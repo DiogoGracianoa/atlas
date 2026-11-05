@@ -1,0 +1,6 @@
+interface:
+  display_name: "Prototipar"
+  short_description: "Valida cenários aprovados com protótipo visual"
+  default_prompt: "Use $prototipar para validar visualmente os cenários aprovados."
+policy:
+  allow_implicit_invocation: false

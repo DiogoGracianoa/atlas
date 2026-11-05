@@ -1,0 +1,100 @@
+{
+  "areas": [
+    {
+      "slug": "politica",
+      "nome": "Política, economia e marxismo",
+      "resumo": "Do vocabulário básico à economia política avançada.",
+      "status": "disponivel",
+      "arquivo": "content/politica/curriculum.json",
+      "titulo": "Atlas de política, economia e marxismo",
+      "subtitulo": "Trilha de política, economia e marxismo",
+      "tituloPdf": "Atlas de Estudos · Política, Economia e Marxismo",
+      "capa": {
+        "rotulo": "TRILHA DE ESTUDOS",
+        "lead": "Sete módulos, {temas} temas. Cada tema traz a explicação completa do assunto, depois a aula em vídeo e por fim o livro — nessa ordem, para que você chegue à leitura já sabendo o que procurar.",
+        "passos": [
+          {
+            "t": "Leia a definição",
+            "d": "Um texto longo e explicativo sobre o tema, com conceitos-chave, teses centrais e as críticas que a posição recebe."
+          },
+          {
+            "t": "Assista ao vídeo",
+            "d": "Aulas universitárias e cursos livres, com indicação do que procurar em cada playlist."
+          },
+          {
+            "t": "Leia o livro",
+            "d": "A obra de referência, com orientação de por onde começar e o que não pular."
+          }
+        ]
+      },
+      "tradicoes": {
+        "politica": {
+          "nome": "Ciência política",
+          "cor": "#4A5E70",
+          "corEscura": "#9DB4CA"
+        },
+        "sociologia": {
+          "nome": "Sociologia clássica",
+          "cor": "#5A5F8C",
+          "corEscura": "#A8A9DA"
+        },
+        "marx": {
+          "nome": "Marxismo",
+          "cor": "#A4213A",
+          "corEscura": "#F2869C"
+        },
+        "liberal": {
+          "nome": "Liberalismo",
+          "cor": "#1D5EA8",
+          "corEscura": "#82B7F1"
+        },
+        "anarquismo": {
+          "nome": "Anarquismo",
+          "cor": "#1C7458",
+          "corEscura": "#71CDA9"
+        },
+        "economia": {
+          "nome": "Economia e macro",
+          "cor": "#8F5E0D",
+          "corEscura": "#E2B058"
+        },
+        "brasil": {
+          "nome": "Pensamento brasileiro",
+          "cor": "#7A4A9E",
+          "corEscura": "#C49DE9"
+        },
+        "institucional": {
+          "nome": "Economia política institucional",
+          "cor": "#0F6E78",
+          "corEscura": "#62C6D0"
+        }
+      },
+      "promptBase": "Você é meu tutor socrático de política e economia, em português do Brasil. Estou seguindo uma trilha pluralista, com estudo aprofundado de marxismo e também de liberalismo, keynesianismo e anarquismo. Não faça propaganda político-partidária e não presuma minha posição.\n\n"
+    },
+    {
+      "slug": "historia",
+      "nome": "História",
+      "status": "planejado"
+    },
+    {
+      "slug": "economia",
+      "nome": "Economia",
+      "status": "planejado"
+    },
+    {
+      "slug": "filosofia",
+      "nome": "Filosofia",
+      "status": "planejado"
+    },
+    {
+      "slug": "ciencia",
+      "nome": "Ciência",
+      "status": "planejado"
+    },
+    {
+      "slug": "tecnologia",
+      "nome": "Tecnologia",
+      "status": "planejado"
+    }
+  ]
+}
