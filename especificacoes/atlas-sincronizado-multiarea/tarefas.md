@@ -163,3 +163,18 @@ Decisões:
 - Tamanho do código: a documentação do Supabase dá 6 a 10 dígitos (padrão 6); o app aceita 6 a 10.
 
 Não verificado: deploy real na Vercel e o painel do Supabase (passos manuais do autor).
+
+## Registro de implementação — Etapa 6 (2026-11-05)
+
+| Cenário | Evidência | Resultado |
+|---|---|---|
+| P01 | `tests/app/keepalive.test.mjs` contra servidor local: 200 passa e consulta `/rest/v1/heartbeat?select=id&limit=1` só com `apikey` (sem imprimir a chave); 401/404/500/503 falham; secret vazio falha com mensagem; sem servidor falha; workflow diário + `workflow_dispatch` + secrets, sem `service_role` | RED (script ausente) → verde |
+| suíte | `node --test` 129 testes; `validate.mjs` | verde |
+
+Decisões:
+
+- Lógica em `scripts/keepalive.sh` (testável e executável à mão); o workflow só a chama.
+- Só o cabeçalho `apikey`: funciona com a chave publishable e com a anon legada (um `Authorization: Bearer` com a publishable seria recusado por não ser JWT).
+- `curl --retry 2` absorve falha momentânea antes de acusar erro; cron 09:17 UTC.
+
+Não verificado: execução real da Action (depende dos secrets do autor).

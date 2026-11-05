@@ -134,6 +134,9 @@ pedir outro.
   a resposta não for 200, e o GitHub avisa por e-mail. Dá para disparar à mão
   em *Actions* → *keepalive* → *Run workflow*.
 
+  A consulta está em `scripts/keepalive.sh`; dá para rodar no seu terminal
+  com as duas variáveis abaixo definidas.
+
   Configure em *Settings* → *Secrets and variables* → *Actions* →
   *New repository secret*:
   - `SUPABASE_URL`: a mesma URL do `config.js`.
