@@ -1,5 +1,5 @@
 // Verificação do cenário C01: os módulos extraídos do HTML original continuam
-// byte a byte iguais em content/politica/curriculum.json. O bloco original
+// byte a byte iguais em public/content/politica/curriculum.json. O bloco original
 // termina em "]}"; módulos acrescentados depois (como o 8) entram antes desse
 // fechamento, então o arquivo atual precisa começar pelo bloco sem esse final.
 // O HTML original vive em exemplos/, que não é versionada: sem ela, o script
@@ -11,7 +11,7 @@ import { dirname, join } from "node:path";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const source = join(root, "exemplos", "atlas-de-estudos-política.html");
-const target = join(root, "content", "politica", "curriculum.json");
+const target = join(root, "public", "content", "politica", "curriculum.json");
 
 if (!existsSync(source)) process.exit(0);
 
@@ -26,7 +26,7 @@ if (start < 0 || end < 0) {
 const block = html.subarray(start + open.length, end);
 
 if (!existsSync(target)) {
-  console.error("Ausente: content/politica/curriculum.json");
+  console.error("Ausente: public/content/politica/curriculum.json");
   process.exit(1);
 }
 const file = readFileSync(target);

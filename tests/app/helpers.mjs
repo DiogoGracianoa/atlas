@@ -64,7 +64,8 @@ export function writeAtlas({ man = manifest(), cur = curriculum(), files = {} } 
   };
   for (const [rel, body] of Object.entries(all)) {
     if (body === null) continue;
-    const p = join(root, rel);
+    // Conteúdo fica em public/ (servido em /content/...); o resto, na raiz.
+    const p = join(root, rel.startsWith("content/") ? join("public", rel) : rel);
     mkdirSync(dirname(p), { recursive: true });
     writeFileSync(p, body);
   }

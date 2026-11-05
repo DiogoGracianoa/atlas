@@ -1,83 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Atlas de Estudos</title>
-<meta name="description" content="Trilhas de estudo autodirigido: para cada tema, a explicação, o vídeo e o livro, com progresso salvo.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/app.css">
-<style id="area-style"></style>
-</head>
-<body>
-<div class="scrim" id="scrim"></div>
-
-
-<header class="topbar ui">
-  <button class="icon-btn" id="btnMenu" aria-label="Abrir navegação">
-    <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-  </button>
-  <div class="crumb"><b id="cbTitle">Atlas de Estudos</b><span id="cbSub">Mapa das áreas</span></div>
-  <button class="sync-dot" id="syncDot" data-status="nao-sincronizado" aria-label="Não sincronizado" title="Não sincronizado"><i></i></button>
-  <span class="pct" id="cbPct">0%</span>
-  <button class="icon-btn" id="btnSheet" aria-label="Ajustes de leitura">
-    <svg viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg>
-  </button>
-</header>
-<div class="topline"><i id="tlBar"></i></div>
-
-<div class="app">
-<aside class="drawer" id="drawer" aria-label="Navegação do Atlas">
-  <div class="d-head">
-    <div class="d-title">ATLAS DE ESTUDOS</div>
-    <select class="area-sel" id="areaSel" aria-label="Área de estudo"></select>
-    <h2 id="dTitle">Mapa das áreas</h2>
-    <div class="meter"><i id="dMeter"></i></div>
-    <div class="d-sub"><span id="dPct">0% do percurso</span><span id="dCount">0 de 0</span></div>
-    <button class="sync-line" id="syncLine" data-status="nao-sincronizado"><i></i><span id="syncText">Não sincronizado</span></button>
-  </div>
-  <div class="d-search">
-    <input type="search" id="search" placeholder="Buscar tema, autor ou conceito" aria-label="Buscar" autocomplete="off">
-  </div>
-  <nav class="d-nav" id="nav"></nav>
-  <div class="d-foot">
-    <button class="tinybtn" id="btnHome">Início</button>
-    <button class="tinybtn" id="btnPrint">Salvar em PDF</button>
-    <button class="tinybtn" id="btnExport">Exportar</button>
-    <button class="tinybtn" id="btnImport">Importar</button>
-    <button class="tinybtn" id="btnReset">Zerar</button>
-    <input type="file" id="fileIn" accept="application/json,.json" hidden>
-  </div>
-</aside>
-  <main class="page" id="page" tabindex="-1"><p class="loading">Carregando…</p></main>
-</div>
-
-<div class="sheet" id="sheet" role="dialog" aria-label="Ajustes de leitura">
-  <h3>Ajustes de leitura</h3>
-  <div class="srow">
-    <label>Tamanho do texto</label>
-    <div class="seg" id="segSize">
-      <button data-size="s">A</button><button data-size="m">A</button><button data-size="l">A</button><button data-size="xl">A</button>
-    </div>
-  </div>
-  <div class="srow">
-    <label>Tema</label>
-    <div class="seg" id="segTheme">
-      <button data-theme="auto">Auto</button><button data-theme="light">Claro</button><button data-theme="dark">Escuro</button>
-    </div>
-  </div>
-  <div class="srow">
-    <label>Fechar</label>
-    <button class="tinybtn" id="btnSheetClose">Pronto</button>
-  </div>
-</div>
-
-<div class="sheet acct" id="acct" role="dialog" aria-label="Sincronização"></div>
-
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-<div id="printable"></div>
-<script type="module" src="assets/app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Atlas</title>
+    <meta name="description" content="Portal de estudos autodirigidos: trilhas com explicação, vídeo e livro, com progresso salvo e sincronizado." />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

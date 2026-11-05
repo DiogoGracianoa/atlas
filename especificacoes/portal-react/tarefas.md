@@ -45,7 +45,55 @@ cada tarefa é: teste vermelho, mudança mínima, teste verde e suíte disponív
 
 ## Registro de execução
 
-(preenchido durante `$implementar`)
+### E1 — Fundação (2026-11-05)
+
+- **T1.3:** primeiro os testes e os helpers apontaram para `public/content`
+  (22 falharam pelo motivo esperado). Depois `git mv content public/content` e
+  `validate.mjs` e `check-extract.mjs` passaram a ler de `public/`. A
+  isolação de `exemplos/` agora cobre `src`, `public` e `vite.config.ts`.
+  Resultado: 131/131 verdes, `validate` ok e `check-extract` com os módulos
+  originais idênticos.
+- **T1.1 (R4, ADR-011):** versões exatas, todas publicadas antes de 2026-10-22.
+  A escolha foi decidida pelos peers:
+  - TypeScript **6.0.3**, não 7.0.2, porque o `typescript-eslint` 8.72 exige
+    `<6.1`.
+  - ESLint **10.13.0** com `eslint-plugin-jsx-a11y-x` 0.2.0 (fork mantido,
+    peer `^9 || ^10`), porque o `eslint-plugin-jsx-a11y` 6.10.2 só aceita
+    ESLint até 9, e o ESLint 9 está fora de suporte.
+  - Demais versões:
+    - React 19.3.1;
+    - Vite 8.3.5 com `@vitejs/plugin-react` 6.1.2;
+    - Vitest 5.0.5;
+    - jsdom 30.1.3 (exige Node ≥ 22.22.2, declarado em `engines`);
+    - Playwright 1.64.1;
+    - Testing Library 16.3.3, 10.4.2 e 14.6.8.
+- **Limitação encontrada:** `npm install` do npm 10.9 (que vem com o Node
+  22.23) quebra ao resolver peers opcionais (`Cannot read properties of null
+  (reading 'edgesOut')`). O lockfile foi gerado com o npm 11.6.2 (`npx`).
+  `npm ci` com o npm 10 instala o lockfile sem erro (verificado), então o CI não
+  muda. Atualizar dependências exige `npx npm@11 install` até o npm 10 corrigir.
+- **T1.2:**
+  - TypeScript estrito com `noUncheckedIndexedAccess` e `verbatimModuleSyntax`;
+  - ESLint com `typescript-eslint` strict, react-hooks e jsx-a11y;
+  - `any` explícito proibido em `src/core`;
+  - a base antiga (`assets/`, `sw.js`, `scripts/serve.mjs`, `tests/app`)
+    fica fora do lint até sair, na E8.
+- **T1.4:**
+  - Vitest com dois projetos: `core` (Node) e `ui` (jsdom);
+  - o teste de fumaça falhou com o `App` vazio e passou com o shell;
+  - Playwright contra `vite preview`: 2 de 2 verdes (raiz e `/content/areas.json`);
+  - CI com os jobs `qualidade` (tipos, lint, conteúdo, testes antigos, Vitest e
+    build), `e2e` e `banco`.
+- **Comandos executados:**
+  - `npm run typecheck`, `npm run lint` e `npm run validate`: ok;
+  - `npm run test:legacy`: 131/131;
+  - `npm test`: 1/1;
+  - `npm run e2e`: 2/2;
+  - `npm run build`: JS de 68,7 KB gzip, só React.
+- **Não executado:** `tests/db/run.sh`, porque o banco não mudou; roda no CI.
+- **Efeito colateral esperado:** o `index.html` virou a entrada do Vite e o app
+  antigo deixa de abrir neste ramo até a E4 e a E5. Os arquivos dele continuam
+  em `assets/` como referência até a E8.
 
 ## Extensão 2026-11-05
 

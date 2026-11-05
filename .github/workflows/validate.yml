@@ -1,7 +1,7 @@
 name: validate
 
-# Roda em todo push: valida o conteúdo de todas as áreas e a suíte de testes.
-# Não depende de exemplos/ (que não é versionada).
+# Portões de qualidade (RN16): roda em todo push e PR. Não depende de exemplos/
+# (que não é versionada).
 on:
   push:
   pull_request:
@@ -11,17 +11,47 @@ permissions:
   contents: read
 
 jobs:
-  conteudo:
+  qualidade:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Validar conteúdo (scripts/validate.mjs)
-        run: node scripts/validate.mjs
-      - name: Testes do app (node --test)
-        run: node --test "tests/app/**/*.test.mjs"
+          cache: npm
+      - run: npm ci
+      - name: Tipos (TypeScript estrito)
+        run: npm run typecheck
+      - name: Lint
+        run: npm run lint
+      - name: Conteúdo (scripts/validate.mjs)
+        run: npm run validate
+      - name: Testes da base antiga (node --test, até serem portados)
+        run: npm run test:legacy
+      - name: Testes (Vitest)
+        run: npm test
+      - name: Build
+        run: npm run build
+
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Chromium do Playwright
+        run: npx playwright install --with-deps chromium
+      - name: E2E contra o build (vite preview)
+        run: npm run e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report
+          retention-days: 7
 
   banco:
     runs-on: ubuntu-latest

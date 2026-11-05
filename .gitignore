@@ -2,3 +2,9 @@ exemplos/
 node_modules/
 .DS_Store
 Thumbs.db
+dist/
+.env.local
+.env.*.local
+playwright-report/
+test-results/
+*.tsbuildinfo

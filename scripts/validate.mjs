@@ -3,7 +3,7 @@
 //
 //   node scripts/validate.mjs [--root <diretório>]
 //
-// Para cada área do manifesto (content/areas.json) confere: arquivo existe,
+// Para cada área do manifesto (public/content/areas.json) confere: arquivo existe,
 // IDs únicos dentro da área, campos obrigatórios em cada tema, toda URL com
 // https://, todo tema sem `book` com `bridge`, e tradição declarada no
 // manifesto. Também garante que o código do site não referencia exemplos/.
@@ -26,8 +26,10 @@ const errors = [];
 const err = (where, msg) => errors.push(where + ": " + msg);
 const present = (v) => v !== undefined && v !== null && v !== "" && !(Array.isArray(v) && v.length === 0);
 
+// O conteúdo é servido em /content/... a partir de public/; os caminhos do
+// manifesto (campo arquivo) são relativos a public/.
 function readJSON(rel, where) {
-  const p = join(ROOT, rel);
+  const p = join(ROOT, "public", rel);
   if (!existsSync(p)) { err(where, "arquivo não encontrado: " + rel); return null; }
   try { return JSON.parse(readFileSync(p, "utf8")); }
   catch (e) { err(where, "JSON inválido em " + rel + " (" + e.message + ")"); return null; }
@@ -95,7 +97,7 @@ function validateArea(area) {
 
 // Regra do Adendo 2: o site nunca lê exemplos/ em runtime.
 function checkRuntimeIsolation() {
-  const targets = ["index.html", "sw.js", "vercel.json", "assets", "content"];
+  const targets = ["index.html", "vercel.json", "vite.config.ts", "src", "public", "assets", "sw.js"];
   const files = [];
   const walk = (p) => {
     if (!existsSync(p)) return;

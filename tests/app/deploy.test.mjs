@@ -54,7 +54,7 @@ test("README tem todas as seções que a visão pede", () => {
 
 test("tabela de áreas do README cobre o manifesto, com o status certo", () => {
   const md = read("README.md");
-  const man = JSON.parse(read("content/areas.json"));
+  const man = JSON.parse(read("public/content/areas.json"));
   for (const a of man.areas) {
     const row = md.split("\n").find(l => l.startsWith("|") && l.includes("`" + a.slug + "`"));
     assert.ok(row, "área ausente na tabela: " + a.slug);
