@@ -16,13 +16,13 @@
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:legacy": "node --test \"tests/app/**/*.test.mjs\"",
     "e2e": "playwright test",
     "validate": "node scripts/validate.mjs",
     "check-extract": "node scripts/check-extract.mjs",
     "icons": "node scripts/icons.mjs",
     "size": "node scripts/size-budget.mjs",
-    "secrets": "node scripts/check-secrets.mjs"
+    "secrets": "node scripts/check-secrets.mjs",
+    "screenshots": "node scripts/screenshots.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "5.3.0",

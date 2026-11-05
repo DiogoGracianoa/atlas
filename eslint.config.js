@@ -6,8 +6,8 @@ import globals from "globals";
 
 export default tseslint.config(
   {
-    // Base antiga (removida na E8) e artefatos gerados ficam fora do lint.
-    ignores: ["dist", "assets", "sw.js", "scripts/serve.mjs", "tests/app", "playwright-report", "test-results", "exemplos"],
+    // Artefatos gerados e material bruto ficam fora do lint.
+    ignores: ["dist", "playwright-report", "test-results", "exemplos"],
   },
   js.configs.recommended,
   ...tseslint.configs.strict,

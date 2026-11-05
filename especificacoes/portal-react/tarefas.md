@@ -320,3 +320,44 @@ cada tarefa é: teste vermelho, mudança mínima, teste verde e suíte disponív
   **Pendente:** a aprovação visual do autor, que estava ausente. As capturas
   entram na documentação (E8).
 - **Comandos executados:** `npx vitest run`: 231/231; `eslint .` limpo.
+
+### E8 — Documentação e limpeza (2026-11-05)
+
+- **T8.1 (Q04, Q05):**
+  - `README.md` reescrito em inglês: as 13 seções da RN15, dois diagramas
+    mermaid (arquitetura e sincronização), quatro capturas e tabela de ADRs;
+  - `LICENSE` MIT;
+  - em `docs/`: `arquitetura.md`, `sincronizacao.md`, `conteudo.md` (formato,
+    guia de área nova em 5 passos, regras de `exemplos/`), `deploy.md`
+    (Supabase, Vercel, GitHub, roteiro de verificação e problemas comuns) e
+    `adr/0001…0011` mais o índice;
+  - `tests/docs.test.ts`, 33 testes: seções, ADRs com as cinco partes,
+    `npm run X` citados existem, links relativos resolvem, a tabela de áreas
+    bate com o manifesto e o exemplo de currículo é JSON válido.
+- **Capturas** (`docs/img/`): geradas do build de produção por
+  `scripts/screenshots.mjs` (`npm run screenshots`): portal claro, tema claro,
+  capa escura e celular escuro.
+- **T8.2 (limpeza):**
+  - removidos `assets/`, `sw.js` da raiz, `scripts/serve.mjs` e `tests/app/`,
+    com o script `test:legacy` e o passo dele no CI;
+  - `validate.mjs` agora varre `.ts` e `.tsx` na isolação de `exemplos/`. A
+    substituição feita na E1 não tinha aplicado; o teste do fixture passou a
+    usar `src/app.ts` e foi visto falhar antes da correção.
+- **T8.3:** guia local `docs/subir-atlas.html` (fora do git) atualizado:
+  - preset Vite e variáveis de ambiente no lugar de `config.js`;
+  - redeploy depois de cadastrar as variáveis;
+  - Redirect URLs com `/**`;
+  - login por `/entrar`.
+- **Aviso conhecido:** o build do SW mostra "inlineDynamicImports option is
+  deprecated", vindo do `vite-plugin-pwa` 2.0.0 com o Vite 8. Não afeta a
+  saída.
+- **Comandos executados:**
+  - `npm run typecheck` e `eslint .`: ok;
+  - `npx vitest run`: 264/264 (23 arquivos);
+  - `npm run validate`: ok;
+  - `npm run build`: ok;
+  - `npm run size`: 118,2 KB gzip;
+  - `npm run secrets`: nenhum segredo encontrado;
+  - `npx playwright test`: 32/32;
+  - `bash tests/db/run.sh`: não executado localmente nesta etapa (banco
+    inalterado); roda no CI.

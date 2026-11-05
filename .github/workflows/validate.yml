@@ -26,8 +26,6 @@ jobs:
         run: npm run lint
       - name: Conteúdo (scripts/validate.mjs)
         run: npm run validate
-      - name: Testes da base antiga (node --test, até serem portados)
-        run: npm run test:legacy
       - name: Testes (Vitest)
         run: npm test
       - name: Build

@@ -105,9 +105,9 @@ test("área planejada não precisa de arquivo", () => {
 });
 
 test("código do site que referencia exemplos/ falha", () => {
-  const r = runValidate(writeAtlas({ files: { "assets/app.js": "fetch('exemplos/rascunho.json')" } }));
+  const r = runValidate(writeAtlas({ files: { "src/app.ts": "fetch('exemplos/rascunho.json')" } }));
   assert.equal(r.code, 1);
-  assert.match(r.out, /assets\/app\.js: referência a exemplos\//);
+  assert.match(r.out, /src\/app\.ts: referência a exemplos\//);
 });
 
 test("vários erros são todos listados", () => {

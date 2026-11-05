@@ -97,12 +97,12 @@ function validateArea(area) {
 
 // Regra do Adendo 2: o site nunca lê exemplos/ em runtime.
 function checkRuntimeIsolation() {
-  const targets = ["index.html", "vercel.json", "vite.config.ts", "src", "public", "assets", "sw.js"];
+  const targets = ["index.html", "vercel.json", "vite.config.ts", "src", "public"];
   const files = [];
   const walk = (p) => {
     if (!existsSync(p)) return;
     if (statSync(p).isDirectory()) readdirSync(p).forEach(n => walk(join(p, n)));
-    else if (/\.(html|js|mjs|css|json)$/.test(p)) files.push(p);
+    else if (/\.(html|js|mjs|ts|tsx|css|json)$/.test(p)) files.push(p);
   };
   targets.forEach(t => walk(join(ROOT, t)));
   for (const f of files) {

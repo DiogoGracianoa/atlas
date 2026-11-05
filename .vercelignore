@@ -13,7 +13,5 @@ supabase
 .github
 AGENTS.md
 CLAUDE.md
-assets
-sw.js
 playwright-report
 test-results

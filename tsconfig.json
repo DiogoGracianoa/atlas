@@ -35,7 +35,6 @@
     "playwright.config.ts"
   ],
   "exclude": [
-    "tests/app",
     "dist",
     "node_modules",
     "src/sw.ts"
