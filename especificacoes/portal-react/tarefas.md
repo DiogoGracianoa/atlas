@@ -101,3 +101,47 @@ cada tarefa é: teste vermelho, mudança mínima, teste verde e suíte disponív
 |---|---|---|---|---|---|
 | T5.1b | A06–A08 | `tests/ui/conta.test.tsx`, `src/app/pages/Entrar.tsx`, `src/app/IndicadorSync.tsx` | visitante não vê login; `/entrar` autentica e grava a marca | login discreto | verde |
 | T8.1b | Q05 | `LICENSE`, `README.md`, `tests/docs.test.ts` | presença da licença MIT e do link da demo | — | verde |
+
+### E2 — Núcleo (2026-11-05)
+
+- **T2.2/T2.3:** `src/core/{types,store,merge,queue,backup,content,sync}.ts`
+  portados de `assets/lib/*.js` e `assets/sync.js`, mantendo o comportamento.
+  Diferenças intencionais:
+  - `createSync` não recebe mais `moduleUrl`. O carregador padrão
+    (`defaultLoader`) faz `import("@supabase/supabase-js")` do pacote npm
+    2.118.0 (ADR-006), num chunk separado. O cast para a fronteira mínima
+    `SupabaseLike` fica só nesse ponto.
+  - `indexArea` cria os nós com spread, em vez de mutar os objetos do currículo.
+  - A fila usa `Map` internamente e serializa no mesmo formato de objeto do K4.
+  - Os tipos de linha remota em `RemoteData` aceitam `area`, que vem do servidor.
+- **T2.1:** testes portados para `tests/core/*.test.ts` com as asserções
+  originais (`node:assert/strict`) e as mesmas contagens de `assert.*` por
+  arquivo:
+
+  | Arquivo | Asserções |
+  |---|---|
+  | store | 39 |
+  | merge | 26 |
+  | queue | 16 |
+  | backup | 18 |
+  | content | 32 |
+  | sync | 57 |
+  | sync-auth | 41 |
+
+  A tipagem estrita dos testes foi feita por um subagente e conferida aqui:
+  contagens iguais, `tsc` limpo e 94/94 verdes. É uma portabilidade de testes
+  de caracterização: o vermelho não se aplica, porque os testes já existiam e
+  passavam na base antiga. O vermelho vale para o comportamento novo (T2.4).
+- **T2.4:** `tests/core/legacy.test.ts` (15 casos da tabela KR2) falhou contra
+  o stub e passou com `src/core/legacy.ts`. `routes.test.mjs` (parseRoute e
+  hrefFor do roteador por hash) não foi portado: o roteador por hash deixa de
+  existir e foi substituído por KR1 (E3/E4) e KR2.
+- **Comandos executados:**
+  - `npx vitest run --project core`: 94/94;
+  - `npx tsc --noEmit`: limpo em `src/core` e `tests/core`;
+  - `npx eslint src/core tests/core`: limpo.
+- **Dependências** instaladas nesta etapa (todas publicadas antes de
+  2026-10-22):
+  - `@supabase/supabase-js` 2.118.0 (de 15/10);
+  - para a E3: `react-router` 8.5.0, `@fontsource-variable/literata` e
+    `@fontsource-variable/inter` 5.3.0, e `axe-core` 4.14.0.

@@ -21,6 +21,11 @@ export default tseslint.config(
     },
   },
   {
+    // Nos testes, `!` depois de uma asserção que já garante o valor é aceitável.
+    files: ["tests/**/*.{ts,tsx}", "e2e/**/*.ts"],
+    rules: { "@typescript-eslint/no-non-null-assertion": "off" },
+  },
+  {
     files: ["src/core/**/*.ts"],
     rules: { "@typescript-eslint/no-explicit-any": "error" },
   },
