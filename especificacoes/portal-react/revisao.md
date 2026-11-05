@@ -29,7 +29,7 @@ do autor (Supabase, Vercel e aparelhos) e os testes do banco.
 | `npm run size` | JS inicial de **118,6 KB** gzip (limite 150 KB); supabase-js em chunk separado |
 | `npm run secrets` | nenhum segredo no repositório nem em `dist/` |
 | `node scripts/check-extract.mjs` | módulos originais de política idênticos (SHA-256 `f9896542…`) |
-| `bash tests/db/run.sh` | **não executado**: o Docker Desktop foi iniciado mas não respondeu |
+| `bash tests/db/run.sh` | **todos passaram** (19 asserções: migration, RLS, LWW, cascade), executado depois que o Docker voltou |
 
 ## Cenário → teste
 
@@ -96,10 +96,7 @@ anterior, que continuam valendo.
 
 ## Lacunas
 
-1. **Testes do banco** (`bash tests/db/run.sh`): não executados. O Docker
-   Desktop foi iniciado mas não respondeu em vários minutos; talvez espere
-   alguma interação na janela dele. A migration e `tests/db/` não mudaram desde
-   `main`, onde passaram (Etapa 2), e rodam no job `banco` do CI.
+1. ~~Testes do banco~~: executados depois, todos passaram.
 2. **CI no GitHub (Q02):** o ramo não foi enviado, porque o push depende de
    confirmação do autor.
 3. **Supabase real, Vercel real e aparelhos (e2e-real):** dependem dos passos
