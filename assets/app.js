@@ -5,6 +5,8 @@ import { createContent, areaProgress } from "./lib/content.js";
 import { parseRoute, hrefFor, routeForKey, LEGACY_AREA } from "./lib/routes.js";
 import { createStore } from "./lib/store.js";
 import { exportBackup, planImport } from "./lib/backup.js";
+import { createSync } from "./sync.js";
+import { SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_JS } from "./config.js";
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
@@ -89,7 +91,10 @@ $("segTheme").addEventListener("click", e => {
   const b = e.target.closest("button"); if (!b) return;
   store.setPref("theme", b.dataset.theme); applyPrefs();
 });
-["btnSheet","btnSheetClose"].forEach(id => $(id).addEventListener("click", () => $("sheet").classList.toggle("open")));
+["btnSheet","btnSheetClose"].forEach(id => $(id).addEventListener("click", () => {
+  $("acct").classList.remove("open");
+  $("sheet").classList.toggle("open");
+}));
 
 /* ---------- drawer ---------- */
 const openDrawer = (v) => { $("drawer").classList.toggle("open", v); $("scrim").classList.toggle("open", v); };
@@ -702,6 +707,125 @@ window.addEventListener("beforeprint", () => {
   if (A && $("printable").dataset.area !== A.slug) buildPrintable();
 });
 
+/* ---------- sincronização: indicador e conta ---------- */
+const sync = createSync({
+  config: { url: SUPABASE_URL, anonKey: SUPABASE_ANON_KEY, moduleUrl: SUPABASE_JS },
+  store
+});
+const STATUS_TEXT = {
+  "nao-sincronizado": "Não sincronizado",
+  "sincronizando": "Sincronizando…",
+  "sincronizado": "Sincronizado",
+  "offline": "Offline"
+};
+const AUTH_ERR = {
+  email: "Digite um e-mail válido.",
+  remoto: "Não foi possível enviar agora. Confira o e-mail e tente de novo.",
+  codigo: "O código tem 6 dígitos.",
+  invalido: "Código inválido ou expirado. Peça um novo.",
+  indisponivel: "A sincronização está indisponível agora. Tente de novo com conexão."
+};
+let acctStep = "email";
+let acctEmail = "";
+let lastUserId = null;
+
+function renderSyncIndicator(s) {
+  const text = STATUS_TEXT[s.status] || "";
+  const dot = $("syncDot"), line = $("syncLine");
+  dot.dataset.status = s.status; line.dataset.status = s.status;
+  dot.setAttribute("aria-label", text); dot.title = text;
+  $("syncText").textContent = text + (s.user ? "" : s.available ? " · Entrar" : "");
+}
+
+function renderAcct(msg) {
+  const s = sync.state;
+  const h = [];
+  if (s.user) {
+    h.push("<h3>Sincronização</h3>");
+    h.push("<p>Conectado como <b>" + esc(s.user.email) + "</b>. " + esc(STATUS_TEXT[s.status]) + ".</p>");
+    h.push('<div class="row"><button class="btn" data-acct="sair">Sair deste aparelho</button><button class="tinybtn" data-acct="fechar">Fechar</button></div>');
+    h.push('<p class="note">Ao sair, suas marcações e anotações continuam neste aparelho.</p>');
+  } else if (!s.available) {
+    h.push("<h3>Sincronização</h3>");
+    h.push("<p>" + (s.reason === "sem-config"
+      ? "A sincronização ainda não foi configurada neste site. O progresso fica salvo neste aparelho."
+      : "Não foi possível carregar a sincronização agora. O progresso continua salvo neste aparelho e sobe quando ela voltar.") + "</p>");
+    h.push('<div class="row"><button class="tinybtn" data-acct="fechar">Fechar</button></div>');
+  } else if (acctStep === "codigo") {
+    h.push("<h3>Confira sua caixa de entrada</h3>");
+    h.push("<p>Enviamos um link e um código para <b>" + esc(acctEmail) + "</b>. Abra o link neste aparelho ou digite o código:</p>");
+    h.push('<form data-acct-form="codigo"><input class="field code" id="acctCode" inputmode="numeric" autocomplete="one-time-code" maxlength="12" placeholder="000000" aria-label="Código de 6 dígitos">' +
+      '<div class="row"><button class="btn fill" type="submit">Entrar</button><button class="tinybtn" type="button" data-acct="reenviar">Reenviar</button><button class="tinybtn" type="button" data-acct="trocar">Trocar e-mail</button><button class="tinybtn" type="button" data-acct="fechar">Fechar</button></div></form>');
+  } else {
+    h.push("<h3>Sincronizar entre aparelhos</h3>");
+    h.push("<p>Entre com seu e-mail. Enviamos um link e um código de 6 dígitos. Sem login, o progresso fica só neste aparelho.</p>");
+    h.push('<form data-acct-form="email"><input class="field" id="acctEmail" type="email" autocomplete="email" inputmode="email" placeholder="seu@email.com" aria-label="E-mail" value="' + esc(acctEmail) + '">' +
+      '<div class="row"><button class="btn fill" type="submit">Enviar link e código</button><button class="tinybtn" type="button" data-acct="fechar">Fechar</button></div></form>');
+  }
+  const err = msg || (s.linkError === "expirado" ? "O link expirou ou já foi usado. Peça um novo ou use o código."
+    : s.linkError === "falhou" ? "Não foi possível entrar pelo link. Peça um novo ou use o código." : "");
+  h.push('<p class="msg" role="alert">' + esc(err) + "</p>");
+  $("acct").innerHTML = h.join("");
+}
+function openAcct(v = true) {
+  $("sheet").classList.remove("open");
+  if (v) renderAcct();
+  $("acct").classList.toggle("open", v);
+  if (v) { const f = $("acct").querySelector(".field"); if (f) setTimeout(() => f.focus({ preventScroll: true }), 260); }
+}
+$("syncDot").addEventListener("click", () => openAcct(!$("acct").classList.contains("open")));
+$("syncLine").addEventListener("click", () => { openDrawer(false); openAcct(true); });
+
+$("acct").addEventListener("click", async e => {
+  const b = e.target.closest("[data-acct]"); if (!b) return;
+  const a = b.dataset.acct;
+  if (a === "fechar") openAcct(false);
+  else if (a === "trocar") { acctStep = "email"; renderAcct(); }
+  else if (a === "reenviar") {
+    b.disabled = true;
+    const r = await sync.requestCode(acctEmail);
+    renderAcct(r.ok ? "" : AUTH_ERR[r.error]);
+    if (r.ok) toast("Enviamos um novo link e código.");
+  } else if (a === "sair") {
+    b.disabled = true;
+    await sync.signOut();
+    acctStep = "email";
+    openAcct(false);
+    toast("Você saiu. O progresso continua neste aparelho.");
+  }
+});
+$("acct").addEventListener("submit", async e => {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector("[type=submit]");
+  btn.disabled = true;
+  if (form.dataset.acctForm === "email") {
+    const email = $("acctEmail").value;
+    const r = await sync.requestCode(email);
+    if (r.ok) { acctEmail = email.trim().toLowerCase(); acctStep = "codigo"; renderAcct(); setTimeout(() => $("acctCode") && $("acctCode").focus(), 50); }
+    else { acctEmail = email; renderAcct(AUTH_ERR[r.error]); }
+  } else {
+    const r = await sync.verifyCode(acctEmail, $("acctCode").value);
+    if (r.ok) { acctStep = "email"; openAcct(false); }
+    else { renderAcct(AUTH_ERR[r.error]); }
+  }
+});
+
+sync.subscribe(s => {
+  renderSyncIndicator(s);
+  const uid = s.user ? s.user.id : null;
+  if (uid && uid !== lastUserId) toast("Conectado como " + s.user.email + ".");
+  lastUserId = uid;
+  if ($("acct").classList.contains("open")) renderAcct();
+});
+
+async function startSync() {
+  await sync.init();
+  lastUserId = sync.state.user ? sync.state.user.id : null;
+  renderSyncIndicator(sync.state);
+  if (sync.state.linkError && !sync.state.user) openAcct(true);
+}
+
 /* ---------- início ---------- */
 async function start() {
   applyPrefs();
@@ -714,5 +838,6 @@ async function start() {
   await navigate(parseRoute(location.hash), { scroll: false });
 }
 start();
+startSync();
 
-export { store, content };
+export { store, content, sync };

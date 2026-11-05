@@ -364,3 +364,28 @@ button.areacard:hover{background:var(--surface-2)}
 .continue span{display:block;font-size:.95em;color:var(--text)}
 .continue i{font-style:normal;font-family:"IBM Plex Sans",sans-serif;font-size:11px;color:var(--faint)}
 .loading{font-family:"IBM Plex Sans",sans-serif;color:var(--muted);font-size:13.5px;padding:30px 0}
+
+/* ---------- sincronização ---------- */
+.sync-dot{width:30px;height:38px;display:grid;place-items:center;flex:none}
+.sync-dot i,.sync-line i{display:block;width:9px;height:9px;border-radius:50%;border:1.5px solid var(--faint);flex:none}
+[data-status="sincronizado"] i{background:var(--ok);border-color:var(--ok)}
+[data-status="sincronizando"] i{border-color:var(--ok);background:linear-gradient(90deg,var(--ok) 50%,transparent 50%);animation:syncpulse 1.2s ease-in-out infinite}
+[data-status="offline"] i{border-style:dashed}
+@keyframes syncpulse{50%{opacity:.35}}
+@media (prefers-reduced-motion: reduce){[data-status="sincronizando"] i{animation:none}}
+.sync-line{
+  display:flex;align-items:center;gap:8px;margin-top:10px;padding:5px 0;
+  font-size:11.5px;color:var(--muted);text-align:left;width:100%;
+}
+.sync-line:hover{color:var(--ink)}
+.acct p{font-size:13px;color:var(--text);line-height:1.5;margin:0 0 12px}
+.acct .field{
+  width:100%;padding:10px 12px;border-radius:9px;border:1px solid var(--rule);background:var(--surface-2);
+  font-family:"IBM Plex Sans",sans-serif;font-size:16px;margin:0 0 10px;color:var(--ink);
+}
+.acct .field.code{letter-spacing:.3em;font-variant-numeric:tabular-nums}
+.acct .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.acct .msg{font-size:12.5px;margin:10px 0 0;color:var(--c-erro,#A4213A);min-height:1em}
+:root[data-theme="dark"] .acct .msg{color:#F2869C}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .acct .msg{color:#F2869C}}
+.acct .note{font-size:11.5px;color:var(--muted);margin:12px 0 0}

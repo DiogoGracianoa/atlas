@@ -94,3 +94,25 @@ Decisões de implementação:
 - Função do trigger `public.descarta_escrita_antiga()` com `search_path = ''` e `execute` revogado de `public`, `anon` e `authenticated`: só o trigger a usa, ela não vira RPC.
 - Empate de horário é aceito (reenvio idempotente da fila).
 - O stub não reproduz o PostgREST nem o JWT real: a semântica do upsert foi testada com o SQL que o PostgREST gera (`on conflict … do update set … = excluded.…`). A confirmação contra o Supabase real fica no roteiro e2e-real.
+
+## Registro de implementação — Etapa 3 (2026-11-04)
+
+| Cenário | Evidência | Resultado |
+|---|---|---|
+| A01–A05, S08 (auth) | `tests/app/sync-auth.test.mjs` (12 casos, cliente falso): sem config, opções PKCE, sessão, online/offline, CDN indisponível com nova tentativa, pedir/verificar código, logout, limpeza de `?code` e `?error_code=otp_expired` | RED com stub, depois verde |
+| A01, A02, A04 (navegador) | Supabase falso servido localmente, `config.js` apontado para ele só durante o teste | e-mail → tela do código; código errado → mensagem; código certo → "Sincronizado" + aviso; sessão sobrevive ao recarregar; sair mantém 2 marcações e a nota |
+| A03 (navegador) | `/?code=bom#/politica/m2e1` | logado, URL limpa, rota preservada |
+| link expirado | `/?error_code=otp_expired…` | URL limpa, tela de login abre com a explicação |
+| A05 (navegador) | módulo inacessível | app navega e marca; indicador "Não sincronizado"; tela explica |
+| sem configuração | `config.js` vazio (estado do commit) | "Não sincronizado"; nenhuma requisição ao CDN |
+| CDN real | `import()` de `@supabase/supabase-js@2.118.0` | `createClient`, `signInWithOtp`, `verifyOtp`, `signOut` presentes |
+
+Decisões de implementação:
+
+- **D4 revista:** supabase-js `2.118.0` (15/10/2026, a mais recente com ≥ 14 dias) pelo jsDelivr `+esm`, não pelo esm.sh. Nenhum dos dois entrega arquivo único; o esm.sh puxa polyfills sem versão na URL (`/node/buffer.mjs`), o jsDelivr resolve tudo com versão fixa (9 arquivos, ~80 KB), o que permite cache seguro no service worker (Etapa 4).
+- Código aceito com 6 a 10 dígitos (o Supabase permite configurar o tamanho); a tela pede 6.
+- `signOut({ scope: "local" })`: sai só deste aparelho.
+- Até a Etapa 4, "Sincronizado" significa apenas sessão ativa e online; a troca de dados ainda não existe.
+- Indicador: ponto no cabeçalho (celular) e linha no menu (computador, onde o cabeçalho some); campos com fonte de 16 px para o iOS não dar zoom.
+
+Não verificado: Supabase real (envio de e-mail, PKCE de verdade, template com código) — roteiro e2e-real após o passo manual.

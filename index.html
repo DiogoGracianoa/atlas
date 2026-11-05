@@ -20,6 +20,7 @@
     <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
   </button>
   <div class="crumb"><b id="cbTitle">Atlas de Estudos</b><span id="cbSub">Mapa das áreas</span></div>
+  <button class="sync-dot" id="syncDot" data-status="nao-sincronizado" aria-label="Não sincronizado" title="Não sincronizado"><i></i></button>
   <span class="pct" id="cbPct">0%</span>
   <button class="icon-btn" id="btnSheet" aria-label="Ajustes de leitura">
     <svg viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg>
@@ -35,6 +36,7 @@
     <h2 id="dTitle">Mapa das áreas</h2>
     <div class="meter"><i id="dMeter"></i></div>
     <div class="d-sub"><span id="dPct">0% do percurso</span><span id="dCount">0 de 0</span></div>
+    <button class="sync-line" id="syncLine" data-status="nao-sincronizado"><i></i><span id="syncText">Não sincronizado</span></button>
   </div>
   <div class="d-search">
     <input type="search" id="search" placeholder="Buscar tema, autor ou conceito" aria-label="Buscar" autocomplete="off">
@@ -71,6 +73,8 @@
     <button class="tinybtn" id="btnSheetClose">Pronto</button>
   </div>
 </div>
+
+<div class="sheet acct" id="acct" role="dialog" aria-label="Sincronização"></div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <div id="printable"></div>
