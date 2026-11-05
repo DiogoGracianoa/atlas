@@ -1,0 +1,17 @@
+.header {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  height: var(--header-h); padding: 0 8px 0 var(--gutter);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px);
+  -webkit-backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--text); text-decoration: none;
+  font-family: var(--font-read); font-weight: 700; font-size: 1.15rem; letter-spacing: -.01em;
+  min-height: 44px;
+}
+.logo { width: 26px; height: 26px; fill: none; stroke: var(--brand); stroke-width: 1.6; }
+.main { outline: none; min-height: calc(100vh - var(--header-h)); }

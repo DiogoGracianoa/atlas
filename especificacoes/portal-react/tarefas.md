@@ -145,3 +145,39 @@ cada tarefa é: teste vermelho, mudança mínima, teste verde e suíte disponív
   - `@supabase/supabase-js` 2.118.0 (de 15/10);
   - para a E3: `react-router` 8.5.0, `@fontsource-variable/literata` e
     `@fontsource-variable/inter` 5.3.0, e `axe-core` 4.14.0.
+
+### E3 — Portal e rotas (2026-11-05)
+
+- **T3.1 (U01):** `src/ui/tokens.ts` (paletas clara e escura) e `theme.ts`
+  (gera as custom properties nos modos claro, escuro automático e escuro
+  forçado). `tests/ui/tokens.test.ts` verifica 42 itens: 16 pares de texto ≥ 4,5
+  e 4 de interface ≥ 3 por tema, mais as cores de tradição. As 8 tradições do
+  manifesto passam AA nos dois temas, então o risco R5 não se materializou.
+- **T3.2 (R05, R06):**
+  - `src/sections/{types,registry}.ts` (KS1) e `src/app/routes.tsx`, que monta
+    as rotas iterando o registro;
+  - seção de teste em `tests/fixtures/secao-teste`, usada só via registro e com
+    o shell, o armazenamento e a sincronização reais.
+- **T3.3 (R02, R03):**
+  - `*` redireciona para `/` com o aviso "Página não encontrada.";
+  - `main.tsx` aplica `legacyToPath` com `replaceState` antes de montar o
+    roteador. O teste de ponta a ponta fica na E6.
+- **T3.4 (U02, U03):** `src/ui/primitives.tsx`, `Sheet.tsx` (foco preso,
+  `Esc`, devolve o foco) e `Toast.tsx` (`role=status`), com axe-core sem
+  violações sérias.
+- **Decisões técnicas:**
+  - Fontes: só os subconjuntos latino e latino estendido (`src/ui/fonts.css`,
+    extraído do fontsource). Os demais incharia o cache offline.
+  - Estado na interface: um contador de versão por serviço, assinado com
+    `useSyncExternalStore`. O store muta no lugar; o contador força o redesenho
+    (ADR-004).
+  - Testes de UI: `tests/ui/setup.ts` faz o `cleanup` (o Vitest roda sem
+    globais) e `tests/ui/harness.tsx` monta o app real com roteador em memória.
+- **Comandos executados:**
+  - `npx vitest run --project ui`: 52/52;
+  - `npx vitest run --project core`: 94/94;
+  - `tsc` e `eslint .`: limpos;
+  - `npm run build`: JS inicial de 108,7 KB gzip, com o supabase-js em chunk
+    separado de 56,7 KB;
+  - `npx playwright test`: 2/2;
+  - portal conferido no navegador (tema escuro).

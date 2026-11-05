@@ -1,0 +1,63 @@
+/* Primitivos do design system. */
+
+.button {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 44px; padding: 0 18px;
+  border-radius: 999px; border: 1px solid transparent;
+  font-family: var(--font-ui); font-weight: 600; font-size: 0.94rem; line-height: 1;
+  cursor: pointer; text-decoration: none; white-space: nowrap;
+  transition: background-color .15s, border-color .15s, color .15s;
+}
+.button:disabled { opacity: .55; cursor: not-allowed; }
+.primary { background: var(--brand); color: var(--on-brand); }
+.primary:hover:not(:disabled) { filter: brightness(1.08); }
+.secondary { background: transparent; color: var(--text); border-color: var(--control); }
+.secondary:hover:not(:disabled) { background: var(--surface-alt); }
+.ghost { background: transparent; color: var(--brand); padding: 0 10px; }
+.ghost:hover:not(:disabled) { background: var(--brand-soft); }
+.danger { background: transparent; color: var(--danger); border-color: var(--danger); }
+.block { width: 100%; }
+
+.iconButton {
+  display: inline-grid; place-items: center;
+  width: 44px; height: 44px; border-radius: 999px;
+  border: 0; background: transparent; color: var(--text); cursor: pointer;
+}
+.iconButton:hover { background: var(--surface-alt); }
+.iconButton svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+.card {
+  display: block; position: relative;
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 20px; box-shadow: var(--shadow);
+  text-decoration: none;
+}
+a.card:hover { border-color: var(--control); }
+a.card:hover .cardTitle { text-decoration: underline; text-underline-offset: .18em; }
+.cardMuted { background: var(--surface-alt); box-shadow: none; }
+.cardTitle { font-size: 1.15rem; margin: 0 0 6px; }
+
+.tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: .02em;
+  padding: 3px 10px; border-radius: 999px;
+  background: var(--surface-alt); color: var(--muted);
+}
+.tagDot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+
+.progress { display: grid; gap: 6px; }
+.progressTrack { height: 6px; border-radius: 999px; background: var(--surface-alt); overflow: hidden; }
+.progressBar { height: 100%; background: var(--success); border-radius: inherit; transition: width .3s; }
+.progressLabel { font-size: .82rem; color: var(--muted); }
+
+.segmented {
+  display: inline-flex; padding: 3px; gap: 2px;
+  border: 1px solid var(--control); border-radius: 999px; background: var(--surface);
+}
+.segmented button {
+  min-height: 38px; min-width: 44px; padding: 0 12px;
+  border: 0; border-radius: 999px; background: transparent; color: var(--text);
+  font-weight: 600; cursor: pointer;
+}
+.segmented button[aria-pressed="true"] { background: var(--brand); color: var(--on-brand); }
