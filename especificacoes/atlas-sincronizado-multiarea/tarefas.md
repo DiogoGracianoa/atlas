@@ -146,3 +146,20 @@ Decisões de implementação:
 Risco residual declarado: com os dois aparelhos **online editando a mesma anotação ao mesmo tempo**, a escrita mais nova vence sem marcador (não há busca entre as teclas). Edição offline ou em momentos diferentes é preservada.
 
 Não verificado: Supabase real (formato real das respostas, RLS com JWT real), iOS Safari real, área nunca aberta offline com mais de uma área disponível (só há política).
+
+## Registro de implementação — Etapa 5 (2026-11-05)
+
+| Item | Evidência | Resultado |
+|---|---|---|
+| T5.1 `vercel.json` | `tests/app/deploy.test.mjs`: `/`, `/index.html`, `/sw.js` → `no-cache`; `/assets/*`, `/content/*` → `public, max-age=300, must-revalidate`; `nosniff`; sem build | RED → verde |
+| `.vercelignore` | mesmo teste: fora do deploy `exemplos`, `tests`, `especificacoes`, `supabase`, `scripts` (e framework SDD); dentro `index.html`, `sw.js`, `assets`, `content` | verde |
+| T5.2 README | mesmo teste: 10 seções obrigatórias, template com `{{ .Token }}`, aviso de `service_role`, tabela de áreas igual ao manifesto, exatamente 5 passos para área nova, exemplo mínimo de tema é JSON válido com os campos obrigatórios | RED → verde |
+| suíte | `node --test` 121 testes; `validate.mjs` | verde |
+
+Decisões:
+
+- `.vercelignore` publica só o site; o repositório continua público, então isso é higiene, não segredo.
+- README aceita a chave **publishable** (`sb_publishable_…`) ou a **anon** legada: as duas funcionam no supabase-js. Nomes de menus do painel do Supabase conferidos com a documentação na data; podem mudar.
+- Tamanho do código: a documentação do Supabase dá 6 a 10 dígitos (padrão 6); o app aceita 6 a 10.
+
+Não verificado: deploy real na Vercel e o painel do Supabase (passos manuais do autor).

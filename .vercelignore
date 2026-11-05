@@ -1,0 +1,13 @@
+# Só o site vai para a Vercel: index.html, sw.js, assets/ e content/.
+exemplos
+tests
+especificacoes
+.discovery
+docs
+scripts
+supabase
+.agents
+.claude
+.github
+AGENTS.md
+CLAUDE.md
