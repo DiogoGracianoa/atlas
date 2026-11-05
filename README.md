@@ -245,8 +245,8 @@ e vídeos, anotações, recortes) que serve de insumo para escrever o conteúdo 
 
 - O site nunca lê essa pasta, e nada no repositório depende dela: a validação,
   os testes e as Actions rodam num clone limpo. O único script que a menciona,
-  `scripts/check-extract.mjs`, foi usado uma vez para provar que o conteúdo de
-  política saiu idêntico do HTML original, e encerra em silêncio se ela não existir.
+  `scripts/check-extract.mjs`, prova que os sete módulos originais de
+  política seguem idênticos ao HTML original, e encerra em silêncio se ela não existir.
 - Material que está só em `exemplos/` não existe para o site. Para virar
   conteúdo, ele precisa ser convertido em `content/<área>/curriculum.json`,
   num passo explícito.

@@ -1,5 +1,7 @@
-// Verificação única (cenário C01): o conteúdo de content/politica/curriculum.json
-// precisa ser byte a byte igual ao bloco atlas-data do HTML original.
+// Verificação do cenário C01: os módulos extraídos do HTML original continuam
+// byte a byte iguais em content/politica/curriculum.json. O bloco original
+// termina em "]}"; módulos acrescentados depois (como o 8) entram antes desse
+// fechamento, então o arquivo atual precisa começar pelo bloco sem esse final.
 // O HTML original vive em exemplos/, que não é versionada: sem ela, o script
 // encerra em silêncio com sucesso (clone limpo).
 import { existsSync, readFileSync } from "node:fs";
@@ -29,9 +31,13 @@ if (!existsSync(target)) {
 }
 const file = readFileSync(target);
 const sha = (b) => createHash("sha256").update(b).digest("hex");
+const closes = (b) => b.subarray(b.length - 2).toString("utf8") === "]}";
+const body = block.subarray(0, block.length - 2);
 
-if (!block.equals(file)) {
-  console.error("DIFERENTE\n  original " + sha(block) + " (" + block.length + " bytes)\n  extraído " + sha(file) + " (" + file.length + " bytes)");
+if (!closes(block) || !closes(file) || !file.subarray(0, body.length).equals(body)) {
+  console.error("DIFERENTE\n  original " + sha(block) + " (" + block.length + " bytes)\n  atual    " + sha(file) + " (" + file.length + " bytes)");
   process.exit(1);
 }
-console.log("Idêntico: " + sha(file) + " (" + file.length + " bytes)");
+const extra = file.length - block.length;
+console.log("Módulos originais idênticos: " + sha(block) + " (" + block.length + " bytes)" +
+  (extra ? "; mais " + extra + " bytes de módulos acrescentados depois." : "."));

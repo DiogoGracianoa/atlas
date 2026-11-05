@@ -3,6 +3,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { createHash } from "node:crypto";
 import { createContent, indexArea, areaProgress } from "../../assets/lib/content.js";
 import { manifest, curriculum, REPO } from "./helpers.mjs";
 
@@ -71,14 +72,34 @@ test("índice compõe IDs com namespace e marcas por item", () => {
   assert.deepEqual(a.stats, { modulos: 1, temas: 2, livros: 1, videos: 2 });
 });
 
-test("política real: 36 itens, IDs compostos únicos", () => {
+test("política real: 43 itens, IDs compostos únicos", () => {
   const man = JSON.parse(readFileSync(join(REPO, "content", "areas.json"), "utf8"));
   const cur = JSON.parse(readFileSync(join(REPO, "content", "politica", "curriculum.json"), "utf8"));
   const a = indexArea(man.areas.find(x => x.slug === "politica"), cur);
-  assert.equal(a.nodes.length, 36);
-  assert.equal(new Set(a.nodes.map(n => n.key)).size, 36);
+  assert.equal(a.nodes.length, 43);
+  assert.equal(new Set(a.nodes.map(n => n.key)).size, 43);
   assert.equal(a.nodes[0].key, "politica/m1e1");
-  assert.deepEqual(a.stats, { modulos: 7, temas: 29, livros: 24, videos: 38 });
+  assert.deepEqual(a.stats, { modulos: 8, temas: 35, livros: 30, videos: 50 });
+});
+
+test("política: módulos 1 a 7 seguem byte a byte iguais ao original extraído", () => {
+  // O arquivo original terminava em "]}" (fecha a lista de módulos e o objeto).
+  // Módulos novos entram antes desse fechamento; o prefixo não muda.
+  const b = readFileSync(join(REPO, "content", "politica", "curriculum.json"));
+  const prefix = b.subarray(0, 198397 - 2);
+  assert.equal(createHash("sha256").update(prefix).digest("hex"), "e4abb645cd24faf3413f3022cbfd2fb4daa44f38ef1f0c402f11475940a0994f");
+});
+
+test("política: módulo 8 sobre ajuste fiscal, com ênfase marxista", () => {
+  const cur = JSON.parse(readFileSync(join(REPO, "content", "politica", "curriculum.json"), "utf8"));
+  const m8 = cur.modules.find(m => m.id === "m8");
+  assert.ok(m8, "módulo m8 ausente");
+  assert.equal(m8.number, 8);
+  assert.match(m8.name, /ajuste fiscal/i);
+  const trads = m8.steps.map(s => s.tradition);
+  assert.ok(trads.includes("liberal"), "precisa de ao menos um tema liberal");
+  assert.ok(trads.filter(t => t === "marx").length > trads.filter(t => t === "liberal").length, "marxismo em maior número que liberalismo");
+  assert.equal(m8.workshop.id, "m8of");
 });
 
 test("progresso da área usa total conhecido ou só a contagem", () => {
