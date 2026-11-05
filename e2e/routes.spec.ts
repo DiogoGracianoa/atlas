@@ -61,3 +61,9 @@ test("trocar de item vai ao topo; voltar restaura a posição (R08)", async ({ p
   await expect(page).toHaveURL(/\/atlas\/politica\/m1e1$/);
   await page.waitForFunction((y) => Math.abs(window.scrollY - y) < 5, antes);
 });
+
+test("hash do próprio app fora da raiz não é tratado como link antigo (achado 3 da revisão)", async ({ page }) => {
+  await page.goto("/atlas/politica/m1e1#conteudo");
+  await expect(page.getByRole("heading", { level: 1, name: "Poder, Estado e governo" })).toBeVisible();
+  await expect(page).toHaveURL(/\/atlas\/politica\/m1e1#conteudo$/);
+});

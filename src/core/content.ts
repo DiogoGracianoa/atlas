@@ -64,8 +64,9 @@ export function marksOf(n: ItemNode): MarkInfo[] {
 export function indexArea(meta: AreaMeta, data: Curriculum): AreaIndex {
   const slug = meta.slug;
   const nodes: ItemNode[] = [];
-  const byId: Record<string, ItemNode> = {};
-  const byKey: Record<string, ItemNode> = {};
+  // Sem protótipo: "constructor", "__proto__" etc. não viram itens (achado 5 da revisão).
+  const byId: Record<string, ItemNode> = Object.create(null) as Record<string, ItemNode>;
+  const byKey: Record<string, ItemNode> = Object.create(null) as Record<string, ItemNode>;
   const add = (n: ItemNode) => { nodes.push(n); byId[n.id] = n; byKey[n.key] = n; };
   data.modules.forEach(m => {
     m.steps.forEach(s => add({ ...s, kind: "step", mod: m, area: slug, key: slug + "/" + s.id } satisfies StepNode));

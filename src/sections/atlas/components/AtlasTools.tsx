@@ -6,7 +6,7 @@ import { useAccountSeen } from "../../../app/account";
 import { useServices, useSyncState } from "../../../app/context";
 import { exportBackup, planImport } from "../../../core/backup";
 import { LEGACY_AREA } from "../../../core/legacy";
-import type { AreaIndex, Op } from "../../../core/types";
+import type { AreaIndex } from "../../../core/types";
 import { Confirm } from "../../../ui/Confirm";
 import { Button } from "../../../ui/primitives";
 import { useToast } from "../../../ui/Toast";
@@ -29,7 +29,7 @@ export function AtlasTools({ area, onAction, onPrint }: { area: AreaIndex | null
   const toast = useToast();
   const navigate = useNavigate();
   const fileRef = useRef<HTMLInputElement>(null);
-  const [pendingImport, setPendingImport] = useState<Op[] | null>(null);
+  const [pendingImport, setPendingImport] = useState<{ backup: unknown; isKnownItem: (key: string) => boolean } | null>(null);
   const [confirmReset, setConfirmReset] = useState(false);
   const synced = seen && !!sync.user;
 
@@ -46,7 +46,10 @@ export function AtlasTools({ area, onAction, onPrint }: { area: AreaIndex | null
         const a = loaded.get(key.slice(0, key.indexOf("/")));
         return a ? !!a.byKey[key] : true;
       };
-      setPendingImport(planImport(store.state, o, { now: new Date().toISOString(), isKnownItem }));
+      // Valida agora (estrutura inválida cai no catch); o plano de verdade é
+      // feito na confirmação, sobre o estado daquele momento (achado 2 da revisão).
+      planImport(store.state, o, { now: new Date().toISOString(), isKnownItem });
+      setPendingImport({ backup: o, isKnownItem });
     } catch {
       toast("Não foi possível ler esse arquivo. Selecione um backup exportado pelo Atlas.");
     }
@@ -74,8 +77,10 @@ export function AtlasTools({ area, onAction, onPrint }: { area: AreaIndex | null
         confirmLabel="Mesclar"
         onCancel={() => setPendingImport(null)}
         onConfirm={() => {
-          const ops = pendingImport ?? [];
+          const p = pendingImport;
           setPendingImport(null);
+          if (!p) return;
+          const ops = planImport(store.state, p.backup, { now: new Date().toISOString(), isKnownItem: p.isKnownItem });
           store.applyOps(ops);
           toast(ops.length ? `Progresso importado (${ops.length} ${ops.length === 1 ? "alteração" : "alterações"}).` : "Nada novo no backup.");
         }}

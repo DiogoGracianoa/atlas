@@ -62,7 +62,7 @@ export const defaultLoader = async (): Promise<SupabaseModule> =>
 export interface SyncWindow {
   navigator?: { onLine?: boolean };
   location?: { origin: string; pathname: string; search: string; hash: string };
-  history?: { replaceState(data: unknown, unused: string, url: string): void };
+  history?: { state?: unknown; replaceState(data: unknown, unused: string, url: string): void };
   document?: { visibilityState: string; addEventListener(type: string, fn: () => void): void };
   addEventListener?(type: string, fn: () => void): void;
 }
@@ -188,7 +188,8 @@ export function createSync({
     }
     AUTH_PARAMS.forEach(p => params.delete(p));
     const rest = params.toString();
-    win.history.replaceState(null, "", win.location.pathname + (rest ? "?" + rest : "") + win.location.hash);
+    // Mantém o estado do roteador (chave da entrada, usada na rolagem).
+    win.history.replaceState(win.history.state ?? null, "", win.location.pathname + (rest ? "?" + rest : "") + win.location.hash);
   }
 
   async function connect(): Promise<boolean> {

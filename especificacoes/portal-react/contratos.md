@@ -109,3 +109,10 @@ export const sections: Section[];
 Estado local acrescentado, fora do K4 e nunca sincronizado: a chave
 `atlas-conta-vista` com o valor `"1"`, gravada na primeira autenticação bem
 sucedida neste aparelho. Ela só controla a visibilidade da interface de conta.
+
+## Extensão 2026-11-05 — KR2 v1.1 e reescrita na Vercel
+
+- **KR2:** a tradução só roda quando `location.pathname === "/"`. O site antigo
+  era uma página só, na raiz; em outras rotas o hash pertence ao app novo.
+- **Vercel:** a reescrita para `index.html` exclui `/assets/`, `/content/` e
+  `/icons/`, para que um arquivo ausente dê 404, e não HTML com status 200.

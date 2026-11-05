@@ -56,10 +56,15 @@ export function searchModules(a: AreaIndex, q: string): { mod: Module; items: It
 
 export const tradVar = (area: string, trad: string) => `--trad-${area}-${trad}`;
 
+// O manifesto vai para dentro de um <style>: só passam chaves simples e cores
+// #RRGGBB (as mesmas regras do validate e do app antigo).
+const SAFE = /^[a-z0-9-]+$/;
+const COLOR = /^#[0-9A-Fa-f]{6}$/;
+
 export function tradition(a: AreaIndex, key: string): { nome: string; color: string } {
   const t = a.meta.tradicoes || {};
-  const k = t[key] ? key : Object.keys(t)[0] || "";
-  return { nome: t[k]?.nome ?? "", color: `var(${tradVar(a.slug, k)})` };
+  const k = Object.hasOwn(t, key) ? key : Object.keys(t)[0] || "";
+  return { nome: (Object.hasOwn(t, k) && t[k]?.nome) || "", color: `var(${tradVar(a.slug, k)})` };
 }
 
 export function itemTradition(a: AreaIndex, n: ItemNode) {
@@ -69,7 +74,9 @@ export function itemTradition(a: AreaIndex, n: ItemNode) {
 
 /** CSS com as cores de tradição da área nos temas claro e escuro. */
 export function traditionCss(meta: AreaMeta): string {
-  const t = Object.entries(meta.tradicoes || {});
+  if (!SAFE.test(meta.slug)) return "";
+  const t = Object.entries(meta.tradicoes || {})
+    .filter(([k, v]) => SAFE.test(k) && COLOR.test(v?.cor ?? "") && COLOR.test(v?.corEscura ?? ""));
   const lightVars = t.map(([k, v]) => `${tradVar(meta.slug, k)}: ${v.cor};`).join(" ");
   const darkVars = t.map(([k, v]) => `${tradVar(meta.slug, k)}: ${v.corEscura};`).join(" ");
   return `:root { ${lightVars} }\n@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { ${darkVars} } }\n:root[data-theme="dark"] { ${darkVars} }`;

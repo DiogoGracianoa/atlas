@@ -28,8 +28,13 @@ describe("vercel.json", () => {
     expect(vercel.outputDirectory).toBe("dist");
   });
 
-  it("rotas limpas caem no index.html (recarregar não dá 404)", () => {
-    expect(vercel.rewrites).toContainEqual({ source: "/(.*)", destination: "/index.html" });
+  it("rotas limpas caem no index.html; arquivos ausentes de assets, content e icons dão 404", () => {
+    const rw = vercel.rewrites ?? [];
+    expect(rw).toHaveLength(1);
+    expect(rw[0]!.destination).toBe("/index.html");
+    const re = new RegExp("^" + rw[0]!.source + "$");
+    for (const p of ["/", "/atlas", "/atlas/politica/m1e1", "/entrar"]) expect(re.test(p), p).toBe(true);
+    for (const p of ["/assets/index-velho.js", "/content/nada.json", "/icons/x.png"]) expect(re.test(p), p).toBe(false);
   });
 
   it("HTML e service worker sem cache; assets com hash imutáveis; conteúdo com cache curto", () => {

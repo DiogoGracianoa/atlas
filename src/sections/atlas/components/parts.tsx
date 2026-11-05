@@ -1,5 +1,5 @@
 // Peças reutilizadas nas páginas do atlas.
-import { useEffect, useId, useState, type ReactNode } from "react";
+import { useEffect, useId, useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import { Link } from "react-router";
 import { useAppState, useServices, useSyncState } from "../../../app/context";
 import { useAccountSeen } from "../../../app/account";
@@ -93,7 +93,7 @@ export function Tutor({ a, n }: { a: AreaIndex; n: ItemNode }) {
 
 /**
  * Anotações: cada tecla grava no aparelho. Uma mudança remota (sincronização)
- * não troca o texto enquanto o campo tem foco; é aplicada ao sair dele (P08).
+ * entra no campo mesmo em uso, sem tirar o foco nem mover o cursor (P08).
  */
 export function Notes({ n }: { n: ItemNode }) {
   const { store } = useServices();
@@ -103,27 +103,38 @@ export function Notes({ n }: { n: ItemNode }) {
   const stored = store.note(n.key);
   const [text, setText] = useState(stored);
   const [prevStored, setPrevStored] = useState(stored);
-  const [focused, setFocused] = useState(false);
+  const ref = useRef<HTMLTextAreaElement>(null);
+  const caret = useRef<number | null>(null);
   const id = useId(), hid = useId();
 
-  // Mudou no store (sincronização, importação): acompanha, a menos que o campo
-  // esteja em uso. (Ajuste de estado durante a renderização, sem efeito.)
+  // Mudou no store (sincronização, importação): o campo acompanha mesmo em uso.
+  // Cada tecla já foi salva, então o campo não guarda nada pendente; segurar a
+  // versão antiga faria a próxima tecla sobrescrever a versão mesclada
+  // (achado 1 da revisão). Ajuste de estado durante a renderização, sem efeito.
   if (stored !== prevStored) {
     setPrevStored(stored);
-    if (!focused) setText(stored);
+    setText(stored);
   }
+
+  // Mantém o foco e o cursor no lugar quando o texto vem de fora.
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el || document.activeElement !== el || caret.current === null) return;
+    const pos = Math.min(caret.current, el.value.length);
+    el.setSelectionRange(pos, pos);
+  }, [stored]);
 
   return (
     <section className={s.block} aria-labelledby={hid}>
       <h2 id={hid} className={s.blockTitle}><label htmlFor={id}>Suas anotações</label></h2>
       <textarea
         id={id}
+        ref={ref}
         className={s.notes}
         value={text}
         placeholder="Resuma com suas palavras: 3 conceitos, 1 exemplo concreto, 1 dúvida e 1 discordância."
-        onFocus={() => setFocused(true)}
-        onBlur={() => { setFocused(false); setText(store.note(n.key)); }}
-        onChange={e => { setText(e.target.value); store.setNote(n.key, e.target.value); }}
+        onSelect={e => { caret.current = e.currentTarget.selectionStart; }}
+        onChange={e => { caret.current = e.target.selectionStart; setText(e.target.value); store.setNote(n.key, e.target.value); }}
       />
       <div className={s.noteMeta}>
         <span>{seen && sync.user ? "Salva neste aparelho e sincronizada" : "Salva neste aparelho"}</span>

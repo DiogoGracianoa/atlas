@@ -9,7 +9,9 @@ import { applyPrefs, installTheme } from "./ui/theme";
 
 // Links antigos (#/politica/m1e1, #m1e1…) viram rotas limpas antes de o
 // roteador montar, substituindo o endereço sem entrada extra no histórico (KR2).
-const legacy = legacyToPath(window.location.hash);
+// O site antigo era uma página só, na raiz: hash em outras rotas (como o
+// #conteudo do link de pular) é do próprio app e fica intocado.
+const legacy = window.location.pathname === "/" ? legacyToPath(window.location.hash) : null;
 if (legacy) window.history.replaceState(null, "", legacy + window.location.search);
 
 installTheme();

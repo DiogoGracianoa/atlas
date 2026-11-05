@@ -138,3 +138,28 @@ presente, e do `/entrar`, quando não está; o `emailRedirectTo` aponta para a
 página atual nos dois casos. A matriz recebe `RN18 → AC22, AC22b, AC13 → A06–A08
 → tests/ui/conta.test.tsx` e `RN15 → AC19 → Q05 → tests/docs.test.ts`. Novos
 totais: 18 RNs, 23 ACs e 50 cenários.
+
+## Extensão 2026-11-05 — achados da revisão (cenários técnicos ajustados)
+
+- **P08 (ajustado).** Uma atualização remota entra no campo de anotação
+  **mesmo com ele em foco**, sem tirar o foco e mantendo o cursor.
+  - **Por que mudou:** a versão anterior segurava o texto antigo até o campo
+    perder o foco, e a tecla seguinte gravava o texto antigo com horário novo.
+    Isso apagava a versão mesclada (achado 1 da revisão, herdado do app
+    antigo).
+  - **Por que é seguro:** cada tecla já é salva no store, então o campo nunca
+    guarda texto pendente.
+  - **Origem:** técnico (RN01, item 8 do inventário: "sem perder o foco").
+  - **Testes:** `tests/ui/atlas/tema.test.tsx`, dois casos.
+- **P11b (técnico).** O plano de importação é calculado na confirmação, sobre o
+  estado daquele momento. Uma versão remota chegada com o diálogo aberto não é
+  sobrescrita. **Teste:** `tests/ui/revisao.test.tsx`.
+- **R02b (técnico).** IDs com nome de propriedade do `Object` (`constructor`,
+  `__proto__`, `toString`) levam à capa, como qualquer item desconhecido. O
+  índice da área não tem protótipo, e a rota raiz ganhou `errorElement`.
+  **Teste:** `tests/ui/revisao.test.tsx`.
+- **U05 (técnico).** As cores de tradição só entram no CSS se a chave seguir
+  `[a-z0-9-]+` e a cor for `#RRGGBB`. É a mesma regra do `validate` e do app
+  antigo. **Teste:** `tests/ui/revisao.test.tsx`.
+- **R03b (técnico).** Hash fora da raiz (por exemplo `#conteudo`, do link de
+  pular) não é link antigo e fica intocado. **Teste:** `e2e/routes.spec.ts`.

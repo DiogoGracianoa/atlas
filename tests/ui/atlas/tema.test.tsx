@@ -62,7 +62,7 @@ describe("tutor por IA (P07)", () => {
 });
 
 describe("anotações (P08)", () => {
-  it("cada tecla grava; atualização remota não mexe no campo em uso e entra ao sair dele", async () => {
+  it("cada tecla grava; atualização remota entra no campo em uso sem tirar o foco", async () => {
     const { user, services } = renderApp("/atlas/politica/m1e1");
     const campo = await screen.findByRole("textbox", { name: "Suas anotações" }) as HTMLTextAreaElement;
     await user.click(campo);
@@ -70,14 +70,26 @@ describe("anotações (P08)", () => {
     expect(services.store.note("politica/m1e1")).toBe("abc");
     expect(screen.getByText("3 caracteres")).toBeTruthy();
 
+    // Cada tecla já está salva: o campo não guarda nada pendente, então a
+    // versão mesclada (aqui, a remota) pode entrar sem perder texto.
     act(() => {
       services.store.applyOps([{ type: "note", key: "politica/m1e1", value: { body: "remoto", at: "2030-01-01T00:00:00.000Z" } }], { silent: true });
     });
     expect(document.activeElement).toBe(campo);
-    expect(campo.value).toBe("abc");
+    expect(campo.value).toBe("remoto");
+  });
 
-    await user.tab();
-    await waitFor(() => expect(campo.value).toBe("remoto"));
+  it("continuar digitando depois de uma atualização remota não apaga a versão remota (achado da revisão)", async () => {
+    const { user, services } = renderApp("/atlas/politica/m1e1");
+    const campo = await screen.findByRole("textbox", { name: "Suas anotações" }) as HTMLTextAreaElement;
+    await user.click(campo);
+    await user.type(campo, "local");
+    act(() => {
+      services.store.applyOps([{ type: "note", key: "politica/m1e1", value: { body: "local\n\n— versão de outro aparelho —\nremoto", at: "2030-01-01T00:00:00.000Z" } }], { silent: true });
+    });
+    await user.type(campo, "!");
+    expect(services.store.note("politica/m1e1")).toContain("remoto");
+    expect(services.store.note("politica/m1e1").endsWith("!")).toBe(true);
   });
 
   it("sem foco, a atualização remota aparece na hora", async () => {
