@@ -216,3 +216,31 @@ cada tarefa é: teste vermelho, mudança mínima, teste verde e suíte disponív
   - `npx vitest run --project core`: 94/94;
   - `tsc` e `eslint .`: limpos;
   - tema m8e3 conferido no navegador a 800 px e a 1280 px.
+
+### E5 — Conta e utilidades (2026-11-05)
+
+- **Login discreto (RN18):**
+  - `src/app/account.ts`: chave `atlas-conta-vista`;
+  - `src/app/conta.tsx`: `SyncIndicator`, painel, `LoginForm` em dois passos
+    e `useAccountTracker`, que marca o aparelho e avisa "Conectado como…";
+  - `src/app/pages/Entrar.tsx`: rota `/entrar` registrada no shell, sem link
+    no site.
+- **Ajustes** (`src/app/Ajustes.tsx`, P14): tamanho P/M/G/GG e tema
+  auto/claro/escuro, aplicados no `<html>` e guardados só no aparelho.
+- **Ferramentas** (`AtlasTools`, P11/P12):
+  - exportar, importar (com confirmação), Zerar (com confirmação, texto conforme
+    o login) e Salvar em PDF;
+  - `src/ui/Confirm.tsx` substitui o `window.confirm`.
+- **PDF (P13):** `print/RoteiroImpresso.tsx` é renderizado sob demanda num
+  portal. `usePrint` fica na moldura do atlas, que é única: o menu aparece duas
+  vezes no celular e duplicaria a impressão. O Ctrl+P também gera o roteiro
+  (`beforeprint` com `flushSync`).
+- **Testes:**
+  - `conta.test.tsx`: 7 testes (A01–A08);
+  - `utilidades.test.tsx`: 8 testes (P11–P14, P16);
+  - `upgrade.test.tsx`: 2 testes (D01, D02), com o estado e a fila no formato
+    exato do app antigo (K4);
+  - `fake-supabase.ts`: cliente falso injetado via `loadSupabase`.
+- **Comandos executados:**
+  - `npx vitest run`: 186/186 (17 arquivos);
+  - `tsc` e `eslint .`: limpos.

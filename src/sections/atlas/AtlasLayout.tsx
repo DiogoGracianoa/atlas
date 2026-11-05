@@ -10,6 +10,7 @@ import { Sheet } from "../../ui/Sheet";
 import { useArea, useManifest } from "./data";
 import { areaMarks, traditionCss } from "./model";
 import { AtlasNav } from "./components/AtlasNav";
+import { RoteiroImpresso, usePrint } from "./print/RoteiroImpresso";
 import s from "./Atlas.module.css";
 
 export interface AtlasContext {
@@ -33,6 +34,8 @@ export function AtlasLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const state = useAppState();
+  const current = slug && area.status === "ready" ? area.data : null;
+  const { printing, print } = usePrint(current);
 
   if (manifest.status === "loading") return <Carregando />;
   if (manifest.status === "error") {
@@ -43,7 +46,6 @@ export function AtlasLayout() {
   if (slug && area.status === "error") return <RedirectWithToast to="/atlas" message="Esta área precisa de conexão na primeira abertura." />;
   if (slug && area.status === "loading") return <Carregando />;
 
-  const current = slug && area.status === "ready" ? area.data : null;
   const ctx: AtlasContext = { manifest: manifest.data, area: current };
   const prog = current ? areaMarks(current, state) : null;
   const pct = prog && prog.total ? Math.round((100 * prog.done) / prog.total) : null;
@@ -52,7 +54,7 @@ export function AtlasLayout() {
     <div className={s.shell}>
       {current && <style>{traditionCss(current.meta)}</style>}
       <aside className={s.sidebar} aria-label="Navegação do atlas">
-        <AtlasNav ctx={ctx} />
+        <AtlasNav ctx={ctx} onPrint={print} />
       </aside>
       <div className={s.content}>
         <div className={s.bar}>
@@ -66,8 +68,9 @@ export function AtlasLayout() {
         <Outlet context={ctx} />
       </div>
       <Sheet open={menuOpen} side="left" title={current ? current.meta.nome : "Atlas de estudos"} onClose={() => setMenuOpen(false)}>
-        <AtlasNav ctx={ctx} onNavigate={() => setMenuOpen(false)} key={location.pathname} />
+        <AtlasNav ctx={ctx} onNavigate={() => setMenuOpen(false)} onPrint={print} key={location.pathname} />
       </Sheet>
+      {printing && <RoteiroImpresso a={printing} />}
     </div>
   );
 }

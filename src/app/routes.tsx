@@ -3,6 +3,7 @@
 import type { RouteObject } from "react-router";
 import type { Section } from "../sections/types";
 import { Layout } from "./Layout";
+import { Entrar } from "./pages/Entrar";
 import { Portal } from "./pages/Portal";
 import { RedirectWithToast } from "./RedirectWithToast";
 
@@ -16,6 +17,8 @@ export function buildRoutes(sections: Section[]): RouteObject[] {
       element: <Layout />,
       children: [
         { index: true, element: <Portal sections={sections} /> },
+        // login do autor, sem link no site (RN18)
+        { path: "entrar", element: <Entrar /> },
         ...sectionRoutes,
         { path: "*", element: <RedirectWithToast to="/" message="Página não encontrada." /> },
       ],

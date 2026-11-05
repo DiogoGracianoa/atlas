@@ -43,7 +43,7 @@ function ModuleGroup({ a, mod, items, state, currentKey, forceOpen, onNavigate }
   );
 }
 
-export function AtlasNav({ ctx, onNavigate }: { ctx: AtlasContext; onNavigate?: () => void }) {
+export function AtlasNav({ ctx, onNavigate, onPrint }: { ctx: AtlasContext; onNavigate?: () => void; onPrint?: () => void }) {
   const { manifest, area } = ctx;
   const { content } = useServices();
   const state = useAppState();
@@ -156,7 +156,7 @@ export function AtlasNav({ ctx, onNavigate }: { ctx: AtlasContext; onNavigate?: 
         )}
       </div>
       <div className={s.navBody}>{body}</div>
-      <AtlasTools area={area} onAction={onNavigate} />
+      <AtlasTools area={area} onAction={onNavigate} onPrint={onPrint} />
     </nav>
   );
 }

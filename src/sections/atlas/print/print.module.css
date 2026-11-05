@@ -1,0 +1,20 @@
+/* Na tela o roteiro não aparece; na impressão, só ele aparece. */
+.printable { display: none; }
+
+@media print {
+  :global(#root), :global(.skip-link) { display: none !important; }
+  .printable {
+    display: block; color: #000; background: #fff;
+    font-family: var(--font-read); font-size: 11pt; line-height: 1.5;
+  }
+  .printable h1 { font-size: 22pt; margin: 0 0 6pt; }
+  .printable h2 { font-size: 16pt; margin: 18pt 0 4pt; break-after: avoid; }
+  .printable h3 { font-size: 13pt; margin: 14pt 0 4pt; break-after: avoid; }
+  .printable h4 { font-size: 10.5pt; margin: 10pt 0 3pt; text-transform: uppercase; letter-spacing: .05em; break-after: avoid; }
+  .printable p, .printable li, .printable dd { orphans: 3; widows: 3; }
+  .printable dt { font-weight: 700; }
+  .printable dd { margin: 0 0 4pt; }
+  .meta { color: #444; font-size: 9.5pt; }
+  .mod { break-before: page; }
+  .mod:first-of-type { break-before: auto; }
+}
