@@ -181,3 +181,38 @@ cada tarefa é: teste vermelho, mudança mínima, teste verde e suíte disponív
     separado de 56,7 KB;
   - `npx playwright test`: 2/2;
   - portal conferido no navegador (tema escuro).
+
+### E4 — Atlas (2026-11-05)
+
+- **Moldura** (`AtlasLayout.tsx`):
+  - resolve a área da rota contra o manifesto: desconhecida vai para `/atlas`
+    com "Área não encontrada."; planejada, com "Esta área ainda não está
+    disponível."; erro de carga, com "Esta área precisa de conexão na primeira
+    abertura.";
+  - injeta as cores de tradição da área;
+  - mostra o menu como lateral fixa a partir de 1024 px e como gaveta (`Sheet`)
+    abaixo disso.
+- **Páginas:**
+  - `Mapa` (P01), com o atalho "Continuar" que mostra o título quando a área
+    está em cache;
+  - `Capa` (P02);
+  - `Item`, com `Tema` (P06), `Oficina` (P10) e `Pager` (P09);
+  - `Tutor` (P07), com o mesmo prompt do app antigo, em `model.ts`;
+  - `Notes` (P08): o estado acompanha o store durante a renderização, sem
+    efeito, e não troca o texto enquanto o campo tem foco.
+- **Menu** (`AtlasNav`, P03–P05): seletor de área, contagem por módulo, item
+  atual com `aria-current`, busca e "buscar em todas" agrupando por área.
+- **Testes:**
+  - `tests/ui/atlas/navegacao.test.tsx`: R01, R02, R07 e P01–P05;
+  - `tests/ui/atlas/tema.test.tsx`: P06–P10;
+  - axe-core na capa e no tema.
+- **Ajustes durante a implementação:**
+  - No jsdom o CSS não esconde o menu lateral, então as consultas dos testes
+    são feitas dentro de regiões nomeadas. A capa ganhou a região "Módulos".
+  - O user-event instala uma área de transferência falsa, e o teste do tutor lê
+    o texto copiado dela.
+- **Comandos executados:**
+  - `npx vitest run --project ui`: 75/75;
+  - `npx vitest run --project core`: 94/94;
+  - `tsc` e `eslint .`: limpos;
+  - tema m8e3 conferido no navegador a 800 px e a 1280 px.
