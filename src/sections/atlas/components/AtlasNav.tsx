@@ -6,7 +6,8 @@ import { useAppState, useServices } from "../../../app/context";
 import type { AreaIndex, ItemNode, Module, State } from "../../../core/types";
 import { areaProgress } from "../../../core/content";
 import type { AtlasContext } from "../AtlasLayout";
-import { doneCount, itemPath, moduleProgress, searchModules } from "../model";
+import { areaMarks, doneCount, itemPath, moduleProgress, searchModules } from "../model";
+import { Progress } from "../../../ui/primitives";
 import { AtlasTools } from "./AtlasTools";
 import s from "../Atlas.module.css";
 
@@ -150,9 +151,10 @@ export function AtlasNav({ ctx, onNavigate, onPrint }: { ctx: AtlasContext; onNa
           onChange={e => { setQuery(e.target.value); if (!e.target.value.trim()) { setAll(false); setAllAreas(null); } }}
         />
         {area && (
-          <p className={s.navMeta}>
+          <div className={s.navMeta}>
+            <Progress value={areaMarks(area, state).done} max={areaMarks(area, state).total} label="Progresso na área" />
             <Link to={"/atlas/" + area.slug} onClick={onNavigate}>Visão geral da área</Link>
-          </p>
+          </div>
         )}
       </div>
       <div className={s.navBody}>{body}</div>

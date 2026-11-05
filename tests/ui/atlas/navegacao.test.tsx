@@ -51,9 +51,11 @@ describe("mapa (P01)", () => {
     expect(await screen.findByRole("heading", { level: 1, name: "Mapa do Atlas" })).toBeTruthy();
     const lista = screen.getByRole("list", { name: "Áreas" });
     expect(within(lista).getByRole("link", { name: /Política, economia e marxismo/ }).getAttribute("href")).toBe("/atlas/politica");
-    const historia = within(lista).getByRole("heading", { name: "História" }).closest("li")!;
+    expect(within(lista).queryByText("História")).toBeNull();
+    const embreve = screen.getByRole("list", { name: "Em breve" });
+    const historia = within(embreve).getByRole("heading", { name: "História" }).closest("li")!;
     expect(within(historia).queryByRole("link")).toBeNull();
-    expect(within(historia).getByText("Em breve")).toBeTruthy();
+    expect(within(embreve).getAllByRole("listitem")).toHaveLength(5);
     const continuar = screen.getByRole("link", { name: /Continuar de onde parei/ });
     expect(continuar.getAttribute("href")).toBe("/atlas/politica/m3e2");
     expect(continuar.textContent).toContain("Módulo 3, tema 2");

@@ -29,7 +29,7 @@
 .menuButton span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .menuButton svg { flex: none; width: 20px; height: 20px; stroke: currentColor; stroke-width: 1.8; fill: none; stroke-linecap: round; }
 .barPct { color: var(--muted); font-size: .85rem; font-variant-numeric: tabular-nums; }
-@media (min-width: 1024px) { .barPct { display: none; } }
+@media (min-width: 1024px) { .barPct, .topline { display: none; } }
 .topline { height: 3px; background: var(--surface-alt); }
 .topline i { display: block; height: 100%; background: var(--success); transition: width .3s; }
 
@@ -42,7 +42,7 @@
   border: 1px solid var(--control); border-radius: var(--radius-sm);
   background: var(--bg); color: var(--text);
 }
-.navMeta { margin: 4px 0 0; font-size: .9rem; }
+.navMeta { display: grid; gap: 8px; margin: 8px 0 0; font-size: .9rem; }
 .navBody { display: grid; gap: 2px; }
 .navEmpty { padding: 4px var(--gutter); color: var(--muted); font-size: .9rem; margin: 0; }
 .navGroup {

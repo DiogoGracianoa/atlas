@@ -40,8 +40,10 @@ function Continuar({ slug, id, nome }: { slug: string; id: string; nome: string 
 export function Mapa() {
   const { manifest } = useAtlas();
   const state = useAppState();
-  const hid = useId();
+  const hid = useId(), soonId = useId();
   useTitle("Mapa do Atlas · Atlas");
+  const disponiveis = manifest.areas.filter(a => a.status === "disponivel" && !!a.arquivo);
+  const planejadas = manifest.areas.filter(a => !(a.status === "disponivel" && !!a.arquivo));
 
   const [lastSlug = "", lastId = ""] = state.lastAt ? state.lastAt.route.split("/") : [];
   const lastMeta = manifest.areas.find(a => a.slug === lastSlug && a.status === "disponivel");
@@ -56,19 +58,7 @@ export function Mapa() {
       {lastMeta && lastId && <Continuar slug={lastSlug} id={lastId} nome={lastMeta.nome} />}
       <h2 id={hid} className="visually-hidden">Áreas</h2>
       <ul className={s.areas} aria-labelledby={hid}>
-        {manifest.areas.map(a => {
-          const ok = a.status === "disponivel" && !!a.arquivo;
-          if (!ok) {
-            return (
-              <li key={a.slug}>
-                <div className={s.areaCard} data-soon>
-                  <Tag>Em breve</Tag>
-                  <h3>{a.nome}</h3>
-                  {a.resumo && <p>{a.resumo}</p>}
-                </div>
-              </li>
-            );
-          }
+        {disponiveis.map(a => {
           const p = areaProgress(a.slug, state.marks, state.totals[a.slug]);
           return (
             <li key={a.slug}>
@@ -84,6 +74,19 @@ export function Mapa() {
           );
         })}
       </ul>
+      {planejadas.length > 0 && (
+        <>
+          <h2 id={soonId} className={s.sectionTitle}>Em breve</h2>
+          <ul className={s.soon} aria-labelledby={soonId}>
+            {planejadas.map(a => (
+              <li key={a.slug}>
+                <h3>{a.nome}</h3>
+                {a.resumo && <p>{a.resumo}</p>}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
       <BackupNote />
     </div>
   );

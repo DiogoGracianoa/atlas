@@ -32,6 +32,10 @@ jobs:
         run: npm test
       - name: Build
         run: npm run build
+      - name: Limite de tamanho do JS inicial (RN13)
+        run: npm run size
+      - name: Busca de segredos no repositório e no build (RN17)
+        run: npm run secrets
 
   e2e:
     runs-on: ubuntu-latest

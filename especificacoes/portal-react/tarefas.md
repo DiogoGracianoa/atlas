@@ -292,3 +292,31 @@ cada tarefa é: teste vermelho, mudança mínima, teste verde e suíte disponív
   - `npm run test:legacy`: 95/95 (o que resta da base antiga);
   - `npm run validate`: ok;
   - `npx playwright test`: 13/13.
+
+### E7 — Acabamento (2026-11-05)
+
+- **T7.2 (Q01, Q03):**
+  - `scripts/size-budget.mjs` soma o gzip do chunk de entrada e de seus imports
+    estáticos e falha se passar de 150 KB ou se o supabase-js entrar no
+    carregamento inicial;
+  - `scripts/check-secrets.mjs` procura, nos arquivos versionados e em `dist/`,
+    JWT com papel `service_role`, chaves `sb_secret_` e variáveis de segredo
+    preenchidas, sem imprimir o valor encontrado;
+  - `tests/scripts/guardas.test.ts`: 5 testes, que falharam sem os scripts e
+    passaram com eles;
+  - os dois passos entraram no job `qualidade` do CI;
+  - resultado real: JS inicial de 118,1 KB gzip e nenhum segredo encontrado.
+- **T7.1 (U04) e U02 com renderização real** (`e2e/layout.spec.ts`), 19/19:
+  - 6 páginas a 320 px em GG, sem rolagem lateral e com campos ≥ 16 px;
+  - a gaveta cabe na tela, fecha com `Esc` e devolve o foco;
+  - axe-core injetado no Chromium, com contraste real (wcag2a, wcag2aa e
+    wcag21aa) nos temas claro e escuro, sem violações sérias ou críticas.
+- **T7.3 (revisão visual):** conferido no navegador a 1280 px (claro) e a
+  375 px (escuro). Ajustes feitos:
+  - o mapa separa as áreas disponíveis da lista compacta "Em breve";
+  - o progresso da área aparece no topo do menu lateral;
+  - a linha de progresso do celular some no desktop.
+
+  **Pendente:** a aprovação visual do autor, que estava ausente. As capturas
+  entram na documentação (E8).
+- **Comandos executados:** `npx vitest run`: 231/231; `eslint .` limpo.
