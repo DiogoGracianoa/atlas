@@ -1,7 +1,7 @@
 // Moldura comum a todas as páginas: link para pular ao conteúdo, cabeçalho
 // com a marca e o espaço da página. As seções desenham a própria navegação.
 import { useEffect, useRef } from "react";
-import { Link, Outlet, useLocation } from "react-router";
+import { Link, Outlet, ScrollRestoration, useLocation } from "react-router";
 import { useAppState } from "./context";
 import { applyPrefs } from "../ui/theme";
 import { HeaderActions } from "./HeaderActions";
@@ -15,17 +15,17 @@ export function Layout() {
 
   useEffect(() => { applyPrefs({ theme: state.theme, size: state.size }); }, [state.theme, state.size]);
 
-  // Troca de página: leva o foco ao conteúdo (leitores de tela anunciam a nova
-  // página) e volta ao topo; hash (#secao) fica com o navegador (R08).
+  // Troca de página: leva o foco ao conteúdo, para leitores de tela anunciarem
+  // a nova página. A rolagem fica com o ScrollRestoration: topo em navegação
+  // nova, posição anterior ao voltar (R08).
   useEffect(() => {
     if (first.current) { first.current = false; return; }
-    if (location.hash) return;
-    window.scrollTo?.(0, 0);
     main.current?.focus({ preventScroll: true });
-  }, [location.pathname, location.hash]);
+  }, [location.pathname]);
 
   return (
     <>
+      <ScrollRestoration />
       <a href="#conteudo" className="skip-link">Pular para o conteúdo</a>
       <header className={s.header}>
         <Link to="/" className={s.brand} aria-label="Atlas, página inicial">

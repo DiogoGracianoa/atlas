@@ -26,3 +26,10 @@ createRoot(root).render(
 );
 
 void services.sync.init();
+
+// Offline (ADR-007): o service worker só existe no build de produção.
+if (import.meta.env.PROD && "serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch((e: unknown) => console.warn("Service worker não registrado:", e));
+  });
+}

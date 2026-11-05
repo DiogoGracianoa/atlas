@@ -1,23 +1,25 @@
 // Cenário P01: scripts/keepalive.sh (usado pela Action diária) contra um
 // servidor local que imita a API REST do Supabase.
-import { test } from "node:test";
+import { test } from "vitest";
 import assert from "node:assert/strict";
-import { createServer } from "node:http";
+import { createServer, type Server } from "node:http";
+import type { AddressInfo } from "node:net";
 import { spawn } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { REPO } from "./helpers.mjs";
+import { REPO } from "./helpers";
 
-function serve(status, body = "[]") {
-  const seen = [];
+interface Seen { url?: string; apikey?: string | string[]; auth?: string }
+function serve(status: number, body = "[]"): Promise<{ srv: Server; seen: Seen[]; url: string }> {
+  const seen: Seen[] = [];
   const srv = createServer((req, res) => {
     seen.push({ url: req.url, apikey: req.headers.apikey, auth: req.headers.authorization });
     res.writeHead(status, { "Content-Type": "application/json" }).end(body);
   });
-  return new Promise(r => srv.listen(0, "127.0.0.1", () => r({ srv, seen, url: "http://127.0.0.1:" + srv.address().port })));
+  return new Promise(r => srv.listen(0, "127.0.0.1", () => r({ srv, seen, url: "http://127.0.0.1:" + (srv.address() as AddressInfo).port })));
 }
 
-function run(env) {
+function run(env: Record<string, string>): Promise<{ code: number | null; out: string }> {
   return new Promise(resolve => {
     const p = spawn("bash", [join(REPO, "scripts", "keepalive.sh")], {
       env: { ...process.env, KEEPALIVE_RETRY: "0", ...env }
@@ -35,9 +37,9 @@ test("200: consulta heartbeat com a chave no cabeçalho apikey e passa", async (
   srv.close();
   assert.equal(r.code, 0, r.out);
   assert.equal(seen.length, 1);
-  assert.equal(seen[0].url, "/rest/v1/heartbeat?select=id&limit=1");
-  assert.equal(seen[0].apikey, "chave-publica");
-  assert.equal(seen[0].auth, undefined, "sem Authorization: funciona com chave anon e publishable");
+  assert.equal(seen[0]!.url, "/rest/v1/heartbeat?select=id&limit=1");
+  assert.equal(seen[0]!.apikey, "chave-publica");
+  assert.equal(seen[0]!.auth, undefined, "sem Authorization: funciona com chave anon e publishable");
   assert.doesNotMatch(r.out, /chave-publica/, "não imprime a chave");
 });
 

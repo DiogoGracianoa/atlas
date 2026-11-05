@@ -1,7 +1,12 @@
 // Cenários C10 e C11: scripts/validate.mjs.
-import { test } from "node:test";
+import { test } from "vitest";
 import assert from "node:assert/strict";
-import { writeAtlas, runValidate, manifest, curriculum, REPO } from "./helpers.mjs";
+import { writeAtlas, runValidate, manifest, curriculum, REPO } from "./helpers";
+
+// Estes testes montam conteúdo inválido de propósito (campo faltando, tipo
+// errado, status inexistente); a tipagem frouxa aqui é intencional.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type Invalida = any;
 
 test("Atlas mínimo válido passa (código 0)", () => {
   const r = runValidate(writeAtlas());
@@ -26,7 +31,7 @@ test("JSON torto falha sem quebrar o script", () => {
 });
 
 test("ID duplicado na área falha", () => {
-  const cur = curriculum();
+  const cur: Invalida = curriculum();
   cur.modules[0].steps[1].id = "m1e1";
   const r = runValidate(writeAtlas({ cur }));
   assert.equal(r.code, 1);
@@ -35,8 +40,8 @@ test("ID duplicado na área falha", () => {
 
 for (const campo of ["id", "title", "tagline", "tradition", "definition", "concepts", "theses", "check"]) {
   test("tema sem " + campo + " falha", () => {
-    const cur = curriculum();
-    delete cur.modules[0].steps[0][campo];
+    const cur: Invalida = curriculum();
+    Reflect.deleteProperty(cur.modules[0].steps[0], campo);
     const r = runValidate(writeAtlas({ cur }));
     assert.equal(r.code, 1);
     assert.match(r.out, new RegExp("campo obrigatório ausente: " + campo));
@@ -44,7 +49,7 @@ for (const campo of ["id", "title", "tagline", "tradition", "definition", "conce
 }
 
 test("tema com campo obrigatório vazio falha", () => {
-  const cur = curriculum();
+  const cur: Invalida = curriculum();
   cur.modules[0].steps[0].check = [];
   const r = runValidate(writeAtlas({ cur }));
   assert.equal(r.code, 1);
@@ -52,7 +57,7 @@ test("tema com campo obrigatório vazio falha", () => {
 });
 
 test("URL sem https:// falha", () => {
-  const cur = curriculum();
+  const cur: Invalida = curriculum();
   cur.modules[0].steps[0].videos[0].url = "http://example.org/v";
   const r = runValidate(writeAtlas({ cur }));
   assert.equal(r.code, 1);
@@ -60,7 +65,7 @@ test("URL sem https:// falha", () => {
 });
 
 test("tema sem book e sem bridge falha", () => {
-  const cur = curriculum();
+  const cur: Invalida = curriculum();
   delete cur.modules[0].steps[1].bridge;
   const r = runValidate(writeAtlas({ cur }));
   assert.equal(r.code, 1);
@@ -68,7 +73,7 @@ test("tema sem book e sem bridge falha", () => {
 });
 
 test("tradição que não existe no manifesto falha", () => {
-  const cur = curriculum();
+  const cur: Invalida = curriculum();
   cur.modules[0].steps[0].tradition = "inexistente";
   const r = runValidate(writeAtlas({ cur }));
   assert.equal(r.code, 1);
@@ -76,7 +81,7 @@ test("tradição que não existe no manifesto falha", () => {
 });
 
 test("manifesto: slug repetido e status inválido falham", () => {
-  const man = manifest();
+  const man: Invalida = manifest();
   man.areas.push({ slug: "futura", nome: "Dupla", status: "talvez" });
   const r = runValidate(writeAtlas({ man }));
   assert.equal(r.code, 1);
@@ -85,7 +90,7 @@ test("manifesto: slug repetido e status inválido falham", () => {
 });
 
 test("manifesto: área disponível sem metadados falha", () => {
-  const man = manifest();
+  const man: Invalida = manifest();
   delete man.areas[0].promptBase;
   delete man.areas[0].tradicoes;
   const r = runValidate(writeAtlas({ man }));
@@ -106,7 +111,7 @@ test("código do site que referencia exemplos/ falha", () => {
 });
 
 test("vários erros são todos listados", () => {
-  const cur = curriculum();
+  const cur: Invalida = curriculum();
   delete cur.modules[0].steps[0].check;
   cur.modules[0].steps[1].videos[0].url = "ftp://x";
   const r = runValidate(writeAtlas({ cur }));

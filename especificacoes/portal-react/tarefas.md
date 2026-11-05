@@ -244,3 +244,51 @@ cada tarefa é: teste vermelho, mudança mínima, teste verde e suíte disponív
 - **Comandos executados:**
   - `npx vitest run`: 186/186 (17 arquivos);
   - `tsc` e `eslint .`: limpos.
+
+### E6 — Offline e deploy (2026-11-05)
+
+- **T6.1 (O04, KW1):**
+  - `src/sw-rules.ts` concentra as regras puras: app-shell, conteúdo, precache
+    e rede. `tests/core/sw-rules.test.ts` falhou contra o stub e passou com a
+    implementação.
+  - `src/sw.ts` usa Workbox via `vite-plugin-pwa` (`injectManifest`):
+    - precache dos arquivos versionados, sem `content/**`;
+    - `NavigationRoute` para o `index.html`;
+    - `NetworkFirst` com 3 s para `/content/*`;
+    - apaga `atlas-v1` na ativação;
+    - `skipWaiting` e `clientsClaim`.
+  - O `tsconfig.sw.json` usa a lib WebWorker; o `typecheck` roda os dois
+    tsconfig.
+- **PWA:** manifesto com ícones 192, 512 e maskable, e `apple-touch-icon`. Os
+  ícones são gerados de `public/icon.svg` por `scripts/icons.mjs`, com o
+  Chromium do Playwright. O registro do SW só acontece em produção (`main.tsx`).
+- **Vercel:**
+  - `vercel.json` com `framework: vite`, `npm ci`, `npm run build` e saída
+    `dist`;
+  - reescrita `/(.*)` → `/index.html` (a Vercel serve primeiro os arquivos
+    existentes);
+  - `no-cache` geral, `/assets/*` imutável por 1 ano e `/content/*` por 5 min
+    com revalidação;
+  - `.vercelignore` revisto para o build do Vite.
+- **R08:** a rolagem passou ao `ScrollRestoration` do React Router (topo em
+  navegação nova, posição restaurada ao voltar). O foco continua indo ao
+  `<main>`.
+- **Testes portados:** `tests/app/{validate,keepalive,deploy}` foram para
+  `tests/scripts/*.test.ts` (Vitest). O teste de deploy foi reescrito para a
+  configuração nova. Os fixtures inválidos do `validate` usam um tipo frouxo
+  declarado e justificado no arquivo.
+- **E2E** (`e2e/routes.spec.ts` e `e2e/offline.spec.ts`), 13/13:
+  - R01, R03 (5 links antigos, com `history.length` igual ao de uma visita
+    direta), R04 e R08;
+  - O01 (tema aberto e marcado offline);
+  - O02 (área nunca aberta, com o manifesto alterado via `context.route`, que
+    intercepta também o SW no Chromium);
+  - O03 (cache `atlas-v1` apagado).
+- **Aviso conhecido:** o `workbox-build` 7.4.1 traz `glob@11` como dependência
+  de desenvolvimento, com aviso de descontinuação. Ele não vai para o bundle.
+- **Comandos executados:**
+  - `npm run typecheck` e `eslint .`: ok;
+  - `npx vitest run`: 226/226;
+  - `npm run test:legacy`: 95/95 (o que resta da base antiga);
+  - `npm run validate`: ok;
+  - `npx playwright test`: 13/13.

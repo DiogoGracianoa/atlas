@@ -1,13 +1,19 @@
-# Só o site vai para a Vercel: index.html, sw.js, assets/ e content/.
+# A Vercel instala e roda `npm run build` (Vite). Precisa de: index.html,
+# src/, public/, package*.json, tsconfig*.json e vite.config.ts.
+# Fica fora tudo o que não participa do build.
 exemplos
 tests
+e2e
 especificacoes
 .discovery
 docs
-scripts
 supabase
 .agents
 .claude
 .github
 AGENTS.md
 CLAUDE.md
+assets
+sw.js
+playwright-report
+test-results
