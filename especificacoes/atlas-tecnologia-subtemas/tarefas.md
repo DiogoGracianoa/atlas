@@ -135,3 +135,48 @@ suíte.
   - revisão do autor da leva 2 e do visual;
   - leva 3 (IA aplicada e SDD);
   - diagramas nos módulos da leva 1 e de política, se o autor quiser.
+
+### T4, leva 3 (IA aplicada e SDD) (2026-11-06)
+
+- **Módulos** (três subagentes em paralelo, com orientação extra de cautela):
+
+  | Módulo | Temas | Diagramas | Livro nulo, com nota (ponte) |
+  |---|---|---|---|
+  | m7 | 9 | 5 | — |
+  | m8 | 9 | 6 | m8e5 (ferramental de SDD, que muda rápido demais para livro) |
+  | m9 | 8 | 5 | — |
+
+  A orientação extra: sem nomes, versões, preços ou benchmarks de modelos e
+  produtos, e sem o estado atual de projetos de lei.
+- **Oficina final (m9of):** o plano de 12 meses do guia, reescrito como um
+  quadro de 4 trimestres por 3 trilhas, com evidência verificável em cada
+  célula.
+- **Conferência:**
+  - nenhum nome de produto ou modelo (busca por GPT-, Claude, Gemini, Llama,
+    Copilot, ChatGPT, Kiro, Spec Kit e Cursor);
+  - atribuições conferidas:
+    - Vaswani et al. (2017);
+    - Bender et al. (2021);
+    - a nomenclatura de Böckeler para SDD;
+    - RAG (Lewis et al., 2020);
+    - LoRA (2021);
+    - Saltzer e Schroeder;
+    - o deputado confuso, de Hardy;
+    - Willison;
+    - LGPD, art. 20, com a alteração de 2019;
+    - a abordagem por risco do AI Act (2024);
+    - Kleinberg et al. e Chouldechova.
+  - estudos de produtividade com IA aparecem só de forma qualitativa, com os
+    limites no bloco de debate.
+- **Subtema completo:**
+  - 9 módulos, 82 temas e 32 diagramas;
+  - definições com 800 a 1.100 palavras (média de 958);
+  - `curriculum.json` com cerca de 900 KB, carregado sob demanda e fora do
+    precache.
+- **Comandos executados:**
+  - `npm run validate`: ok;
+  - `npx vitest run`: 379/379;
+  - `npx playwright test`: 67/67, com os 32 diagramas desenhados;
+  - `npm run size`: 122,5 KB;
+  - `npm run secrets`, `tsc` e `eslint`: limpos.
+- **Pendente:** revisão do autor (AC11).

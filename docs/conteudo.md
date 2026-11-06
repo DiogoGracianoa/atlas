@@ -20,7 +20,7 @@ public/content/
 | Filosofia | `filosofia` | planejada |
 | Ciência | `ciencia` | planejada |
 | Tecnologia (agrupador) | `tecnologia` | disponível |
-| ↳ Arquitetura e liderança técnica | `arquitetura-lideranca-tecnica` | disponível (levas 1 e 2 de 3: Liderança técnica, Engenharia e arquitetura) |
+| ↳ Arquitetura e liderança técnica | `arquitetura-lideranca-tecnica` | disponível (9 módulos, 82 temas: Liderança técnica, Engenharia e arquitetura, IA aplicada e SDD) |
 
 Área planejada aparece no mapa em cinza, como "em breve", sem link. Esta tabela é
 conferida contra `public/content/areas.json` pelos testes: se você mudar o status
