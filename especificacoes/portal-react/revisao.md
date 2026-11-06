@@ -14,7 +14,7 @@ Data: 2026-11-05 · Ramo: `feat/portal-react`.
 
 **Aprovada com lacunas.** Todas as verificações disponíveis neste ambiente
 passaram. As lacunas são as que só podem ser verificadas com os sistemas reais
-do autor (Supabase, Vercel e aparelhos) e os testes do banco.
+do autor (Supabase, Vercel e aparelhos) e a aprovação visual.
 
 ## Comandos executados
 
