@@ -3,7 +3,6 @@
 import type { AreaIndex, AreaMeta, AreaStats, ItemNode, Module, State, StepNode } from "../../core/types";
 
 export const itemName = (n: ItemNode): string => (n.kind === "workshop" ? "Oficina do módulo " + n.mod.number : n.title);
-export const itemPath = (key: string): string => "/atlas/" + key;
 
 export const isDone = (state: State, key: string, mark: string): boolean => !!state.marks[key + ":" + mark]?.done;
 

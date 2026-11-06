@@ -114,14 +114,33 @@ const man = readJSON("content/areas.json", "areas.json");
 let count = 0;
 if (man) {
   if (!Array.isArray(man.areas) || !man.areas.length) err("areas.json", "lista areas ausente ou vazia");
+  // Slugs são únicos em todo o manifesto: áreas e subtemas (K1 v2).
   const slugs = new Set();
-  for (const area of man.areas || []) {
+  const entry = (area, where) => {
     const slug = area && area.slug;
-    if (!area || typeof area !== "object" || !/^[a-z0-9-]+$/.test(slug || "")) { err("areas.json", "área com slug inválido: " + JSON.stringify(slug)); continue; }
+    if (!area || typeof area !== "object" || !/^[a-z0-9-]+$/.test(slug || "")) { err(where, "área com slug inválido: " + JSON.stringify(slug)); return null; }
     if (slugs.has(slug)) err(slug, "slug repetido");
     slugs.add(slug);
     if (!present(area.nome)) err(slug, "campo obrigatório no manifesto: nome");
-    if (!STATUS.includes(area.status)) { err(slug, "status inválido: " + area.status); continue; }
+    if (!STATUS.includes(area.status)) { err(slug, "status inválido: " + area.status); return null; }
+    return slug;
+  };
+  for (const area of man.areas || []) {
+    const slug = entry(area, "areas.json");
+    if (!slug) continue;
+    if (Array.isArray(area.subtemas)) {
+      // Agrupador: sem currículo próprio; cada subtema é validado como uma área.
+      if (!area.subtemas.length) err(slug, "agrupador sem subtemas");
+      for (const campo of ["arquivo", "tradicoes", "promptBase"]) if (present(area[campo])) err(slug, "agrupador não pode ter " + campo);
+      let disponiveis = 0;
+      for (const sub of area.subtemas) {
+        if (sub && Array.isArray(sub.subtemas)) err(slug, "subtema não pode ter subtemas: " + sub.slug);
+        const s = entry(sub, slug);
+        if (s && sub.status === "disponivel") { validateArea(sub); count++; disponiveis++; }
+      }
+      if (area.status === "disponivel" && !disponiveis) err(slug, "agrupador disponível sem subtema disponível");
+      continue;
+    }
     if (area.status === "disponivel") { validateArea(area); count++; }
   }
 }

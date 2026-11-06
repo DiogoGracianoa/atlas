@@ -4,11 +4,11 @@ import { useAppState } from "../../../app/context";
 import { Progress } from "../../../ui/primitives";
 import { useAtlas } from "../AtlasLayout";
 import { BackupNote, useTitle } from "../components/parts";
-import { areaMarks, doneCount, fillTemplate, itemPath, moduleNodes, moduleProgress, tradition } from "../model";
+import { areaMarks, doneCount, fillTemplate, moduleNodes, moduleProgress, tradition } from "../model";
 import s from "../Page.module.css";
 
 export function Capa() {
-  const { area: a } = useAtlas();
+  const { area: a, paths } = useAtlas();
   const state = useAppState();
   useTitle(a ? (a.meta.tituloPdf || a.meta.nome) : "Atlas");
   if (!a) return null;
@@ -56,7 +56,7 @@ export function Capa() {
                   const d = doneCount(a, state, n), t = a.marksOf(n).length;
                   return (
                     <li key={n.key}>
-                      <Link to={itemPath(n.key)} data-status={d === t ? "full" : d ? "part" : "none"}>
+                      <Link to={paths.itemPath(n.key)} data-status={d === t ? "full" : d ? "part" : "none"}>
                         <span className={s.dot} aria-hidden="true" />
                         {n.kind === "workshop" ? "Oficina do módulo" : n.title}
                         {d === t && <span className="visually-hidden"> (concluído)</span>}

@@ -67,3 +67,14 @@ test("hash do próprio app fora da raiz não é tratado como link antigo (achado
   await expect(page.getByRole("heading", { level: 1, name: "Poder, Estado e governo" })).toBeVisible();
   await expect(page).toHaveURL(/\/atlas\/politica\/m1e1#conteudo$/);
 });
+
+test("subtema de Tecnologia: agrupador, capa e tema no build (S02)", async ({ page }) => {
+  await page.goto("/atlas/tecnologia");
+  await expect(page.getByRole("heading", { level: 1, name: "Tecnologia" })).toBeVisible();
+  await page.getByRole("list", { name: "Subtemas" }).getByRole("link", { name: /Arquitetura e liderança técnica/ }).click();
+  await expect(page).toHaveURL(/\/atlas\/tecnologia\/arquitetura-lideranca-tecnica$/);
+  await expect(page.getByRole("heading", { level: 1, name: "Atlas de arquitetura e liderança técnica" })).toBeVisible();
+  const res = await page.goto("/atlas/tecnologia/arquitetura-lideranca-tecnica/m1e1");
+  expect(res?.status()).toBe(200);
+  await expect(page.getByRole("heading", { level: 1, name: /Desenhar o próprio papel/ })).toBeVisible();
+});

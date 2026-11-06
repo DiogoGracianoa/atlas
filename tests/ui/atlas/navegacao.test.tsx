@@ -55,7 +55,8 @@ describe("mapa (P01)", () => {
     const embreve = screen.getByRole("list", { name: "Em breve" });
     const historia = within(embreve).getByRole("heading", { name: "História" }).closest("li")!;
     expect(within(historia).queryByRole("link")).toBeNull();
-    expect(within(embreve).getAllByRole("listitem")).toHaveLength(5);
+    // história, economia, filosofia e ciência; tecnologia agora agrupa um subtema disponível
+    expect(within(embreve).getAllByRole("listitem")).toHaveLength(4);
     const continuar = screen.getByRole("link", { name: /Continuar de onde parei/ });
     expect(continuar.getAttribute("href")).toBe("/atlas/politica/m3e2");
     expect(continuar.textContent).toContain("Módulo 3, tema 2");

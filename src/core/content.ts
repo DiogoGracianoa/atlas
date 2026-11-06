@@ -7,8 +7,15 @@ export type FetchJSON = (url: string) => Promise<unknown>;
 
 export interface ContentApi {
   loadManifest(): Promise<Manifest>;
+  /** Áreas de topo do manifesto (agrupadores incluídos). */
   areas(): AreaMeta[];
+  /** Áreas e subtemas que podem ter currículo (sem os agrupadores). */
+  leaves(): AreaMeta[];
+  /** Área de topo ou subtema, pelo slug (único no manifesto). */
   area(slug: string): AreaMeta | null;
+  /** Agrupador de um subtema; null para área de topo. */
+  parentOf(slug: string): AreaMeta | null;
+  isGroup(slug: string): boolean;
   isAvailable(slug: string): boolean;
   loadArea(slug: string): Promise<AreaIndex>;
   isLoaded(slug: string): boolean;
@@ -28,10 +35,14 @@ export function createContent({ fetchJSON, manifestUrl = "content/areas.json" }:
     return manifest;
   }
   const areas = () => (manifest ? manifest.areas : []);
-  const area = (slug: string) => areas().find(a => a.slug === slug) || null;
+  const isGroupMeta = (a: AreaMeta) => Array.isArray(a.subtemas) && a.subtemas.length > 0;
+  const leaves = () => areas().flatMap(a => (isGroupMeta(a) ? a.subtemas ?? [] : [a]));
+  const area = (slug: string) => areas().find(a => a.slug === slug) || leaves().find(a => a.slug === slug) || null;
+  const parentOf = (slug: string) => areas().find(a => isGroupMeta(a) && (a.subtemas ?? []).some(s => s.slug === slug)) || null;
+  const isGroup = (slug: string) => { const a = area(slug); return !!a && isGroupMeta(a); };
   const isAvailable = (slug: string) => {
     const a = area(slug);
-    return !!(a && a.status === "disponivel" && a.arquivo);
+    return !!(a && !isGroupMeta(a) && a.status === "disponivel" && a.arquivo);
   };
 
   function loadArea(slug: string): Promise<AreaIndex> {
@@ -50,7 +61,7 @@ export function createContent({ fetchJSON, manifestUrl = "content/areas.json" }:
     return p;
   }
 
-  return { loadManifest, areas, area, isAvailable, loadArea, isLoaded: (slug) => done.has(slug) };
+  return { loadManifest, areas, leaves, area, parentOf, isGroup, isAvailable, loadArea, isLoaded: (slug) => done.has(slug) };
 }
 
 export function marksOf(n: ItemNode): MarkInfo[] {

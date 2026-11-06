@@ -114,3 +114,39 @@ test("progresso da área usa total conhecido ou só a contagem", () => {
   assert.deepEqual(areaProgress("teste", marks, 6), { done: 2, total: 6, pct: 33 });
   assert.deepEqual(areaProgress("teste", marks, undefined), { done: 2, total: null, pct: null });
 });
+
+// Cenário S14 (atlas-tecnologia-subtemas): subtemas no manifesto (K1 v2).
+function manifestoComSubtemas(): Manifest {
+  const base = manifest().areas[0]!;
+  return {
+    areas: [
+      base,
+      {
+        slug: "tecnologia", nome: "Tecnologia", resumo: "Recortes.", status: "disponivel",
+        subtemas: [
+          { ...base, slug: "sub-um", nome: "Subtema um", arquivo: "content/sub-um/curriculum.json" },
+          { slug: "sub-dois", nome: "Subtema dois", status: "planejado" },
+        ],
+      },
+    ],
+  };
+}
+
+test("subtemas: busca por slug, pai, folhas e disponibilidade", async () => {
+  const f = fakeFetch({ "content/areas.json": manifestoComSubtemas(), "content/sub-um/curriculum.json": curriculum() });
+  const c = createContent(f);
+  await c.loadManifest();
+  assert.deepEqual(c.areas().map(a => a.slug), ["teste", "tecnologia"]);
+  assert.equal(c.area("sub-um")?.nome, "Subtema um");
+  assert.equal(c.parentOf("sub-um")?.slug, "tecnologia");
+  assert.equal(c.parentOf("teste"), null);
+  assert.deepEqual(c.leaves().map(a => a.slug), ["teste", "sub-um", "sub-dois"]);
+  assert.equal(c.isAvailable("sub-um"), true);
+  assert.equal(c.isAvailable("sub-dois"), false);
+  assert.equal(c.isAvailable("tecnologia"), false, "agrupador não tem currículo próprio");
+  assert.equal(c.isGroup("tecnologia"), true);
+  assert.equal(c.isGroup("teste"), false);
+  const a = await c.loadArea("sub-um");
+  assert.equal(a.nodes[0]!.key, "sub-um/m1e1");
+  assert.deepEqual(f.calls, ["content/areas.json", "content/sub-um/curriculum.json"]);
+});

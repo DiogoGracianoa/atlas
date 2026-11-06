@@ -1,22 +1,23 @@
 // Menu do atlas: seletor de área, busca (na área ou em todas), módulos com
 // progresso e lista de itens com o atual destacado.
 import { useEffect, useId, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { useAppState, useServices } from "../../../app/context";
-import type { AreaIndex, ItemNode, Module, State } from "../../../core/types";
+import type { AreaIndex, AreaMeta, ItemNode, Module, State } from "../../../core/types";
 import { areaProgress } from "../../../core/content";
 import type { AtlasContext } from "../AtlasLayout";
-import { areaMarks, doneCount, itemPath, moduleProgress, searchModules } from "../model";
+import { areaMarks, doneCount, moduleProgress, searchModules } from "../model";
+import type { Paths } from "../paths";
 import { Progress } from "../../../ui/primitives";
 import { AtlasTools } from "./AtlasTools";
 import s from "../Atlas.module.css";
 
-function ItemLink({ a, n, state, current, onNavigate }: { a: AreaIndex; n: ItemNode; state: State; current: boolean; onNavigate?: () => void }) {
+function ItemLink({ a, n, state, current, paths, onNavigate }: { a: AreaIndex; n: ItemNode; state: State; current: boolean; paths: Paths; onNavigate?: () => void }) {
   const done = doneCount(a, state, n), total = a.marksOf(n).length;
   const status = done === total ? "concluído" : done ? "em andamento" : "";
   return (
     <li>
-      <Link to={itemPath(n.key)} className={s.navItem} aria-current={current ? "page" : undefined} data-status={done === total ? "full" : done ? "part" : "none"} onClick={onNavigate}>
+      <Link to={paths.itemPath(n.key)} className={s.navItem} aria-current={current ? "page" : undefined} data-status={done === total ? "full" : done ? "part" : "none"} onClick={onNavigate}>
         <span className={s.dot} aria-hidden="true" />
         <span>{n.kind === "workshop" ? "Oficina do módulo" : n.title}</span>
         {status && <span className="visually-hidden">({status})</span>}
@@ -25,8 +26,8 @@ function ItemLink({ a, n, state, current, onNavigate }: { a: AreaIndex; n: ItemN
   );
 }
 
-function ModuleGroup({ a, mod, items, state, currentKey, forceOpen, onNavigate }: {
-  a: AreaIndex; mod: Module; items: ItemNode[]; state: State; currentKey: string | null; forceOpen: boolean; onNavigate?: () => void;
+function ModuleGroup({ a, mod, items, state, currentKey, forceOpen, paths, onNavigate }: {
+  a: AreaIndex; mod: Module; items: ItemNode[]; state: State; currentKey: string | null; forceOpen: boolean; paths: Paths; onNavigate?: () => void;
 }) {
   const p = moduleProgress(a, state, mod);
   const hasCurrent = items.some(n => n.key === currentKey);
@@ -38,25 +39,27 @@ function ModuleGroup({ a, mod, items, state, currentKey, forceOpen, onNavigate }
         <span className={s.navModCount} aria-label={`${p.done} de ${p.total} marcos`}>{p.done}/{p.total}</span>
       </summary>
       <ul className={s.navList}>
-        {items.map(n => <ItemLink key={n.key} a={a} n={n} state={state} current={n.key === currentKey} onNavigate={onNavigate} />)}
+        {items.map(n => <ItemLink key={n.key} a={a} n={n} state={state} current={n.key === currentKey} paths={paths} onNavigate={onNavigate} />)}
       </ul>
     </details>
   );
 }
 
 export function AtlasNav({ ctx, onNavigate, onPrint }: { ctx: AtlasContext; onNavigate?: () => void; onPrint?: () => void }) {
-  const { manifest, area } = ctx;
+  const { manifest, area, paths, itemId } = ctx;
   const { content } = useServices();
   const state = useAppState();
   const navigate = useNavigate();
-  const params = useParams();
   const [query, setQuery] = useState("");
   const [all, setAll] = useState(false);
   const [allAreas, setAllAreas] = useState<(AreaIndex | null)[] | null>(null);
   const selectId = useId(), searchId = useId();
   const q = query.trim();
-  const currentKey = area && params.id ? area.slug + "/" + params.id : null;
-  const availableAreas = manifest.areas.filter(a => a.status === "disponivel" && a.arquivo);
+  const currentKey = area && itemId ? area.slug + "/" + itemId : null;
+  const isGroup = (a: AreaMeta) => !!a.subtemas?.length;
+  const isOpen = (a: AreaMeta) => a.status === "disponivel" && !!a.arquivo && !isGroup(a);
+  // folhas disponíveis (áreas simples e subtemas): onde a busca em todas procura
+  const availableAreas = manifest.areas.flatMap(a => (isGroup(a) ? a.subtemas ?? [] : [a])).filter(isOpen);
 
   useEffect(() => {
     if (!all || !q) return;
@@ -83,7 +86,7 @@ export function AtlasNav({ ctx, onNavigate, onPrint }: { ctx: AtlasContext; onNa
           <h3 className={s.navGroup}>{meta.nome}</h3>
           {!a ? <p className={s.navEmpty}>Sem conexão para buscar nesta área.</p>
             : !groups.length ? <p className={s.navEmpty}>Nada encontrado.</p>
-            : groups.map(g => <ModuleGroup key={g.mod.id} a={a} mod={g.mod} items={g.items} state={state} currentKey={currentKey} forceOpen onNavigate={onNavigate} />)}
+            : groups.map(g => <ModuleGroup key={g.mod.id} a={a} mod={g.mod} items={g.items} state={state} currentKey={currentKey} forceOpen paths={paths} onNavigate={onNavigate} />)}
         </section>
       );
     });
@@ -92,7 +95,7 @@ export function AtlasNav({ ctx, onNavigate, onPrint }: { ctx: AtlasContext; onNa
     body = (
       <>
         {groups.length ? groups.map(g => (
-          <ModuleGroup key={g.mod.id} a={area} mod={g.mod} items={g.items} state={state} currentKey={currentKey} forceOpen={!!q} onNavigate={onNavigate} />
+          <ModuleGroup key={g.mod.id} a={area} mod={g.mod} items={g.items} state={state} currentKey={currentKey} forceOpen={!!q} paths={paths} onNavigate={onNavigate} />
         )) : <p className={s.navEmpty}>Nada encontrado nesta área.</p>}
         {searchAllButton}
       </>
@@ -102,13 +105,22 @@ export function AtlasNav({ ctx, onNavigate, onPrint }: { ctx: AtlasContext; onNa
       <>
         {searchAllButton}
         <ul className={s.navList}>
-          {manifest.areas.map(a => {
-            const ok = a.status === "disponivel" && !!a.arquivo;
+          {manifest.areas.map(function linha(a: AreaMeta): React.ReactNode {
+            if (isGroup(a)) {
+              return (
+                <li key={a.slug}>
+                  {a.status === "disponivel"
+                    ? <Link to={"/atlas/" + a.slug} className={s.navItem} onClick={onNavigate}><span>{a.nome}</span></Link>
+                    : <span className={s.navItem} aria-disabled="true" data-soon><span>{a.nome}</span><small>em breve</small></span>}
+                  <ul className={s.navSubList}>{(a.subtemas ?? []).map(linha)}</ul>
+                </li>
+              );
+            }
             const p = areaProgress(a.slug, state.marks, state.totals[a.slug]);
             return (
               <li key={a.slug}>
-                {ok ? (
-                  <Link to={"/atlas/" + a.slug} className={s.navItem} onClick={onNavigate}>
+                {isOpen(a) ? (
+                  <Link to={paths.areaPath(a.slug)} className={s.navItem} onClick={onNavigate}>
                     <span>{a.nome}</span>
                     {p.pct !== null && <span className={s.navModCount}>{p.pct}%</span>}
                   </Link>
@@ -133,12 +145,14 @@ export function AtlasNav({ ctx, onNavigate, onPrint }: { ctx: AtlasContext; onNa
           id={selectId}
           className={s.select}
           value={area ? area.slug : ""}
-          onChange={e => { onNavigate?.(); void navigate(e.target.value ? "/atlas/" + e.target.value : "/atlas"); }}
+          onChange={e => { onNavigate?.(); void navigate(e.target.value ? paths.areaPath(e.target.value) : "/atlas"); }}
         >
           <option value="">Mapa do Atlas</option>
           {manifest.areas.map(a => {
-            const ok = a.status === "disponivel" && !!a.arquivo;
-            return <option key={a.slug} value={a.slug} disabled={!ok}>{a.nome}{ok ? "" : " — em breve"}</option>;
+            const opcao = (x: AreaMeta) => <option key={x.slug} value={x.slug} disabled={!isOpen(x)}>{x.nome}{isOpen(x) ? "" : " — em breve"}</option>;
+            return isGroup(a)
+              ? <optgroup key={a.slug} label={a.nome}>{(a.subtemas ?? []).map(opcao)}</optgroup>
+              : opcao(a);
           })}
         </select>
         <label htmlFor={searchId} className={s.navLabel}>Buscar</label>
@@ -153,7 +167,7 @@ export function AtlasNav({ ctx, onNavigate, onPrint }: { ctx: AtlasContext; onNa
         {area && (
           <div className={s.navMeta}>
             <Progress value={areaMarks(area, state).done} max={areaMarks(area, state).total} label="Progresso na área" />
-            <Link to={"/atlas/" + area.slug} onClick={onNavigate}>Visão geral da área</Link>
+            <Link to={paths.areaPath(area.slug)} onClick={onNavigate}>Visão geral da área</Link>
           </div>
         )}
       </div>

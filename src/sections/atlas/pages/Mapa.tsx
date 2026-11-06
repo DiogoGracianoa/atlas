@@ -8,6 +8,7 @@ import { Progress, Tag } from "../../../ui/primitives";
 import { useAtlas } from "../AtlasLayout";
 import { BackupNote, useTitle } from "../components/parts";
 import { itemName, labelFromId } from "../model";
+import type { AreaMeta } from "../../../core/types";
 import s from "../Page.module.css";
 
 /** Nome do item: o título, se a área já está em cache; senão, "Módulo 2, tema 3". */
@@ -29,8 +30,9 @@ function useItemLabel(slug: string, id: string): string {
 
 function Continuar({ slug, id, nome }: { slug: string; id: string; nome: string }) {
   const label = useItemLabel(slug, id);
+  const { paths } = useAtlas();
   return (
-    <Link to={`/atlas/${slug}/${id}`} className={s.continue}>
+    <Link to={paths.itemPath(slug + "/" + id)} className={s.continue}>
       <span><b>Continuar de onde parei</b><span>{nome} · {label}</span></span>
       <i aria-hidden="true">→</i>
     </Link>
@@ -42,11 +44,15 @@ export function Mapa() {
   const state = useAppState();
   const hid = useId(), soonId = useId();
   useTitle("Mapa do Atlas · Atlas");
-  const disponiveis = manifest.areas.filter(a => a.status === "disponivel" && !!a.arquivo);
-  const planejadas = manifest.areas.filter(a => !(a.status === "disponivel" && !!a.arquivo));
+  const isGroup = (a: AreaMeta) => !!a.subtemas?.length;
+  const aberta = (a: AreaMeta) => (isGroup(a) ? a.status === "disponivel" : a.status === "disponivel" && !!a.arquivo);
+  const disponiveis = manifest.areas.filter(aberta);
+  const planejadas = manifest.areas.filter(a => !aberta(a));
+  // folhas: áreas simples e subtemas (onde vive o progresso)
+  const folhas = manifest.areas.flatMap(a => (isGroup(a) ? a.subtemas ?? [] : [a]));
 
   const [lastSlug = "", lastId = ""] = state.lastAt ? state.lastAt.route.split("/") : [];
-  const lastMeta = manifest.areas.find(a => a.slug === lastSlug && a.status === "disponivel");
+  const lastMeta = folhas.find(a => a.slug === lastSlug && a.status === "disponivel");
 
   return (
     <div className={s.page}>
@@ -59,7 +65,10 @@ export function Mapa() {
       <h2 id={hid} className="visually-hidden">Áreas</h2>
       <ul className={s.areas} aria-labelledby={hid}>
         {disponiveis.map(a => {
-          const p = areaProgress(a.slug, state.marks, state.totals[a.slug]);
+          // agrupador: soma o progresso dos subtemas (RN04)
+          const p = (isGroup(a) ? a.subtemas ?? [] : [a])
+            .map(x => areaProgress(x.slug, state.marks, state.totals[x.slug]))
+            .reduce((acc, x) => ({ done: acc.done + x.done, total: acc.total + (x.total ?? 0) }), { done: 0, total: 0 });
           return (
             <li key={a.slug}>
               <Link to={"/atlas/" + a.slug} className={s.areaCard}>

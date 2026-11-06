@@ -19,7 +19,8 @@ public/content/
 | Economia | `economia` | planejada |
 | Filosofia | `filosofia` | planejada |
 | Ciência | `ciencia` | planejada |
-| Tecnologia | `tecnologia` | planejada |
+| Tecnologia (agrupador) | `tecnologia` | disponível |
+| ↳ Arquitetura e liderança técnica | `arquitetura-lideranca-tecnica` | disponível (leva 1 de 3: Liderança técnica) |
 
 Área planejada aparece no mapa em cinza, como "em breve", sem link. Esta tabela é
 conferida contra `public/content/areas.json` pelos testes: se você mudar o status
@@ -108,6 +109,37 @@ do conteúdo de cada tema: títulos, textos da capa, o texto-base do prompt de
 
 No `lead`, `{modulos}`, `{temas}`, `{livros}` e `{videos}` são trocados pelas
 contagens da área.
+
+## Subtemas (áreas agrupadoras)
+
+Uma área pode agrupar **subtemas**, cada um com currículo próprio. É o caso de
+"Tecnologia", que reúne recortes como "Arquitetura e liderança técnica". A
+área agrupadora não tem `arquivo`, `tradicoes` nem `promptBase`: ela traz
+uma lista `subtemas`, e cada subtema tem os mesmos campos de uma área comum.
+
+```json
+{
+  "slug": "tecnologia", "nome": "Tecnologia", "resumo": "…", "status": "disponivel",
+  "subtemas": [
+    { "slug": "arquitetura-lideranca-tecnica", "nome": "Arquitetura e liderança técnica",
+      "status": "disponivel", "arquivo": "content/arquitetura-lideranca-tecnica/curriculum.json",
+      "titulo": "…", "subtitulo": "…", "tituloPdf": "…", "capa": { … },
+      "tradicoes": { … }, "promptBase": "…" }
+  ]
+}
+```
+
+- **Endereços:** `/atlas/tecnologia` lista os subtemas,
+  `/atlas/tecnologia/arquitetura-lideranca-tecnica` é a capa do subtema e
+  `…/m1e1` é um tema.
+- **Progresso e sincronização:** usam o slug do subtema
+  (`arquitetura-lideranca-tecnica/m1e1`). Por isso o slug de um subtema é
+  único em todo o manifesto.
+- **Disponibilidade:** a área agrupadora fica disponível quando ao menos um
+  subtema está disponível. No mapa, o cartão dela soma o progresso dos
+  subtemas.
+- **Subtema novo:** acrescentar um exige só a entrada em `subtemas` e o
+  `curriculum.json`, sem nenhuma mudança de código.
 
 ## Como acrescentar uma área nova
 

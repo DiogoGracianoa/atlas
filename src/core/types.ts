@@ -114,6 +114,8 @@ export interface AreaMeta {
   capa?: { rotulo: string; lead: string; passos: { t: string; d: string }[] };
   tradicoes?: Record<string, Tradicao>;
   promptBase?: string;
+  /** Agrupador (K1 v2): a área não tem currículo próprio; cada subtema tem. */
+  subtemas?: AreaMeta[];
 }
 
 export interface Manifest {

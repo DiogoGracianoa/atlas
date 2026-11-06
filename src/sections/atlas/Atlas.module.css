@@ -89,3 +89,6 @@
 .tools { display: grid; gap: 8px; margin-top: 16px; padding: 16px var(--gutter) 0; border-top: 1px solid var(--line); }
 .toolsTitle { margin: 0; font-size: .78rem; font-weight: 600; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
 .toolsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+/* subtemas sob o agrupador, no menu do mapa */
+.navSubList { list-style: none; margin: 0; padding: 0 0 0 14px; }

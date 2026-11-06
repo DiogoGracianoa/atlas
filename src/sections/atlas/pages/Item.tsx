@@ -1,6 +1,6 @@
 // Página de um item (tema ou oficina). Item desconhecido volta à capa (KR1).
 import { useEffect } from "react";
-import { Navigate, useParams } from "react-router";
+import { Navigate } from "react-router";
 import { useServices } from "../../../app/context";
 import type { StepNode, WorkshopNode, AreaIndex } from "../../../core/types";
 import { Tag } from "../../../ui/primitives";
@@ -149,14 +149,13 @@ function Oficina({ a, n }: { a: AreaIndex; n: WorkshopNode }) {
 }
 
 export function Item() {
-  const { area: a } = useAtlas();
-  const { id } = useParams();
+  const { area: a, itemId: id, paths } = useAtlas();
   const { store } = useServices();
   const n = a && id ? a.byId[id] : undefined;
   useTitle(n && a ? `${itemName(n)} · ${a.meta.tituloPdf || a.meta.nome}` : "Atlas");
   useEffect(() => { if (n) store.setLastAt(n.key); }, [n, store]);
   if (!a) return null;
-  if (!n) return <Navigate to={"/atlas/" + a.slug} replace />;
+  if (!n) return <Navigate to={paths.areaPath(a.slug)} replace />;
   const trad = itemTradition(a, n);
   return (
     <article className={s.page} style={{ ["--accent" as string]: trad.color }}>

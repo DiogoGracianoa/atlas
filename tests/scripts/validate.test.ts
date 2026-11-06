@@ -119,3 +119,44 @@ test("vários erros são todos listados", () => {
   assert.match(r.out, /m1e1: campo obrigatório ausente: check/);
   assert.match(r.out, /m1e2: URL sem https:\/\//);
 });
+
+// Cenário S09 (atlas-tecnologia-subtemas): agrupadores e subtemas (K1 v2).
+const comGrupo = (grupo: Invalida) => { const man: Invalida = manifest(); man.areas.push(grupo); return man; };
+const subtema = (slug: string, extra: Invalida = {}): Invalida => ({ ...manifest().areas[0], slug, nome: "Sub " + slug, arquivo: `content/${slug}/curriculum.json`, ...extra });
+const arquivoDe = (slug: string) => ({ [`content/${slug}/curriculum.json`]: JSON.stringify(curriculum()) });
+
+test("agrupador com subtema disponível válido passa", () => {
+  const man = comGrupo({ slug: "tec", nome: "Tecnologia", status: "disponivel", subtemas: [subtema("sub-um"), { slug: "sub-dois", nome: "Dois", status: "planejado" }] });
+  const r = runValidate(writeAtlas({ man, files: arquivoDe("sub-um") }));
+  assert.equal(r.code, 0, r.out);
+  assert.match(r.out, /2 área\(s\) disponível\(is\)/);
+});
+
+test("slug de subtema repetido (com área ou com outro subtema) falha", () => {
+  const man = comGrupo({ slug: "tec", nome: "Tecnologia", status: "disponivel", subtemas: [subtema("teste"), subtema("sub-um"), subtema("sub-um")] });
+  const r = runValidate(writeAtlas({ man, files: arquivoDe("sub-um") }));
+  assert.equal(r.code, 1);
+  assert.match(r.out, /teste: slug repetido/);
+  assert.match(r.out, /sub-um: slug repetido/);
+});
+
+test("agrupador com arquivo próprio falha", () => {
+  const man = comGrupo({ slug: "tec", nome: "Tecnologia", status: "disponivel", arquivo: "content/tec/curriculum.json", subtemas: [subtema("sub-um")] });
+  const r = runValidate(writeAtlas({ man, files: arquivoDe("sub-um") }));
+  assert.equal(r.code, 1);
+  assert.match(r.out, /tec: agrupador não pode ter arquivo/);
+});
+
+test("agrupador disponível sem subtema disponível falha", () => {
+  const man = comGrupo({ slug: "tec", nome: "Tecnologia", status: "disponivel", subtemas: [{ slug: "sub-dois", nome: "Dois", status: "planejado" }] });
+  const r = runValidate(writeAtlas({ man }));
+  assert.equal(r.code, 1);
+  assert.match(r.out, /tec: agrupador disponível sem subtema disponível/);
+});
+
+test("subtema disponível sem metadados falha", () => {
+  const man = comGrupo({ slug: "tec", nome: "Tecnologia", status: "disponivel", subtemas: [{ slug: "sub-um", nome: "Um", status: "disponivel", arquivo: "content/sub-um/curriculum.json" }] });
+  const r = runValidate(writeAtlas({ man, files: arquivoDe("sub-um") }));
+  assert.equal(r.code, 1);
+  assert.match(r.out, /sub-um: campo obrigatório no manifesto: titulo/);
+});

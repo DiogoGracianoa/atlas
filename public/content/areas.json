@@ -94,7 +94,56 @@
     {
       "slug": "tecnologia",
       "nome": "Tecnologia",
-      "status": "planejado"
+      "resumo": "Recortes de tecnologia, cada um com trilha própria. O primeiro: arquitetura e liderança técnica.",
+      "status": "disponivel",
+      "subtemas": [
+        {
+          "slug": "arquitetura-lideranca-tecnica",
+          "nome": "Arquitetura e liderança técnica",
+          "resumo": "Da liderança técnica à arquitetura: pessoas e decisão, engenharia e sistemas, e IA aplicada.",
+          "status": "disponivel",
+          "arquivo": "content/arquitetura-lideranca-tecnica/curriculum.json",
+          "titulo": "Atlas de arquitetura e liderança técnica",
+          "subtitulo": "Trilha de liderança técnica, arquitetura e IA aplicada",
+          "tituloPdf": "Atlas de Estudos · Arquitetura e Liderança Técnica",
+          "capa": {
+            "rotulo": "TRILHA DE ESTUDOS",
+            "lead": "{modulos} módulos, {temas} temas, em três trilhas: liderança técnica, engenharia e arquitetura, e IA aplicada. Cada tema traz a explicação completa do assunto e só depois a aula e o livro. Antes de ir fundo numa trilha, passe pelo nível fundamental das três: buraco na base aparece sempre na pior hora.",
+            "passos": [
+              {
+                "t": "Leia a explicação",
+                "d": "Um texto completo sobre o tema: o que é, como funciona, um exemplo real, variações, erros comuns e limites."
+              },
+              {
+                "t": "Assista e leia",
+                "d": "Uma palestra ou aula e o livro de referência, com indicação do que procurar em cada um."
+              },
+              {
+                "t": "Aplique no seu time",
+                "d": "A oficina de cada módulo transforma o estudo numa decisão, num texto ou numa prática do seu contexto."
+              }
+            ]
+          },
+          "tradicoes": {
+            "lideranca": {
+              "nome": "Liderança técnica",
+              "cor": "#9A3D12",
+              "corEscura": "#F0A47A"
+            },
+            "engenharia": {
+              "nome": "Engenharia e arquitetura",
+              "cor": "#1E5F86",
+              "corEscura": "#8CC4E8"
+            },
+            "ia": {
+              "nome": "IA aplicada e SDD",
+              "cor": "#5B3FA0",
+              "corEscura": "#B9A4F0"
+            }
+          },
+          "promptBase": "Você é meu tutor socrático de liderança técnica e arquitetura de software, em português do Brasil. Sou tech lead e sigo uma trilha com três frentes: liderança técnica, engenharia e arquitetura, e IA aplicada com desenvolvimento orientado a especificação. Use exemplos de times de software reais, não presuma o tamanho da minha empresa e não recomende ferramentas ou fornecedores sem que eu peça.\n\n"
+        }
+      ]
     }
   ]
 }

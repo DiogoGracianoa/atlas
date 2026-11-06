@@ -5,7 +5,8 @@ import { useAppState, useServices, useSyncState } from "../../../app/context";
 import { useAccountSeen } from "../../../app/account";
 import type { AreaIndex, ItemNode, MarkKind } from "../../../core/types";
 import { useToast } from "../../../ui/Toast";
-import { isDone, itemName, itemPath, promptFor } from "../model";
+import { isDone, itemName, promptFor } from "../model";
+import { useAtlas } from "../AtlasLayout";
 import s from "../Page.module.css";
 
 export function useTitle(title: string) {
@@ -145,6 +146,8 @@ export function Notes({ n }: { n: ItemNode }) {
 }
 
 export function Pager({ a, n }: { a: AreaIndex; n: ItemNode }) {
+  const { paths } = useAtlas();
+  const itemPath = paths.itemPath;
   const i = a.nodes.findIndex(x => x.key === n.key);
   const prev = i > 0 ? a.nodes[i - 1] : null;
   const next = i < a.nodes.length - 1 ? a.nodes[i + 1] : null;
