@@ -15,10 +15,10 @@ describe("rotas do atlas (KR1)", () => {
     expect(await screen.findByRole("heading", { level: 1, name: "Marx: dívida pública, impostos e capital fictício" })).toBeTruthy();
   });
 
-  it("área planejada volta ao mapa com aviso", async () => {
+  it("área planejada se comporta como inexistente: volta ao mapa com aviso", async () => {
     const { router } = renderApp("/atlas/historia");
     await waitFor(() => expect(router.state.location.pathname).toBe("/atlas"));
-    expect(await screen.findByText("Esta área ainda não está disponível.")).toBeTruthy();
+    expect(await screen.findByText("Área não encontrada.")).toBeTruthy();
     expect(await screen.findByRole("heading", { level: 1, name: "Mapa do Atlas" })).toBeTruthy();
   });
 
@@ -46,17 +46,15 @@ describe("rotas do atlas (KR1)", () => {
 });
 
 describe("mapa (P01)", () => {
-  it("áreas com link, planejadas em breve e o atalho para continuar", async () => {
+  it("só as áreas que existem, com link, e o atalho para continuar", async () => {
     renderApp("/atlas", { storage: memoryStorage({ "atlas-v3": estado({ lastAt: { route: "politica/m3e2", at } }) }) });
     expect(await screen.findByRole("heading", { level: 1, name: "Mapa do Atlas" })).toBeTruthy();
     const lista = screen.getByRole("list", { name: "Áreas" });
     expect(within(lista).getByRole("link", { name: /Política, economia e marxismo/ }).getAttribute("href")).toBe("/atlas/politica");
-    expect(within(lista).queryByText("História")).toBeNull();
-    const embreve = screen.getByRole("list", { name: "Em breve" });
-    const historia = within(embreve).getByRole("heading", { name: "História" }).closest("li")!;
-    expect(within(historia).queryByRole("link")).toBeNull();
-    // história, economia, filosofia e ciência; tecnologia agora agrupa um subtema disponível
-    expect(within(embreve).getAllByRole("listitem")).toHaveLength(4);
+    // planejadas (história, economia, filosofia, ciência) não aparecem em lugar nenhum
+    expect(screen.queryByText("História")).toBeNull();
+    expect(screen.queryByText(/em breve/i)).toBeNull();
+    expect(within(lista).getAllByRole("listitem")).toHaveLength(2);
     const continuar = screen.getByRole("link", { name: /Continuar de onde parei/ });
     expect(continuar.getAttribute("href")).toBe("/atlas/politica/m3e2");
     expect(continuar.textContent).toContain("Módulo 3, tema 2");
@@ -95,7 +93,8 @@ describe("menu, busca e progresso (P03–P05)", () => {
     expect(within(nav).getByLabelText(/^2 de \d+ marcos$/)).toBeTruthy();
     const atual = within(nav).getByRole("link", { current: "page" });
     expect(atual.textContent).toContain("Esquerda e direita");
-    await user.selectOptions(within(nav).getByLabelText("Área"), "");
+    await user.click(within(nav).getByRole("button", { name: /^Área/ }));
+    await user.click(within(nav).getByRole("option", { name: "Mapa do Atlas" }));
     await waitFor(() => expect(router.state.location.pathname).toBe("/atlas"));
   });
 

@@ -4,15 +4,14 @@ import { screen, waitFor, within } from "@testing-library/react";
 import { axeViolations, memoryStorage, renderApp } from "./harness";
 
 describe("portal", () => {
-  it("lista as seções: Atlas com link e progresso; Dossiês em breve, sem link", async () => {
+  it("lista só as seções que existem: Atlas com link; Dossiês (planejada) não aparece", async () => {
     renderApp("/");
     expect(screen.getByRole("heading", { level: 1, name: "Atlas" })).toBeTruthy();
     const lista = screen.getByRole("list", { name: "Seções" });
     const atlas = within(lista).getByRole("link", { name: /Atlas de estudos/ });
     expect(atlas.getAttribute("href")).toBe("/atlas");
-    const dossies = within(lista).getByRole("heading", { name: "Dossiês" }).closest("li")!;
-    expect(within(dossies).queryByRole("link")).toBeNull();
-    expect(within(dossies).getByText("Em breve")).toBeTruthy();
+    expect(screen.queryByText("Dossiês")).toBeNull();
+    expect(screen.queryByText(/em breve/i)).toBeNull();
   });
 
   it("cartão do Atlas mostra progresso quando há total conhecido", () => {

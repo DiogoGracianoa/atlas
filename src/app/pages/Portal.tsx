@@ -40,7 +40,8 @@ export function Portal({ sections }: { sections: Section[] }) {
         </p>
       </section>
       <ul className={s.grid} aria-label="Seções">
-        {sections.map(sec => <SectionCard key={sec.slug} section={sec} />)}
+        {/* só o que existe: seções planejadas não aparecem (extensão de 2026-11-06) */}
+        {sections.filter(sec => sec.status === "disponivel").map(sec => <SectionCard key={sec.slug} section={sec} />)}
       </ul>
     </div>
   );

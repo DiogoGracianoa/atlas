@@ -46,7 +46,7 @@ without losing what made it useful:
 ## Features
 
 - **Portal of sections:** the home page lists sections from a single registry.
-  Planned sections show as "coming soon".
+  Planned sections and areas stay in the manifest but are not shown until they exist.
 - **Study areas** loaded on demand from `content/areas.json` and one
   `curriculum.json` per area, optionally grouped into sub-themes (e.g.
   *Technology → Architecture and technical leadership*). Each area has

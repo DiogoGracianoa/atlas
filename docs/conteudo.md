@@ -22,7 +22,7 @@ public/content/
 | Tecnologia (agrupador) | `tecnologia` | disponível |
 | ↳ Arquitetura e liderança técnica | `arquitetura-lideranca-tecnica` | disponível (9 módulos, 82 temas: Liderança técnica, Engenharia e arquitetura, IA aplicada e SDD) |
 
-Área planejada aparece no mapa em cinza, como "em breve", sem link. Esta tabela é
+Área ou subtema planejado fica no manifesto, mas não aparece no site (nem no mapa, nem no menu); um endereço direto para ele se comporta como inexistente. Esta tabela é
 conferida contra `public/content/areas.json` pelos testes: se você mudar o status
 de uma área, atualize a linha aqui também.
 

@@ -72,3 +72,11 @@ for (const theme of ["light", "dark"] as const) {
     }
   });
 }
+
+test("atalho / foca a busca do menu (desktop)", async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto("/atlas/politica/m1e1");
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  await page.keyboard.press("/");
+  await expect(page.getByRole("complementary").getByRole("searchbox", { name: "Buscar" })).toBeFocused();
+});

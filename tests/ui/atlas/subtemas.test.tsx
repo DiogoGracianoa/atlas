@@ -46,14 +46,13 @@ const at = "2026-11-06T10:00:00.000Z";
 const estado = (extra: object) => JSON.stringify({ v: 3, marks: {}, notes: {}, lastAt: null, resetAt: null, totals: {}, size: "m", theme: "auto", ...extra });
 
 describe("agrupador (S01)", () => {
-  it("/atlas/tecnologia lista os subtemas; planejado sem link", async () => {
+  it("/atlas/tecnologia lista os subtemas disponíveis; planejado não aparece", async () => {
     renderApp("/atlas/tecnologia", { fetchJSON: fetcher(manifesto()) });
     expect(await screen.findByRole("heading", { level: 1, name: "Tecnologia" })).toBeTruthy();
     const lista = screen.getByRole("list", { name: "Subtemas" });
     expect(within(lista).getByRole("link", { name: /Arquitetura e liderança/ }).getAttribute("href")).toBe("/atlas/tecnologia/arq-lideranca");
-    const dados = within(lista).getByRole("heading", { name: "Dados" }).closest("li")!;
-    expect(within(dados).queryByRole("link")).toBeNull();
-    expect(within(dados).getByText("Em breve")).toBeTruthy();
+    expect(screen.queryByText("Dados")).toBeNull();
+    expect(within(lista).getAllByRole("listitem")).toHaveLength(1);
   });
 });
 
@@ -70,7 +69,7 @@ describe("rotas com subtema (S02, S03)", () => {
     a.unmount();
     const b = renderApp("/atlas/tecnologia/dados", { fetchJSON: fetcher(manifesto()) });
     await waitFor(() => expect(b.router.state.location.pathname).toBe("/atlas/tecnologia"));
-    expect(await screen.findByText("Este subtema ainda não está disponível.")).toBeTruthy();
+    expect(await screen.findByText("Subtema não encontrado.")).toBeTruthy();
   });
 
   it("item desconhecido no subtema volta à capa do subtema", async () => {
@@ -116,10 +115,11 @@ describe("continuar, menu e busca (S06–S08)", () => {
   it("seletor lista o subtema sob o nome da área e leva ao endereço completo", async () => {
     const { user, router } = renderApp("/atlas", { fetchJSON: fetcher(manifesto()) });
     const nav = await screen.findByRole("navigation", { name: "Conteúdo do atlas" });
-    const select = within(nav).getByLabelText("Área") as HTMLSelectElement;
-    const grupo = select.querySelector('optgroup[label="Tecnologia"]')!;
-    expect([...grupo.querySelectorAll("option")].map(o => o.textContent)).toEqual(["Arquitetura e liderança", "Dados — em breve"]);
-    await user.selectOptions(select, "arq-lideranca");
+    await user.click(within(nav).getByRole("button", { name: /^Área/ }));
+    const lista = within(nav).getByRole("listbox", { name: "Área" });
+    // agrupador e seu subtema disponível; o planejado (Dados) não aparece
+    expect(within(lista).getAllByRole("option").map(o => o.textContent)).toEqual(["Mapa do Atlas", "Política, economia e marxismo", "Tecnologia", "Arquitetura e liderança"]);
+    await user.click(within(lista).getByRole("option", { name: "Arquitetura e liderança" }));
     await waitFor(() => expect(router.state.location.pathname).toBe("/atlas/tecnologia/arq-lideranca"));
   });
 

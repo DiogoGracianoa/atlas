@@ -198,3 +198,25 @@ tipo diagramas, gráficos, imagens". Não muda nenhuma RN anterior; acrescenta:
 |---|---|---|
 | RN11 | AC13 — Dado um tema com diagrama, Quando abro, Então vejo o desenho com a legenda; offline na primeira vez, o aviso e o texto | coberta (`tests/ui/diagrama.test.tsx`, `e2e/diagramas.spec.ts`) |
 | RN12 | AC14 — Dado o mapa e a capa, Quando abro, Então há ilustração e anel de progresso; o texto passa AA nos dois temas | coberta (`e2e/layout.spec.ts`, axe com contraste real) |
+
+## Extensão 2026-11-06 (2) — o que não existe não aparece; menu redesenhado
+
+Pedido do autor: "não precisa do 'em breve', não exiba o que ainda não existe"
+e "não curti o menu… visual feio, antigo… queria com visual mais moderno".
+
+- **RN13 (só o que existe):** seções, áreas e subtemas com `status: "planejado"`
+  continuam no manifesto/registro, mas **não aparecem** no portal, no mapa, na
+  página do agrupador, no seletor nem no menu. Um endereço direto para algo
+  planejado se comporta como inexistente ("Área não encontrada." /
+  "Subtema não encontrado."). Agrupador sem subtema disponível também não
+  aparece. **Substitui**, por decisão do autor, a parte "planejado aparece como
+  em breve" da RN07 (`portal-react`) e da RN01 desta visão.
+- **Menu (aparência, RN12):** seletor de área próprio (listbox acessível com
+  teclado), busca com ícone, limpar e atalho "/", cartão de resumo da área com
+  anel, módulos com anel na cor da trilha e temas em linha do tempo, ferramentas
+  como barra de ícones.
+
+| RN | ACs | Situação |
+|---|---|---|
+| RN13 | AC15 — Dado Dossiês e áreas/subtemas planejados, Quando abro portal, mapa, agrupador e menu, Então nenhum aparece e não há "em breve"; `/atlas/historia` leva ao mapa com "Área não encontrada." | coberta (`portal.test.tsx`, `atlas/navegacao.test.tsx`, `atlas/subtemas.test.tsx`) |
+| RN12 | AC16 — Seletor operável por teclado (↑/↓, Enter, Esc devolve o foco), busca com "/" e limpar, sem violações axe | coberta (`atlas/menu.test.tsx`, `e2e/layout.spec.ts`) |

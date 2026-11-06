@@ -70,6 +70,8 @@ export default defineConfig({
           name: "ui",
           environment: "jsdom",
           setupFiles: ["tests/ui/setup.ts"],
+          // UI monta o app real com currículos grandes; sob carga paralela 5 s é pouco.
+          testTimeout: 15000,
           include: ["tests/ui/**/*.test.{ts,tsx}"],
         },
       },

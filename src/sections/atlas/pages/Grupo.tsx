@@ -1,5 +1,5 @@
-// Página do agrupador (RN01): lista os subtemas da área. Disponível tem link e
-// progresso; planejado aparece como "em breve", sem link.
+// Página do agrupador (RN01): lista os subtemas disponíveis da área, com link e
+// progresso. Planejados não aparecem (extensão de 2026-11-06).
 import { useId } from "react";
 import { Link } from "react-router";
 import { useAppState } from "../../../app/context";
@@ -27,19 +27,8 @@ export function Grupo() {
       </header>
       <h2 id={hid} className="visually-hidden">Subtemas</h2>
       <ul className={s.areas} aria-labelledby={hid}>
-        {(group.subtemas ?? []).map(sub => {
-          const ok = sub.status === "disponivel" && !!sub.arquivo;
-          if (!ok) {
-            return (
-              <li key={sub.slug}>
-                <div className={s.areaCard} data-soon>
-                  <Tag>Em breve</Tag>
-                  <h3>{sub.nome}</h3>
-                  {sub.resumo && <p>{sub.resumo}</p>}
-                </div>
-              </li>
-            );
-          }
+        {/* só o que existe: subtemas planejados não aparecem */}
+        {(group.subtemas ?? []).filter(sub => sub.status === "disponivel" && !!sub.arquivo).map(sub => {
           const p = areaProgress(sub.slug, state.marks, state.totals[sub.slug]);
           return (
             <li key={sub.slug}>

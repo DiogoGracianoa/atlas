@@ -44,12 +44,13 @@ function Continuar({ slug, id, nome }: { slug: string; id: string; nome: string 
 export function Mapa() {
   const { manifest } = useAtlas();
   const state = useAppState();
-  const hid = useId(), soonId = useId();
+  const hid = useId();
   useTitle("Mapa do Atlas · Atlas");
   const isGroup = (a: AreaMeta) => !!a.subtemas?.length;
-  const aberta = (a: AreaMeta) => (isGroup(a) ? a.status === "disponivel" : a.status === "disponivel" && !!a.arquivo);
+  const folhaAberta = (a: AreaMeta) => a.status === "disponivel" && !!a.arquivo;
+  // só o que existe: agrupador aparece se tiver subtema disponível; planejado não aparece
+  const aberta = (a: AreaMeta) => (isGroup(a) ? a.status === "disponivel" && (a.subtemas ?? []).some(folhaAberta) : folhaAberta(a));
   const disponiveis = manifest.areas.filter(aberta);
-  const planejadas = manifest.areas.filter(a => !aberta(a));
   // folhas: áreas simples e subtemas (onde vive o progresso)
   const folhas = manifest.areas.flatMap(a => (isGroup(a) ? a.subtemas ?? [] : [a]));
 
@@ -68,16 +69,16 @@ export function Mapa() {
       <ul className={s.areas} aria-labelledby={hid}>
         {disponiveis.map(a => {
           // agrupador: soma o progresso dos subtemas (RN04)
-          const p = (isGroup(a) ? a.subtemas ?? [] : [a])
+          const p = (isGroup(a) ? (a.subtemas ?? []).filter(folhaAberta) : [a])
             .map(x => areaProgress(x.slug, state.marks, state.totals[x.slug]))
             .reduce((acc, x) => ({ done: acc.done + x.done, total: acc.total + (x.total ?? 0) }), { done: 0, total: 0 });
           return (
             <li key={a.slug}>
               <Link to={"/atlas/" + a.slug} className={s.areaCard}>
-                <Arte seed={a.slug} colors={(isGroup(a) ? a.subtemas ?? [] : [a]).flatMap(leafColors)} height={96} className={s.cardArt} />
+                <Arte seed={a.slug} colors={(isGroup(a) ? (a.subtemas ?? []).filter(folhaAberta) : [a]).flatMap(leafColors)} height={96} className={s.cardArt} />
                 <div className={s.cardRow}>
                   <div className={s.cardText}>
-                    <Tag>{isGroup(a) ? `${(a.subtemas ?? []).length} ${(a.subtemas ?? []).length === 1 ? "subtema" : "subtemas"}` : "Área"}</Tag>
+                    <Tag>{isGroup(a) ? `${(a.subtemas ?? []).filter(folhaAberta).length} ${(a.subtemas ?? []).filter(folhaAberta).length === 1 ? "subtema" : "subtemas"}` : "Área"}</Tag>
                     <h3>{a.nome}</h3>
                     {a.resumo && <p>{a.resumo}</p>}
                   </div>
@@ -91,19 +92,6 @@ export function Mapa() {
           );
         })}
       </ul>
-      {planejadas.length > 0 && (
-        <>
-          <h2 id={soonId} className={s.sectionTitle}>Em breve</h2>
-          <ul className={s.soon} aria-labelledby={soonId}>
-            {planejadas.map(a => (
-              <li key={a.slug}>
-                <h3>{a.nome}</h3>
-                {a.resumo && <p>{a.resumo}</p>}
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
       <BackupNote />
     </div>
   );

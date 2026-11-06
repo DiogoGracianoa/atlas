@@ -10,7 +10,7 @@ export function ProgressRing({ value, max, label, size = 64, color = "var(--acce
     <div role="progressbar" aria-label={label} aria-valuemin={0} aria-valuemax={max} aria-valuenow={v} aria-valuetext={`${pct}%`}
       style={{ position: "relative", width: size, height: size, flex: "none" }}>
       <svg viewBox="0 0 36 36" width={size} height={size} aria-hidden="true" style={{ transform: "rotate(-90deg)" }}>
-        <circle cx="18" cy="18" r={R} style={{ fill: "none", stroke: "var(--surface-alt)", strokeWidth: 3.6 }} />
+        <circle cx="18" cy="18" r={R} style={{ fill: "none", stroke: "color-mix(in srgb, var(--muted) 30%, transparent)", strokeWidth: 3.6 }} />
         <circle cx="18" cy="18" r={R} pathLength={100} strokeDasharray={`${pct} ${100 - pct}`}
           style={{ fill: "none", stroke: color, strokeWidth: 3.6, strokeLinecap: pct > 0 ? "round" : "butt", transition: "stroke-dasharray .4s" }} />
       </svg>

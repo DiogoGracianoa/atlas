@@ -8,7 +8,6 @@ import { exportBackup, planImport } from "../../../core/backup";
 import { LEGACY_AREA } from "../../../core/legacy";
 import type { AreaIndex } from "../../../core/types";
 import { Confirm } from "../../../ui/Confirm";
-import { Button } from "../../../ui/primitives";
 import { useToast } from "../../../ui/Toast";
 import s from "../Atlas.module.css";
 
@@ -59,16 +58,29 @@ export function AtlasTools({ area, onAction, onPrint }: { area: AreaIndex | null
     <div className={s.tools}>
       <p className={s.toolsTitle}>Seu progresso</p>
       <div className={s.toolsGrid}>
-        <Button onClick={() => {
+        <button type="button" className={s.tool} onClick={() => {
           download(BACKUP_FILE, JSON.stringify(exportBackup(store.state, new Date().toISOString()), null, 2));
           toast("Backup exportado.");
-        }}>Exportar</Button>
-        <Button onClick={() => fileRef.current?.click()}>Importar</Button>
+        }}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" /></svg>
+          Exportar
+        </button>
+        <button type="button" className={s.tool} onClick={() => fileRef.current?.click()}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V4M7 9l5-5 5 5M5 20h14" /></svg>
+          Importar
+        </button>
         <input ref={fileRef} type="file" accept="application/json,.json" hidden aria-label="Arquivo de backup"
           onChange={e => { const f = e.target.files?.[0]; e.target.value = ""; if (f) void onFile(f); }} />
-        <Button disabled={!area} onClick={() => { onAction?.(); toast("Na janela de impressão, escolha “Salvar como PDF”."); onPrint?.(); }}
-          title={area ? undefined : "Abra uma área para salvar o roteiro em PDF."}>Salvar em PDF</Button>
-        <Button variant="danger" onClick={() => setConfirmReset(true)}>Zerar</Button>
+        <button type="button" className={s.tool} disabled={!area} aria-label="Salvar em PDF"
+          title={area ? "Salvar o roteiro da área em PDF" : "Abra uma área para salvar o roteiro em PDF."}
+          onClick={() => { onAction?.(); toast("Na janela de impressão, escolha “Salvar como PDF”."); onPrint?.(); }}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z" /><path d="M14 3v5h5M10 13h6M10 17h6" /></svg>
+          PDF
+        </button>
+        <button type="button" className={[s.tool, s.toolDanger].join(" ")} onClick={() => setConfirmReset(true)}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3" /></svg>
+          Zerar
+        </button>
       </div>
 
       <Confirm

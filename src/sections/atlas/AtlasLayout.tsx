@@ -44,16 +44,16 @@ function resolve(manifest: Manifest | null, a?: string, b?: string, c?: string):
   if (!a) return { kind: "ok", view: "mapa", group: null, itemId: null };
   const top = manifest?.areas.find(x => x.slug === a);
   if (!manifest) return { kind: "ok", view: "mapa", group: null, itemId: null };
-  if (!top) return { kind: "redirect", to: "/atlas", message: "Área não encontrada." };
+  // Planejado se comporta como inexistente: o site só mostra o que existe.
+  const visivel = top && (top.subtemas?.length ? top.status === "disponivel" && top.subtemas.some(available) : available(top));
+  if (!top || !visivel) return { kind: "redirect", to: "/atlas", message: "Área não encontrada." };
   if (top.subtemas?.length) {
     if (!b) return { kind: "ok", view: "grupo", group: top, itemId: null };
     const sub = top.subtemas.find(x => x.slug === b);
-    if (!sub) return { kind: "redirect", to: "/atlas/" + a, message: "Subtema não encontrado." };
-    if (!available(sub)) return { kind: "redirect", to: "/atlas/" + a, message: "Este subtema ainda não está disponível." };
+    if (!sub || !available(sub)) return { kind: "redirect", to: "/atlas/" + a, message: "Subtema não encontrado." };
     return { kind: "ok", view: c ? "item" : "capa", leaf: b, group: top, itemId: c ?? null };
   }
   if (c) return { kind: "redirect", to: "/atlas/" + a };
-  if (!available(top)) return { kind: "redirect", to: "/atlas", message: "Esta área ainda não está disponível." };
   return { kind: "ok", view: b ? "item" : "capa", leaf: a, group: null, itemId: b ?? null };
 }
 
