@@ -80,3 +80,37 @@ test("atalho / foca a busca do menu (desktop)", async ({ page }) => {
   await page.keyboard.press("/");
   await expect(page.getByRole("complementary").getByRole("searchbox", { name: "Buscar" })).toBeFocused();
 });
+
+test("portal: a faixa decorativa não cobre o rótulo 'Portal de estudos'", async ({ page }) => {
+  await page.goto("/");
+  const rotulo = page.getByText("Portal de estudos");
+  await expect(rotulo).toBeVisible();
+  const { faixaBase, rotuloTopo } = await page.evaluate(() => {
+    const hero = document.querySelector("section[aria-labelledby='portal-titulo']")!;
+    const faixa = getComputedStyle(hero, "::before");
+    const p = [...hero.querySelectorAll("p")].find(x => /portal de estudos/i.test(x.textContent ?? ""))!;
+    const top = hero.getBoundingClientRect().top + parseFloat(faixa.marginTop || "0");
+    return { faixaBase: top + parseFloat(faixa.height), rotuloTopo: p.getBoundingClientRect().top };
+  });
+  expect(faixaBase).toBeLessThanOrEqual(rotuloTopo);
+});
+
+test.describe("celular: rodapé do menu na gaveta", () => {
+  test.use({ viewport: { width: 375, height: 812 } });
+
+  test("encosta na base da tela, antes e depois de rolar", async ({ page }) => {
+    await page.goto("/atlas/tecnologia/arquitetura-lideranca-tecnica/m2e1");
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    await page.getByRole("button", { name: "Arquitetura e liderança técnica" }).click();
+    const gaveta = page.getByRole("dialog");
+    await expect(gaveta).toBeVisible();
+    const rodape = gaveta.getByText("Seu progresso").locator("..");
+    const base = async () => (await rodape.boundingBox())!;
+    const antes = await base();
+    expect(Math.abs(antes.y + antes.height - 812)).toBeLessThanOrEqual(1);
+    await gaveta.evaluate(el => { el.scrollTop = el.scrollHeight; });
+    await page.waitForTimeout(100);
+    const depois = await base();
+    expect(Math.abs(depois.y + depois.height - 812)).toBeLessThanOrEqual(1);
+  });
+});

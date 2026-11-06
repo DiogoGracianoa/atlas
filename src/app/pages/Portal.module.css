@@ -19,8 +19,8 @@
 
 /* ilustração no topo do cartão, encostada nas bordas */
 .grid .cardArt { margin: -20px -20px 16px; width: calc(100% + 40px); max-width: none; border-radius: var(--radius) var(--radius) 0 0; }
-.hero { position: relative; }
+/* faixa decorativa acima do rótulo, no fluxo (não por cima do texto) */
 .hero::before {
-  content: ""; position: absolute; left: -10px; top: 6px; width: 64px; height: 6px; border-radius: 3px;
+  content: ""; display: block; width: 64px; height: 6px; margin-bottom: 18px; border-radius: 3px;
   background: linear-gradient(90deg, var(--warm), var(--teal));
 }

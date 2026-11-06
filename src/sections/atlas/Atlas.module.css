@@ -127,8 +127,8 @@
 
 /* ferramentas: barra compacta no rodapé do menu */
 .tools {
-  margin-top: auto; padding: 12px 14px 16px; border-top: 1px solid var(--line);
-  background: var(--surface); position: sticky; bottom: 0;
+  margin-top: auto; padding: 12px 14px calc(14px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line);
+  background: var(--surface); position: sticky; bottom: 0; z-index: 1;
 }
 .toolsTitle { margin: 0 0 8px; font-size: .75rem; font-weight: 600; color: var(--muted); }
 .toolsGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
