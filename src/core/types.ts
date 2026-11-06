@@ -151,6 +151,8 @@ export interface Step {
   videos?: Video[];
   book?: Book | null;
   bridge?: string;
+  /** Diagrama opcional (Mermaid simples), sempre com legenda. */
+  diagram?: { code: string; caption: string };
   check: string[];
 }
 

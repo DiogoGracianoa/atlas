@@ -4,10 +4,12 @@ import { useEffect, useId, useState } from "react";
 import { Link } from "react-router";
 import { useAppState, useServices } from "../../../app/context";
 import { areaProgress } from "../../../core/content";
-import { Progress, Tag } from "../../../ui/primitives";
+import { Tag } from "../../../ui/primitives";
+import { Arte } from "../../../ui/Arte";
+import { ProgressRing } from "../../../ui/ProgressRing";
 import { useAtlas } from "../AtlasLayout";
 import { BackupNote, useTitle } from "../components/parts";
-import { itemName, labelFromId } from "../model";
+import { itemName, labelFromId, leafColors } from "../model";
 import type { AreaMeta } from "../../../core/types";
 import s from "../Page.module.css";
 
@@ -72,12 +74,18 @@ export function Mapa() {
           return (
             <li key={a.slug}>
               <Link to={"/atlas/" + a.slug} className={s.areaCard}>
-                <Tag>Área</Tag>
-                <h3>{a.nome}</h3>
-                {a.resumo && <p>{a.resumo}</p>}
-                {p.total
-                  ? <Progress value={p.done} max={p.total} label={`Progresso em ${a.nome}`} />
-                  : <span className={s.muted}>{p.done} {p.done === 1 ? "marco concluído" : "marcos concluídos"}</span>}
+                <Arte seed={a.slug} colors={(isGroup(a) ? a.subtemas ?? [] : [a]).flatMap(leafColors)} height={96} className={s.cardArt} />
+                <div className={s.cardRow}>
+                  <div className={s.cardText}>
+                    <Tag>{isGroup(a) ? `${(a.subtemas ?? []).length} ${(a.subtemas ?? []).length === 1 ? "subtema" : "subtemas"}` : "Área"}</Tag>
+                    <h3>{a.nome}</h3>
+                    {a.resumo && <p>{a.resumo}</p>}
+                  </div>
+                  {p.total
+                    ? <ProgressRing value={p.done} max={p.total} label={`Progresso em ${a.nome}`} size={58} color="var(--success)" />
+                    : null}
+                </div>
+                {!p.total && <span className={s.muted}>{p.done} {p.done === 1 ? "marco concluído" : "marcos concluídos"}</span>}
               </Link>
             </li>
           );

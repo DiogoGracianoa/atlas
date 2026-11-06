@@ -1,7 +1,11 @@
 // Setup do projeto "ui" do Vitest: desmonta o que cada teste renderizou e
 // limpa o armazenamento do jsdom.
 import { afterEach } from "vitest";
-import { cleanup } from "@testing-library/react";
+import { cleanup, configure } from "@testing-library/react";
+
+// Com a suíte inteira em paralelo e currículos grandes (centenas de KB), 1 s
+// de espera nas consultas assíncronas fica apertado; 3 s evita falso negativo.
+configure({ asyncUtilTimeout: 3000 });
 
 afterEach(() => {
   cleanup();

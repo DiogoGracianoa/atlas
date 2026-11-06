@@ -40,3 +40,13 @@ v1.
 
 `item_id` e as chaves locais continuam `{folha}/{id}`, em que a folha é o slug
 da área ou do subtema que tem currículo.
+
+## Extensão 2026-11-06
+
+- **K2 (currículo):** campo opcional `diagram: { code, caption }` no tema.
+  `code` começa por `flowchart LR|TB|TD|RL|BT`, `sequenceDiagram`,
+  `stateDiagram-v2` ou `quadrantChart`; sem `style`, `classDef`, `class`,
+  `click`, `linkStyle`, `:::` nem HTML; `caption` obrigatória. Conferido pelo
+  `validate` e renderizado de verdade pelo `e2e/diagramas.spec.ts`.
+- **KW1 (cache):** os chunks do Mermaid ficam em `/assets/diagramas/`, fora do
+  precache, com cache-first no primeiro uso (cache `atlas-diagramas`).

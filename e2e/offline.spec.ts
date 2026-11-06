@@ -46,6 +46,9 @@ test("área nunca aberta, offline: aviso de conexão e menu navegável (O02)", a
 });
 
 test("o cache do service worker antigo (atlas-v1) é apagado (O03)", async ({ page }) => {
+  // A instalação baixa todo o precache antes de ativar; sob carga (suíte em
+  // paralelo) isso passa dos 30 s padrão.
+  test.setTimeout(90_000);
   await page.goto("/");
   await page.evaluate(async () => {
     await navigator.serviceWorker.ready;

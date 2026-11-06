@@ -3,9 +3,9 @@
 // do service worker antigo, para substituí-lo nos aparelhos já em uso.
 import { cleanupOutdatedCaches, createHandlerBoundToURL, precacheAndRoute } from "workbox-precaching";
 import { NavigationRoute, registerRoute } from "workbox-routing";
-import { NetworkFirst } from "workbox-strategies";
+import { CacheFirst, NetworkFirst } from "workbox-strategies";
 import { clientsClaim } from "workbox-core";
-import { cacheRule, CONTENT_CACHE, OLD_CACHES } from "./sw-rules";
+import { cacheRule, CONTENT_CACHE, DIAGRAM_CACHE, OLD_CACHES } from "./sw-rules";
 
 declare const self: ServiceWorkerGlobalScope & { __WB_MANIFEST: (string | { url: string; revision: string | null })[] };
 
@@ -25,6 +25,12 @@ registerRoute(new NavigationRoute(createHandlerBoundToURL("index.html"), {
 registerRoute(
   ({ url, request }) => cacheRule(url, request.mode, self.location.origin) === "conteudo",
   new NetworkFirst({ cacheName: CONTENT_CACHE, networkTimeoutSeconds: 3 }),
+);
+
+// Mermaid (diagramas): só baixa quando um tema com diagrama abre; depois fica.
+registerRoute(
+  ({ url, request }) => cacheRule(url, request.mode, self.location.origin) === "diagramas",
+  new CacheFirst({ cacheName: DIAGRAM_CACHE }),
 );
 
 // O resto (Supabase, links externos) passa direto para a rede.

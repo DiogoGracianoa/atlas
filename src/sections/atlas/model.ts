@@ -71,6 +71,11 @@ export function itemTradition(a: AreaIndex, n: ItemNode) {
   return tradition(a, key);
 }
 
+/** Cores (como var(--trad-…)) de uma folha, para ilustrações e acentos. */
+export function leafColors(meta: AreaMeta): string[] {
+  return Object.keys(meta.tradicoes || {}).filter(k => SAFE.test(k)).map(k => `var(${tradVar(meta.slug, k)})`);
+}
+
 /** CSS com as cores de tradição da área nos temas claro e escuro. */
 export function traditionCss(meta: AreaMeta): string {
   if (!SAFE.test(meta.slug)) return "";

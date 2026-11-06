@@ -4,7 +4,10 @@ import { useId } from "react";
 import { Link } from "react-router";
 import { useAppState } from "../../../app/context";
 import { areaProgress } from "../../../core/content";
-import { Progress, Tag } from "../../../ui/primitives";
+import { Tag } from "../../../ui/primitives";
+import { Arte } from "../../../ui/Arte";
+import { ProgressRing } from "../../../ui/ProgressRing";
+import { leafColors } from "../model";
 import { useAtlas } from "../AtlasLayout";
 import { BackupNote, useTitle } from "../components/parts";
 import s from "../Page.module.css";
@@ -41,12 +44,16 @@ export function Grupo() {
           return (
             <li key={sub.slug}>
               <Link to={paths.areaPath(sub.slug)} className={s.areaCard}>
-                <Tag>Subtema</Tag>
-                <h3>{sub.nome}</h3>
-                {sub.resumo && <p>{sub.resumo}</p>}
-                {p.total
-                  ? <Progress value={p.done} max={p.total} label={`Progresso em ${sub.nome}`} />
-                  : <span className={s.muted}>{p.done} {p.done === 1 ? "marco concluído" : "marcos concluídos"}</span>}
+                <Arte seed={sub.slug} colors={leafColors(sub)} height={96} className={s.cardArt} />
+                <div className={s.cardRow}>
+                  <div className={s.cardText}>
+                    <Tag>Subtema</Tag>
+                    <h3>{sub.nome}</h3>
+                    {sub.resumo && <p>{sub.resumo}</p>}
+                  </div>
+                  {p.total ? <ProgressRing value={p.done} max={p.total} label={`Progresso em ${sub.nome}`} size={58} color="var(--success)" /> : null}
+                </div>
+                {!p.total && <span className={s.muted}>{p.done} {p.done === 1 ? "marco concluído" : "marcos concluídos"}</span>}
               </Link>
             </li>
           );

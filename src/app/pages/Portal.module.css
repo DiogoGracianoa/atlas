@@ -16,3 +16,11 @@
 }
 .grid > li { display: grid; }
 .resumo { color: var(--muted); margin: 0 0 14px; }
+
+/* ilustração no topo do cartão, encostada nas bordas */
+.grid .cardArt { margin: -20px -20px 16px; width: calc(100% + 40px); max-width: none; border-radius: var(--radius) var(--radius) 0 0; }
+.hero { position: relative; }
+.hero::before {
+  content: ""; position: absolute; left: -10px; top: 6px; width: 64px; height: 6px; border-radius: 3px;
+  background: linear-gradient(90deg, var(--warm), var(--teal));
+}

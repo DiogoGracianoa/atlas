@@ -160,3 +160,28 @@ test("subtema disponível sem metadados falha", () => {
   assert.equal(r.code, 1);
   assert.match(r.out, /sub-um: campo obrigatório no manifesto: titulo/);
 });
+
+// Diagramas opcionais nos temas (extensão de 2026-11-06 do K2).
+test("diagrama válido passa; tipo desconhecido ou sem legenda falha", () => {
+  const ok: Invalida = curriculum();
+  ok.modules[0].steps[0].diagram = { code: "flowchart LR\n  A[Cliente] --> B[API]", caption: "Requisição do cliente à API." };
+  assert.equal(runValidate(writeAtlas({ cur: ok })).code, 0);
+
+  const ruim: Invalida = curriculum();
+  ruim.modules[0].steps[0].diagram = { code: "pie\n  \"a\": 1", caption: "" };
+  const r = runValidate(writeAtlas({ cur: ruim }));
+  assert.equal(r.code, 1);
+  assert.match(r.out, /m1e1: diagrama de tipo não permitido/);
+  assert.match(r.out, /m1e1: diagrama sem legenda/);
+});
+
+test("rótulo com a palavra 'classe' não é confundido com estilo; classDef é recusado", () => {
+  const ok: Invalida = curriculum();
+  ok.modules[0].steps[0].diagram = { code: "flowchart LR\n  A[Classe de serviço] --> B[Cliente]", caption: "Rótulo com 'classe'." };
+  assert.equal(runValidate(writeAtlas({ cur: ok })).code, 0);
+  const ruim: Invalida = curriculum();
+  ruim.modules[0].steps[0].diagram = { code: "flowchart LR\n  A --> B\n  classDef x fill:#f00", caption: "Com estilo." };
+  const r = runValidate(writeAtlas({ cur: ruim }));
+  assert.equal(r.code, 1);
+  assert.match(r.out, /diagrama com estilo, clique ou HTML/);
+});

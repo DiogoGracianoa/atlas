@@ -1,10 +1,11 @@
 // Capa da área: abertura, rota de três passos, números e módulos com progresso.
 import { Link } from "react-router";
 import { useAppState } from "../../../app/context";
-import { Progress } from "../../../ui/primitives";
+import { Arte } from "../../../ui/Arte";
+import { ProgressRing } from "../../../ui/ProgressRing";
 import { useAtlas } from "../AtlasLayout";
 import { BackupNote, useTitle } from "../components/parts";
-import { areaMarks, doneCount, fillTemplate, moduleNodes, moduleProgress, tradition } from "../model";
+import { areaMarks, doneCount, fillTemplate, leafColors, moduleNodes, moduleProgress, tradition } from "../model";
 import s from "../Page.module.css";
 
 export function Capa() {
@@ -14,10 +15,10 @@ export function Capa() {
   if (!a) return null;
   const capa = a.meta.capa;
   const p = areaMarks(a, state);
-  const pct = p.total ? Math.round((100 * p.done) / p.total) : 0;
 
   return (
     <div className={s.page} style={{ ["--accent" as string]: tradition(a, a.data.modules[0]?.steps[0]?.tradition ?? "").color }}>
+      <Arte seed={a.slug} colors={leafColors(a.meta)} height={170} className={s.banner} />
       <header className={s.hero}>
         {capa?.rotulo && <p className={s.kicker}>{capa.rotulo}</p>}
         <h1 className={s.h1}>{a.meta.titulo || a.meta.nome}</h1>
@@ -31,7 +32,10 @@ export function Capa() {
       ) : null}
 
       <dl className={s.stats}>
-        <div><dt>do percurso concluído</dt><dd>{pct}%</dd></div>
+        <div className={s.statRing}>
+          <dt>do percurso concluído</dt>
+          <dd><ProgressRing value={p.done} max={p.total} label="Percurso da área" size={64} color="var(--success)" /></dd>
+        </div>
         <div><dt>livros no roteiro</dt><dd>{a.stats.livros}</dd></div>
         <div><dt>vídeos e playlists</dt><dd>{a.stats.videos}</dd></div>
       </dl>
@@ -45,11 +49,13 @@ export function Capa() {
           const partial = mp.done > 0 && mp.done < mp.total;
           return (
             <details key={m.id} className={s.modCard} style={{ ["--accent" as string]: color }} open={partial}>
-              <summary>
-                <span className={s.modMeta}>Módulo {String(m.number).padStart(2, "0")} · {m.level}</span>
-                <span className={s.modName}>{m.name}</span>
-                <span className={s.modSub}>{m.subtitle}</span>
-                <Progress value={mp.done} max={mp.total} label={`Módulo ${m.number}`} />
+              <summary className={s.modSummary}>
+                <ProgressRing value={mp.done} max={mp.total} label={`Módulo ${m.number}`} size={52} color={color} />
+                <span className={s.modHead}>
+                  <span className={s.modMeta}>Módulo {String(m.number).padStart(2, "0")} · {m.level}</span>
+                  <span className={s.modName}>{m.name}</span>
+                  <span className={s.modSub}>{m.subtitle}</span>
+                </span>
               </summary>
               <ul className={s.modItems}>
                 {moduleNodes(a, m).map(n => {

@@ -27,6 +27,9 @@ export interface Palette {
   focus: string;
   success: string;
   danger: string;
+  /** Cores decorativas (ilustrações, acentos): nunca usadas para texto. */
+  warm: string;
+  teal: string;
 }
 
 export const light: Palette = {
@@ -43,6 +46,8 @@ export const light: Palette = {
   focus: "#1F5FBF",
   success: "#2F6B4F",
   danger: "#A12A2A",
+  warm: "#C2603A",
+  teal: "#2A7F78",
 };
 
 export const dark: Palette = {
@@ -59,6 +64,8 @@ export const dark: Palette = {
   focus: "#7FB2FF",
   success: "#7CC4A0",
   danger: "#F08A8A",
+  warm: "#F0A47A",
+  teal: "#7FD0C8",
 };
 
 /** Pares que precisam de contraste de texto (4,5:1). */

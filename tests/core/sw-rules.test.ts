@@ -22,6 +22,10 @@ describe("regras de cache (KW1)", () => {
     expect(rule("https://chatgpt.com/", "navigate")).toBe("rede");
   });
 
+  it("chunks do Mermaid: cache no primeiro uso, fora do precache", () => {
+    expect(rule(origin + "/assets/diagramas/mermaid-abc.js")).toBe("diagramas");
+  });
+
   it("arquivos do build ficam com o precache (não há regra própria)", () => {
     expect(rule(origin + "/assets/index-abc123.js")).toBe("precache");
   });

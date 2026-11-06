@@ -6,6 +6,7 @@ import type { StepNode, WorkshopNode, AreaIndex } from "../../../core/types";
 import { Tag } from "../../../ui/primitives";
 import { useAtlas } from "../AtlasLayout";
 import { Block, ExternalLink, MarkButton, Notes, Pager, Tutor, useTitle } from "../components/parts";
+import { Diagrama } from "../components/Diagrama";
 import { isDone, itemName, itemTradition } from "../model";
 import { useAppState } from "../../../app/context";
 import s from "../Page.module.css";
@@ -41,6 +42,7 @@ function Percurso({ a, n }: { a: AreaIndex; n: StepNode }) {
 
 function Tema({ a, n }: { a: AreaIndex; n: StepNode }) {
   const trad = itemTradition(a, n);
+  const state = useAppState();
   return (
     <>
       <header className={s.itemHead}>
@@ -57,6 +59,7 @@ function Tema({ a, n }: { a: AreaIndex; n: StepNode }) {
 
       <Block id="definicao" title="A definição">
         <div className={s.prose}>{n.definition.map((p, i) => <p key={i}>{p}</p>)}</div>
+        {n.diagram && <Diagrama code={n.diagram.code} caption={n.diagram.caption} theme={state.theme} />}
         <div className={s.actions}><MarkButton n={n} mark="def" /></div>
       </Block>
 

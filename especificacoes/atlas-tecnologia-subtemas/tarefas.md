@@ -73,3 +73,65 @@ suíte.
   - `npm run size`: 119,6 KB;
   - `tsc` e `eslint`: limpos.
 - **Pendente:** revisão do autor antes da leva 2 (AC11).
+
+### T3, leva 2 (Engenharia e arquitetura) + pedidos do autor (2026-11-06)
+
+- **Leva 2**, escrita por três subagentes em paralelo. Os do m4 e do m6 pararam
+  no limite de uso e foram retomados de onde estavam.
+
+  | Módulo | Temas | Diagramas | Oficina |
+  |---|---|---|---|
+  | m4 | 9 | 5 | revisão de engenharia de um serviço real |
+  | m5 | 10 | 6 | — |
+  | m6 | 9 | 5 | autoavaliação de prontidão para arquitetura |
+
+  Resultado: 56 temas e 16 diagramas no subtema. Livros nulos, com nota (ponte):
+  - m4e9 (fundamentos de sistemas);
+  - m5e7 (cache).
+
+  Atribuições conferidas:
+  - CAP e PACELC;
+  - sagas;
+  - Little;
+  - "The Tail at Scale";
+  - STRIDE;
+  - Raft e Lamport;
+  - Fowler e Tilkov sobre o monólito.
+- **Painel cortado (correção):** o `Sheet` passou a ser renderizado com
+  `createPortal(document.body)`, porque o `backdrop-filter` do cabeçalho
+  servia de bloco de contenção do `position: fixed`. O teste em
+  `ui-kit.test.tsx` falhou primeiro e depois passou; no navegador, o painel fica
+  centralizado (top 250, base 550, numa tela de 800).
+- **Diagramas (RN11):**
+  - `Diagrama.tsx`: Mermaid 12.2.0 sob demanda, cores do tema e da trilha,
+    alternativa offline e para erro;
+  - `validate`: tipos permitidos, sem estilo e legenda obrigatória; o falso
+    positivo com "classe" foi coberto por teste;
+  - build: chunks do Mermaid em `assets/diagramas/` (89 arquivos, 5,1 MB),
+    fora do precache, com cache-first no primeiro uso;
+  - `e2e/diagramas.spec.ts`: os 16 diagramas desenham no Chromium.
+- **Visual (RN12):**
+  - `Arte.tsx`, ilustração SVG determinística com as cores da área;
+  - `ProgressRing.tsx`, anéis de progresso;
+  - cores decorativas `warm` e `teal`;
+  - cabeçalho do tema com tom da trilha, títulos de bloco e percurso na cor da
+    trilha;
+  - cores de todas as áreas injetadas na moldura do atlas;
+  - correção de overflow a 320 px nos cartões de módulo;
+  - capturas da documentação regeneradas.
+- **Script de capturas:** passou a iniciar o Vite pelo `node`, sem shell, para
+  não deixar processo órfão no Windows. Dois órfãos meus foram encerrados.
+- **E2E O03:** tempo de 90 s, porque a instalação do SW baixa o precache inteiro
+  e passava de 30 s sob carga.
+- **Comandos executados:**
+  - `tsc` e `eslint`: limpos;
+  - `npx vitest run`: 353/353;
+  - `npx playwright test`: 51/51;
+  - `npm run validate`: ok;
+  - `npm run size`: 122,5 KB;
+  - `npm run secrets`: ok;
+  - `check-extract`: módulos originais idênticos.
+- **Pendente:**
+  - revisão do autor da leva 2 e do visual;
+  - leva 3 (IA aplicada e SDD);
+  - diagramas nos módulos da leva 1 e de política, se o autor quiser.

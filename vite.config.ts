@@ -16,7 +16,8 @@ export default defineConfig({
       injectManifest: {
         // Conteúdo fica fora do precache: entra no cache só quando a área é aberta (KW1).
         globPatterns: ["**/*.{js,css,html,woff2,svg,png,webmanifest}"],
-        globIgnores: ["content/**"],
+        // Diagramas (Mermaid, ~1 MB) também: baixados no primeiro tema com diagrama.
+        globIgnores: ["content/**", "assets/diagramas/**"],
       },
       manifest: {
         name: "Atlas · Portal de estudos",
@@ -39,6 +40,19 @@ export default defineConfig({
   build: {
     // O manifesto lista os chunks e seus imports; scripts/size-budget.mjs usa (RN13).
     manifest: true,
+    rollupOptions: {
+      output: {
+        // Chunks só de dependências que não são do núcleo do app (Mermaid e o
+        // que ele puxa: d3, dagre, katex…) vão para assets/diagramas/, fora do
+        // precache do service worker.
+        chunkFileNames: (chunk) => {
+          const ids = chunk.moduleIds ?? [];
+          const nucleo = /node_modules[\\/](react|react-dom|react-router|scheduler|@supabase|workbox-)/;
+          const soDeps = ids.length > 0 && ids.every(id => id.includes("node_modules") && !nucleo.test(id));
+          return soDeps ? "assets/diagramas/[name]-[hash].js" : "assets/[name]-[hash].js";
+        },
+      },
+    },
   },
   test: {
     projects: [

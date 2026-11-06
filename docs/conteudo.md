@@ -20,7 +20,7 @@ public/content/
 | Filosofia | `filosofia` | planejada |
 | Ciência | `ciencia` | planejada |
 | Tecnologia (agrupador) | `tecnologia` | disponível |
-| ↳ Arquitetura e liderança técnica | `arquitetura-lideranca-tecnica` | disponível (leva 1 de 3: Liderança técnica) |
+| ↳ Arquitetura e liderança técnica | `arquitetura-lideranca-tecnica` | disponível (levas 1 e 2 de 3: Liderança técnica, Engenharia e arquitetura) |
 
 Área planejada aparece no mapa em cinza, como "em breve", sem link. Esta tabela é
 conferida contra `public/content/areas.json` pelos testes: se você mudar o status
@@ -109,6 +109,30 @@ do conteúdo de cada tema: títulos, textos da capa, o texto-base do prompt de
 
 No `lead`, `{modulos}`, `{temas}`, `{livros}` e `{videos}` são trocados pelas
 contagens da área.
+
+## Diagramas nos temas
+
+Um tema pode ter um diagrama opcional, mostrado logo depois da definição:
+
+```json
+"diagram": {
+  "code": "flowchart LR
+  A[Cliente] --> B[API]
+  B --> C[(Banco)]",
+  "caption": "Uma frase dizendo o que o diagrama mostra."
+}
+```
+
+- **Sintaxe:** Mermaid simples.
+- **Tipos aceitos:** `flowchart LR|TB|TD|RL|BT`, `sequenceDiagram`,
+  `stateDiagram-v2` e `quadrantChart`.
+- **Restrições:** nada de estilos, classes, `click` ou HTML (as cores vêm do
+  tema do site e da trilha), e até cerca de 12 nós.
+- **Legenda:** obrigatória.
+- **Conferência:** o `validate` checa o formato, e `npm run e2e` desenha
+  todos os diagramas no navegador para pegar erro de sintaxe.
+- **Carga:** o Mermaid só é baixado quando um tema com diagrama abre. Na
+  primeira vez precisa de conexão; depois fica no cache.
 
 ## Subtemas (áreas agrupadoras)
 

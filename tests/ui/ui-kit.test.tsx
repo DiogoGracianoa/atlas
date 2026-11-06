@@ -39,6 +39,14 @@ describe("kit de interface", () => {
     expect(document.activeElement).toBe(abrir);
   });
 
+  it("Sheet: é renderizado no <body>, fora de ancestrais que criam contexto (cabeçalho com backdrop-filter)", async () => {
+    const user = userEvent.setup();
+    render(<header><SheetDemo /></header>);
+    await user.click(screen.getByRole("button", { name: "Abrir ajustes" }));
+    const dialog = screen.getByRole("dialog", { name: "Ajustes" });
+    expect(dialog.closest("header")).toBeNull();
+  });
+
   it("Segmented: um botão pressionado por vez", async () => {
     const user = userEvent.setup();
     function Demo() {

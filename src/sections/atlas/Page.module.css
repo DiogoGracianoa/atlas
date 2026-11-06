@@ -142,3 +142,35 @@ a.areaCard:hover { border-color: var(--control); }
 .soon li { padding: 10px 12px; border-radius: var(--radius-sm); background: var(--surface-alt); }
 .soon h3 { font-size: .98rem; margin: 0; }
 .soon p { margin: 2px 0 0; color: var(--muted); font-size: .85rem; line-height: 1.4; }
+
+/* ---------- cor e elementos visuais (2026-11-06) ---------- */
+.banner { border-radius: var(--radius); margin-bottom: 24px; }
+/* seletor composto para vencer o width: 100% do .arte (outro módulo CSS) */
+.areaCard .cardArt { margin: -18px -18px 4px; width: calc(100% + 36px); max-width: none; border-radius: var(--radius) var(--radius) 0 0; }
+.areaCard { overflow: hidden; }
+.cardRow { display: flex; align-items: center; gap: 12px; }
+.cardText { display: grid; gap: 8px; min-width: 0; flex: 1; justify-items: start; }
+.statRing { align-items: flex-start; gap: 8px; }
+.statRing dd { font-size: 1rem; }
+.modSummary { display: flex !important; align-items: center; gap: 14px; }
+.modHead { display: grid; gap: 4px; min-width: 0; }
+
+/* cabeçalho do tema com um tom da trilha */
+.itemHead {
+  margin: -28px calc(-1 * var(--gutter)) 28px; padding: 28px var(--gutter) 24px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 14%, var(--bg)), var(--bg));
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 25%, var(--line));
+}
+@media (min-width: 720px) { .itemHead { border-radius: 0 0 var(--radius) var(--radius); } }
+.blockTitle { color: var(--accent); }
+.blockTitle::before {
+  content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 2px;
+  background: var(--accent); vertical-align: 1px;
+}
+.track { border-left: 3px solid var(--accent); }
+.trackNum { border-color: var(--accent); color: var(--accent); }
+.route li::before { background: var(--accent); color: var(--surface); }
+.continue { border-left: 4px solid var(--warm); }
+/* 320 px com texto GG: o cartão não pode crescer além da coluna */
+.modules > .modCard { min-width: 0; }
+.modName, .modSub { overflow-wrap: anywhere; }

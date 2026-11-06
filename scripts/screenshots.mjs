@@ -14,9 +14,11 @@ mkdirSync(out, { recursive: true });
 const PORT = 4174;
 const base = `http://localhost:${PORT}`;
 
-const server = spawn(process.platform === "win32" ? "npx.cmd" : "npx", ["vite", "preview", "--port", String(PORT), "--strictPort"], { cwd: root, shell: process.platform === "win32" });
+// O Vite é iniciado direto pelo node (sem shell), para o kill no fim encerrar o
+// processo de verdade também no Windows.
+const server = spawn(process.execPath, [join(root, "node_modules", "vite", "bin", "vite.js"), "preview", "--port", String(PORT), "--strictPort"], { cwd: root });
 await new Promise((resolve, reject) => {
-  const t = setTimeout(() => reject(new Error("vite preview não subiu")), 30000);
+  const t = setTimeout(() => reject(new Error("vite preview não subiu")), 90000);
   server.stdout.on("data", d => { if (String(d).includes(String(PORT))) { clearTimeout(t); resolve(); } });
 });
 

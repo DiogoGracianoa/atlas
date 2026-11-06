@@ -48,11 +48,13 @@ without losing what made it useful:
 - **Portal of sections:** the home page lists sections from a single registry.
   Planned sections show as "coming soon".
 - **Study areas** loaded on demand from `content/areas.json` and one
-  `curriculum.json` per area. Each area has modules, topics and hands-on
-  workshops.
+  `curriculum.json` per area, optionally grouped into sub-themes (e.g.
+  *Technology → Architecture and technical leadership*). Each area has
+  modules, topics and hands-on workshops.
 - **Topic pages** with a three-step path (definition, video, book), key
   concepts, core theses, criticism, self-check questions and per-step
   checkmarks.
+- **Diagrams** inside topics (Mermaid, lazy-loaded and themed by the topic's track color), generated cover illustrations and progress rings.
 - **AI tutor prompt:** one click copies a Socratic tutoring prompt built from
   the topic, ready to paste into Claude or ChatGPT.
 - **Notes** saved on every keystroke. A remote update never overwrites the

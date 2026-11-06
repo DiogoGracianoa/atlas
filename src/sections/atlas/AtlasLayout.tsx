@@ -93,7 +93,8 @@ export function AtlasLayout() {
 
   return (
     <div className={s.shell}>
-      {current && <style>{traditionCss(current.meta)}</style>}
+      {/* cores de todas as folhas: o mapa e os agrupadores também usam */}
+      <style>{manifest.data.areas.flatMap(x => (x.subtemas?.length ? x.subtemas : [x])).map(traditionCss).join("\n")}</style>
       <aside className={s.sidebar} aria-label="Navegação do atlas">
         <AtlasNav ctx={ctx} onPrint={print} />
       </aside>

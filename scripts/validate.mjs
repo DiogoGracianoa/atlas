@@ -21,6 +21,7 @@ const WORKSHOP_REQUIRED = ["id", "title", "brief", "exercise", "deliverable"];
 const AREA_REQUIRED = ["arquivo", "titulo", "subtitulo", "tituloPdf", "capa", "tradicoes", "promptBase"];
 const STATUS = ["disponivel", "planejado"];
 const COLOR = /^#[0-9A-Fa-f]{6}$/;
+const DIAGRAM_TYPES = ["flowchart LR", "flowchart TB", "flowchart TD", "flowchart RL", "flowchart BT", "sequenceDiagram", "stateDiagram-v2", "quadrantChart"];
 
 const errors = [];
 const err = (where, msg) => errors.push(where + ": " + msg);
@@ -80,6 +81,14 @@ function validateArea(area) {
       for (const f of STEP_REQUIRED) if (!present(s[f])) err(w, "campo obrigatório ausente: " + f);
       useId(s.id, w);
       if (!s.book && !present(s.bridge)) err(w, "sem book e sem bridge");
+      if (s.diagram !== undefined) {
+        // Diagrama opcional (Mermaid simples, sem estilos), sempre com legenda.
+        const code = s.diagram && typeof s.diagram.code === "string" ? s.diagram.code.trim() : "";
+        if (!DIAGRAM_TYPES.some(t => code.startsWith(t))) err(w, "diagrama de tipo não permitido");
+        // Palavras-chave de estilo só no início de linha (não pegam "classe" num rótulo).
+        if (/^\s*(style|classDef|class|click|linkStyle)\s/m.test(code) || /:::|<[a-z]/i.test(code)) err(w, "diagrama com estilo, clique ou HTML");
+        if (!present(s.diagram && s.diagram.caption)) err(w, "diagrama sem legenda");
+      }
       if (present(s.tradition) && !Object.prototype.hasOwnProperty.call(trad, s.tradition)) err(w, "tradição sem entrada em areas.json: " + s.tradition);
       checkUrls(s, w);
     });

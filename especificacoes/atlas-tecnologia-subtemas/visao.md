@@ -176,3 +176,25 @@ lead reescritos no padrão do atlas de política:
   do guia), salvo se você preferir outra trilha.
 - **Nome da área** (não bloqueante): "Tecnologia", com o resumo "Recortes de
   tecnologia: arquitetura, liderança técnica e IA aplicada".
+
+## Extensão 2026-11-06 — pedido do autor ao revisar a leva 1
+
+Pedido: "corrige o posicionamento do ajuste de tema e de fonte, tá quebrado" e
+"tá meio morto demais, muito monocromático. Talvez falte mais elementos visuais,
+tipo diagramas, gráficos, imagens". Não muda nenhuma RN anterior; acrescenta:
+
+- **RN11 (diagramas opcionais):** um tema pode ter um diagrama (Mermaid simples,
+  sem estilos, até 12 nós) com legenda obrigatória, exibido depois da definição.
+  O texto continua completo sem ele. Sem conexão na primeira vez, o tema mostra
+  aviso e o texto do diagrama.
+- **RN12 (mais cor, sem excesso):** a cor da trilha marca o cabeçalho do tema,
+  os títulos de bloco e o percurso; capas e cartões têm ilustração abstrata
+  gerada com as cores da área; o progresso aparece também em anéis. Contraste
+  AA mantido para todo texto.
+- **Correção:** painéis (ajustes, conta, gaveta) não podem ser cortados pelo
+  cabeçalho.
+
+| RN | ACs | Situação |
+|---|---|---|
+| RN11 | AC13 — Dado um tema com diagrama, Quando abro, Então vejo o desenho com a legenda; offline na primeira vez, o aviso e o texto | coberta (`tests/ui/diagrama.test.tsx`, `e2e/diagramas.spec.ts`) |
+| RN12 | AC14 — Dado o mapa e a capa, Quando abro, Então há ilustração e anel de progresso; o texto passa AA nos dois temas | coberta (`e2e/layout.spec.ts`, axe com contraste real) |

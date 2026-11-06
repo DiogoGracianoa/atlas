@@ -3,14 +3,17 @@
 import { useId } from "react";
 import type { Section } from "../../sections/types";
 import { Card, cardTitleClass, Tag } from "../../ui/primitives";
+import { Arte } from "../../ui/Arte";
 import s from "./Portal.module.css";
 
 function SectionCard({ section }: { section: Section }) {
   const id = useId();
   const available = section.status === "disponivel";
   const Extra = section.Card;
+  const cores = available ? ["var(--brand)", "var(--warm)", "var(--teal)"] : ["var(--control)", "var(--line)"];
   const body = (
     <>
+      <Arte seed={section.slug} colors={cores} height={110} className={s.cardArt} />
       <h2 id={id} className={cardTitleClass}>{section.nome}</h2>
       <p className={s.resumo}>{section.resumo}</p>
       {available ? (Extra ? <Extra /> : null) : <Tag>Em breve</Tag>}

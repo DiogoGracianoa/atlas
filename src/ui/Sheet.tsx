@@ -2,6 +2,7 @@
 // Prende o foco enquanto aberto, fecha com Esc ou clique fora e devolve o foco
 // a quem abriu (RN12, U03).
 import { useEffect, useId, useRef, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 import s from "./Sheet.module.css";
 
 const FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),textarea:not([disabled]),select:not([disabled]),[tabindex]:not([tabindex="-1"])';
@@ -37,7 +38,10 @@ export function Sheet({ open, title, onClose, children, side = "bottom" }: {
   }, [open]);
 
   if (!open) return null;
-  return (
+  // Portal no <body>: um ancestral com backdrop-filter, transform ou filter
+  // (como o cabeçalho) viraria o bloco de contenção do position: fixed e
+  // cortaria o painel.
+  return createPortal(
     <div className={s.layer}>
       <div className={s.scrim} onClick={onClose} aria-hidden="true" />
       <div ref={ref} role="dialog" aria-modal="true" aria-labelledby={titleId} tabIndex={-1} className={side === "left" ? s.drawer : s.panel}>
@@ -49,6 +53,7 @@ export function Sheet({ open, title, onClose, children, side = "bottom" }: {
         </div>
         <div className={s.body}>{children}</div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
