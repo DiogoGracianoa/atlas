@@ -102,3 +102,9 @@ confirmada do solicitante.
 Responsável pelo fechamento: entrega com o solicitante para autorizar publicação
 e mudanças externas. A implementação local está concluída; a proteção do site
 em produção só pode ser declarada depois desses passos.
+
+## Extensão 2026-11-07 — falha de inicialização na Vercel
+
+O log de produção informou `ERR_MODULE_NOT_FOUND`: a função transpilada em `api/conteudo.js` ainda buscava `server/conteudo.ts`. O teste `tests/scripts/funcao-empacotada.test.ts` reproduziu essa falha ao executar a entrada transpilada com o módulo servidor em JavaScript. Para tornar o caminho explícito e presente no pacote, o mesmo handler passou para `server/conteudo.js`, com contrato de tipos em `server/conteudo.d.ts`; a API e o servidor local importam esse arquivo. A implementação de autorização e leitura permanece equivalente.
+
+O teste novo passou e verificou recusa HTTP 401 sem sessão; os testes do handler também passaram. A suíte completa executou 419 testes com sucesso, e tipos, lint e build passaram. A simulação não substitui inspeção de artefato nem validação em deploy real. Após publicação autorizada, verificar primeiro a recusa anônima, depois o acesso autenticado ao manifesto e aos currículos, e consultar logs se houver nova falha.

@@ -1,5 +1,5 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
-import { serveContent } from "./conteudo.ts";
+import { serveContent } from "./conteudo.js";
 
 /** Adaptação usada pelo Vite dev/preview; a autorização é sempre do handler. */
 export function contentMiddleware(config: { url: string; anonKey: string } | null) {
