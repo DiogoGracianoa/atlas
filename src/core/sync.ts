@@ -27,6 +27,7 @@ export interface Session {
 export interface ErrorLike {
   message?: string;
   status?: number;
+  code?: string;
 }
 export interface QueryResult extends ResultLike {
   data?: unknown;
@@ -41,6 +42,8 @@ export interface AuthClient {
   onAuthStateChange(cb: (event: string, session: Session | null) => void): unknown;
   signInWithOtp(args: { email: string; options: { shouldCreateUser: boolean; emailRedirectTo: string } }): PromiseLike<{ error?: ErrorLike | null }>;
   verifyOtp(args: { email: string; token: string; type: "email" }): PromiseLike<{ data?: { session?: Session | null } | null; error?: ErrorLike | null }>;
+  signInWithPassword(args: { email: string; password: string }): PromiseLike<{ error?: ErrorLike | null }>;
+  updateUser(args: { password: string }): PromiseLike<{ error?: ErrorLike | null }>;
   signOut(args: { scope: "local" }): PromiseLike<unknown>;
 }
 export interface SupabaseLike {
@@ -85,7 +88,7 @@ export interface SyncState {
   linkError: "expirado" | "falhou" | null;
 }
 
-export type AuthError = "email" | "codigo" | "indisponivel" | "remoto" | "invalido";
+export type AuthError = "email" | "codigo" | "indisponivel" | "remoto" | "invalido" | "credenciais" | "senha" | "reauth";
 export type AuthResult = { ok: true } | { ok: false; error: AuthError };
 
 export interface Sync {
@@ -93,6 +96,8 @@ export interface Sync {
   init(): Promise<void>;
   requestCode(email: string): Promise<AuthResult>;
   verifyCode(email: string, code: string): Promise<AuthResult>;
+  signInPassword(email: string, password: string): Promise<AuthResult>;
+  updatePassword(password: string): Promise<AuthResult>;
   signOut(): Promise<void>;
   getAccessToken(): Promise<string | null>;
   rejectSession(): void;
@@ -432,6 +437,27 @@ export function createSync({
     return { ok: true };
   }
 
+  async function signInPassword(rawEmail: string, password: string): Promise<AuthResult> {
+    const email = rawEmail.trim().toLowerCase();
+    if (!EMAIL.test(email)) return { ok: false, error: "email" };
+    if (!password) return { ok: false, error: "credenciais" };
+    if (!(await connect()) || !client) return { ok: false, error: "indisponivel" };
+    try {
+      const { error } = await client.auth.signInWithPassword({ email, password });
+      return error ? { ok: false, error: error.status === 0 || (error.status ?? 0) >= 500 ? "indisponivel" : "credenciais" } : { ok: true };
+    } catch { return { ok: false, error: "indisponivel" }; }
+  }
+
+  async function updatePassword(password: string): Promise<AuthResult> {
+    if (!state.user || !client) return { ok: false, error: "indisponivel" };
+    if (!password) return { ok: false, error: "senha" };
+    try {
+      const { error } = await client.auth.updateUser({ password });
+      if (!error) return { ok: true };
+      return { ok: false, error: error.code === "reauthentication_needed" ? "reauth" : "senha" };
+    } catch { return { ok: false, error: "indisponivel" }; }
+  }
+
   async function signOut() {
     if (client) await client.auth.signOut({ scope: "local" });
     onSession(null);
@@ -452,7 +478,7 @@ export function createSync({
 
   return {
     state,
-    init, requestCode, verifyCode, signOut, getAccessToken, rejectSession, pull, flush, whenIdle,
+    init, requestCode, verifyCode, signInPassword, updatePassword, signOut, getAccessToken, rejectSession, pull, flush, whenIdle,
     pending: () => (queue ? queue.size() : 0),
     subscribe: (fn) => { subs.add(fn); return () => { subs.delete(fn); }; },
     get client() { return client; },

@@ -23,6 +23,9 @@ export const AUTH_ERR: Record<AuthError, string> = {
   codigo: "O código tem 6 dígitos.",
   invalido: "Código inválido ou expirado. Peça um novo.",
   indisponivel: "A sincronização está indisponível agora. Tente de novo com conexão.",
+  credenciais: "E-mail ou senha incorretos.",
+  senha: "Não foi possível salvar a senha. Confira os requisitos e tente novamente.",
+  reauth: "Para alterar a senha, saia e entre novamente, inclusive pelo código de e-mail.",
 };
 
 /** Marca o aparelho como "já entrou" quando aparece uma sessão e avisa quem entrou. */
@@ -47,7 +50,8 @@ export function LoginForm({ onDone }: { onDone?: () => void }) {
   const { sync } = useServices();
   const state = useSyncState();
   const toast = useToast();
-  const [step, setStep] = useState<"email" | "codigo">("email");
+  const [step, setStep] = useState<"senha" | "email" | "codigo">("senha");
+  const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [code, setCode] = useState("");
   const [msg, setMsg] = useState("");
@@ -59,6 +63,15 @@ export function LoginForm({ onDone }: { onDone?: () => void }) {
 
   const linkMsg = state.linkError === "expirado" ? "O link expirou ou já foi usado. Peça um novo ou use o código."
     : state.linkError === "falhou" ? "Não foi possível entrar pelo link. Peça um novo ou use o código." : "";
+
+  async function entrarSenha(e: FormEvent) {
+    e.preventDefault();
+    setBusy(true);
+    const r = await sync.signInPassword(email, password);
+    setBusy(false);
+    if (r.ok) { setPassword(""); setMsg(""); onDone?.(); }
+    else setMsg(AUTH_ERR[r.error]);
+  }
 
   async function pedir(e?: FormEvent) {
     e?.preventDefault();
@@ -96,6 +109,18 @@ export function LoginForm({ onDone }: { onDone?: () => void }) {
       </form>
     );
   }
+  if (step === "senha") return (
+    <form className={s.form} onSubmit={entrarSenha}>
+      <p>Entre com seu e-mail e senha para acessar o Atlas.</p>
+      <label htmlFor={emailId} className={s.label}>E-mail</label>
+      <input id={emailId} className={s.field} type="email" autoComplete="email" value={email} onChange={e => setEmail(e.target.value)} />
+      <label htmlFor={codeId} className={s.label}>Senha</label>
+      <input id={codeId} className={s.field} type="password" autoComplete="current-password" value={password} onChange={e => setPassword(e.target.value)} />
+      <div className={s.row}><Button type="submit" variant="primary" disabled={busy}>Entrar</Button></div>
+      <div><Button variant="ghost" disabled={busy} onClick={() => { setPassword(""); setMsg(""); setStep("email"); }}>Entrar sem senha por código</Button></div>
+      <p className={s.msg} role="alert">{msg || linkMsg}</p>
+    </form>
+  );
   return (
     <form className={s.form} onSubmit={pedir}>
       <p>Entre com seu e-mail para acessar o Atlas. Enviamos um link e um código de 6 dígitos.</p>
@@ -105,20 +130,44 @@ export function LoginForm({ onDone }: { onDone?: () => void }) {
       <div className={s.row}>
         <Button type="submit" variant="primary" disabled={busy}>Enviar link e código</Button>
       </div>
+      <Button variant="ghost" onClick={() => { setStep("senha"); setMsg(""); }}>Voltar para senha</Button>
       <p className={s.msg} role="alert">{msg || linkMsg}</p>
     </form>
   );
 }
 
-function AccountBody({ onClose }: { onClose: () => void }) {
+function AccountBody({ onClose, onPasswordSaved }: { onClose: () => void; onPasswordSaved: () => void }) {
   const { sync } = useServices();
   const state = useSyncState();
   const toast = useToast();
   const [busy, setBusy] = useState(false);
+  const [editing, setEditing] = useState(false);
+  const [password, setPassword] = useState("");
+  const [confirmation, setConfirmation] = useState("");
+  const [message, setMessage] = useState("");
+  const passwordId = useId(), confirmationId = useId();
+  async function salvarSenha(e: FormEvent) {
+    e.preventDefault();
+    if (password !== confirmation) { setMessage("As senhas não coincidem."); return; }
+    setBusy(true);
+    const result = await sync.updatePassword(password);
+    setBusy(false);
+    if (result.ok) { setPassword(""); setConfirmation(""); onPasswordSaved(); }
+    else setMessage(AUTH_ERR[result.error]);
+  }
   if (state.user) {
     return (
       <div className={s.form}>
         <p>Conectado como <b>{state.user.email}</b>. {STATUS_TEXT[state.status]}.</p>
+        <Button disabled={busy} onClick={() => { setEditing(!editing); setPassword(""); setConfirmation(""); setMessage(""); }}>Definir ou alterar senha</Button>
+        {editing && <form className={s.form} onSubmit={salvarSenha}>
+          <label className={s.label} htmlFor={passwordId}>Nova senha</label>
+          <input className={s.field} id={passwordId} type="password" autoComplete="new-password" value={password} onChange={e => setPassword(e.target.value)} />
+          <label className={s.label} htmlFor={confirmationId}>Confirmar nova senha</label>
+          <input className={s.field} id={confirmationId} type="password" autoComplete="new-password" value={confirmation} onChange={e => setConfirmation(e.target.value)} />
+          <Button type="submit" variant="primary" disabled={busy}>Salvar senha</Button>
+          <p role="status">{message}</p>
+        </form>}
         <div className={s.row}>
           <Button disabled={busy} onClick={async () => {
             setBusy(true);
@@ -149,6 +198,8 @@ export function SyncIndicator() {
   const seen = useAccountSeen();
   const state = useSyncState();
   const [open, setOpen] = useState(false);
+  const [passwordSaved, setPasswordSaved] = useState(false);
+  const close = () => { setOpen(false); setPasswordSaved(false); };
   if (!seen) return null;
   const text = STATUS_TEXT[state.status];
   return (
@@ -158,8 +209,11 @@ export function SyncIndicator() {
         <span className={s.indicatorText}>{text}</span>
         <span className="visually-hidden">: abrir conta e sincronização</span>
       </button>
-      <Sheet open={open} title={state.user ? "Sincronização" : "Sincronizar entre aparelhos"} onClose={() => setOpen(false)}>
-        <AccountBody onClose={() => setOpen(false)} />
+      <Sheet open={open} title={passwordSaved ? "Senha alterada com sucesso" : state.user ? "Sincronização" : "Sincronizar entre aparelhos"} onClose={close}>
+        {passwordSaved ? <div className={s.success} role="status">
+          <svg data-testid="senha-check" className={s.successCheck} viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" /><path d="m14 24 7 7 13-14" /></svg>
+          <Button variant="primary" onClick={close}>Fechar</Button>
+        </div> : <AccountBody onClose={close} onPasswordSaved={() => setPasswordSaved(true)} />}
       </Sheet>
     </>
   );

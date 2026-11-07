@@ -4,6 +4,7 @@ import type { QueryResult, Session, SupabaseLike, SupabaseModule } from "../../s
 
 export function fakeSupabase({ session = null as Session | null } = {}) {
   let current = session;
+  let savedPassword = "senha correta";
   const listeners: ((ev: string, s: Session | null) => void)[] = [];
   const calls: [string, unknown][] = [];
   const tables: Record<string, Record<string, unknown>[]> = { progress: [], notes: [], prefs: [] };
@@ -22,6 +23,11 @@ export function fakeSupabase({ session = null as Session | null } = {}) {
         emit("SIGNED_IN");
         return { data: { session: current }, error: null };
       },
+      signInWithPassword: async ({ email, password }) => {
+        if (password !== savedPassword) return { error: { status: 400 } };
+        current = { access_token: "test-token", user: { id: "u1", email } }; emit("SIGNED_IN"); return { error: null };
+      },
+      updateUser: async ({ password }) => { savedPassword = password; return { error: null }; },
       signOut: async (a) => { calls.push(["signOut", a]); current = null; emit("SIGNED_OUT"); return {}; },
     },
     from: (table) => ({

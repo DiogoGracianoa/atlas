@@ -42,6 +42,11 @@ function fakeClient({ session = null }: { session?: Session | null } = {}): Fake
         emit("SIGNED_IN", session);
         return { data: { session }, error: null };
       },
+      signInWithPassword: async ({ email, password }) => {
+        if (password !== "senha correta") return { error: { status: 400 } };
+        session = { user: { id: "u1", email } }; emit("SIGNED_IN", session); return { error: null };
+      },
+      updateUser: async ({ password }) => ({ error: password === "fraca" ? { status: 422 } : null }),
       signOut: async (a) => { calls.push(["signOut", a]); session = null; emit("SIGNED_OUT", null); return { error: null }; }
     }
   };
@@ -195,4 +200,32 @@ test("URL sem parâmetros de login não é tocada", async () => {
   const { sync, win } = setup({ href: "https://atlas.test/?utm=x#/" });
   await sync.init();
   assert.deepEqual(win.replaced, []);
+});
+
+test("senha autentica conta existente e recusa credenciais incorretas", async () => {
+  const { sync } = setup();
+  await sync.init();
+  assert.deepEqual(await sync.signInPassword("eu@exemplo.com", "errada"), { ok: false, error: "credenciais" });
+  assert.deepEqual(await sync.signInPassword(" Eu@Exemplo.com ", "senha correta"), { ok: true });
+  assert.equal(sync.state.user?.email, "eu@exemplo.com");
+});
+
+test("alteração de senha exige sessão e informa rejeição do serviço", async () => {
+  const { sync } = setup();
+  await sync.init();
+  assert.deepEqual(await sync.updatePassword("nova senha"), { ok: false, error: "indisponivel" });
+  await sync.verifyCode("eu@exemplo.com", "123456");
+  assert.deepEqual(await sync.updatePassword("fraca"), { ok: false, error: "senha" });
+  assert.deepEqual(await sync.updatePassword("nova senha"), { ok: true });
+});
+
+test("falhas de serviço e exigência de nova autenticação são comunicadas sem sucesso falso", async () => {
+  const { sync, client } = setup({ session: { user: { id: "u1", email: "eu@exemplo.com" } } });
+  await sync.init();
+  client.auth.signInWithPassword = async () => ({ error: { status: 503 } });
+  assert.deepEqual(await sync.signInPassword("eu@exemplo.com", "senha"), { ok: false, error: "indisponivel" });
+  client.auth.updateUser = async () => ({ error: { code: "reauthentication_needed" } });
+  assert.deepEqual(await sync.updatePassword("nova senha"), { ok: false, error: "reauth" });
+  client.auth.updateUser = async () => { throw new Error("rede"); };
+  assert.deepEqual(await sync.updatePassword("nova senha"), { ok: false, error: "indisponivel" });
 });

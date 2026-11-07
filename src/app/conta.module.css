@@ -27,3 +27,6 @@
 
 .page { max-width: 28rem; margin: 0 auto; padding: 40px var(--gutter) 64px; }
 .page h1 { font-family: var(--font-read); font-size: 1.8rem; }
+
+.success { display: grid; justify-items: center; gap: 20px; padding: 12px 0; }
+.successCheck { width: 64px; height: 64px; color: var(--success); fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }

@@ -43,7 +43,9 @@ export function createBackend() {
             dev.listeners.forEach(l => l("SIGNED_IN", dev.session));
             return { data: { session: dev.session }, error: null };
           },
-          signOut: async () => { dev.session = null; dev.listeners.forEach(l => l("SIGNED_OUT", null)); return { error: null }; },
+          signInWithPassword: async () => ({ error: null }),
+      updateUser: async () => ({ error: null }),
+      signOut: async () => { dev.session = null; dev.listeners.forEach(l => l("SIGNED_OUT", null)); return { error: null }; },
         },
         from(name: string) {
           const table = name as TableName;

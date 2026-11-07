@@ -32,6 +32,7 @@ describe("/entrar (A07, A03)", () => {
     const view = renderApp("/entrar", { config: CONFIG, syncOptions: { loadSupabase: fake.loadSupabase } });
     await boot(view);
     const { user, router, storage } = view;
+    await user.click(screen.getByRole("button", { name: "Entrar sem senha por código" }));
     await user.type(screen.getByLabelText("E-mail"), "Eu@Exemplo.com");
     await user.click(screen.getByRole("button", { name: "Enviar link e código" }));
     expect(fake.calls[0]).toEqual(["otp", { email: "eu@exemplo.com", options: { shouldCreateUser: false, emailRedirectTo: "http://localhost:3000/" } }]);
@@ -62,6 +63,7 @@ describe("autor com o aparelho marcado (A01, A02, A04, A08)", () => {
     const fake = fakeSupabase();
     const view = renderApp("/atlas/politica/m2e1", { storage: seenStorage(), config: CONFIG, syncOptions: { loadSupabase: fake.loadSupabase } });
     await boot(view);
+    await view.user.click(await screen.findByRole("button", { name: "Entrar sem senha por código" }));
     await view.user.type(await screen.findByLabelText("E-mail"), "eu@exemplo.com");
     await view.user.click(screen.getByRole("button", { name: "Enviar link e código" }));
     expect(fake.calls[0]).toEqual(["otp", { email: "eu@exemplo.com", options: { shouldCreateUser: false, emailRedirectTo: "http://localhost:3000/entrar" } }]);
@@ -102,4 +104,60 @@ describe("sem configuração (A05, RN13)", () => {
     expect(fake.loads()).toBe(0);
     expect(view.services.sync.state.reason).toBe("sem-config");
   });
+});
+
+it("oferece senha por padrão e permite entrar sem envio de e-mail", async () => {
+  const fake = fakeSupabase();
+  const view = renderApp("/entrar", { config: CONFIG, syncOptions: { loadSupabase: fake.loadSupabase } });
+  await boot(view);
+  await view.user.type(screen.getByLabelText("E-mail"), "eu@exemplo.com");
+  await view.user.type(screen.getByLabelText("Senha"), "senha correta");
+  await view.user.click(screen.getByRole("button", { name: "Entrar" }));
+  await waitFor(() => expect(view.router.state.location.pathname).toBe("/atlas"));
+  expect(fake.calls.some(([name]) => name === "otp")).toBe(false);
+});
+
+it("permite definir senha na conta autenticada e valida confirmação", async () => {
+  const fake = fakeSupabase({ session: { user: { id: "u1", email: "eu@exemplo.com" } } });
+  const view = renderApp("/atlas", { storage: seenStorage(), config: CONFIG, syncOptions: { loadSupabase: fake.loadSupabase } });
+  await boot(view);
+  await view.user.click(await screen.findByRole("button", { name: /^Sincroniza/ }));
+  await view.user.click(screen.getByRole("button", { name: "Definir ou alterar senha" }));
+  await view.user.type(screen.getByLabelText("Nova senha"), "nova senha");
+  await view.user.type(screen.getByLabelText("Confirmar nova senha"), "outra");
+  await view.user.click(screen.getByRole("button", { name: "Salvar senha" }));
+  expect(await screen.findByText("As senhas não coincidem.")).toBeTruthy();
+  await view.user.clear(screen.getByLabelText("Confirmar nova senha"));
+  await view.user.type(screen.getByLabelText("Confirmar nova senha"), "nova senha");
+  await view.user.click(screen.getByRole("button", { name: "Salvar senha" }));
+  const modal = await screen.findByRole("dialog", { name: "Senha alterada com sucesso" });
+  expect(within(modal).queryByLabelText("Nova senha")).toBeNull();
+  expect(within(modal).queryByRole("button", { name: "Sair deste aparelho" })).toBeNull();
+  expect(within(modal).getByTestId("senha-check")).toBeTruthy();
+  await view.user.click(within(modal).getAllByRole("button", { name: "Fechar" }).at(-1)!);
+  await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
+});
+
+it("recupera pelo código, define senha e entra depois com ela", async () => {
+  const fake = fakeSupabase();
+  const view = renderApp("/entrar", { config: CONFIG, syncOptions: { loadSupabase: fake.loadSupabase } });
+  await boot(view);
+  await view.user.click(screen.getByRole("button", { name: "Entrar sem senha por código" }));
+  await view.user.type(screen.getByLabelText("E-mail"), "eu@exemplo.com");
+  await view.user.click(screen.getByRole("button", { name: "Enviar link e código" }));
+  await view.user.type(await screen.findByLabelText("Código de 6 dígitos"), "123456");
+  await view.user.click(screen.getByRole("button", { name: "Entrar" }));
+  await view.user.click(await screen.findByRole("button", { name: /^Sincroniza/ }));
+  await view.user.click(screen.getByRole("button", { name: "Definir ou alterar senha" }));
+  await view.user.type(screen.getByLabelText("Nova senha"), "nova senha segura");
+  await view.user.type(screen.getByLabelText("Confirmar nova senha"), "nova senha segura");
+  await view.user.click(screen.getByRole("button", { name: "Salvar senha" }));
+  await screen.findByRole("dialog", { name: "Senha alterada com sucesso" });
+  await view.user.click(screen.getAllByRole("button", { name: "Fechar" }).at(-1)!);
+  await view.user.click(await screen.findByRole("button", { name: /^Sincroniza/ }));
+  await view.user.click(screen.getByRole("button", { name: "Sair deste aparelho" }));
+  await view.user.type(await screen.findByLabelText("E-mail"), "eu@exemplo.com");
+  await view.user.type(screen.getByLabelText("Senha"), "nova senha segura");
+  await view.user.click(screen.getByRole("button", { name: "Entrar" }));
+  await waitFor(() => expect(view.router.state.location.pathname).toBe("/atlas"));
 });

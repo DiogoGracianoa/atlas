@@ -20,8 +20,9 @@ Tudo no painel (`supabase.com/dashboard`).
    *Run*. Em *Table Editor*, confira `progress`, `notes`, `prefs` e
    `heartbeat`, todas com RLS ligado.
 3. **Criar a sua conta antes de fechar os cadastros.** *Authentication* →
-   *Users* → *Add user* → *Create new user*: seu e-mail, uma senha aleatória
-   (o app não usa senha) e *Auto Confirm User* marcado.
+   *Users* → *Add user* → *Create new user*: seu e-mail, uma senha inicial
+   segura e *Auto Confirm User* marcado. Depois de entrar, a senha pode ser
+   definida ou alterada no painel de sincronização do Atlas.
 4. **Desligar novos cadastros.** *Authentication* → *Sign In / Providers* →
    desligue *Allow new users to sign up*. O app também pede login com
    `shouldCreateUser: false`.
@@ -30,7 +31,7 @@ Tudo no painel (`supabase.com/dashboard`).
    - *Redirect URLs*: `https://atlas-seunome.vercel.app/**`, porque o link volta
      para a página de onde o login foi pedido, como `/atlas/politica/m2e1`.
      Para testar em casa, acrescente `http://localhost:5173/**`.
-6. **Código no e-mail de login.** *Authentication* → *Emails* → *Templates* →
+6. **Código no e-mail de login e recuperação.** *Authentication* → *Emails* → *Templates* →
    *Magic Link*:
 
    ```html
@@ -39,7 +40,10 @@ Tudo no painel (`supabase.com/dashboard`).
    <p>Ou digite o código: <b>{{ .Token }}</b></p>
    ```
 
-   Em *Sign In / Providers* → *Email*, confira *Email OTP Length* = 6.
+   Em *Sign In / Providers* → *Email*, confira *Email OTP Length* = 6 e o
+   provedor de e-mail habilitado. A política de senha e a exigência de
+   autenticação recente são definidas no Supabase. Após entrar por código,
+   abra a sincronização e escolha **Definir ou alterar senha**.
 7. **Anotar URL e chave pública.** *Project Settings* → *Data API* (URL) e
    *API Keys*: a **publishable** (`sb_publishable_…`) ou a legada **anon
    public**. Uma das duas basta.
