@@ -2,8 +2,7 @@
 
 São três sistemas, cada um configurado uma vez. A ordem importa só num ponto:
 as URLs de retorno do login (Supabase, passo 5) dependem do endereço que a
-Vercel gera. Até a sincronização ser configurada, o site já funciona em modo só
-local.
+Vercel gera. O login e os materiais só ficam disponíveis depois da configuração.
 
 > A chave **`service_role`** (ou *secret*) do Supabase **nunca** é usada neste
 > projeto: nem no código, nem nas variáveis da Vercel, nem nos secrets do
@@ -83,6 +82,31 @@ Em desenvolvimento, as mesmas variáveis vão em `.env.local` (copie de
 
 ## 4. Roteiro de verificação
 
+### Entrega privada de conteúdo
+
+`api/conteudo.ts` é uma função Node da Vercel. O `vercel.json` inclui
+`private/content/**` somente no pacote dessa função; esses arquivos não entram
+em `dist/`. A função precisa das mesmas `VITE_SUPABASE_URL` e
+`VITE_SUPABASE_ANON_KEY` em runtime e valida o token com Supabase Auth. Use
+apenas a chave pública, sem segredo privilegiado.
+
+Antes de publicar, execute `npm run privacy` depois do build. Não substitua o
+deploy completo por upload isolado de `dist/`, porque ele não contém a API.
+Valide o pacote de funções e, após publicação aprovada, teste a API sem token
+(401), com token falso (401), com sessão permitida (200, no-store) e os caminhos
+antigos (404). O `vite preview` local também executa o handler, mas não comprova
+o empacotamento específico da Vercel.
+
+Os materiais agora exigem conexão. Em modo avião o conteúdo deve ser ocultado
+com aviso de conexão; ao reconectar, a sessão reconhecida pode continuar.
+O service worker novo apaga `atlas-conteudo` ao ativar. Verifique isso num
+aparelho com a versão antiga, sem apagar `atlas-v3` e sua fila.
+
+A proteção deste site não fecha automaticamente um repositório GitHub público
+nem deploys antigos. Audite esses canais antes de declarar os materiais
+privados; alterar visibilidade e retirar publicações antigas exige confirmação
+específica. Cópias já baixadas permanecem fora do controle do site.
+
 Com dois aparelhos (celular e PC):
 
 - [ ] **Login por código no PC:** abra `/entrar`, informe o e-mail e digite o
@@ -94,15 +118,13 @@ Com dois aparelhos (celular e PC):
 - [ ] **Sessão intercalada:** escreva uma anotação no PC e marque um vídeo no
   celular. Os dois aparelhos devem ter as duas coisas.
 - [ ] **Modo avião:**
-  1. No celular, ligue o modo avião, navegue e marque três itens; o indicador
-     mostra "Offline".
-  2. Desligue o modo avião: o indicador passa por "Sincronizando…" até
-     "Sincronizado".
-- [ ] **Sair deste aparelho:** as marcações continuam e o indicador mostra
-  "Não sincronizado".
+  1. No celular, ligue o modo avião: o material é ocultado e aparece aviso de
+     conexão, inclusive depois de recarregar.
+  2. Desligue o modo avião: o acesso volta sem perder o progresso já salvo.
+- [ ] **Sair deste aparelho:** as marcações continuam e a interface volta ao login.
 - [ ] **iPhone na tela inicial:** *Compartilhar* → *Adicionar à Tela de
   Início*. Abra pelo atalho e entre em `/entrar` pelo **código**.
-- [ ] **Visitante:** numa janela anônima, o site não mostra nada de login.
+- [ ] **Visitante:** numa janela anônima, qualquer tela leva ao login; API sem bearer retorna 401 e `/content/areas.json` retorna 404.
 - [ ] **Keepalive:** *Run workflow* fica verde.
 
 ## Problemas comuns

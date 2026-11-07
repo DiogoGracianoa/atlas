@@ -6,7 +6,7 @@ import { axeViolations, memoryStorage, renderApp } from "./harness";
 describe("portal", () => {
   it("lista só as seções que existem: Atlas com link; Dossiês (planejada) não aparece", async () => {
     renderApp("/");
-    expect(screen.getByRole("heading", { level: 1, name: "Atlas" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { level: 1, name: "Atlas" })).toBeTruthy();
     const lista = screen.getByRole("list", { name: "Seções" });
     const atlas = within(lista).getByRole("link", { name: /Atlas de estudos/ });
     expect(atlas.getAttribute("href")).toBe("/atlas");
@@ -14,11 +14,11 @@ describe("portal", () => {
     expect(screen.queryByText(/em breve/i)).toBeNull();
   });
 
-  it("cartão do Atlas mostra progresso quando há total conhecido", () => {
+  it("cartão do Atlas mostra progresso quando há total conhecido", async () => {
     const at = "2026-11-05T10:00:00.000Z";
     const estado = { v: 3, marks: { "politica/m1e1:def": { done: true, at } }, notes: {}, lastAt: null, resetAt: null, totals: { politica: 4 }, size: "m", theme: "auto" };
     renderApp("/", { storage: memoryStorage({ "atlas-v3": JSON.stringify(estado) }) });
-    const bar = screen.getByRole("progressbar", { name: "Progresso no atlas" });
+    const bar = await screen.findByRole("progressbar", { name: "Progresso no atlas" });
     expect(bar.getAttribute("aria-valuenow")).toBe("1");
     expect(bar.getAttribute("aria-valuemax")).toBe("4");
   });

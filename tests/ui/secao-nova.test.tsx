@@ -9,9 +9,9 @@ import { renderApp } from "./harness";
 const registro = [...sections, secaoTeste];
 
 describe("seção nova (KS1)", () => {
-  it("aparece no portal com o cartão próprio", () => {
+  it("aparece no portal com o cartão próprio", async () => {
     renderApp("/", { sections: registro });
-    const lista = screen.getByRole("list", { name: "Seções" });
+    const lista = await screen.findByRole("list", { name: "Seções" });
     const link = within(lista).getByRole("link", { name: /Seção de teste/ });
     expect(link.getAttribute("href")).toBe("/teste");
     expect(within(link).getByText("Conteúdo extra do cartão de teste")).toBeTruthy();
@@ -19,7 +19,7 @@ describe("seção nova (KS1)", () => {
 
   it("a rota da seção responde e usa o armazenamento real", async () => {
     const { user } = renderApp("/", { sections: registro });
-    await user.click(screen.getByRole("link", { name: /Seção de teste/ }));
+    await user.click(await screen.findByRole("link", { name: /Seção de teste/ }));
     expect(await screen.findByRole("heading", { level: 1, name: "Seção de teste" })).toBeTruthy();
     expect(screen.getByText("Tema atual: auto")).toBeTruthy();
   });

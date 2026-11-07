@@ -17,3 +17,4 @@ arquivo novo cita o antigo.
 | [0009](0009-estrategia-de-testes.md) | Vitest, Testing Library, Playwright e axe |
 | [0010](0010-conteudo-em-public.md) | Conteúdo como JSON estático em public/content |
 | [0011](0011-versoes-de-dependencias.md) | Versões exatas e publicadas há pelo menos 14 dias |
+| [0012](0012-acesso-e-conteudo-autenticados.md) | Login obrigatório e entrega autenticada de materiais, com conexão |

@@ -34,7 +34,8 @@ describe("atualização a partir do app antigo (D01)", () => {
     expect(screen.getByRole("link", { name: /Continuar de onde parei/ }).getAttribute("href")).toBe("/atlas/politica/m3e2");
     expect(view.services.store.isDone("politica/m1e1", "def")).toBe(true);
     expect(view.services.store.note("politica/m2e1")).toBe("minha nota");
-    expect(view.services.sync.pending()).toBe(2);
+    // O app agora restaura a sessão antes de montar a tela: a fila já pode
+    // estar em envio quando o mapa aparece. A confirmação abaixo prova envio.
 
     await act(async () => { await view.services.sync.init(); await view.services.sync.whenIdle(); });
     const ups = fake.calls.filter(c => c[0] === "upsert").map(c => (c[1] as { table: string }).table);

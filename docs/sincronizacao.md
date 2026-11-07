@@ -71,8 +71,9 @@ editando ao mesmo tempo.
 | Sincronizado | fila vazia e nada em andamento |
 | Offline | navegador sem rede, ou a última tentativa falhou por rede |
 
-O indicador e o painel de conta só aparecem em aparelho onde alguém já entrou
-(chave `atlas-conta-vista`). Visitantes do site não veem nada de login.
+O indicador e o painel de conta aparecem na interface autenticada. A marca
+`atlas-conta-vista` controla sua visibilidade, mas nunca autoriza acesso.
+Visitantes são encaminhados a `/entrar`, sem conteúdo ou ferramentas de dados.
 
 ## Login
 
@@ -85,6 +86,13 @@ O indicador e o painel de conta só aparecem em aparelho onde alguém já entrou
   inicial e o pedido feito num aparelho com o e-mail aberto em outro.
 - "Sair deste aparelho" (`signOut({ scope: "local" })`) mantém os dados
   locais.
+
+Desde o [ADR-0012](adr/0012-acesso-e-conteudo-autenticados.md), materiais exigem
+conexão e autenticação validada no servidor. A fila e a mescla continuam locais
+primeiro, mas a interface não permite ler/editar material offline. Sair limpa
+o cache de conteúdo da memória e leva ao login, preservando marcações, notas e
+operações pendentes. Uma resposta 401 bloqueia o acesso; indisponibilidade de
+rede/servidor informa erro sem transformar a aplicação em modo público.
 
 ## Limitações conhecidas
 

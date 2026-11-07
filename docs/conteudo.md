@@ -1,11 +1,11 @@
 # Conteúdo: áreas, currículos e manifesto
 
-O conteúdo do atlas é **dado**, não código. Ele fica em `public/content/`, é
-servido pelo site em `/content/...` e é carregado sob demanda: o manifesto ao
+O conteúdo do atlas é **dado**, não código. Ele fica em `private/content/`, é
+entregue pela API autenticada `/api/conteudo?arquivo=content/...` e é carregado sob demanda: o manifesto ao
 abrir o atlas e o currículo de cada área só quando ela é aberta.
 
 ```
-public/content/
+private/content/
   areas.json                 manifesto: única fonte de verdade sobre as áreas
   <área>/curriculum.json     módulos, temas e oficinas da área
 ```
@@ -23,12 +23,12 @@ public/content/
 | ↳ Arquitetura e liderança técnica | `arquitetura-lideranca-tecnica` | disponível (9 módulos, 82 temas: Liderança técnica, Engenharia e arquitetura, IA aplicada e SDD) |
 
 Área ou subtema planejado fica no manifesto, mas não aparece no site (nem no mapa, nem no menu); um endereço direto para ele se comporta como inexistente. Esta tabela é
-conferida contra `public/content/areas.json` pelos testes: se você mudar o status
+conferida contra `private/content/areas.json` pelos testes: se você mudar o status
 de uma área, atualize a linha aqui também.
 
 ## Formato do `curriculum.json`
 
-Cada área tem um `public/content/<área>/curriculum.json` com módulos; cada módulo tem
+Cada área tem um `private/content/<área>/curriculum.json` com módulos; cada módulo tem
 temas (`steps`) e uma oficina (`workshop`). Os IDs são curtos e únicos **dentro
 da área** (`m1e1`, `m1of`); o app compõe o ID completo `area/id`
 (`historia/m1e1`), que é o que vai para o banco. Exemplo mínimo:
@@ -83,7 +83,7 @@ da área** (`m1e1`, `m1of`); o app compõe o ID completo `area/id`
 Toda URL precisa começar com `https://`. Aspas tipográficas (`“ ” ’`) e
 travessões são texto como qualquer outro: escreva como quiser que apareça.
 
-A entrada da área em `public/content/areas.json` guarda o que é próprio da área e não
+A entrada da área em `private/content/areas.json` guarda o que é próprio da área e não
 do conteúdo de cada tema: títulos, textos da capa, o texto-base do prompt de
 "Estude com a IA" e as tradições com rótulo e cor (clara e escura):
 
@@ -170,8 +170,8 @@ uma lista `subtemas`, e cada subtema tem os mesmos campos de uma área comum.
 Nenhuma alteração em código. Se for preciso mexer em `src/` para uma área
 aparecer, é bug.
 
-1. Escreva `public/content/<área>/curriculum.json` no formato acima (a pasta já existe para as áreas planejadas).
-2. Em `public/content/areas.json`, troque a entrada da área para `"status": "disponivel"` e preencha `arquivo`, `titulo`, `subtitulo`, `tituloPdf`, `capa`, `tradicoes` e `promptBase`.
+1. Escreva `private/content/<área>/curriculum.json` no formato acima (a pasta já existe para as áreas planejadas).
+2. Em `private/content/areas.json`, troque a entrada da área para `"status": "disponivel"` e preencha `arquivo`, `titulo`, `subtitulo`, `tituloPdf`, `capa`, `tradicoes` e `promptBase`.
 3. Rode `npm run validate` e corrija tudo o que ele apontar.
 4. Rode `npm run dev`, abra a área no navegador e leia pelo menos um tema e a oficina.
 5. Atualize a linha da área na tabela deste documento, faça commit e push: o CI confere tudo de novo e a Vercel publica.
@@ -208,7 +208,7 @@ e vídeos, anotações, recortes) que serve de insumo para escrever o conteúdo 
   `scripts/check-extract.mjs`, prova que os sete módulos originais de
   política seguem idênticos ao HTML original, e encerra em silêncio se ela não existir.
 - Material que está só em `exemplos/` não existe para o site. Para virar
-  conteúdo, ele precisa ser convertido em `public/content/<área>/curriculum.json`,
+  conteúdo, ele precisa ser convertido em `private/content/<área>/curriculum.json`,
   num passo explícito.
 - O repositório é público: o `curriculum.json` recebe explicação escrita do
   zero, não trechos colados de livros, artigos ou transcrições. Citação, só

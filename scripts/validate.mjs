@@ -3,7 +3,7 @@
 //
 //   node scripts/validate.mjs [--root <diretório>]
 //
-// Para cada área do manifesto (public/content/areas.json) confere: arquivo existe,
+// Para cada área do manifesto (private/content/areas.json) confere: arquivo existe,
 // IDs únicos dentro da área, campos obrigatórios em cada tema, toda URL com
 // https://, todo tema sem `book` com `bridge`, e tradição declarada no
 // manifesto. Também garante que o código do site não referencia exemplos/.
@@ -27,10 +27,10 @@ const errors = [];
 const err = (where, msg) => errors.push(where + ": " + msg);
 const present = (v) => v !== undefined && v !== null && v !== "" && !(Array.isArray(v) && v.length === 0);
 
-// O conteúdo é servido em /content/... a partir de public/; os caminhos do
-// manifesto (campo arquivo) são relativos a public/.
+// Os caminhos lógicos do manifesto são relativos à árvore private/;
+// a entrega HTTP acontece somente pela função autenticada.
 function readJSON(rel, where) {
-  const p = join(ROOT, "public", rel);
+  const p = join(ROOT, "private", rel);
   if (!existsSync(p)) { err(where, "arquivo não encontrado: " + rel); return null; }
   try { return JSON.parse(readFileSync(p, "utf8")); }
   catch (e) { err(where, "JSON inválido em " + rel + " (" + e.message + ")"); return null; }

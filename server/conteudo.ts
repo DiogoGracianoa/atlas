@@ -1,0 +1,52 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
+import { createClient } from "@supabase/supabase-js";
+
+type Config = { url: string; anonKey: string };
+interface Options { config?: Config | null; authFetch?: typeof fetch; root?: string }
+const noStore = {
+  "Cache-Control": "private, no-store",
+  "CDN-Cache-Control": "no-store",
+  "Vercel-CDN-Cache-Control": "no-store",
+  "X-Content-Type-Options": "nosniff",
+};
+const error = (status: number, message: string, extra = {}) =>
+  Response.json({ error: message }, { status, headers: { ...noStore, ...extra } });
+
+/** C01: a autorização remota vem antes de qualquer leitura de material. */
+export async function serveContent(request: Request, {
+  config = process.env.VITE_SUPABASE_URL && process.env.VITE_SUPABASE_ANON_KEY
+    ? { url: process.env.VITE_SUPABASE_URL, anonKey: process.env.VITE_SUPABASE_ANON_KEY } : null,
+  authFetch = fetch,
+  root = process.cwd(),
+}: Options = {}): Promise<Response> {
+  if (request.method !== "GET") return error(405, "Método não permitido.", { Allow: "GET" });
+  const match = /^Bearer ([^\s,]+)$/i.exec(request.headers.get("authorization") ?? "");
+  if (!match) return error(401, "Entre para acessar o conteúdo.");
+  if (!config?.url || !config.anonKey) return error(503, "Conteúdo indisponível agora.");
+  if (match[1] === config.anonKey) return error(401, "Entre para acessar o conteúdo.");
+  try {
+    const client = createClient(config.url, config.anonKey, {
+      auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false },
+      global: { fetch: authFetch },
+    });
+    const { data, error: authError } = await client.auth.getUser(match[1]);
+    if (authError) return error(authError.status && authError.status < 500 ? 401 : 503, "Não foi possível autorizar o acesso.");
+    if (!data.user?.id || data.user.is_anonymous || data.user.aud !== "authenticated") return error(401, "Entre para acessar o conteúdo.");
+  } catch {
+    return error(503, "Conteúdo indisponível agora.");
+  }
+  const params = new URL(request.url).searchParams.getAll("arquivo");
+  const file = params[0] ?? "";
+  if (params.length !== 1 || !/^content\/(areas\.json|[a-z0-9-]+\/curriculum\.json)$/.test(file)) return error(404, "Arquivo não encontrado.");
+  try {
+    const manifest = await readFile(join(root, "private", "content", "areas.json"), "utf8");
+    const areas = (JSON.parse(manifest) as { areas: { arquivo?: string; subtemas?: { arquivo?: string }[] }[] }).areas;
+    const allowed = new Set(["content/areas.json", ...areas.flatMap(a => [a.arquivo, ...(a.subtemas ?? []).map(s => s.arquivo)]).filter(Boolean)]);
+    if (!allowed.has(file)) return error(404, "Arquivo não encontrado.");
+    const body = file === "content/areas.json" ? manifest : await readFile(join(root, "private", file), "utf8");
+    return new Response(body, { headers: { ...noStore, "Content-Type": "application/json; charset=utf-8" } });
+  } catch {
+    return error(500, "Não foi possível carregar o conteúdo.");
+  }
+}

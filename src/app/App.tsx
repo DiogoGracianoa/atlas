@@ -6,6 +6,9 @@ import { ToastProvider } from "../ui/Toast";
 import { ServicesProvider } from "./context";
 import { buildRoutes } from "./routes";
 import type { Services } from "./services";
+import { useAccountTracker } from "./conta";
+
+function SessionTracker() { useAccountTracker(); return null; }
 
 type AppRouter = ReturnType<typeof createBrowserRouter> | ReturnType<typeof createMemoryRouter>;
 
@@ -14,6 +17,7 @@ export function App({ services, sections, router }: { services: Services; sectio
   return (
     <ServicesProvider services={services}>
       <ToastProvider>
+        <SessionTracker />
         <RouterProvider router={r} />
       </ToastProvider>
     </ServicesProvider>

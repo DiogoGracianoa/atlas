@@ -1,15 +1,15 @@
 // Todo diagrama do conteúdo desenha de verdade no navegador (Mermaid real):
 // pega erro de sintaxe que o validate não vê.
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures";
 import { readFileSync } from "node:fs";
 import type { Curriculum, Manifest } from "../src/core/types";
 
-const man = JSON.parse(readFileSync("public/content/areas.json", "utf8")) as Manifest;
+const man = JSON.parse(readFileSync("private/content/areas.json", "utf8")) as Manifest;
 const folhas = man.areas.flatMap(a => (a.subtemas?.length ? a.subtemas.map(s => ({ s, pai: a.slug as string | null })) : [{ s: a, pai: null }]))
   .filter(x => x.s.status === "disponivel" && x.s.arquivo);
 
 const casos = folhas.flatMap(({ s, pai }) => {
-  const cur = JSON.parse(readFileSync("public/" + s.arquivo, "utf8")) as Curriculum;
+  const cur = JSON.parse(readFileSync("private/" + s.arquivo, "utf8")) as Curriculum;
   return cur.modules.flatMap(m => m.steps).filter(t => t.diagram)
     .map(t => ({ path: `/atlas/${pai ? pai + "/" : ""}${s.slug}/${t.id}`, caption: t.diagram!.caption }));
 });

@@ -74,8 +74,8 @@ test("índice compõe IDs com namespace e marcas por item", () => {
 });
 
 test("política real: 43 itens, IDs compostos únicos", () => {
-  const man = JSON.parse(readFileSync(join(REPO, "public", "content", "areas.json"), "utf8")) as Manifest;
-  const cur = JSON.parse(readFileSync(join(REPO, "public", "content", "politica", "curriculum.json"), "utf8")) as Curriculum;
+  const man = JSON.parse(readFileSync(join(REPO, "private", "content", "areas.json"), "utf8")) as Manifest;
+  const cur = JSON.parse(readFileSync(join(REPO, "private", "content", "politica", "curriculum.json"), "utf8")) as Curriculum;
   const a = indexArea(man.areas.find(x => x.slug === "politica") as AreaMeta, cur);
   assert.equal(a.nodes.length, 43);
   assert.equal(new Set(a.nodes.map(n => n.key)).size, 43);
@@ -86,13 +86,13 @@ test("política real: 43 itens, IDs compostos únicos", () => {
 test("política: módulos 1 a 7 seguem byte a byte iguais ao original extraído", () => {
   // O arquivo original terminava em "]}" (fecha a lista de módulos e o objeto).
   // Módulos novos entram antes desse fechamento; o prefixo não muda.
-  const b = readFileSync(join(REPO, "public", "content", "politica", "curriculum.json"));
+  const b = readFileSync(join(REPO, "private", "content", "politica", "curriculum.json"));
   const prefix = b.subarray(0, 198397 - 2);
   assert.equal(createHash("sha256").update(prefix).digest("hex"), "e4abb645cd24faf3413f3022cbfd2fb4daa44f38ef1f0c402f11475940a0994f");
 });
 
 test("política: módulo 8 sobre ajuste fiscal, com ênfase marxista", () => {
-  const cur = JSON.parse(readFileSync(join(REPO, "public", "content", "politica", "curriculum.json"), "utf8")) as Curriculum;
+  const cur = JSON.parse(readFileSync(join(REPO, "private", "content", "politica", "curriculum.json"), "utf8")) as Curriculum;
   const m8 = cur.modules.find(m => m.id === "m8");
   assert.ok(m8, "módulo m8 ausente");
   assert.equal(m8.number, 8);

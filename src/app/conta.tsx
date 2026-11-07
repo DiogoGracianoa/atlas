@@ -98,7 +98,7 @@ export function LoginForm({ onDone }: { onDone?: () => void }) {
   }
   return (
     <form className={s.form} onSubmit={pedir}>
-      <p>Entre com seu e-mail. Enviamos um link e um código de 6 dígitos. Sem login, o progresso fica só neste aparelho.</p>
+      <p>Entre com seu e-mail para acessar o Atlas. Enviamos um link e um código de 6 dígitos.</p>
       <label htmlFor={emailId} className={s.label}>E-mail</label>
       <input id={emailId} className={s.field} type="email" autoComplete="email" inputMode="email"
         placeholder="seu@email.com" value={email} onChange={e => setEmail(e.target.value)} />

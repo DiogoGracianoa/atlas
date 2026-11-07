@@ -1,12 +1,13 @@
 # Atlas
 
-**A self-directed study portal that works offline and syncs across devices.**
+**An authenticated study portal with progress synced across devices.**
 Each topic comes with a long-form explanation, a curated video and a book, plus
 progress tracking, personal notes and an AI tutor prompt. Built with React and
-TypeScript as a static site, with offline-first, per-row sync to Supabase.
+TypeScript, with a Vercel function for private content and local-first,
+per-row progress sync to Supabase. Study materials require a connection.
 
-> **Live demo:** the link is added here after the first Vercel deploy. Visitors
-> use the site with local storage only; sign-in is restricted to the author.
+> **Live demo:** sign-in is required. Both the interface and material downloads
+> require an existing account; public sign-ups remain disabled.
 
 The content and the interface are in Brazilian Portuguese; the code,
 architecture notes and this README are written for a broader audience.
@@ -21,8 +22,8 @@ the same progress on my phone and my laptop, and more study areas than one.
 This repository is the result of turning that file into a small product
 without losing what made it useful:
 
-- **It must never lose a note or a checkmark.** Offline is the normal case on
-  a phone, so every write goes to the device first and syncs later. Conflicts
+- **It must never lose a note or a checkmark.** Every write goes to the device
+  first and syncs later; opening materials requires a connection. Conflicts
   are resolved per row, and when two devices edit the same note, the losing
   version is kept, not discarded.
 - **Content is data.** A new study area is a JSON file plus a manifest entry.
@@ -30,7 +31,7 @@ without losing what made it useful:
 - **The portal grows by sections.** The study atlas is the first section; a
   second one (in-depth dossiers on topics, people and technologies) is
   planned, and adding it touches only its own folder and one registry line.
-- **Free to run.** Static hosting on Vercel, the Supabase free tier, and a
+- **Small deployment.** Vercel hosting and a content function, Supabase, and a
   daily GitHub Action that keeps the database awake.
 
 ## Screenshots
@@ -66,10 +67,10 @@ without losing what made it useful:
   - a persisted outbox queue;
   - last-write-wins enforced by a Postgres trigger;
   - conflicting note versions preserved with a dated marker.
-- **Sign-in** by magic link or 6-digit code. Visitors never see the account UI;
-  the author signs in at an unlisted `/entrar` route.
-- **PWA:** works offline after the first visit, installable, and only the
-  areas you opened are cached.
+- **Required sign-in** by magic link or 6-digit code at `/entrar`. Unauthenticated
+  navigation redirects there; downloads validate the access token on the server.
+- **PWA:** installable, with a cached application shell. Materials require a
+  connection, are never cached by the service worker and are hidden offline.
 - **Backup:** export and import as JSON, merging by timestamp. Also a
   "reset everything" action, propagated to all synced devices, and a printable
   PDF of a whole area.
@@ -94,9 +95,11 @@ flowchart LR
     end
     SW[Service worker<br/>Workbox]
   end
-  Content -->|/content/*.json| Static[(Vercel static)]
+  Content -->|Bearer token| API[Vercel content function]
+  API -->|getUser| Auth[Supabase Auth]
+  API --> Private[(Private JSON files)]
   Sync -->|PostgREST upsert/select| Supabase[(Supabase Postgres<br/>RLS + LWW trigger)]
-  SW -. precache + runtime cache .- Static
+  SW -. shell assets only .- Static[(Vercel static)]
   GH[GitHub Actions<br/>CI + daily keepalive] --> Supabase
 ```
 
@@ -186,9 +189,10 @@ npm ci
 npm run dev          # http://localhost:5173
 ```
 
-Without Supabase settings the app runs in local-only mode. To enable sync,
-copy `.env.example` to `.env.local` and fill in the project URL and the public
-(anon/publishable) key.
+Copy `.env.example` to `.env.local` and fill in the Supabase URL and public
+(anon/publishable) key. These settings are required for sign-in and content;
+there is no anonymous local-only mode. Dev and preview run the same content
+handler as the Vercel function.
 
 | Command | What it does |
 |---|---|
@@ -200,6 +204,7 @@ copy `.env.example` to `.env.local` and fill in the project URL and the public
 | `npm run build` | production build to `dist/` |
 | `npm run size` | initial JS budget (run after build) |
 | `npm run secrets` | secret scan of the repo and `dist/` |
+| `npm run privacy` | verifies that study materials are absent from public build files |
 | `bash tests/db/run.sh` | migration and SQL tests in a disposable PostgreSQL (Docker) |
 
 ## Deployment
@@ -230,7 +235,9 @@ src/
     atlas/         study atlas: layout, pages, components, print view
   ui/              design system: tokens, theme, primitives, Sheet, Toast
   sw.ts            service worker (Workbox)
-public/content/    areas.json manifest + one curriculum.json per area
+private/content/   manifest and curricula, included only in the server function
+api/               Vercel content function entry point
+server/            content authorization and dev/preview HTTP adapter
 supabase/          database migration
 scripts/           content validation, size budget, secret scan, keepalive, icons, screenshots
 tests/             core/ (unit + sync), ui/ (components), scripts/, db/ (SQL in Docker)
@@ -257,6 +264,7 @@ context, alternatives, decision, consequences and a review trigger:
 | [0009](docs/adr/0009-estrategia-de-testes.md) | Vitest + Testing Library + Playwright + axe |
 | [0010](docs/adr/0010-conteudo-em-public.md) | Content served as static JSON from `public/content` |
 | [0011](docs/adr/0011-versoes-de-dependencias.md) | Exact dependency versions, at least two weeks old |
+| [0012](docs/adr/0012-acesso-e-conteudo-autenticados.md) | Required login and authenticated, uncached content delivery; supersedes public materials |
 
 ## Roadmap
 
@@ -264,8 +272,8 @@ context, alternatives, decision, consequences and a review trigger:
   It will have its own specification and reuse the core and design system.
 - **More study areas:** history, economics, philosophy, science and
   technology are already in the manifest as planned.
-- **Optional public sign-in:** the account UI is author-only for now (a
-  product decision, not a technical limit).
+- **Account enrollment:** existing accounts can sign in; opening registration
+  would be a separate product decision.
 
 ## License
 

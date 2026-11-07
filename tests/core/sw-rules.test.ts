@@ -11,9 +11,12 @@ describe("regras de cache (KW1)", () => {
     expect(rule(origin + "/", "navigate")).toBe("app-shell");
   });
 
-  it("conteúdo: rede primeiro, com cache de reserva", () => {
-    expect(rule(origin + "/content/areas.json")).toBe("conteudo");
-    expect(rule(origin + "/content/politica/curriculum.json")).toBe("conteudo");
+  it("conteúdo e API nunca usam cache, inclusive em navegação direta", () => {
+    expect(rule(origin + "/content/areas.json")).toBe("rede");
+    expect(rule(origin + "/content/politica/curriculum.json")).toBe("rede");
+    expect(rule(origin + "/api/conteudo?arquivo=content%2Fareas.json")).toBe("rede");
+    expect(rule(origin + "/api/conteudo", "navigate")).toBe("rede");
+    expect(rule(origin + "/content/areas.json", "navigate")).toBe("rede");
   });
 
   it("Supabase e qualquer outro domínio nunca vão para o cache", () => {
@@ -32,5 +35,6 @@ describe("regras de cache (KW1)", () => {
 
   it("o cache do service worker antigo é apagado", () => {
     expect(OLD_CACHES).toContain("atlas-v1");
+    expect(OLD_CACHES).toContain("atlas-conteudo");
   });
 });

@@ -1,8 +1,9 @@
 # Arquitetura
 
-O Atlas é um **site estático** (React + TypeScript, build com Vite) que conversa
-direto com o **Supabase** pelo navegador. Não há servidor próprio nem funções
-serverless: o que protege os dados é o Row Level Security do Postgres.
+O Atlas usa React + TypeScript com Vite e uma **função Node na Vercel** para
+entregar os materiais. A função valida o bearer no Supabase Auth antes de ler
+os JSONs de `private/content/`. O navegador conversa diretamente com Supabase
+para progresso e anotações, protegidos pelo Row Level Security do Postgres.
 
 ## Camadas
 
@@ -76,7 +77,7 @@ vinda de outro aparelho é aplicada quando a pessoa sai do campo.
 | `/atlas` | mapa de áreas |
 | `/atlas/:area` | capa da área |
 | `/atlas/:area/:id` | tema ou oficina |
-| `/entrar` | login do autor (sem link no site) |
+| `/entrar` | login público obrigatório para acessar as demais telas |
 
 - Área planejada ou desconhecida leva a `/atlas` com aviso; item desconhecido
   leva à capa.
@@ -90,11 +91,22 @@ O service worker (`src/sw.ts`, publicado em `/sw.js`):
 
 - guarda no precache os arquivos do build, que têm hash no nome;
 - serve qualquer navegação a partir do `index.html` guardado;
-- busca `/content/*` com rede primeiro (3 s) e cache de reserva, de modo que só
-  as áreas abertas ficam guardadas;
+- nunca guarda `/api/*` ou materiais; remove o cache legado `atlas-conteudo`;
 - nunca guarda nada do Supabase;
 - na ativação, apaga o cache do service worker anterior (`atlas-v1`)
   ([ADR-007](adr/0007-offline-com-workbox.md)).
+
+O comportamento atual está no [ADR-0012](adr/0012-acesso-e-conteudo-autenticados.md):
+`/entrar` é público e não monta ferramentas de dados. `RequireAuth` só monta
+portal e seções depois de reconhecer a sessão; durante restauração mostra
+verificação, e sem sessão redireciona para o login. Sem rede, o material é
+ocultado. A função valida credenciais para cada download e responde no-store.
+O cache em memória é descartado ao mudar/sair da conta, inclusive respostas
+tardias. A atualização não apaga o progresso local.
+
+`npm run dev` e `npm run preview` usam o mesmo handler via middleware Vite;
+a pasta privada é negada pelo servidor de desenvolvimento. Em produção só a
+função recebe esses arquivos pelo `functions.includeFiles` da Vercel.
 
 ## Banco
 

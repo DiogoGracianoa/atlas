@@ -43,7 +43,7 @@ describe("vercel.json", () => {
     }
     expect(headerFor("/assets/index-abc123.js", "Cache-Control")).toBe("public, max-age=31536000, immutable");
     for (const p of ["/content/areas.json", "/content/politica/curriculum.json"]) {
-      expect(headerFor(p, "Cache-Control"), p).toBe("public, max-age=300, must-revalidate");
+      expect(headerFor(p, "Cache-Control"), p).toBe("private, no-store");
     }
     expect(headerFor("/qualquer", "X-Content-Type-Options")).toBe("nosniff");
   });

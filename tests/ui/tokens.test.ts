@@ -21,7 +21,7 @@ describe("tokens de cor", () => {
   }
 
   it("cores de tradição do manifesto passam AA para texto nos dois temas", () => {
-    const man = JSON.parse(readFileSync(join(process.cwd(), "public", "content", "areas.json"), "utf8")) as Manifest;
+    const man = JSON.parse(readFileSync(join(process.cwd(), "private", "content", "areas.json"), "utf8")) as Manifest;
     const falhas: string[] = [];
     for (const area of man.areas) {
       for (const [k, t] of Object.entries(area.tradicoes ?? {})) {

@@ -36,7 +36,7 @@ describe("rotas do atlas (KR1)", () => {
 
   it("área sem conexão na primeira abertura volta ao mapa com o aviso de conexão", async () => {
     const offline: FetchJSON = async (url) => {
-      if (url.endsWith("areas.json")) return JSON.parse((await import("node:fs")).readFileSync("public/content/areas.json", "utf8"));
+      if (url.endsWith("areas.json")) return JSON.parse((await import("node:fs")).readFileSync("private/content/areas.json", "utf8"));
       throw new Error("Failed to fetch");
     };
     const { router } = renderApp("/atlas/politica", { fetchJSON: offline });

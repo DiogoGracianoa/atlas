@@ -7,7 +7,7 @@ export function fakeSupabase({ session = null as Session | null } = {}) {
   const listeners: ((ev: string, s: Session | null) => void)[] = [];
   const calls: [string, unknown][] = [];
   const tables: Record<string, Record<string, unknown>[]> = { progress: [], notes: [], prefs: [] };
-  const emit = (ev: string) => listeners.forEach(l => l(ev, current));
+  const emit = (ev: string, session = current) => { current = session; listeners.forEach(l => l(ev, current)); };
   const ok = (data: unknown): QueryResult => ({ data, error: null, status: 200 });
 
   const client: SupabaseLike = {
@@ -18,7 +18,7 @@ export function fakeSupabase({ session = null as Session | null } = {}) {
       verifyOtp: async (a) => {
         calls.push(["verify", a]);
         if (a.token !== "123456") return { data: {}, error: { message: "Token has expired or is invalid", status: 403 } };
-        current = { user: { id: "u1", email: a.email } };
+        current = { access_token: "test-token", user: { id: "u1", email: a.email } };
         emit("SIGNED_IN");
         return { data: { session: current }, error: null };
       },
@@ -38,7 +38,7 @@ export function fakeSupabase({ session = null as Session | null } = {}) {
   };
   let loads = 0;
   const loadSupabase = async (): Promise<SupabaseModule> => { loads++; return { createClient: () => client }; };
-  return { client, calls, tables, loadSupabase, loads: () => loads };
+  return { client, calls, tables, loadSupabase, emit, loads: () => loads };
 }
 
 export const CONFIG = { url: "https://proj.supabase.co", anonKey: "chave-publica" };

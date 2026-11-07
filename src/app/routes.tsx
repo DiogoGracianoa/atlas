@@ -7,22 +7,25 @@ import { Entrar } from "./pages/Entrar";
 import { Erro } from "./pages/Erro";
 import { Portal } from "./pages/Portal";
 import { RedirectWithToast } from "./RedirectWithToast";
+import { RequireAuth } from "./RequireAuth";
 
 export function buildRoutes(sections: Section[]): RouteObject[] {
   const sectionRoutes: RouteObject[] = sections
     .filter(s => s.status === "disponivel" && s.routes)
     .map(s => ({ path: s.slug, children: s.routes }));
   return [
+    { path: "/entrar", element: <Entrar />, errorElement: <Erro /> },
     {
-      path: "/",
-      element: <Layout />,
+      element: <RequireAuth />,
       errorElement: <Erro />,
       children: [
-        { index: true, element: <Portal sections={sections} /> },
-        // login do autor, sem link no site (RN18)
-        { path: "entrar", element: <Entrar /> },
-        ...sectionRoutes,
-        { path: "*", element: <RedirectWithToast to="/" message="Página não encontrada." /> },
+        {
+          path: "/", element: <Layout />, children: [
+            { index: true, element: <Portal sections={sections} /> },
+            ...sectionRoutes,
+            { path: "*", element: <RedirectWithToast to="/" message="Página não encontrada." /> },
+          ],
+        },
       ],
     },
   ];

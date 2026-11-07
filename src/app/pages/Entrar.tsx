@@ -1,4 +1,4 @@
-// /entrar: login do autor (RN18). Não há link para cá em nenhuma página.
+// Entrada pública isolada das ferramentas e do conteúdo autenticado.
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { useSyncState } from "../context";
@@ -12,11 +12,12 @@ export function Entrar() {
   // Entrou (pelo código aqui ou pelo link do e-mail): vai para o atlas.
   useEffect(() => { if (sync.user) void navigate("/atlas", { replace: true }); }, [sync.user, navigate]);
   return (
-    <div className={s.page}>
+    <main className={s.page}>
       <h1>Entrar</h1>
-      {sync.available || sync.reason !== "sem-config"
+      {sync.authStatus === "loading" ? <p role="status">Verificando sessão…</p> : sync.reason === "sem-modulo"
+        ? <p>Não foi possível verificar o acesso agora. Confira a conexão e tente novamente.</p> : sync.available || sync.reason !== "sem-config"
         ? <LoginForm />
         : <p>A sincronização ainda não foi configurada neste site.</p>}
-    </div>
+    </main>
   );
 }

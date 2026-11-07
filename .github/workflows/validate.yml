@@ -34,6 +34,8 @@ jobs:
         run: npm run size
       - name: Busca de segredos no repositório e no build (RN17)
         run: npm run secrets
+      - name: Materiais fora da distribuição pública
+        run: npm run privacy
 
   e2e:
     runs-on: ubuntu-latest

@@ -1,7 +1,8 @@
 // Cenários U04 e U02 com renderização real (RN12, AC16): sem rolagem lateral
 // a 320 px no tamanho GG, campos com 16 px ou mais e axe-core com contraste
 // real nos temas claro e escuro.
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test } from "./fixtures";
+import type { Page } from "@playwright/test";
 import { createRequire } from "node:module";
 
 const require = createRequire(import.meta.url);
@@ -16,6 +17,7 @@ async function prefs(page: Page, theme: "light" | "dark", size: "m" | "xl") {
 }
 
 async function abrir(page: Page, path: string) {
+  if (path === "/entrar") await page.addInitScript(() => localStorage.removeItem("sb-127-auth-token"));
   await page.goto(path);
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   await page.evaluate(() => document.fonts.ready);

@@ -8,8 +8,8 @@ import type { Curriculum, Manifest } from "../../src/core/types";
 import { REPO } from "./helpers";
 
 const SLUG = "arquitetura-lideranca-tecnica";
-const man = JSON.parse(readFileSync(join(REPO, "public/content/areas.json"), "utf8")) as Manifest;
-const cur = JSON.parse(readFileSync(join(REPO, "public/content", SLUG, "curriculum.json"), "utf8")) as Curriculum;
+const man = JSON.parse(readFileSync(join(REPO, "private/content/areas.json"), "utf8")) as Manifest;
+const cur = JSON.parse(readFileSync(join(REPO, "private/content", SLUG, "curriculum.json"), "utf8")) as Curriculum;
 const temas = cur.modules.flatMap(m => m.steps);
 const URL_OK = /^https:\/\/(books\.google\.com\/books\?q=|www\.youtube\.com\/results\?search_query=)\S+$/;
 

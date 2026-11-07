@@ -1,10 +1,17 @@
 /// <reference types="vitest/config" />
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
+import { privateContent } from "./server/vite.ts";
 
-export default defineConfig({
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), "VITE_");
+  const config = env.VITE_SUPABASE_URL && env.VITE_SUPABASE_ANON_KEY
+    ? { url: env.VITE_SUPABASE_URL, anonKey: env.VITE_SUPABASE_ANON_KEY } : null;
+  return {
+  server: { fs: { deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "**/private/**"] } },
   plugins: [
+    privateContent(config),
     react(),
     // Offline (ADR-007): service worker próprio em src/sw.ts, publicado em /sw.js.
     VitePWA({
@@ -77,4 +84,5 @@ export default defineConfig({
       },
     ],
   },
+};
 });

@@ -14,15 +14,15 @@ async function boot(view: ReturnType<typeof renderApp>) {
 afterEach(() => { window.history.replaceState(null, "", "/"); });
 
 describe("visitante (A06, RN18)", () => {
-  it("não vê indicador, painel nem texto de login em nenhuma página", async () => {
+  it("é redirecionado ao login sem receber o conteúdo", async () => {
     const fake = fakeSupabase();
     const view = renderApp("/atlas/politica", { config: CONFIG, syncOptions: { loadSupabase: fake.loadSupabase } });
     await boot(view);
-    await screen.findByRole("heading", { level: 1, name: "Atlas de política, economia e marxismo" });
+    await screen.findByRole("heading", { level: 1, name: "Entrar" });
     expect(screen.queryByRole("button", { name: /Não sincronizado/ })).toBeNull();
     expect(document.querySelector('a[href="/entrar"]')).toBeNull();
-    expect(screen.queryByText(/sincronizad/i)).toBeNull();
-    expect(screen.getByText(/ficam salvos neste aparelho\./)).toBeTruthy();
+    expect(view.router.state.location.pathname).toBe("/entrar");
+    expect(screen.queryByText("Atlas de política, economia e marxismo")).toBeNull();
   });
 });
 
@@ -49,23 +49,22 @@ describe("/entrar (A07, A03)", () => {
 });
 
 describe("autor com o aparelho marcado (A01, A02, A04, A08)", () => {
-  it("sem sessão: indicador 'Não sincronizado' aparece (A08)", async () => {
+  it("marca de aparelho não autoriza acesso sem sessão", async () => {
     const fake = fakeSupabase();
     const view = renderApp("/atlas", { storage: seenStorage(), config: CONFIG, syncOptions: { loadSupabase: fake.loadSupabase } });
     await boot(view);
-    expect(await screen.findByRole("button", { name: /Não sincronizado/ })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "Entrar" })).toBeTruthy();
+    expect(view.router.state.location.pathname).toBe("/entrar");
   });
 
-  it("pedir login pelo painel volta para a página atual (A01)", async () => {
-    window.history.replaceState(null, "", "/atlas/politica/m2e1");
+  it("sem sessão, pedir login usa a tela de entrada pública", async () => {
+    window.history.replaceState(null, "", "/entrar");
     const fake = fakeSupabase();
     const view = renderApp("/atlas/politica/m2e1", { storage: seenStorage(), config: CONFIG, syncOptions: { loadSupabase: fake.loadSupabase } });
     await boot(view);
-    await view.user.click(await screen.findByRole("button", { name: /Não sincronizado/ }));
-    const painel = screen.getByRole("dialog", { name: "Sincronizar entre aparelhos" });
-    await view.user.type(within(painel).getByLabelText("E-mail"), "eu@exemplo.com");
-    await view.user.click(within(painel).getByRole("button", { name: "Enviar link e código" }));
-    expect(fake.calls[0]).toEqual(["otp", { email: "eu@exemplo.com", options: { shouldCreateUser: false, emailRedirectTo: "http://localhost:3000/atlas/politica/m2e1" } }]);
+    await view.user.type(await screen.findByLabelText("E-mail"), "eu@exemplo.com");
+    await view.user.click(screen.getByRole("button", { name: "Enviar link e código" }));
+    expect(fake.calls[0]).toEqual(["otp", { email: "eu@exemplo.com", options: { shouldCreateUser: false, emailRedirectTo: "http://localhost:3000/entrar" } }]);
   });
 
   it("retorno pelo link remove ?code e mantém a página (A02)", async () => {
@@ -90,7 +89,7 @@ describe("autor com o aparelho marcado (A01, A02, A04, A08)", () => {
     await user.click(within(painel).getByRole("button", { name: "Sair deste aparelho" }));
     expect(fake.calls.at(-1)).toEqual(["signOut", { scope: "local" }]);
     expect(services.store.isDone("politica/m1e1", "def")).toBe(true);
-    expect(await screen.findByRole("button", { name: /Não sincronizado/ })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "Entrar" })).toBeTruthy();
     expect(await screen.findByText("Você saiu. O progresso continua neste aparelho.")).toBeTruthy();
   });
 });

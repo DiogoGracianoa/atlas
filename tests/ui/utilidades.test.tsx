@@ -10,7 +10,7 @@ const ferramentas = () => screen.getAllByText("Seu progresso")[0]!.parentElement
 describe("ajustes de leitura (P14)", () => {
   it("tema e tamanho mudam o documento e ficam só neste aparelho", async () => {
     const { user, storage } = renderApp("/");
-    await user.click(screen.getByRole("button", { name: "Ajustes de leitura" }));
+    await user.click(await screen.findByRole("button", { name: "Ajustes de leitura" }));
     const painel = screen.getByRole("dialog", { name: "Ajustes de leitura" });
     await user.click(within(painel).getByRole("button", { name: "Escuro" }));
     await user.click(within(painel).getByRole("button", { name: "Texto muito grande" }));
@@ -18,7 +18,7 @@ describe("ajustes de leitura (P14)", () => {
     expect(document.documentElement.getAttribute("data-size")).toBe("xl");
     const salvo = JSON.parse(storage.getItem("atlas-v3")!);
     expect([salvo.theme, salvo.size]).toEqual(["dark", "xl"]);
-    expect(storage.getItem("atlas-v3-queue")).toBeNull();
+    expect(Object.keys(JSON.parse(storage.getItem("atlas-v3-queue") ?? "{}"))).toHaveLength(0);
     await user.click(within(painel).getByRole("button", { name: "Auto" }));
     expect(document.documentElement.hasAttribute("data-theme")).toBe(false);
   });
@@ -72,7 +72,7 @@ describe("zerar (P12)", () => {
     await screen.findByRole("heading", { level: 1 });
     await user.click(within(ferramentas()).getByRole("button", { name: "Zerar" }));
     const dialogo = screen.getByRole("dialog", { name: "Zerar o progresso" });
-    expect(dialogo.textContent).toContain("Apagar todas as marcações e anotações de todas as áreas?");
+    expect(dialogo.textContent).toContain("Apagar todas as marcações e anotações");
     await user.click(within(dialogo).getByRole("button", { name: "Zerar" }));
     expect(services.store.isDone("politica/m1e1", "def")).toBe(false);
     expect(services.store.state.resetAt).toBeTruthy();

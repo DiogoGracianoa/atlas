@@ -1,5 +1,5 @@
 // Cenários R01, R03, R04 e R08 contra o build de produção.
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures";
 
 const paginas: [string, string][] = [
   ["/", "Atlas"],
@@ -33,13 +33,13 @@ const antigos: [string, string][] = [
 ];
 
 for (const [antigo, novo] of antigos) {
-  test(`link antigo ${antigo} vira ${novo} sem entrada extra no histórico (R03, AC07)`, async ({ browser }) => {
-    const controle = await browser.newPage();
+  test(`link antigo ${antigo} vira ${novo} sem entrada extra no histórico (R03, AC07)`, async ({ context }) => {
+    const controle = await context.newPage();
     await controle.goto(novo);
     const esperado = await controle.evaluate(() => history.length);
     await controle.close();
 
-    const page = await browser.newPage();
+    const page = await context.newPage();
     await page.goto(antigo);
     await expect(page).toHaveURL(new RegExp(novo.replace(/\//g, "\\/") + "$"));
     expect(await page.evaluate(() => history.length)).toBe(esperado);

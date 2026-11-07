@@ -6,6 +6,7 @@ import type { AreaIndex, AreaMeta, Curriculum, ItemNode, Manifest, MarkInfo, Ste
 export type FetchJSON = (url: string) => Promise<unknown>;
 
 export interface ContentApi {
+  clear(): void;
   loadManifest(): Promise<Manifest>;
   /** Áreas de topo do manifesto (agrupadores incluídos). */
   areas(): AreaMeta[];
@@ -23,12 +24,15 @@ export interface ContentApi {
 
 export function createContent({ fetchJSON, manifestUrl = "content/areas.json" }: { fetchJSON: FetchJSON; manifestUrl?: string }): ContentApi {
   let manifest: Manifest | null = null;
+  let generation = 0;
   const cache = new Map<string, Promise<AreaIndex>>();
   const done = new Set<string>();
 
   async function loadManifest(): Promise<Manifest> {
     if (!manifest) {
+      const started = generation;
       const m = (await fetchJSON(manifestUrl)) as { areas?: unknown } | null;
+      if (started !== generation) throw new Error("A sessão mudou.");
       const list: unknown[] = m && Array.isArray(m.areas) ? m.areas : [];
       manifest = { areas: list.filter((a): a is AreaMeta => !!a && typeof (a as AreaMeta).slug === "string") };
     }
@@ -49,19 +53,22 @@ export function createContent({ fetchJSON, manifestUrl = "content/areas.json" }:
     if (!isAvailable(slug)) return Promise.reject(new Error("Área indisponível: " + slug));
     let p = cache.get(slug);
     if (!p) {
+      const started = generation;
       const meta = area(slug) as AreaMeta;
       p = fetchJSON(meta.arquivo as string).then(data => {
+        if (started !== generation) throw new Error("A sessão mudou.");
         const a = indexArea(meta, data as Curriculum);
         done.add(slug);
         return a;
       });
-      p.catch(() => cache.delete(slug));
+      p.catch(() => { if (started === generation) cache.delete(slug); });
       cache.set(slug, p);
     }
     return p;
   }
 
-  return { loadManifest, areas, leaves, area, parentOf, isGroup, isAvailable, loadArea, isLoaded: (slug) => done.has(slug) };
+  function clear() { generation++; manifest = null; cache.clear(); done.clear(); }
+  return { clear, loadManifest, areas, leaves, area, parentOf, isGroup, isAvailable, loadArea, isLoaded: (slug) => done.has(slug) };
 }
 
 export function marksOf(n: ItemNode): MarkInfo[] {

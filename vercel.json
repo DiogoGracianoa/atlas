@@ -4,9 +4,12 @@
   "installCommand": "npm ci",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "functions": {
+    "api/conteudo.ts": { "includeFiles": "private/content/**" }
+  },
   "rewrites": [
     {
-      "source": "/((?!assets/|content/|icons/).*)",
+      "source": "/((?!api/|private/|assets/|content/|icons/).*)",
       "destination": "/index.html"
     }
   ],
@@ -42,9 +45,13 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=300, must-revalidate"
+          "value": "private, no-store"
         }
       ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "private, no-store" }]
     },
     {
       "source": "/icons/(.*)",

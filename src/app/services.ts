@@ -5,6 +5,7 @@ import { createStore, type Store } from "../core/store";
 import { createSync, type Sync, type SyncOptions } from "../core/sync";
 import type { StorageLike } from "../core/types";
 import { supabaseConfig } from "../config";
+import { createAuthenticatedFetch } from "../core/content-auth";
 
 export interface Services {
   store: Store;
@@ -14,16 +15,9 @@ export interface Services {
   storage: StorageLike;
 }
 
-/** Busca JSON relativo à raiz do site (as rotas limpas não podem afetar o caminho). */
-export const fetchFromSite: FetchJSON = async (url) => {
-  const res = await fetch(import.meta.env.BASE_URL + url.replace(/^\//, ""), { cache: "no-cache" });
-  if (!res.ok) throw new Error("HTTP " + res.status + " em " + url);
-  return res.json();
-};
-
 export function createServices({
   storage = globalThis.localStorage,
-  fetchJSON = fetchFromSite,
+  fetchJSON,
   config = supabaseConfig(),
   syncOptions = {},
 }: {
@@ -33,7 +27,13 @@ export function createServices({
   syncOptions?: Partial<SyncOptions>;
 } = {}): Services {
   const store = createStore({ storage });
-  const content = createContent({ fetchJSON });
   const sync = createSync({ config, store, storage, ...syncOptions });
+  const content = createContent({ fetchJSON: fetchJSON ?? createAuthenticatedFetch(sync) });
+  let identity = sync.state.user?.id ?? null;
+  sync.subscribe(state => {
+    const next = state.user?.id ?? null;
+    if (next !== identity) content.clear();
+    identity = next;
+  });
   return { store, content, sync, storage };
 }

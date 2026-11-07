@@ -1,7 +1,7 @@
 // Camada de sincronização com o Supabase (offline-first).
 //
-// - O app funciona sem ela: o supabase-js é importado sob demanda (chunk à
-//   parte) e qualquer falha (sem configuração, sem rede) deixa o app local.
+// - O supabase-js é importado sob demanda (chunk à parte). O store preserva
+//   os dados locais em falhas; o acesso às telas depende da sessão (ADR-0012).
 // - Escrita local primeiro: o store grava no localStorage e avisa; aqui cada
 //   mudança vira uma operação por linha numa fila persistida (RN07, RN08, RN11).
 // - Marcações sobem na hora; anotações e última posição com debounce (RN09).
@@ -21,6 +21,7 @@ const CONFLICT: Record<Table, string> = { progress: "user_id,item_id,mark", note
 /* ---------- fronteira com o supabase-js (só o que o app usa) ---------- */
 
 export interface Session {
+  access_token?: string;
   user: { id: string; email?: string | null };
 }
 export interface ErrorLike {
@@ -75,6 +76,7 @@ export interface Timers {
 export type SyncStatus = "nao-sincronizado" | "offline" | "sincronizando" | "sincronizado";
 
 export interface SyncState {
+  authStatus: "loading" | "authenticated" | "anonymous" | "error";
   status: SyncStatus;
   /** Cliente Supabase carregado. */
   available: boolean;
@@ -92,6 +94,8 @@ export interface Sync {
   requestCode(email: string): Promise<AuthResult>;
   verifyCode(email: string, code: string): Promise<AuthResult>;
   signOut(): Promise<void>;
+  getAccessToken(): Promise<string | null>;
+  rejectSession(): void;
   pull(opts?: { force?: boolean }): Promise<void>;
   flush(): Promise<void>;
   whenIdle(): Promise<void>;
@@ -136,8 +140,10 @@ export function createSync({
   let client: SupabaseLike | null = null;
   let loading: Promise<void> | null = null;
   let lastUserId: string | null = null;
+  let sessionRejected = false;
   const subs = new Set<(s: SyncState) => void>();
   const state: SyncState = {
+    authStatus: "loading",
     status: "nao-sincronizado",
     available: false,
     reason: null,
@@ -170,7 +176,11 @@ export function createSync({
   const canTalk = (): boolean => !!(client && state.user && online());
 
   function onSession(session: Session | null | undefined) {
+    // Um evento de recuperação do SDK não pode reautorizar credencial que a
+    // API recusou. O login explícito por código (ou novo callback) a substitui.
+    if (session && sessionRejected) return;
     state.user = session && session.user ? { id: session.user.id, email: session.user.email || "" } : null;
+    state.authStatus = state.user ? "authenticated" : "anonymous";
     const id = state.user ? state.user.id : null;
     const changed = id !== lastUserId;
     lastUserId = id;
@@ -194,7 +204,7 @@ export function createSync({
 
   async function connect(): Promise<boolean> {
     if (client) return true;
-    if (!configured() || !config) { state.reason = "sem-config"; return false; }
+    if (!configured() || !config) { state.reason = "sem-config"; state.authStatus = "error"; return false; }
     if (!loading) {
       const { url, anonKey } = config as { url: string; anonKey: string };
       loading = (async () => {
@@ -213,6 +223,7 @@ export function createSync({
         loading = null;
         state.available = false;
         state.reason = "sem-modulo";
+        state.authStatus = "error";
         console.warn("Sincronização indisponível:", err instanceof Error ? err.message : err);
       });
     }
@@ -416,6 +427,7 @@ export function createSync({
     const { data, error } = await client.auth.verifyOtp({ email, token, type: "email" });
     if (error) return { ok: false, error: "invalido" };
     state.linkError = null;
+    sessionRejected = false;
     onSession(data && data.session);
     return { ok: true };
   }
@@ -425,9 +437,22 @@ export function createSync({
     onSession(null);
   }
 
+  async function getAccessToken(): Promise<string | null> {
+    if (state.authStatus !== "authenticated" || !client) return null;
+    const { data } = await client.auth.getSession();
+    return data?.session?.access_token ?? null;
+  }
+
+  function rejectSession() {
+    sessionRejected = true;
+    onSession(null);
+    // Invalida também a persistência do SDK, sem esperar rede para esconder UI.
+    if (client) void Promise.resolve(client.auth.signOut({ scope: "local" })).catch(() => {});
+  }
+
   return {
     state,
-    init, requestCode, verifyCode, signOut, pull, flush, whenIdle,
+    init, requestCode, verifyCode, signOut, getAccessToken, rejectSession, pull, flush, whenIdle,
     pending: () => (queue ? queue.size() : 0),
     subscribe: (fn) => { subs.add(fn); return () => { subs.delete(fn); }; },
     get client() { return client; },

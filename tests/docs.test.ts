@@ -71,7 +71,7 @@ describe("docs/ em português", () => {
 
 describe("docs/conteudo.md (guia de conteúdo)", () => {
   const md = read("docs/conteudo.md");
-  const man = JSON.parse(read("public/content/areas.json")) as { areas: { slug: string; status: string }[] };
+  const man = JSON.parse(read("private/content/areas.json")) as { areas: { slug: string; status: string }[] };
 
   it("tabela de áreas cobre o manifesto, com o status certo", () => {
     for (const a of man.areas) {

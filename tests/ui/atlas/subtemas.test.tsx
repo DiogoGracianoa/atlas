@@ -8,7 +8,7 @@ import type { Manifest } from "../../../src/core/types";
 import { curriculum, manifest as manifestoTeste } from "../../core/helpers";
 import { memoryStorage, renderApp } from "../harness";
 
-const real = JSON.parse(readFileSync("public/content/areas.json", "utf8")) as Manifest;
+const real = JSON.parse(readFileSync("private/content/areas.json", "utf8")) as Manifest;
 const politica = real.areas.find(a => a.slug === "politica")!;
 const base = manifestoTeste().areas[0]!;
 
@@ -37,7 +37,7 @@ function fetcher(man: Manifest, files: Record<string, unknown> = {}): FetchJSON 
     if (url === "content/areas.json") return structuredClone(man);
     if (url === "content/arq-lideranca/curriculum.json") return structuredClone(curSub);
     if (url in files) return structuredClone(files[url]);
-    if (url.startsWith("content/")) return JSON.parse(readFileSync("public/" + url, "utf8"));
+    if (url.startsWith("content/")) return JSON.parse(readFileSync("private/" + url, "utf8"));
     throw new Error("404 " + url);
   };
 }

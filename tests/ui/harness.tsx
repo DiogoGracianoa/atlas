@@ -1,5 +1,5 @@
 // Monta o app real (shell, armazenamento e sincronização de verdade) com
-// roteador em memória, armazenamento em memória e conteúdo lido de public/.
+// roteador em memória, armazenamento em memória e conteúdo lido de private/.
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { render } from "@testing-library/react";
@@ -13,6 +13,7 @@ import type { FetchJSON } from "../../src/core/content";
 import type { SyncOptions } from "../../src/core/sync";
 import { sections as defaultSections } from "../../src/sections/registry";
 import type { Section } from "../../src/sections/types";
+import { CONFIG, fakeSupabase } from "./fake-supabase";
 
 export function memoryStorage(initial: Record<string, string> = {}) {
   const m = new Map<string, string>(Object.entries(initial));
@@ -24,9 +25,9 @@ export function memoryStorage(initial: Record<string, string> = {}) {
   };
 }
 
-/** Lê arquivos de public/ (como o site serve em /content/...). */
+/** Lê arquivos privados, substituindo somente o transporte nos testes de UI. */
 export const diskFetch: FetchJSON = async (url) =>
-  JSON.parse(readFileSync(join(process.cwd(), "public", url.replace(/^\//, "")), "utf8"));
+  JSON.parse(readFileSync(join(process.cwd(), "private", url.replace(/^\//, "")), "utf8"));
 
 export function renderApp(path: string, opts: {
   sections?: Section[];
@@ -37,15 +38,20 @@ export function renderApp(path: string, opts: {
 } = {}) {
   const sections = opts.sections ?? defaultSections;
   const storage = opts.storage ?? memoryStorage();
+  // Casos de domínio montam uma sessão de teste. Casos de acesso fornecem
+  // explicitamente config/loader para exercitar a restauração ou ausência dela.
+  const defaultAuth = opts.config === undefined && !opts.syncOptions?.loadSupabase
+    ? fakeSupabase({ session: { access_token: "test-session", user: { id: "fixture-user", email: "fixture@example.test" } } }) : null;
   const services = createServices({
     storage,
     fetchJSON: opts.fetchJSON ?? diskFetch,
-    config: opts.config ?? null,
-    syncOptions: opts.syncOptions,
+    config: opts.config === undefined ? CONFIG : opts.config,
+    syncOptions: defaultAuth ? { loadSupabase: defaultAuth.loadSupabase, ...opts.syncOptions } : opts.syncOptions,
   });
   const router = createMemoryRouter(buildRoutes(sections), { initialEntries: [path] });
   const user = userEvent.setup();
   const view = render(<App services={services} sections={sections} router={router} />);
+  void services.sync.init();
   return { ...view, router, services, storage, user };
 }
 

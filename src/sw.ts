@@ -3,9 +3,9 @@
 // do service worker antigo, para substituí-lo nos aparelhos já em uso.
 import { cleanupOutdatedCaches, createHandlerBoundToURL, precacheAndRoute } from "workbox-precaching";
 import { NavigationRoute, registerRoute } from "workbox-routing";
-import { CacheFirst, NetworkFirst } from "workbox-strategies";
+import { CacheFirst } from "workbox-strategies";
 import { clientsClaim } from "workbox-core";
-import { cacheRule, CONTENT_CACHE, DIAGRAM_CACHE, OLD_CACHES } from "./sw-rules";
+import { cacheRule, DIAGRAM_CACHE, OLD_CACHES } from "./sw-rules";
 
 declare const self: ServiceWorkerGlobalScope & { __WB_MANIFEST: (string | { url: string; revision: string | null })[] };
 
@@ -18,14 +18,10 @@ precacheAndRoute(self.__WB_MANIFEST);
 
 // Qualquer rota do app abre offline a partir do index.html guardado.
 registerRoute(new NavigationRoute(createHandlerBoundToURL("index.html"), {
-  allowlist: [/^\/(?!content\/).*/],
+  allowlist: [/^\/(?!(api|content|private)(\/|$)).*/],
 }));
 
-// Manifesto e currículos: sempre tenta a rede; sem ela (ou lenta), usa o cache.
-registerRoute(
-  ({ url, request }) => cacheRule(url, request.mode, self.location.origin) === "conteudo",
-  new NetworkFirst({ cacheName: CONTENT_CACHE, networkTimeoutSeconds: 3 }),
-);
+// Materiais e API passam somente pela rede, sem fallback ou armazenamento.
 
 // Mermaid (diagramas): só baixa quando um tema com diagrama abre; depois fica.
 registerRoute(
