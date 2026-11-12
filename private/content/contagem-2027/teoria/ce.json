@@ -1,0 +1,668 @@
+{
+  "ce-componentes": {
+    "objetivos": [
+      "Ao final, você consegue distinguir hardware, software e firmware e citar exemplos de cada um.",
+      "Ao final, você consegue identificar a função dos principais componentes internos do computador: placa-mãe, processador, memória, fonte e placas de expansão.",
+      "Ao final, você consegue classificar periféricos como de entrada, de saída ou de entrada e saída, inclusive nos casos que costumam confundir.",
+      "Ao final, você consegue reconhecer características de impressoras, monitores e equipamentos de energia cobradas em prova."
+    ],
+    "explicacao": [
+      "Hardware é a parte física do computador: tudo o que pode ser tocado, como placas, cabos, teclado e monitor. Software é o conjunto de programas e dados que dizem ao hardware o que fazer. Firmware é um software gravado em memória não volátil do próprio equipamento (por exemplo, a BIOS da placa-mãe ou o programa interno de uma impressora) e que controla o funcionamento básico desse hardware. O modelo de organização usado pelos computadores pessoais é o de von Neumann: processador (CPU), memória e dispositivos de entrada e saída, ligados por barramentos, com programa e dados armazenados na mesma memória.",
+      "Dentro do gabinete ficam os componentes principais. A placa-mãe é a placa de circuito que interliga tudo: tem o soquete do processador, os slots de memória, os slots de expansão (PCI, PCI Express e, em máquinas mais antigas, AGP), os conectores de disco (IDE e SATA), o chipset, que coordena a comunicação entre as partes, e a memória que guarda a BIOS. Uma pequena bateria na placa-mãe mantém o relógio e as configurações do Setup quando o computador está desligado. Atenção: chamar o gabinete de “CPU” é um uso popular, mas tecnicamente CPU é apenas o processador.",
+      "A fonte de alimentação converte a corrente alternada da tomada em corrente contínua de baixa tensão (no padrão ATX, principalmente +12 V, +5 V e +3,3 V) para alimentar placa-mãe, discos e demais componentes. Fora do gabinete, dois equipamentos aparecem em prova: o estabilizador, que corrige variações de tensão da rede elétrica, e o nobreak, que tem bateria e mantém o computador ligado por algum tempo quando falta energia, permitindo salvar o trabalho e desligar com segurança.",
+      "Periférico é todo dispositivo ligado ao computador para trocar informações com ele ou ampliar suas funções. Dispositivos de entrada levam dados do mundo externo para o computador: teclado, mouse, scanner, microfone, webcam, leitor de código de barras, mesa digitalizadora e joystick. Dispositivos de saída apresentam ao usuário o resultado do processamento: monitor, impressora, caixas de som, fone de ouvido, projetor e plotter.",
+      "Dispositivos de entrada e saída (também chamados mistos ou híbridos) fazem as duas coisas: tela sensível ao toque (touchscreen), impressora multifuncional (imprime e digitaliza), modem, placa de rede e headset (fone com microfone). Unidades de armazenamento como HD externo, pen drive e gravador de DVD também são classificadas como de entrada e saída, pois o computador lê e grava dados nelas. Pegadinhas frequentes: o monitor comum é apenas de saída, mas a tela touchscreen é de entrada e saída; o scanner é apenas de entrada; o leitor de CD-ROM (que não grava) é tratado como entrada.",
+      "Placas de expansão acrescentam ou melhoram funções: placa de vídeo (com processador gráfico, a GPU, e memória própria), placa de som, placa de rede e placa de captura de vídeo. Quando o recurso vem integrado à placa-mãe, diz-se que é onboard; quando é uma placa instalada em um slot, é offboard. O vídeo onboard costuma usar parte da memória RAM principal, o que reduz a memória disponível para os programas; a placa de vídeo offboard tem memória dedicada e, em geral, melhor desempenho.",
+      "Plug and Play é a capacidade de o sistema operacional reconhecer e configurar um dispositivo automaticamente, sem ajustes manuais de recursos. Hot plug (ou hot swap) é a possibilidade de conectar e desconectar o dispositivo com o computador ligado, como acontece com o USB. Um dispositivo pode ser Plug and Play e mesmo assim exigir que o computador esteja desligado para a conexão (é o caso clássico do teclado e do mouse PS/2).",
+      "Impressoras e monitores têm termos próprios. A impressora matricial é de impacto: agulhas batem em uma fita com tinta, por isso imprime formulário contínuo e cópias em papel carbonado; é barulhenta e de baixa qualidade gráfica. A jato de tinta lança gotas de tinta no papel. A laser usa toner (pó) e um cilindro fotossensível, com boa velocidade e qualidade de texto. A térmica imprime aquecendo papel especial, como em cupons fiscais. A resolução de impressão é medida em dpi (pontos por polegada) e a velocidade em ppm (páginas por minuto). No monitor, a resolução é dada em pixels (por exemplo, 1024 × 768) e a taxa de atualização em hertz.",
+      "Resumo das pegadinhas: CPU é o processador, não o gabinete; firmware é software, ainda que gravado no hardware; um mesmo equipamento pode ter partes de entrada e de saída (multifuncional); dispositivo de armazenamento externo é de entrada e saída; estabilizador não segura o computador ligado em queda de energia; onboard não é sinônimo de pior, mas o vídeo onboard compartilha a RAM."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Classifique: scanner, impressora multifuncional, caixa de som, pen drive e microfone.",
+        "resolucao": "Scanner: entrada (só digitaliza). Impressora multifuncional: entrada e saída (digitaliza e imprime). Caixa de som: saída. Pen drive: entrada e saída (o computador lê e grava nele). Microfone: entrada. O erro comum é classificar a multifuncional só como saída por causa da palavra “impressora”."
+      },
+      {
+        "enunciado": "Uma repartição sofre quedas rápidas de energia e quer que os computadores continuem ligados por alguns minutos para salvar o trabalho. Estabilizador ou nobreak?",
+        "resolucao": "Nobreak. Ele tem bateria e fornece energia durante a falta de luz. O estabilizador apenas corrige oscilações de tensão; quando a energia cai, o computador desliga do mesmo jeito."
+      },
+      {
+        "enunciado": "Um computador com 4 GB de RAM e vídeo onboard mostra menos memória disponível do que o instalado. Por quê?",
+        "resolucao": "O vídeo onboard não tem memória própria e reserva parte da RAM principal para uso gráfico. Por isso a memória disponível para o sistema e os programas fica menor que a instalada. Com uma placa de vídeo offboard com memória dedicada, essa reserva deixa de existir."
+      }
+    ],
+    "conceitos": [
+      { "t": "Hardware", "d": "Parte física do computador: placas, circuitos, cabos e periféricos." },
+      { "t": "Firmware", "d": "Software gravado em memória não volátil de um equipamento, que controla seu funcionamento básico (ex.: BIOS)." },
+      { "t": "Placa-mãe", "d": "Placa principal que interliga processador, memória, placas de expansão e dispositivos de armazenamento." },
+      { "t": "Periférico de entrada e saída", "d": "Dispositivo que envia e recebe dados do computador, como touchscreen, multifuncional, modem e pen drive." },
+      { "t": "Onboard / offboard", "d": "Recurso integrado à placa-mãe / recurso em placa instalada em slot de expansão." },
+      { "t": "Plug and Play", "d": "Reconhecimento e configuração automáticos de um dispositivo pelo sistema operacional." },
+      { "t": "Nobreak", "d": "Equipamento com bateria que mantém o computador alimentado durante a falta de energia." },
+      { "t": "dpi", "d": "Pontos por polegada; medida de resolução de impressoras e scanners." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Classificar sem consulta dez periféricos em entrada, saída ou entrada e saída, justificando os casos mistos.",
+      "Explicar a diferença entre estabilizador e nobreak e entre vídeo onboard e offboard."
+    ]
+  },
+  "ce-memorias": {
+    "objetivos": [
+      "Ao final, você consegue converter entre bit, byte e seus múltiplos usando a convenção binária cobrada em prova.",
+      "Ao final, você consegue diferenciar RAM, ROM e suas variações (PROM, EPROM, EEPROM e flash), cache e memória virtual.",
+      "Ao final, você consegue classificar memórias como principal (primária, interna) ou secundária (auxiliar) e montar a hierarquia de memória.",
+      "Ao final, você consegue explicar o papel dos programas em ROM e os conceitos de tempo de acesso e ciclo de memória."
+    ],
+    "explicacao": [
+      "Bit (binary digit) é a menor unidade de informação e vale 0 ou 1. Um byte tem 8 bits e, em codificações como o ASCII, representa um caractere; meio byte (4 bits) é chamado nibble. Nas provas de informática, os múltiplos seguem potências de 2: 1 KB (quilobyte) = 1024 bytes, 1 MB = 1024 KB, 1 GB = 1024 MB e 1 TB = 1024 GB. Essa é a convenção a usar nas contas. Existe, porém, o padrão da IEC, que criou os prefixos binários KiB, MiB, GiB e TiB (1 KiB = 1024 bytes) e reserva kB, MB e GB para potências de 10 (1 kB = 1000 bytes). Fabricantes de discos usam a base decimal; por isso um HD vendido como 500 GB aparece no Windows com cerca de 465 GB. Atenção também à letra: b minúsculo é bit (velocidade de rede em Mbps) e B maiúsculo é byte (tamanho de arquivo em MB).",
+      "Memória principal (também chamada primária ou interna) é a que o processador acessa diretamente: registradores, cache e memória principal propriamente dita (RAM e ROM). Memória secundária (auxiliar ou de massa) guarda dados de forma permanente e em grande quantidade: HD, SSD, pen drive, cartões de memória, CD, DVD e fita. Ela é não volátil, mais barata por byte e mais lenta, e o processador não executa programas diretamente dela: o conteúdo precisa ser carregado antes na RAM. Na hierarquia de memória, quanto mais perto do processador, mais rápida, menor e mais cara por bit: registradores, cache, RAM e, por fim, a memória secundária.",
+      "RAM (Random Access Memory, memória de acesso aleatório) é a memória de trabalho: permite leitura e escrita e é volátil, ou seja, perde o conteúdo quando falta energia. Há dois tipos. A DRAM (dinâmica) guarda cada bit em um capacitor que precisa ser recarregado periodicamente (refresh); é mais barata e densa e forma a memória principal, em módulos como SDRAM, DDR, DDR2 e DDR3. A SRAM (estática) usa circuitos do tipo flip-flop, não precisa de refresh, é mais rápida e mais cara e por isso é usada na memória cache. Acesso aleatório significa que qualquer posição pode ser acessada no mesmo tempo, independentemente da posição anterior.",
+      "ROM (Read Only Memory) é não volátil e, em uso normal, apenas lida. Suas variações diferem na forma de gravar e apagar: a ROM de máscara é gravada na fabricação e não pode ser alterada; a PROM vem vazia e pode ser gravada uma única vez pelo usuário; a EPROM pode ser apagada por exposição à luz ultravioleta (tem uma janela transparente no chip) e regravada; a EEPROM (ou E²PROM) é apagada eletricamente, byte a byte, sem retirar o chip; a memória flash é uma evolução da EEPROM apagada eletricamente em blocos, o que a torna mais rápida para regravar. A flash está em pen drives, cartões de memória, SSDs e no chip da BIOS das placas-mãe atuais. Pegadinha: a ROM também é de acesso aleatório; o que a distingue da RAM é ser não volátil e de somente leitura no uso normal.",
+      "Programas em ROM são os firmwares. O exemplo clássico é a BIOS (Basic Input/Output System), gravada em ROM ou flash na placa-mãe. Ao ligar o computador, a BIOS executa o POST (Power-On Self Test), que testa memória, teclado e outros componentes; em seguida localiza o dispositivo de inicialização e carrega o sistema operacional (boot); também oferece rotinas básicas de entrada e saída e o programa Setup. As configurações feitas no Setup (data, hora, ordem de boot) ficam na memória CMOS, que é volátil e se mantém graças à bateria da placa-mãe. Em computadores mais novos, a BIOS foi substituída pelo UEFI, que cumpre o mesmo papel de firmware de inicialização.",
+      "A memória cache é uma memória pequena e muito rápida (SRAM) colocada entre o processador e a RAM. Ela guarda cópias dos dados e instruções usados recentemente, aproveitando o princípio da localidade: o que foi usado agora tende a ser usado de novo em breve (localidade temporal) e posições vizinhas tendem a ser usadas em seguida (localidade espacial). Quando o dado está na cache há um acerto (hit); quando não está, uma falha (miss), e o dado é buscado na RAM. Os processadores atuais têm níveis: L1, a mais próxima do núcleo, menor e mais rápida, geralmente dividida em cache de instruções e de dados; L2, maior e um pouco mais lenta; L3, a maior e mais lenta dos três níveis, normalmente compartilhada entre os núcleos.",
+      "Memória virtual é uma técnica do sistema operacional que usa espaço da memória secundária como extensão da RAM, permitindo executar programas maiores que a memória física ou muitos programas ao mesmo tempo. Na paginação, o espaço de endereços de cada processo é dividido em páginas de tamanho fixo e a RAM em quadros (frames) do mesmo tamanho; as páginas em uso ficam na RAM e as demais no disco. Quando o programa acessa uma página que não está na RAM, ocorre uma falta de página (page fault) e o sistema a traz do disco, retirando outra se necessário. No Windows, essa área é o arquivo de paginação (pagefile.sys); no Linux, a área de troca (swap), em partição ou arquivo. Memória virtual não acelera o computador: o disco é muito mais lento que a RAM, e o excesso de trocas (thrashing) deixa o sistema lento. Aumentar a RAM física é o que reduz esse problema.",
+      "Tempo de acesso é o intervalo entre o pedido de leitura (ou escrita) e o momento em que o dado fica disponível. Ciclo de memória (tempo de ciclo) é o intervalo mínimo entre o início de um acesso e o início do acesso seguinte à mesma memória; ele é igual ou maior que o tempo de acesso, pois inclui o tempo de recuperação do circuito antes de nova operação (marcante nas DRAMs). Quanto menores esses tempos, mais rápida a memória. A RAM tem tempos da ordem de nanossegundos (ns); um HD, por depender de partes mecânicas (movimento da cabeça e rotação do prato), tem tempo de acesso da ordem de milissegundos (ms), milhares de vezes maior."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Quantos arquivos de 512 MB cabem, no máximo, em um pen drive de 4 GB (convenção binária, desconsiderando o espaço do sistema de arquivos)?",
+        "resolucao": "4 GB = 4 × 1024 MB = 4096 MB. 4096 ÷ 512 = 8 arquivos. Se a questão usar a convenção binária, não converta com 1000; a resposta 7,8 ou 8,19 indica erro de base."
+      },
+      {
+        "enunciado": "Um chip de BIOS antigo tinha uma janela transparente sobre o circuito. Que tipo de memória era e como era apagado?",
+        "resolucao": "Era uma EPROM: a janela de quartzo permite que a luz ultravioleta apague o conteúdo, que depois é regravado em um gravador próprio. A EEPROM e a flash dispensam a janela, pois são apagadas eletricamente."
+      },
+      {
+        "enunciado": "Ao abrir muitos programas, o computador fica lento e a luz do HD pisca sem parar. Qual o mecanismo envolvido e o que resolve?",
+        "resolucao": "A RAM acabou e o sistema passou a usar intensamente a memória virtual, trocando páginas entre RAM e disco (paginação excessiva). Como o disco é muito mais lento, o desempenho cai. A solução é fechar programas ou instalar mais RAM; aumentar o arquivo de paginação evita erros de falta de memória, mas não deixa o sistema mais rápido."
+      }
+    ],
+    "conceitos": [
+      { "t": "Byte", "d": "Conjunto de 8 bits; unidade básica de armazenamento." },
+      { "t": "1 KB", "d": "1024 bytes na convenção binária usada em provas; no padrão IEC, o valor binário é escrito KiB." },
+      { "t": "Memória volátil", "d": "Perde o conteúdo sem energia, como a RAM." },
+      { "t": "EEPROM", "d": "ROM apagável e regravável eletricamente, byte a byte, sem retirar o chip." },
+      { "t": "Memória flash", "d": "Tipo de EEPROM apagada eletricamente em blocos; usada em pen drives, SSDs e BIOS." },
+      { "t": "Cache", "d": "Memória pequena e rápida (SRAM) entre CPU e RAM que guarda dados usados recentemente." },
+      { "t": "Memória virtual", "d": "Uso de espaço em disco como extensão da RAM, gerenciado pelo sistema operacional." },
+      { "t": "Ciclo de memória", "d": "Intervalo mínimo entre dois acessos sucessivos à memória; igual ou maior que o tempo de acesso." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Explicar sem consulta a diferença entre RAM e ROM e entre PROM, EPROM, EEPROM e flash.",
+      "Fazer conversões entre bytes, KB, MB e GB pela base 1024 sem erro."
+    ]
+  },
+  "ce-cpu": {
+    "objetivos": [
+      "Ao final, você consegue descrever a organização da CPU (unidade de controle, ULA e registradores) e o ciclo de execução de uma instrução.",
+      "Ao final, você consegue identificar a função dos principais registradores e interpretar valores de clock.",
+      "Ao final, você consegue diferenciar barramentos de dados, endereços e controle e calcular a memória endereçável.",
+      "Ao final, você consegue reconhecer os padrões de barramento e interfaces mais cobrados (PCI, AGP, PCI Express, IDE, SATA)."
+    ],
+    "explicacao": [
+      "A Unidade Central de Processamento (CPU), ou processador, executa as instruções dos programas. Ela é organizada em três partes: a unidade de controle (UC), que busca as instruções na memória, decodifica e gera os sinais que coordenam as demais partes; a unidade lógica e aritmética (ULA), que realiza as operações aritméticas (soma, subtração etc.) e lógicas (E, OU, NÃO, comparações); e os registradores, pequenas memórias internas de altíssima velocidade. A UC não faz cálculos e a ULA não decide qual instrução vem a seguir: essa troca de papéis é pegadinha comum.",
+      "Cada instrução passa pelo ciclo de instrução. Na busca (fetch), a CPU lê da memória a instrução cujo endereço está no contador de programa (PC) e a coloca no registrador de instrução (RI ou IR); o PC é então atualizado para apontar a próxima instrução. Na decodificação, a UC interpreta o código da operação. Em seguida os operandos são buscados, a operação é executada (geralmente pela ULA) e o resultado é gravado em registrador ou na memória. Instruções de desvio (saltos) alteram o valor do PC, mudando a sequência de execução. Interrupções permitem que um dispositivo peça a atenção da CPU, que suspende o que faz, atende ao pedido e depois retoma.",
+      "Os registradores mais citados são: contador de programa (PC), com o endereço da próxima instrução; registrador de instrução (RI/IR), com a instrução em execução; registrador de endereço de memória (REM/MAR), com o endereço a ser lido ou escrito; registrador de dados da memória (RDM/MBR), com o dado que vai ou vem da memória; acumulador (ACC), que guarda resultados da ULA em arquiteturas simples; e o registrador de estado (flags), com indicadores como zero, sinal, vai-um (carry) e estouro (overflow). Quando se diz que um processador é de 32 ou de 64 bits, fala-se do tamanho da palavra, isto é, da largura dos registradores e dos dados que ele processa de uma vez.",
+      "O clock é o sinal periódico que sincroniza as operações do processador. Sua frequência é medida em hertz: 1 GHz corresponde a 1 bilhão de ciclos por segundo, e o período de cada ciclo é o inverso da frequência (1 GHz → 1 ns; 2 GHz → 0,5 ns). Em processadores clássicos, o clock interno é obtido multiplicando o clock externo (do barramento) por um multiplicador. Overclock é fazer o processador trabalhar acima da frequência nominal, com aumento de calor e risco de instabilidade. Clock maior não garante desempenho maior quando se comparam arquiteturas diferentes, porque também contam instruções por ciclo, número de núcleos e tamanho da cache.",
+      "Para ganhar desempenho, os processadores usam pipeline, que sobrepõe as etapas de várias instruções (enquanto uma é executada, a seguinte é decodificada e outra é buscada), aumentando o número de instruções concluídas por unidade de tempo. Processadores multinúcleo (dual-core, quad-core) reúnem vários núcleos completos no mesmo chip, executando tarefas em paralelo. Quanto ao conjunto de instruções, a arquitetura CISC usa muitas instruções complexas e de tamanho variável (família x86), e a RISC usa poucas instruções simples, de tamanho fixo, com muitos registradores e acesso à memória apenas por instruções de carga e armazenamento (família ARM, comum em celulares).",
+      "Barramento é o conjunto de linhas elétricas que transporta sinais entre os componentes. O barramento do sistema divide-se em três: o de dados, bidirecional, que leva os dados e cuja largura define quantos bits são transferidos por vez; o de endereços, que leva da CPU para a memória e para a E/S o endereço a acessar e cuja largura define quantas posições podem ser endereçadas (com n linhas, 2ⁿ posições; com 32 bits e endereçamento por byte, 4 GB); e o de controle, que leva sinais como leitura, escrita, interrupção e clock. Pegadinha clássica: memória máxima depende do barramento de endereços, não do de dados.",
+      "Os barramentos de expansão evoluíram. ISA era o padrão antigo, lento, de 8 e 16 bits. PCI é paralelo, de 32 bits a 33 MHz, e foi o padrão de placas de som, rede e modem por muitos anos. AGP é uma porta dedicada exclusivamente à placa de vídeo. PCI Express (PCIe) é serial e ponto a ponto, organizado em pistas (lanes): x1, x4, x8 e x16; o slot x16 é o usado pelas placas de vídeo e substituiu o AGP. Nas placas-mãe mais antigas, o chipset era dividido em ponte norte (ligada à CPU, à memória e ao vídeo) e ponte sul (ligada aos discos, USB e periféricos mais lentos).",
+      "As interfaces de disco também são cobradas. IDE (ou PATA, ATA paralelo) usa cabo plano largo com conector de 40 pinos (cabos de 40 ou 80 vias), admite dois dispositivos por canal, configurados como mestre e escravo por jumpers. SATA (ATA serial) usa cabo fino com um dispositivo por conector, é mais rápida e dispensa a configuração mestre/escravo. SCSI foi muito usada em servidores e admite vários dispositivos encadeados. USB, apesar de muito mais rápida que as portas antigas, também é uma interface serial."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Um processador tem barramento de endereços de 20 bits e memória endereçada por byte. Qual a memória máxima endereçável?",
+        "resolucao": "2²⁰ = 1.048.576 posições de 1 byte = 1024 KB = 1 MB. Repare que a resposta não depende da largura do barramento de dados nem do clock."
+      },
+      {
+        "enunciado": "Qual é o período do clock de um processador de 2,5 GHz?",
+        "resolucao": "Período = 1 / frequência = 1 / (2,5 × 10⁹ Hz) = 0,4 × 10⁻⁹ s = 0,4 ns."
+      },
+      {
+        "enunciado": "Durante a execução de um programa, qual registrador indica onde está a próxima instrução, e o que muda quando ocorre um desvio?",
+        "resolucao": "É o contador de programa (PC). Normalmente ele é incrementado após a busca de cada instrução; em um desvio, recebe o endereço de destino do salto, e a busca seguinte começa ali."
+      }
+    ],
+    "conceitos": [
+      { "t": "Unidade de controle", "d": "Parte da CPU que busca, decodifica e coordena a execução das instruções." },
+      { "t": "ULA", "d": "Unidade lógica e aritmética; executa operações aritméticas e lógicas." },
+      { "t": "Contador de programa (PC)", "d": "Registrador com o endereço da próxima instrução a ser buscada." },
+      { "t": "Clock", "d": "Sinal de sincronização da CPU, medido em hertz; período = 1/frequência." },
+      { "t": "Pipeline", "d": "Sobreposição das etapas de várias instruções para aumentar a vazão." },
+      { "t": "Barramento de endereços", "d": "Linhas que indicam a posição de memória acessada; sua largura define a memória endereçável." },
+      { "t": "PCI Express", "d": "Barramento de expansão serial, ponto a ponto, organizado em pistas (x1 a x16)." },
+      { "t": "SATA", "d": "Interface serial de discos, um dispositivo por cabo, sucessora do IDE/PATA." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Descrever sem consulta o ciclo busca–decodificação–execução, citando PC e RI.",
+      "Calcular a memória endereçável a partir da largura do barramento de endereços e o período a partir do clock."
+    ]
+  },
+  "ce-armazenamento": {
+    "objetivos": [
+      "Ao final, você consegue comparar dispositivos de armazenamento magnéticos, ópticos e de estado sólido.",
+      "Ao final, você consegue identificar as portas serial, paralela, PS/2 e USB e suas características.",
+      "Ao final, você consegue explicar a função dos drivers de dispositivo e não confundi-los com drives.",
+      "Ao final, você consegue distinguir FAT32, NTFS, ext3 e ext4, incluindo o limite de 4 GB por arquivo no FAT32."
+    ],
+    "explicacao": [
+      "Os dispositivos de armazenamento dividem-se pela tecnologia. Magnéticos: o disco rígido (HD), com pratos que giram (5400 ou 7200 rpm são velocidades comuns em micros) e cabeças de leitura e gravação; a fita magnética, de acesso sequencial e muito usada em backup; e o antigo disquete de 3,5\", com 1,44 MB. Ópticos, lidos por laser: CD (cerca de 700 MB), DVD (4,7 GB em camada simples e 8,5 GB em camada dupla) e Blu-ray (25 GB em camada simples e 50 GB em camada dupla). O sufixo R indica mídia gravável uma vez e RW, regravável. De estado sólido: SSD, pen drive e cartões de memória, baseados em memória flash, sem partes móveis, com acesso mais rápido, menor consumo e mais resistência a impactos, mas com número limitado de ciclos de gravação.",
+      "O HD é organizado em trilhas (círculos concêntricos), setores (divisões das trilhas, tradicionalmente de 512 bytes) e cilindros (o conjunto de trilhas na mesma posição em todos os pratos). Antes do uso, o disco é particionado e formatado. No esquema MBR, cabem até quatro partições primárias, ou três primárias e uma estendida com unidades lógicas. A formatação lógica cria o sistema de arquivos; a formatação rápida apenas recria as estruturas de controle e não apaga fisicamente os dados, que podem ser recuperados por programas especializados. A desfragmentação reorganiza as partes dos arquivos em HDs; em SSDs ela não traz ganho e não é recomendada.",
+      "Placas são circuitos encaixados na placa-mãe para acrescentar funções: vídeo, som, rede, modem, captura e controladoras de disco. Elas se conectam aos slots de expansão (PCI, AGP, PCI Express) e, para funcionar, dependem do driver correspondente no sistema operacional.",
+      "Portas são os conectores por onde os periféricos se ligam ao computador. A porta serial (padrão RS-232, nomes COM1, COM2, conector DB-9) transmite um bit por vez e era usada por mouses antigos, modems externos e cabos de console de equipamentos de rede. A porta paralela (LPT1, conector DB-25 fêmea no micro) transmite 8 bits ao mesmo tempo e era a porta típica da impressora. A porta PS/2 (mini-DIN de 6 pinos) liga teclado e mouse; no código de cores usual, roxo é o teclado e verde é o mouse; não foi projetada para conexão com o computador ligado. Serial, paralela e PS/2 foram substituídas pelo USB na maioria dos usos.",
+      "USB (Universal Serial Bus) é um barramento serial que admite até 127 dispositivos por controlador (com o uso de hubs), fornece energia ao dispositivo, permite conexão e desconexão com o computador ligado (hot plug) e reconhecimento automático (Plug and Play). As versões mais cobradas são USB 1.1 (até 12 Mbps), USB 2.0 (até 480 Mbps) e USB 3.0 (até 5 Gbps). Os conectores incluem os tipos A, B, mini e micro. Pegadinha: o fato de o USB ser muito mais rápido que a porta paralela não o torna paralelo; ele é serial.",
+      "Driver de dispositivo é o software que permite ao sistema operacional comunicar-se com um hardware específico: ele traduz os pedidos genéricos do sistema em comandos que aquele modelo entende. Pode vir com o sistema operacional ou ser fornecido pelo fabricante. Sem o driver adequado o dispositivo não funciona ou funciona de forma limitada (por exemplo, vídeo só em baixa resolução). No Windows XP e no Vista, o Gerenciador de Dispositivos mostra os equipamentos instalados, marca com ponto de exclamação amarelo os que têm problema e permite atualizar, desinstalar ou reverter o driver. Como roda com privilégios elevados, um driver defeituoso pode travar o sistema. Não confunda: driver é software; drive é a unidade de disco (drive de DVD, unidade C:).",
+      "Sistema de arquivos é a forma como o sistema operacional organiza, nomeia e localiza os dados no disco. O FAT32 é simples e compatível com muitos sistemas e aparelhos, mas não tem permissões por usuário nem journaling e limita cada arquivo a 4 GB (exatamente 4 GB menos 1 byte); por isso a cópia de um arquivo de 6 GB para um pen drive em FAT32 falha mesmo com espaço livre de sobra. Além disso, a ferramenta de formatação do Windows XP só cria partições FAT32 de até 32 GB. O NTFS é o padrão do Windows XP e do Vista: oferece permissões de acesso por usuário e grupo, journaling (registro de transações), compactação e criptografia de arquivos, cotas de disco e suporte a arquivos muito grandes. Uma unidade FAT32 pode ser convertida para NTFS sem perder dados com o comando convert (por exemplo, convert D: /fs:ntfs); o caminho inverso exige reformatar.",
+      "No Linux, os sistemas de arquivos clássicos são o ext2, sem journaling; o ext3, que é o ext2 acrescido de journaling e pode ser montado como ext2; e o ext4, evolução do ext3 com suporte a volumes e arquivos maiores, alocação por extents e melhor desempenho, padrão em muitas distribuições atuais. O Linux também usa uma área de troca (swap) para memória virtual. Journaling é o registro prévio das alterações em um diário, o que permite recuperar a consistência do sistema de arquivos rapidamente após um desligamento abrupto. Mídias ópticas usam sistemas próprios, como ISO 9660 e UDF.",
+      "Outro conceito cobrado é o cluster (unidade de alocação): o menor bloco que o sistema de arquivos reserva para um arquivo. Um arquivo de 1 KB em um disco com clusters de 4 KB ocupa 4 KB, e o espaço que sobra no último cluster é desperdiçado. Arquivos grandes podem ficar espalhados em clusters não contíguos (fragmentação), o que reduz o desempenho em HDs."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Um técnico tenta copiar a imagem de um DVD (arquivo .iso de 4,4 GB) para um pen drive de 16 GB vazio e recebe erro de espaço insuficiente. Explique e resolva.",
+        "resolucao": "O pen drive está formatado em FAT32, que limita cada arquivo a 4 GB. O espaço total não importa. A solução é formatar o pen drive em NTFS (ou em outro sistema sem esse limite) ou converter a unidade com convert X: /fs:ntfs, que preserva os dados."
+      },
+      {
+        "enunciado": "Depois de reinstalar o Windows XP, a tela funciona apenas em 640 × 480 com poucas cores e o Gerenciador de Dispositivos mostra um ponto de exclamação no adaptador de vídeo. O que falta?",
+        "resolucao": "Falta o driver da placa de vídeo. O sistema usa um driver genérico de recursos mínimos. Instalar o driver do fabricante libera resoluções maiores e a aceleração gráfica."
+      }
+    ],
+    "conceitos": [
+      { "t": "Driver", "d": "Software que permite ao sistema operacional controlar um dispositivo de hardware específico." },
+      { "t": "Porta serial", "d": "Transmite um bit por vez; padrão RS-232, nomes COM1/COM2." },
+      { "t": "Porta paralela", "d": "Transmite 8 bits simultaneamente; LPT1, típica de impressoras antigas." },
+      { "t": "USB", "d": "Barramento serial universal, com hot plug, Plug and Play, alimentação e até 127 dispositivos por controlador." },
+      { "t": "FAT32", "d": "Sistema de arquivos sem permissões nem journaling, com limite de 4 GB por arquivo." },
+      { "t": "NTFS", "d": "Sistema de arquivos do Windows XP/Vista com permissões, journaling, compactação, criptografia e cotas." },
+      { "t": "ext3 / ext4", "d": "Sistemas de arquivos do Linux com journaling; o ext4 é a evolução do ext3." },
+      { "t": "Journaling", "d": "Registro prévio das alterações que permite recuperar a consistência após falha." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Explicar sem consulta por que um arquivo de 5 GB não pode ser gravado em FAT32 e como resolver.",
+      "Comparar serial, paralela, PS/2 e USB quanto à forma de transmissão e ao uso típico."
+    ]
+  },
+  "ce-software": {
+    "objetivos": [
+      "Ao final, você consegue classificar programas em software básico, utilitário e aplicativo.",
+      "Ao final, você consegue descrever as funções do sistema operacional e de seus componentes (núcleo e interpretador de comandos).",
+      "Ao final, você consegue diferenciar compilador, interpretador e montador.",
+      "Ao final, você consegue comparar interfaces de linha de comando e gráficas e reconhecer tipos de licença como freeware e shareware."
+    ],
+    "explicacao": [
+      "Software é o conjunto de programas, instruções e dados que fazem o hardware funcionar e realizar tarefas. A classificação mais cobrada é por função: software básico (ou de sistema), software utilitário e software aplicativo. A pergunta-chave é “para que serve?”: fazer a máquina funcionar e servir de base aos demais (básico), manter, proteger e otimizar o sistema (utilitário) ou resolver uma tarefa do usuário (aplicativo).",
+      "Software básico é o que permite o funcionamento do computador e o desenvolvimento e a execução dos outros programas. Inclui o sistema operacional, os drivers de dispositivo, os firmwares e os tradutores de linguagem: compiladores, interpretadores e montadores, além de ligadores (linkers), que juntam módulos compilados e bibliotecas em um executável, e carregadores (loaders), que colocam o programa na memória para execução.",
+      "O sistema operacional gerencia os recursos do computador e serve de intermediário entre o usuário, os programas e o hardware. Suas funções são: gerenciar processos (decidir qual programa usa o processador e por quanto tempo), gerenciar a memória (inclusive a memória virtual), gerenciar dispositivos de entrada e saída (por meio dos drivers), gerenciar arquivos e diretórios, controlar o acesso e a segurança e oferecer uma interface ao usuário. O núcleo (kernel) é a parte central, que roda com privilégios máximos e lida diretamente com o hardware; o shell é o interpretador de comandos que recebe os pedidos do usuário. Exemplos: Windows, Linux, macOS, Android; o antigo MS-DOS era monousuário e monotarefa.",
+      "Quanto ao funcionamento, um sistema é multitarefa quando executa vários programas de forma concorrente, alternando o processador entre eles; na multitarefa preemptiva, adotada pelos sistemas atuais como Windows XP/Vista e Linux, o próprio sistema operacional interrompe um programa para dar a vez a outro, enquanto na cooperativa o programa precisa liberar o processador. Multiusuário é o sistema que mantém contas distintas, com arquivos e permissões separados, e pode atender vários usuários. Multiprocessamento é o uso de mais de um processador ou núcleo.",
+      "Compilador traduz todo o código-fonte para código de máquina (código-objeto) antes da execução, gerando um executável que roda sem o compilador; erros de sintaxe são apontados na compilação. Interpretador traduz e executa o programa instrução por instrução, a cada execução, sem gerar executável independente; é típico de linguagens de script. Montador (assembler) traduz linguagem de montagem (assembly) para código de máquina. O Java é um caso híbrido: o código é compilado para bytecode, que é executado pela máquina virtual Java (JVM).",
+      "Software utilitário executa tarefas de apoio à manutenção, segurança e desempenho do sistema, sem ser o objetivo final do usuário: antivírus, firewall pessoal, compactadores de arquivos (WinZip, WinRAR, 7-Zip), desfragmentador, limpeza de disco, verificação de erros de disco, programas de backup e de recuperação de arquivos. No Windows XP muitos deles ficam em Acessórios > Ferramentas do sistema. Pegadinha: o antivírus é utilitário, não aplicativo nem parte do sistema operacional, mesmo quando vem junto com ele.",
+      "Software aplicativo resolve tarefas específicas do usuário: editores de texto, planilhas, programas de apresentação, navegadores, clientes de e-mail, editores de imagem, reprodutores de mídia, jogos e sistemas de gestão. Pode ser de uso geral (como uma suíte de escritório, a exemplo do Microsoft Office e do BrOffice) ou específico, feito sob medida para uma organização (como um sistema de folha de pagamento).",
+      "Interface é o meio de interação entre o usuário e o sistema. Na interface de linha de comando (CLI), o usuário digita comandos em texto (Prompt de Comando do Windows, shell bash do Linux): exige conhecer os comandos, consome poucos recursos e facilita a automação por scripts. Na interface gráfica (GUI), o usuário usa janelas, ícones, menus e um dispositivo apontador (modelo WIMP), com curva de aprendizado menor. Há ainda interfaces por toque e por voz. Entre programas, a interface é a API (interface de programação de aplicações), conjunto de funções que um software oferece a outro.",
+      "Quanto à licença, alguns termos aparecem junto com a classificação: freeware é gratuito, mas não necessariamente tem código-fonte aberto; shareware é distribuído para avaliação, com prazo ou recursos limitados, e depois exige pagamento; software proprietário restringe uso, cópia e modificação; software livre garante liberdades de executar, estudar, modificar e redistribuir. Gratuito e livre são conceitos diferentes."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Classifique: Windows Vista, driver da impressora, compilador C, 7-Zip, antivírus, planilha eletrônica e navegador.",
+        "resolucao": "Básico: Windows Vista, driver da impressora e compilador C. Utilitário: 7-Zip e antivírus. Aplicativo: planilha eletrônica e navegador. O navegador é aplicativo porque atende diretamente a uma tarefa do usuário (acessar páginas)."
+      },
+      {
+        "enunciado": "Um programa em C é compilado no computador A e o executável é copiado para o computador B (mesmo sistema e arquitetura), que não tem compilador. Ele roda? E se fosse um script interpretado?",
+        "resolucao": "O executável compilado roda em B, pois já está em código de máquina. O script interpretado só roda se B tiver o interpretador, que traduz as instruções a cada execução."
+      }
+    ],
+    "conceitos": [
+      { "t": "Software básico", "d": "Faz o computador funcionar e dá suporte aos demais: sistema operacional, drivers, compiladores." },
+      { "t": "Software utilitário", "d": "Apoia manutenção, segurança e desempenho: antivírus, compactador, desfragmentador." },
+      { "t": "Software aplicativo", "d": "Resolve tarefas do usuário: editor de texto, planilha, navegador." },
+      { "t": "Kernel", "d": "Núcleo do sistema operacional, que gerencia processos, memória e dispositivos." },
+      { "t": "Compilador", "d": "Traduz todo o código-fonte para código de máquina antes da execução." },
+      { "t": "Interpretador", "d": "Traduz e executa o programa instrução por instrução, a cada execução." },
+      { "t": "Multitarefa preemptiva", "d": "O sistema operacional interrompe programas para alternar o uso do processador." },
+      { "t": "Shareware", "d": "Software distribuído para avaliação, com limite de tempo ou recursos." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Classificar sem consulta dez programas em básico, utilitário ou aplicativo.",
+      "Explicar a diferença entre compilador e interpretador e entre CLI e GUI."
+    ]
+  },
+  "ce-windows": {
+    "objetivos": [
+      "Ao final, você consegue identificar os elementos do ambiente gráfico do Windows XP e do Vista: área de trabalho, botão Iniciar, barra de tarefas e partes das janelas.",
+      "Ao final, você consegue localizar as principais configurações do Painel de Controle nas duas versões.",
+      "Ao final, você consegue gerenciar pastas, arquivos, atalhos, Lixeira e área de transferência, inclusive com os atalhos de teclado mais cobrados.",
+      "Ao final, você consegue compartilhar pastas e impressoras, mapear unidades de rede e usar as ferramentas de impressão e backup."
+    ],
+    "explicacao": [
+      "O Windows XP e o Windows Vista são sistemas operacionais com interface gráfica, multitarefa e com contas de usuário. A tela inicial após o logon é a área de trabalho, com ícones, a Lixeira e a barra de tarefas. No XP, os ícones e itens do sistema se chamam Meu computador, Meus documentos e Meus locais de rede; no Vista, passaram a Computador, Documentos e Rede. O Vista trouxe a interface Aero (transparência das bordas e miniaturas das janelas, conforme a edição e a placa de vídeo), a Barra Lateral com gadgets, a caixa de pesquisa no menu Iniciar e o Controle de Conta de Usuário (UAC), que pede confirmação antes de ações administrativas.",
+      "A barra de tarefas fica, por padrão, na parte inferior da tela e reúne: o botão Iniciar (no XP, o botão verde com a palavra “iniciar”; no Vista, o botão redondo com o logotipo do Windows), que abre o menu Iniciar com Todos os programas, Painel de controle, pastas pessoais e as opções de desligar; a barra de Inicialização Rápida, com ícones para abrir programas com um clique; os botões das janelas abertas, que podem ser agrupados quando há muitas; e a área de notificação, com o relógio e ícones de programas em segundo plano. Clicando com o botão direito na barra, em Propriedades, é possível ocultá-la automaticamente e bloqueá-la; desbloqueada, ela pode ser arrastada para qualquer borda da tela.",
+      "Cada janela tem partes padronizadas. A barra de título, no topo, mostra o nome do programa ou do documento e os botões Minimizar, Maximizar (ou Restaurar) e Fechar; arrastá-la move a janela e o duplo clique nela alterna entre maximizar e restaurar. A barra de menus traz os menus do programa; no Windows Explorer do XP são Arquivo, Editar, Exibir, Favoritos, Ferramentas e Ajuda. A barra de ferramentas tem botões de acesso rápido (Voltar, Avançar, Acima, Pesquisar, Pastas, Modos de exibição) e a barra de endereços mostra o local atual. A barra de status, no rodapé, informa dados como a quantidade de objetos e o tamanho da seleção. As barras de rolagem, vertical e horizontal, aparecem quando o conteúdo não cabe na janela. No Windows Explorer do Vista, a barra de menus fica oculta e aparece ao pressionar a tecla Alt. Atalhos úteis: Alt+Tab alterna entre janelas, Alt+F4 fecha a janela ativa e Windows+D mostra a área de trabalho.",
+      "O Painel de Controle concentra as configurações. No XP há o modo de exibição por categoria (Aparência e temas, Conexões de rede e de Internet, Adicionar ou remover programas, Sons, fala e dispositivos de áudio, Desempenho e manutenção, Impressoras e outros itens de hardware, Contas de usuário, Opções de data, hora, idioma e regionais, Opções de acessibilidade e Central de segurança) e o modo de exibição clássico, com todos os ícones. Itens importantes: Vídeo (temas, área de trabalho, proteção de tela, aparência e resolução), Sistema (nome do computador, Gerenciador de Dispositivos, Restauração do sistema, memória virtual), Opções de pasta, Contas de usuário (no XP, administrador ou limitada; no Vista, administrador ou padrão), Firewall do Windows e Opções de energia. No Vista, Adicionar ou remover programas virou Programas e Recursos, as configurações de vídeo e temas ficam em Personalização e as de rede na Central de Rede e Compartilhamento.",
+      "Arquivos e pastas são gerenciados no Windows Explorer (Windows+E), que mostra as pastas em árvore e o conteúdo da pasta selecionada. Nomes podem ter até 255 caracteres, mas não podem conter \\ / : * ? \" < > |. A extensão (como .doc ou .txt) indica o tipo do arquivo e o programa associado; por padrão, as extensões de tipos conhecidos ficam ocultas, opção alterada em Opções de pasta, guia Modo de exibição (no XP, menu Ferramentas > Opções de pasta). Os modos de exibição do XP incluem Miniaturas, Lado a lado, Ícones, Lista e Detalhes. F2 renomeia o item selecionado e F5 atualiza a janela. Ctrl+clique seleciona itens alternados e Shift+clique seleciona um intervalo. Ao arrastar com o botão esquerdo, o item é movido se o destino estiver na mesma unidade e copiado se estiver em outra unidade; segurar Ctrl força a cópia, segurar Shift força a movimentação, e arrastar com o botão direito abre um menu para escolher copiar, mover ou criar atalho.",
+      "Ao excluir com Delete, o item vai para a Lixeira, de onde pode ser restaurado ao local original; Shift+Del exclui permanentemente, sem passar pela Lixeira. Itens excluídos de pen drive, disquete ou unidade de rede também não vão para a Lixeira, e o tamanho máximo da Lixeira é configurável em suas propriedades; esvaziá-la remove os itens definitivamente. Atalho é um pequeno arquivo (extensão .lnk) que aponta para um programa, pasta ou arquivo e se reconhece pela seta no canto do ícone; pode ser criado com o botão direito (Criar atalho ou Enviar para > Área de trabalho (criar atalho)). Excluir o atalho não afeta o original; excluir o original deixa o atalho sem destino.",
+      "A área de transferência é um espaço temporário na memória usado para copiar e mover informações entre locais e programas. Ctrl+C copia, Ctrl+X recorta e Ctrl+V cola; o conteúdo pode ser colado várias vezes e é substituído na próxima cópia, pois a área de transferência do Windows guarda um item por vez, e se perde ao desligar o computador. Ctrl+Z desfaz a última ação. A tecla Print Screen copia para a área de transferência a imagem da tela inteira e Alt+Print Screen copia apenas a janela ativa.",
+      "Os Acessórios do menu Iniciar trazem: Bloco de Notas (texto sem formatação, .txt), WordPad (textos com formatação simples, .rtf), Paint (desenho e edição de imagens), Calculadora (modos padrão e científica), Prompt de comando, Windows Explorer e as Ferramentas do sistema (Desfragmentador de disco, Limpeza de disco, Backup, Restauração do sistema, Tarefas agendadas e Mapa de caracteres), além de recursos de acessibilidade como Lente de aumento, Teclado virtual e Narrador. O Vista acrescentou a Ferramenta de Captura. No XP, o Utilitário de backup oferece os tipos normal, incremental, diferencial, cópia e diário e grava arquivos .bkf; no Vista, a cópia de segurança é feita pelo Centro de Backup e Restauração. A Restauração do sistema desfaz alterações de configuração do sistema voltando a um ponto de restauração; não substitui o backup dos arquivos pessoais. Windows+L bloqueia o computador e Ctrl+Alt+Del abre, no XP, o Gerenciador de Tarefas ou a caixa Segurança do Windows (conforme a configuração) e, no Vista, uma tela com opções como bloquear, trocar usuário, fazer logoff e iniciar o Gerenciador de Tarefas.",
+      "Em rede, uma pasta é compartilhada pelo botão direito: no XP, opção Compartilhamento e segurança, guia Compartilhamento, marcando Compartilhar esta pasta na rede e, se desejado, permitindo que usuários da rede alterem os arquivos; no XP a pasta compartilhada exibe uma mão sob o ícone. No Vista, usa-se a opção Compartilhar e a Central de Rede e Compartilhamento. Um recurso compartilhado é acessado pelo caminho UNC \\\\computador\\compartilhamento, e um nome de compartilhamento terminado em $ fica oculto na navegação pela rede. Mapear unidade de rede associa uma letra (por exemplo, Z:) a uma pasta compartilhada: no XP, em Meu computador ou no Windows Explorer, menu Ferramentas > Mapear unidade de rede; no Vista, botão Mapear unidade de rede na janela Computador. Informa-se a letra, a pasta (\\\\servidor\\pasta) e se a conexão deve ser refeita a cada logon; a unidade passa a aparecer como um disco em Meu computador. As impressoras ficam em Impressoras e aparelhos de fax (XP) ou Impressoras (Vista): ali se usa Adicionar impressora (local ou de rede), define-se a impressora padrão (marcada com sinal de seleção), compartilha-se a impressora em Propriedades e abre-se a fila de impressão para pausar, reiniciar ou cancelar documentos."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "No Windows XP, um usuário arrasta com o botão esquerdo o arquivo relatorio.doc de C:\\Trabalho para a pasta C:\\Arquivo e depois arrasta o mesmo arquivo para o pen drive (E:). O que acontece em cada operação?",
+        "resolucao": "Na primeira, origem e destino estão na mesma unidade (C:), então o arquivo é movido. Na segunda, o destino é outra unidade, então o arquivo é copiado e continua em C:\\Arquivo. Para inverter o comportamento, segure Shift (mover) ou Ctrl (copiar) enquanto arrasta."
+      },
+      {
+        "enunciado": "Todos os funcionários precisam acessar a pasta compartilhada \\\\servidor\\documentos como se fosse a unidade S: no Windows XP. Como fazer?",
+        "resolucao": "Em Meu computador (ou no Windows Explorer), menu Ferramentas > Mapear unidade de rede. Escolher a letra S:, informar \\\\servidor\\documentos na pasta e marcar a opção de reconectar no logon. A unidade aparece em Meu computador ao lado dos discos locais."
+      },
+      {
+        "enunciado": "Um usuário apagou com Delete um arquivo do pen drive e outro do disco C:. Quais podem ser restaurados pela Lixeira?",
+        "resolucao": "Apenas o do disco C:. Arquivos excluídos de unidades removíveis, como o pen drive, não passam pela Lixeira e são excluídos definitivamente."
+      }
+    ],
+    "conceitos": [
+      { "t": "Barra de tarefas", "d": "Faixa com botão Iniciar, Inicialização Rápida, botões das janelas abertas e área de notificação." },
+      { "t": "Barra de status", "d": "Rodapé da janela com informações como número de objetos e tamanho da seleção." },
+      { "t": "Área de transferência", "d": "Espaço temporário que guarda o último item copiado ou recortado." },
+      { "t": "Atalho", "d": "Arquivo .lnk que aponta para outro item; excluí-lo não afeta o original." },
+      { "t": "Lixeira", "d": "Guarda itens excluídos de discos locais até ser esvaziada; Shift+Del a ignora." },
+      { "t": "Mapear unidade de rede", "d": "Associar uma letra de unidade a uma pasta compartilhada na rede." },
+      { "t": "Caminho UNC", "d": "Endereço de recurso de rede no formato \\\\computador\\compartilhamento." },
+      { "t": "Controle de Conta de Usuário (UAC)", "d": "Recurso do Vista que pede confirmação antes de ações administrativas." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Descrever sem consulta as partes de uma janela e da barra de tarefas do XP.",
+      "Explicar como compartilhar uma pasta, mapear uma unidade de rede e o que acontece ao arrastar arquivos entre unidades."
+    ]
+  },
+  "ce-linux": {
+    "objetivos": [
+      "Ao final, você consegue enunciar as quatro liberdades do software livre e explicar GPL e copyleft.",
+      "Ao final, você consegue distinguir software livre de gratuito, código aberto e domínio público.",
+      "Ao final, você consegue usar os comandos básicos do Linux para navegar, manipular arquivos, buscar, ver processos e uso de disco.",
+      "Ao final, você consegue ler e alterar permissões rwx nas notações simbólica e octal."
+    ],
+    "explicacao": [
+      "Software livre é aquele que respeita as liberdades do usuário. O conceito foi formulado por Richard Stallman, criador do projeto GNU e da Free Software Foundation (FSF). As quatro liberdades são: liberdade 0, executar o programa para qualquer propósito; liberdade 1, estudar como o programa funciona e adaptá-lo às suas necessidades; liberdade 2, redistribuir cópias; liberdade 3, modificar o programa e distribuir as versões modificadas. Para as liberdades 1 e 3, o acesso ao código-fonte é pré-requisito. “Livre” refere-se a liberdade, não a preço: software livre pode ser vendido, e um programa gratuito (freeware) pode ser proprietário.",
+      "Copyleft é o uso do direito autoral para garantir que o software e suas versões derivadas continuem livres: quem redistribui uma obra derivada deve fazê-lo sob as mesmas condições. A GNU GPL (General Public License) é a licença copyleft mais conhecida e é a licença do núcleo Linux. Licenças permissivas, como BSD, MIT e Apache, também são livres, mas permitem que derivados sejam fechados. Código aberto (open source) é um movimento próximo, que enfatiza as vantagens práticas do modelo de desenvolvimento aberto. Software livre não é o mesmo que domínio público, pois continua protegido por direito autoral e licença.",
+      "Linux é, em sentido estrito, o núcleo (kernel) criado por Linus Torvalds em 1991; o sistema completo, que combina esse núcleo com ferramentas do projeto GNU, é chamado GNU/Linux. As distribuições (Debian, Ubuntu, Fedora, Red Hat, Slackware, openSUSE, entre outras) reúnem núcleo, programas, gerenciador de pacotes e ambientes gráficos como GNOME e KDE. O Linux é multiusuário e multitarefa, diferencia maiúsculas de minúsculas em nomes de arquivos e comandos e organiza tudo em uma única árvore a partir da raiz /, com diretórios como /home (pastas dos usuários), /etc (configurações), /bin e /usr (programas), /tmp (temporários), /dev (dispositivos) e /root (pasta do superusuário). O administrador é o root; no prompt, $ indica usuário comum e # indica root; ~ representa o diretório pessoal. Arquivos cujo nome começa com ponto são ocultos.",
+      "Comandos de navegação e manipulação: pwd mostra o diretório atual; ls lista o conteúdo (ls -l em formato detalhado, ls -a incluindo ocultos); cd muda de diretório (cd .. sobe um nível, cd ou cd ~ vai ao diretório pessoal, cd - volta ao anterior); mkdir cria diretório (mkdir -p cria também os intermediários); rmdir remove diretório apenas se estiver vazio; rm remove arquivos (rm -r remove diretórios e seu conteúdo, rm -f não pede confirmação; rm -rf deve ser usado com extremo cuidado, pois não há lixeira); cp copia (cp -r para diretórios); mv move e também renomeia. Para ver conteúdo: cat exibe (e concatena) arquivos; more e less paginam a saída, e o less permite rolar para trás.",
+      "Busca e combinação de comandos: grep procura um padrão de texto dentro de arquivos ou da saída de outro comando (grep -i ignora maiúsculas e minúsculas, grep -r busca recursivamente, grep -v mostra as linhas que não casam); find procura arquivos e diretórios na árvore por nome, tipo, tamanho ou data, por exemplo find /home -name '*.txt'. A diferença é cobrada: grep olha o conteúdo, find localiza arquivos. O caractere | (pipe) envia a saída de um comando para outro (ps aux | grep firefox); > redireciona a saída para um arquivo, sobrescrevendo-o, e >> acrescenta ao final.",
+      "Permissões: ls -l mostra algo como -rwxr-xr--. O primeiro caractere é o tipo (- arquivo comum, d diretório, l link simbólico); depois vêm três trios, para o dono (u), o grupo (g) e os outros (o). Em cada trio, r é leitura, w é escrita e x é execução; em diretórios, r permite listar, w permite criar e apagar itens e x permite entrar no diretório. Na notação octal, r = 4, w = 2 e x = 1, somados por trio: 7 = rwx, 6 = rw-, 5 = r-x, 4 = r--, 0 = ---. Assim, 755 = rwxr-xr-x, 644 = rw-r--r-- e 700 = rwx------. O comando chmod altera permissões em octal (chmod 640 arquivo) ou de forma simbólica (chmod u+x script.sh, chmod go-w arquivo); chown altera o dono e, opcionalmente, o grupo (chown maria:financeiro arquivo), operação que em geral só o root pode fazer.",
+      "Processos e disco: ps lista processos (ps aux mostra todos, com usuário, PID e consumo); top mostra os processos e o uso de CPU e memória em tempo real; kill envia um sinal a um processo pelo número (PID), por padrão o sinal 15 (SIGTERM), que pede o encerramento, enquanto kill -9 envia o SIGKILL, que força o término imediato; killall encerra processos pelo nome. df mostra o espaço total, usado e livre de cada sistema de arquivos montado (df -h em unidades legíveis); du mostra quanto espaço arquivos e diretórios ocupam (du -sh pasta dá o total resumido).",
+      "Ajuda e administração: man exibe o manual de um comando (man ls) e muitos comandos aceitam --help. su troca de usuário (su - abre uma sessão como root, pedindo a senha do root); sudo executa um único comando com privilégios de outro usuário, normalmente o root, pedindo a senha do próprio usuário, desde que ele esteja autorizado no arquivo /etc/sudoers. tar empacota vários arquivos em um só: -c cria, -x extrai, -t lista, -v mostra o andamento, -f indica o nome do arquivo, -z comprime com gzip e -j com bzip2. Exemplos: tar -czvf backup.tar.gz documentos/ cria um pacote compactado; tar -xzvf backup.tar.gz extrai. O tar sozinho apenas agrupa; a compactação vem do gzip ou do bzip2."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Converta para octal a permissão rwxr-x--- e diga o que cada classe pode fazer.",
+        "resolucao": "Dono rwx = 4+2+1 = 7; grupo r-x = 4+0+1 = 5; outros --- = 0. Resultado: 750. O dono lê, altera e executa; o grupo lê e executa; os demais não têm acesso. Comando: chmod 750 arquivo."
+      },
+      {
+        "enunciado": "Como listar apenas as linhas com a palavra “erro”, sem diferenciar maiúsculas, no arquivo /var/log/syslog, e como descobrir onde estão todos os arquivos .conf em /etc?",
+        "resolucao": "grep -i erro /var/log/syslog procura o texto dentro do arquivo. find /etc -name '*.conf' localiza os arquivos pelo nome. grep trabalha com conteúdo; find, com nomes e atributos de arquivos."
+      },
+      {
+        "enunciado": "O comando rmdir projetos retornou erro informando que o diretório não está vazio. Como removê-lo?",
+        "resolucao": "rmdir só remove diretórios vazios. Para apagar o diretório com todo o conteúdo, usa-se rm -r projetos (com -f para não pedir confirmações). A remoção é definitiva, pois o terminal não usa lixeira."
+      }
+    ],
+    "conceitos": [
+      { "t": "Quatro liberdades", "d": "Executar, estudar e adaptar, redistribuir, e modificar e distribuir as modificações." },
+      { "t": "Copyleft", "d": "Mecanismo de licença que obriga as obras derivadas a manter as mesmas liberdades." },
+      { "t": "GPL", "d": "GNU General Public License; licença copyleft, usada pelo núcleo Linux." },
+      { "t": "Distribuição", "d": "Conjunto de núcleo Linux, programas, gerenciador de pacotes e ambiente gráfico (ex.: Debian, Ubuntu)." },
+      { "t": "root", "d": "Superusuário do Linux, com todos os privilégios." },
+      { "t": "chmod", "d": "Altera as permissões de arquivos e diretórios (octal ou simbólico)." },
+      { "t": "grep / find", "d": "grep busca texto no conteúdo; find localiza arquivos por nome e atributos." },
+      { "t": "sudo", "d": "Executa um comando com privilégios de outro usuário, em geral o root, com a senha do próprio usuário." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Enunciar sem consulta as quatro liberdades e a diferença entre software livre e gratuito.",
+      "Converter permissões entre rwx e octal e citar o comando adequado para cada tarefa básica (listar, copiar, buscar, ver processos, ver espaço em disco)."
+    ]
+  },
+  "ce-redes-conceitos": {
+    "objetivos": [
+      "Ao final, você consegue explicar o que é uma rede de computadores e seus elementos básicos.",
+      "Ao final, você consegue diferenciar placa de rede, cabos de par trançado e fibra, hub, switch, roteador, access point e modem pela função de cada um.",
+      "Ao final, você consegue descrever a configuração básica de roteadores e switches: endereço de gerência, DHCP, gateway e VLAN.",
+      "Ao final, você consegue comparar a tabela MAC do switch com a tabela de rotas do roteador."
+    ],
+    "explicacao": [
+      "Rede de computadores é um conjunto de dispositivos interligados que trocam dados e compartilham recursos, como arquivos, impressoras e acesso à internet. Seus elementos são os hosts (estações e servidores), os meios de transmissão (cabos ou ondas de rádio), os equipamentos de interconexão (switches, roteadores, pontos de acesso) e os protocolos, que são as regras da comunicação. Quanto à organização, a rede pode ser cliente-servidor, em que servidores oferecem serviços aos clientes, ou ponto a ponto (P2P), em que cada máquina atua como cliente e servidor. Quanto ao sentido da transmissão, há simplex (um só sentido), half-duplex (dois sentidos, um por vez) e full-duplex (dois sentidos ao mesmo tempo). A taxa de transmissão é medida em bits por segundo (bps, Mbps, Gbps).",
+      "A placa de rede (NIC) é a interface entre o computador e o meio de transmissão. Cada placa tem um endereço físico, o endereço MAC, de 48 bits (6 bytes), escrito em hexadecimal, como 00:1A:2B:3C:4D:5E; os três primeiros bytes identificam o fabricante. As redes cabeadas locais seguem o padrão Ethernet (IEEE 802.3) e as sem fio, o Wi-Fi (IEEE 802.11).",
+      "O cabo de par trançado tem quatro pares de fios trançados, o que reduz interferências, e usa conector RJ-45. Pode ser UTP (sem blindagem, o mais comum) ou STP (blindado). A categoria 5e suporta 1 Gbps, e o comprimento máximo de um segmento Ethernet em par trançado é de 100 metros. A crimpagem segue os padrões T568A ou T568B: o cabo direto usa o mesmo padrão nas duas pontas (computador–switch) e o crossover usa padrões diferentes, para ligar equipamentos iguais; muitos equipamentos atuais detectam e ajustam isso sozinhos (auto MDI-X). A fibra óptica transmite luz, é imune a interferência eletromagnética e alcança distâncias muito maiores; a multimodo tem núcleo mais largo e serve a distâncias menores, e a monomodo tem núcleo mais fino e serve a longas distâncias. O cabo coaxial foi usado em redes Ethernet antigas.",
+      "O hub trabalha na camada física: repete o sinal recebido em uma porta para todas as outras. Todos os dispositivos compartilham a banda e formam um único domínio de colisão. O switch trabalha na camada de enlace: aprende o endereço MAC de origem de cada quadro e anota em qual porta ele está, formando a tabela MAC (endereço MAC → porta). Com isso, encaminha cada quadro apenas para a porta do destino. Se o destino ainda não está na tabela, ou se o quadro é de broadcast, ele o envia para todas as portas, exceto a de origem (inundação). Cada porta do switch é um domínio de colisão separado e pode operar em full-duplex, mas, sem VLANs, todas as portas estão no mesmo domínio de broadcast.",
+      "O roteador trabalha na camada de rede e interliga redes diferentes, por exemplo a rede local e a internet. Ele encaminha pacotes com base no endereço IP de destino, consultando a tabela de rotas, que associa redes de destino (endereço e máscara) ao próximo salto (gateway) e à interface de saída. Quando nenhuma rota específica atende, usa-se a rota padrão (0.0.0.0/0). As rotas podem ser estáticas, cadastradas pelo administrador, ou dinâmicas, aprendidas por protocolos de roteamento como RIP e OSPF. O roteador não repassa broadcasts, por isso separa domínios de broadcast. Em resumo: a tabela MAC do switch diz em qual porta está um endereço físico dentro da rede local; a tabela de rotas do roteador diz para onde enviar um pacote destinado a outra rede. Nos roteadores domésticos, o NAT traduz os endereços privados da rede interna para o endereço público fornecido pelo provedor.",
+      "O access point (ponto de acesso) conecta dispositivos sem fio à rede cabeada. A rede sem fio é identificada pelo SSID, e a proteção recomendada é o WPA2 ou o mais recente WPA3; o WEP é considerado inseguro. O modem (modulador/demodulador) converte o sinal digital do computador no sinal adequado ao meio da operadora, como a linha telefônica (ADSL) ou o cabo, e faz a conversão inversa. O chamado roteador sem fio doméstico reúne em um só aparelho roteador, switch de poucas portas, access point e servidor DHCP; alguns também incluem o modem. O repetidor apenas regenera o sinal para ampliar o alcance.",
+      "Equipamentos gerenciáveis recebem um endereço IP de gerência, pelo qual são configurados por navegador (interface web), por Telnet ou, de forma segura e criptografada, por SSH; a porta de console, com cabo próprio, permite a configuração local mesmo sem rede. A primeira providência é trocar a senha padrão. Em um roteador doméstico, configura-se a interface WAN (dados do provedor), a interface LAN (endereço do roteador e máscara), o servidor DHCP, a rede sem fio (SSID, tipo de segurança e senha) e redirecionamentos de portas. Em um switch gerenciável, configura-se o IP de gerência, as VLANs, a velocidade e o modo duplex das portas e o espelhamento de porta. O switch não gerenciável não tem configuração: basta ligá-lo.",
+      "O DHCP distribui automaticamente aos hosts o endereço IP, a máscara, o gateway padrão e os servidores DNS, por um tempo de concessão. A troca segue quatro mensagens: Discover, Offer, Request e Acknowledge. O gateway padrão é o endereço do roteador na rede local, para onde o host envia todo pacote destinado a outra rede. Um host com gateway errado ou ausente continua falando com as máquinas da própria rede, mas não alcança a internet nem outras redes. No Windows, quando o host não obtém resposta do DHCP, ele se atribui um endereço automático da faixa 169.254.0.0/16 (APIPA), que só serve para a comunicação local.",
+      "VLAN (rede local virtual) divide logicamente um switch, ou um conjunto de switches, em redes separadas, cada uma com seu próprio domínio de broadcast, como se fossem switches diferentes. Hosts em VLANs distintas não se comunicam diretamente: é preciso um roteador ou um switch de camada 3. A porta de acesso pertence a uma única VLAN; a porta tronco (trunk) transporta várias VLANs entre switches, marcando cada quadro com o número da VLAN segundo o padrão IEEE 802.1Q. As VLANs organizam a rede por setor, reduzem o tráfego de broadcast e aumentam a segurança."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Um switch acabou de ser ligado e o computador A (porta 1) envia um quadro ao computador B (porta 5). O que o switch faz? E quando B responder?",
+        "resolucao": "Ao receber o quadro, o switch registra que o MAC de A está na porta 1. Como ainda não conhece B, envia o quadro para todas as portas, exceto a 1. Quando B responde, o switch registra B na porta 5 e, como já conhece A, envia a resposta só para a porta 1. A partir daí, o tráfego entre os dois é direcionado."
+      },
+      {
+        "enunciado": "Um usuário consegue abrir uma pasta compartilhada de outro computador da mesma sala, mas não acessa nenhum site. O ping para o servidor da sala funciona. Qual configuração conferir primeiro?",
+        "resolucao": "O gateway padrão. A comunicação local funciona, o que indica IP e máscara coerentes; o acesso a outras redes depende do gateway, que é o endereço do roteador. Em seguida, vale conferir o DNS, que é necessário para acessar sites pelo nome."
+      }
+    ],
+    "conceitos": [
+      {
+        "t": "Endereço MAC",
+        "d": "Endereço físico de 48 bits da placa de rede, escrito em hexadecimal."
+      },
+      {
+        "t": "Hub",
+        "d": "Equipamento de camada 1 que repete o sinal para todas as portas."
+      },
+      {
+        "t": "Switch",
+        "d": "Equipamento de camada 2 que encaminha quadros pela tabela de endereços MAC."
+      },
+      {
+        "t": "Roteador",
+        "d": "Equipamento de camada 3 que interliga redes e encaminha pacotes pela tabela de rotas."
+      },
+      {
+        "t": "Access point",
+        "d": "Ponto de acesso que liga dispositivos sem fio à rede cabeada."
+      },
+      {
+        "t": "Gateway padrão",
+        "d": "Endereço do roteador para o qual o host envia pacotes destinados a outras redes."
+      },
+      {
+        "t": "DHCP",
+        "d": "Serviço que atribui automaticamente IP, máscara, gateway e DNS aos hosts."
+      },
+      {
+        "t": "VLAN",
+        "d": "Divisão lógica de switches em domínios de broadcast separados."
+      }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Explicar sem consulta a diferença entre hub, switch e roteador, citando a camada e a tabela que cada um usa.",
+      "Listar as informações que o DHCP entrega e diagnosticar um host sem gateway configurado."
+    ]
+  },
+  "ce-redes-ip": {
+    "objetivos": [
+      "Ao final, você consegue identificar a classe de um endereço IPv4 e reconhecer endereços privados e especiais.",
+      "Ao final, você consegue converter máscaras entre notação decimal e CIDR.",
+      "Ao final, você consegue calcular endereço de rede, broadcast, faixa e quantidade de hosts válidos de uma sub-rede.",
+      "Ao final, você consegue dividir uma rede em sub-redes e ler um endereço IPv6 abreviado."
+    ],
+    "explicacao": [
+      "O endereço IPv4 tem 32 bits, escritos como quatro octetos em decimal (0 a 255) separados por pontos, como 192.168.10.77. Ele se divide em parte de rede e parte de host, e quem define a fronteira entre as duas é a máscara. Há cerca de 4,3 bilhões (2³²) de endereços IPv4, número que se esgotou com o crescimento da internet e motivou o NAT, o uso de endereços privados e o IPv6.",
+      "No endereçamento por classes, que ainda é cobrado, a classe é identificada pelo primeiro octeto. Classe A: 1 a 126, máscara padrão 255.0.0.0 (/8). Classe B: 128 a 191, máscara padrão 255.255.0.0 (/16). Classe C: 192 a 223, máscara padrão 255.255.255.0 (/24). Classe D: 224 a 239, reservada a multicast. Classe E: 240 a 255, experimental. A faixa 127.0.0.0/8 é de loopback (127.0.0.1 é o próprio computador), por isso não entra na classe A utilizável.",
+      "Endereços privados (RFC 1918) podem ser usados livremente dentro das organizações e não são roteados na internet, o que exige NAT para acesso externo: 10.0.0.0/8 (10.0.0.0 a 10.255.255.255), 172.16.0.0/12 (172.16.0.0 a 172.31.255.255) e 192.168.0.0/16 (192.168.0.0 a 192.168.255.255). Pegadinha frequente: 172.32.0.1 não é privado, e 192.169.0.1 também não. Outros endereços especiais: 169.254.0.0/16 (APIPA, atribuído automaticamente quando o DHCP falha), 0.0.0.0 (endereço indefinido e, com máscara /0, rota padrão) e 255.255.255.255 (broadcast limitado à rede local).",
+      "A máscara também tem 32 bits: uns contínuos à esquerda marcam a parte de rede e zeros marcam a parte de host. Na notação CIDR, escreve-se a quantidade de bits 1 após uma barra: 255.255.255.0 = /24. Um octeto de máscara só pode valer 0, 128, 192, 224, 240, 248, 252, 254 ou 255. Correspondências úteis no último octeto: /25 = .128, /26 = .192, /27 = .224, /28 = .240, /29 = .248 e /30 = .252. No terceiro octeto: /20 = 255.255.240.0, /22 = 255.255.252.0. O CIDR (Classless Inter-Domain Routing) dispensou as classes, permitindo máscaras de qualquer tamanho.",
+      "O endereço de rede é obtido pela operação E (AND) bit a bit entre o IP e a máscara: todos os bits de host ficam em 0. O broadcast da sub-rede tem todos os bits de host em 1. Os hosts válidos são os endereços entre eles. Com h bits de host, a sub-rede tem 2ʰ endereços e 2ʰ − 2 hosts válidos, pois o endereço de rede e o de broadcast não podem ser atribuídos a máquinas. Exemplos: /24 tem 8 bits de host, 256 endereços e 254 hosts; /28 tem 4 bits, 16 endereços e 14 hosts; /30 tem 2 bits, 4 endereços e 2 hosts, por isso é usada em enlaces entre dois roteadores.",
+      "O cálculo rápido usa o tamanho do bloco: no octeto em que a máscara não é 255 nem 0, o bloco é 256 menos o valor da máscara. As sub-redes começam nos múltiplos do bloco. Exemplo: 192.168.10.77/27. A máscara é 255.255.255.224 e o bloco é 256 − 224 = 32. Os múltiplos de 32 são 0, 32, 64, 96...; 77 está entre 64 e 95. Logo, a rede é 192.168.10.64, o broadcast é 192.168.10.95, os hosts válidos vão de .65 a .94, e são 30 hosts. Dois endereços estão na mesma sub-rede quando, aplicada a mesma máscara, resultam no mesmo endereço de rede.",
+      "Para criar sub-redes, tomam-se bits emprestados da parte de host: emprestar n bits gera 2ⁿ sub-redes. Dividir 192.168.1.0/24 em 4 sub-redes exige 2 bits, resultando em /26 (255.255.255.192), com blocos de 64 endereços: 192.168.1.0, .64, .128 e .192, cada uma com 62 hosts. Para atender a um número de hosts, escolhe-se o menor h tal que 2ʰ − 2 seja maior ou igual ao necessário: para 50 hosts, h = 6 (62 hosts), máscara /26. O mesmo método vale em outros octetos: em 172.16.45.10/20, a máscara é 255.255.240.0, o bloco no terceiro octeto é 16, e 45 está entre 32 e 47; a rede é 172.16.32.0 e o broadcast 172.16.47.255.",
+      "O IPv6 usa endereços de 128 bits, escritos em oito grupos de quatro dígitos hexadecimais separados por dois-pontos, como 2001:0db8:0000:0000:0000:0000:0000:0001. Há duas regras de abreviação: zeros à esquerda de cada grupo podem ser omitidos, e uma única sequência contínua de grupos zerados pode ser trocada por ::, apenas uma vez no endereço. O exemplo fica 2001:db8::1. O loopback é ::1, endereços que começam por fe80 são de enlace local (link-local) e as redes locais costumam usar prefixo /64. O IPv6 não tem broadcast, usando multicast em seu lugar, e convive com o IPv4 em redes de pilha dupla (dual stack)."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Calcule rede, broadcast, faixa de hosts e quantidade de hosts para 10.20.30.200/26.",
+        "resolucao": "/26 = 255.255.255.192; bloco = 256 − 192 = 64; múltiplos: 0, 64, 128, 192. 200 está no bloco que começa em 192. Rede 10.20.30.192, broadcast 10.20.30.255, hosts de 10.20.30.193 a 10.20.30.254, total 2⁶ − 2 = 62 hosts."
+      },
+      {
+        "enunciado": "Uma prefeitura recebeu a rede 192.168.50.0/24 e quer 8 sub-redes de mesmo tamanho. Qual máscara usar e quantos hosts cada uma terá?",
+        "resolucao": "8 = 2³, então emprestam-se 3 bits: /24 + 3 = /27, máscara 255.255.255.224. Sobram 5 bits de host: 2⁵ − 2 = 30 hosts por sub-rede. As redes começam em .0, .32, .64, .96, .128, .160, .192 e .224."
+      },
+      {
+        "enunciado": "Os endereços 192.168.5.20/28 e 192.168.5.30/28 estão na mesma sub-rede?",
+        "resolucao": "/28 tem bloco 16: sub-redes .0, .16, .32... Tanto 20 quanto 30 estão entre 16 e 31, então a rede de ambos é 192.168.5.16 (broadcast .31). Sim, estão na mesma sub-rede."
+      }
+    ],
+    "conceitos": [
+      {
+        "t": "IPv4",
+        "d": "Endereço de 32 bits em quatro octetos decimais, dividido em rede e host pela máscara."
+      },
+      {
+        "t": "Endereço privado",
+        "d": "Faixas 10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16, não roteadas na internet."
+      },
+      {
+        "t": "Máscara de sub-rede",
+        "d": "32 bits com uns na parte de rede e zeros na parte de host."
+      },
+      {
+        "t": "CIDR",
+        "d": "Notação /n com a quantidade de bits de rede; dispensa as classes."
+      },
+      {
+        "t": "Endereço de rede",
+        "d": "Primeiro endereço da sub-rede, com todos os bits de host em 0."
+      },
+      {
+        "t": "Broadcast",
+        "d": "Último endereço da sub-rede, com todos os bits de host em 1."
+      },
+      {
+        "t": "Hosts válidos",
+        "d": "2ʰ − 2, sendo h o número de bits de host."
+      },
+      {
+        "t": "IPv6",
+        "d": "Endereço de 128 bits em hexadecimal, abreviável com omissão de zeros e um único ::."
+      }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Calcular sem consulta rede, broadcast, faixa e quantidade de hosts de um endereço com máscara de /24 a /30.",
+      "Escolher a máscara para dividir uma rede em n sub-redes ou para atender a n hosts."
+    ]
+  },
+  "ce-redes-protocolos": {
+    "objetivos": [
+      "Ao final, você consegue citar as camadas dos modelos OSI e TCP/IP, suas funções e a correspondência entre eles.",
+      "Ao final, você consegue comparar as topologias barramento, estrela, anel e malha e classificar redes em LAN, MAN e WAN.",
+      "Ao final, você consegue explicar a função de TCP, UDP, IP, ICMP, ARP, DHCP e DNS.",
+      "Ao final, você consegue associar HTTP, HTTPS, FTP, SMTP, POP3, IMAP, SSH e Telnet às suas portas padrão e usos."
+    ],
+    "explicacao": [
+      "Arquitetura de rede é a organização da comunicação em camadas: cada camada oferece serviços à camada de cima e usa os serviços da camada de baixo. Protocolo é o conjunto de regras que define o formato das mensagens, a ordem da troca e as ações em cada caso. No envio, cada camada acrescenta seu cabeçalho aos dados recebidos da camada superior (encapsulamento); no destino, o processo é desfeito. As unidades de dados recebem nomes próprios: segmento (TCP) ou datagrama (UDP) na transporte, pacote na rede, quadro no enlace e bits na física.",
+      "O modelo OSI, da ISO, tem sete camadas, de baixo para cima. 1 Física: transmite bits como sinais elétricos, luminosos ou de rádio; define cabos e conectores; hub e repetidor atuam aqui. 2 Enlace: organiza os bits em quadros, usa endereços MAC e detecta erros; switch e bridge atuam aqui; exemplo: Ethernet. 3 Rede: endereçamento lógico e roteamento entre redes; IP e ICMP; o roteador atua aqui. 4 Transporte: comunicação fim a fim entre processos, com portas, segmentação e, no TCP, confiabilidade e controle de fluxo. 5 Sessão: estabelece, mantém e sincroniza o diálogo. 6 Apresentação: formato e codificação dos dados, compressão e criptografia. 7 Aplicação: serviços usados pelos programas, como HTTP, FTP, SMTP e DNS.",
+      "O modelo TCP/IP é o usado na prática pela internet. Na versão de quatro camadas: acesso à rede (ou interface de rede), que equivale às camadas física e de enlace do OSI; internet, com IP e ICMP (o ARP, que faz a ponte entre o IP e o endereço físico, costuma ser apresentado nessa camada ou entre ela e a de acesso à rede); transporte, com TCP e UDP; e aplicação, que reúne as funções de aplicação, apresentação e sessão do OSI. Alguns autores apresentam cinco camadas, separando física e enlace. Atenção: no TCP/IP não há camadas de sessão e apresentação próprias.",
+      "Topologia é a forma de ligação dos nós. Barramento: todos compartilham um único cabo, com terminadores nas pontas; é barata, mas há colisões e um rompimento no cabo derruba a rede. Estrela: todos se ligam a um equipamento central (hub ou switch); a falha de um cabo afeta só aquele nó, mas a falha do centro para a rede; é a topologia física das LANs Ethernet atuais. Anel: cada nó liga-se a dois vizinhos e os dados circulam em um sentido, passando pelos nós (como no Token Ring, que usa uma ficha para dar a vez de transmitir); a falha de um nó pode interromper o anel, salvo em anéis duplos. Malha: há vários caminhos entre os nós, com alta tolerância a falhas e custo alto; uma malha completa com n nós tem n(n − 1)/2 enlaces. Topologias que combinam essas formas são chamadas híbridas, e a topologia física pode diferir da lógica: uma rede com hub é estrela física e barramento lógico.",
+      "Pela abrangência geográfica, a rede pode ser PAN (pessoal, alguns metros, como o Bluetooth), LAN (local: uma sala, um prédio ou um campus, com altas taxas e administração própria), MAN (metropolitana: interliga pontos de uma cidade) ou WAN (longa distância: liga cidades, estados ou países, geralmente com enlaces de operadoras; a internet é a maior delas). A rede local sem fio é chamada WLAN.",
+      "Na camada de rede e abaixo dela: o IP endereça e encaminha os pacotes entre redes, sem conexão e sem garantia de entrega (melhor esforço). O ICMP transporta mensagens de controle e de erro, como destino inalcançável; é o protocolo usado pelo ping (eco de requisição e de resposta) e pelo traceroute. O ARP descobre o endereço MAC correspondente a um endereço IP da rede local, enviando uma pergunta em broadcast; ele não atravessa roteadores.",
+      "Na camada de transporte: o TCP é orientado à conexão, estabelecida pelo aperto de mão em três vias (SYN, SYN-ACK, ACK); é confiável, com confirmação, retransmissão, ordenação dos segmentos, controle de fluxo e de congestionamento; é usado por HTTP, e-mail, FTP e SSH. O UDP não estabelece conexão nem garante entrega ou ordem, mas tem menos sobrecarga e menor atraso; é usado em consultas DNS, DHCP, voz sobre IP, streaming e jogos. As portas (0 a 65535) identificam a aplicação; as de 0 a 1023 são as bem conhecidas.",
+      "Protocolos de aplicação e portas padrão: HTTP, 80 (páginas web); HTTPS, 443 (HTTP protegido por TLS/SSL); FTP, 21 para controle e 20 para dados no modo ativo; SSH, 22 (acesso remoto criptografado, também usado por SFTP e SCP); Telnet, 23 (acesso remoto sem criptografia, com senha em texto claro); SMTP, 25 (envio de e-mail; a submissão pelo cliente também usa a 587); POP3, 110 (baixa as mensagens para o cliente e normalmente as remove do servidor; 995 com SSL); IMAP, 143 (mantém as mensagens no servidor e sincroniza pastas entre dispositivos; 993 com SSL); DNS, 53 (traduz nomes em endereços IP; usa UDP nas consultas comuns e TCP em transferências de zona e respostas grandes); DHCP, 67 no servidor e 68 no cliente, sobre UDP.",
+      "Pegadinhas frequentes: SMTP envia, POP3 e IMAP recebem; ping usa ICMP, não TCP nem UDP; HTTPS usa a porta 443, não a 8080; DNS usa principalmente UDP; Telnet não deve ser usado para gerência por expor a senha; switch é camada 2, roteador camada 3 e hub camada 1; ARP liga IP a MAC, e não nome a IP, que é tarefa do DNS."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Um usuário digita www.exemplo.gov.br no navegador e a página abre com cadeado. Cite os protocolos envolvidos, na ordem, com as portas.",
+        "resolucao": "Primeiro o DNS (porta 53, normalmente sobre UDP) traduz o nome no IP do servidor. Se o destino está fora da rede local, o ARP descobre o MAC do gateway. Depois o navegador abre uma conexão TCP com o servidor na porta 443 e conversa em HTTPS (HTTP sobre TLS). O IP leva todos os pacotes até o destino."
+      },
+      {
+        "enunciado": "Um servidor de e-mail precisa permitir que os funcionários vejam as mesmas pastas no celular e no computador. POP3 ou IMAP?",
+        "resolucao": "IMAP (porta 143, ou 993 com SSL), porque mantém as mensagens e pastas no servidor e sincroniza o estado entre os dispositivos. O POP3 costuma baixar e apagar as mensagens do servidor. Para enviar, os dois cenários usam SMTP."
+      }
+    ],
+    "conceitos": [
+      {
+        "t": "Modelo OSI",
+        "d": "Modelo de referência em sete camadas: física, enlace, rede, transporte, sessão, apresentação e aplicação."
+      },
+      {
+        "t": "Modelo TCP/IP",
+        "d": "Arquitetura da internet: acesso à rede, internet, transporte e aplicação."
+      },
+      {
+        "t": "Topologia em estrela",
+        "d": "Nós ligados a um equipamento central; falha de um cabo afeta só um nó."
+      },
+      {
+        "t": "TCP",
+        "d": "Protocolo de transporte orientado à conexão e confiável."
+      },
+      {
+        "t": "UDP",
+        "d": "Protocolo de transporte sem conexão, sem garantia de entrega e com baixa sobrecarga."
+      },
+      {
+        "t": "ICMP",
+        "d": "Protocolo de mensagens de controle e erro, usado pelo ping."
+      },
+      {
+        "t": "ARP",
+        "d": "Descobre o endereço MAC a partir do endereço IP na rede local."
+      },
+      {
+        "t": "DNS",
+        "d": "Traduz nomes de domínio em endereços IP; porta 53."
+      }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Escrever sem consulta as sete camadas do OSI na ordem e a correspondência com as quatro do TCP/IP.",
+      "Associar sem erro os protocolos de aplicação do programa às portas padrão e ao transporte usado."
+    ]
+  },
+  "ce-estruturada": {
+    "objetivos": [
+      "Ao final, você consegue descrever as características da programação estruturada e as três estruturas de controle.",
+      "Ao final, você consegue explicar a divisão modular, a diferença entre função e procedimento e entre passagem por valor e por referência.",
+      "Ao final, você consegue aplicar refinamentos sucessivos (top-down) para detalhar um algoritmo.",
+      "Ao final, você consegue reconhecer coesão, acoplamento e símbolos básicos de fluxograma."
+    ],
+    "explicacao": [
+      "Algoritmo é uma sequência finita de passos bem definidos e não ambíguos que resolve um problema e termina. Pode ser representado por descrição narrativa, fluxograma, pseudocódigo (como o Portugol) ou diagrama de Nassi-Shneiderman (Chapin). No fluxograma, o símbolo oval indica início e fim (terminal), o retângulo indica processamento, o losango indica decisão e o paralelogramo indica entrada ou saída de dados.",
+      "A programação estruturada surgiu como resposta ao chamado “código espaguete”, cheio de desvios incondicionais (goto) que dificultavam a leitura e a manutenção. Duas referências são clássicas: o teorema de Böhm e Jacopini (1966), segundo o qual qualquer algoritmo pode ser escrito apenas com sequência, seleção e repetição, e a carta de Dijkstra de 1968 contra o uso do goto. Linguagens como Pascal e C favorecem esse estilo.",
+      "Características da programação estruturada: uso exclusivo das três estruturas de controle; cada estrutura tem uma única entrada e uma única saída; ausência (ou uso excepcional) de desvios incondicionais; divisão do programa em módulos; uso de variáveis locais; indentação que reflete a estrutura. O resultado é código mais legível, mais fácil de testar, de corrigir e de reutilizar.",
+      "As três estruturas de controle são: sequência, em que os comandos são executados um após o outro, na ordem escrita; seleção (ou decisão), com se–então, se–então–senão e a seleção múltipla escolha–caso; e repetição, com enquanto–faça (testa a condição antes e pode não executar nenhuma vez), repita–até (testa depois, executa ao menos uma vez e para quando a condição se torna verdadeira) e para–faça (controlada por contador, quando o número de repetições é conhecido).",
+      "Divisão modular é decompor o problema em módulos (subprogramas), cada um com uma tarefa bem definida, que podem ser escritos, testados e reutilizados separadamente. Há dois tipos de subprograma: a função, que devolve um valor a quem a chamou e pode ser usada em expressões, e o procedimento, que executa ações sem devolver valor (em C, tudo é função, e o procedimento corresponde à função do tipo void). A comunicação se dá por parâmetros. Na passagem por valor, o módulo recebe uma cópia e alterações não afetam a variável original; na passagem por referência, o módulo trabalha sobre a própria variável, e as alterações permanecem após a chamada.",
+      "Variáveis locais existem apenas dentro do módulo em que são declaradas e deixam de existir quando ele termina; variáveis globais são visíveis em todo o programa. Uma variável local com o mesmo nome de uma global a esconde dentro do módulo, sem alterá-la. Bons módulos têm alta coesão (fazem uma única coisa bem definida) e baixo acoplamento (dependem pouco uns dos outros, comunicando-se por parâmetros em vez de variáveis globais). Um módulo pode chamar a si mesmo (recursividade), desde que tenha um caso base que encerre as chamadas.",
+      "Refinamentos sucessivos, ou desenvolvimento top-down (proposto por Niklaus Wirth), consistem em começar pela visão geral da solução, em poucos passos amplos, e detalhar cada passo em passos menores, repetindo o processo até chegar a instruções que possam ser escritas diretamente na linguagem. Cada passo detalhado tende a virar um módulo. A abordagem oposta, bottom-up, parte de componentes básicos já prontos e os combina em partes maiores.",
+      "Exemplo de refinamento para “calcular a média da turma”: nível 1 — ler as notas, calcular a média, exibir o resultado. Nível 2 — ler as notas: repetir para cada aluno a leitura da nota e acumular a soma; calcular a média: dividir a soma pela quantidade de alunos, tratando a turma vazia. Nível 3 — escrever cada passo em pseudocódigo. Pegadinhas: estruturada não é sinônimo de orientada a objetos; top-down começa no geral, não no detalhe; o desejável é alta coesão com baixo acoplamento, nunca o contrário; repita–até sempre executa o bloco ao menos uma vez."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Dado o procedimento ajusta(a: inteiro por valor; b: inteiro por referência), cujo corpo faz a ← a + 1 e b ← b + 1, qual o valor de x e y depois de x ← 1; y ← 1; ajusta(x, y)?",
+        "resolucao": "x continua 1, porque a recebeu uma cópia; y passa a 2, porque b é a própria variável y. Resultado: x = 1 e y = 2."
+      },
+      {
+        "enunciado": "Refine em dois níveis o problema “emitir o boleto de IPTU de um imóvel”.",
+        "resolucao": "Nível 1: obter os dados do imóvel; calcular o imposto; gerar o boleto. Nível 2: obter os dados — ler a inscrição, buscar área e valor venal; calcular o imposto — aplicar a alíquota ao valor venal e somar taxas; gerar o boleto — montar o código de pagamento e imprimir. Cada item do nível 2 pode virar um módulo (função ou procedimento)."
+      }
+    ],
+    "conceitos": [
+      {
+        "t": "Programação estruturada",
+        "d": "Estilo que usa apenas sequência, seleção e repetição, com módulos e sem desvios incondicionais."
+      },
+      {
+        "t": "Sequência, seleção e repetição",
+        "d": "As três estruturas de controle suficientes para escrever qualquer algoritmo."
+      },
+      {
+        "t": "Módulo",
+        "d": "Subprograma com tarefa bem definida: função ou procedimento."
+      },
+      {
+        "t": "Função",
+        "d": "Subprograma que devolve um valor a quem o chamou."
+      },
+      {
+        "t": "Passagem por referência",
+        "d": "O módulo altera a própria variável recebida."
+      },
+      {
+        "t": "Coesão e acoplamento",
+        "d": "Desejável: alta coesão (uma tarefa por módulo) e baixo acoplamento (pouca dependência)."
+      },
+      {
+        "t": "Refinamentos sucessivos",
+        "d": "Detalhamento top-down, do geral para o específico."
+      }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Explicar sem consulta as três estruturas de controle e a diferença entre enquanto e repita–até.",
+      "Refinar um problema simples em dois níveis e prever o efeito de passagem por valor e por referência."
+    ]
+  },
+  "ce-algoritmos": {
+    "objetivos": [
+      "Ao final, você consegue escolher o tipo de dado adequado e distinguir variável de constante.",
+      "Ao final, você consegue avaliar expressões com operadores aritméticos, relacionais e lógicos, respeitando a precedência.",
+      "Ao final, você consegue manipular cadeias de caracteres em pseudocódigo e em C.",
+      "Ao final, você consegue fazer o teste de mesa de algoritmos com seleção e repetição."
+    ],
+    "explicacao": [
+      "Os tipos primitivos usados em pseudocódigo (Portugol) são: inteiro (números sem parte decimal), real (números com parte decimal), caractere ou literal (textos) e lógico (verdadeiro ou falso). Em C, os correspondentes mais comuns são int, float e double, e char (um caractere); em C, valores lógicos são representados por inteiros, em que 0 é falso e qualquer valor diferente de zero é verdadeiro. A partir dos primitivos formam-se tipos compostos, como vetores, matrizes e registros.",
+      "Variável é uma posição de memória identificada por um nome, com um tipo, cujo conteúdo pode mudar durante a execução; constante tem valor fixo, definido uma vez. Identificadores começam por letra (em C, também por sublinhado), não têm espaços nem acentos e não podem ser palavras reservadas; em C, maiúsculas e minúsculas são diferentes (total e Total são variáveis distintas). A atribuição é escrita com ← em Portugol e com = em C; em C, a comparação de igualdade é ==, e confundir os dois é erro clássico: if (x = 0) atribui 0 a x e o teste resulta falso. Entrada e saída usam leia e escreva em Portugol, e scanf e printf em C.",
+      "Operadores aritméticos: +, −, *, / e, para inteiros, div (quociente inteiro) e mod (resto). Ex.: 17 div 5 = 3 e 17 mod 5 = 2. Em C, a divisão entre inteiros trunca o resultado (7 / 2 vale 3), basta um operando real para obter 3.5 (7.0 / 2), e o resto é o operador %. Multiplicação, divisão e resto têm precedência sobre soma e subtração, e operadores de mesma precedência são avaliados da esquerda para a direita; parênteses alteram a ordem. Operadores relacionais: =, <>, >, <, >=, <= em Portugol; ==, !=, >, <, >=, <= em C.",
+      "Operadores lógicos: E (&& em C), verdadeiro só se ambos forem verdadeiros; OU (|| em C), verdadeiro se ao menos um for verdadeiro; NÃO (! em C), que inverte o valor. A precedência é NÃO, depois E, depois OU. Assim, V OU V E F vale V OU (V E F) = V OU F = verdadeiro; se fosse avaliado da esquerda para a direita, daria falso. Em C, && e || param assim que o resultado está definido (avaliação em curto-circuito).",
+      "Cadeia de caracteres (string) é uma sequência de caracteres, escrita entre aspas. As operações comuns são concatenação (juntar cadeias), cálculo do comprimento, extração de subcadeia e comparação. Em C, uma string é um vetor de char terminado pelo caractere nulo '\\0': a cadeia \"Contagem\" tem 8 caracteres e ocupa 9 bytes; strlen devolve 8, porque não conta o terminador. Os índices em C começam em 0, então nome[0] é o primeiro caractere. Copia-se com strcpy, concatena-se com strcat e compara-se com strcmp, que devolve 0 quando as cadeias são iguais; o operador == compara endereços, não o conteúdo.",
+      "Estruturas de seleção: se condição então ... fimse; se ... então ... senão ... fimse; seleções aninhadas; e escolha (seleção múltipla), equivalente ao switch do C. No switch, cada case deve terminar com break; sem ele, a execução continua nos casos seguintes (o chamado fall-through), até encontrar um break ou o fim do bloco. O default é executado quando nenhum case corresponde.",
+      "Estruturas de repetição: enquanto condição faça (testa antes; executa zero ou mais vezes), repita ... até condição (testa depois; executa ao menos uma vez e para quando a condição fica verdadeira) e para i de 1 até n faça (executa n vezes). Em C: while, do ... while e for (inicialização; condição; incremento). Atenção: o do ... while do C repete enquanto a condição é verdadeira, o oposto do repita–até. Contador é a variável que soma uma quantidade fixa a cada volta; acumulador soma valores variáveis e deve começar em 0 (soma) ou 1 (produto). Se a condição nunca muda, o laço é infinito.",
+      "Teste de mesa é a simulação manual do algoritmo: monta-se uma tabela com uma coluna por variável e anota-se cada alteração, passo a passo, até o fim, conferindo o que é exibido. Ele revela erros de lógica, como contadores mal inicializados, condições trocadas e laços que executam uma vez a mais ou a menos. Exemplo: s ← 0; para i de 1 até 4 faça s ← s + i * i; fimpara; escreva(s). A tabela fica i = 1, s = 1; i = 2, s = 5; i = 3, s = 14; i = 4, s = 30, e o algoritmo exibe 30."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Faça o teste de mesa: n ← 5; f ← 1; enquanto n > 1 faça f ← f * n; n ← n − 1; fimenquanto; escreva(f).",
+        "resolucao": "Início: n = 5, f = 1. Voltas: f = 5, n = 4; f = 20, n = 3; f = 60, n = 2; f = 120, n = 1. Como n > 1 é falso, o laço termina e o algoritmo exibe 120 (o fatorial de 5)."
+      },
+      {
+        "enunciado": "Em C, quais os valores de a e b após int a = 7 / 2; double b = 7.0 / 2;?",
+        "resolucao": "a vale 3, pois a divisão entre dois inteiros descarta a parte decimal. b vale 3.5, pois 7.0 é real e a divisão passa a ser real."
+      },
+      {
+        "enunciado": "Avalie em Portugol, com x = 4 e y = 9: NÃO (x > y) E (y mod 2 = 1).",
+        "resolucao": "x > y é falso; NÃO falso = verdadeiro. y mod 2 = 1, pois 9 é ímpar, logo a segunda parte é verdadeira. Verdadeiro E verdadeiro = verdadeiro."
+      }
+    ],
+    "conceitos": [
+      {
+        "t": "Tipos primitivos",
+        "d": "Inteiro, real, caractere (literal) e lógico."
+      },
+      {
+        "t": "Variável",
+        "d": "Posição de memória com nome e tipo, cujo valor pode mudar."
+      },
+      {
+        "t": "Constante",
+        "d": "Identificador com valor fixo durante a execução."
+      },
+      {
+        "t": "div e mod",
+        "d": "Quociente inteiro e resto da divisão inteira (em C, / entre inteiros e %)."
+      },
+      {
+        "t": "Precedência lógica",
+        "d": "NÃO, depois E, depois OU."
+      },
+      {
+        "t": "String em C",
+        "d": "Vetor de char terminado por '\\0'; strlen não conta o terminador."
+      },
+      {
+        "t": "Repita–até",
+        "d": "Repetição com teste no fim; executa ao menos uma vez e para quando a condição é verdadeira."
+      },
+      {
+        "t": "Teste de mesa",
+        "d": "Simulação manual do algoritmo, anotando os valores das variáveis passo a passo."
+      }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Fazer o teste de mesa de um laço com seleção sem errar o valor final.",
+      "Explicar a diferença entre = e == em C, entre div e / e entre repita–até e do ... while."
+    ]
+  }
+}

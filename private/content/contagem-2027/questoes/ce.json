@@ -1,0 +1,1514 @@
+[
+  {
+    "id": "ce-componentes-q01",
+    "topico": "ce-componentes",
+    "enunciado": "Assinale a alternativa que apresenta apenas dispositivos de entrada.",
+    "alternativas": [
+      "Teclado, monitor e scanner.",
+      "Impressora, caixa de som e projetor.",
+      "Mouse, microfone e leitor de código de barras.",
+      "Webcam, plotter e teclado."
+    ],
+    "gabarito": 2,
+    "comentario": "Mouse, microfone e leitor de código de barras levam dados do usuário ao computador, sendo todos de entrada. A primeira inclui o monitor, que é de saída. A segunda só tem dispositivos de saída. A quarta inclui o plotter, que é de saída.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-componentes-q02",
+    "topico": "ce-componentes",
+    "enunciado": "Qual dos dispositivos a seguir é classificado como de entrada e saída?",
+    "alternativas": [
+      "Tela sensível ao toque.",
+      "Scanner de mesa.",
+      "Projetor multimídia.",
+      "Mouse óptico sem fio."
+    ],
+    "gabarito": 0,
+    "comentario": "A touchscreen exibe imagens (saída) e recebe toques do usuário (entrada). O scanner é apenas de entrada. O projetor é apenas de saída. O mouse óptico é apenas de entrada.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-componentes-q03",
+    "topico": "ce-componentes",
+    "enunciado": "O programa gravado em memória não volátil de uma impressora, que controla o funcionamento básico do próprio equipamento e pode ser atualizado pelo fabricante, é denominado:",
+    "alternativas": [
+      "driver.",
+      "shareware.",
+      "utilitário.",
+      "firmware."
+    ],
+    "gabarito": 3,
+    "comentario": "Firmware é o software embutido em memória não volátil do próprio hardware. O driver roda no sistema operacional do computador, não no equipamento. Shareware é um modelo de distribuição de software para avaliação. Utilitário é software de manutenção e apoio executado no computador.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-componentes-q04",
+    "topico": "ce-componentes",
+    "enunciado": "Em um setor com quedas frequentes de energia, deseja-se que os computadores continuem funcionando por alguns minutos após a falta de luz, para que os usuários salvem seus trabalhos. O equipamento indicado é o:",
+    "alternativas": [
+      "estabilizador de tensão.",
+      "nobreak.",
+      "filtro de linha.",
+      "fonte ATX de maior potência."
+    ],
+    "gabarito": 1,
+    "comentario": "O nobreak tem bateria e mantém a alimentação durante a falta de energia. O estabilizador apenas corrige variações de tensão e não fornece energia na queda. O filtro de linha atenua ruídos e surtos, sem bateria. Uma fonte mais potente continua dependendo da energia da tomada.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-componentes-q05",
+    "topico": "ce-componentes",
+    "enunciado": "Uma empresa precisa imprimir notas em formulário contínuo, gerando cópias em papel carbonado. A impressora adequada a essa necessidade é a:",
+    "alternativas": [
+      "jato de tinta.",
+      "matricial.",
+      "laser.",
+      "térmica."
+    ],
+    "gabarito": 1,
+    "comentario": "A matricial é de impacto: as agulhas pressionam a fita contra o papel, o que permite a cópia em papel carbonado e o uso de formulário contínuo. A jato de tinta não exerce pressão sobre o papel. A laser fixa o toner por calor, sem impacto. A térmica depende de papel termossensível e também não produz cópias por impacto.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-componentes-q06",
+    "topico": "ce-componentes",
+    "enunciado": "Assinale a alternativa correta sobre recursos onboard e offboard.",
+    "alternativas": [
+      "A placa de vídeo offboard sempre utiliza parte da memória RAM principal, por não ter memória própria.",
+      "Onboard indica que o dispositivo é externo e ligado ao computador por cabo USB.",
+      "Placas offboard são encaixadas diretamente no soquete do processador.",
+      "O vídeo onboard costuma reservar parte da memória RAM principal para uso gráfico."
+    ],
+    "gabarito": 3,
+    "comentario": "O vídeo onboard, integrado à placa-mãe, normalmente compartilha a RAM principal. A primeira inverte os conceitos: a placa offboard costuma ter memória dedicada. A segunda está errada, pois onboard significa integrado à placa-mãe. A terceira está errada, pois placas offboard vão em slots de expansão, não no soquete do processador.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-componentes-q07",
+    "topico": "ce-componentes",
+    "enunciado": "Considere as afirmativas sobre periféricos.\nI. O pen drive é classificado como dispositivo de entrada e saída.\nII. A impressora multifuncional, por possuir scanner, é dispositivo de entrada e saída.\nIII. O monitor de vídeo comum, sem tela sensível ao toque, é dispositivo de entrada e saída, pois recebe sinais do computador.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I e II, apenas.",
+      "I e III, apenas.",
+      "II e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 0,
+    "comentario": "I e II estão corretas: o computador lê e grava no pen drive, e a multifuncional imprime e digitaliza. III está errada: o monitor comum apenas apresenta informações ao usuário e é de saída; receber sinais do computador é justamente o que caracteriza a saída. Por isso as alternativas que incluem III estão erradas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-componentes-q08",
+    "topico": "ce-componentes",
+    "enunciado": "Sobre os conceitos de Plug and Play e hot plug, assinale a alternativa correta.",
+    "alternativas": [
+      "São sinônimos: todo dispositivo Plug and Play pode ser conectado com o computador ligado.",
+      "Hot plug é o reconhecimento automático do driver, e Plug and Play é a conexão com o computador ligado.",
+      "Hot plug é conectar com o computador ligado; Plug and Play é o reconhecimento e a configuração automáticos.",
+      "Teclado e mouse PS/2 são o exemplo clássico de dispositivos hot plug, conectáveis com o micro ligado."
+    ],
+    "gabarito": 2,
+    "comentario": "A terceira define corretamente os dois conceitos. A primeira erra ao torná-los sinônimos, pois um dispositivo pode ser Plug and Play sem admitir conexão a quente. A segunda inverte as definições. A quarta está errada, pois a porta PS/2 não foi projetada para conexão com o computador ligado.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-componentes-q09",
+    "topico": "ce-componentes",
+    "enunciado": "Nas especificações de impressoras e scanners, a sigla dpi expressa:",
+    "alternativas": [
+      "a quantidade de páginas impressas por minuto.",
+      "a quantidade de pontos por polegada, indicando a resolução.",
+      "o tamanho da memória interna do equipamento.",
+      "a velocidade de transmissão de dados em bits por segundo."
+    ],
+    "gabarito": 1,
+    "comentario": "dpi (dots per inch) é pontos por polegada, medida de resolução. Páginas por minuto é ppm. Memória interna é medida em bytes (MB). Velocidade de transmissão é medida em bps.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-memorias-q01",
+    "topico": "ce-memorias",
+    "enunciado": "Considerando a convenção binária normalmente adotada em provas de informática, 1 KB corresponde a:",
+    "alternativas": [
+      "1000 bytes.",
+      "1024 bytes.",
+      "1024 bits.",
+      "1000 bits."
+    ],
+    "gabarito": 1,
+    "comentario": "Na convenção binária, 1 KB = 2¹⁰ = 1024 bytes (no padrão IEC, esse valor é escrito 1 KiB). 1000 bytes é o quilobyte decimal, não a convenção pedida. 1024 bits e 1000 bits confundem bit com byte; 1024 bits são 128 bytes.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-memorias-q02",
+    "topico": "ce-memorias",
+    "enunciado": "Qual das memórias a seguir perde todo o seu conteúdo quando o computador é desligado?",
+    "alternativas": [
+      "ROM.",
+      "EEPROM.",
+      "RAM.",
+      "Flash."
+    ],
+    "gabarito": 2,
+    "comentario": "A RAM é volátil e depende de energia para manter os dados. A ROM é não volátil. A EEPROM é não volátil e apagável eletricamente. A flash, usada em pen drives, também é não volátil.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-memorias-q03",
+    "topico": "ce-memorias",
+    "enunciado": "A memória não volátil que pode ser apagada e regravada eletricamente, byte a byte, sem ser retirada do circuito, é a:",
+    "alternativas": [
+      "EEPROM.",
+      "EPROM.",
+      "PROM.",
+      "DRAM."
+    ],
+    "gabarito": 0,
+    "comentario": "A EEPROM é apagada eletricamente, byte a byte, no próprio circuito. A EPROM é apagada por luz ultravioleta. A PROM só pode ser gravada uma vez. A DRAM é volátil, não atende ao enunciado.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-memorias-q04",
+    "topico": "ce-memorias",
+    "enunciado": "Assinale a alternativa correta sobre a memória cache.",
+    "alternativas": [
+      "É construída com DRAM, por ser mais rápida que a SRAM.",
+      "A cache L3 é a menor e mais rápida dos níveis, ficando mais próxima do núcleo.",
+      "Armazena permanentemente os programas instalados, mesmo sem energia.",
+      "Guarda cópias de dados e instruções usados recentemente, reduzindo os acessos à RAM, que é mais lenta."
+    ],
+    "gabarito": 3,
+    "comentario": "A cache explora a localidade e evita buscas na RAM, mais lenta. A primeira erra: a cache usa SRAM, que é mais rápida que a DRAM. A segunda descreve a L1, não a L3, que é a maior e mais lenta dos três níveis. A terceira erra porque a cache é volátil e temporária.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-memorias-q05",
+    "topico": "ce-memorias",
+    "enunciado": "Usando a convenção binária e desconsiderando o espaço ocupado pelo sistema de arquivos, quantos arquivos de 512 MB cabem, no máximo, em um pen drive de 4 GB?",
+    "alternativas": [
+      "4.",
+      "6.",
+      "7.",
+      "8."
+    ],
+    "gabarito": 3,
+    "comentario": "4 GB = 4 × 1024 MB = 4096 MB; 4096 ÷ 512 = 8. O valor 7 resulta de usar a base decimal (4000 ÷ 512 ≈ 7,8). 4 e 6 não correspondem a nenhuma conversão correta.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-memorias-q06",
+    "topico": "ce-memorias",
+    "enunciado": "Ao ligar o computador, o programa que testa os componentes (POST) e inicia a carga do sistema operacional está armazenado:",
+    "alternativas": [
+      "na memória cache L1 do processador.",
+      "em memória não volátil da placa-mãe (ROM ou flash), como firmware.",
+      "no arquivo de paginação do disco rígido.",
+      "na memória RAM, gravado pelo sistema na última inicialização."
+    ],
+    "gabarito": 1,
+    "comentario": "A BIOS é um firmware gravado em ROM ou flash na placa-mãe e executa o POST e o boot. A cache L1 é volátil e não guarda programas permanentes. O arquivo de paginação pertence ao sistema operacional, que ainda não foi carregado. A RAM perde o conteúdo ao desligar.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-memorias-q07",
+    "topico": "ce-memorias",
+    "enunciado": "Sobre tempo de acesso e ciclo de memória, assinale a alternativa correta.",
+    "alternativas": [
+      "Ciclo de memória é o tempo entre o pedido de leitura e a entrega do dado, sendo sempre menor que o tempo de acesso.",
+      "O tempo de acesso de um disco rígido é da ordem de nanossegundos, menor que o da RAM.",
+      "Ciclo de memória é o intervalo mínimo entre dois acessos sucessivos e é igual ou maior que o tempo de acesso.",
+      "Quanto maior o tempo de acesso, mais rápida é a memória."
+    ],
+    "gabarito": 2,
+    "comentario": "O ciclo inclui o acesso e o tempo de recuperação antes da operação seguinte, por isso é igual ou maior que o tempo de acesso. A primeira descreve o tempo de acesso e inverte a relação. A segunda erra: o HD tem tempo de acesso em milissegundos, muito maior que o da RAM. A quarta inverte a lógica, pois tempos menores indicam memória mais rápida.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-memorias-q08",
+    "topico": "ce-memorias",
+    "enunciado": "Assinale a alternativa correta sobre memória virtual.",
+    "alternativas": [
+      "Permite executar programas que exigem mais memória que a RAM física, mantendo no disco páginas não usadas.",
+      "Aumenta a velocidade do computador, pois o acesso ao disco é mais rápido que o acesso à RAM.",
+      "É implementada pela BIOS da placa-mãe e funciona de forma independente do sistema operacional.",
+      "Na paginação, a memória é dividida em páginas de tamanho variável, ajustadas a cada programa."
+    ],
+    "gabarito": 0,
+    "comentario": "A memória virtual estende a RAM com espaço em disco, trazendo páginas sob demanda. A segunda erra, pois o disco é muito mais lento que a RAM. A terceira erra, pois é o sistema operacional que gerencia a memória virtual (pagefile.sys no Windows, swap no Linux). A quarta erra, pois na paginação as páginas têm tamanho fixo.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-memorias-q09",
+    "topico": "ce-memorias",
+    "enunciado": "Considere as afirmativas.\nI. HD, SSD e DVD são exemplos de memória secundária (auxiliar).\nII. A SRAM precisa de refresh periódico e, por isso, é usada como memória principal.\nIII. A memória flash, usada em pen drives, é uma variação da EEPROM.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I, apenas.",
+      "II e III, apenas.",
+      "I e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 2,
+    "comentario": "I e III estão corretas: esses dispositivos são de armazenamento de massa, e a flash é uma EEPROM apagada em blocos. II está errada: quem precisa de refresh é a DRAM, usada na memória principal; a SRAM, sem refresh e mais rápida, é usada na cache. Assim, as alternativas que excluem III ou incluem II estão erradas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-cpu-q01",
+    "topico": "ce-cpu",
+    "enunciado": "A parte da CPU responsável por executar operações aritméticas e lógicas é a:",
+    "alternativas": [
+      "unidade lógica e aritmética (ULA).",
+      "unidade de controle (UC).",
+      "contador de programa (PC).",
+      "barramento de controle."
+    ],
+    "gabarito": 0,
+    "comentario": "A ULA realiza somas, subtrações, comparações e operações lógicas. A UC busca, decodifica e coordena, mas não calcula. O PC é um registrador que guarda o endereço da próxima instrução. O barramento de controle transporta sinais, não processa dados.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-cpu-q02",
+    "topico": "ce-cpu",
+    "enunciado": "O registrador que armazena o endereço da próxima instrução a ser buscada na memória é o:",
+    "alternativas": [
+      "acumulador.",
+      "registrador de instrução.",
+      "registrador de dados da memória.",
+      "contador de programa."
+    ],
+    "gabarito": 3,
+    "comentario": "O contador de programa (PC) aponta a próxima instrução. O acumulador guarda resultados da ULA. O registrador de instrução contém a instrução que está sendo executada. O registrador de dados da memória guarda o dado lido ou a ser escrito.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-cpu-q03",
+    "topico": "ce-cpu",
+    "enunciado": "Um processador opera com clock de 2 GHz. O período de cada ciclo de clock é de:",
+    "alternativas": [
+      "2 ns.",
+      "0,5 ns.",
+      "0,2 ns.",
+      "5 ns."
+    ],
+    "gabarito": 1,
+    "comentario": "Período = 1 / frequência = 1 / (2 × 10⁹) s = 0,5 × 10⁻⁹ s = 0,5 ns. 2 ns corresponderia a 500 MHz. 0,2 ns corresponderia a 5 GHz. 5 ns corresponderia a 200 MHz.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-cpu-q04",
+    "topico": "ce-cpu",
+    "enunciado": "Um processador possui barramento de endereços de 32 bits e memória endereçada por byte. A quantidade máxima de memória que ele pode endereçar é:",
+    "alternativas": [
+      "32 MB.",
+      "2 GB.",
+      "4 GB.",
+      "64 GB."
+    ],
+    "gabarito": 2,
+    "comentario": "Com 32 linhas há 2³² posições de 1 byte = 4.294.967.296 bytes = 4 GB. 32 MB confunde o número de bits com o tamanho da memória. 2 GB corresponderia a 31 bits. 64 GB corresponderia a 36 bits.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-cpu-q05",
+    "topico": "ce-cpu",
+    "enunciado": "Assinale a alternativa correta sobre barramentos de expansão.",
+    "alternativas": [
+      "O PCI Express é serial, ponto a ponto, organizado em pistas, e o slot x16 é usado por placas de vídeo.",
+      "O AGP é um barramento serial universal usado por teclados e mouses.",
+      "O PCI é serial e foi criado para substituir o PCI Express.",
+      "O ISA é o padrão mais recente e mais rápido entre os citados."
+    ],
+    "gabarito": 0,
+    "comentario": "O PCIe usa pistas seriais (x1 a x16) e o x16 recebe placas de vídeo. O AGP é porta paralela exclusiva para vídeo, e quem liga teclados e mouses de forma universal é o USB. O PCI é paralelo e antecede o PCI Express. O ISA é o mais antigo e lento.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-cpu-q06",
+    "topico": "ce-cpu",
+    "enunciado": "A sequência correta das etapas básicas do ciclo de instrução de um processador é:",
+    "alternativas": [
+      "decodificação, busca e execução.",
+      "busca, decodificação e execução.",
+      "execução, busca e decodificação.",
+      "busca, execução e decodificação."
+    ],
+    "gabarito": 1,
+    "comentario": "A instrução é primeiro buscada na memória, depois decodificada pela unidade de controle e então executada. Não é possível decodificar antes de buscar, como sugere a primeira. A terceira e a quarta executam antes de saber qual operação realizar.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-cpu-q07",
+    "topico": "ce-cpu",
+    "enunciado": "Sobre as arquiteturas RISC e CISC, assinale a alternativa correta.",
+    "alternativas": [
+      "CISC usa poucas instruções de tamanho fixo e acessa a memória apenas por instruções de carga e armazenamento.",
+      "RISC caracteriza-se por instruções complexas e de tamanho variável, como na família x86.",
+      "Os processadores ARM, comuns em celulares, são o exemplo típico de arquitetura CISC.",
+      "RISC usa um conjunto reduzido de instruções simples, geralmente de tamanho fixo, e muitos registradores."
+    ],
+    "gabarito": 3,
+    "comentario": "Instruções simples, tamanho fixo e muitos registradores caracterizam a RISC. A primeira atribui ao CISC características do RISC. A segunda atribui ao RISC características do CISC, típicas do x86. A terceira erra porque ARM é o exemplo clássico de RISC.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-cpu-q08",
+    "topico": "ce-cpu",
+    "enunciado": "Considere as afirmativas sobre o barramento do sistema.\nI. O barramento de dados é bidirecional.\nII. A largura do barramento de dados determina a quantidade máxima de memória endereçável.\nIII. Sinais de leitura, escrita e interrupção trafegam pelo barramento de controle.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I, apenas.",
+      "II, apenas.",
+      "I e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 2,
+    "comentario": "I e III estão corretas: os dados vão e vêm entre CPU, memória e E/S, e os sinais de comando trafegam no barramento de controle. II está errada: a memória endereçável depende do barramento de endereços. Assim, as alternativas que omitem III ou incluem II estão erradas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-cpu-q09",
+    "topico": "ce-cpu",
+    "enunciado": "Comparando as interfaces de disco IDE (PATA) e SATA, assinale a alternativa correta.",
+    "alternativas": [
+      "O SATA usa cabo plano de 80 vias com dois dispositivos por cabo.",
+      "O IDE é serial e dispensa a configuração de mestre e escravo.",
+      "O SATA exige configurar jumpers de mestre e escravo em cada disco.",
+      "O SATA é serial, com um dispositivo por cabo, enquanto o IDE é paralelo e admite mestre e escravo no mesmo canal."
+    ],
+    "gabarito": 3,
+    "comentario": "SATA é serial e ponto a ponto; IDE é paralelo, com dois dispositivos por canal. O cabo plano de 80 vias é do IDE, não do SATA. O IDE é paralelo e usa mestre e escravo. O SATA dispensa essa configuração.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-armazenamento-q01",
+    "topico": "ce-armazenamento",
+    "enunciado": "No contexto de sistemas operacionais, driver é:",
+    "alternativas": [
+      "a unidade física de leitura e gravação de discos, como o leitor de DVD.",
+      "um tipo de memória não volátil da placa-mãe que guarda a BIOS e o Setup.",
+      "o cabo ou conector que liga fisicamente o periférico à placa-mãe.",
+      "o software que permite ao sistema operacional controlar um dispositivo de hardware específico."
+    ],
+    "gabarito": 3,
+    "comentario": "Driver é software de controle de dispositivo. A primeira descreve um drive (unidade), confusão clássica com driver. A segunda descreve a ROM ou flash da placa-mãe. A terceira descreve um cabo ou conector, que é hardware.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-armazenamento-q02",
+    "topico": "ce-armazenamento",
+    "enunciado": "A porta que transmite 8 bits simultaneamente, identificada no sistema como LPT1 e tradicionalmente usada por impressoras, é a porta:",
+    "alternativas": [
+      "serial (COM1).",
+      "paralela.",
+      "PS/2 (mini-DIN).",
+      "USB (tipo A)."
+    ],
+    "gabarito": 1,
+    "comentario": "A porta paralela (LPT1, conector DB-25) envia 8 bits de uma vez e era a porta típica de impressoras. A serial transmite um bit por vez e aparece como COM1. A PS/2 (mini-DIN) liga teclado e mouse. O USB, com qualquer tipo de conector, é serial.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-armazenamento-q03",
+    "topico": "ce-armazenamento",
+    "enunciado": "Assinale a alternativa correta sobre o padrão USB.",
+    "alternativas": [
+      "É um barramento serial que permite conectar e desconectar dispositivos com o computador ligado e fornece energia a eles.",
+      "É um barramento paralelo, o que explica sua velocidade superior à da porta serial.",
+      "Admite apenas um dispositivo por controlador, sem possibilidade de uso de hubs.",
+      "Exige reiniciar o computador para reconhecer cada novo dispositivo conectado."
+    ],
+    "gabarito": 0,
+    "comentario": "O USB é serial, hot plug e alimenta os dispositivos. A segunda erra: o USB é serial, apesar de rápido. A terceira erra, pois admite até 127 dispositivos por controlador com hubs. A quarta erra, pois o USB é Plug and Play e dispensa reinicialização.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-armazenamento-q04",
+    "topico": "ce-armazenamento",
+    "enunciado": "Um usuário tenta copiar um arquivo de vídeo de 6 GB para um HD externo de 500 GB, vazio e formatado em FAT32, e a cópia falha. A causa mais provável é:",
+    "alternativas": [
+      "a falta de espaço livre no HD externo.",
+      "a conexão do HD externo em porta USB 2.0.",
+      "o limite de 4 GB por arquivo do sistema FAT32.",
+      "a incompatibilidade do FAT32 com arquivos de vídeo."
+    ],
+    "gabarito": 2,
+    "comentario": "O FAT32 não aceita arquivos com 4 GB ou mais, independentemente do espaço livre. Não falta espaço, pois o disco tem 500 GB vazios. A versão do USB afeta a velocidade, não o tamanho do arquivo. O FAT32 não restringe tipos de arquivo, apenas o tamanho.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-armazenamento-q05",
+    "topico": "ce-armazenamento",
+    "enunciado": "É um recurso do sistema de arquivos NTFS que não existe no FAT32:",
+    "alternativas": [
+      "definir permissões de acesso por usuário e grupo.",
+      "organizar arquivos em pastas e subpastas.",
+      "ser usado para formatar pen drives.",
+      "identificar o tipo do arquivo pela extensão do nome."
+    ],
+    "gabarito": 0,
+    "comentario": "O NTFS oferece permissões (listas de controle de acesso), além de journaling, compactação, criptografia e cotas. Pastas e subpastas existem também no FAT32. Pen drives podem ser formatados em FAT32 (é até o mais comum). Extensões no nome existem em ambos.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-armazenamento-q06",
+    "topico": "ce-armazenamento",
+    "enunciado": "No Linux, a principal diferença do sistema de arquivos ext3 em relação ao ext2 é que o ext3:",
+    "alternativas": [
+      "suporta permissões rwx, inexistentes no ext2.",
+      "é o formato próprio de mídias ópticas, como CD e DVD.",
+      "possui journaling, que o ext2 não tem.",
+      "não é compatível com o núcleo Linux."
+    ],
+    "gabarito": 2,
+    "comentario": "O ext3 é o ext2 acrescido de journaling. O ext2 já tinha permissões rwx. Mídias ópticas usam ISO 9660 e UDF. O ext3 é um sistema de arquivos nativo do Linux.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-armazenamento-q07",
+    "topico": "ce-armazenamento",
+    "enunciado": "A porta PS/2, com conector mini-DIN de 6 pinos, é tradicionalmente usada para conectar:",
+    "alternativas": [
+      "impressoras e scanners.",
+      "teclado e mouse.",
+      "monitores de vídeo.",
+      "discos rígidos externos."
+    ],
+    "gabarito": 1,
+    "comentario": "A PS/2 é a porta de teclado (roxa) e mouse (verde). Impressoras usavam a porta paralela. Monitores usam conectores de vídeo próprios, como o VGA. Discos externos usam USB ou outras interfaces de dados.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-armazenamento-q08",
+    "topico": "ce-armazenamento",
+    "enunciado": "Assinale a alternativa correta na comparação entre SSD e disco rígido (HD).",
+    "alternativas": [
+      "O SSD possui pratos magnéticos que giram em rotação maior que a do HD.",
+      "A desfragmentação periódica é essencial para manter o desempenho do SSD.",
+      "O HD tem tempo de acesso menor que o SSD, por não depender de memória flash.",
+      "O SSD usa memória flash, não tem partes móveis e tem tempo de acesso muito menor que o do HD."
+    ],
+    "gabarito": 3,
+    "comentario": "O SSD é de estado sólido, baseado em flash, e não depende de movimento mecânico. Pratos que giram são do HD. A desfragmentação não traz ganho no SSD e não é recomendada. O HD é mais lento no acesso justamente por suas partes mecânicas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-armazenamento-q09",
+    "topico": "ce-armazenamento",
+    "enunciado": "Considere as afirmativas.\nI. O DVD de camada simples armazena cerca de 4,7 GB.\nII. Uma mídia CD-R pode ser apagada e regravada diversas vezes.\nIII. A formatação rápida não apaga fisicamente os dados, que podem ser recuperados por programas especializados.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I e II, apenas.",
+      "I e III, apenas.",
+      "II e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 1,
+    "comentario": "I e III estão corretas. II está errada: o R indica mídia gravável uma única vez; a regravável é a RW. Por isso as alternativas que incluem II estão erradas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-software-q01",
+    "topico": "ce-software",
+    "enunciado": "Antivírus e compactadores de arquivos são classificados como software:",
+    "alternativas": [
+      "básico.",
+      "utilitário.",
+      "aplicativo.",
+      "firmware."
+    ],
+    "gabarito": 1,
+    "comentario": "São utilitários: apoiam a segurança e a manutenção do sistema. Software básico é o que faz o computador funcionar, como o sistema operacional. Aplicativo atende a tarefas finais do usuário, como editar textos. Firmware é gravado no próprio hardware.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-software-q02",
+    "topico": "ce-software",
+    "enunciado": "Assinale a alternativa que apresenta apenas softwares aplicativos.",
+    "alternativas": [
+      "Editor de texto, planilha eletrônica e navegador.",
+      "Sistema operacional, editor de texto e driver de vídeo.",
+      "Compilador, antivírus e planilha eletrônica.",
+      "Desfragmentador, navegador e núcleo (kernel)."
+    ],
+    "gabarito": 0,
+    "comentario": "Editor de texto, planilha e navegador resolvem tarefas do usuário. A segunda inclui sistema operacional e driver, que são básicos. A terceira inclui compilador (básico) e antivírus (utilitário). A quarta inclui desfragmentador (utilitário) e kernel (básico).",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-software-q03",
+    "topico": "ce-software",
+    "enunciado": "Sobre tradutores de linguagem, assinale a alternativa correta.",
+    "alternativas": [
+      "O interpretador gera um executável independente, que depois roda sem ele.",
+      "O compilador traduz e executa o programa instrução por instrução, a cada execução.",
+      "O compilador traduz todo o código-fonte para código de máquina antes da execução, gerando um executável.",
+      "O montador traduz programas escritos em linguagem de alto nível para bytecode Java."
+    ],
+    "gabarito": 2,
+    "comentario": "Essa é a definição de compilador. A primeira descreve o compilador, não o interpretador, que não gera executável independente. A segunda descreve o interpretador. A quarta erra, pois o montador traduz linguagem de montagem (assembly) para código de máquina.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-software-q04",
+    "topico": "ce-software",
+    "enunciado": "NÃO é função do sistema operacional:",
+    "alternativas": [
+      "gerenciar a memória principal e a memória virtual.",
+      "gerenciar os processos e o uso do processador.",
+      "controlar os dispositivos de entrada e saída por meio dos drivers.",
+      "formatar textos e calcular fórmulas em planilhas."
+    ],
+    "gabarito": 3,
+    "comentario": "Formatar textos e calcular planilhas são tarefas de aplicativos. As demais alternativas descrevem funções clássicas do sistema operacional: gerência de memória, de processos e de dispositivos.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-software-q05",
+    "topico": "ce-software",
+    "enunciado": "Sobre interfaces com o usuário, assinale a alternativa correta.",
+    "alternativas": [
+      "A interface gráfica exige que o usuário memorize e digite os comandos exatos.",
+      "A interface de linha de comando consome mais recursos que a gráfica, por exibir janelas e ícones.",
+      "A interface de linha de comando recebe comandos digitados e facilita a automação por scripts, como no Prompt de Comando e no bash.",
+      "A API é a interface gráfica com que o usuário final interage diretamente."
+    ],
+    "gabarito": 2,
+    "comentario": "A CLI é textual e favorece scripts. A primeira descreve a CLI, não a GUI, que usa janelas, ícones e menus. A segunda inverte: a CLI consome menos recursos e não exibe janelas e ícones. A quarta erra, pois a API é a interface entre programas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-software-q06",
+    "topico": "ce-software",
+    "enunciado": "O programa distribuído gratuitamente para avaliação por tempo limitado ou com recursos restritos, cujo uso completo depende de pagamento posterior, é chamado:",
+    "alternativas": [
+      "shareware.",
+      "freeware.",
+      "software livre.",
+      "software de domínio público."
+    ],
+    "gabarito": 0,
+    "comentario": "Shareware é o modelo de avaliação com pagamento posterior. Freeware é gratuito sem prazo de avaliação. Software livre é definido pelas liberdades de uso, estudo, modificação e redistribuição, não pelo preço. Domínio público é obra sem proteção de direito autoral.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-software-q07",
+    "topico": "ce-software",
+    "enunciado": "Sobre os componentes de um sistema operacional, assinale a alternativa correta.",
+    "alternativas": [
+      "O shell é a parte que lida diretamente com o hardware em modo privilegiado.",
+      "O kernel é o programa gráfico que exibe janelas e ícones ao usuário.",
+      "Kernel e shell são sinônimos e designam o sistema operacional completo.",
+      "O kernel é o núcleo que gerencia processos, memória e dispositivos, e o shell é o interpretador que recebe os comandos do usuário."
+    ],
+    "gabarito": 3,
+    "comentario": "Essa é a divisão correta de papéis. A primeira atribui ao shell o papel do kernel. A segunda confunde o kernel com a interface gráfica. A terceira erra, pois são componentes distintos.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-software-q08",
+    "topico": "ce-software",
+    "enunciado": "Em um sistema operacional com multitarefa preemptiva:",
+    "alternativas": [
+      "cada programa precisa liberar voluntariamente o processador para que outro seja executado.",
+      "o sistema operacional pode interromper um programa em execução para ceder o processador a outro.",
+      "apenas um programa pode estar carregado na memória por vez.",
+      "é obrigatório haver mais de um processador físico."
+    ],
+    "gabarito": 1,
+    "comentario": "Na preempção, o sistema operacional controla a troca de processos. A primeira descreve a multitarefa cooperativa. A terceira descreve um sistema monotarefa. A quarta confunde multitarefa com multiprocessamento; a multitarefa funciona com um só processador, alternando os programas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-software-q09",
+    "topico": "ce-software",
+    "enunciado": "Considere as afirmativas.\nI. Drivers de dispositivo e compiladores são classificados como software básico.\nII. O ligador (linker) junta módulos compilados e bibliotecas, gerando o programa executável.\nIII. Programas em Java são compilados diretamente para o código de máquina de cada processador, dispensando máquina virtual.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I e II, apenas.",
+      "I e III, apenas.",
+      "II e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 0,
+    "comentario": "I e II estão corretas. III está errada: o Java é compilado para bytecode, executado pela máquina virtual Java (JVM). Por isso as alternativas que incluem III estão erradas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-windows-q01",
+    "topico": "ce-windows",
+    "enunciado": "No Windows XP, em português, a combinação de teclas que exclui o arquivo selecionado sem enviá-lo para a Lixeira é:",
+    "alternativas": [
+      "Ctrl+Del.",
+      "Alt+Del.",
+      "Shift+Del.",
+      "Ctrl+X."
+    ],
+    "gabarito": 2,
+    "comentario": "Shift+Del exclui permanentemente, após confirmação. Ctrl+Del não é o atalho de exclusão permanente. Alt+Del não exclui arquivos no Windows Explorer. Ctrl+X recorta o arquivo para a área de transferência.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-windows-q02",
+    "topico": "ce-windows",
+    "enunciado": "Na janela do Windows Explorer do Windows XP, a área localizada no rodapé, que informa, por exemplo, a quantidade de objetos da pasta e o tamanho dos itens selecionados, é a barra de:",
+    "alternativas": [
+      "título.",
+      "menus.",
+      "endereços.",
+      "status."
+    ],
+    "gabarito": 3,
+    "comentario": "A barra de status fica no rodapé e mostra essas informações. A barra de título fica no topo, com o nome da janela e os botões Minimizar, Maximizar e Fechar. A barra de menus traz Arquivo, Editar, Exibir etc. A barra de endereços mostra o caminho da pasta atual.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-windows-q03",
+    "topico": "ce-windows",
+    "enunciado": "No Windows XP, para que a pasta compartilhada \\\\servidor\\publico apareça em Meu computador como a unidade Z:, o usuário deve, na janela Meu computador, utilizar a opção:",
+    "alternativas": [
+      "Ferramentas > Mapear unidade de rede.",
+      "Arquivo > Compartilhamento e segurança.",
+      "Exibir > Barras do Explorer.",
+      "Favoritos > Adicionar a Favoritos."
+    ],
+    "gabarito": 0,
+    "comentario": "Mapear unidade de rede associa uma letra a uma pasta compartilhada. Compartilhamento e segurança serve para compartilhar uma pasta local, não para acessar uma remota com letra. Barras do Explorer controla painéis laterais da janela. Favoritos guarda atalhos de navegação, sem criar unidade.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-windows-q04",
+    "topico": "ce-windows",
+    "enunciado": "No Windows XP, ao arrastar com o botão esquerdo do mouse, sem pressionar nenhuma tecla, um arquivo da unidade C: para o pen drive (unidade E:), ocorre:",
+    "alternativas": [
+      "a movimentação do arquivo, que deixa de existir em C:.",
+      "a cópia do arquivo, que permanece também em C:.",
+      "a criação de um atalho no pen drive.",
+      "a exclusão do original após confirmação."
+    ],
+    "gabarito": 1,
+    "comentario": "Entre unidades diferentes, arrastar copia. A movimentação é o padrão apenas dentro da mesma unidade (ou com Shift pressionado). O atalho só é criado ao escolher essa opção no arraste com o botão direito. Arrastar não exclui o original.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-windows-q05",
+    "topico": "ce-windows",
+    "enunciado": "Sobre atalhos no Windows XP e no Windows Vista, assinale a alternativa correta.",
+    "alternativas": [
+      "Excluir um atalho não exclui o arquivo original para o qual ele aponta.",
+      "Excluir um atalho remove também o arquivo original.",
+      "O atalho é uma cópia completa do arquivo original, com o mesmo tamanho.",
+      "Atalhos só podem ser criados na área de trabalho."
+    ],
+    "gabarito": 0,
+    "comentario": "O atalho é um pequeno arquivo .lnk que apenas aponta para o original; apagá-lo não afeta o destino. Por isso a segunda está errada. A terceira erra, pois o atalho é pequeno e não contém o arquivo. A quarta erra, pois atalhos podem ser criados em qualquer pasta.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-windows-q06",
+    "topico": "ce-windows",
+    "enunciado": "No Windows Explorer do Windows XP, um usuário seleciona o arquivo A e pressiona Ctrl+X; em seguida seleciona o arquivo B e pressiona Ctrl+C; por fim, abre outra pasta e pressiona Ctrl+V. O resultado é:",
+    "alternativas": [
+      "os dois arquivos são colados na pasta de destino, A movido e B copiado.",
+      "apenas o arquivo A é movido para a pasta de destino.",
+      "apenas o arquivo B é copiado para a pasta de destino, e A permanece no local original.",
+      "nenhum arquivo é colado, pois Ctrl+X e Ctrl+C se anulam."
+    ],
+    "gabarito": 2,
+    "comentario": "A área de transferência guarda um item por vez: o Ctrl+C de B substitui o recorte de A, que só seria movido ao colar. Por isso não há colagem dupla, como afirma a primeira. A segunda ignora que B substituiu A. A quarta erra, pois as operações não se anulam; vale a última.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-windows-q07",
+    "topico": "ce-windows",
+    "enunciado": "No Painel de Controle do Windows Vista, o item que corresponde ao “Adicionar ou remover programas” do Windows XP é:",
+    "alternativas": [
+      "Central de Rede e Compartilhamento.",
+      "Programas e Recursos.",
+      "Personalização.",
+      "Central de Segurança do Windows."
+    ],
+    "gabarito": 1,
+    "comentario": "No Vista, programas são desinstalados em Programas e Recursos. A Central de Rede e Compartilhamento trata das conexões de rede. Personalização reúne aparência, temas e vídeo. A Central de Segurança mostra o estado de firewall, atualizações e proteção.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-windows-q08",
+    "topico": "ce-windows",
+    "enunciado": "No Windows XP, qual dos nomes de arquivo a seguir é inválido?",
+    "alternativas": [
+      "relatorio_2007-final.doc",
+      "ata de reunião (1).txt",
+      "contas.marco.xls",
+      "resumo:junho?.txt"
+    ],
+    "gabarito": 3,
+    "comentario": "Os caracteres : e ? estão entre os proibidos em nomes de arquivo (\\ / : * ? \" < > |). Sublinhado e hífen são permitidos. Espaços, acentos e parênteses são permitidos. Mais de um ponto no nome também é permitido; a extensão é o trecho após o último ponto.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-windows-q09",
+    "topico": "ce-windows",
+    "enunciado": "Considere as afirmativas sobre o Windows XP.\nI. Um arquivo excluído de um pen drive com a tecla Delete vai para a Lixeira e pode ser restaurado.\nII. Um compartilhamento cujo nome termina com o caractere $ não aparece na navegação comum pela rede.\nIII. A combinação Windows+D exibe a área de trabalho.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I e II, apenas.",
+      "I e III, apenas.",
+      "II e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 2,
+    "comentario": "II e III estão corretas. I está errada: itens excluídos de unidades removíveis, como o pen drive, não passam pela Lixeira. Por isso as alternativas que incluem I estão erradas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-linux-q01",
+    "topico": "ce-linux",
+    "enunciado": "NÃO é uma das quatro liberdades que definem o software livre:",
+    "alternativas": [
+      "obter o programa obrigatoriamente sem custo.",
+      "executar o programa para qualquer propósito.",
+      "estudar como o programa funciona e adaptá-lo.",
+      "redistribuir cópias do programa."
+    ],
+    "gabarito": 0,
+    "comentario": "Software livre trata de liberdade, não de preço; ele pode ser vendido. Executar para qualquer propósito é a liberdade 0. Estudar e adaptar é a liberdade 1. Redistribuir cópias é a liberdade 2.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-linux-q02",
+    "topico": "ce-linux",
+    "enunciado": "No Linux, o comando que exibe o caminho completo do diretório de trabalho atual é:",
+    "alternativas": [
+      "ls",
+      "cd",
+      "pwd",
+      "mkdir"
+    ],
+    "gabarito": 2,
+    "comentario": "pwd (print working directory) mostra o diretório atual. ls lista o conteúdo do diretório. cd muda de diretório. mkdir cria diretórios.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-linux-q03",
+    "topico": "ce-linux",
+    "enunciado": "Após a execução de chmod 754 relatorio.sh, as permissões do arquivo, exibidas por ls -l, serão:",
+    "alternativas": [
+      "rwxr--r-x",
+      "rwxr-xr--",
+      "rwxrwxr--",
+      "rw-r-xr--"
+    ],
+    "gabarito": 1,
+    "comentario": "7 = rwx (dono), 5 = r-x (grupo) e 4 = r-- (outros). A primeira corresponde a 745. A terceira corresponde a 774. A quarta corresponde a 654.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-linux-q04",
+    "topico": "ce-linux",
+    "enunciado": "Para localizar, a partir do diretório /home, todos os arquivos com extensão .pdf, o comando adequado é:",
+    "alternativas": [
+      "grep /home .pdf",
+      "ls -l /home .pdf",
+      "cat /home/*.pdf",
+      "find /home -name '*.pdf'"
+    ],
+    "gabarito": 3,
+    "comentario": "find percorre a árvore a partir de /home e filtra pelo nome. grep busca texto dentro de arquivos, não localiza arquivos por nome. ls -l lista detalhes do diretório informado sem busca recursiva por padrão. cat exibe conteúdo e só pegaria PDFs diretamente em /home.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-linux-q05",
+    "topico": "ce-linux",
+    "enunciado": "Sobre copyleft e a licença GNU GPL, assinale a alternativa correta.",
+    "alternativas": [
+      "Copyleft significa renunciar ao direito autoral, colocando o programa em domínio público.",
+      "A GPL é copyleft: derivados distribuídos devem manter as mesmas liberdades.",
+      "A GPL proíbe a venda de cópias do programa e de suas versões modificadas.",
+      "Licenças permissivas, como MIT e BSD, são exemplos de copyleft."
+    ],
+    "gabarito": 1,
+    "comentario": "A GPL usa o direito autoral para exigir que derivados permaneçam livres. A primeira erra, pois o copyleft depende do direito autoral, não renuncia a ele. A terceira erra, pois a GPL permite vender cópias, originais ou modificadas. A quarta erra, pois MIT e BSD são permissivas e admitem derivados fechados.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-linux-q06",
+    "topico": "ce-linux",
+    "enunciado": "Um usuário executa rmdir fotos e recebe a mensagem de que o diretório não está vazio. Para remover o diretório fotos com todo o seu conteúdo, ele deve usar:",
+    "alternativas": [
+      "rmdir -a fotos",
+      "del /s fotos",
+      "mkdir -r fotos",
+      "rm -r fotos"
+    ],
+    "gabarito": 3,
+    "comentario": "rm -r remove recursivamente o diretório e o conteúdo. rmdir não tem opção para apagar diretórios com conteúdo. del /s é sintaxe do Prompt de Comando do Windows. mkdir cria diretórios.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-linux-q07",
+    "topico": "ce-linux",
+    "enunciado": "O comando tar -czvf copia.tar.gz docs/ :",
+    "alternativas": [
+      "cria copia.tar.gz, compactado com gzip, com o conteúdo de docs, listando o andamento.",
+      "extrai o conteúdo de copia.tar.gz para o diretório docs, exibindo cada arquivo.",
+      "lista na tela o conteúdo de copia.tar.gz, sem extrair nem alterar os arquivos.",
+      "cria copia.tar.gz compactado com bzip2 e apaga o diretório docs original."
+    ],
+    "gabarito": 0,
+    "comentario": "-c cria, -z usa gzip, -v mostra o andamento e -f indica o arquivo. Extrair seria -x. Listar seria -t. bzip2 seria -j, e o tar não apaga o diretório de origem.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-linux-q08",
+    "topico": "ce-linux",
+    "enunciado": "Sobre comandos de administração no Linux, assinale a alternativa correta.",
+    "alternativas": [
+      "du mostra o espaço livre de cada sistema de arquivos montado.",
+      "kill -9 pede ao processo que encerre normalmente, permitindo que ele salve seus dados antes.",
+      "df -h mostra o espaço total, usado e livre dos sistemas de arquivos em unidades legíveis.",
+      "top lista o conteúdo de um diretório em ordem de tamanho."
+    ],
+    "gabarito": 2,
+    "comentario": "df -h resume o uso dos sistemas de arquivos em KB, MB e GB. A primeira descreve o df; o du mostra o espaço ocupado por arquivos e diretórios. A segunda erra, pois kill -9 (SIGKILL) força o término imediato; o pedido de encerramento é o sinal padrão SIGTERM. A quarta erra, pois top monitora processos em tempo real.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-linux-q09",
+    "topico": "ce-linux",
+    "enunciado": "Considere as afirmativas sobre o Linux.\nI. O sudo executa um comando com privilégios de outro usuário, em geral o root, pedindo a senha do próprio usuário autorizado.\nII. Os arquivos Relatorio.txt e relatorio.txt podem coexistir no mesmo diretório.\nIII. Arquivos ocultos são aqueles cujo nome termina com o caractere til (~).\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I, apenas.",
+      "I e III, apenas.",
+      "II e III, apenas.",
+      "I e II, apenas."
+    ],
+    "gabarito": 3,
+    "comentario": "I e II estão corretas: o sudo usa a senha do próprio usuário, conforme o /etc/sudoers, e o Linux diferencia maiúsculas de minúsculas. III está errada: ocultos são os arquivos cujo nome começa com ponto. Assim, a alternativa que omite II e as que incluem III estão erradas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-conceitos-q01",
+    "topico": "ce-redes-conceitos",
+    "enunciado": "O equipamento que interliga redes diferentes, como a rede local e a internet, escolhendo o caminho dos pacotes pelo endereço IP de destino, é o:",
+    "alternativas": [
+      "hub.",
+      "roteador.",
+      "switch não gerenciável.",
+      "access point."
+    ],
+    "gabarito": 1,
+    "comentario": "O roteador atua na camada de rede e encaminha pacotes pela tabela de rotas. O hub apenas repete sinais na camada física. O switch encaminha quadros pelo endereço MAC dentro da rede local. O access point conecta dispositivos sem fio à rede, sem rotear entre redes.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-conceitos-q02",
+    "topico": "ce-redes-conceitos",
+    "enunciado": "Em uma rede local, o equipamento que repete o sinal recebido em uma porta para todas as demais portas, formando um único domínio de colisão, é o:",
+    "alternativas": [
+      "switch.",
+      "roteador.",
+      "modem.",
+      "hub."
+    ],
+    "gabarito": 3,
+    "comentario": "O hub trabalha na camada física e replica o sinal para todas as portas. O switch envia cada quadro só à porta do destino quando o conhece. O roteador interliga redes e não repassa broadcasts. O modem converte sinais entre o computador e o meio da operadora.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-conceitos-q03",
+    "topico": "ce-redes-conceitos",
+    "enunciado": "Um switch recebe na porta 3 um quadro destinado a um endereço MAC que ainda não consta em sua tabela. O comportamento padrão do switch é:",
+    "alternativas": [
+      "enviar o quadro para todas as portas, exceto a porta 3.",
+      "descartar o quadro e devolver mensagem de erro à origem.",
+      "encaminhar o quadro ao gateway padrão da rede.",
+      "guardar o quadro até que o destino envie algum tráfego."
+    ],
+    "gabarito": 0,
+    "comentario": "Sem saber onde está o destino, o switch inunda o quadro para todas as portas, menos a de origem, e registra o MAC de origem na porta 3. Ele não descarta quadros por destino desconhecido. O gateway é usado pelos hosts para alcançar outras redes, não pelo switch para quadros locais. O switch não retém quadros à espera do destino.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-conceitos-q04",
+    "topico": "ce-redes-conceitos",
+    "enunciado": "Para ligar dois prédios distantes cerca de 800 metros, em um ambiente com forte interferência eletromagnética de motores industriais, o meio de transmissão mais indicado é:",
+    "alternativas": [
+      "o cabo UTP de categoria 5e.",
+      "o cabo coaxial fino.",
+      "a fibra óptica.",
+      "o cabo STP de categoria 5e."
+    ],
+    "gabarito": 2,
+    "comentario": "A fibra transmite luz, é imune a interferência eletromagnética e alcança longas distâncias. O UTP sofre interferência e o segmento Ethernet em par trançado é limitado a 100 metros. O coaxial fino é tecnologia antiga, sujeita a interferência e com alcance limitado. O STP é blindado, mas continua limitado a 100 metros por segmento.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-conceitos-q05",
+    "topico": "ce-redes-conceitos",
+    "enunciado": "Um computador acessa normalmente as impressoras e pastas compartilhadas da própria rede local, mas não consegue acessar nenhum endereço da internet, nem digitando o IP do site. A causa mais provável é:",
+    "alternativas": [
+      "endereço MAC duplicado na placa de rede.",
+      "cabo de rede rompido entre o computador e o switch.",
+      "máscara de sub-rede diferente da usada pelo restante da rede.",
+      "gateway padrão ausente ou configurado incorretamente."
+    ],
+    "gabarito": 3,
+    "comentario": "Sem gateway correto, o host fala com a rede local mas não sabe para onde mandar pacotes de outras redes. Se o cabo estivesse rompido, nem a rede local funcionaria. Um MAC duplicado causaria falhas também na comunicação local. Uma máscara errada tende a afetar a comunicação com parte da própria rede, e o enunciado diz que o acesso local está normal.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-conceitos-q06",
+    "topico": "ce-redes-conceitos",
+    "enunciado": "NÃO é uma informação normalmente fornecida pelo servidor DHCP ao cliente:",
+    "alternativas": [
+      "o endereço IP e a máscara de sub-rede.",
+      "o endereço MAC da placa de rede do cliente.",
+      "o endereço do gateway padrão.",
+      "os endereços dos servidores DNS."
+    ],
+    "gabarito": 1,
+    "comentario": "O MAC é gravado na própria placa e é enviado pelo cliente ao pedir a configuração, não recebido do servidor. IP e máscara são a configuração básica entregue pelo DHCP. O gateway padrão também é distribuído pelo DHCP. Os servidores DNS são outra informação usual da concessão.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-conceitos-q07",
+    "topico": "ce-redes-conceitos",
+    "enunciado": "Um administrador criou, em um mesmo switch gerenciável, a VLAN 10 para o setor financeiro e a VLAN 20 para o atendimento. Assinale a alternativa correta.",
+    "alternativas": [
+      "Os hosts das duas VLANs continuam no mesmo domínio de broadcast, pois estão no mesmo switch.",
+      "Os hosts das duas VLANs só se comunicam por meio de um roteador ou de um switch de camada 3.",
+      "Cada porta de acesso do switch pode pertencer às duas VLANs ao mesmo tempo, sem marcação.",
+      "VLANs só podem ser criadas quando os setores ficam em switches fisicamente separados."
+    ],
+    "gabarito": 1,
+    "comentario": "Cada VLAN é um domínio de broadcast separado, e o tráfego entre elas exige roteamento. A primeira erra, pois a VLAN separa justamente os domínios de broadcast. A terceira erra, pois a porta de acesso pertence a uma única VLAN; várias VLANs passam por porta tronco com marcação 802.1Q. A quarta erra, pois a VLAN é uma divisão lógica que dispensa switches separados.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-conceitos-q08",
+    "topico": "ce-redes-conceitos",
+    "enunciado": "Considere as afirmativas.\nI. A tabela MAC do switch associa endereços físicos às portas pelas quais eles são alcançados.\nII. A tabela de rotas do roteador associa redes de destino ao próximo salto ou à interface de saída.\nIII. A rota padrão (0.0.0.0/0) é consultada antes de qualquer rota específica.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I, apenas.",
+      "I e II, apenas.",
+      "II e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 1,
+    "comentario": "I e II descrevem corretamente as duas tabelas. III está errada: a rota padrão é usada apenas quando nenhuma rota mais específica atende ao destino. Por isso a alternativa que exclui II e as que incluem III estão erradas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-conceitos-q09",
+    "topico": "ce-redes-conceitos",
+    "enunciado": "Para administrar remotamente um switch gerenciável pelo seu endereço IP de gerência, com a comunicação e a senha protegidas por criptografia, deve-se usar:",
+    "alternativas": [
+      "Telnet.",
+      "HTTP sem TLS.",
+      "SSH.",
+      "FTP."
+    ],
+    "gabarito": 2,
+    "comentario": "O SSH oferece acesso remoto por linha de comando com criptografia. O Telnet transmite tudo em texto claro, inclusive a senha. O HTTP sem TLS também trafega sem criptografia. O FTP é para transferência de arquivos e envia credenciais em texto claro.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-ip-q01",
+    "topico": "ce-redes-ip",
+    "enunciado": "De acordo com a RFC 1918, qual dos endereços a seguir é privado?",
+    "alternativas": [
+      "172.32.10.5",
+      "192.169.1.20",
+      "172.20.5.1",
+      "11.0.0.1"
+    ],
+    "gabarito": 2,
+    "comentario": "172.20.5.1 está na faixa 172.16.0.0 a 172.31.255.255. 172.32.10.5 fica logo acima dessa faixa e é público. 192.169.1.20 não pertence a 192.168.0.0/16. 11.0.0.1 não pertence a 10.0.0.0/8.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-ip-q02",
+    "topico": "ce-redes-ip",
+    "enunciado": "A máscara de sub-rede 255.255.255.0 corresponde, na notação CIDR, a:",
+    "alternativas": [
+      "/24",
+      "/8",
+      "/16",
+      "/32"
+    ],
+    "gabarito": 0,
+    "comentario": "255.255.255.0 tem 24 bits iguais a 1. /8 corresponde a 255.0.0.0. /16 corresponde a 255.255.0.0. /32 corresponde a 255.255.255.255, que identifica um único host.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-ip-q03",
+    "topico": "ce-redes-ip",
+    "enunciado": "Um host tem o endereço 192.168.10.77/27. O endereço de rede e o endereço de broadcast da sua sub-rede são, respectivamente:",
+    "alternativas": [
+      "192.168.10.32 e 192.168.10.63",
+      "192.168.10.64 e 192.168.10.95",
+      "192.168.10.64 e 192.168.10.127",
+      "192.168.10.0 e 192.168.10.255"
+    ],
+    "gabarito": 1,
+    "comentario": "/27 = 255.255.255.224, bloco de 32; 77 está entre 64 e 95. A primeira é a sub-rede anterior, que vai de .32 a .63. A terceira usa o broadcast de um bloco /26 (64 a 127). A quarta ignora a sub-rede e usa os limites de um /24.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-ip-q04",
+    "topico": "ce-redes-ip",
+    "enunciado": "Quantos endereços podem ser atribuídos a hosts em uma sub-rede com máscara /28?",
+    "alternativas": [
+      "16",
+      "30",
+      "12",
+      "14"
+    ],
+    "gabarito": 3,
+    "comentario": "/28 deixa 4 bits de host: 2⁴ − 2 = 14. 16 é o total de endereços, incluindo rede e broadcast. 30 é a quantidade de hosts de um /27. 12 não corresponde a nenhuma máscara.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-ip-q05",
+    "topico": "ce-redes-ip",
+    "enunciado": "Um técnico precisa dividir a rede 192.168.1.0/24 em exatamente 4 sub-redes de mesmo tamanho. A máscara a ser usada em cada sub-rede é:",
+    "alternativas": [
+      "255.255.255.128",
+      "255.255.255.224",
+      "255.255.255.192",
+      "255.255.255.240"
+    ],
+    "gabarito": 2,
+    "comentario": "4 sub-redes exigem 2 bits emprestados: /26 = 255.255.255.192, com blocos de 64 endereços. 255.255.255.128 (/25) gera apenas 2 sub-redes. 255.255.255.224 (/27) gera 8. 255.255.255.240 (/28) gera 16.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-ip-q06",
+    "topico": "ce-redes-ip",
+    "enunciado": "Qual é o endereço de rede do host 172.16.45.10/20?",
+    "alternativas": [
+      "172.16.32.0",
+      "172.16.45.0",
+      "172.16.40.0",
+      "172.16.0.0"
+    ],
+    "gabarito": 0,
+    "comentario": "/20 = 255.255.240.0; no terceiro octeto o bloco é 16 e 45 está entre 32 e 47, logo a rede é 172.16.32.0 (broadcast 172.16.47.255). 172.16.45.0 seria a rede com máscara /24. 172.16.40.0 seria a rede com máscara /21. 172.16.0.0 seria a rede com a máscara padrão da classe B (/16).",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-ip-q07",
+    "topico": "ce-redes-ip",
+    "enunciado": "Qual dos endereços a seguir pertence à mesma sub-rede que o host 10.1.1.130/25 e pode ser atribuído a outro host?",
+    "alternativas": [
+      "10.1.1.100",
+      "10.1.1.127",
+      "10.1.2.130",
+      "10.1.1.200"
+    ],
+    "gabarito": 3,
+    "comentario": "Com /25, a sub-rede de 10.1.1.130 vai de 10.1.1.128 (rede) a 10.1.1.255 (broadcast), e .200 é host válido nela. 10.1.1.100 está na sub-rede 10.1.1.0/25. 10.1.1.127 é o broadcast da sub-rede 10.1.1.0/25. 10.1.2.130 tem o terceiro octeto diferente e está em outra sub-rede.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-ip-q08",
+    "topico": "ce-redes-ip",
+    "enunciado": "Um setor terá 50 computadores em uma única sub-rede. Para atendê-los desperdiçando o menor número possível de endereços, a máscara adequada é:",
+    "alternativas": [
+      "/25",
+      "/26",
+      "/27",
+      "/28"
+    ],
+    "gabarito": 1,
+    "comentario": "/26 oferece 2⁶ − 2 = 62 hosts, o menor bloco que comporta 50. /25 comporta 126 hosts e desperdiça mais endereços. /27 comporta só 30 hosts. /28 comporta só 14 hosts.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-ip-q09",
+    "topico": "ce-redes-ip",
+    "enunciado": "A forma abreviada correta do endereço IPv6 2001:0db8:0000:0000:0000:0000:0000:0001 é:",
+    "alternativas": [
+      "2001:db8::0::1",
+      "2001:db8:1::",
+      "21:db8::1",
+      "2001:db8::1"
+    ],
+    "gabarito": 3,
+    "comentario": "Omitem-se os zeros à esquerda de cada grupo e substitui-se a sequência de grupos zerados por um único ::. A primeira usa :: duas vezes, o que é proibido por tornar o endereço ambíguo. A segunda representa 2001:db8:1:0:0:0:0:0, outro endereço. A terceira remove zeros que não estão à esquerda do grupo 2001.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-protocolos-q01",
+    "topico": "ce-redes-protocolos",
+    "enunciado": "No modelo OSI, a camada responsável pelo endereçamento lógico e pelo roteamento dos pacotes entre redes diferentes é a camada de:",
+    "alternativas": [
+      "enlace.",
+      "rede.",
+      "transporte.",
+      "sessão."
+    ],
+    "gabarito": 1,
+    "comentario": "A camada de rede (3) cuida do endereçamento IP e do roteamento. A camada de enlace trata de quadros e endereços MAC na rede local. A camada de transporte cuida da comunicação fim a fim entre processos, com portas. A camada de sessão organiza o diálogo entre as aplicações.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-protocolos-q02",
+    "topico": "ce-redes-protocolos",
+    "enunciado": "A porta padrão do protocolo HTTPS é a:",
+    "alternativas": [
+      "80.",
+      "8080.",
+      "22.",
+      "443."
+    ],
+    "gabarito": 3,
+    "comentario": "HTTPS usa a porta 443. A 80 é do HTTP sem criptografia. A 8080 é uma porta alternativa usada por convenção em alguns servidores web e proxies, não é a padrão do HTTPS. A 22 é do SSH.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-protocolos-q03",
+    "topico": "ce-redes-protocolos",
+    "enunciado": "Assinale a alternativa correta sobre os protocolos de transporte TCP e UDP.",
+    "alternativas": [
+      "O TCP estabelece conexão e garante entrega e ordem; o UDP não estabelece conexão nem garante entrega.",
+      "O UDP estabelece conexão por aperto de mão em três vias, e o TCP envia sem conexão prévia.",
+      "O TCP é preferido em voz sobre IP por ter menor atraso que o UDP.",
+      "Ambos garantem a entrega, e a diferença entre eles está apenas no tamanho do cabeçalho."
+    ],
+    "gabarito": 0,
+    "comentario": "O TCP é orientado à conexão e confiável; o UDP é sem conexão e não garante entrega. A segunda inverte os papéis, pois o aperto de mão em três vias é do TCP. A terceira erra, pois voz sobre IP prefere o UDP, que tem menos atraso. A quarta erra, pois o UDP não garante entrega.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-protocolos-q04",
+    "topico": "ce-redes-protocolos",
+    "enunciado": "O protocolo usado por um computador para descobrir o endereço MAC correspondente a um endereço IP da mesma rede local é o:",
+    "alternativas": [
+      "DNS.",
+      "DHCP.",
+      "ARP.",
+      "ICMP."
+    ],
+    "gabarito": 2,
+    "comentario": "O ARP pergunta em broadcast qual MAC corresponde a um IP e recebe a resposta do dono do endereço. O DNS traduz nomes em endereços IP. O DHCP atribui configurações de rede aos hosts. O ICMP transporta mensagens de controle e erro, como as do ping.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-protocolos-q05",
+    "topico": "ce-redes-protocolos",
+    "enunciado": "Em uma rede local em topologia estrela com switch central, o rompimento do cabo que liga um dos computadores ao switch provoca:",
+    "alternativas": [
+      "a parada de toda a rede, pois o sinal deixa de circular pelo anel.",
+      "a perda de conexão apenas do computador ligado por aquele cabo.",
+      "a parada de toda a rede, por falta de terminadores no barramento.",
+      "a perda de conexão dos computadores vizinhos ao que teve o cabo rompido."
+    ],
+    "gabarito": 1,
+    "comentario": "Na estrela cada nó tem seu próprio cabo até o centro, então só aquele nó fica isolado. A primeira descreve o problema típico do anel. A terceira descreve o problema típico do barramento. A quarta erra, pois na estrela não há dependência entre nós vizinhos.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-protocolos-q06",
+    "topico": "ce-redes-protocolos",
+    "enunciado": "Um órgão quer que os servidores leiam os e-mails no computador e no celular vendo sempre as mesmas pastas e mensagens, que devem permanecer no servidor. O protocolo de recebimento mais adequado e sua porta padrão sem criptografia são:",
+    "alternativas": [
+      "POP3, porta 110.",
+      "SMTP, porta 25.",
+      "FTP, porta 21.",
+      "IMAP, porta 143."
+    ],
+    "gabarito": 3,
+    "comentario": "O IMAP mantém as mensagens no servidor e sincroniza as pastas entre dispositivos. O POP3 costuma baixar as mensagens e removê-las do servidor. O SMTP serve para enviar, não para receber. O FTP transfere arquivos e não é protocolo de e-mail.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-protocolos-q07",
+    "topico": "ce-redes-protocolos",
+    "enunciado": "Assinale a alternativa que apresenta as camadas do modelo OSI na ordem correta, da mais baixa para a mais alta.",
+    "alternativas": [
+      "Física, enlace, rede, transporte, sessão, apresentação e aplicação.",
+      "Física, rede, enlace, transporte, apresentação, sessão e aplicação.",
+      "Enlace, física, rede, sessão, transporte, apresentação e aplicação.",
+      "Física, enlace, transporte, rede, sessão, aplicação e apresentação."
+    ],
+    "gabarito": 0,
+    "comentario": "A ordem é 1 física, 2 enlace, 3 rede, 4 transporte, 5 sessão, 6 apresentação e 7 aplicação. A segunda troca enlace com rede e sessão com apresentação. A terceira troca física com enlace e transporte com sessão. A quarta troca rede com transporte e aplicação com apresentação.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-protocolos-q08",
+    "topico": "ce-redes-protocolos",
+    "enunciado": "Considere as afirmativas.\nI. O comando ping utiliza mensagens do protocolo ICMP.\nII. O DNS utiliza exclusivamente o TCP, na porta 53.\nIII. O Telnet transmite os dados, inclusive a senha, sem criptografia, ao contrário do SSH.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I e II, apenas.",
+      "II e III, apenas.",
+      "I e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 2,
+    "comentario": "I e III estão corretas. II está errada: o DNS usa a porta 53, mas as consultas comuns trafegam por UDP; o TCP é usado em transferências de zona e respostas grandes. Assim, as alternativas que incluem II estão erradas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-redes-protocolos-q09",
+    "topico": "ce-redes-protocolos",
+    "enunciado": "Uma rede que interliga as filiais de uma empresa situadas em diferentes estados do país, por meio de enlaces de operadoras, é classificada como:",
+    "alternativas": [
+      "PAN.",
+      "LAN.",
+      "MAN.",
+      "WAN."
+    ],
+    "gabarito": 3,
+    "comentario": "A WAN cobre longas distâncias, entre cidades, estados ou países. A PAN alcança poucos metros, como o Bluetooth. A LAN cobre uma sala, um prédio ou um campus. A MAN cobre a área de uma cidade.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-estruturada-q01",
+    "topico": "ce-estruturada",
+    "enunciado": "Segundo os fundamentos da programação estruturada, qualquer algoritmo pode ser escrito usando apenas as estruturas de:",
+    "alternativas": [
+      "sequência, seleção e repetição.",
+      "sequência, desvio incondicional e recursão.",
+      "classe, objeto e herança.",
+      "seleção, repetição e desvio (goto)."
+    ],
+    "gabarito": 0,
+    "comentario": "O teorema de Böhm e Jacopini mostra que sequência, seleção e repetição bastam. A segunda inclui o desvio incondicional, justamente o que a programação estruturada evita. A terceira traz conceitos da orientação a objetos. A quarta substitui a sequência pelo goto, também evitado.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-estruturada-q02",
+    "topico": "ce-estruturada",
+    "enunciado": "A técnica de desenvolvimento que parte de uma visão geral da solução e a detalha em etapas cada vez mais específicas, até chegar a instruções executáveis, é denominada:",
+    "alternativas": [
+      "desenvolvimento bottom-up (ascendente).",
+      "programação orientada a eventos.",
+      "refinamentos sucessivos (top-down).",
+      "simulação por teste de mesa."
+    ],
+    "gabarito": 2,
+    "comentario": "Refinamentos sucessivos detalham do geral para o específico, de cima para baixo. O bottom-up faz o caminho inverso, partindo de componentes básicos. A programação orientada a eventos trata da reação a ações do usuário ou do sistema. O teste de mesa é a simulação manual de um algoritmo pronto.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-estruturada-q03",
+    "topico": "ce-estruturada",
+    "enunciado": "Sobre as estruturas de repetição enquanto–faça e repita–até, assinale a alternativa correta.",
+    "alternativas": [
+      "O enquanto–faça executa o bloco pelo menos uma vez, pois testa a condição no fim.",
+      "O repita–até pode não executar o bloco nenhuma vez, se a condição já for verdadeira.",
+      "As duas testam a condição no início e só diferem na sintaxe.",
+      "O repita–até executa o bloco pelo menos uma vez, pois testa a condição no fim."
+    ],
+    "gabarito": 3,
+    "comentario": "O repita–até testa a condição depois do bloco e, por isso, executa ao menos uma vez. A primeira atribui ao enquanto–faça o comportamento do repita–até; ele testa no início. A segunda erra, pois o repita–até sempre executa uma vez antes do teste. A terceira erra, pois o momento do teste é a diferença essencial.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-estruturada-q04",
+    "topico": "ce-estruturada",
+    "enunciado": "Na divisão de um programa em módulos, considera-se boa prática buscar:",
+    "alternativas": [
+      "baixa coesão e alto acoplamento.",
+      "alta coesão e baixo acoplamento.",
+      "alta coesão e alto acoplamento.",
+      "baixa coesão e baixo acoplamento."
+    ],
+    "gabarito": 1,
+    "comentario": "Cada módulo deve ter uma tarefa bem definida (alta coesão) e depender pouco dos outros (baixo acoplamento). A primeira é o oposto do desejável. A terceira mantém a forte dependência entre módulos, que dificulta a manutenção. A quarta aceita módulos com responsabilidades misturadas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-estruturada-q05",
+    "topico": "ce-estruturada",
+    "enunciado": "Considere o pseudocódigo: procedimento ajusta(a: inteiro por valor; b: inteiro por referência) início a ← a * 2; b ← b * 2; fim. No programa principal: x ← 3; y ← 5; ajusta(x, y); escreva(x, \" \", y). O que será exibido?",
+    "alternativas": [
+      "6 10",
+      "3 5",
+      "3 10",
+      "6 5"
+    ],
+    "gabarito": 2,
+    "comentario": "a recebe uma cópia de x, então x continua 3; b é a própria variável y, que passa a 10. 6 10 trataria os dois parâmetros como referência. 3 5 trataria os dois como valor. 6 5 inverte os modos de passagem.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-estruturada-q06",
+    "topico": "ce-estruturada",
+    "enunciado": "NÃO é característica da programação estruturada:",
+    "alternativas": [
+      "o uso frequente de desvios incondicionais (goto) para controlar o fluxo.",
+      "a divisão do programa em módulos com tarefas bem definidas.",
+      "o uso de estruturas de controle com uma única entrada e uma única saída.",
+      "a preferência por variáveis locais aos módulos."
+    ],
+    "gabarito": 0,
+    "comentario": "O uso frequente de goto gera o código espaguete que a programação estruturada combate. A divisão em módulos é característica central do paradigma. Estruturas com entrada e saída únicas também são característica dele. O uso de variáveis locais reduz o acoplamento e é recomendado.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-estruturada-q07",
+    "topico": "ce-estruturada",
+    "enunciado": "Considere as afirmativas sobre subprogramas.\nI. Uma função devolve um valor a quem a chamou e pode ser usada dentro de expressões.\nII. Na passagem por valor, alterações feitas no parâmetro dentro do módulo modificam a variável original.\nIII. Uma variável local deixa de existir quando o módulo em que foi declarada termina.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I e II, apenas.",
+      "I e III, apenas.",
+      "II e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 1,
+    "comentario": "I e III estão corretas. II está errada: na passagem por valor o módulo recebe uma cópia, e só a passagem por referência altera a variável original. Por isso as alternativas que incluem II estão erradas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-estruturada-q08",
+    "topico": "ce-estruturada",
+    "enunciado": "Considere o pseudocódigo, em que t é variável global: função f(k: inteiro): inteiro; variável local t: inteiro; início t ← k + 10; retorne t * 2; fim. No programa principal: t ← 1; r ← f(t); escreva(r, \" \", t). O que será exibido?",
+    "alternativas": [
+      "22 11",
+      "11 1",
+      "2 1",
+      "22 1"
+    ],
+    "gabarito": 3,
+    "comentario": "Dentro de f, o t local recebe 1 + 10 = 11 e a função retorna 22; o t global não é tocado e continua 1. 22 11 supõe que a atribuição alterou a variável global. 11 1 confunde o valor de t com o retorno da função. 2 1 calcula o retorno com o t global (1 × 2), ignorando a variável local.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-estruturada-q09",
+    "topico": "ce-estruturada",
+    "enunciado": "Em um fluxograma, o símbolo em forma de losango representa:",
+    "alternativas": [
+      "o início ou o fim do algoritmo.",
+      "a entrada ou a saída de dados.",
+      "uma decisão, com caminhos para verdadeiro e falso.",
+      "um processamento, como um cálculo ou uma atribuição."
+    ],
+    "gabarito": 2,
+    "comentario": "O losango indica decisão, com saídas para cada resultado da condição. Início e fim usam o símbolo terminal, oval. Entrada e saída usam o paralelogramo. O processamento usa o retângulo.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-algoritmos-q01",
+    "topico": "ce-algoritmos",
+    "enunciado": "Em pseudocódigo, o tipo de dado mais adequado para uma variável que indica se um contribuinte está adimplente (sim ou não) é:",
+    "alternativas": [
+      "inteiro.",
+      "real.",
+      "caractere.",
+      "lógico."
+    ],
+    "gabarito": 3,
+    "comentario": "O tipo lógico guarda verdadeiro ou falso, exatamente o necessário. Inteiro guarda números sem casas decimais. Real guarda números com casas decimais. Caractere guarda textos; poderia armazenar “sim”, mas não é o tipo adequado para um valor verdadeiro ou falso.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-algoritmos-q02",
+    "topico": "ce-algoritmos",
+    "enunciado": "Em pseudocódigo, os resultados de 17 div 5 e de 17 mod 5 são, respectivamente:",
+    "alternativas": [
+      "3,4 e 2",
+      "3 e 2",
+      "2 e 3",
+      "3 e 0,4"
+    ],
+    "gabarito": 1,
+    "comentario": "div dá o quociente inteiro (3) e mod dá o resto (17 − 15 = 2). 3,4 é a divisão real, não o quociente inteiro. 2 e 3 inverte quociente e resto. 0,4 é a parte decimal da divisão real, não o resto.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-algoritmos-q03",
+    "topico": "ce-algoritmos",
+    "enunciado": "Faça o teste de mesa: s ← 0; i ← 1; enquanto i <= 10 faça se i mod 3 = 0 então s ← s + i; fimse; i ← i + 1; fimenquanto; escreva(s). O valor exibido é:",
+    "alternativas": [
+      "18",
+      "12",
+      "55",
+      "30"
+    ],
+    "gabarito": 0,
+    "comentario": "Os múltiplos de 3 entre 1 e 10 são 3, 6 e 9, cuja soma é 18. 12 esquece o 6 na soma. 55 é a soma de todos os números de 1 a 10, ignorando a condição. 30 soma também o 12, que está fora do limite do laço.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-algoritmos-q04",
+    "topico": "ce-algoritmos",
+    "enunciado": "Em C, após a declaração char nome[] = \"Contagem\";, quantos bytes ocupa o vetor nome e qual valor é devolvido por strlen(nome)?",
+    "alternativas": [
+      "8 bytes e 8.",
+      "9 bytes e 9.",
+      "9 bytes e 8.",
+      "8 bytes e 9."
+    ],
+    "gabarito": 2,
+    "comentario": "São 8 caracteres mais o terminador '\\0', totalizando 9 bytes, e strlen não conta o terminador, devolvendo 8. 8 bytes ignora o terminador. strlen igual a 9 contaria o terminador. A última inverte os dois valores.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-algoritmos-q05",
+    "topico": "ce-algoritmos",
+    "enunciado": "Com x = 5 e y = 3, qual o resultado da expressão (x = 5) OU (x > y) E (y > 4), respeitando a precedência usual dos operadores lógicos?",
+    "alternativas": [
+      "Verdadeiro, pois o E é avaliado antes do OU.",
+      "Falso, pois a expressão é avaliada da esquerda para a direita.",
+      "Falso, pois y > 4 é falso e anula toda a expressão.",
+      "Verdadeiro, pois o OU é avaliado antes do E."
+    ],
+    "gabarito": 0,
+    "comentario": "O E vem antes: (x > y) E (y > 4) = V E F = F; depois, V OU F = verdadeiro. Avaliar da esquerda para a direita daria (V OU V) E F = falso, ignorando a precedência. Um termo falso só anula uma conjunção, não a disjunção com um termo verdadeiro. Avaliar o OU primeiro daria (V OU V) E F = falso, e não verdadeiro.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-algoritmos-q06",
+    "topico": "ce-algoritmos",
+    "enunciado": "Considere o pseudocódigo: x ← 10; repita x ← x + 1; até x > 5; escreva(x). O valor exibido é:",
+    "alternativas": [
+      "10",
+      "6",
+      "nada, pois o laço não executa",
+      "11"
+    ],
+    "gabarito": 3,
+    "comentario": "O repita–até executa o bloco antes de testar: x vira 11, a condição 11 > 5 é verdadeira e o laço termina; exibe 11. 10 supõe que o bloco não chegou a executar. 6 seria a saída se x começasse em 5, e não em 10. O laço sempre executa ao menos uma vez e o escreva vem depois dele, então algo é exibido.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-algoritmos-q07",
+    "topico": "ce-algoritmos",
+    "enunciado": "Qual valor é exibido pelo trecho em C a seguir? int i, p = 1; for (i = 1; i <= 4; i++) { if (i % 2 == 0) p = p * i; } printf(\"%d\", p);",
+    "alternativas": [
+      "24",
+      "8",
+      "2",
+      "6"
+    ],
+    "gabarito": 1,
+    "comentario": "Só os pares 2 e 4 entram na multiplicação: 1 × 2 × 4 = 8. 24 multiplica todos os valores de 1 a 4. 2 para a multiplicação no primeiro par. 6 seria somar 2 e 4 em vez de multiplicar.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-algoritmos-q08",
+    "topico": "ce-algoritmos",
+    "enunciado": "Qual a saída do trecho em C a seguir? int op = 2; switch (op) { case 1: printf(\"A\"); case 2: printf(\"B\"); case 3: printf(\"C\"); break; default: printf(\"D\"); }",
+    "alternativas": [
+      "B",
+      "BC",
+      "BCD",
+      "ABC"
+    ],
+    "gabarito": 1,
+    "comentario": "A execução começa no case 2 e, sem break, continua no case 3, parando no break: saída BC. Só B ignora a continuação sem break. BCD ignora o break do case 3. ABC executaria o case 1, que não corresponde a op.",
+    "origem": "autoral"
+  },
+  {
+    "id": "ce-algoritmos-q09",
+    "topico": "ce-algoritmos",
+    "enunciado": "Qual a saída do trecho em C a seguir? int x = 5; if (x = 0) printf(\"zero\"); else printf(\"nao zero\"); printf(\" %d\", x);",
+    "alternativas": [
+      "zero 0",
+      "nao zero 5",
+      "nao zero 0",
+      "zero 5"
+    ],
+    "gabarito": 2,
+    "comentario": "x = 0 é atribuição, não comparação: x passa a valer 0, e a expressão vale 0, que em C é falso; executa o else e depois exibe 0. zero 0 trataria 0 como verdadeiro. nao zero 5 esquece que a atribuição alterou x. zero 5 lê a linha como se fosse a comparação x == 0 e ainda erra o resultado dela.",
+    "origem": "autoral"
+  }
+]

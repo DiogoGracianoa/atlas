@@ -1,0 +1,1178 @@
+[
+  {
+    "id": "rl-proposicoes-q01",
+    "topico": "rl-proposicoes",
+    "enunciado": "Em lógica, proposição é uma sentença declarativa à qual se pode atribuir um único valor lógico, verdadeiro ou falso. Assinale a alternativa que apresenta uma proposição.",
+    "alternativas": [
+      "Feche a porta do laboratório ao sair.",
+      "A que horas começa a prova?",
+      "O número 15 é divisível por 4.",
+      "x + 3 = 10."
+    ],
+    "gabarito": 2,
+    "comentario": "“O número 15 é divisível por 4” é uma declaração que pode ser julgada (é falsa, pois 15 ÷ 4 não é exato); ser falsa não impede que seja proposição. A primeira é uma ordem, que não admite valor lógico. A segunda é uma pergunta, que também não é declarativa. A última é uma sentença aberta: seu valor depende de x, que não foi definido.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-proposicoes-q02",
+    "topico": "rl-proposicoes",
+    "enunciado": "A proposição condicional p → q (“se p, então q”) é falsa somente quando:",
+    "alternativas": [
+      "p é verdadeira e q é falsa.",
+      "p é falsa e q é verdadeira.",
+      "p e q são ambas falsas.",
+      "p e q são ambas verdadeiras."
+    ],
+    "gabarito": 0,
+    "comentario": "O condicional só é falso quando o antecedente é verdadeiro e o consequente é falso (V → F). Com p F e q V, temos F → V = V. Com p e q falsas, F → F = V, pois antecedente falso torna o condicional verdadeiro. Com ambas verdadeiras, V → V = V.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-proposicoes-q03",
+    "topico": "rl-proposicoes",
+    "enunciado": "A tabela-verdade da proposição composta (p ∧ q) → (r ∨ ¬p) possui quantas linhas?",
+    "alternativas": [
+      "4",
+      "8",
+      "12",
+      "16"
+    ],
+    "gabarito": 1,
+    "comentario": "O número de linhas é 2ⁿ, em que n é o número de proposições simples distintas. Aqui são três (p, q e r), pois p aparece duas vezes mas conta uma só: 2³ = 8. O valor 4 corresponderia a duas proposições (2²). O valor 12 não é potência de 2 e nunca é número de linhas de tabela-verdade. O valor 16 surge de contar quatro ocorrências de letras, e não quatro proposições distintas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-proposicoes-q04",
+    "topico": "rl-proposicoes",
+    "enunciado": "Sabe-se que a proposição p é verdadeira, a proposição q é falsa e a proposição r é verdadeira. Considere as proposições compostas:\nI. (p ∨ q) → ¬r\nII. ¬p → (q ∧ r)\nIII. (p ↔ q) ∨ (q → r)\nSão verdadeiras:",
+    "alternativas": [
+      "I, apenas.",
+      "I e III, apenas.",
+      "I, II e III.",
+      "II e III, apenas."
+    ],
+    "gabarito": 3,
+    "comentario": "I: p ∨ q = V ∨ F = V e ¬r = F, logo V → F = F. II: ¬p = F, e um condicional com antecedente falso é verdadeiro, então F → (F) = V. III: p ↔ q = V ↔ F = F; q → r = F → V = V; F ∨ V = V. Assim, só II e III são verdadeiras. “I, apenas” e “I e III, apenas” incluem I, que é falsa. “I, II e III” também inclui I.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-proposicoes-q05",
+    "topico": "rl-proposicoes",
+    "enunciado": "Assinale a alternativa que apresenta a negação da proposição: “Se o sistema foi atualizado, então o backup foi feito.”",
+    "alternativas": [
+      "Se o sistema não foi atualizado, então o backup não foi feito.",
+      "O sistema foi atualizado e o backup não foi feito.",
+      "O sistema não foi atualizado ou o backup foi feito.",
+      "Se o backup não foi feito, então o sistema não foi atualizado."
+    ],
+    "gabarito": 1,
+    "comentario": "A frase tem a forma p → q, cuja negação é p ∧ ¬q: mantém-se o antecedente, nega-se o consequente e usa-se “e”. Resultado: “O sistema foi atualizado e o backup não foi feito”. A primeira alternativa é a inversa (¬p → ¬q), que não nega o condicional. A terceira é ¬p ∨ q, equivalente à frase original, e não sua negação. A quarta é a contrapositiva (¬q → ¬p), também equivalente à original.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-proposicoes-q06",
+    "topico": "rl-proposicoes",
+    "enunciado": "A negação da proposição “Joana é analista e Pedro não é técnico” é:",
+    "alternativas": [
+      "Joana não é analista ou Pedro é técnico.",
+      "Joana não é analista e Pedro é técnico.",
+      "Joana não é analista ou Pedro não é técnico.",
+      "Se Joana é analista, então Pedro não é técnico."
+    ],
+    "gabarito": 0,
+    "comentario": "A forma é p ∧ ¬q. Por De Morgan, ¬(p ∧ ¬q) ≡ ¬p ∨ ¬(¬q) ≡ ¬p ∨ q: nega-se cada parte e troca-se “e” por “ou”. A segunda alternativa nega as partes, mas mantém o “e”, o que está errado. A terceira troca o conectivo, mas não nega “Pedro não é técnico”. A quarta é p → ¬q, que equivale a ¬p ∨ ¬q, e não à negação pedida.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-proposicoes-q07",
+    "topico": "rl-proposicoes",
+    "enunciado": "Sobre os conectivos lógicos, assinale a alternativa correta.",
+    "alternativas": [
+      "A conjunção p ∧ q é verdadeira quando pelo menos uma das proposições é verdadeira.",
+      "A bicondicional p ↔ q é falsa quando p e q são ambas falsas.",
+      "A disjunção inclusiva p ∨ q é falsa quando apenas uma das proposições é falsa.",
+      "A disjunção exclusiva p ⊻ q é verdadeira quando p e q têm valores lógicos diferentes."
+    ],
+    "gabarito": 3,
+    "comentario": "Na disjunção exclusiva (“ou p, ou q”), exatamente uma das proposições deve ser verdadeira, ou seja, os valores precisam ser diferentes. A conjunção só é verdadeira quando as duas proposições são verdadeiras. A bicondicional é verdadeira quando os valores são iguais, inclusive F e F. A disjunção inclusiva só é falsa quando as duas proposições são falsas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-proposicoes-q08",
+    "topico": "rl-proposicoes",
+    "enunciado": "Uma proposição composta P, formada a partir de p e q, tem a seguinte tabela-verdade: p V e q V, P é F; p V e q F, P é V; p F e q V, P é F; p F e q F, P é F. A proposição P pode ser:",
+    "alternativas": [
+      "¬p ∨ q",
+      "¬(p ↔ q)",
+      "p ∧ ¬q",
+      "¬p → q"
+    ],
+    "gabarito": 2,
+    "comentario": "P só é verdadeira na linha p V, q F. p ∧ ¬q exige p V e ¬q V (isto é, q F), sendo verdadeira apenas nessa linha. ¬p ∨ q falha já na primeira linha: F ∨ V = V, e P deveria ser F. ¬(p ↔ q) é V também na linha p F, q V, em que P é F. ¬p → q falha na primeira linha: F → V = V.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-proposicoes-q09",
+    "topico": "rl-proposicoes",
+    "enunciado": "Assinale a alternativa que apresenta uma tautologia.",
+    "alternativas": [
+      "p → (p ∨ q)",
+      "(p ∨ q) → p",
+      "p ∧ ¬p",
+      "(p → q) → p"
+    ],
+    "gabarito": 0,
+    "comentario": "Em p → (p ∨ q), sempre que p é V, p ∨ q também é V; quando p é F, o condicional é V por ter antecedente falso. Nunca ocorre V → F, então é tautologia. (p ∨ q) → p é falsa com p F e q V (V → F), logo é contingência. p ∧ ¬p é sempre falsa, uma contradição. (p → q) → p é falsa quando p é F, pois p → q fica V e o resultado é V → F; é contingência.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-proposicoes-q10",
+    "topico": "rl-proposicoes",
+    "enunciado": "Sabe-se que é falsa a proposição “Se Ana é auditora, então Bruno é contador”. Com base nessa informação, é necessariamente verdadeira a proposição:",
+    "alternativas": [
+      "Ana é auditora e Bruno é contador.",
+      "Bruno é contador ou Ana é auditora.",
+      "Ana não é auditora ou Bruno é contador.",
+      "Ana é auditora se e somente se Bruno é contador."
+    ],
+    "gabarito": 1,
+    "comentario": "Um condicional só é falso com antecedente V e consequente F, então “Ana é auditora” é V e “Bruno é contador” é F. Logo, “Bruno é contador ou Ana é auditora” = F ∨ V = V. A primeira é V ∧ F = F. A terceira é F ∨ F = F (é justamente a forma ¬p ∨ q, equivalente ao condicional falso). A quarta é V ↔ F = F.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-equivalencias-q01",
+    "topico": "rl-equivalencias",
+    "enunciado": "Assinale a alternativa logicamente equivalente a “Se Marta é gerente, então ela assina o contrato”.",
+    "alternativas": [
+      "Se Marta assina o contrato, então ela é gerente.",
+      "Se Marta não assina o contrato, então ela não é gerente.",
+      "Se Marta não é gerente, então ela não assina o contrato.",
+      "Marta é gerente e assina o contrato."
+    ],
+    "gabarito": 1,
+    "comentario": "A contrapositiva de p → q é ¬q → ¬p, sempre equivalente ao original: “Se Marta não assina o contrato, então ela não é gerente”. A primeira é a recíproca (q → p), que não é equivalente. A terceira é a inversa (¬p → ¬q), também não equivalente. A quarta é uma conjunção, que exige p e q verdadeiras, enquanto o condicional é verdadeiro, por exemplo, com p falsa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-equivalencias-q02",
+    "topico": "rl-equivalencias",
+    "enunciado": "A negação da proposição “Todo servidor da prefeitura usa crachá” é:",
+    "alternativas": [
+      "Algum servidor da prefeitura não usa crachá.",
+      "Nenhum servidor da prefeitura usa crachá.",
+      "Todo servidor da prefeitura não usa crachá.",
+      "Algum servidor da prefeitura usa crachá."
+    ],
+    "gabarito": 0,
+    "comentario": "Para negar “Todo A é B” basta haver um A que não seja B: “Algum servidor da prefeitura não usa crachá” (¬∀ ≡ ∃¬). “Nenhum servidor usa crachá” é a ideia contrária, e as duas frases podem ser falsas juntas. “Todo servidor não usa crachá” significa o mesmo que “Nenhum…”, com o mesmo erro. “Algum servidor usa crachá” é compatível com a frase original e não a nega.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-equivalencias-q03",
+    "topico": "rl-equivalencias",
+    "enunciado": "Assinale a alternativa que apresenta a negação de “Nenhum aluno faltou à aula”.",
+    "alternativas": [
+      "Todo aluno faltou à aula.",
+      "Algum aluno não faltou à aula.",
+      "Algum aluno faltou à aula.",
+      "Todos os alunos compareceram à aula."
+    ],
+    "gabarito": 2,
+    "comentario": "“Nenhum A é B” afirma que não existe A com a propriedade B; sua negação é que existe pelo menos um: “Algum aluno faltou à aula”. “Todo aluno faltou” é afirmação mais forte que a negação, e não é necessária. “Algum aluno não faltou” é compatível com a frase original. “Todos os alunos compareceram” diz o mesmo que a frase original.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-equivalencias-q04",
+    "topico": "rl-equivalencias",
+    "enunciado": "A proposição “Se o código compila, então o teste roda” é logicamente equivalente a:",
+    "alternativas": [
+      "O código compila ou o teste não roda.",
+      "O código compila e o teste roda.",
+      "Se o teste roda, então o código compila.",
+      "O código não compila ou o teste roda."
+    ],
+    "gabarito": 3,
+    "comentario": "Vale p → q ≡ ¬p ∨ q: nega-se o antecedente, mantém-se o consequente e troca-se por “ou”. Daí “O código não compila ou o teste roda”. A primeira é p ∨ ¬q, equivalente à recíproca q → p, não ao original. A segunda é uma conjunção, falsa quando o código não compila, caso em que o condicional é verdadeiro. A terceira é a recíproca, que não equivale ao condicional.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-equivalencias-q05",
+    "topico": "rl-equivalencias",
+    "enunciado": "Considere as afirmativas sobre equivalências lógicas:\nI. ¬(p ∨ q) ≡ ¬p ∧ ¬q\nII. p → q ≡ q → p\nIII. p ↔ q ≡ (p → q) ∧ (q → p)\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I, apenas.",
+      "I e II, apenas.",
+      "I e III, apenas.",
+      "II e III, apenas."
+    ],
+    "gabarito": 2,
+    "comentario": "I é a lei de De Morgan para a disjunção: correta. II é falsa: com p F e q V, p → q = V e q → p = F, então condicional e recíproca diferem. III é correta: o bicondicional é o condicional nos dois sentidos. “I, apenas” deixa de fora III. As alternativas com II incluem uma equivalência falsa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-equivalencias-q06",
+    "topico": "rl-equivalencias",
+    "enunciado": "Diz-se que P implica logicamente Q (P ⇒ Q) quando não há caso em que P seja verdadeira e Q seja falsa. Assinale a alternativa em que a primeira proposição implica logicamente a segunda.",
+    "alternativas": [
+      "p ∧ q ⇒ p ∨ q",
+      "p ∨ q ⇒ p",
+      "p → q ⇒ q → p",
+      "p ⇒ p ∧ q"
+    ],
+    "gabarito": 0,
+    "comentario": "Se p ∧ q é V, então p e q são V, e p ∨ q também é V; não há linha V/F, logo a implicação vale. Em p ∨ q ⇒ p, a linha p F, q V dá V e F, contraexemplo. Em p → q ⇒ q → p, a mesma linha (p F, q V) torna p → q verdadeira e q → p falsa. Em p ⇒ p ∧ q, a linha p V, q F torna p verdadeira e p ∧ q falsa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-equivalencias-q07",
+    "topico": "rl-equivalencias",
+    "enunciado": "Assinale a negação lógica da proposição “Algum candidato não entregou os documentos”.",
+    "alternativas": [
+      "Nenhum candidato entregou os documentos.",
+      "Todo candidato entregou os documentos.",
+      "Algum candidato entregou os documentos.",
+      "Todo candidato não entregou os documentos."
+    ],
+    "gabarito": 1,
+    "comentario": "“Algum A não é B” é a negação de “Todo A é B”, e vice-versa; logo, a negação pedida é “Todo candidato entregou os documentos”. “Nenhum candidato entregou” é compatível com a frase original, pois nesse caso há candidato que não entregou. “Algum candidato entregou” também pode ser verdadeira junto com a original. “Todo candidato não entregou” equivale a “Nenhum entregou”, com o mesmo problema.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-equivalencias-q08",
+    "topico": "rl-equivalencias",
+    "enunciado": "Assinale a alternativa que apresenta a negação de “Todos os relatórios foram revisados e algum prazo foi descumprido”.",
+    "alternativas": [
+      "Algum relatório não foi revisado ou nenhum prazo foi descumprido.",
+      "Algum relatório não foi revisado e nenhum prazo foi descumprido.",
+      "Nenhum relatório foi revisado ou todo prazo foi descumprido.",
+      "Algum relatório não foi revisado ou algum prazo não foi descumprido."
+    ],
+    "gabarito": 0,
+    "comentario": "A forma é A ∧ B, cuja negação é ¬A ∨ ¬B. ¬(Todos os relatórios foram revisados) = “Algum relatório não foi revisado”; ¬(Algum prazo foi descumprido) = “Nenhum prazo foi descumprido”. A segunda nega as partes, mas mantém o “e”, contrariando De Morgan. A terceira usa os contrários (“nenhum”, “todo”) no lugar das negações. A quarta nega “algum prazo foi descumprido” como “algum prazo não foi descumprido”, que não é sua negação.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-equivalencias-q09",
+    "topico": "rl-equivalencias",
+    "enunciado": "Considere a proposição “Se Davi estuda ou Eva estuda, então a equipe vence”. Uma proposição logicamente equivalente a ela é:",
+    "alternativas": [
+      "Se a equipe vence, então Davi estuda ou Eva estuda.",
+      "Se a equipe não vence, então Davi não estuda ou Eva não estuda.",
+      "Davi não estuda ou Eva não estuda, ou a equipe vence.",
+      "Se Davi estuda, então a equipe vence, e, se Eva estuda, então a equipe vence."
+    ],
+    "gabarito": 3,
+    "comentario": "Com d, e, v: (d ∨ e) → v ≡ ¬(d ∨ e) ∨ v ≡ (¬d ∧ ¬e) ∨ v ≡ (¬d ∨ v) ∧ (¬e ∨ v) ≡ (d → v) ∧ (e → v), que é a última alternativa. A primeira é a recíproca: com d e e falsas e v verdadeira, a original é V e ela é F. A segunda seria ¬v → (¬d ∨ ¬e); com d V, e F e v F, a original é F e ela é V. A terceira, ¬d ∨ ¬e ∨ v, tem o mesmo contraexemplo (d V, e F, v F), pois ¬e é V.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-equivalencias-q10",
+    "topico": "rl-equivalencias",
+    "enunciado": "Assinale a alternativa que é logicamente equivalente à negação de “O servidor responde se e somente se a rede está ativa”.",
+    "alternativas": [
+      "O servidor não responde se e somente se a rede não está ativa.",
+      "Ou o servidor responde, ou a rede está ativa, mas não ambos.",
+      "O servidor responde e a rede não está ativa.",
+      "Se o servidor não responde, então a rede não está ativa."
+    ],
+    "gabarito": 1,
+    "comentario": "A negação de p ↔ q é a disjunção exclusiva p ⊻ q, verdadeira exatamente quando p e q têm valores diferentes, que é o caso em que o bicondicional é falso. A primeira é ¬p ↔ ¬q, equivalente ao próprio bicondicional, não à sua negação. A terceira, p ∧ ¬q, cobre só um dos dois casos em que o bicondicional falha (falta p F, q V). A quarta, ¬p → ¬q, é verdadeira com p e q verdadeiras, caso em que a negação é falsa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-argumentos-q01",
+    "topico": "rl-argumentos",
+    "enunciado": "Leia o argumento: “Como todo arquivo corrompido gera erro na abertura e o relatório não gerou erro na abertura, conclui-se que o relatório não está corrompido.” A conclusão desse argumento é:",
+    "alternativas": [
+      "Todo arquivo corrompido gera erro na abertura.",
+      "O relatório não gerou erro na abertura.",
+      "O relatório não está corrompido.",
+      "Algum arquivo corrompido não gera erro na abertura."
+    ],
+    "gabarito": 2,
+    "comentario": "A expressão “conclui-se que” introduz a conclusão: “O relatório não está corrompido”. A primeira alternativa é uma premissa, introduzida por “como”. A segunda é a outra premissa, que serve de razão para a conclusão. A quarta nem faz parte do argumento; é, aliás, a negação da primeira premissa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-argumentos-q02",
+    "topico": "rl-argumentos",
+    "enunciado": "O argumento “Se o pagamento é aprovado, o pedido é enviado. O pedido não foi enviado. Logo, o pagamento não foi aprovado.” é um exemplo de:",
+    "alternativas": [
+      "Modus ponens.",
+      "Silogismo disjuntivo.",
+      "Afirmação do consequente.",
+      "Modus tollens."
+    ],
+    "gabarito": 3,
+    "comentario": "A forma é p → q; ¬q; logo ¬p, que é o modus tollens, forma válida. Modus ponens seria p → q; p; logo q. Silogismo disjuntivo parte de uma disjunção (p ∨ q; ¬p; logo q), que não aparece aqui. Afirmação do consequente seria p → q; q; logo p, forma inválida.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-argumentos-q03",
+    "topico": "rl-argumentos",
+    "enunciado": "Um argumento dedutivo é considerado válido quando:",
+    "alternativas": [
+      "é impossível que todas as premissas sejam verdadeiras e a conclusão seja falsa.",
+      "todas as premissas e a conclusão são, de fato, verdadeiras.",
+      "a conclusão é verdadeira, independentemente das premissas.",
+      "pelo menos uma das premissas é verdadeira."
+    ],
+    "gabarito": 0,
+    "comentario": "Validade é propriedade da forma: as premissas, se verdadeiras, garantem a conclusão, ou seja, não existe caso com premissas V e conclusão F. Premissas e conclusão verdadeiras não bastam, pois a forma pode ser inválida. Conclusão verdadeira por acaso não torna o argumento válido. Ter uma premissa verdadeira nada diz sobre a ligação entre premissas e conclusão.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-argumentos-q04",
+    "topico": "rl-argumentos",
+    "enunciado": "Considere verdadeiras as premissas: “Se Caio estuda, então é aprovado.” “Se Caio é aprovado, então viaja.” “Caio não viajou.” Com base nelas, conclui-se corretamente que:",
+    "alternativas": [
+      "Caio foi aprovado, mas não estudou.",
+      "Caio estudou, mas não foi aprovado.",
+      "Caio não foi aprovado e não estudou.",
+      "Caio não foi aprovado, mas estudou."
+    ],
+    "gabarito": 2,
+    "comentario": "Símbolos: e → a; a → v; ¬v. Como v é F e a → v é V, a é F (modus tollens): Caio não foi aprovado. Como a é F e e → a é V, e é F: Caio não estudou. A primeira afirma que Caio foi aprovado, o que contraria a → v com v falsa. A segunda e a quarta afirmam que Caio estudou, o que tornaria e → a falsa, já que a é F.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-argumentos-q05",
+    "topico": "rl-argumentos",
+    "enunciado": "Assinale a alternativa que apresenta um argumento válido.",
+    "alternativas": [
+      "Se chove, a rua fica molhada. A rua está molhada. Logo, choveu.",
+      "Se chove, a rua fica molhada. Não choveu. Logo, a rua não está molhada.",
+      "Chove ou venta. Choveu. Logo, não ventou.",
+      "Chove ou venta. Não ventou. Logo, choveu."
+    ],
+    "gabarito": 3,
+    "comentario": "“Chove ou venta; não ventou; logo, choveu” é silogismo disjuntivo (p ∨ q; ¬q; logo p): se q é F e a disjunção é V, p tem de ser V. A primeira é afirmação do consequente: a rua pode estar molhada sem chuva. A segunda é negação do antecedente: sem chuva, a rua ainda pode estar molhada por outro motivo. A terceira é inválida porque o “ou” inclusivo admite que chova e vente ao mesmo tempo.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-argumentos-q06",
+    "topico": "rl-argumentos",
+    "enunciado": "Considere as premissas: “Se o servidor cai, o site fica fora do ar.” “Se o site fica fora do ar, a equipe é acionada.” Assinale a conclusão que decorre necessariamente dessas premissas.",
+    "alternativas": [
+      "Se a equipe não é acionada, então o servidor não cai.",
+      "Se a equipe é acionada, então o servidor caiu.",
+      "Se o servidor não cai, então a equipe não é acionada.",
+      "O servidor caiu e a equipe foi acionada."
+    ],
+    "gabarito": 0,
+    "comentario": "Pelo silogismo hipotético, s → f e f → e dão s → e; sua contrapositiva, ¬e → ¬s, é equivalente e também decorre: “Se a equipe não é acionada, então o servidor não cai”. A segunda é a recíproca de s → e e não decorre (a equipe pode ser acionada por outro motivo). A terceira é a inversa (¬s → ¬e), igualmente não garantida. A quarta afirma fatos, mas as premissas são só condicionais e não garantem que o servidor caiu.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-argumentos-q07",
+    "topico": "rl-argumentos",
+    "enunciado": "Considere verdadeiras as premissas:\nP1: Lucas é analista ou Mara é gerente.\nP2: Se Mara é gerente, então Nilo é diretor.\nP3: Nilo não é diretor.\nÉ correto concluir que:",
+    "alternativas": [
+      "Mara é gerente e Lucas não é analista.",
+      "Lucas é analista e Mara não é gerente.",
+      "Lucas não é analista e Nilo não é diretor.",
+      "Mara é gerente ou Nilo é diretor."
+    ],
+    "gabarito": 1,
+    "comentario": "De P3, n é F. Em P2 (m → n), com n F, m tem de ser F (modus tollens): Mara não é gerente. Em P1 (l ∨ m), com m F, l tem de ser V (silogismo disjuntivo): Lucas é analista. A primeira contradiz os dois resultados. A terceira afirma que Lucas não é analista, o que tornaria P1 falsa. A quarta é F ∨ F = F.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-argumentos-q08",
+    "topico": "rl-argumentos",
+    "enunciado": "Analise os argumentos, em que as premissas vêm separadas por ponto e vírgula:\nI. Premissas: p → q; q → r; ¬r. Conclusão: ¬p.\nII. Premissas: p ∨ q; p → r; q → r. Conclusão: r.\nIII. Premissas: p → q; r → q; q. Conclusão: p ∨ r.\nÉ(São) válido(s):",
+    "alternativas": [
+      "I, apenas.",
+      "I e II, apenas.",
+      "II e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 1,
+    "comentario": "I: de ¬r e q → r, q é F; de q F e p → q, p é F; logo ¬p: válido. II: supondo r F, p → r e q → r obrigam p F e q F, o que torna p ∨ q falsa; não há como ter premissas V e conclusão F: válido. III: com p F, r F e q V, as três premissas são V (F → V, F → V, V) e a conclusão p ∨ r é F: inválido. “I, apenas” omite II, e as alternativas com III incluem um argumento inválido.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-argumentos-q09",
+    "topico": "rl-argumentos",
+    "enunciado": "Considere verdadeiras as quatro premissas:\n(1) Se Rita viaja, então Sérgio não trabalha.\n(2) Sérgio trabalha ou Tânia folga.\n(3) Se Tânia folga, então Úrsula substitui Rita.\n(4) Úrsula não substitui Rita.\nConclui-se que:",
+    "alternativas": [
+      "Rita viaja, Sérgio trabalha e Tânia não folga.",
+      "Rita não viaja, Sérgio não trabalha e Tânia folga.",
+      "Rita não viaja, Sérgio trabalha e Tânia folga.",
+      "Rita não viaja, Sérgio trabalha e Tânia não folga."
+    ],
+    "gabarito": 3,
+    "comentario": "De (4), u é F. Em (3), t → u com u F exige t F: Tânia não folga. Em (2), s ∨ t com t F exige s V: Sérgio trabalha. Em (1), r → ¬s com ¬s F exige r F: Rita não viaja. A primeira diz que Rita viaja, o que tornaria (1) falsa (V → F). A segunda diz que Sérgio não trabalha e Tânia folga, contrariando (3) e (4). A terceira diz que Tânia folga, o que, por (3), obrigaria Úrsula a substituir Rita, contra (4).",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-argumentos-q10",
+    "topico": "rl-argumentos",
+    "enunciado": "Considere as premissas: “Se Hugo é promovido, então Íris é transferida.” “Se Jair é contratado, então Kátia é transferida.” “Hugo é promovido ou Jair é contratado.” Assinale a conclusão que decorre necessariamente dessas premissas.",
+    "alternativas": [
+      "Íris é transferida ou Kátia é transferida.",
+      "Íris é transferida e Kátia é transferida.",
+      "Hugo é promovido e Jair é contratado.",
+      "Se Íris é transferida, então Hugo é promovido."
+    ],
+    "gabarito": 0,
+    "comentario": "É o dilema construtivo: h → i; j → k; h ∨ j; logo i ∨ k. Pelo método da conclusão falsa, i F e k F obrigam h F e j F, tornando h ∨ j falsa, contradição; portanto a conclusão é válida. A segunda falha com h V, i V, j F, k F: premissas verdadeiras e conclusão falsa. A terceira falha com h V e j F, que satisfaz a disjunção. A quarta é a recíproca de h → i e falha com i V e h F (e j V, k V).",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-numeros-q01",
+    "topico": "rl-numeros",
+    "enunciado": "Em uma atividade sobre conjuntos numéricos, um professor de uma escola municipal listou algumas afirmações no quadro. Assinale a alternativa correta.",
+    "alternativas": [
+      "O número √16 é irracional, porque é escrito com radical.",
+      "O número 0,2777… é racional, pois é uma dízima periódica.",
+      "O número −5 pertence ao conjunto dos números naturais.",
+      "O número π pode ser escrito como fração de dois inteiros."
+    ],
+    "gabarito": 1,
+    "comentario": "0,2777… é dízima periódica composta, com geratriz (27 − 2)/90 = 25/90 = 5/18; logo, é racional. √16 = 4 é natural (e racional): o radical, por si só, não torna o número irracional. −5 é inteiro negativo e não pertence a N = {0, 1, 2, …}. π é irracional, decimal infinito e não periódico, sem forma de fração de inteiros.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-numeros-q02",
+    "topico": "rl-numeros",
+    "enunciado": "Ao revisar uma fórmula de planilha, um analista do setor de TI precisou calcular o valor da expressão 5 − 2 · (−3)² + 12 ÷ (−4). O resultado correto é:",
+    "alternativas": [
+      "20",
+      "−10",
+      "24",
+      "−16"
+    ],
+    "gabarito": 3,
+    "comentario": "Potência primeiro: (−3)² = 9. Depois, multiplicação e divisão: 2 · 9 = 18 e 12 ÷ (−4) = −3. Então 5 − 18 − 3 = −16. O 20 surge ao tratar (−3)² como −9 (5 + 18 − 3). O −10 aparece ao trocar o sinal de 12 ÷ (−4) para +3 (5 − 18 + 3). O 24 vem de efetuar 5 − 2 antes da multiplicação (3 · 9 − 3), ignorando a ordem das operações.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-numeros-q03",
+    "topico": "rl-numeros",
+    "enunciado": "A secretaria de uma escola comprou 3 caixas de giz a R$ 12,75 cada e 4 apagadores a R$ 8,40 cada, pagando com uma nota de R$ 100,00. O troco recebido foi de:",
+    "alternativas": [
+      "R$ 28,15",
+      "R$ 28,85",
+      "R$ 27,15",
+      "R$ 29,25"
+    ],
+    "gabarito": 0,
+    "comentario": "Giz: 3 · 12,75 = 38,25. Apagadores: 4 · 8,40 = 33,60. Total: 38,25 + 33,60 = 71,85. Troco: 100,00 − 71,85 = R$ 28,15. R$ 28,85 corresponderia a um gasto de R$ 71,15; R$ 27,15, a um gasto de R$ 72,85; R$ 29,25, a um gasto de R$ 70,75; nenhum confere com o total de R$ 71,85.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-numeros-q04",
+    "topico": "rl-numeros",
+    "enunciado": "Simplificando a expressão (2⁵ · 4³) ÷ 8⁴, obtém-se:",
+    "alternativas": [
+      "2¹",
+      "2⁻²",
+      "2⁻¹",
+      "2⁴"
+    ],
+    "gabarito": 2,
+    "comentario": "Escreva tudo na base 2: 4³ = (2²)³ = 2⁶ e 8⁴ = (2³)⁴ = 2¹². Então 2⁵ · 2⁶ ÷ 2¹² = 2⁵⁺⁶⁻¹² = 2⁻¹ = 1/2. Conferência: 32 · 64 ÷ 4.096 = 2.048 ÷ 4.096 = 1/2. 2¹ aparece ao trocar o sinal do expoente final. 2⁻² resulta de calcular (2²)³ como 2⁵, somando os expoentes em vez de multiplicá-los (5 + 5 − 12 = −2). 2⁴ resulta do mesmo erro em 8⁴, tomado como 2⁷ (5 + 6 − 7 = 4).",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-numeros-q05",
+    "topico": "rl-numeros",
+    "enunciado": "O valor da expressão √75 − √27 + √12 é:",
+    "alternativas": [
+      "4√3",
+      "√60",
+      "2√3",
+      "6√3"
+    ],
+    "gabarito": 0,
+    "comentario": "√75 = √(25 · 3) = 5√3; √27 = √(9 · 3) = 3√3; √12 = √(4 · 3) = 2√3. Logo, 5√3 − 3√3 + 2√3 = 4√3. √60 resulta de operar os radicandos (75 − 27 + 12 = 60), o que não é permitido. 2√3 esquece de somar √12. 6√3 corresponde a 5√3 + 3√3 − 2√3, com os sinais trocados.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-numeros-q06",
+    "topico": "rl-numeros",
+    "enunciado": "No painel de monitoramento do setor de TI, a taxa de uso de um servidor aparece como a dízima periódica 0,1666…. Escrita como fração irredutível, essa taxa é:",
+    "alternativas": [
+      "16/99",
+      "8/45",
+      "1/60",
+      "1/6"
+    ],
+    "gabarito": 3,
+    "comentario": "É dízima composta: parte não periódica 1 e período 6. Geratriz: (16 − 1)/90 = 15/90 = 1/6. Conferência: 1 ÷ 6 = 0,1666…. 16/99 = 0,1616… trata a dízima como simples, de período 16. 8/45 = 16/90 = 0,1777… esquece de subtrair a parte não periódica. 1/60 = 0,01666… desloca a vírgula uma casa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-numeros-q07",
+    "topico": "rl-numeros",
+    "enunciado": "Os sensores da câmara fria do almoxarifado da Saúde registraram, em um dia, temperatura mínima de −7,5 °C e máxima de 4,5 °C. A amplitude térmica do dia, dada por |máxima − mínima|, foi de:",
+    "alternativas": [
+      "3 °C",
+      "−12 °C",
+      "12 °C",
+      "−3 °C"
+    ],
+    "gabarito": 2,
+    "comentario": "|4,5 − (−7,5)| = |4,5 + 7,5| = |12| = 12 °C. 3 °C resulta de fazer 7,5 − 4,5, como se a mínima fosse positiva. −12 °C e −3 °C são impossíveis, porque o valor absoluto nunca é negativo.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-numeros-q08",
+    "topico": "rl-numeros",
+    "enunciado": "Considere as afirmativas sobre os números naturais:\nI. O produto de dois números naturais consecutivos é sempre par.\nII. A soma de três números naturais consecutivos é sempre múltiplo de 3.\nIII. A diferença entre dois números naturais é sempre um número natural.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "Apenas I.",
+      "Apenas I e II.",
+      "Apenas II e III.",
+      "I, II e III."
+    ],
+    "gabarito": 1,
+    "comentario": "I é verdadeira: de dois consecutivos, um é par, então o produto é par (3 · 4 = 12). II é verdadeira: n + (n + 1) + (n + 2) = 3n + 3 = 3(n + 1). III é falsa: 3 − 5 = −2 não é natural, pois a subtração não é fechada em N. “Apenas I” deixa de fora a afirmativa II, que é verdadeira; as opções que incluem III estão erradas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-numeros-q09",
+    "topico": "rl-numeros",
+    "enunciado": "Considere os números a = 3/5, b = 0,58, c = √0,4 e d = (0,8)². Assinale a alternativa que os apresenta em ordem crescente.",
+    "alternativas": [
+      "b < a < c < d",
+      "a < b < c < d",
+      "b < a < d < c",
+      "b < c < a < d"
+    ],
+    "gabarito": 0,
+    "comentario": "a = 3/5 = 0,6; b = 0,58; d = 0,8² = 0,64; c = √0,4 ≈ 0,632, pois 0,63² = 0,3969 < 0,4 < 0,4096 = 0,64². Logo, 0,58 < 0,6 < 0,632… < 0,64, isto é, b < a < c < d. “a < b < c < d” erra ao comparar 0,6 com 0,58 (0,60 > 0,58). “b < a < d < c” supõe c > 0,64, mas 0,64² = 0,4096 > 0,4. “b < c < a < d” supõe √0,4 < 0,6, mas 0,6² = 0,36 < 0,4.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-divisibilidade-q01",
+    "topico": "rl-divisibilidade",
+    "enunciado": "Um código de patrimônio tem a forma 4.3a8, em que a é um algarismo. Para que esse número seja divisível por 9, o valor de a deve ser:",
+    "alternativas": [
+      "6",
+      "2",
+      "3",
+      "4"
+    ],
+    "gabarito": 2,
+    "comentario": "Pelo critério do 9, a soma dos algarismos, 4 + 3 + a + 8 = 15 + a, deve ser múltiplo de 9. Como a vai de 0 a 9, só a = 3 serve (soma 18): 4.338 ÷ 9 = 482. Com a = 6, a soma é 21, múltiplo de 3 mas não de 9. Com a = 2, a soma é 17. Com a = 4, a soma é 19.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-divisibilidade-q02",
+    "topico": "rl-divisibilidade",
+    "enunciado": "A decomposição do número 252 em fatores primos é:",
+    "alternativas": [
+      "2² · 3² · 7",
+      "2³ · 3 · 7",
+      "2 · 3² · 7",
+      "2² · 3 · 7²"
+    ],
+    "gabarito": 0,
+    "comentario": "252 ÷ 2 = 126; 126 ÷ 2 = 63; 63 ÷ 3 = 21; 21 ÷ 3 = 7; 7 ÷ 7 = 1. Logo, 252 = 2² · 3² · 7. 2³ · 3 · 7 = 168. 2 · 3² · 7 = 126. 2² · 3 · 7² = 588.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-divisibilidade-q03",
+    "topico": "rl-divisibilidade",
+    "enunciado": "Quantos divisores naturais tem o número 180?",
+    "alternativas": [
+      "12",
+      "9",
+      "20",
+      "18"
+    ],
+    "gabarito": 3,
+    "comentario": "180 = 2² · 3² · 5. Quantidade de divisores: (2 + 1)(2 + 1)(1 + 1) = 3 · 3 · 2 = 18. 12 é a quantidade de divisores de 60 = 2² · 3 · 5, não de 180. 9 = 3 · 3 ignora o fator 5. 20 não corresponde ao produto (a + 1)(b + 1)(c + 1) da fatoração de 180.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-divisibilidade-q04",
+    "topico": "rl-divisibilidade",
+    "enunciado": "Uma secretaria tem 72 cadernos, 108 lápis e 180 borrachas para montar kits escolares iguais, com o maior número possível de kits e sem sobra. Quantos lápis haverá em cada kit?",
+    "alternativas": [
+      "2",
+      "3",
+      "36",
+      "5"
+    ],
+    "gabarito": 1,
+    "comentario": "72 = 2³ · 3², 108 = 2² · 3³ e 180 = 2² · 3² · 5, então MDC = 2² · 3² = 36 kits. Lápis por kit: 108 ÷ 36 = 3. O 2 é o número de cadernos por kit (72 ÷ 36). O 36 é o número de kits. O 5 é o número de borrachas por kit (180 ÷ 36).",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-divisibilidade-q05",
+    "topico": "rl-divisibilidade",
+    "enunciado": "No terminal de ônibus de uma cidade, três linhas partem a cada 12, 18 e 30 minutos, respectivamente. Às 6 h 40 min, as três partiram juntas. O próximo horário em que voltarão a partir juntas é:",
+    "alternativas": [
+      "7 h 40 min",
+      "8 h 10 min",
+      "9 h 40 min",
+      "10 h 10 min"
+    ],
+    "gabarito": 2,
+    "comentario": "12 = 2² · 3, 18 = 2 · 3² e 30 = 2 · 3 · 5. MMC = 2² · 3² · 5 = 180 min = 3 h. Logo, 6 h 40 min + 3 h = 9 h 40 min. 7 h 40 min soma só 60 min, que não é múltiplo de 18. 8 h 10 min soma 90 min, que não é múltiplo de 12. 10 h 10 min soma 210 min, que não é múltiplo de 12 nem de 18.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-divisibilidade-q06",
+    "topico": "rl-divisibilidade",
+    "enunciado": "Considere o número 3.960 e as afirmativas:\nI. É divisível por 8.\nII. É divisível por 11.\nIII. É divisível por 7.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "Apenas I.",
+      "Apenas I e II.",
+      "Apenas I e III.",
+      "Apenas II e III."
+    ],
+    "gabarito": 1,
+    "comentario": "I: os três últimos algarismos formam 960 = 8 · 120, então 3.960 é divisível por 8. II: (0 + 9) − (6 + 3) = 0, múltiplo de 11; de fato, 3.960 = 11 · 360. III: 3.960 = 7 · 565 + 5, deixa resto 5. Logo, só I e II. “Apenas I” deixa de fora II, que é verdadeira; as opções com III estão erradas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-divisibilidade-q07",
+    "topico": "rl-divisibilidade",
+    "enunciado": "Ao organizar as cadeiras do auditório de uma escola em fileiras de 8, de 12 ou de 15 cadeiras, sobram sempre 5 cadeiras. Sabendo que o auditório tem entre 200 e 300 cadeiras, o número de cadeiras é:",
+    "alternativas": [
+      "253",
+      "285",
+      "260",
+      "245"
+    ],
+    "gabarito": 3,
+    "comentario": "Se sobram 5 em todos os agrupamentos, o número menos 5 é múltiplo comum de 8, 12 e 15. MMC = 2³ · 3 · 5 = 120; então o número é 120k + 5: 125, 245, 365… Entre 200 e 300, só 245. Conferência: 245 = 8 · 30 + 5 = 12 · 20 + 5 = 15 · 16 + 5. 253 deixa resto 1 na divisão por 12. 285 deixa resto 9 na divisão por 12. 260 deixa resto 4 na divisão por 8.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-divisibilidade-q08",
+    "topico": "rl-divisibilidade",
+    "enunciado": "Três cabos de rede, com 120 m, 180 m e 216 m, serão cortados em pedaços de mesmo comprimento, o maior possível, sem sobra. Quantos pedaços serão obtidos ao todo?",
+    "alternativas": [
+      "43",
+      "12",
+      "86",
+      "36"
+    ],
+    "gabarito": 0,
+    "comentario": "120 = 2³ · 3 · 5, 180 = 2² · 3² · 5 e 216 = 2³ · 3³, então MDC = 2² · 3 = 12 m. Pedaços: 120 ÷ 12 + 180 ÷ 12 + 216 ÷ 12 = 10 + 15 + 18 = 43. O 12 é o comprimento de cada pedaço, não a quantidade. O 86 resulta de cortar em pedaços de 6 m, que não é o maior comprimento possível. O 36 é o MDC só de 180 e 216, ignorando o cabo de 120 m.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-divisibilidade-q09",
+    "topico": "rl-divisibilidade",
+    "enunciado": "Dois números naturais têm produto igual a 1.728, e o máximo divisor comum deles é 12. O mínimo múltiplo comum desses números é:",
+    "alternativas": [
+      "72",
+      "288",
+      "144",
+      "1.716"
+    ],
+    "gabarito": 2,
+    "comentario": "Para dois números naturais, MDC · MMC = produto. Logo, MMC = 1.728 ÷ 12 = 144. Exemplo de par: 36 e 48, com MDC 12, MMC 144 e produto 1.728. O 72 é a metade do valor correto e o 288, o dobro. O 1.716 resulta de subtrair o MDC do produto, operação sem relação com a propriedade.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-razao-q01",
+    "topico": "rl-razao",
+    "enunciado": "A planta baixa de uma escola foi desenhada na escala 1:150. Na planta, a largura de uma sala de aula mede 6 cm. A largura real dessa sala é:",
+    "alternativas": [
+      "0,9 m",
+      "90 m",
+      "25 m",
+      "9 m"
+    ],
+    "gabarito": 3,
+    "comentario": "Na escala 1:150, cada centímetro da planta vale 150 cm reais: 6 · 150 = 900 cm = 9 m. 0,9 m e 90 m erram a conversão de centímetros para metros (900 cm ÷ 100 = 9 m). 25 m vem de dividir 150 por 6 em vez de multiplicar.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-razao-q02",
+    "topico": "rl-razao",
+    "enunciado": "Em uma equipe de 40 servidores do setor de TI, a razão entre o número de analistas e o de técnicos é 3/5. Quantos analistas há na equipe?",
+    "alternativas": [
+      "24",
+      "15",
+      "25",
+      "18"
+    ],
+    "gabarito": 1,
+    "comentario": "Analistas = 3k e técnicos = 5k, com 3k + 5k = 8k = 40, logo k = 5. Analistas: 3 · 5 = 15 (e técnicos: 25). 24 = 3/5 de 40 trata a razão como se fosse entre analistas e o total. 25 é o número de técnicos. 18 não mantém a razão, pois haveria 22 técnicos e 18/22 ≠ 3/5.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-razao-q03",
+    "topico": "rl-razao",
+    "enunciado": "Em uma sala de provas, a razão entre o número de candidatos aprovados e o de reprovados foi 4/7, e havia 27 reprovados a mais que aprovados. Quantos candidatos havia na sala?",
+    "alternativas": [
+      "99",
+      "63",
+      "108",
+      "77"
+    ],
+    "gabarito": 0,
+    "comentario": "Aprovados = 4k e reprovados = 7k. A diferença é 7k − 4k = 3k = 27, então k = 9. Total: 4k + 7k = 11k = 99 (36 aprovados e 63 reprovados). 63 é só o número de reprovados. 108 = 4 · 27 multiplica um termo da razão pela diferença. 77 = 7 · 11 não parte do valor de k.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-razao-q04",
+    "topico": "rl-razao",
+    "enunciado": "Um bônus de R$ 5.400,00 será dividido entre três setores em partes inversamente proporcionais ao número de faltas registradas no mês: 3, 4 e 6. Quanto receberá o setor que registrou 4 faltas?",
+    "alternativas": [
+      "R$ 2.400,00",
+      "R$ 1.200,00",
+      "R$ 1.800,00",
+      "R$ 1.500,00"
+    ],
+    "gabarito": 2,
+    "comentario": "Inversos: 1/3, 1/4 e 1/6; multiplicando por 12 (MMC), os pesos ficam 4, 3 e 2. k = 5.400 ÷ (4 + 3 + 2) = 600. Setor com 4 faltas: 3 · 600 = R$ 1.800,00. R$ 2.400,00 é a parte do setor com 3 faltas. R$ 1.200,00 é a parte do setor com 6 faltas. R$ 1.500,00 não corresponde a nenhum dos pesos da divisão.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-razao-q05",
+    "topico": "rl-razao",
+    "enunciado": "Uma gratificação de R$ 9.000,00 será dividida entre três servidores em partes diretamente proporcionais aos anos de serviço de cada um: 4, 5 e 6 anos. Quanto o servidor que recebe a maior parte recebe a mais que o que recebe a menor?",
+    "alternativas": [
+      "R$ 600,00",
+      "R$ 3.600,00",
+      "R$ 2.400,00",
+      "R$ 1.200,00"
+    ],
+    "gabarito": 3,
+    "comentario": "k = 9.000 ÷ (4 + 5 + 6) = 600. Partes: 4 · 600 = 2.400, 5 · 600 = 3.000 e 6 · 600 = 3.600. Diferença: 3.600 − 2.400 = R$ 1.200,00. R$ 600,00 é a constante k, diferença entre partes vizinhas. R$ 3.600,00 é a maior parte. R$ 2.400,00 é a menor parte.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-razao-q06",
+    "topico": "rl-razao",
+    "enunciado": "Considere os pares de grandezas:\nI. Número de impressoras iguais funcionando e tempo para imprimir um mesmo lote de páginas.\nII. Medida do lado de um quadrado e área desse quadrado.\nIII. Litros de combustível comprados e valor pago, com preço por litro fixo.\nAssinale a classificação correta.",
+    "alternativas": [
+      "I inversa; II direta; III direta.",
+      "I inversa; II não proporcional; III direta.",
+      "I direta; II não proporcional; III direta.",
+      "I inversa; II inversa; III direta."
+    ],
+    "gabarito": 1,
+    "comentario": "I: dobrando as impressoras, o tempo cai à metade; o produto é constante, então é inversa. II: lado 1 dá área 1 e lado 2 dá área 4; a razão área/lado muda (1 e 2) e o produto também (1 e 8), então não há proporcionalidade, embora as duas cresçam juntas. III: a razão valor/litros é o preço, constante, então é direta. As outras alternativas classificam II como direta ou inversa, ou I como direta.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-razao-q07",
+    "topico": "rl-razao",
+    "enunciado": "Um prêmio de R$ 6.900,00 será dividido entre dois técnicos em partes diretamente proporcionais às horas extras trabalhadas (30 h e 40 h) e inversamente proporcionais ao número de faltas (2 e 5, respectivamente). Quanto receberá o técnico que fez 40 horas extras?",
+    "alternativas": [
+      "R$ 2.400,00",
+      "R$ 4.500,00",
+      "R$ 3.450,00",
+      "R$ 3.000,00"
+    ],
+    "gabarito": 0,
+    "comentario": "O peso de cada um é horas ÷ faltas: 30 ÷ 2 = 15 e 40 ÷ 5 = 8. k = 6.900 ÷ (15 + 8) = 300. O técnico de 40 horas recebe 8 · 300 = R$ 2.400,00. R$ 4.500,00 é a parte do técnico de 30 horas (15 · 300). R$ 3.450,00 é a divisão em partes iguais. R$ 3.000,00 não corresponde a nenhum dos pesos.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-razao-q08",
+    "topico": "rl-razao",
+    "enunciado": "O tempo que um caminhão de coleta leva para percorrer sua rota é inversamente proporcional à velocidade média. A 30 km/h, o percurso leva 48 minutos. A 40 km/h, o mesmo percurso levará:",
+    "alternativas": [
+      "64 min",
+      "38 min",
+      "36 min",
+      "44 min"
+    ],
+    "gabarito": 2,
+    "comentario": "Produto constante: 30 · 48 = 40 · t, então t = 1.440 ÷ 40 = 36 min. 64 min resulta de tratar as grandezas como diretas (48 · 40 ÷ 30). 38 min tira 10 min por causa dos 10 km/h a mais, o que não é proporcionalidade. 44 min não mantém o produto constante (40 · 44 = 1.760).",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-razao-q09",
+    "topico": "rl-razao",
+    "enunciado": "Na proporção (x − 2)/6 = 15/9, o valor de x é:",
+    "alternativas": [
+      "10",
+      "8",
+      "14",
+      "12"
+    ],
+    "gabarito": 3,
+    "comentario": "Produto dos extremos igual ao dos meios: 9 · (x − 2) = 6 · 15 = 90, logo x − 2 = 10 e x = 12. Conferência: (12 − 2)/6 = 10/6 = 5/3 = 15/9. O 10 é o valor de x − 2, não de x. O 8 resulta de subtrair 2 em vez de somar. O 14 dá 12/6 = 2, diferente de 15/9.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-regra-tres-q01",
+    "topico": "rl-regra-tres",
+    "enunciado": "Uma impressora do setor de protocolo imprime 180 páginas em 12 minutos. Mantido o ritmo, em quanto tempo ela imprimirá 450 páginas?",
+    "alternativas": [
+      "25 min",
+      "30 min",
+      "36 min",
+      "4,8 min"
+    ],
+    "gabarito": 1,
+    "comentario": "Mais páginas, mais tempo: relação direta. 180/450 = 12/x → 180x = 5.400 → x = 30 min. 4,8 min resulta de tratar a relação como inversa (180 · 12 ÷ 450). 25 min e 36 min não mantêm o ritmo de 15 páginas por minuto (450 ÷ 25 = 18; 450 ÷ 36 = 12,5).",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-regra-tres-q02",
+    "topico": "rl-regra-tres",
+    "enunciado": "Oito servidores digitalizam o acervo de um arquivo em 15 dias. Com o mesmo ritmo de trabalho, em quantos dias 12 servidores fariam a mesma tarefa?",
+    "alternativas": [
+      "22,5 dias",
+      "12 dias",
+      "10 dias",
+      "9 dias"
+    ],
+    "gabarito": 2,
+    "comentario": "Mais servidores, menos dias: relação inversa. 8 · 15 = 12 · x → x = 120 ÷ 12 = 10 dias. 22,5 dias resulta de usar a regra de três direta (15 · 12 ÷ 8). 12 dias e 9 dias não mantêm o produto servidores × dias igual a 120 (dariam 144 e 108).",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-regra-tres-q03",
+    "topico": "rl-regra-tres",
+    "enunciado": "Com 3,5 litros de tinta, a equipe de manutenção de uma escola pinta 28 m² de parede. Nas mesmas condições, quantos litros serão necessários para pintar 92 m² de parede?",
+    "alternativas": [
+      "11 L",
+      "12,5 L",
+      "10,5 L",
+      "11,5 L"
+    ],
+    "gabarito": 3,
+    "comentario": "Relação direta. Rendimento: 28 ÷ 3,5 = 8 m² por litro. Para 92 m²: 92 ÷ 8 = 11,5 L. Pela regra de três: 3,5/x = 28/92 → 28x = 322 → x = 11,5. 11 L pintariam só 88 m². 10,5 L pintariam 84 m². 12,5 L pintariam 100 m².",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-regra-tres-q04",
+    "topico": "rl-regra-tres",
+    "enunciado": "Um ônibus escolar faz seu trajeto em 1 h 20 min a uma velocidade média de 45 km/h. Se a velocidade média passar a 60 km/h, o mesmo trajeto será feito em:",
+    "alternativas": [
+      "1 h",
+      "54 min",
+      "1 h 10 min",
+      "48 min"
+    ],
+    "gabarito": 0,
+    "comentario": "Velocidade e tempo são inversamente proporcionais. Em minutos, 1 h 20 min = 80 min. 45 · 80 = 60 · t → t = 3.600 ÷ 60 = 60 min = 1 h. 54 min resulta de tratar 1 h 20 min como 1,2 h (1,2 · 45 ÷ 60 = 0,9 h). 1 h 10 min e 48 min não mantêm o produto velocidade × tempo igual a 3.600 (dariam 4.200 e 2.880).",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-regra-tres-q05",
+    "topico": "rl-regra-tres",
+    "enunciado": "Cinco digitadores, trabalhando 6 horas por dia, digitam 900 páginas em 4 dias. No mesmo ritmo, quantas páginas 8 digitadores, trabalhando 5 horas por dia, digitam em 6 dias?",
+    "alternativas": [
+      "1.440",
+      "1.800",
+      "2.160",
+      "1.620"
+    ],
+    "gabarito": 1,
+    "comentario": "Páginas são diretamente proporcionais a digitadores, horas por dia e dias. Ritmo: 900 ÷ (5 · 6 · 4) = 7,5 páginas por digitador por hora. Novo total: 7,5 · 8 · 5 · 6 = 1.800 páginas. 1.440 considera só o aumento de digitadores (900 · 8/5). 2.160 ignora a redução de 6 para 5 horas por dia (900 · 8/5 · 6/4). 1.620 corresponderia a 216 horas de trabalho, mas são 8 · 5 · 6 = 240.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-regra-tres-q06",
+    "topico": "rl-regra-tres",
+    "enunciado": "Doze operários, trabalhando 8 horas por dia, constroem 480 m de calçada em 10 dias. Quantos dias 15 operários, trabalhando 6 horas por dia, levarão para construir 540 m da mesma calçada?",
+    "alternativas": [
+      "9 dias",
+      "15 dias",
+      "10 dias",
+      "12 dias"
+    ],
+    "gabarito": 3,
+    "comentario": "(operários · horas por dia · dias) ÷ metros é constante: 12 · 8 · 10 ÷ 480 = 2. Então 15 · 6 · D ÷ 540 = 2 → 90D = 1.080 → D = 12 dias. 9 dias resulta de ignorar a redução das horas diárias (10 · 12/15 · 540/480). 10 dias repete o prazo original. 15 dias não mantém a constante (15 · 6 · 15 ÷ 540 = 2,5).",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-regra-tres-q07",
+    "topico": "rl-regra-tres",
+    "enunciado": "Uma copiadora antiga tira 1.200 cópias em 2 h 30 min. Uma copiadora nova produz 25% mais cópias por hora que a antiga. Em quanto tempo a nova tirará 3.000 cópias?",
+    "alternativas": [
+      "6 h 15 min",
+      "4 h 30 min",
+      "5 h",
+      "5 h 30 min"
+    ],
+    "gabarito": 2,
+    "comentario": "Ritmo da antiga: 1.200 ÷ 150 min = 8 cópias por minuto. A nova faz 25% a mais: 8 · 1,25 = 10 cópias por minuto. Tempo: 3.000 ÷ 10 = 300 min = 5 h. 6 h 15 min é o tempo da copiadora antiga (3.000 ÷ 8 = 375 min). 4 h 30 min e 5 h 30 min não correspondem ao ritmo de 10 cópias por minuto (dariam 2.700 e 3.300 cópias).",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-regra-tres-q08",
+    "topico": "rl-regra-tres",
+    "enunciado": "Dez máquinas, trabalhando 8 horas por dia durante 6 dias, abrem 1.200 m de vala em um terreno de dificuldade 2. Quantos dias 6 máquinas, trabalhando 10 horas por dia, levarão para abrir 900 m de vala em um terreno de dificuldade 3?",
+    "alternativas": [
+      "9 dias",
+      "6 dias",
+      "8 dias",
+      "12 dias"
+    ],
+    "gabarito": 0,
+    "comentario": "A dificuldade entra junto com a quantidade de trabalho. Constante: (máquinas · horas · dias) ÷ (metros · dificuldade) = 10 · 8 · 6 ÷ (1.200 · 2) = 480 ÷ 2.400 = 0,2. Então 6 · 10 · D ÷ (900 · 3) = 0,2 → 60D = 540 → D = 9 dias. 6 dias resulta de ignorar a dificuldade (60D ÷ 900 = 480 ÷ 1.200). 8 dias e 12 dias não mantêm a constante (dariam cerca de 0,18 e 0,27).",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-regra-tres-q09",
+    "topico": "rl-regra-tres",
+    "enunciado": "O estoque de merenda de uma escola é suficiente para alimentar 240 alunos durante 18 dias. Depois de 6 dias de consumo normal, a escola recebe mais 80 alunos. Mantido o consumo diário por aluno, o estoque restante durará mais:",
+    "alternativas": [
+      "13,5 dias",
+      "9 dias",
+      "7,5 dias",
+      "12 dias"
+    ],
+    "gabarito": 1,
+    "comentario": "Após 6 dias, sobra comida para 240 alunos por 12 dias. Agora são 320 alunos, e a relação é inversa: 240 · 12 = 320 · x → x = 2.880 ÷ 320 = 9 dias. 13,5 dias aplica a regra de três aos 18 dias totais, esquecendo os 6 já consumidos (18 · 240 ÷ 320). 7,5 dias desconta 6 dias de 13,5. 12 dias ignora a chegada dos novos alunos.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-porcentagem-q01",
+    "topico": "rl-porcentagem",
+    "enunciado": "Dos 360 servidores de uma secretaria, 15% estão de férias em janeiro. Quantos servidores estão de férias?",
+    "alternativas": [
+      "54",
+      "36",
+      "45",
+      "60"
+    ],
+    "gabarito": 0,
+    "comentario": "15% de 360 = 0,15 · 360 = 54. Pelo atalho: 10% = 36 e 5% = 18, total 54. 36 corresponde a 10%. 45 corresponde a 12,5%. 60 corresponde a cerca de 16,7%.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-porcentagem-q02",
+    "topico": "rl-porcentagem",
+    "enunciado": "Em um lote de 250 notebooks entregues a uma escola, 30 apresentaram defeito. Que porcentagem do lote apresentou defeito?",
+    "alternativas": [
+      "8%",
+      "30%",
+      "15%",
+      "12%"
+    ],
+    "gabarito": 3,
+    "comentario": "30 ÷ 250 = 0,12 = 12%. 30% confunde a quantidade de aparelhos com a taxa. 15% e 8% corresponderiam a 37,5 e 20 notebooks, respectivamente.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-porcentagem-q03",
+    "topico": "rl-porcentagem",
+    "enunciado": "O salário de um servidor teve reajuste de 10% em um ano e de 5% no ano seguinte, sobre o valor já reajustado. O aumento acumulado no período foi de:",
+    "alternativas": [
+      "15%",
+      "15,05%",
+      "15,5%",
+      "16%"
+    ],
+    "gabarito": 2,
+    "comentario": "Aumentos sucessivos se combinam multiplicando os fatores: 1,10 · 1,05 = 1,155, aumento acumulado de 15,5%. 15% soma as taxas, ignorando que o segundo reajuste incide sobre o valor já aumentado. 15,05% e 16% não correspondem ao produto dos fatores.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-porcentagem-q04",
+    "topico": "rl-porcentagem",
+    "enunciado": "Um equipamento de R$ 800,00 sofreu aumento de 25% e, em seguida, desconto de 20% sobre o novo preço. O preço final é:",
+    "alternativas": [
+      "R$ 840,00",
+      "R$ 800,00",
+      "R$ 760,00",
+      "R$ 832,00"
+    ],
+    "gabarito": 1,
+    "comentario": "800 · 1,25 = 1.000; 1.000 · 0,80 = 800. Os fatores se anulam, pois 1,25 · 0,8 = 1. R$ 840,00 resulta de somar as taxas (+25% − 20% = +5%). R$ 760,00 aplica uma queda de 5%, que não ocorre. R$ 832,00 corresponde a um aumento de 4%, que também não ocorre.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-porcentagem-q05",
+    "topico": "rl-porcentagem",
+    "enunciado": "Após um reajuste de 12%, a mensalidade de um software usado pela prefeitura passou a custar R$ 1.344,00. Qual era o valor antes do reajuste?",
+    "alternativas": [
+      "R$ 1.182,72",
+      "R$ 1.200,00",
+      "R$ 1.332,00",
+      "R$ 1.250,00"
+    ],
+    "gabarito": 1,
+    "comentario": "Valor final = valor original · 1,12. Logo, original = 1.344 ÷ 1,12 = R$ 1.200,00. Conferência: 1.200 · 1,12 = 1.344. R$ 1.182,72 tira 12% do valor final (1.344 · 0,88), mas a base do reajuste era o valor original. R$ 1.332,00 subtrai apenas 12 reais. R$ 1.250,00 reajustado em 12% daria R$ 1.400,00.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-porcentagem-q06",
+    "topico": "rl-porcentagem",
+    "enunciado": "O número de atendimentos mensais de uma unidade de saúde caiu de 1.250 para 1.000. A variação percentual foi:",
+    "alternativas": [
+      "Redução de 20%",
+      "Redução de 25%",
+      "Aumento de 25%",
+      "Redução de 12,5%"
+    ],
+    "gabarito": 0,
+    "comentario": "Variação = (1.000 − 1.250) ÷ 1.250 = −250 ÷ 1.250 = −0,20, redução de 20%. A redução de 25% usa como base o valor final (250 ÷ 1.000). O aumento de 25% descreve o caminho inverso, de 1.000 para 1.250. A redução de 12,5% não corresponde a 250 sobre nenhuma das duas bases.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-porcentagem-q07",
+    "topico": "rl-porcentagem",
+    "enunciado": "Uma loja oferece à prefeitura dois descontos sucessivos sobre o preço de tabela de um mobiliário: 20% e, depois, 15% sobre o valor já descontado. Esses dois descontos equivalem a um desconto único de:",
+    "alternativas": [
+      "35%",
+      "30%",
+      "33%",
+      "32%"
+    ],
+    "gabarito": 3,
+    "comentario": "Fatores: 0,80 · 0,85 = 0,68. O preço final é 68% do original, o que equivale a um desconto único de 32%. 35% soma as taxas. 30% e 33% não correspondem ao produto dos fatores (exigiriam fatores 0,70 e 0,67).",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-porcentagem-q08",
+    "topico": "rl-porcentagem",
+    "enunciado": "A taxa de evasão de uma escola municipal caiu de 8% para 6% de um ano para o outro. Considere as afirmativas:\nI. A taxa caiu 2 pontos percentuais.\nII. A taxa caiu 25% em relação ao valor inicial.\nIII. A taxa caiu 2% em relação ao valor inicial.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "Apenas I.",
+      "Apenas II.",
+      "Apenas I e II.",
+      "I, II e III."
+    ],
+    "gabarito": 2,
+    "comentario": "I: 8% − 6% = 2 pontos percentuais. II: variação relativa = (6 − 8) ÷ 8 = −0,25, queda de 25%. III é falsa: a queda relativa é de 25%, e 2 é a diferença em pontos percentuais, não em porcentagem. “Apenas I” e “Apenas II” deixam de fora uma afirmativa verdadeira; “I, II e III” inclui uma falsa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-porcentagem-q09",
+    "topico": "rl-porcentagem",
+    "enunciado": "A tarifa de um serviço sofreu aumento de 60%. Para que ela volte ao valor anterior ao aumento, deve-se aplicar sobre a nova tarifa um desconto de:",
+    "alternativas": [
+      "37,5%",
+      "60%",
+      "40%",
+      "62,5%"
+    ],
+    "gabarito": 0,
+    "comentario": "Se o valor era V, passou a 1,6V. Para voltar a V, o fator é 1 ÷ 1,6 = 0,625, ou seja, desconto de 1 − 0,625 = 0,375 = 37,5%. Exemplo: 100 → 160; 37,5% de 160 = 60; 160 − 60 = 100. Desconto de 60% levaria a 64% do valor original (1,6 · 0,4). Desconto de 40% levaria a 96% (1,6 · 0,6). 62,5% é o fator de volta confundido com a taxa de desconto.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-medidas-q01",
+    "topico": "rl-medidas",
+    "enunciado": "Na instalação elétrica de uma obra, foram usados 2,5 km, 780 m e 45.000 cm de cabo. O total de cabo usado, em metros, foi:",
+    "alternativas": [
+      "3.325 m",
+      "7.780 m",
+      "3.730 m",
+      "3.280 m"
+    ],
+    "gabarito": 2,
+    "comentario": "2,5 km = 2.500 m e 45.000 cm = 45.000 ÷ 100 = 450 m. Total: 2.500 + 780 + 450 = 3.730 m. 3.325 m converte 45.000 cm como 45 m (divisão por 1.000). 7.780 m converte como 4.500 m (divisão por 10). 3.280 m ignora os 45.000 cm.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-medidas-q02",
+    "topico": "rl-medidas",
+    "enunciado": "Uma escola recebeu 4 dúzias e meia de cadernos e 2 centenas e 7 dezenas de lápis, que foram distribuídos igualmente entre 18 alunos, sem sobra. Cada aluno recebeu:",
+    "alternativas": [
+      "2 cadernos e 15 lápis",
+      "3 cadernos e 15 lápis",
+      "3 cadernos e 13 lápis",
+      "4 cadernos e 15 lápis"
+    ],
+    "gabarito": 1,
+    "comentario": "4 dúzias e meia = 4,5 · 12 = 54 cadernos; 2 centenas e 7 dezenas = 200 + 70 = 270 lápis. Por aluno: 54 ÷ 18 = 3 cadernos e 270 ÷ 18 = 15 lápis. 2 cadernos por aluno somariam 36 cadernos; 4 cadernos, 72; 13 lápis por aluno somariam 234 lápis.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-medidas-q03",
+    "topico": "rl-medidas",
+    "enunciado": "O reservatório de água de uma escola tem a forma de um bloco retangular com 3 m de comprimento, 2,5 m de largura e 1,2 m de altura. Sua capacidade, em litros, é:",
+    "alternativas": [
+      "9.000 L",
+      "900 L",
+      "90.000 L",
+      "6.700 L"
+    ],
+    "gabarito": 0,
+    "comentario": "Volume: 3 · 2,5 · 1,2 = 9 m³. Como 1 m³ = 1.000 L, a capacidade é 9.000 L. 900 L e 90.000 L erram a conversão (1 m³ = 1.000 L, e não 100 nem 10.000). 6.700 L soma as dimensões (3 + 2,5 + 1,2 = 6,7) em vez de multiplicá-las.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-medidas-q04",
+    "topico": "rl-medidas",
+    "enunciado": "O registro de ponto de um servidor indica 7,4 horas trabalhadas em um dia. Em horas e minutos, isso corresponde a:",
+    "alternativas": [
+      "7 h 40 min",
+      "7 h 4 min",
+      "7 h 34 min",
+      "7 h 24 min"
+    ],
+    "gabarito": 3,
+    "comentario": "A parte decimal deve ser convertida: 0,4 h · 60 = 24 min. Logo, 7,4 h = 7 h 24 min. 7 h 40 min lê o decimal como se fossem minutos. 7 h 4 min e 7 h 34 min não correspondem a 0,4 · 60.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-medidas-q05",
+    "topico": "rl-medidas",
+    "enunciado": "Uma rotina de backup do setor de TI começou às 22 h 47 min e durou 3 h 38 min. Ela terminou, no dia seguinte, às:",
+    "alternativas": [
+      "1 h 25 min",
+      "2 h 15 min",
+      "2 h 25 min",
+      "3 h 05 min"
+    ],
+    "gabarito": 2,
+    "comentario": "Some minutos com minutos: 47 + 38 = 85 min = 1 h 25 min. Horas: 22 + 3 + 1 = 26 h, que no dia seguinte correspondem a 26 − 24 = 2 h. Término: 2 h 25 min. 1 h 25 min esquece a hora que vem dos 85 minutos. 2 h 15 min erra a conversão de 85 min, que são 1 h 25 min. 3 h 05 min não corresponde à soma das durações.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-medidas-q06",
+    "topico": "rl-medidas",
+    "enunciado": "Na merenda escolar, cada um dos 180 alunos de uma escola consome 150 g de arroz por dia letivo. Quantos quilogramas de arroz são necessários para 20 dias letivos?",
+    "alternativas": [
+      "54 kg",
+      "5.400 kg",
+      "450 kg",
+      "540 kg"
+    ],
+    "gabarito": 3,
+    "comentario": "Consumo: 180 · 150 · 20 = 540.000 g. Como 1 kg = 1.000 g, são 540.000 ÷ 1.000 = 540 kg. 54 kg e 5.400 kg erram a conversão por um fator 10. 450 kg corresponderia a 125 g por aluno por dia.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-medidas-q07",
+    "topico": "rl-medidas",
+    "enunciado": "Um veículo da prefeitura trafega a velocidade constante de 54 km/h. Quantos metros ele percorre em 40 segundos?",
+    "alternativas": [
+      "2.160 m",
+      "600 m",
+      "900 m",
+      "1.500 m"
+    ],
+    "gabarito": 1,
+    "comentario": "54 km/h = 54.000 m ÷ 3.600 s = 15 m/s. Em 40 s: 15 · 40 = 600 m. 2.160 m multiplica 54 por 40 sem converter as unidades. 900 m e 1.500 m correspondem a 22,5 m/s e 37,5 m/s, velocidades diferentes da dada.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-medidas-q08",
+    "topico": "rl-medidas",
+    "enunciado": "Sobre unidades de medida, assinale a alternativa incorreta.",
+    "alternativas": [
+      "1 dm³ equivale a 100 cm³.",
+      "1 m³ equivale a 1.000 L.",
+      "1 m² equivale a 100 dm².",
+      "1 cm³ equivale a 1 mL."
+    ],
+    "gabarito": 0,
+    "comentario": "1 dm = 10 cm, logo 1 dm³ = 10 · 10 · 10 = 1.000 cm³, e não 100 cm³; essa é a afirmação incorreta. As demais estão certas: 1 m³ = 1.000 dm³ = 1.000 L; 1 m² = 10 dm · 10 dm = 100 dm²; 1 cm³ = 1/1.000 dm³ = 1/1.000 L = 1 mL.",
+    "origem": "autoral"
+  },
+  {
+    "id": "rl-medidas-q09",
+    "topico": "rl-medidas",
+    "enunciado": "Uma torneira despeja 12 litros de água por minuto. Em quanto tempo ela enche, a partir de vazio, um tanque com 1,5 m de comprimento, 1,2 m de largura e 0,8 m de altura?",
+    "alternativas": [
+      "12 min",
+      "1 h 20 min",
+      "2 h 24 min",
+      "2 h"
+    ],
+    "gabarito": 3,
+    "comentario": "Volume: 1,5 · 1,2 · 0,8 = 1,44 m³ = 1.440 L. Tempo: 1.440 ÷ 12 = 120 min = 2 h. 12 min resulta de converter 1,44 m³ em 144 L. 1 h 20 min e 2 h 24 min corresponderiam a 960 L e 1.728 L.",
+    "origem": "autoral"
+  }
+]

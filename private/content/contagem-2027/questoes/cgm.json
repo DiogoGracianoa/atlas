@@ -1,0 +1,1112 @@
+[
+  {
+    "id": "cgm-historia-q01",
+    "topico": "cgm-historia",
+    "enunciado": "A Prefeitura de Contagem comemora o aniversário da emancipação política do município em 30 de agosto, data de 1911. O ato estadual que, nessa data, deu autonomia a Contagem, desmembrando-a de Santa Quitéria, foi a:",
+    "alternativas": [
+      "Lei Estadual nº 556, de 30/08/1911.",
+      "Lei Provincial nº 671, de 29/04/1854.",
+      "Lei Estadual nº 336, de 27/12/1948.",
+      "Decreto-Lei Estadual nº 148, de 17/12/1938."
+    ],
+    "gabarito": 0,
+    "comentario": "A Lei Estadual nº 556, de 30/08/1911, elevou Contagem à categoria de vila (sede de município), desmembrada de Santa Quitéria. B está errada: a Lei Provincial nº 671/1854 apenas criou o distrito de Contagem dos Abóboras. C está errada: a Lei nº 336/1948 restaurou o município, desmembrando-o de Betim. D está errada: o Decreto-Lei nº 148/1938 fez o contrário, extinguindo a vila.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-historia-q02",
+    "topico": "cgm-historia",
+    "enunciado": "Segundo a versão mais aceita sobre a origem de Contagem, registrada pelo IBGE, o nome do município está ligado a:",
+    "alternativas": [
+      "uma família de sobrenome “Abóboras”, que teria construído a primeira igreja do lugar.",
+      "um censo populacional realizado pela Coroa no arraial de São Gonçalo no século XIX.",
+      "um posto fiscal da Coroa portuguesa, onde se fazia a contagem do gado que seguia para as minas.",
+      "uma fazenda de criação de gado pertencente à Companhia de Cimento Portland Itaú."
+    ],
+    "gabarito": 2,
+    "comentario": "O IBGE aponta como versão mais aceita o posto fiscal (registro) instalado às margens do Ribeirão das Abóboras para contar o gado vindo do São Francisco rumo às minas. A está errada: a versão da família “Abóboras” existe, mas não tem documentação suficiente. B está errada: não há registro de censo que tenha dado nome ao lugar. D está errada: a Itaú é uma fábrica do século XX, da Cidade Industrial.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-historia-q03",
+    "topico": "cgm-historia",
+    "enunciado": "O núcleo original da cidade de Contagem, na atual região da Sede, formou-se em torno de uma capela cujos primeiros registros datam de 1725. Essa capela era dedicada a:",
+    "alternativas": [
+      "Nossa Senhora do Rosário, celebrada pelos Arturos.",
+      "São Gonçalo do Amarante, protetor dos viajantes.",
+      "Nossa Senhora da Boa Viagem, padroeira do Curral del Rei.",
+      "Santa Quitéria, padroeira da sede do município de origem."
+    ],
+    "gabarito": 1,
+    "comentario": "A capela era dedicada a São Gonçalo do Amarante, protetor dos viajantes, e deu nome ao Arraial de São Gonçalo da Contagem das Abóboras; hoje é a Igreja Matriz de São Gonçalo. A está errada: Nossa Senhora do Rosário é a devoção central dos Arturos, não da capela de 1725. C está errada: a Boa Viagem era a paróquia de que a Matriz se separou em 1854. D está errada: Santa Quitéria era o município ao qual o distrito se subordinava, não a padroeira da capela.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-historia-q04",
+    "topico": "cgm-historia",
+    "enunciado": "Em 17 de dezembro de 1938, o Decreto-Lei Estadual nº 148, assinado pelo governador Benedito Valadares, fixou nova divisão territorial de Minas Gerais. Para Contagem, esse ato significou:",
+    "alternativas": [
+      "a criação do distrito de Parque Industrial, anexado ao município.",
+      "a transferência do distrito de Vera Cruz para o novo município de Pedro Leopoldo.",
+      "a elevação de Contagem à categoria de cidade, com sede no antigo arraial.",
+      "a extinção da vila e a anexação de seu território a Betim, como distrito."
+    ],
+    "gabarito": 3,
+    "comentario": "Segundo o IBGE, o Decreto-Lei nº 148/1938 extinguiu a vila de Contagem e anexou seu território a Betim como simples distrito; a autonomia só voltou em 1948. A está errada: o distrito de Parque Industrial foi criado em 1953. B está errada: a transferência de Vera Cruz ocorreu em 1923. C está errada: o decreto retirou, e não ampliou, a autonomia de Contagem.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-historia-q05",
+    "topico": "cgm-historia",
+    "enunciado": "Sobre a restauração da autonomia de Contagem no fim da década de 1940, assinale a alternativa correta.",
+    "alternativas": [
+      "A Lei Estadual nº 336, de 27/12/1948, criou o município, desmembrado de Betim, instalado em 1º/01/1949.",
+      "O Decreto-Lei nº 770, de 20/03/1941, restaurou o município ao criar a Cidade Industrial.",
+      "A Lei Estadual nº 556, de 30/08/1948, devolveu a Contagem os distritos de Campanha e Vera Cruz.",
+      "A autonomia foi restaurada em 1953, quando se criou o distrito de Parque Industrial."
+    ],
+    "gabarito": 0,
+    "comentario": "A Lei Estadual nº 336, de 27/12/1948 (governo Milton Campos), elevou Contagem a município, desmembrado de Betim, com instalação em 1º/01/1949. B está errada: o Decreto-Lei nº 770/1941 tratou da desapropriação de terrenos para o Parque Industrial, quando Contagem ainda era distrito de Betim. C está errada: a Lei nº 556 é de 1911, não de 1948. D está errada: em 1953 o município já existia; naquele ano apenas se criou o distrito de Parque Industrial.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-historia-q06",
+    "topico": "cgm-historia",
+    "enunciado": "Em 1854, a Lei Provincial nº 671 criou o distrito de Contagem dos Abóboras. Até a autonomia de 1911, esse distrito esteve subordinado ao município de:",
+    "alternativas": [
+      "Belo Horizonte, a capital mineira.",
+      "Betim, hoje município limítrofe.",
+      "Santa Quitéria, atual Esmeraldas.",
+      "Pedro Leopoldo, criado em 1923."
+    ],
+    "gabarito": 2,
+    "comentario": "Segundo o IBGE, o distrito foi criado subordinado a Santa Quitéria (atual Esmeraldas), e a Lei nº 556/1911 desmembrou Contagem desse município. A está errada: o IBGE não registra subordinação do distrito a Belo Horizonte. B está errada: a subordinação a Betim ocorreu entre 1938 e 1948. D está errada: Pedro Leopoldo surgiu em 1923, recebendo justamente o distrito de Vera Cruz, que era de Contagem.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-historia-q07",
+    "topico": "cgm-historia",
+    "enunciado": "Considere as mudanças territoriais promovidas pela Lei Estadual nº 843, de 07/09/1923, e assinale a alternativa correta.",
+    "alternativas": [
+      "O distrito de Campanha passou a se chamar Venda Nova e foi anexado a Belo Horizonte.",
+      "O distrito de Vera Cruz foi transferido para Pedro Leopoldo, e Vargem da Pantana passou a se chamar Ibirité.",
+      "Contagem perdeu a condição de vila e foi anexada ao município de Sabará.",
+      "Foi criado o distrito de Parque Industrial, com terras desmembradas de Betim."
+    ],
+    "gabarito": 1,
+    "comentario": "Segundo o IBGE, a Lei nº 843/1923 transferiu Vera Cruz para o novo município de Pedro Leopoldo, criou o distrito de Neves (anexado a Contagem) e renomeou Vargem da Pantana como Ibirité. A está errada: a lei não tratou dessa mudança de Campanha. C está errada: a perda da condição de vila ocorreu em 1938, com anexação a Betim, não a Sabará. D está errada: o distrito de Parque Industrial foi criado em 1953.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-historia-q08",
+    "topico": "cgm-historia",
+    "enunciado": "Considere as afirmativas sobre a Cidade Industrial.\nI. O Decreto-Lei Estadual nº 770, de 20/03/1941, declarou de utilidade pública terrenos situados em Belo Horizonte e Betim para a construção do Parque Industrial.\nII. Segundo a Prefeitura, a primeira empresa instalada na Cidade Industrial foi a Companhia de Cimento Portland Itaú.\nIII. O Decreto-Lei nº 770/1941 foi assinado pelo governador Milton Campos, quando Contagem já era município autônomo.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I, apenas.",
+      "II e III, apenas.",
+      "I, II e III.",
+      "I e II, apenas."
+    ],
+    "gabarito": 3,
+    "comentario": "I está correta: o texto do decreto, publicado pela ALMG, menciona terrenos em Belo Horizonte e Betim, com cerca de 270 hectares. II está correta: a Prefeitura informa que a Cimento Portland Itaú foi a primeira, seguida de Magnesita e outras. III está errada: o decreto foi assinado por Benedito Valadares e Israel Pinheiro, e em 1941 Contagem era distrito de Betim. Por isso A (falta II), B (inclui III) e C (inclui III) estão erradas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-historia-q09",
+    "topico": "cgm-historia",
+    "enunciado": "De acordo com a formação administrativa registrada pelo IBGE, o município de Contagem é constituído atualmente pelos distritos de:",
+    "alternativas": [
+      "Contagem (sede) e Parque Industrial.",
+      "Contagem (sede), Campanha e Vera Cruz.",
+      "Contagem (sede), Neves e Ibirité.",
+      "Contagem (sede) e Vargem das Flores."
+    ],
+    "gabarito": 0,
+    "comentario": "Desde a Lei Estadual nº 1.039/1953, que criou o distrito de Parque Industrial (ex-povoado de Cidade Industrial), o município tem dois distritos: Contagem e Parque Industrial. B está errada: Campanha e Vera Cruz eram distritos de 1911, e Vera Cruz foi para Pedro Leopoldo em 1923. C está errada: Neves e Ibirité pertenceram a Contagem antes de 1938, não hoje. D está errada: Vargem das Flores é uma administração regional e uma represa, não um distrito.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-historia-q10",
+    "topico": "cgm-historia",
+    "enunciado": "Assinale a alternativa que apresenta os fatos na ordem cronológica correta.",
+    "alternativas": [
+      "Extinção da vila e anexação a Betim → primeiros registros da capela de São Gonçalo → elevação à categoria de vila → restauração do município.",
+      "Elevação à categoria de vila → criação do distrito de Contagem dos Abóboras → greve na Belgo Mineira → criação da Cidade Industrial.",
+      "Primeiros registros da capela de São Gonçalo → criação do distrito de Contagem dos Abóboras → elevação à categoria de vila → extinção da vila.",
+      "Criação do distrito de Parque Industrial → restauração do município → criação da Cidade Industrial → greve na Belgo Mineira."
+    ],
+    "gabarito": 2,
+    "comentario": "A ordem correta é 1725 (capela) → 1854 (distrito) → 1911 (vila) → 1938 (extinção). A está errada porque começa por 1938. B está errada porque o distrito (1854) é anterior à vila (1911) e a Cidade Industrial (1941) é anterior à greve (1968). D está errada porque o distrito de Parque Industrial (1953) é posterior à restauração (1948), que por sua vez é posterior à Cidade Industrial (1941).",
+    "origem": "autoral"
+  },
+
+  {
+    "id": "cgm-geografia-q01",
+    "topico": "cgm-geografia",
+    "enunciado": "Contagem faz divisa com cinco municípios. Assinale a alternativa que traz um município que NÃO é limítrofe de Contagem.",
+    "alternativas": [
+      "Betim.",
+      "Ibirité.",
+      "Esmeraldas.",
+      "Nova Lima."
+    ],
+    "gabarito": 3,
+    "comentario": "Os limítrofes de Contagem são Belo Horizonte, Betim, Ibirité, Esmeraldas e Ribeirão das Neves. Nova Lima integra a RMBH, mas não faz divisa com Contagem, por isso D é a resposta. A, B e C estão erradas porque Betim, Ibirité e Esmeraldas são, de fato, limítrofes.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-geografia-q02",
+    "topico": "cgm-geografia",
+    "enunciado": "Sobre a inserção de Contagem na Região Metropolitana de Belo Horizonte (RMBH), assinale a alternativa correta.",
+    "alternativas": [
+      "A RMBH foi definida pela Lei Complementar Estadual nº 89/2006, que lista 34 municípios, entre eles Contagem.",
+      "Contagem integra apenas o Colar Metropolitano, e não a RMBH propriamente dita.",
+      "A RMBH foi criada pela Lei Orgânica do Município de Contagem.",
+      "Contagem deixou a RMBH quando se tornou município autônomo, em 1948."
+    ],
+    "gabarito": 0,
+    "comentario": "O art. 2º da Lei Complementar nº 89/2006 lista 34 municípios na RMBH, e Contagem é um deles. B está errada: Contagem está na própria RMBH, não no Colar. C está errada: região metropolitana é instituída por lei complementar estadual, não por lei orgânica municipal. D está errada: a lei de 2006 é posterior a 1948 e inclui Contagem.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-geografia-q03",
+    "topico": "cgm-geografia",
+    "enunciado": "A rede hidrográfica de Contagem pertence à bacia de qual grande rio, e por meio de quais afluentes?",
+    "alternativas": [
+      "Rio Doce, por meio dos rios Piracicaba e Santo Antônio.",
+      "Rio Grande, por meio dos rios das Mortes e Sapucaí.",
+      "Rio São Francisco, por meio dos rios Paraopeba e das Velhas.",
+      "Rio Paranaíba, por meio dos rios Araguari e Tijuco."
+    ],
+    "gabarito": 2,
+    "comentario": "Segundo o Atlas Escolar de Contagem, o município integra a bacia do Rio São Francisco por meio dos afluentes Paraopeba e das Velhas. A, B e D estão erradas porque citam bacias (Doce, Grande e Paranaíba) e afluentes que não drenam o território de Contagem.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-geografia-q04",
+    "topico": "cgm-geografia",
+    "enunciado": "A Prefeitura de Contagem identifica quatro bacias hidrográficas no território municipal. Elas são:",
+    "alternativas": [
+      "Arrudas, Onça, Pampulha e Paraopeba.",
+      "Arrudas, Imbiruçu, Vargem das Flores e Pampulha.",
+      "Imbiruçu, Velhas, Betim e Sarandi.",
+      "Pampulha, Paraopeba, Vargem das Flores e Ribeirão da Mata."
+    ],
+    "gabarito": 1,
+    "comentario": "Segundo a Prefeitura (Dia Mundial da Água, 2026), o território de Contagem está inserido nas bacias Arrudas, Imbiruçu, Vargem das Flores e Pampulha. A, C e D estão erradas porque misturam nessas listas rios de maior porte (Paraopeba, Velhas) ou cursos d’água que não constam da lista oficial das quatro bacias.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-geografia-q05",
+    "topico": "cgm-geografia",
+    "enunciado": "A Lagoa da Pampulha fica em Belo Horizonte, mas sua situação interessa diretamente a Contagem porque, segundo a Prefeitura:",
+    "alternativas": [
+      "a lagoa é a principal fonte de abastecimento de água de Contagem.",
+      "Contagem responde por mais de 54% do volume de água que chega à lagoa.",
+      "a barragem da Pampulha foi construída em território contagense em 1941.",
+      "a lagoa recebe apenas águas da bacia de Vargem das Flores."
+    ],
+    "gabarito": 1,
+    "comentario": "A Prefeitura informa que Contagem responde por mais de 54% do volume de água que chega à Lagoa da Pampulha, e a bacia da Pampulha concentra a maior parte das nascentes cadastradas no município. A está errada: o reservatório citado como de abastecimento é o de Vargem das Flores. C está errada: as fontes consultadas não fazem essa afirmação. D está errada: Pampulha e Vargem das Flores são bacias distintas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-geografia-q06",
+    "topico": "cgm-geografia",
+    "enunciado": "Com base nas normais climatológicas do INMET (1991–2020), o tipo climático que predomina na maior parte de Contagem, na classificação de Köppen, é o:",
+    "alternativas": [
+      "Aw, tropical com inverno seco e verão quente.",
+      "Af, equatorial úmido sem estação seca.",
+      "BSh, semiárido quente, com chuvas escassas e irregulares.",
+      "Cwb, de verão brando e chuvoso e inverno seco."
+    ],
+    "gabarito": 3,
+    "comentario": "O Atlas Escolar de Contagem, com dados do INMET, classifica a maior parte do município como Cwb (verões brandos e chuvosos), com pequenas áreas Cwa a nordeste. A está errada: Aw não é o tipo apontado para o município. B está errada: Af é clima equatorial sem estação seca. C está errada: BSh é semiárido, incompatível com o regime de chuvas da região.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-geografia-q07",
+    "topico": "cgm-geografia",
+    "enunciado": "Sobre o relevo e a altitude de Contagem, segundo o Atlas Escolar de Contagem, assinale a alternativa correta.",
+    "alternativas": [
+      "O município está na Depressão de Belo Horizonte, com predomínio de colinas amplas e suaves e altitudes, em geral, entre 850 e 950 metros.",
+      "O município está na Serra do Espinhaço, com predomínio de escarpas e altitudes, em geral, acima de 1.400 metros.",
+      "O município está numa planície fluvial, com altitudes, em geral, abaixo de 400 metros.",
+      "O município está no Quadrilátero Ferrífero, com predomínio de chapadas de arenito acima de 1.200 metros."
+    ],
+    "gabarito": 0,
+    "comentario": "O Atlas indica que Contagem está na Depressão de Belo Horizonte, com colinas amplas e suaves, e que a maior parte do território fica entre 850 e 950 metros. B, C e D estão erradas porque atribuem ao município unidades de relevo e altitudes que não correspondem às descritas: altitudes acima de 1.000 m ocorrem só em pontos isolados, e não há planície abaixo de 400 m.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-geografia-q08",
+    "topico": "cgm-geografia",
+    "enunciado": "Segundo o IBGE, a área territorial do município de Contagem é de aproximadamente:",
+    "alternativas": [
+      "331 km².",
+      "1.435 km².",
+      "195 km².",
+      "4.115 km²."
+    ],
+    "gabarito": 2,
+    "comentario": "A área oficial é de 194,732 km² (IBGE, 2025), ou seja, cerca de 195 km². A está errada: cerca de 331 km² é a área de Belo Horizonte. B está errada: cerca de 1.435 km² é a área de Juiz de Fora. D está errada: cerca de 4.115 km² é a área de Uberlândia.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-geografia-q09",
+    "topico": "cgm-geografia",
+    "enunciado": "Georreferenciar uma informação, como a localização de uma nascente ou de um lote, significa:",
+    "alternativas": [
+      "fotografar o local para arquivo, sem necessidade de coordenadas.",
+      "associá-la a coordenadas em um sistema de referência conhecido, permitindo localizá-la e cruzá-la com outros dados no mapa.",
+      "registrá-la no cartório de imóveis, com descrição por escrito dos vizinhos.",
+      "classificá-la por bairro em uma planilha, sem vínculo com mapa."
+    ],
+    "gabarito": 1,
+    "comentario": "Georreferenciar é vincular a informação a coordenadas em um sistema de referência conhecido; assim ela pode ser posicionada e sobreposta a outras camadas em um SIG. A está errada: foto sem coordenadas não é georreferenciamento. C está errada: o registro cartorial descritivo não basta. D está errada: lista por bairro não tem posição geográfica precisa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-geografia-q10",
+    "topico": "cgm-geografia",
+    "enunciado": "Considere as afirmativas sobre o GeoContagem.\nI. É a plataforma de geoprocessamento da Prefeitura de Contagem, com dados geoespaciais, serviços on-line e imagens de satélite e de sobrevoo.\nII. Oferece a ferramenta “Camadas Urbanísticas”, mapa interativo com 21 camadas de informação.\nIII. A ferramenta “Temperatura Média por Bairro” usa imagens dos satélites Landsat 8 e 9.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I, apenas.",
+      "I e II, apenas.",
+      "I, II e III.",
+      "II e III, apenas."
+    ],
+    "gabarito": 2,
+    "comentario": "As três afirmativas estão corretas: a Prefeitura descreve o GeoContagem como plataforma de geoprocessamento com dados geoespaciais e imagens de satélite e sobrevoo (I); a ferramenta Camadas Urbanísticas tem 21 camadas (II); e o mapa de temperatura usa imagens Landsat 8 e 9 de 2024 e 2025, com resolução de 100 m (III). A, B e D estão erradas porque deixam de fora afirmativas verdadeiras.",
+    "origem": "autoral"
+  },
+
+  {
+    "id": "cgm-simbolos-q01",
+    "topico": "cgm-simbolos",
+    "enunciado": "O escudo de armas (brasão) do Município de Contagem foi instituído pela:",
+    "alternativas": [
+      "Lei nº 5.024, de 1º de outubro de 2019.",
+      "Lei nº 499, de 23 de maio de 1963.",
+      "Lei nº 750, que oficializou o hino municipal.",
+      "Lei nº 5.202, de 2021, sobre publicidade institucional."
+    ],
+    "gabarito": 1,
+    "comentario": "A Lei nº 499, de 23/05/1963, instituiu o escudo de armas, como registra a ementa do projeto votado na Câmara em 2019. A está errada: a Lei nº 5.024/2019 apenas alterou a lei de 1963. C está errada: a Lei nº 750 trata do hino. D está errada: a Lei nº 5.202/2021 trata de publicidade institucional e das cores oficiais.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-simbolos-q02",
+    "topico": "cgm-simbolos",
+    "enunciado": "O listel do brasão de Contagem traz o lema em latim “Per Populum Omnis Potestas a Deo”. Segundo a Prefeitura, sua tradução é:",
+    "alternativas": [
+      "“Pelo trabalho, todo progresso vem do povo”.",
+      "“Todo poder emana do povo e em seu nome é exercido”.",
+      "“Todo poder vem de Deus, pelo povo”.",
+      "“Deus protege o povo que trabalha”."
+    ],
+    "gabarito": 2,
+    "comentario": "A Prefeitura traduz o lema como “Todo poder vem de Deus, pelo povo”, expressão do espírito democrático, coletivo e espiritual da cidade. A está errada: o lema não fala de trabalho nem de progresso. B está errada: a frase lembra a Constituição Federal, mas não é a tradução do lema. D está errada: o lema não menciona proteção nem trabalho.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-simbolos-q03",
+    "topico": "cgm-simbolos",
+    "enunciado": "No brasão de Contagem, a chaminé representa:",
+    "alternativas": [
+      "a força da indústria na história econômica da cidade.",
+      "as antigas fornalhas do Registro das Abóboras.",
+      "a padroeira, Nossa Senhora das Dores.",
+      "a origem portuguesa do município."
+    ],
+    "gabarito": 0,
+    "comentario": "Segundo a Prefeitura, a chaminé, no centro do brasão, simboliza a força da indústria na história econômica da cidade. B está errada: o Registro era um posto fiscal, e a chaminé não se refere a ele. C está errada: a padroeira é lembrada pelas estrelas. D está errada: a origem portuguesa é representada pelos cruzados de ouro.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-simbolos-q04",
+    "topico": "cgm-simbolos",
+    "enunciado": "A jabuticabeira presente no brasão de Contagem, segundo a Prefeitura, remete:",
+    "alternativas": [
+      "à devoção a São Gonçalo do Amarante.",
+      "à vocação industrial da Cidade Industrial.",
+      "à presença portuguesa no período colonial.",
+      "às origens rurais, à agricultura e ao turismo local."
+    ],
+    "gabarito": 3,
+    "comentario": "A Prefeitura explica que a jabuticabeira remete às origens rurais e valoriza a agricultura e o turismo local. A está errada: o brasão não traz símbolo de São Gonçalo entre os elementos descritos. B está errada: a indústria é representada pela chaminé. C está errada: a origem portuguesa é representada pelos cruzados de ouro.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-simbolos-q05",
+    "topico": "cgm-simbolos",
+    "enunciado": "A letra do hino de Contagem, segundo a Prefeitura, foi escrita por:",
+    "alternativas": [
+      "Fani Bracher, artista plástica autora da Coluna Bracher.",
+      "Nair Mendes Moreira, professora que dá nome à Casa da Cultura.",
+      "Carlos Luís de Almeida, criador da Casa de Cacos.",
+      "Artur Camilo Silvério, fundador da Comunidade dos Arturos."
+    ],
+    "gabarito": 1,
+    "comentario": "A Prefeitura informa que a professora Nair Mendes Moreira (1914–1981) escreveu a letra do hino “Exaltação a Contagem”; a Casa da Cultura – Museu Histórico leva seu nome. A, C e D estão erradas porque citam personalidades da cultura local ligadas a outras obras: o mosaico da Coluna Bracher, a Casa de Cacos e a Comunidade dos Arturos.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-simbolos-q06",
+    "topico": "cgm-simbolos",
+    "enunciado": "Em 2019, a Câmara Municipal de Contagem votou o Projeto de Lei nº 020/2019, que resultou na Lei nº 5.024/2019. Sobre esse projeto, é correto afirmar que ele:",
+    "alternativas": [
+      "criou a bandeira municipal, até então inexistente.",
+      "oficializou o hino “Exaltação a Contagem”.",
+      "substituiu o lema em latim por um lema em português.",
+      "alterou a Lei nº 499/1963, que institui o escudo de armas do município."
+    ],
+    "gabarito": 3,
+    "comentario": "A ementa registrada pela Câmara é “Altera a Lei nº 499 de 23 de maio de 1963, que institui o escudo de armas do Município de Contagem”; a lei resultante traz a descrição heráldica em anexo. A está errada: o projeto trata do brasão, não da criação da bandeira. B está errada: o hino foi oficializado pela Lei nº 750. C está errada: o lema “Per Populum Omnis Potestas a Deo” continua no brasão.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-simbolos-q07",
+    "topico": "cgm-simbolos",
+    "enunciado": "Considere as afirmativas sobre o brasão de Contagem, segundo a Prefeitura.\nI. Os cruzados de ouro representam a origem portuguesa do município.\nII. As estrelas fazem referência à proteção de Nossa Senhora das Dores, padroeira da cidade.\nIII. A chaminé representa a mineração de ouro do Registro das Abóboras.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I e II, apenas.",
+      "I e III, apenas.",
+      "II e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 0,
+    "comentario": "I e II estão corretas, conforme a descrição da Prefeitura. III está errada: a chaminé simboliza a força da indústria, não a mineração colonial. Por isso B e C (incluem III) e D (inclui III) estão erradas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-simbolos-q08",
+    "topico": "cgm-simbolos",
+    "enunciado": "Notícia da Câmara Municipal sobre a Lei nº 5.202/2021, que regula a publicidade institucional, informa que prédios públicos, veículos oficiais, documentos e material escolar devem usar as cores da bandeira e do brasão de Contagem. Essas cores são:",
+    "alternativas": [
+      "vermelho, branco e azul.",
+      "verde, amarelo e azul.",
+      "branco, verde e azul.",
+      "preto, branco e dourado."
+    ],
+    "gabarito": 2,
+    "comentario": "A Câmara cita as cores branco, verde e azul como cores da bandeira e do brasão de Contagem. A, B e D estão erradas porque trazem combinações que não correspondem às cores oficiais citadas (o verde e o amarelo, por exemplo, são associados à bandeira nacional).",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-simbolos-q09",
+    "topico": "cgm-simbolos",
+    "enunciado": "Sobre o hino de Contagem, assinale a alternativa correta.",
+    "alternativas": [
+      "É intitulado “Exaltação a Contagem” e foi oficializado pela Lei Municipal nº 750.",
+      "Foi instituído pela mesma lei que criou o brasão, em 1963.",
+      "Tem letra de Nair Mendes Moreira e foi oficializado pela Lei nº 5.024/2019.",
+      "Foi composto por ocasião do centenário do município, em 2011."
+    ],
+    "gabarito": 0,
+    "comentario": "A Prefeitura cita o hino “Exaltação a Contagem”, oficializado pela Lei nº 750 (as fontes divergem quanto à data: 1966 na página da Prefeitura, 1976 em fontes locais, mas concordam no número). B está errada: o brasão é da Lei nº 499/1963, que não trata do hino. C está errada: a autoria da letra está certa, mas a Lei nº 5.024/2019 trata do brasão. D está errada: o hino é oficial desde a Lei nº 750, muito antes de 2011.",
+    "origem": "autoral"
+  },
+
+  {
+    "id": "cgm-economia-q01",
+    "topico": "cgm-economia",
+    "enunciado": "Segundo o Censo Demográfico 2022 do IBGE, a população de Contagem era de:",
+    "alternativas": [
+      "603.442 habitantes.",
+      "621.863 habitantes.",
+      "651.718 habitantes.",
+      "713.224 habitantes."
+    ],
+    "gabarito": 1,
+    "comentario": "O Censo 2022 contou 621.863 habitantes em Contagem. A está errada: 603.442 é o resultado do Censo 2010. C está errada: 651.718 é a estimativa do IBGE para 2025, não o Censo. D está errada: 713.224 é a população de Uberlândia no Censo 2022.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-economia-q02",
+    "topico": "cgm-economia",
+    "enunciado": "No Censo 2022, considerando os municípios de Minas Gerais, Contagem ocupou qual posição em número de habitantes?",
+    "alternativas": [
+      "1ª, à frente de Belo Horizonte.",
+      "2ª, atrás apenas de Belo Horizonte.",
+      "4ª, atrás de Belo Horizonte, Uberlândia e Juiz de Fora.",
+      "3ª, atrás de Belo Horizonte e Uberlândia."
+    ],
+    "gabarito": 3,
+    "comentario": "Pelos dados do Censo 2022 (IBGE), Belo Horizonte tinha 2.315.560 habitantes, Uberlândia 713.224 e Contagem 621.863, à frente de Juiz de Fora (540.756). A e B estão erradas porque ignoram BH e Uberlândia, que têm mais habitantes. C está errada porque Juiz de Fora ficou atrás de Contagem.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-economia-q03",
+    "topico": "cgm-economia",
+    "enunciado": "De acordo com o PIB dos Municípios do IBGE, ano de referência 2023, o Produto Interno Bruto de Contagem foi de aproximadamente:",
+    "alternativas": [
+      "R$ 4,5 bilhões, o 300º maior do país.",
+      "R$ 450 bilhões, o 3º maior do país.",
+      "R$ 45 bilhões, o 30º maior do país.",
+      "R$ 4,5 trilhões, o maior de Minas Gerais."
+    ],
+    "gabarito": 2,
+    "comentario": "Em 2023, o PIB de Contagem foi de cerca de R$ 45,09 bilhões, o 30º maior entre os 5.570 municípios brasileiros, segundo a tabela do IBGE (posição também divulgada pela Prefeitura). A e B erram a ordem de grandeza e a posição. D está errada: o valor está fora de qualquer proporção (o PIB de todo o estado de Minas Gerais em 2023 foi de cerca de R$ 972 bilhões), e o maior PIB mineiro é o de Belo Horizonte.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-economia-q04",
+    "topico": "cgm-economia",
+    "enunciado": "Segundo o IBGE (PIB dos Municípios, 2023), assinale a alternativa que traz dois municípios mineiros com PIB maior que o de Contagem.",
+    "alternativas": [
+      "Belo Horizonte e Betim.",
+      "Juiz de Fora e Uberaba.",
+      "Ipatinga e Juiz de Fora.",
+      "Uberaba e Ipatinga."
+    ],
+    "gabarito": 0,
+    "comentario": "Em 2023, Belo Horizonte (cerca de R$ 130,2 bilhões) e Betim (cerca de R$ 52,6 bilhões) tiveram PIB maior que o de Contagem (cerca de R$ 45,1 bilhões); Uberlândia também ficou à frente. B, C e D estão erradas porque Juiz de Fora (cerca de R$ 23,3 bilhões), Uberaba (cerca de R$ 23,7 bilhões) e Ipatinga (cerca de R$ 16,9 bilhões) tiveram PIB menor que o de Contagem.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-economia-q05",
+    "topico": "cgm-economia",
+    "enunciado": "Sobre a composição do valor adicionado bruto (VAB) de Contagem em 2021, segundo o IBGE, assinale a alternativa correta.",
+    "alternativas": [
+      "A indústria respondeu por mais da metade do VAB, e os serviços (exceto administração pública), por menos de 20%.",
+      "A agropecuária respondeu por cerca de 10% do VAB, e a indústria, por cerca de 45%.",
+      "A administração pública foi o maior setor, com cerca de 40%, e os serviços somaram 30%.",
+      "Os serviços (exceto administração pública) somaram cerca de 59%, e a indústria, cerca de 31%."
+    ],
+    "gabarito": 3,
+    "comentario": "Em 2021, os serviços (exceto administração pública) responderam por cerca de 59% do VAB, a indústria por 30,81%, a administração pública por 10,07% e a agropecuária por 0,01%. A está errada: apesar da vocação industrial, a indústria não passou da metade. B está errada: a agropecuária foi praticamente nula (0,01%) e a indústria ficou em cerca de 31%. C está errada: a administração pública respondeu por cerca de 10%, e os serviços foram o maior setor.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-economia-q06",
+    "topico": "cgm-economia",
+    "enunciado": "O PIB per capita de Contagem em 2023, segundo o IBGE, foi de aproximadamente:",
+    "alternativas": [
+      "R$ 7.250.",
+      "R$ 72.500.",
+      "R$ 725.000.",
+      "R$ 31.700."
+    ],
+    "gabarito": 1,
+    "comentario": "O IBGE registra PIB per capita de R$ 72.511,78 em 2023, ou seja, cerca de R$ 72,5 mil. A e C erram a ordem de grandeza (dez vezes menos e dez vezes mais). D está errada: cerca de R$ 31,7 mil era o PIB per capita de Contagem em 2010, não em 2023.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-economia-q07",
+    "topico": "cgm-economia",
+    "enunciado": "A Cidade Industrial Coronel Juventino Dias é apresentada pela Prefeitura como o primeiro distrito industrial planejado do país. A primeira empresa a se instalar ali foi:",
+    "alternativas": [
+      "a Companhia de Cimento Portland Itaú.",
+      "a Companhia de Tecidos Santa Elizabeth.",
+      "o laboratório Osório de Moraes.",
+      "a Belgo Mineira, palco da greve de 1968."
+    ],
+    "gabarito": 0,
+    "comentario": "Segundo a Prefeitura, a primeira empresa foi a Companhia de Cimento Portland Itaú, seguida de Magnesita, Osório de Moraes, Estamparia S.A. e Companhia de Tecidos Santa Elizabeth. B e C estão erradas: a Santa Elizabeth e o laboratório Osório de Moraes vieram depois da Itaú, segundo a Prefeitura. D está errada: a Belgo Mineira aparece na história da cidade pela greve de 1968, não como primeira empresa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-economia-q08",
+    "topico": "cgm-economia",
+    "enunciado": "Sobre a CeasaMinas e Contagem, é correto afirmar que:",
+    "alternativas": [
+      "a empresa tem um único entreposto, localizado em Belo Horizonte.",
+      "a empresa tem sede e foro em Contagem, onde fica o seu maior entreposto.",
+      "o entreposto de Contagem é o menor dos seis da empresa.",
+      "a CeasaMinas funciona dentro da Cidade Industrial desde 1941."
+    ],
+    "gabarito": 1,
+    "comentario": "Segundo o BNDES, a CeasaMinas tem sede e foro em Contagem, onde se localiza o seu maior entreposto, e soma seis entrepostos operacionais. A está errada: são seis entrepostos, e o maior fica em Contagem. C está errada pelo mesmo motivo. D está errada: as fontes consultadas não ligam a CeasaMinas à Cidade Industrial nem a 1941.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-economia-q09",
+    "topico": "cgm-economia",
+    "enunciado": "Segundo a Prefeitura, com dados da Secretaria de Desenvolvimento Econômico, entre janeiro e outubro de 2025 a indústria de Contagem exportou cerca de US$ 385 milhões. Sobre essas exportações, assinale a alternativa correta.",
+    "alternativas": [
+      "O principal produto foi o minério de ferro, e a China recebeu mais da metade das vendas no 1º semestre.",
+      "Os produtos agrícolas lideraram a pauta, e a União Europeia recebeu mais da metade das vendas no 1º semestre.",
+      "Destacaram-se refratários e transformadores elétricos, e os EUA receberam mais da metade no 1º semestre.",
+      "Destacaram-se calçados e têxteis, e a Argentina recebeu mais da metade das vendas no 1º semestre."
+    ],
+    "gabarito": 2,
+    "comentario": "A Prefeitura cita materiais refratários, transformadores e conversores elétricos, químicos anticorrosivos, máquinas para construção civil e fios de aço, e informa que os Estados Unidos receberam mais de 50% das manufaturas exportadas no primeiro semestre de 2025. A, B e D estão erradas porque atribuem às exportações produtos e destinos que não aparecem na fonte; a agropecuária, aliás, é quase nula na economia local.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-economia-q10",
+    "topico": "cgm-economia",
+    "enunciado": "Considere os indicadores de Contagem divulgados pelo IBGE com base no Censo 2022.\nI. A taxa de escolarização de 6 a 14 anos era de 98,69%.\nII. 94,04% da população vivia em domicílios com esgotamento sanitário por rede geral, rede pluvial ou fossa ligada à rede.\nIII. A densidade demográfica era inferior a 1.000 habitantes por km².\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I, apenas.",
+      "I e II, apenas.",
+      "II e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 1,
+    "comentario": "I e II reproduzem os indicadores do IBGE para 2022. III está errada: com 621.863 habitantes em cerca de 194,7 km², a densidade é de aproximadamente 3.193 hab./km². Assim, A deixa de fora uma afirmativa verdadeira, e C e D incluem a III.",
+    "origem": "autoral"
+  },
+
+  {
+    "id": "cgm-cultura-q01",
+    "topico": "cgm-cultura",
+    "enunciado": "Em maio de 2014, o Iepha-MG reconheceu como Patrimônio Cultural Imaterial de Minas Gerais uma comunidade de Contagem, no primeiro registro de comunidade tradicional na categoria de lugares. Trata-se da:",
+    "alternativas": [
+      "Comunidade Quilombola dos Arturos.",
+      "Irmandade do Santíssimo da Matriz de São Gonçalo.",
+      "Comunidade do Registro das Abóboras.",
+      "Comunidade Quilombola de Vargem das Flores."
+    ],
+    "gabarito": 0,
+    "comentario": "O Iepha-MG registrou em maio de 2014 a Comunidade Quilombola dos Arturos, com a Festa de Nossa Senhora do Rosário, o Reinado/Congado e o Rito da Benzeção; o título foi revalidado pelo Conep em 2025. B, C e D estão erradas porque citam grupos que não aparecem nas fontes como objeto desse registro.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-cultura-q02",
+    "topico": "cgm-cultura",
+    "enunciado": "Sobre a Comunidade dos Arturos, assinale a alternativa correta.",
+    "alternativas": [
+      "Fica no Centro, ao lado da Igreja Matriz de São Gonçalo.",
+      "Fica no bairro Jardim Vera Cruz e reúne descendentes de Artur Camilo Silvério e Carmelinda Maria da Silva.",
+      "Foi fundada por operários da Cidade Industrial após a greve de 1968.",
+      "Teve seu título de patrimônio cancelado pelo Conep em 2025."
+    ],
+    "gabarito": 1,
+    "comentario": "A Prefeitura informa que os Arturos vivem no bairro Jardim Vera Cruz e descendem de Artur Camilo Silvério e Carmelinda Maria da Silva. A está errada: a Matriz fica no Centro, mas a comunidade não. C está errada: a comunidade é bem anterior à industrialização. D está errada: em 2025 o Conep revalidou o título por unanimidade.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-cultura-q03",
+    "topico": "cgm-cultura",
+    "enunciado": "A Casa de Cacos, no bairro Bernardo Monteiro, é um bem tombado de Contagem conhecido por:",
+    "alternativas": [
+      "ter sido a sede do antigo Registro das Abóboras, no século XVIII.",
+      "abrigar as quatro chaminés da antiga fábrica de cimento.",
+      "ter sido revestida por Carlos Luís de Almeida, o “Seu Carlos”, com fragmentos de cerâmica e cacos de louça.",
+      "ser um mosaico de 2.400 azulejos feito em homenagem aos Arturos."
+    ],
+    "gabarito": 2,
+    "comentario": "A Casa de Cacos foi criada por Carlos Luís de Almeida, que a revestiu com fragmentos de cerâmica e cacos de louça ao longo de mais de 30 anos; é tombada desde 1991 e foi reaberta em 2022. A está errada: a casa mais antiga, ligada ao período do Registro, é a Casa da Cultura. B está errada: as chaminés são da antiga fábrica Itaú. D está errada: o mosaico de 2.400 azulejos é a Coluna Bracher.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-cultura-q04",
+    "topico": "cgm-cultura",
+    "enunciado": "A Coluna Bracher, na Via Expressa, no bairro Novo Eldorado, é uma obra de mosaico que homenageia:",
+    "alternativas": [
+      "os operários da greve de 1968.",
+      "o papa Pio VII, que autorizou o Jubileu.",
+      "a professora Nair Mendes Moreira.",
+      "a Comunidade dos Arturos."
+    ],
+    "gabarito": 3,
+    "comentario": "Segundo a Prefeitura, a Coluna Bracher, feita por Carlos e Fani Bracher com 2.400 azulejos, homenageia a Comunidade dos Arturos. A, B e C estão erradas porque citam personagens da história local que não são os homenageados pela obra.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-cultura-q05",
+    "topico": "cgm-cultura",
+    "enunciado": "Sobre o Jubileu de Nossa Senhora das Dores, em Contagem, assinale a alternativa correta.",
+    "alternativas": [
+      "Foi autorizado por Pio VII em 1806 e reconhecido como patrimônio imaterial do município em 2019.",
+      "É celebrado no bairro Jardim Vera Cruz, em outubro, junto com a festa do Rosário dos Arturos.",
+      "É feriado estadual em Minas Gerais desde 1911, criado pela mesma lei que emancipou Contagem.",
+      "Foi criado em 1941, por iniciativa dos operários, junto com a inauguração da Cidade Industrial."
+    ],
+    "gabarito": 0,
+    "comentario": "A Câmara informa a autorização de Pio VII em 1806, e a Lei nº 5.057, de 19/07/2019, reconheceu o Jubileu como patrimônio cultural e imaterial de Contagem. B está errada: o Jubileu ocorre na Matriz de São Gonçalo, antes da Semana Santa; outubro é o mês da festa do Rosário dos Arturos, que é outra celebração. C está errada: a data é feriado municipal, pela Lei nº 3.484/2001. D está errada: a tradição é do início do século XIX, muito anterior à Cidade Industrial.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-cultura-q06",
+    "topico": "cgm-cultura",
+    "enunciado": "Em abril de 1968, cerca de 1,6 mil trabalhadores de uma empresa da Cidade Industrial entraram em greve por reajuste salarial, movimento apontado pela Prefeitura como a primeira greve registrada no país após o golpe de 1964. Essa empresa era a:",
+    "alternativas": [
+      "Companhia de Cimento Portland Itaú.",
+      "Magnesita.",
+      "Belgo Mineira.",
+      "Companhia de Tecidos Santa Elizabeth."
+    ],
+    "gabarito": 2,
+    "comentario": "A greve de abril de 1968 ocorreu na Belgo Mineira, segundo a Prefeitura. A, B e D estão erradas: Itaú, Magnesita e Santa Elizabeth estão entre as primeiras empresas da Cidade Industrial, mas não são as citadas como palco dessa greve.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-cultura-q07",
+    "topico": "cgm-cultura",
+    "enunciado": "Considere as afirmativas sobre as Chaminés da Itaú.\nI. Pertenciam à Companhia de Cimento Portland Itaú, primeira fábrica instalada na Cidade Industrial.\nII. A fábrica foi desativada na década de 1970, após mobilizações populares contra a poluição.\nIII. As chaminés e o prédio administrativo foram tombados pelo Decreto nº 10.186, de 17/06/1999.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I, apenas.",
+      "I e II, apenas.",
+      "II e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 3,
+    "comentario": "As três afirmativas constam da página oficial do ponto turístico: a Itaú foi a primeira fábrica da Cidade Industrial (I), foi desativada na década de 1970 após mobilizações contra a poluição (II) e as chaminés e o prédio administrativo foram tombados pelo Decreto nº 10.186/1999 (III). A, B e C estão erradas porque deixam de fora afirmativas verdadeiras.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-cultura-q08",
+    "topico": "cgm-cultura",
+    "enunciado": "A Casa da Cultura Nair Mendes Moreira – Museu Histórico de Contagem é considerada:",
+    "alternativas": [
+      "a construção mais recente do centro histórico, erguida em 1936 em estilo eclético.",
+      "a casa mais antiga da cidade, construída por volta de 1716 e tombada em 1998.",
+      "a antiga estação ferroviária do bairro Bernardo Monteiro.",
+      "o antigo prédio administrativo da fábrica de cimento Itaú."
+    ],
+    "gabarito": 1,
+    "comentario": "Segundo a Prefeitura, a Casa da Cultura é a casa mais antiga da cidade (por volta de 1716) e foi tombada pelo Decreto nº 10.060, de 14/12/1998. A está errada: a construção eclética de cerca de 1936 é a Casa Azul do Centro Cultural. C está errada: a antiga estação é a Estação Bernardo Monteiro. D está errada: o prédio administrativo da Itaú fica na Cidade Industrial.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-cultura-q09",
+    "topico": "cgm-cultura",
+    "enunciado": "A Comunidade dos Arturos realiza a Festa da Abolição em 13 de maio. A escolha da data se explica porque:",
+    "alternativas": [
+      "é o aniversário de emancipação política de Contagem.",
+      "marca a autorização papal do Jubileu de Nossa Senhora das Dores.",
+      "é a data do registro da comunidade como patrimônio de Minas Gerais.",
+      "lembra a assinatura da Lei Áurea, e a comunidade a celebra como festa de resistência."
+    ],
+    "gabarito": 3,
+    "comentario": "Segundo a Prefeitura, 13 de maio marca a assinatura da Lei Áurea, e os Arturos tratam a festa como ato político de resistência. A está errada: a emancipação é celebrada em 30 de agosto. B está errada: o Jubileu foi autorizado em 1806 e é celebrado antes da Semana Santa. C está errada: o registro foi em maio de 2014, mas a festa não tem origem nessa data.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-cultura-q10",
+    "topico": "cgm-cultura",
+    "enunciado": "Sobre a Igreja Matriz de São Gonçalo, assinale a alternativa INCORRETA.",
+    "alternativas": [
+      "Os primeiros registros da capela de São Gonçalo datam de 1725.",
+      "Foi elevada à condição de Matriz em 1854, separando-se da Paróquia da Boa Viagem.",
+      "É a sede da Festa de Nossa Senhora do Rosário dos Arturos, realizada em maio.",
+      "Guarda imaginária em madeira do século XVIII e retábulo em estilo rococó."
+    ],
+    "gabarito": 2,
+    "comentario": "C é a incorreta: a Matriz de São Gonçalo é o local do Jubileu de Nossa Senhora das Dores; a Festa do Rosário dos Arturos ocorre em outubro, com celebrações no Jardim Vera Cruz. A, B e D estão corretas segundo a Prefeitura: capela registrada em 1725, elevada a Matriz em 1854 e acervo com imaginária do século XVIII e retábulo rococó.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-1-q01",
+    "topico": "cgm-lei-organica-1",
+    "enunciado": "De acordo com a Lei Orgânica do Município de Contagem, são poderes do Município, independentes e harmônicos entre si:",
+    "alternativas": [
+      "o Legislativo e o Executivo.",
+      "o Legislativo, o Executivo e o Judiciário.",
+      "o Executivo e o Conselho de Governo.",
+      "a Câmara, a Prefeitura e a Procuradoria."
+    ],
+    "gabarito": 0,
+    "comentario": "O art. 2º da LOM aponta como poderes do Município o Legislativo e o Executivo. B está errada: não existe Poder Judiciário municipal. C está errada: o Conselho de Governo é órgão de consulta do Prefeito, não um Poder. D está errada: a Procuradoria-Geral é órgão subordinado ao Prefeito.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-1-q02",
+    "topico": "cgm-lei-organica-1",
+    "enunciado": "O art. 1º, §3º, da Lei Orgânica de Contagem lista preceitos pelos quais o Município se organiza. Assinale a alternativa que NÃO corresponde a um desses preceitos.",
+    "alternativas": [
+      "pelo plebiscito e pelo referendo.",
+      "pela iniciativa popular no processo legislativo.",
+      "pela ação fiscalizadora sobre a administração pública.",
+      "pela nomeação do Prefeito pelo Governador do Estado."
+    ],
+    "gabarito": 3,
+    "comentario": "O Prefeito é eleito, e a eleição do Prefeito é, inclusive, um elemento da autonomia (art. 3º, II); não há nomeação pelo Governador. A, B e C estão erradas como resposta porque plebiscito, referendo, iniciativa popular no processo legislativo e ação fiscalizadora sobre a administração constam do art. 1º, §3º.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-1-q03",
+    "topico": "cgm-lei-organica-1",
+    "enunciado": "Segundo o art. 3º da Lei Orgânica, a autonomia do Município se configura, especialmente, pela:",
+    "alternativas": [
+      "criação de um Tribunal de Contas próprio do Município.",
+      "elaboração e promulgação da própria Lei Orgânica.",
+      "nomeação do Vice-Prefeito pela Câmara Municipal.",
+      "fixação dos limites territoriais por decreto do Prefeito."
+    ],
+    "gabarito": 1,
+    "comentario": "O art. 3º cita a elaboração e promulgação da Lei Orgânica, a eleição do Prefeito, do Vice e dos Vereadores e a organização do Governo e da Administração. A está errada: o controle externo é feito com auxílio do Tribunal de Contas do Estado. C está errada: o Vice-Prefeito é eleito. D está errada: os limites só podem ser alterados nos termos da Constituição do Estado (art. 16).",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-1-q04",
+    "topico": "cgm-lei-organica-1",
+    "enunciado": "Assinale a alternativa que traz uma competência PRIVATIVA do Município, conforme o art. 6º da Lei Orgânica de Contagem.",
+    "alternativas": [
+      "Proteger o meio ambiente e combater a poluição em qualquer de suas formas.",
+      "Preservar as florestas, a fauna e a flora em conjunto com a União e o Estado.",
+      "Criar, organizar e suprimir distritos, observada a legislação estadual.",
+      "Fomentar a produção agropecuária e organizar o abastecimento alimentar."
+    ],
+    "gabarito": 2,
+    "comentario": "Criar, organizar e suprimir distritos é competência privativa (art. 6º, IV). A, B e D estão erradas porque proteger o meio ambiente, preservar florestas, fauna e flora e fomentar a agropecuária estão no art. 7º, como competências comuns com a União e o Estado.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-1-q05",
+    "topico": "cgm-lei-organica-1",
+    "enunciado": "Pela Lei Orgânica de Contagem, a alienação de bem móvel do Município depende de avaliação prévia e de licitação, sendo esta dispensável, na forma da lei, nos casos de:",
+    "alternativas": [
+      "concessão e cessão.",
+      "locação e comodato.",
+      "venda direta e leilão.",
+      "doação e permuta."
+    ],
+    "gabarito": 3,
+    "comentario": "O art. 10, §1º, dispensa a licitação, na forma da lei, na doação e na permuta. A está errada: concessão e cessão são formas de uso especial de bem por terceiro (§2º), não de alienação. B está errada: locação e comodato não são citados. C está errada: venda e leilão não são hipóteses de dispensa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-1-q06",
+    "topico": "cgm-lei-organica-1",
+    "enunciado": "Segundo a Lei Orgânica, o uso especial de bem patrimonial do Município por terceiro será objeto, na forma da lei, de:",
+    "alternativas": [
+      "concessão, permissão, usucapião e autorização.",
+      "concessão, permissão, cessão e autorização.",
+      "tombamento, permissão, cessão e desapropriação.",
+      "concessão, confisco, cessão e requisição."
+    ],
+    "gabarito": 1,
+    "comentario": "O art. 10, §2º, prevê concessão, permissão, cessão e autorização. A está errada: usucapião não é forma de uso de bem público. C está errada: tombamento e desapropriação são instrumentos de intervenção, não formas de uso por terceiro. D está errada: confisco e requisição não constam do dispositivo.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-1-q07",
+    "topico": "cgm-lei-organica-1",
+    "enunciado": "Para a instalação de uma Administração Regional, a Lei Orgânica de Contagem exige, entre outras condições:",
+    "alternativas": [
+      "população local superior a 25.000 habitantes.",
+      "mais de 50.000 eleitores na área da Regional.",
+      "pelo menos 2.000 moradias e um hospital regional.",
+      "aprovação prévia em plebiscito entre os moradores."
+    ],
+    "gabarito": 0,
+    "comentario": "O art. 18 exige população superior a 25.000 habitantes, mais de 10.000 eleitores, pelo menos 5.000 moradias, escola pública e unidade de saúde e atendimento ao Plano Diretor. B está errada: o mínimo é de mais de 10.000 eleitores. C está errada: são 5.000 moradias e unidade de saúde, não hospital. D está errada: a LOM não exige plebiscito.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-1-q08",
+    "topico": "cgm-lei-organica-1",
+    "enunciado": "Considere as afirmativas sobre o domínio público na Lei Orgânica de Contagem.\nI. Cabe ao Prefeito a administração dos bens municipais, respeitada a competência da Câmara quanto aos utilizados em seus serviços.\nII. Os imóveis públicos edificados de valor histórico, arquitetônico ou artístico podem ser usados para qualquer finalidade, desde que haja autorização.\nIII. O cadastramento e a identificação técnica dos bens do Município devem ser atualizados anualmente.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I e II, apenas.",
+      "II e III, apenas.",
+      "I e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 2,
+    "comentario": "I está correta (art. 9º) e III também (art. 12, parágrafo único). II está errada: o art. 11 só admite o uso desses imóveis mediante autorização e para finalidades culturais. Por isso, as alternativas que incluem II estão erradas.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-1-q09",
+    "topico": "cgm-lei-organica-1",
+    "enunciado": "De acordo com a Lei Orgânica de Contagem, a permissão de serviço de utilidade pública:",
+    "alternativas": [
+      "depende de autorização legislativa e de contrato com prazo mínimo de cinco anos.",
+      "é outorgada por lei complementar, a título definitivo, sem chamamento público.",
+      "pode ser dada pelo Prefeito por tempo indeterminado, dispensado o edital.",
+      "é sempre precária, autorizada por decreto e por prazo não superior a 90 dias."
+    ],
+    "gabarito": 3,
+    "comentario": "O art. 21, §2º, diz que a permissão é sempre a título precário, autorizada por decreto e por prazo não superior a 90 dias, após edital de chamamento. A está errada: autorização legislativa e contrato são exigidos para a concessão (§3º). B está errada: a permissão não é definitiva. C está errada: há prazo máximo e edital de chamamento.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-1-q10",
+    "topico": "cgm-lei-organica-1",
+    "enunciado": "Segundo a Lei Orgânica de Contagem, é vedado ao Poder Público edificar, descaracterizar ou abrir vias públicas em:",
+    "alternativas": [
+      "praças, parques, reservas ecológicas e espaços tombados pelo Município.",
+      "qualquer imóvel particular situado na zona urbana do Município.",
+      "áreas rurais destinadas à produção agropecuária no Município.",
+      "terrenos de empresas públicas e sociedades de economia mista."
+    ],
+    "gabarito": 0,
+    "comentario": "O art. 13 veda essas intervenções em praças, parques, reservas ecológicas e espaços tombados, ressalvadas as construções necessárias à sua preservação. B está errada: a vedação não abrange todo imóvel particular urbano. C está errada: áreas rurais produtivas não são citadas. D está errada: o art. 14 apenas estende as regras da seção às entidades da administração indireta, não cria vedação sobre seus terrenos.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-2-q01",
+    "topico": "cgm-lei-organica-2",
+    "enunciado": "De acordo com a Lei Orgânica de Contagem, na redação dada pela Emenda nº 43/2022, a Câmara Municipal é composta por:",
+    "alternativas": [
+      "21 vereadores.",
+      "23 vereadores.",
+      "25 vereadores.",
+      "27 vereadores."
+    ],
+    "gabarito": 2,
+    "comentario": "O art. 56, §1º, fixa em 25 o número de vereadores, observados os limites do art. 29, IV, da Constituição. As demais quantidades não correspondem ao texto vigente da LOM.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-2-q02",
+    "topico": "cgm-lei-organica-2",
+    "enunciado": "Segundo a Lei Orgânica, a Câmara Municipal de Contagem reúne-se em sessão ordinária, independentemente de convocação, nos períodos de:",
+    "alternativas": [
+      "1º de fevereiro a 30 de junho e de 1º de agosto a 15 de dezembro.",
+      "2 de fevereiro a 17 de julho e de 1º de agosto a 22 de dezembro.",
+      "1º de março a 30 de junho e de 1º de agosto a 30 de novembro.",
+      "15 de fevereiro a 30 de junho e de 1º de agosto a 20 de dezembro."
+    ],
+    "gabarito": 0,
+    "comentario": "O art. 58 fixa os períodos de 1º/02 a 30/06 e de 1º/08 a 15/12. B, C e D estão erradas: as datas de início e de fim não conferem com o art. 58 da LOM.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-2-q03",
+    "topico": "cgm-lei-organica-2",
+    "enunciado": "Sobre a emenda à Lei Orgânica de Contagem, a proposta será discutida e votada em:",
+    "alternativas": [
+      "turno único e aprovada por maioria absoluta dos membros da Câmara.",
+      "dois turnos, com interstício de 5 dias, e 2/3 dos votos em ambos.",
+      "dois turnos, sem interstício mínimo, e maioria simples em ambos.",
+      "dois turnos, com interstício mínimo de 10 dias, e 3/5 dos votos em ambos."
+    ],
+    "gabarito": 3,
+    "comentario": "O art. 74, §2º, exige dois turnos, interstício mínimo de 10 dias e 3/5 dos votos dos membros da Câmara em ambos. A está errada: não há turno único. B está errada quanto ao interstício e ao quórum. C está errada: há interstício mínimo e o quórum é qualificado.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-2-q04",
+    "topico": "cgm-lei-organica-2",
+    "enunciado": "Nos termos da Lei Orgânica, a perda do mandato de Vereador é DECLARADA pela Mesa da Câmara, e não decidida pelo Plenário, quando o Vereador:",
+    "alternativas": [
+      "fixar residência fora do território do Município de Contagem.",
+      "deixar de comparecer, sem licença, à terça parte das reuniões.",
+      "sofrer condenação criminal em sentença transitada em julgado.",
+      "proceder de modo incompatível com o decoro parlamentar."
+    ],
+    "gabarito": 1,
+    "comentario": "Pelo art. 65, §3º, nos casos dos incisos V (Justiça Eleitoral), VI (faltas à terça parte das reuniões em cada sessão legislativa) e VII (direitos políticos), a perda é declarada pela Mesa. A, C e D estão erradas: residência fora do Município (VIII), condenação criminal (IV) e falta de decoro (III) dependem de decisão da Câmara, por voto secreto e maioria de seus membros (§2º).",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-2-q05",
+    "topico": "cgm-lei-organica-2",
+    "enunciado": "Com o inciso incluído no art. 66 da Lei Orgânica pela Emenda nº 44/2024, o Vereador que assume temporariamente, na condição de suplente, mandato de deputado estadual:",
+    "alternativas": [
+      "perde o mandato de Vereador desde a data da posse como suplente.",
+      "deve renunciar ao mandato de Vereador antes de tomar posse.",
+      "fica afastado sem direito de retorno até o fim da legislatura.",
+      "fica automaticamente licenciado e não perde o mandato."
+    ],
+    "gabarito": 3,
+    "comentario": "O art. 66, IV, diz que ele não perde o mandato, ficando automaticamente licenciado; a renúncia só é obrigatória se tomar posse como titular. A e B estão erradas porque contrariam esse inciso. C está errada: a licença é temporária, e não há perda do direito de retorno.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-2-q06",
+    "topico": "cgm-lei-organica-2",
+    "enunciado": "Recebida a proposição de lei aprovada pela Câmara, o Prefeito de Contagem que não se manifestar no prazo previsto na Lei Orgânica:",
+    "alternativas": [
+      "terá vetado tacitamente a proposição, após 15 dias úteis.",
+      "terá vetado tacitamente a proposição, após 30 dias corridos.",
+      "terá sancionado tacitamente a proposição, após 15 dias úteis.",
+      "terá devolvido a proposição para nova votação em 10 dias."
+    ],
+    "gabarito": 2,
+    "comentario": "Pelo art. 80, o Prefeito tem 15 dias úteis para sancionar ou vetar, e o silêncio importa sanção (§1º). A e B estão erradas: não existe veto tácito. D está errada: não há devolução automática para nova votação.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-2-q07",
+    "topico": "cgm-lei-organica-2",
+    "enunciado": "Se os cargos de Prefeito e de Vice-Prefeito ficarem vagos nos dois últimos anos do mandato, a Lei Orgânica de Contagem determina que:",
+    "alternativas": [
+      "o Presidente da Câmara assumirá definitivamente até o fim do mandato.",
+      "a eleição para ambos os cargos será feita pela Câmara, 30 dias após a última vaga.",
+      "haverá eleição direta 90 dias depois de aberta a última vaga.",
+      "o Secretário de Governo assumirá até a posse dos novos eleitos."
+    ],
+    "gabarito": 1,
+    "comentario": "O art. 88, §1º, prevê eleição pela Câmara 30 dias depois da última vaga, e os eleitos completam o período. A está errada: o Presidente da Câmara apenas exerce o Governo provisoriamente (art. 87). C está errada: a eleição em 90 dias é a regra quando a vacância não ocorre nos dois últimos anos. D está errada: Secretário não está na linha de substituição.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-2-q08",
+    "topico": "cgm-lei-organica-2",
+    "enunciado": "Considere as afirmativas sobre o Prefeito na Lei Orgânica de Contagem.\nI. O Prefeito não pode, sem autorização da Câmara, ausentar-se do Município por mais de 15 dias, sob pena de perda do mandato.\nII. Nos crimes comuns, o Prefeito é julgado pela Câmara Municipal, se admitida a acusação por dois terços de seus membros.\nIII. A Comissão Processante das infrações político-administrativas tem cinco Vereadores sorteados entre os desimpedidos e de partidos diferentes.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I, apenas.",
+      "I e II, apenas.",
+      "I e III, apenas.",
+      "II e III, apenas."
+    ],
+    "gabarito": 2,
+    "comentario": "I está correta (art. 89, parágrafo único) e III também (art. 94, §4º). II está errada: nos crimes comuns, o julgamento é perante o Tribunal de Justiça; a Câmara julga crimes de responsabilidade (art. 93, §2º). Por isso, as alternativas com II estão erradas, e a que traz só I omite a afirmativa III, também correta.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-2-q09",
+    "topico": "cgm-lei-organica-2",
+    "enunciado": "Na redação dada pela Emenda nº 19/2000, o art. 24 da Lei Orgânica sujeita a administração pública do Município aos princípios de legalidade, impessoalidade, moralidade, publicidade e:",
+    "alternativas": [
+      "eficiência.",
+      "razoabilidade.",
+      "economicidade.",
+      "proporcionalidade."
+    ],
+    "gabarito": 0,
+    "comentario": "A redação vigente do art. 24 traz a eficiência. B está errada: “razoabilidade” constava da redação original e foi substituída pela Emenda nº 19/2000. C e D estão erradas: economicidade e proporcionalidade não integram a lista do art. 24.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-lei-organica-2-q10",
+    "topico": "cgm-lei-organica-2",
+    "enunciado": "Segundo a Lei Orgânica de Contagem, na redação da Emenda nº 42/2019, é reservado à pessoa com deficiência o seguinte percentual dos cargos e empregos públicos:",
+    "alternativas": [
+      "10% (dez por cento).",
+      "5% (cinco por cento).",
+      "15% (quinze por cento).",
+      "20% (vinte por cento)."
+    ],
+    "gabarito": 0,
+    "comentario": "O art. 43 reserva 10% dos cargos e empregos públicos à pessoa com deficiência, com critérios de admissão definidos em lei. Os demais percentuais não correspondem ao texto vigente.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-politica-q01",
+    "topico": "cgm-politica",
+    "enunciado": "Em 26 de março de 2026, em reunião solene da Câmara Municipal, tomou posse como prefeito de Contagem:",
+    "alternativas": [
+      "Bruno Barreiro (PV), presidente da Câmara.",
+      "Ricardo Faria (PSD), até então vice-prefeito.",
+      "Carol do Teteco (MDB), vice-presidente da Câmara.",
+      "Marília Campos (PT), reeleita em 2024."
+    ],
+    "gabarito": 1,
+    "comentario": "Segundo a Câmara, Ricardo Faria (PSD), vice-prefeito, tomou posse como prefeito em 26/03/2026. A está errada: Bruno Barreiro presidiu a solenidade. C está errada: Carol do Teteco é vereadora e integra a Mesa. D está errada: nesse dia foi lida a renúncia de Marília Campos.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-politica-q02",
+    "topico": "cgm-politica",
+    "enunciado": "A posse do novo prefeito de Contagem em março de 2026 decorreu da:",
+    "alternativas": [
+      "cassação do mandato da prefeita pela Câmara.",
+      "decisão judicial que afastou a prefeita do cargo.",
+      "licença da prefeita para tratamento de saúde.",
+      "renúncia da prefeita para disputar vaga no Senado."
+    ],
+    "gabarito": 3,
+    "comentario": "Segundo a Câmara, foi lida em reunião extraordinária a carta de renúncia de Marília Campos (PT), que deixou o cargo para se candidatar ao Senado Federal. A, B e C estão erradas: não houve cassação, afastamento judicial nem licença médica; e licença não abriria a vaga para posse definitiva.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-politica-q03",
+    "topico": "cgm-politica",
+    "enunciado": "Entre 6 e 18 de outubro de 2026, durante as férias do prefeito Ricardo Faria, exerceu temporariamente a chefia do Executivo de Contagem:",
+    "alternativas": [
+      "a 1ª vice-presidente da Câmara, Carol do Teteco.",
+      "o secretário municipal de Governo.",
+      "o presidente da Câmara, Bruno Barreiro.",
+      "a procuradora-geral do Município."
+    ],
+    "gabarito": 2,
+    "comentario": "Segundo a Câmara, Bruno Barreiro assumiu a Prefeitura nesse período. A está errada: Carol do Teteco presidiu a Câmara enquanto Barreiro estava no Executivo. B e D estão erradas: secretários e procurador-geral não estão na linha de substituição do Prefeito na Lei Orgânica.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-politica-q04",
+    "topico": "cgm-politica",
+    "enunciado": "No episódio de outubro de 2026, o presidente da Câmara foi chamado a chefiar o Executivo porque:",
+    "alternativas": [
+      "o cargo de vice-prefeito estava vago desde a posse de Ricardo Faria.",
+      "a Lei Orgânica manda o presidente da Câmara substituir o prefeito em férias.",
+      "o vice-prefeito estava licenciado para disputar as eleições de 2026.",
+      "o Conselho de Governo escolheu o presidente da Câmara para o cargo."
+    ],
+    "gabarito": 0,
+    "comentario": "Como Ricardo Faria era o vice e passou a prefeito, o cargo de vice ficou vago; no impedimento do Prefeito e do Vice, ou na vacância, a LOM chama o Presidente da Câmara (art. 87). B está errada: com Vice no cargo, seria ele o substituto (art. 86, §3º). C está errada: não havia vice-prefeito. D está errada: o Conselho de Governo é órgão de consulta, sem esse papel.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-politica-q05",
+    "topico": "cgm-politica",
+    "enunciado": "Segundo o portal da Prefeitura de Contagem, o município está dividido no seguinte número de Administrações Regionais:",
+    "alternativas": [
+      "Seis.",
+      "Sete.",
+      "Nove.",
+      "Oito."
+    ],
+    "gabarito": 3,
+    "comentario": "O portal lista oito regionais: Sede, Eldorado, Industrial, Nacional, Petrolândia, Ressaca, Riacho e Vargem das Flores. Seis, sete e nove não correspondem a essa lista.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-politica-q06",
+    "topico": "cgm-politica",
+    "enunciado": "Assinale a alternativa que NÃO indica uma Administração Regional de Contagem.",
+    "alternativas": [
+      "Ressaca.",
+      "Petrolândia.",
+      "Barreiro.",
+      "Vargem das Flores."
+    ],
+    "gabarito": 2,
+    "comentario": "Barreiro não consta da lista de regionais de Contagem divulgada pela Prefeitura. A, B e D estão erradas como resposta porque Ressaca, Petrolândia e Vargem das Flores estão entre as oito regionais listadas pela Prefeitura.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-politica-q07",
+    "topico": "cgm-politica",
+    "enunciado": "De acordo com a lista de bairros divulgada pelo portal da Prefeitura, o bairro Nova Contagem é atendido pela:",
+    "alternativas": [
+      "Regional Vargem das Flores.",
+      "Regional Nacional.",
+      "Regional Riacho.",
+      "Regional Industrial."
+    ],
+    "gabarito": 0,
+    "comentario": "O portal inclui Nova Contagem A e B entre os bairros atendidos pela Regional Vargem das Flores. B, C e D estão erradas: Nacional, Riacho e Industrial atendem outros bairros, como Xangrilá, Novo Riacho e Cidade Industrial, respectivamente.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-politica-q08",
+    "topico": "cgm-politica",
+    "enunciado": "Em 1º de outubro de 2026, a Câmara Municipal de Contagem elegeu sua Mesa Diretora para o biênio 2027/2028, com:",
+    "alternativas": [
+      "Carol do Teteco (MDB) eleita para a Presidência.",
+      "Léo da Academia (PDT) eleito para a Presidência.",
+      "Adilson Lamounier (União) eleito para a Presidência.",
+      "Bruno Barreiro (PV) reconduzido à Presidência."
+    ],
+    "gabarito": 3,
+    "comentario": "Segundo a Câmara, Bruno Barreiro foi reconduzido à presidência em chapa única aprovada por unanimidade. A está errada: Carol do Teteco ficou na 1ª vice-presidência. B está errada: Léo da Academia não integra a Mesa 2027/2028. C está errada: Adilson Lamounier foi eleito 2º vice-presidente.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-politica-q09",
+    "topico": "cgm-politica",
+    "enunciado": "No portal da Prefeitura de Contagem (2026), a Transcon aparece como:",
+    "alternativas": [
+      "secretaria municipal responsável por obras viárias.",
+      "autarquia municipal de trânsito e transportes.",
+      "empresa privada concessionária do transporte.",
+      "fundação de ensino técnico e superior do Município."
+    ],
+    "gabarito": 1,
+    "comentario": "O portal identifica a Transcon como Autarquia Municipal de Trânsito e Transportes de Contagem. A está errada: não é secretaria. C está errada: é entidade pública, não empresa privada. D está errada: a fundação de ensino é a Funec.",
+    "origem": "autoral"
+  },
+  {
+    "id": "cgm-politica-q10",
+    "topico": "cgm-politica",
+    "enunciado": "Considere as afirmativas sobre a Câmara Municipal de Contagem.\nI. A Lei Orgânica, na redação da Emenda nº 43/2022, fixa em 25 o número de vereadores.\nII. A Mesa Diretora é eleita para mandato de quatro anos, coincidente com a legislatura.\nIII. A 20ª Legislatura corresponde ao período de 2025 a 2028.\nEstá correto o que se afirma em:",
+    "alternativas": [
+      "I e II, apenas.",
+      "I e III, apenas.",
+      "II e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 1,
+    "comentario": "I está correta (art. 56, §1º) e III também (registro da Câmara: 20ª Legislatura, 2025–2028). II está errada: a Mesa é eleita para mandato de dois anos (art. 58, §1º), tanto que houve eleição para o biênio 2027/2028. Por isso, as alternativas que incluem II estão erradas.",
+    "origem": "autoral"
+  }
+]

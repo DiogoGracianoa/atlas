@@ -1,0 +1,1318 @@
+[
+  {
+    "id": "lp-interpretacao-q01",
+    "topico": "lp-interpretacao",
+    "enunciado": "Leia o texto: “Em muitos condomínios, a coleta seletiva começa animada e termina esquecida. Os moradores separam o lixo nas primeiras semanas, mas logo descobrem que o caminhão recolhe tudo junto ou que não há lugar adequado para guardar os recicláveis. Sem estrutura contínua, a boa vontade se esgota. Campanhas educativas são importantes, mas só produzem resultado duradouro quando acompanhadas de uma logística que funcione todos os dias.” Assinale a alternativa que expressa a ideia central do texto.",
+    "alternativas": [
+      "Campanhas educativas são inúteis para promover a coleta seletiva nos condomínios.",
+      "A coleta seletiva só se sustenta quando a conscientização vem acompanhada de estrutura permanente.",
+      "Os moradores de condomínios não têm interesse em separar o lixo reciclável.",
+      "O caminhão de coleta é o principal responsável pelo fracasso da reciclagem no país."
+    ],
+    "gabarito": 1,
+    "comentario": "A alternativa B resume a tese, explicitada no último período: campanhas são importantes, mas o resultado duradouro depende de logística contínua. A está errada porque o texto afirma que as campanhas são importantes. C contradiz o texto, que mostra os moradores começando “animados”. D extrapola: o caminhão é apenas um dos exemplos, e o texto não fala do país nem aponta um “principal responsável”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-interpretacao-q02",
+    "topico": "lp-interpretacao",
+    "enunciado": "Leia: “Depois da reforma, o posto de saúde do bairro continua sem farmácia, mas agora conta com uma sala de vacinação climatizada.” Assinale a alternativa que apresenta uma informação pressuposta no período.",
+    "alternativas": [
+      "Antes da reforma, o posto de saúde já não tinha farmácia.",
+      "A sala de vacinação era a principal reivindicação da comunidade.",
+      "A reforma foi mal planejada pela administração municipal.",
+      "A farmácia será instalada em uma próxima etapa da obra."
+    ],
+    "gabarito": 0,
+    "comentario": "O verbo “continua” é marcador de pressuposição: só continua sem farmácia o que já estava sem ela antes, informação que se mantém mesmo se a frase for negada. B atribui ao texto uma reivindicação que ele não menciona. C é juízo de valor ausente do texto. D faz previsão que o período não autoriza.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-interpretacao-q03",
+    "topico": "lp-interpretacao",
+    "enunciado": "Leia: “O edital fixou o fim das inscrições para as 23h59 do dia 10. Marina tentou concluir a inscrição às 23h40 desse dia, mas o site ficou fora do ar por meia hora. Quando a página voltou, o sistema exibiu a mensagem de prazo encerrado.” Com base no texto, pode-se inferir corretamente que",
+    "alternativas": [
+      "Marina desistiu de prestar o concurso por causa da falha no site.",
+      "o site saiu do ar por ação deliberada da organização do concurso.",
+      "Marina não conseguiu concluir a inscrição dentro do prazo.",
+      "outros candidatos também foram prejudicados pela instabilidade do site."
+    ],
+    "gabarito": 2,
+    "comentario": "C é inferência necessária: às 23h40 mais meia hora fora do ar, a página só voltou depois das 23h59, e o sistema já indicava prazo encerrado. A acrescenta uma decisão de Marina que o texto não relata. B atribui intenção à organização sem qualquer base. D é provável, mas não garantida pelo texto, que fala apenas de Marina: é extrapolação.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-interpretacao-q04",
+    "topico": "lp-interpretacao",
+    "enunciado": "Leia: “Parabéns à empresa responsável pela obra da avenida: em apenas dois anos, conseguiu transformar um trecho de 800 metros em um labirinto de cones, desvios e poeira, sem jamais correr o risco de concluir a obra.” A intenção predominante do autor é",
+    "alternativas": [
+      "elogiar a rapidez da empresa na execução da obra.",
+      "informar ao leitor a extensão exata do trecho em obras.",
+      "orientar os motoristas sobre os desvios da avenida.",
+      "criticar, por meio de ironia, a demora e a desordem da obra."
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: o elogio aparente (“Parabéns”, “em apenas dois anos”) é desmentido pelos fatos (labirinto de cones, obra que não termina), o que caracteriza ironia a serviço da crítica. A toma o elogio ao pé da letra, ignorando a ironia. B confunde um dado do texto com sua finalidade. C atribui ao texto uma função injuntiva que ele não tem.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-interpretacao-q05",
+    "topico": "lp-interpretacao",
+    "enunciado": "Leia: “— Você ainda usa aquela senha com a data do seu aniversário? — perguntou o técnico, olhando para a tela do computador da colega.” Considere as afirmativas. I. A pergunta pressupõe que a colega já usou, em algum momento, uma senha com a data do aniversário. II. Pode-se depreender, como subentendido, que o técnico considera essa senha inadequada. III. O texto afirma que a conta da colega foi invadida. Está correto o que se afirma em",
+    "alternativas": [
+      "I apenas.",
+      "I e II apenas.",
+      "II e III apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 1,
+    "comentario": "I está correta: o advérbio “ainda” pressupõe uso anterior, que se mantém mesmo que a resposta seja “não”. II está correta: o contexto (um técnico, a menção a uma senha previsível) insinua uma crítica, sem que ela seja dita. III está incorreta: o texto não menciona invasão, que seria extrapolação. Por isso A omite II, e C e D incluem a afirmativa falsa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-interpretacao-q06",
+    "topico": "lp-interpretacao",
+    "enunciado": "Leia: “A nova versão do aplicativo é mais leve: ocupa menos espaço no celular e abre em poucos segundos, mesmo em aparelhos antigos.” No contexto, o adjetivo “leve” significa",
+    "alternativas": [
+      "que exige poucos recursos do aparelho.",
+      "de cor clara e suave.",
+      "de pouca importância.",
+      "de conteúdo descontraído."
+    ],
+    "gabarito": 0,
+    "comentario": "A é o sentido construído pelo próprio texto, que explica “leve” logo depois dos dois-pontos: ocupa pouco espaço e abre rápido. B traz sentido possível da palavra, mas sem relação com o contexto. C atribui sentido de irrelevância, que o texto não sugere. D refere-se ao tom do conteúdo, assunto que o texto não aborda.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-interpretacao-q07",
+    "topico": "lp-interpretacao",
+    "enunciado": "Leia: “Nem toda informação que circula em grupos de mensagens é falsa, mas a velocidade com que ela se espalha costuma superar a disposição de checá-la. Por isso, antes de encaminhar uma notícia alarmante, convém procurar a mesma informação em veículos reconhecidos ou em canais oficiais. Encaminhar sem verificar não é um gesto neutro: quem repassa também participa da desinformação.” Assinale a alternativa INCORRETA quanto ao texto.",
+    "alternativas": [
+      "O autor reconhece que há informações verdadeiras nos grupos de mensagens.",
+      "O texto recomenda a verificação de notícias antes de compartilhá-las.",
+      "Segundo o texto, quem repassa uma notícia falsa tem responsabilidade pela desinformação.",
+      "O autor defende que os grupos de mensagens sejam proibidos por espalharem notícias falsas."
+    ],
+    "gabarito": 3,
+    "comentario": "D é a incorreta: o texto recomenda checar antes de encaminhar, mas em nenhum momento propõe proibir os grupos; é extrapolação. A está de acordo com “Nem toda informação… é falsa”. B corresponde a “convém procurar a mesma informação”. C corresponde a “quem repassa também participa da desinformação”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-interpretacao-q08",
+    "topico": "lp-interpretacao",
+    "enunciado": "Leia: “O município ampliou o horário de atendimento das unidades básicas de saúde até as 22h. A mudança beneficia trabalhadores que não conseguem sair do serviço durante o dia. É, sem dúvida, a decisão mais acertada da gestão neste ano.” Assinale o trecho em que o autor emite opinião, e não apenas relata um fato.",
+    "alternativas": [
+      "“O município ampliou o horário de atendimento”",
+      "“das unidades básicas de saúde até as 22h”",
+      "“É, sem dúvida, a decisão mais acertada da gestão neste ano.”",
+      "“que não conseguem sair do serviço durante o dia”"
+    ],
+    "gabarito": 2,
+    "comentario": "C traz juízo de valor (“mais acertada”) reforçado pelo modalizador “sem dúvida”: é opinião do autor, que outro leitor poderia contestar. A e B relatam a medida, fato verificável. D descreve o público atendido, informação apresentada como dado, e não como avaliação.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-interpretacao-q09",
+    "topico": "lp-interpretacao",
+    "enunciado": "Leia: “Na última pesquisa, 70% dos usuários disseram preferir o atendimento on-line. Ainda assim, a secretaria decidiu manter os guichês presenciais, lembrando que parte da população não tem acesso regular à internet.” Infere-se corretamente do texto que",
+    "alternativas": [
+      "a manutenção dos guichês considera pessoas que não seriam bem atendidas apenas pelo canal digital.",
+      "30% dos usuários não têm acesso regular à internet.",
+      "a secretaria pretende encerrar o atendimento on-line nos próximos meses.",
+      "a maioria dos usuários deixou de frequentar os guichês presenciais."
+    ],
+    "gabarito": 0,
+    "comentario": "A decorre diretamente da justificativa dada pela secretaria (“parte da população não tem acesso regular à internet”). B é a armadilha numérica: os 30% restantes não declararam preferir o on-line, o que não significa que não tenham internet. C contradiz o texto, que fala em manter os guichês, e não em encerrar o canal on-line. D confunde preferência declarada com comportamento efetivo.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-generos-q01",
+    "topico": "lp-generos",
+    "enunciado": "Leia: “Para solicitar a segunda via do boleto, acesse a área de serviços, informe o número de inscrição do imóvel e confirme os dados. O documento será gerado em PDF.” Nesse trecho, predomina o tipo textual",
+    "alternativas": [
+      "narrativo.",
+      "descritivo.",
+      "injuntivo.",
+      "argumentativo."
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta: o trecho orienta o leitor por meio de verbos no imperativo (acesse, informe, confirme) organizados em passos, marca típica da injunção. A está errada porque não há relato de fatos com personagens no tempo. B está errada porque o trecho não caracteriza um ser ou lugar. D está errada porque não há tese nem tentativa de convencer.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-generos-q02",
+    "topico": "lp-generos",
+    "enunciado": "Leia: “O auditório tinha cadeiras azuis dispostas em semicírculo. No fundo, um painel de madeira escura cobria toda a parede, e duas luminárias amarelas deixavam o palco em penumbra.” Assinale o tipo textual predominante.",
+    "alternativas": [
+      "Descritivo.",
+      "Narrativo.",
+      "Injuntivo.",
+      "Expositivo."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: o trecho retrata o auditório, com verbos de estado no pretérito imperfeito (tinha, cobria, deixavam), muitos adjetivos e nenhuma sucessão de acontecimentos. B exigiria fatos encadeados no tempo. C exigiria instruções ao leitor. D exigiria explicação de um conceito ou processo, e não a caracterização de um lugar.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-generos-q03",
+    "topico": "lp-generos",
+    "enunciado": "Leia: “Quando o sistema caiu, às nove da manhã, Paulo correu até a sala do servidor. Reiniciou o equipamento, conferiu os cabos e, meia hora depois, telefonou para a chefia avisando que tudo voltara a funcionar.” Assinale a alternativa correta sobre o trecho.",
+    "alternativas": [
+      "Predomina a descrição, pois o trecho caracteriza a sala do servidor.",
+      "Predomina a injunção, pois o trecho ensina a reiniciar equipamentos.",
+      "Predomina a dissertação, pois o narrador defende uma tese sobre falhas de sistema.",
+      "Predomina a narração, marcada por ações encadeadas no tempo e verbos no pretérito perfeito."
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: há personagem, tempo marcado (“às nove da manhã”, “meia hora depois”) e sequência de ações no pretérito perfeito (correu, reiniciou, conferiu, telefonou). A está errada porque a sala é apenas mencionada, não caracterizada. B está errada porque o trecho relata o que Paulo fez, sem dar instruções ao leitor. C está errada porque não há opinião defendida.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-generos-q04",
+    "topico": "lp-generos",
+    "enunciado": "Compare os textos. Texto I: “O protocolo eletrônico registra a data e a hora de entrada de cada documento e gera um número de acompanhamento que pode ser consultado pelo interessado.” Texto II: “O protocolo eletrônico deveria ser obrigatório em todos os órgãos públicos, pois elimina extravios e torna o serviço mais transparente.” Assinale a alternativa correta.",
+    "alternativas": [
+      "Ambos são argumentativos, pois tratam do mesmo tema.",
+      "O texto I é expositivo e o texto II é argumentativo.",
+      "O texto I é argumentativo e o texto II é expositivo.",
+      "Ambos são injuntivos, pois orientam o uso do protocolo."
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: o texto I explica como funciona o protocolo, sem tomar posição; o texto II defende uma tese (“deveria ser obrigatório”) e a justifica com argumentos introduzidos por “pois”. A está errada porque tratar do mesmo tema não torna os textos do mesmo tipo. C inverte a classificação. D está errada porque nenhum dos textos dá instruções ao leitor.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-generos-q05",
+    "topico": "lp-generos",
+    "enunciado": "Assinale o gênero que corresponde à seguinte definição: documento em que se registram, de forma resumida e fiel, as presenças, as discussões e as deliberações de uma reunião, redigido por um secretário e assinado pelos participantes.",
+    "alternativas": [
+      "Ofício.",
+      "Ata.",
+      "Edital.",
+      "Parecer."
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: a ata tem justamente a função de registrar o que ocorreu em uma reunião. A está errada porque o ofício é comunicação expedida por autoridade. C está errada porque o edital torna públicos avisos, convocações ou regras. D está errada porque o parecer é manifestação técnica ou jurídica fundamentada sobre uma questão.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-generos-q06",
+    "topico": "lp-generos",
+    "enunciado": "Uma moradora deseja pedir formalmente à Secretaria Municipal de Obras a instalação de um redutor de velocidade em sua rua. O gênero textual mais adequado para essa finalidade é",
+    "alternativas": [
+      "o requerimento.",
+      "a ata de reunião.",
+      "o edital de convocação.",
+      "a circular interna."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: requerimento é o pedido formal de um interessado, inclusive de um cidadão, a uma autoridade para obter uma providência. B está errada porque a ata registra reuniões. C está errada porque o edital é expedido pela administração para tornar algo público. D está errada porque a circular leva o mesmo conteúdo a vários destinatários e não é instrumento de pedido do cidadão.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-generos-q07",
+    "topico": "lp-generos",
+    "enunciado": "Considere as afirmativas sobre tipos e gêneros textuais. I. Os tipos textuais são poucos e se definem por traços linguísticos; os gêneros são numerosos e se definem pela função social. II. Um mesmo gênero pode combinar tipos diferentes, como a notícia, que costuma unir o relato dos fatos à exposição de dados. III. Editorial e artigo de opinião se diferenciam porque o editorial é narrativo e o artigo de opinião é argumentativo. Está correto o que se afirma em",
+    "alternativas": [
+      "I apenas.",
+      "II apenas.",
+      "I e II apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta. I descreve corretamente a distinção entre tipo e gênero. II está correta: os gêneros são heterogêneos, e a notícia combina narração e exposição. III está incorreta: editorial e artigo de opinião são ambos argumentativos; a diferença é que o editorial expressa a opinião do veículo e, em geral, não é assinado. Por isso A e B omitem afirmativa verdadeira, e D inclui a falsa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-generos-q08",
+    "topico": "lp-generos",
+    "enunciado": "Leia: “Desligar o aparelho da tomada. Remover a tampa traseira. Substituir a bateria por outra do mesmo modelo. Recolocar a tampa e aguardar dez minutos antes de religar.” Assinale a alternativa correta.",
+    "alternativas": [
+      "O trecho é injuntivo, embora os verbos estejam no infinitivo, porque orienta a execução de uma sequência de ações.",
+      "O trecho é narrativo, porque apresenta ações dispostas em ordem temporal.",
+      "O trecho é descritivo, porque enumera as partes de um aparelho.",
+      "O trecho não pode ser injuntivo, porque esse tipo exige verbos no modo imperativo."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: o infinitivo com valor de instrução é marca comum de manuais, e a finalidade de orientar o leitor define a injunção. B está errada porque não há fatos ocorridos com personagens, mas passos a cumprir. C está errada porque o trecho não caracteriza o aparelho, e sim indica o que fazer. D está errada porque a injunção também se realiza no infinitivo e no presente com valor de ordem.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-generos-q09",
+    "topico": "lp-generos",
+    "enunciado": "Assinale a alternativa em que a associação entre o gênero e sua finalidade está INCORRETA.",
+    "alternativas": [
+      "Edital: tornar públicos avisos, convocações ou regras de um certame.",
+      "Parecer: apresentar manifestação técnica ou jurídica fundamentada sobre uma questão.",
+      "Circular: comunicar o mesmo conteúdo a vários destinatários.",
+      "Ata: solicitar a uma autoridade um direito ou uma providência."
+    ],
+    "gabarito": 3,
+    "comentario": "D é a incorreta: solicitar direito ou providência a uma autoridade é finalidade do requerimento; a ata registra o que ocorreu em uma reunião. A descreve corretamente o edital, usado, por exemplo, em concursos e licitações. B descreve corretamente o parecer. C descreve corretamente a circular.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-coesao-q01",
+    "topico": "lp-coesao",
+    "enunciado": "Leia: “A biblioteca municipal recebeu mil livros doados por moradores. Eles serão catalogados até o fim do mês.” O pronome “Eles” retoma",
+    "alternativas": [
+      "“moradores”.",
+      "“mil livros”.",
+      "“a biblioteca municipal”.",
+      "“o fim do mês”."
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: o que será catalogado são os livros; o sentido de “serão catalogados” resolve a referência. A é forma gramaticalmente possível (masculino plural), mas incoerente: moradores não são catalogados. C está errada porque “a biblioteca” é feminino singular. D está errada porque “o fim do mês” é singular e é apenas um marco de tempo.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-coesao-q02",
+    "topico": "lp-coesao",
+    "enunciado": "Em “O sistema foi atualizado; contudo, alguns usuários ainda relatam lentidão.”, o conectivo “contudo” estabelece relação de",
+    "alternativas": [
+      "oposição.",
+      "conclusão.",
+      "causa.",
+      "explicação."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: “contudo” é conjunção adversativa, como mas, porém e todavia, e contrapõe a atualização à lentidão que persiste. B exigiria conectivos como portanto ou logo. C exigiria porque, já que ou visto que. D exigiria pois anteposto ao verbo ou porque com valor explicativo.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-coesao-q03",
+    "topico": "lp-coesao",
+    "enunciado": "Leia: “Embora o prazo fosse curto, a equipe entregou o projeto completo.” Assinale a alternativa que substitui o trecho “Embora o prazo fosse curto,” mantendo o sentido e a correção gramatical.",
+    "alternativas": [
+      "“Porque o prazo fosse curto,”",
+      "“Desde que o prazo fosse curto,”",
+      "“Visto que o prazo era curto,”",
+      "“Apesar de o prazo ser curto,”"
+    ],
+    "gabarito": 3,
+    "comentario": "D mantém a relação de concessão (algo que poderia impedir, mas não impediu), com o infinitivo e sem contrair a preposição com o artigo do sujeito, como recomenda a norma-padrão. A está errada porque “porque” é causal e não se constrói com esse subjuntivo. B está errada porque “desde que” com subjuntivo é condicional. C está errada porque “visto que” é causal e faria do prazo curto a razão da entrega completa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-coesao-q04",
+    "topico": "lp-coesao",
+    "enunciado": "Em “Os agentes de saúde visitaram as casas pela manhã e, à tarde, organizaram os dados no posto.”, o sujeito de “organizaram” é recuperado pelo leitor graças ao mecanismo de",
+    "alternativas": [
+      "catáfora.",
+      "repetição lexical.",
+      "elipse.",
+      "hiperonímia."
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta: o sujeito “os agentes de saúde” é omitido na segunda oração e recuperado pelo contexto e pela desinência verbal, o que caracteriza elipse. A está errada porque não há antecipação de termo. B está errada porque o sujeito não é repetido. D está errada porque nenhuma palavra de sentido mais geral retoma “agentes”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-coesao-q05",
+    "topico": "lp-coesao",
+    "enunciado": "Leia: “Ana e Rui participaram da seleção interna: ___ ficou com a vaga de programação; ___, com a de suporte.” Sabendo que Rui ficou com a vaga de programação e Ana com a de suporte, as lacunas são corretamente preenchidas por",
+    "alternativas": [
+      "“este” e “aquela”.",
+      "“esta” e “aquele”.",
+      "“aquele” e “esta”.",
+      "“esse” e “essa”."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: na retomada de dois termos, “este” aponta o mais próximo (Rui, citado por último) e “aquela” o mais distante (Ana). B inverteria as pessoas, atribuindo a programação a Ana. C inverte a regra de proximidade. D não estabelece a distinção entre o termo mais próximo e o mais distante.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-coesao-q06",
+    "topico": "lp-coesao",
+    "enunciado": "Assinale a alternativa em que o termo indicado entre parênteses antecipa uma informação que ainda será apresentada, em vez de retomar algo já dito.",
+    "alternativas": [
+      "“Os servidores chegaram cedo; eles queriam evitar o trânsito.” (eles)",
+      "“O relatório ficou pronto, mas ninguém o leu.” (o)",
+      "“A recomendação da auditoria foi esta: revisar todos os contratos antes de março.” (esta)",
+      "“Comprei um notebook novo; o aparelho já veio com defeito.” (o aparelho)"
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta: “esta” anuncia o conteúdo que vem depois dos dois-pontos, caso de catáfora. A está errada porque “eles” retoma “os servidores” (anáfora). B está errada porque “o” retoma “o relatório”. D está errada porque “o aparelho” retoma “um notebook novo” por hiperônimo.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-coesao-q07",
+    "topico": "lp-coesao",
+    "enunciado": "Considere as afirmativas. I. Em “Desde que você chegou, o setor ficou mais organizado”, “desde que” expressa tempo. II. Em “Desde que haja verba, o curso será oferecido”, “desde que” expressa condição. III. Em “À medida que os pedidos aumentavam, o tempo de resposta crescia”, a locução “à medida que” expressa causa. Está correto o que se afirma em",
+    "alternativas": [
+      "I apenas.",
+      "I e II apenas.",
+      "II e III apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta. I é verdadeira: com indicativo (chegou), “desde que” marca o ponto de partida no tempo. II é verdadeira: com subjuntivo (haja), equivale a “contanto que”. III é falsa: “à medida que” expressa proporção; a locução causal é “na medida em que”. Por isso A omite II, e C e D incluem a afirmativa falsa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-coesao-q08",
+    "topico": "lp-coesao",
+    "enunciado": "Assinale a alternativa em que o conectivo empregado torna o período incoerente.",
+    "alternativas": [
+      "“Choveu durante toda a madrugada; por isso, as ruas amanheceram alagadas.”",
+      "“O candidato estudou pouco, mas foi aprovado nas primeiras colocações.”",
+      "“O evento foi adiado, visto que o palestrante adoeceu.”",
+      "“Como a impressora estava sem tinta, os relatórios foram impressos normalmente.”"
+    ],
+    "gabarito": 3,
+    "comentario": "D é incoerente: “como” anteposto indica causa, mas a falta de tinta não pode explicar que a impressão tenha ocorrido normalmente; a relação real seria de concessão (“Embora a impressora estivesse sem tinta…”), e ainda assim pouco plausível. A apresenta conclusão coerente com a causa. B usa “mas” para marcar resultado contrário ao esperado, o que é coerente. C apresenta causa compatível com o adiamento.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-coesao-q09",
+    "topico": "lp-coesao",
+    "enunciado": "Leia: “A internet ampliou o acesso à informação. Hoje, qualquer pessoa conectada pode consultar leis, horários de ônibus e serviços públicos sem sair de casa. A informação ficou mais acessível com a internet, que tornou mais amplo o acesso à informação.” Assinale a alternativa correta sobre o texto.",
+    "alternativas": [
+      "O último período compromete a progressão textual, pois apenas reformula o primeiro sem acrescentar informação nova.",
+      "O texto é incoerente porque o segundo período contradiz o primeiro.",
+      "O pronome “que”, no último período, retoma a palavra “informação”.",
+      "O segundo período se liga ao primeiro por meio de catáfora."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: o último período repete a ideia do primeiro com outras palavras, tornando o texto circular, sem o acréscimo de informação que caracteriza a progressão. B está errada porque o segundo período exemplifica o primeiro, sem contradizê-lo. C está errada porque “que” retoma “a internet”, sujeito de “tornou”. D está errada porque o segundo período desenvolve o que já foi dito, não antecipa nada.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-classes-q01",
+    "topico": "lp-classes",
+    "enunciado": "Assinale a alternativa em que todos os substantivos são sobrecomuns.",
+    "alternativas": [
+      "a criança, a testemunha, o cônjuge",
+      "o estudante, o colega, o gerente",
+      "a cobra, o jacaré, a onça",
+      "o bode, o boi, o cavalo"
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: criança, testemunha e cônjuge têm um só gênero gramatical para pessoas de ambos os sexos. B traz comuns de dois gêneros, que mudam apenas o determinante (a estudante, a colega, a gerente). C traz epicenos, nomes de animais que recebem macho ou fêmea. D traz heterônimos, cujo feminino é outra palavra (cabra, vaca, égua).",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-classes-q02",
+    "topico": "lp-classes",
+    "enunciado": "Assinale a alternativa em que o plural de todas as palavras está de acordo com a norma-padrão.",
+    "alternativas": [
+      "cidadões, fósseis, lápis",
+      "cidadãos, fósseis, guarda-chuvas",
+      "cidadãos, fóssiles, guardas-chuvas",
+      "pães, lápises, obras-prima"
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: cidadão faz cidadãos; fóssil, paroxítona em -il, faz fósseis; em guarda-chuva (verbo mais substantivo), só o segundo elemento varia. A erra em “cidadões”. C erra em “fóssiles” e em “guardas-chuvas”, pois o verbo não varia. D erra em “lápises”, já que paroxítona em -s é invariável, e em “obras-prima”, pois substantivo mais adjetivo variam os dois.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-classes-q03",
+    "topico": "lp-classes",
+    "enunciado": "Assinale a alternativa em que a flexão do adjetivo composto está de acordo com a norma-padrão.",
+    "alternativas": [
+      "“A empresa comprou camisas azuis-marinhos para a equipe.”",
+      "“Os alunos surdo-mudos receberam intérpretes na prova.”",
+      "“Os acordos luso-brasileiros foram renovados.”",
+      "“As equipes médicas-cirúrgicas chegaram ao hospital.”"
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta: no adjetivo composto, em regra só o último elemento varia (luso-brasileiros). A está errada porque azul-marinho é invariável (camisas azul-marinho). B está errada porque surdo-mudo é exceção e varia nos dois elementos (surdos-mudos). D está errada porque o primeiro elemento não varia (equipes médico-cirúrgicas).",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-classes-q04",
+    "topico": "lp-classes",
+    "enunciado": "Assinale a alternativa em que o grau do adjetivo está empregado de acordo com a norma-padrão.",
+    "alternativas": [
+      "“Este caminho é mais bom do que aquele.”",
+      "“A situação dele é mais pior do que a minha.”",
+      "“O prédio novo é mais grande que o antigo.”",
+      "“O estagiário é mais bom do que esperto.”"
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: “mais bom” é admitido quando se comparam duas qualidades do mesmo ser (bondade e esperteza do estagiário). A está errada porque, ao comparar dois seres, usa-se o sintético “melhor”. B está errada porque “pior” já é comparativo, e “mais pior” é redundante. C está errada porque, comparando dois prédios, usa-se “maior”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-classes-q05",
+    "topico": "lp-classes",
+    "enunciado": "Assinale a frase em que o emprego do pronome pessoal está de acordo com a norma-padrão.",
+    "alternativas": [
+      "“Esse assunto deve ficar entre eu e você.”",
+      "“Trouxeram o relatório para mim revisar.”",
+      "“Não há nenhum desentendimento entre mim e ela.”",
+      "“Eu lhe vi ontem na reunião de planejamento.”"
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta: depois da preposição “entre” usa-se o oblíquo tônico “mim”, e “ela” também é forma tônica aceita após preposição. A está errada porque “eu” é pronome reto e não pode vir regido de preposição. B está errada porque o pronome é sujeito do infinitivo “revisar” e deve ser reto: “para eu revisar”. D está errada porque “ver” é transitivo direto, e o complemento deve ser “o” ou “a”: “Eu o vi”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-classes-q06",
+    "topico": "lp-classes",
+    "enunciado": "Complete as lacunas de acordo com a norma-padrão: “Senhor Prefeito, informamos que Vossa Excelência ___ convidado para a cerimônia e que ___ presença é aguardada por todos.”",
+    "alternativas": [
+      "está – sua",
+      "estais – vossa",
+      "está – vossa",
+      "estais – sua"
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: pronomes de tratamento referem-se à pessoa com quem se fala, mas levam o verbo e os possessivos para a terceira pessoa. B emprega a segunda pessoa do plural nos dois casos. C acerta o verbo, mas erra o possessivo. D acerta o possessivo, mas erra o verbo.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-classes-q07",
+    "topico": "lp-classes",
+    "enunciado": "Assinale a alternativa que está de acordo com a norma-padrão quanto à flexão de palavras como “meio”, “menos” e “bastante”.",
+    "alternativas": [
+      "“A secretária ficou meia preocupada com o prazo.”",
+      "“Havia menas pessoas na fila do que ontem.”",
+      "“Os preços dos equipamentos estão bastantes altos.”",
+      "“As candidatas estavam meio nervosas e falaram alto.”"
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: “meio”, modificando o adjetivo “nervosas”, é advérbio e não varia, e “alto”, modificando o verbo, também é advérbio invariável. A está errada porque “meio” deveria ficar invariável antes de “preocupada”. B está errada porque “menos” é sempre invariável. C está errada porque “bastante”, junto do adjetivo “altos”, é advérbio e não varia.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-classes-q08",
+    "topico": "lp-classes",
+    "enunciado": "Assinale a alternativa em que a forma nominal do verbo está empregada com valor de substantivo.",
+    "alternativas": [
+      "“Precisamos caminhar mais durante a semana.”",
+      "“O caminhar diário melhora a disposição dos servidores.”",
+      "“Caminhando depressa, chegaremos a tempo à reunião.”",
+      "“O trajeto, já percorrido, foi sinalizado pela equipe.”"
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: o infinitivo “caminhar” vem determinado pelo artigo “o” e pelo adjetivo “diário” e funciona como núcleo do sujeito, isto é, como substantivo. A está errada porque “caminhar” é o verbo principal da locução com “precisamos”. C está errada porque o gerúndio “caminhando” tem valor de advérbio de modo. D está errada porque o particípio “percorrido” tem valor de adjetivo, caracterizando “o trajeto”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-classes-q09",
+    "topico": "lp-classes",
+    "enunciado": "Considere as afirmativas sobre preposições. I. Em “Chegou a hora de o servidor assinar o termo”, não se faz a contração “do” porque o artigo pertence ao sujeito do infinitivo. II. Em “Agimos conforme o regulamento”, a palavra “conforme” é preposição acidental. III. Em “A equipe trabalha sob pressão”, a preposição “sob” poderia ser trocada por “sobre” sem alteração de sentido. Está correto o que se afirma em",
+    "alternativas": [
+      "I apenas.",
+      "III apenas.",
+      "II e III apenas.",
+      "I e II apenas."
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta. I é verdadeira: “o servidor” é sujeito de “assinar”, e a norma-padrão recomenda não contrair a preposição com o artigo do sujeito. II é verdadeira: “conforme” é originalmente conjunção, mas diante de substantivo funciona como preposição acidental. III é falsa: “sob” indica posição inferior ou submissão, e “sobre” indica posição superior ou assunto, de modo que o sentido mudaria. Por isso A omite II, e B e C incluem a afirmativa falsa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-classes-q10",
+    "topico": "lp-classes",
+    "enunciado": "Assinale a alternativa em que a palavra “que” é conjunção integrante.",
+    "alternativas": [
+      "“Espero que o sistema volte a funcionar ainda hoje.”",
+      "“O relatório que você enviou está incompleto.”",
+      "“Ele falou tão baixo que ninguém entendeu o recado.”",
+      "“Saia logo, que a chuva vai apertar.”"
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: “que” introduz uma oração que completa o sentido do verbo “espero” (espero isto), papel da conjunção integrante. B está errada porque “que” retoma “o relatório” e pode ser trocado por “o qual”: é pronome relativo. C está errada porque, correlacionado a “tão”, o “que” é conjunção consecutiva. D está errada porque “que” introduz a explicação da ordem anterior: é conjunção explicativa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-formacao-q01",
+    "topico": "lp-formacao",
+    "enunciado": "A palavra “entardecer” é formada por",
+    "alternativas": [
+      "derivação parassintética.",
+      "derivação prefixal.",
+      "derivação sufixal.",
+      "composição por aglutinação."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: o prefixo en- e o sufixo -ecer foram acrescentados ao mesmo tempo ao radical de “tarde”, e não existem “entarde” nem “tardecer”. B e C estão erradas porque a palavra não se forma só com prefixo nem só com sufixo. D está errada porque há apenas um radical, e não a junção de dois.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-formacao-q02",
+    "topico": "lp-formacao",
+    "enunciado": "Assinale a palavra formada por composição por aglutinação.",
+    "alternativas": [
+      "guarda-roupa",
+      "passatempo",
+      "segunda-feira",
+      "planalto"
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: em “planalto”, o elemento “plano” perde a vogal final ao se unir a “alto”. A, B e C são composições por justaposição, pois os elementos mantêm todos os seus sons; a presença ou ausência de hífen não altera essa classificação.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-formacao-q03",
+    "topico": "lp-formacao",
+    "enunciado": "Assinale a alternativa em que a palavra entre parênteses foi formada por derivação regressiva.",
+    "alternativas": [
+      "“O jardineiro podou as árvores da praça.” (jardineiro)",
+      "“A infelicidade dele era visível.” (infelicidade)",
+      "“A procura por vagas aumentou neste mês.” (procura)",
+      "“O amanhecer na serra foi bonito.” (amanhecer)"
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta: “procura” é substantivo de ação formado pela redução do verbo “procurar”, típico da derivação regressiva. A está errada porque “jardineiro” recebe o sufixo -eiro (derivação sufixal). B está errada porque “infelicidade” é prefixal e sufixal (existem infeliz e felicidade). D está errada porque “o amanhecer” é verbo usado como substantivo, caso de derivação imprópria.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-formacao-q04",
+    "topico": "lp-formacao",
+    "enunciado": "Assinale a alternativa em que ocorre derivação imprópria na palavra entre parênteses.",
+    "alternativas": [
+      "“Ela reescreveu o texto da portaria.” (reescreveu)",
+      "“O sim da diretora encerrou a discussão.” (sim)",
+      "“Os candidatos estavam ansiosos.” (ansiosos)",
+      "“Houve um longo debate na câmara.” (debate)"
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: “sim”, originalmente advérbio, passa a substantivo, determinado pelo artigo “o”, sem mudança de forma. A está errada porque “reescreveu” resulta de derivação prefixal (re-). C está errada porque “ansiosos” resulta de derivação sufixal (-oso). D está errada porque “debate” é derivação regressiva de “debater”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-formacao-q05",
+    "topico": "lp-formacao",
+    "enunciado": "Assinale a palavra formada por hibridismo.",
+    "alternativas": [
+      "pontapé",
+      "cafezal",
+      "desleal",
+      "automóvel"
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: “automóvel” une o elemento grego “auto” (por si mesmo) ao latino “móvel”, elementos de línguas diferentes. A é composição por justaposição de dois radicais portugueses. B é derivação sufixal (café + -zal). C é derivação prefixal (des- + leal).",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-formacao-q06",
+    "topico": "lp-formacao",
+    "enunciado": "Assinale a alternativa em que as duas palavras são formadas por derivação parassintética.",
+    "alternativas": [
+      "infelizmente e deslealdade",
+      "anoitecer e emagrecer",
+      "entristecer e desonestidade",
+      "apedrejar e ajuda"
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: em “anoitecer” e “emagrecer”, prefixo e sufixo entram juntos, e não existem formas como “anoite” ou “magrecer”. A está errada porque as duas palavras são prefixais e sufixais (existem infeliz, felizmente, desleal e lealdade). C erra em “desonestidade”, também prefixal e sufixal. D erra em “ajuda”, formada por derivação regressiva de ajudar.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-formacao-q07",
+    "topico": "lp-formacao",
+    "enunciado": "Assinale a alternativa em que o processo de formação está corretamente identificado.",
+    "alternativas": [
+      "moto: abreviação vocabular",
+      "tique-taque: sigla",
+      "IBGE: onomatopeia",
+      "software: derivação sufixal"
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: “moto” é redução de “motocicleta”, sem mudança de sentido. B está errada porque “tique-taque” imita um som, sendo onomatopeia. C está errada porque “IBGE” é sigla, formada pelas iniciais de uma denominação. D está errada porque “software” é empréstimo do inglês, não derivação feita em português.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-formacao-q08",
+    "topico": "lp-formacao",
+    "enunciado": "Considere as afirmativas. I. “Aguardente” é formada por aglutinação, pois “água” perde um fonema ao se unir a “ardente”. II. “Combate”, formado a partir de “combater”, exemplifica derivação regressiva. III. “Girassol” é formada por aglutinação, porque a letra “s” foi duplicada na junção. Está correto o que se afirma em",
+    "alternativas": [
+      "I apenas.",
+      "III apenas.",
+      "I e II apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta. I é verdadeira: a vogal final de “água” desaparece na fusão. II é verdadeira: o substantivo de ação nasce da redução do verbo. III é falsa: em “girassol” não há perda de som; a duplicação do “s” é apenas ajuste ortográfico para manter a pronúncia, e o processo é justaposição. Assim, A omite II, B traz só a falsa e D inclui a falsa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-formacao-q09",
+    "topico": "lp-formacao",
+    "enunciado": "Na forma verbal “cantávamos”, os elementos “-va-” e “-mos” são, respectivamente,",
+    "alternativas": [
+      "desinência modo-temporal e número-pessoal.",
+      "vogal temática e sufixo formador de verbos.",
+      "sufixo derivacional e desinência de gênero.",
+      "radical secundário e vogal temática verbal."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: “-va-” indica o pretérito imperfeito do indicativo (modo e tempo) e “-mos” indica a primeira pessoa do plural (número e pessoa); cant- é o radical e -a- a vogal temática. B está errada porque a vogal temática é “-a-”, e “-mos” é desinência flexional, não sufixo. C está errada porque verbos não têm desinência de gênero, e “-va-” é flexional, não derivacional. D está errada porque o radical é “cant-” e a vogal temática é “-a-”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-variacao-q01",
+    "topico": "lp-variacao",
+    "enunciado": "Em certas regiões do Brasil, a mesma raiz é chamada de mandioca; em outras, de aipim; em outras, de macaxeira. Esse fato exemplifica, principalmente, a variação",
+    "alternativas": [
+      "histórica.",
+      "situacional.",
+      "regional.",
+      "social."
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta: a diferença de vocabulário está ligada ao lugar onde o falante vive (variação diatópica). A está errada porque não se trata de mudança ao longo do tempo. B está errada porque a escolha não depende do grau de formalidade da situação. D está errada porque a diferença não decorre de escolaridade, idade ou grupo social.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-variacao-q02",
+    "topico": "lp-variacao",
+    "enunciado": "A sequência “Vossa Mercê, vosmecê, você, cê” ilustra, principalmente, a variação",
+    "alternativas": [
+      "histórica.",
+      "regional.",
+      "social.",
+      "situacional."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: a sequência mostra a transformação da forma de tratamento ao longo do tempo (variação diacrônica). B está errada porque as formas não se distribuem por regiões. C está errada porque a sequência não opõe grupos sociais. D está errada porque não se trata de adaptação do mesmo falante a situações diferentes, e sim de mudança histórica.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-variacao-q03",
+    "topico": "lp-variacao",
+    "enunciado": "Leia: “No almoço com colegas de equipe, um analista comenta: ‘O sistema deu pau de novo, tá osso.’ Horas depois, em reunião com a diretoria, ele afirma: ‘O sistema apresentou nova falha, e a situação é preocupante.’” A mudança na forma de se expressar do analista exemplifica, principalmente,",
+    "alternativas": [
+      "variação regional.",
+      "variação situacional.",
+      "variação histórica.",
+      "preconceito linguístico."
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: o mesmo falante ajusta o registro, do informal ao formal, conforme o interlocutor e a situação (variação diafásica). A está errada porque não há marca de lugar. C está errada porque as duas falas são da mesma época. D está errada porque ninguém é julgado pela forma como fala.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-variacao-q04",
+    "topico": "lp-variacao",
+    "enunciado": "Em uma conversa da equipe de TI, alguém diz: “O deploy falhou porque o pipeline não passou nos testes; vou fazer o rollback.” Assinale a alternativa correta sobre essa fala.",
+    "alternativas": [
+      "Está errada, pois a norma-padrão proíbe o uso de palavras estrangeiras.",
+      "Exemplifica variação histórica, pois emprega termos que caíram em desuso.",
+      "Deve ser evitada em qualquer contexto, pois empobrece a língua portuguesa.",
+      "Emprega jargão profissional, adequado à comunicação interna da equipe e pouco adequado a um aviso ao cidadão."
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: o vocabulário técnico de um grupo profissional é caso de variação social; é preciso e econômico entre especialistas, mas pouco claro para o público geral. A está errada porque empréstimos são incorporados à língua e não são proibidos. B está errada porque os termos são atuais. C está errada porque ignora o critério de adequação: entre colegas da área, o jargão é apropriado.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-variacao-q05",
+    "topico": "lp-variacao",
+    "enunciado": "Assinale a alternativa correta sobre a norma-padrão.",
+    "alternativas": [
+      "É o conjunto de usos efetivos de todos os falantes do país, em qualquer situação.",
+      "É um modelo codificado em gramáticas e dicionários, que serve de referência para situações formais, como documentos oficiais.",
+      "Coincide integralmente com a fala espontânea das pessoas escolarizadas.",
+      "Torna ilegítimas as demais variedades, que devem ser corrigidas em qualquer situação."
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: a norma-padrão é um modelo prescrito, usado como referência para textos formais e oficiais. A está errada porque descreve a língua em toda a sua variação, e não a norma-padrão. C está errada porque a fala culta real diverge da norma-padrão em vários pontos, como a próclise em início de frase. D está errada porque todas as variedades são legítimas; o que se avalia é a adequação à situação.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-variacao-q06",
+    "topico": "lp-variacao",
+    "enunciado": "Leia: “Ele nem sabe falar direito: diz ‘nós vai’ e ‘os menino’. Não pode ser um bom profissional.” A atitude expressa nesse comentário é um exemplo de",
+    "alternativas": [
+      "preconceito linguístico, pois associa uma variedade de menor prestígio à incapacidade da pessoa.",
+      "avaliação técnica, pois a competência profissional é medida pelo domínio da norma-padrão na fala.",
+      "orientação sobre adequação, pois indica o registro apropriado à situação.",
+      "descrição de variação regional, sem qualquer juízo de valor."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: o comentário desqualifica a pessoa por usar uma variedade popular, o que caracteriza preconceito linguístico. B está errada porque a forma de falar não mede competência profissional. C está errada porque o comentário não trata de situação nem de registro, apenas julga a pessoa. D está errada porque há juízo de valor explícito, e as marcas citadas são sociais, não regionais.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-variacao-q07",
+    "topico": "lp-variacao",
+    "enunciado": "Considere as afirmativas. I. Toda fala é informal, e toda escrita é formal. II. Uma mesma pessoa pode usar registros diferentes conforme o interlocutor e a situação. III. Em um ofício dirigido a outro órgão público, espera-se o uso da norma-padrão. Está correto o que se afirma em",
+    "alternativas": [
+      "I apenas.",
+      "II apenas.",
+      "II e III apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta. I é falsa: há fala formal (palestra, sustentação oral) e escrita informal (bilhete, mensagem entre amigos). II é verdadeira: é a variação situacional. III é verdadeira: a comunicação oficial exige norma-padrão e formalidade. Por isso A traz só a falsa, B omite III e D inclui a falsa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-variacao-q08",
+    "topico": "lp-variacao",
+    "enunciado": "Assinale a alternativa mais adequada para iniciar um e-mail institucional dirigido à chefe de outro setor, com quem o remetente não tem intimidade.",
+    "alternativas": [
+      "“Cara colega, me passa o andamento do processo quando der.”",
+      "“Prezada senhora, solicito, por gentileza, informações sobre o andamento do processo.”",
+      "“Senhora, queremos que você manda logo o andamento do processo.”",
+      "“Oi! Tem como ver aquele processo pra mim?”"
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: tratamento respeitoso, verbo de pedido formal e norma-padrão, adequados à situação institucional. A usa registro informal (“me passa”, “quando der”) para alguém sem intimidade. C tem tom impositivo e desvio da norma-padrão (“que você manda” no lugar de “mande”). D é informal e vago (“aquele processo”, “pra mim”).",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-variacao-q09",
+    "topico": "lp-variacao",
+    "enunciado": "Em um churrasco de família, um primo pergunta ao outro: “Acaso Vossa Senhoria aceitaria uma porção adicional de carne?” Sobre essa fala, é correto afirmar que",
+    "alternativas": [
+      "está gramaticalmente errada, pois Vossa Senhoria exige o verbo na segunda pessoa.",
+      "é adequada, pois a norma-padrão deve ser usada em todas as situações.",
+      "exemplifica variação regional típica de falantes do interior.",
+      "está de acordo com a norma-padrão, mas é inadequada ao contexto informal."
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: a frase respeita a gramática (pronome de tratamento com verbo na terceira pessoa), mas o registro cerimonioso destoa de uma situação familiar; correção e adequação são critérios distintos. A está errada porque pronomes de tratamento levam o verbo à terceira pessoa. B está errada porque a adequação depende da situação, e a norma-padrão não é exigida em conversas informais. C está errada porque a fala não traz marca de região.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-verbos-q01",
+    "topico": "lp-verbos",
+    "enunciado": "Assinale a alternativa em que a forma verbal está de acordo com a norma-padrão.",
+    "alternativas": [
+      "Quando o diretor ver o resultado, ficará satisfeito.",
+      "Se a equipe manter o ritmo, entregará antes do prazo.",
+      "Se o fiscal vir irregularidades, deverá registrá-las.",
+      "Caso o técnico propor nova solução, a chefia a analisará."
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta: “vir” é o futuro do subjuntivo de ver (viram, vir), exigido depois de “se”. A está errada porque o futuro do subjuntivo de ver é “vir”: “quando o diretor vir o resultado”. B está errada porque manter segue ter: “se a equipe mantiver”. D está errada porque “caso” pede presente do subjuntivo, e propor segue pôr: “caso o técnico proponha”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-verbos-q02",
+    "topico": "lp-verbos",
+    "enunciado": "Assinale a alternativa em que há voz passiva sintética.",
+    "alternativas": [
+      "Divulgaram-se ontem os resultados do concurso.",
+      "Precisa-se de analistas com experiência em redes.",
+      "O candidato preparou-se durante meses para a prova.",
+      "Os resultados foram divulgados ontem pela banca."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: divulgar é transitivo direto, o “se” é pronome apassivador e “os resultados do concurso” é o sujeito paciente (“os resultados foram divulgados”). B está errada porque precisar é transitivo indireto, e o “se” indetermina o sujeito. C está errada porque o candidato pratica e sofre a ação: voz reflexiva. D está errada porque traz passiva analítica, formada com ser mais particípio.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-verbos-q03",
+    "topico": "lp-verbos",
+    "enunciado": "Assinale a alternativa que transpõe corretamente para a voz passiva analítica a frase “A comissão havia analisado todos os recursos”, mantendo o tempo verbal.",
+    "alternativas": [
+      "Todos os recursos foram analisados pela comissão.",
+      "Todos os recursos tinham sido analisados pela comissão.",
+      "Todos os recursos eram analisados pela comissão.",
+      "Todos os recursos tinham sido analisado pela comissão."
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: o mais-que-perfeito composto “havia analisado” corresponde, na passiva, a “tinham (haviam) sido analisados”, com o auxiliar no plural e o particípio concordando com “todos os recursos”. A está errada porque usa o pretérito perfeito. C está errada porque usa o pretérito imperfeito. D está errada porque o particípio “analisado” não concorda com o sujeito plural.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-verbos-q04",
+    "topico": "lp-verbos",
+    "enunciado": "Assinale a alternativa em que a correlação entre os tempos e modos verbais está de acordo com a norma-padrão.",
+    "alternativas": [
+      "Se o sistema fosse testado antes, a falha certamente será evitada.",
+      "Caso o técnico vier amanhã, a rede será revisada.",
+      "Quando o relatório ficar pronto, a equipe o enviou.",
+      "Se o sistema tivesse sido testado, a falha teria sido evitada."
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: hipótese irreal no passado combina mais-que-perfeito do subjuntivo (“tivesse sido testado”) com futuro do pretérito composto (“teria sido evitada”). A está errada porque o imperfeito do subjuntivo pede futuro do pretérito (“seria evitada”). B está errada porque “caso” não se usa com futuro do subjuntivo: “caso o técnico venha”. C está errada porque o futuro do subjuntivo (“ficar”) projeta o fato no futuro e não combina com o pretérito perfeito “enviou”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-verbos-q05",
+    "topico": "lp-verbos",
+    "enunciado": "Num cartaz dirigido ao público e redigido com o tratamento “você”, a orientação adequada à norma-padrão é:",
+    "alternativas": [
+      "Mantenha a senha em sigilo e não a compartilhe com ninguém.",
+      "Mantém a senha em sigilo e não a compartilhe com ninguém.",
+      "Mantenha a senha em sigilo e não a compartilha com ninguém.",
+      "Mantenha a senha em sigilo e não a compartilhes com ninguém."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: para “você”, os imperativos afirmativo e negativo vêm do presente do subjuntivo (mantenha, não compartilhe). B está errada porque “mantém” é o imperativo de tu, misturado com “compartilhe”, de você. C está errada porque o imperativo negativo exige subjuntivo, e “compartilha” é indicativo. D está errada porque “não compartilhes” é forma de tu, incoerente com “mantenha”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-verbos-q06",
+    "topico": "lp-verbos",
+    "enunciado": "Considere as afirmativas sobre verbos. I. Pela regra tradicional dos verbos abundantes, usa-se “aceitado” com os auxiliares ter e haver e “aceito” com ser e estar. II. No pretérito perfeito, requerer faz “requis”, assim como querer faz “quis”. III. O futuro do subjuntivo de intervir é “intervier”, como em “se ele intervier na negociação”. Está correto o que se afirma em",
+    "alternativas": [
+      "I e II apenas.",
+      "II e III apenas.",
+      "I e III apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta. I está correta: particípio regular com ter e haver (“tinha aceitado”) e irregular com ser e estar (“foi aceito”). II está incorreta: requerer só é irregular no presente (requeiro); no pretérito perfeito é regular (requeri, requereu). III está correta: intervir segue vir (vieram, vier; intervieram, intervier). Por isso A e B incluem a afirmativa falsa e omitem uma verdadeira, e D inclui a falsa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-verbos-q07",
+    "topico": "lp-verbos",
+    "enunciado": "Assinale a alternativa em que o “se” é índice de indeterminação do sujeito.",
+    "alternativas": [
+      "Instalaram-se novos computadores no laboratório.",
+      "O analista se dedicou ao projeto durante o ano.",
+      "Ninguém sabe se o sistema voltará ainda hoje.",
+      "Trata-se de falhas graves no servidor de arquivos."
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: tratar de é transitivo indireto; o “se” indetermina o sujeito e o verbo fica no singular. A está errada porque instalar é transitivo direto e o “se” é apassivador (“novos computadores foram instalados”). B está errada porque o analista dedica a si mesmo: pronome reflexivo. C está errada porque o “se” é conjunção integrante, que introduz a oração objetiva direta de “sabe”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-verbos-q08",
+    "topico": "lp-verbos",
+    "enunciado": "Assinale a alternativa em que o verbo está flexionado de acordo com a norma-padrão.",
+    "alternativas": [
+      "Eu reavejo amanhã os documentos apreendidos.",
+      "Eu me precavenho sempre contra ataques à rede.",
+      "Nós nos precavemos contra novos ataques à rede.",
+      "Ontem o servidor reaveu os documentos apreendidos."
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta: precaver é defectivo e, no presente do indicativo, só tem as formas arrizotônicas, como “precavemos”. A está errada porque reaver só existe nas formas em que haver tem a letra v; “reavejo” não existe. B está errada porque precaver não deriva de vir nem de ver, e “precavenho” não existe. D está errada porque o pretérito perfeito de reaver segue haver (houve): “reouve”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-verbos-q09",
+    "topico": "lp-verbos",
+    "enunciado": "Assinale a alternativa que completa corretamente as lacunas de “Se a equipe ___ (propor) uma solução e o cliente a ___ (ver) a tempo, o contrato ___ (manter) as condições atuais”.",
+    "alternativas": [
+      "propor, ver, manterá",
+      "propuser, vir, manterá",
+      "propusesse, visse, manterá",
+      "propuser, vier, manteria"
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: o futuro do subjuntivo de propor é “propuser” (de propuseram) e o de ver é “vir” (de viram), e a hipótese possível no futuro se correlaciona com o futuro do presente “manterá”. A está errada porque usa o infinitivo no lugar do futuro do subjuntivo. C está errada porque o imperfeito do subjuntivo pede futuro do pretérito (“manteria”). D está errada porque “vier” é de vir, não de ver, e o futuro do subjuntivo não se combina com o futuro do pretérito.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-verbos-q10",
+    "topico": "lp-verbos",
+    "enunciado": "Na voz ativa, a frase “Os servidores serão convocados pela secretaria” corresponde a:",
+    "alternativas": [
+      "A secretaria convocou os servidores.",
+      "A secretaria convocaria os servidores.",
+      "Convocar-se-ão os servidores pela secretaria.",
+      "A secretaria convocará os servidores."
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: o agente da passiva (“pela secretaria”) vira sujeito, o sujeito paciente vira objeto direto e o futuro do presente do auxiliar (“serão”) passa ao verbo principal (“convocará”). A está errada porque usa o pretérito perfeito. B está errada porque usa o futuro do pretérito. C está errada porque continua na voz passiva, agora sintética, e com agente expresso, construção que a norma-padrão evita.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-discursos-q01",
+    "topico": "lp-discursos",
+    "enunciado": "Leia: “O porteiro olhou o relógio e balançou a cabeça. Mais um atraso. Será que aquele rapaz nunca ia aprender? Abriu o portão sem dizer nada.” A frase “Será que aquele rapaz nunca ia aprender?” é exemplo de discurso",
+    "alternativas": [
+      "indireto livre, pois traz a dúvida do porteiro sem verbo de elocução.",
+      "direto, pois reproduz literalmente uma fala dita em voz alta pelo porteiro.",
+      "indireto, pois o narrador introduz a fala com verbo dicendi.",
+      "direto, pois a pergunta termina com ponto de interrogação."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: o pensamento do porteiro aparece dentro da narração, em terceira pessoa e no pretérito, sem verbo de elocução, travessão ou aspas, mas com a pergunta típica da personagem. B está errada porque não há fala dita em voz alta nem marca gráfica de discurso direto (o porteiro abre o portão “sem dizer nada”). C está errada porque não há verbo de elocução nem oração com “que” ou “se”. D está errada porque o ponto de interrogação, sozinho, não caracteriza o discurso direto.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-discursos-q02",
+    "topico": "lp-discursos",
+    "enunciado": "Assinale a transposição correta para o discurso indireto de “— Eu resolvo esse problema hoje — afirmou o técnico.”",
+    "alternativas": [
+      "O técnico afirmou que eu resolvo esse problema hoje.",
+      "O técnico afirmou que resolveu aquele problema naquele dia.",
+      "O técnico afirmou que resolveria aquele problema naquele dia.",
+      "O técnico afirmou que resolveria esse problema no dia seguinte."
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta: “eu” passa à terceira pessoa, o presente com valor de futuro passa ao futuro do pretérito (“resolveria”), “esse” passa a “aquele” e “hoje” passa a “naquele dia”. A está errada porque mantém a primeira pessoa e os dêiticos da fala. B está errada porque o pretérito perfeito apresenta como já realizado o que era promessa. D está errada porque “hoje” não corresponde a “no dia seguinte” e “esse” deveria virar “aquele”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-discursos-q03",
+    "topico": "lp-discursos",
+    "enunciado": "A coordenadora disse aos estagiários: — Salvem os arquivos antes de desligar as máquinas. Na transposição para o discurso indireto, a forma que completa adequadamente “A coordenadora disse aos estagiários que ___ os arquivos antes de desligar as máquinas” é",
+    "alternativas": [
+      "salvavam",
+      "salvassem",
+      "salvariam",
+      "tinham salvado"
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: com o verbo de elocução no pretérito, o imperativo (“salvem”) passa ao pretérito imperfeito do subjuntivo. A está errada porque o imperfeito do indicativo transforma a ordem em descrição de um hábito. C está errada porque o futuro do pretérito transforma a ordem em previsão. D está errada porque o mais-que-perfeito relata uma ação já concluída, e não uma ordem.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-discursos-q04",
+    "topico": "lp-discursos",
+    "enunciado": "Em “— Eu não tive culpa nenhuma — alegou o motorista.”, a escolha do verbo de elocução “alegou”, no lugar de “disse”,",
+    "alternativas": [
+      "indica que a fala foi pronunciada em voz baixa.",
+      "mostra que o narrador confirma, sem reservas, a inocência do motorista.",
+      "transforma o trecho em discurso indireto livre.",
+      "apresenta a fala como justificativa, sem que o narrador a endosse."
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: “alegar” é apresentar algo como justificativa ou defesa; o verbo atribui a afirmação ao motorista e mantém o narrador distante dela. A está errada porque o modo de falar seria expresso por verbos como sussurrar ou murmurar. B está errada porque “alegou” não confirma a inocência, até sugere reserva. C está errada porque o trecho continua em discurso direto, com travessão e verbo de elocução.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-discursos-q05",
+    "topico": "lp-discursos",
+    "enunciado": "Assinale a alternativa que transpõe para o discurso direto o trecho “O síndico perguntou aos moradores se eles aprovariam a reforma da fachada naquele mês”.",
+    "alternativas": [
+      "— Vocês aprovarão a reforma da fachada neste mês? — perguntou o síndico.",
+      "— Eles aprovariam a reforma da fachada naquele mês? — perguntou o síndico.",
+      "— Vocês aprovaram a reforma da fachada naquele mês? — perguntou o síndico.",
+      "O síndico perguntou: se vocês aprovarão a reforma da fachada neste mês."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: os moradores passam a interlocutores (“vocês”), o futuro do pretérito volta ao futuro do presente, “naquele mês” volta a “neste mês” e a pergunta indireta com “se” vira pergunta direta. B está errada porque mantém a terceira pessoa e o dêitico do narrador. C está errada porque o pretérito perfeito muda o sentido para algo já ocorrido e mantém “naquele”. D está errada porque conserva o “se” da pergunta indireta e não usa travessão nem ponto de interrogação.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-discursos-q06",
+    "topico": "lp-discursos",
+    "enunciado": "Considere as afirmativas. I. No discurso indireto, a fala é incorporada por verbo de elocução seguido de oração subordinada, em geral iniciada por “que” ou “se”. II. No discurso indireto livre, o verbo de elocução é obrigatório, embora o travessão e as aspas sejam dispensados. III. Quando o verbo de elocução está no presente, como em “Ele diz que…”, o tempo verbal da fala não precisa recuar na transposição. Está correto o que se afirma em",
+    "alternativas": [
+      "I e II apenas.",
+      "I e III apenas.",
+      "II e III apenas.",
+      "III apenas."
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta. I está correta: a fala vira oração subordinada substantiva objetiva direta do verbo de elocução. II está incorreta: o discurso indireto livre dispensa justamente o verbo de elocução. III está correta: “— Estou cansado — diz ele” passa a “Ele diz que está cansado”. Por isso A e C incluem a afirmativa falsa, e D omite a afirmativa I, que é verdadeira.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-discursos-q07",
+    "topico": "lp-discursos",
+    "enunciado": "Assinale a alternativa em que o discurso direto está pontuado de acordo com a norma-padrão.",
+    "alternativas": [
+      "— Não posso atender agora, explicou a recepcionista — mas volto em dez minutos.",
+      "A recepcionista explicou: que não podia atender agora, mas voltaria em dez minutos.",
+      "— Não posso atender agora — explicou a recepcionista: — mas volto em dez minutos.",
+      "— Não posso atender agora — explicou a recepcionista —, mas volto em dez minutos."
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: o verbo de elocução intercalado fica entre travessões, e a vírgula exigida antes de “mas” vem depois do segundo travessão. A está errada porque abre o trecho do narrador com vírgula e o fecha com travessão, sem simetria. B está errada porque é discurso indireto e os dois-pontos antes de “que” separam o verbo do seu complemento. C está errada porque os dois-pontos depois do verbo intercalado abririam uma nova fala, e não a continuação da mesma frase.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-discursos-q08",
+    "topico": "lp-discursos",
+    "enunciado": "Assinale a transposição correta para o discurso indireto de “— Ontem eu deixei aqui a minha chave — disse o funcionário.”",
+    "alternativas": [
+      "O funcionário disse que ontem deixou aqui a minha chave.",
+      "O funcionário disse que, no dia seguinte, deixaria ali a sua chave.",
+      "O funcionário disse que, na véspera, deixara ali a sua chave.",
+      "O funcionário disse que, na véspera, deixava aqui a sua chave."
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta: “ontem” passa a “na véspera”, o pretérito perfeito passa ao mais-que-perfeito (“deixara”), “aqui” passa a “ali” e “minha” passa a “sua”. A está errada porque mantém os dêiticos e o possessivo da primeira pessoa. B está errada porque transforma um fato passado em futuro. D está errada porque o imperfeito indica hábito e “aqui” deveria virar “ali”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-discursos-q09",
+    "topico": "lp-discursos",
+    "enunciado": "Assinale a alternativa em que a fala é apresentada em discurso indireto.",
+    "alternativas": [
+      "A gerente avisou: — A reunião será transferida para a tarde.",
+      "A gerente avisou que a reunião seria transferida para a tarde.",
+      "“A reunião fica para a tarde”, avisou a gerente aos analistas.",
+      "A gerente suspirou. A reunião, de novo, para a tarde! Quem aguentaria?"
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: o narrador relata a fala com suas palavras, em oração iniciada por “que” e com o futuro do presente convertido em futuro do pretérito. A está errada porque a fala aparece literalmente, depois de dois-pontos e travessão: discurso direto. C está errada porque a fala vem entre aspas, seguida do verbo de elocução: discurso direto. D está errada porque o pensamento da gerente se mistura à narração, sem verbo de elocução: discurso indireto livre.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-periodo-q01",
+    "topico": "lp-periodo",
+    "enunciado": "Assinale a alternativa em que há oração sem sujeito.",
+    "alternativas": [
+      "Chegaram os novos equipamentos do laboratório.",
+      "Houve várias reclamações sobre o novo sistema.",
+      "Precisa-se de técnicos para o plantão noturno.",
+      "Os técnicos haviam testado a rede antes da entrega."
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: haver no sentido de existir é impessoal, e a oração não tem sujeito; “várias reclamações” é objeto direto. A está errada porque o sujeito, “os novos equipamentos do laboratório”, está posposto. C está errada porque o sujeito é indeterminado, e não inexistente. D está errada porque o sujeito é “os técnicos”, e “haviam” é auxiliar do tempo composto.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-periodo-q02",
+    "topico": "lp-periodo",
+    "enunciado": "Assinale a alternativa em que o termo entre colchetes exerce a função de complemento nominal.",
+    "alternativas": [
+      "A análise [dos dados] levou três dias.",
+      "A opinião [do técnico] foi decisiva.",
+      "O servidor precisa [de apoio] da equipe.",
+      "O analista chegou [com pressa] à reunião."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: “dos dados” completa o substantivo abstrato “análise” e indica o alvo da ação (os dados são analisados). B está errada porque o técnico é quem opina: adjunto adnominal. C está errada porque “de apoio” completa o verbo transitivo indireto “precisa”: objeto indireto. D está errada porque “com pressa” indica o modo da ação: adjunto adverbial.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-periodo-q03",
+    "topico": "lp-periodo",
+    "enunciado": "Considere as frases. I. “Os candidatos que entregaram os documentos foram convocados.” II. “Os candidatos, que entregaram os documentos, foram convocados.” Assinale a alternativa correta.",
+    "alternativas": [
+      "Em I e em II, todos os candidatos entregaram os documentos exigidos.",
+      "Em I, a oração adjetiva é explicativa; em II, é restritiva.",
+      "Em II, as vírgulas são opcionais e não alteram o sentido.",
+      "Em I, só parte dos candidatos foi convocada; em II, todos foram."
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: em I, a adjetiva restritiva delimita o grupo (só os que entregaram foram convocados); em II, a explicativa se refere a todos os candidatos. A está errada porque, em I, pode haver candidatos que não entregaram. B está errada porque inverte a classificação: sem vírgulas, restritiva; entre vírgulas, explicativa. C está errada porque as vírgulas mudam a classificação e o sentido.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-periodo-q04",
+    "topico": "lp-periodo",
+    "enunciado": "No período “Embora o servidor tivesse experiência, não foi aprovado na seleção interna”, a oração iniciada por “embora” expressa",
+    "alternativas": [
+      "causa.",
+      "condição.",
+      "concessão.",
+      "finalidade."
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta: a oração apresenta um fato (ter experiência) que se esperaria levar à aprovação, mas não impede o resultado contrário; “embora” é conjunção concessiva. A está errada porque a experiência não é o motivo da reprovação. B está errada porque não há hipótese a ser cumprida, como com “se” ou “caso”. D está errada porque não há objetivo, como com “para que”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-periodo-q05",
+    "topico": "lp-periodo",
+    "enunciado": "Assinale a reescrita que mantém o sentido e a correção de “O sistema foi atualizado, mas continua lento”.",
+    "alternativas": [
+      "Como o sistema foi atualizado, continua lento.",
+      "Embora o sistema tenha sido atualizado, continua lento.",
+      "O sistema foi atualizado, portanto continua lento.",
+      "Desde que o sistema seja atualizado, ele continuará lento."
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: a adversativa (“mas”) é convertida em concessiva (“embora”), com o verbo no subjuntivo, e a ideia de contraste se mantém. A está errada porque “como” anteposto é causal e faz da atualização o motivo da lentidão. C está errada porque “portanto” apresenta a lentidão como conclusão da atualização. D está errada porque “desde que” com subjuntivo é condicional e o fato passa a ser hipótese.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-periodo-q06",
+    "topico": "lp-periodo",
+    "enunciado": "Assinale a alternativa em que “pois” introduz oração coordenada conclusiva.",
+    "alternativas": [
+      "Feche a janela da sala, pois vai chover forte à tarde.",
+      "Ele faltou ao plantão, pois estava doente.",
+      "Não insista, pois a decisão já foi tomada.",
+      "O prazo terminou; os pedidos serão, pois, arquivados."
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: deslocado para depois do verbo e entre vírgulas, “pois” equivale a “portanto” e introduz conclusão. A está errada porque “pois”, antes do verbo e depois de uma ordem, é explicativo. B está errada porque “pois” introduz a justificativa da falta, com valor explicativo ou causal. C está errada porque, depois de um pedido, “pois” explica a razão de não insistir.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-periodo-q07",
+    "topico": "lp-periodo",
+    "enunciado": "Na frase “É fundamental que os servidores atualizem suas senhas”, a oração “que os servidores atualizem suas senhas” classifica-se como subordinada substantiva",
+    "alternativas": [
+      "subjetiva.",
+      "objetiva direta.",
+      "predicativa.",
+      "completiva nominal."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: a oração é o sujeito de “é fundamental” (isso é fundamental). B está errada porque não há verbo transitivo direto na principal cujo complemento seja a oração. C está errada porque o predicativo é “fundamental”, e a oração é o sujeito. D está errada porque a oração não completa um nome por meio de preposição, como em “certeza de que”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-periodo-q08",
+    "topico": "lp-periodo",
+    "enunciado": "Assinale a alternativa em que “como” introduz oração com valor de causa.",
+    "alternativas": [
+      "O relatório foi feito como o manual determina.",
+      "Ela revisa os códigos como uma especialista.",
+      "Como o servidor caiu, os chamados foram suspensos.",
+      "Ninguém sabe como o erro aconteceu na madrugada."
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta: “como”, no início do período, equivale a “porque” ou “já que”: a queda do servidor causou a suspensão. A está errada porque “como” equivale a “conforme”: valor conformativo. B está errada porque compara a revisão à de uma especialista: valor comparativo. D está errada porque “como” é advérbio interrogativo numa pergunta indireta, oração objetiva direta de “sabe”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-periodo-q09",
+    "topico": "lp-periodo",
+    "enunciado": "Na frase “Terminada a auditoria, a equipe apresentou o relatório”, a oração reduzida pode ser desenvolvida, sem alteração de sentido, como",
+    "alternativas": [
+      "Embora a auditoria tivesse terminado,",
+      "Para que a auditoria terminasse,",
+      "Caso a auditoria termine,",
+      "Depois que a auditoria terminou,"
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: a reduzida de particípio indica tempo, um fato concluído antes da apresentação do relatório. A está errada porque “embora” cria uma oposição inexistente no original. B está errada porque “para que” indica finalidade. C está errada porque “caso” transforma em hipótese futura um fato já ocorrido.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-periodo-q10",
+    "topico": "lp-periodo",
+    "enunciado": "Considere o período “Os técnicos consideraram o novo servidor rápido, mas a diretoria pediu novos testes”. I. “rápido” é predicativo do objeto. II. O predicado da primeira oração é verbal, porque “considerar” é transitivo direto. III. A segunda oração é coordenada sindética adversativa. Está correto o que se afirma em",
+    "alternativas": [
+      "I apenas.",
+      "I e III apenas.",
+      "II e III apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta. I está correta: “rápido” é a característica atribuída ao objeto “o novo servidor” por meio do verbo. II está incorreta: há verbo significativo e predicativo do objeto, logo o predicado é verbo-nominal. III está correta: “mas” liga orações independentes com valor de oposição. Por isso A omite III, e C e D incluem a afirmativa falsa.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-concordancia-q01",
+    "topico": "lp-concordancia",
+    "enunciado": "Assinale a alternativa em que a concordância verbal está de acordo com a norma-padrão.",
+    "alternativas": [
+      "Haviam muitas pendências no sistema antigo.",
+      "Fazem três meses que o contrato venceu.",
+      "Houve problemas na migração dos dados.",
+      "Devem haver soluções mais baratas no mercado."
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta: haver no sentido de existir ou ocorrer é impessoal e fica na terceira pessoa do singular. A está errada pelo mesmo motivo: “Havia muitas pendências”. B está errada porque fazer indicando tempo é impessoal: “Faz três meses”. D está errada porque a impessoalidade de haver passa ao auxiliar: “Deve haver soluções”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-concordancia-q02",
+    "topico": "lp-concordancia",
+    "enunciado": "Assinale a alternativa em que a concordância verbal está de acordo com a norma-padrão.",
+    "alternativas": [
+      "Consertam-se notebooks e impressoras.",
+      "Aluga-se salas comerciais no centro.",
+      "Precisam-se de analistas de suporte.",
+      "Vende-se computadores usados na loja."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta: consertar é transitivo direto, o “se” é apassivador e o verbo concorda com o sujeito “notebooks e impressoras” (“são consertados”). B está errada porque “salas comerciais” é o sujeito: “Alugam-se salas”. C está errada porque precisar é transitivo indireto; com índice de indeterminação, o verbo fica no singular: “Precisa-se de analistas”. D está errada porque o sujeito é “computadores usados”: “Vendem-se computadores”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-concordancia-q03",
+    "topico": "lp-concordancia",
+    "enunciado": "Assinale a alternativa em que a concordância nominal está de acordo com a norma-padrão.",
+    "alternativas": [
+      "Seguem anexo as planilhas solicitadas pela chefia.",
+      "Havia bastante candidatos no auditório principal.",
+      "A servidora agradeceu: “Muito obrigado pela ajuda”.",
+      "A analista ficou meio preocupada com os prazos."
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta: “meio” é advérbio (um pouco) junto do adjetivo e não varia. A está errada porque “anexo” é adjetivo e concorda com “planilhas”: “Seguem anexas”. B está errada porque “bastante”, junto de substantivo, é pronome e varia: “bastantes candidatos”. C está errada porque “obrigado” concorda com quem agradece: a servidora diz “obrigada”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-concordancia-q04",
+    "topico": "lp-concordancia",
+    "enunciado": "Considere as frases. I. “A maioria dos servidores aprovou a mudança.” II. “Ele é um dos que mais colaboram com a equipe.” III. “Mais de um técnico participaram do treinamento.” Estão de acordo com a norma-padrão",
+    "alternativas": [
+      "I e II apenas.",
+      "I e III apenas.",
+      "II e III apenas.",
+      "I, II e III."
+    ],
+    "gabarito": 0,
+    "comentario": "A está correta. I está correta: expressão partitiva seguida de plural admite o verbo no singular (concordando com “maioria”) ou no plural. II está correta: em “um dos que”, o plural é a concordância preferida. III está incorreta: “mais de um” leva o verbo ao singular, “participou”. Por isso B, C e D incluem a frase III.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-concordancia-q05",
+    "topico": "lp-concordancia",
+    "enunciado": "Assinale a alternativa em que a concordância está de acordo com a norma-padrão.",
+    "alternativas": [
+      "É proibido a entrada de pessoas não autorizadas.",
+      "É proibida a entrada de pessoas não autorizadas.",
+      "Os documentos seguem anexo ao processo.",
+      "As candidatas estavam meias nervosas."
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: com o artigo antes de “entrada”, a expressão concorda com o substantivo feminino: “É proibida a entrada”. A está errada porque só ficaria invariável sem determinante (“É proibido entrada”). C está errada porque “anexo” é adjetivo e concorda com “documentos”: “seguem anexos”. D está errada porque “meio”, com sentido de “um pouco”, é advérbio e não varia: “meio nervosas”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-concordancia-q06",
+    "topico": "lp-concordancia",
+    "enunciado": "Assinale a alternativa em que a concordância do verbo “ser” está de acordo com a norma-padrão.",
+    "alternativas": [
+      "Daqui até a sede é dois quilômetros.",
+      "Já é quase onze horas da noite.",
+      "O que mais preocupa a equipe são os prazos.",
+      "Cinco dias são pouco para concluir o projeto."
+    ],
+    "gabarito": 2,
+    "comentario": "C está correta: com sujeito “o que” e predicativo no plural, o verbo ser concorda preferencialmente com o predicativo. A está errada porque, em distâncias, ser concorda com o numeral: “são dois quilômetros”. B está errada porque, em horas, também concorda com o numeral: “já são quase onze horas”. D está errada porque, com a expressão de quantidade “é pouco”, o verbo fica no singular: “Cinco dias é pouco”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-concordancia-q07",
+    "topico": "lp-concordancia",
+    "enunciado": "Considere as frases. I. “Os Estados Unidos anunciaram novas tarifas.” II. “Fui eu que resolveu o problema da rede.” III. “Faltou à reunião o diretor e a secretária.” Estão de acordo com a norma-padrão",
+    "alternativas": [
+      "I apenas.",
+      "II apenas.",
+      "I e II apenas.",
+      "I e III apenas."
+    ],
+    "gabarito": 3,
+    "comentario": "D está correta. I está correta: nome próprio plural precedido de artigo plural leva o verbo ao plural. II está incorreta: com o relativo “que”, o verbo concorda com o antecedente “eu”: “Fui eu que resolvi”. III está correta: com sujeito composto posposto, o verbo pode concordar com o núcleo mais próximo. Por isso A omite III, e B e C incluem a frase II.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-concordancia-q08",
+    "topico": "lp-concordancia",
+    "enunciado": "Assinale a alternativa em que o verbo entre parênteses deve ficar no singular para atender à norma-padrão.",
+    "alternativas": [
+      "___ (existir) várias formas de resolver o problema.",
+      "___ (fazer) dois anos que o sistema foi implantado.",
+      "___ (ocorrer) falhas graves durante os testes.",
+      "___ (bastar) duas assinaturas para validar o pedido."
+    ],
+    "gabarito": 1,
+    "comentario": "B está correta: fazer indicando tempo decorrido é impessoal: “Faz dois anos”. A está errada porque existir é pessoal e concorda com o sujeito: “Existem várias formas”. C está errada porque ocorrer concorda com o sujeito posposto: “Ocorreram falhas graves”. D está errada porque bastar concorda com “duas assinaturas”: “Bastam”.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-concordancia-q09",
+    "topico": "lp-concordancia",
+    "enunciado": "Assinale a alternativa em que a concordância nominal está incorreta.",
+    "alternativas": [
+      "As instruções foram as mais claras possível.",
+      "Elas preferiram ficar sós na sala de reunião.",
+      "Estudou a história e a cultura mineira.",
+      "“Nós mesmas organizamos o evento”, disseram elas."
+    ],
+    "gabarito": 0,
+    "comentario": "A é a incorreta: com o artigo no plural (“as mais claras”), “possível” também vai ao plural: “as mais claras possíveis” (ou “o mais claras possível”). B está correta porque “sós” significa “sozinhas” e varia. C está correta porque o adjetivo posposto pode concordar com o substantivo mais próximo. D está correta porque “mesmo” é adjetivo e concorda com “nós”, que se refere a mulheres.",
+    "origem": "autoral"
+  },
+  {
+    "id": "lp-concordancia-q10",
+    "topico": "lp-concordancia",
+    "enunciado": "Assinale a alternativa em que a concordância verbal está incorreta.",
+    "alternativas": [
+      "Grande parte dos usuários reclamaram da lentidão da rede.",
+      "Vinte por cento dos alunos faltaram à prova.",
+      "Precisa-se de técnicos em redes de computadores.",
+      "Deve existir muitas alternativas de software livre."
+    ],
+    "gabarito": 3,
+    "comentario": "D é a incorreta: existir é pessoal, e o auxiliar concorda com o sujeito “muitas alternativas”: “Devem existir”. A está correta porque a expressão partitiva seguida de plural admite o verbo no plural. B está correta porque, com porcentagem, o verbo pode concordar com o termo que segue o numeral. C está correta porque o “se” é índice de indeterminação junto a verbo transitivo indireto, e o verbo fica no singular.",
+    "origem": "autoral"
+  }
+]

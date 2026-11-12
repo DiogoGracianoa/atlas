@@ -1,0 +1,466 @@
+{
+  "lp-interpretacao": {
+    "objetivos": [
+      "Ao final, você consegue identificar a ideia central de um texto e separá-la das informações secundárias e dos exemplos.",
+      "Ao final, você consegue distinguir o que o texto afirma, o que ele permite inferir e o que seria extrapolação.",
+      "Ao final, você consegue reconhecer pressupostos e subentendidos e as palavras que os marcam.",
+      "Ao final, você consegue apontar a intenção do autor e o efeito de sentido de escolhas como adjetivos, aspas e ironia."
+    ],
+    "explicacao": [
+      "Compreender é recuperar o que o texto diz de forma explícita; interpretar é relacionar essas informações e chegar a conclusões que o próprio texto autoriza. Em prova objetiva, a alternativa correta sempre se apoia no texto: o seu conhecimento de mundo só ajuda quando confirma o que está escrito, nunca quando acrescenta algo que o autor não disse.",
+      "A ideia central (tema ou tese) é a afirmação que organiza todas as outras partes do texto. Procure-a no título, no primeiro e no último parágrafo, nas palavras-chave que se repetem e nas frases introduzidas por conectivos conclusivos (portanto, assim, por isso). Exemplos, dados e casos particulares servem para sustentá-la; por isso, uma alternativa que só repete um detalhe é secundária, e uma alternativa que amplia o assunto para além do que o texto trata é genérica demais.",
+      "Os erros que as bancas plantam nas alternativas são quase sempre de três tipos. Extrapolação: vai além do texto, acrescentando causa, consequência, culpado ou generalização que o autor não apresentou. Redução: toma uma parte pelo todo, como se um exemplo fosse a ideia central. Contradição: afirma o contrário do que o texto diz, muitas vezes trocando um conectivo ou uma negação. Desconfie de palavras absolutas, como sempre, nunca, todos, apenas e exclusivamente, porque os textos costumam ser mais matizados.",
+      "Pressuposto é a informação implícita marcada na própria frase por uma palavra ou construção; ela continua valendo mesmo que a frase seja negada ou transformada em pergunta. Em “O setor voltou a atender aos sábados”, pressupõe-se que já atendeu e deixou de atender; em “O setor não voltou a atender aos sábados”, o pressuposto permanece. São marcadores frequentes os verbos de mudança ou permanência de estado (parar de, deixar de, começar a, voltar a, continuar, passar a), advérbios como ainda, já, também, até e novamente, e expressões como “agora” e “de novo”.",
+      "Subentendido é a insinuação que depende do contexto e da intenção de quem fala, e não de uma palavra específica; por isso, o falante pode negar que quis dizê-la. Quem diz “Já são onze horas” para uma visita pode estar sugerindo que é hora de ir embora. Inferência, por sua vez, é a conclusão que o leitor tira ao combinar dados do texto: se o ônibus parte às 7h e o passageiro chegou ao ponto às 7h10, sem notícia de atraso, infere-se que ele o perdeu. A inferência válida decorre necessariamente das informações; a provável, mas não garantida, é extrapolação.",
+      "A intenção do autor é a finalidade comunicativa do texto: informar, explicar, convencer, criticar, orientar, alertar ou divertir. As pistas estão nas escolhas linguísticas: adjetivos e advérbios avaliativos (lamentável, felizmente), modalizadores que mostram grau de certeza ou de obrigação (talvez, certamente, é preciso, convém), perguntas retóricas, uso da primeira pessoa e aspas que marcam distanciamento. A ironia consiste em dizer o oposto do que se pensa; ela se reconhece pelo choque entre o elogio aparente e os fatos relatados.",
+      "Muitas questões pedem o sentido de uma palavra ou expressão no contexto ou propõem substituí-la sem alterar o sentido. O significado que vale é o que a palavra assume naquela frase, e não o primeiro do dicionário: “leve” pode ser peso pequeno, falta de gravidade ou baixo consumo de recursos. Também é comum pedir a distinção entre fato (o que pode ser verificado) e opinião (juízo de valor do autor), marcada por avaliações como “a melhor decisão” ou “sem dúvida”.",
+      "Estratégia de prova: leia primeiro o comando da questão, depois o texto inteiro, e só então volte ao trecho citado. Para cada alternativa, pergunte se o texto garante aquela afirmação; se não garante, descarte. Cuidado com alternativas que reaproveitam palavras do texto, mas mudam a relação entre elas (o que era causa vira consequência, o que era possibilidade vira certeza), e com as que trazem informação verdadeira no mundo, porém ausente do texto."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Texto: “A prefeitura voltou a oferecer oficinas gratuitas de informática na biblioteca do bairro.” Que informação está pressuposta e o que não se pode concluir?",
+        "resolucao": "A expressão “voltou a” pressupõe que as oficinas já tinham sido oferecidas e foram interrompidas. Não se pode concluir por que foram interrompidas nem quem as frequentava: isso seria extrapolação, porque o texto não diz."
+      },
+      {
+        "enunciado": "Texto: “Digitalizar processos não basta. Um sistema novo, se ninguém souber usá-lo, apenas transfere a fila do balcão para a tela. Antes de comprar tecnologia, é preciso treinar quem vai operá-la.” Qual é a ideia central?",
+        "resolucao": "A ideia central é que a modernização tecnológica só dá resultado se vier acompanhada de capacitação das pessoas. A imagem da fila que passa do balcão para a tela é um argumento que ilustra essa tese, e não a tese em si; “é preciso treinar” é o modalizador que revela a posição do autor."
+      },
+      {
+        "enunciado": "Texto: “Que eficiência admirável: o protocolo pedido em março foi respondido em novembro.” Qual é a intenção do autor?",
+        "resolucao": "Criticar a demora no atendimento. O elogio (“eficiência admirável”) é desmentido pelo fato relatado (oito meses de espera), o que caracteriza ironia: diz-se o contrário do que se pensa."
+      }
+    ],
+    "conceitos": [
+      { "t": "Ideia central", "d": "Afirmação principal que organiza o texto; os demais trechos a sustentam ou desenvolvem." },
+      { "t": "Inferência", "d": "Conclusão que decorre necessariamente da combinação de informações do texto." },
+      { "t": "Pressuposto", "d": "Informação implícita marcada por palavra ou construção, que se mantém mesmo com a frase negada." },
+      { "t": "Subentendido", "d": "Insinuação que depende do contexto e da intenção do falante, que pode negá-la." },
+      { "t": "Extrapolação", "d": "Erro de leitura que atribui ao texto algo que ele não afirma nem permite concluir." },
+      { "t": "Intenção comunicativa", "d": "Finalidade do texto: informar, convencer, criticar, orientar, entre outras." },
+      { "t": "Ironia", "d": "Recurso de dizer o oposto do que se pensa, percebido pelo contraste com o contexto." },
+      { "t": "Modalizador", "d": "Palavra ou expressão que indica o grau de certeza, dúvida ou obrigação do autor (talvez, certamente, é preciso)." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Explicar, sem consulta, a diferença entre pressuposto e subentendido com um exemplo próprio de cada.",
+      "Classificar uma alternativa errada como extrapolação, redução ou contradição e justificar a classificação."
+    ]
+  },
+  "lp-generos": {
+    "objetivos": [
+      "Ao final, você consegue diferenciar tipo textual (modo de organização) de gênero textual (prática social).",
+      "Ao final, você consegue reconhecer narração, descrição, dissertação argumentativa, exposição e injunção pelas marcas linguísticas.",
+      "Ao final, você consegue identificar a finalidade e a estrutura de gêneros do cotidiano e da administração pública, como notícia, editorial, ofício, requerimento, ata, edital e parecer."
+    ],
+    "explicacao": [
+      "Tipo textual é o modo de organizar a linguagem dentro de um texto, reconhecido por traços linguísticos (tempos verbais, conectivos, pessoa do discurso). Os tipos são poucos: narração, descrição, dissertação argumentativa, exposição e injunção. Gênero textual é a forma relativamente estável que os textos assumem em uma situação social, com finalidade, público e suporte próprios: notícia, receita, bula, e-mail, ofício, ata, edital. Os gêneros são numerosos e surgem conforme as práticas sociais mudam. Pegadinha clássica: a questão pergunta o gênero e uma alternativa traz um tipo, ou vice-versa.",
+      "Narração relata fatos em sequência temporal, com personagens, tempo, espaço e narrador. Predominam verbos de ação no pretérito perfeito (chegou, saiu, telefonou) e marcadores de tempo (quando, depois, meia hora depois). Atenção: a narrativa também pode vir no presente, o chamado presente histórico, usado para dar vivacidade aos fatos. Descrição caracteriza seres, objetos ou lugares como em um retrato: não há progressão de tempo, predominam verbos de estado ou de ligação (era, tinha, havia), no presente ou no pretérito imperfeito, e muitos adjetivos e locuções adjetivas.",
+      "Dissertação argumentativa defende uma tese e procura convencer o leitor: apresenta opinião sustentada por argumentos (dados, exemplos, relações de causa e consequência, autoridade), usa conectivos lógicos (pois, portanto, no entanto) e modalizadores (é necessário, deveria). Exposição, também chamada de dissertação expositiva, apresenta e explica informações sem defender ponto de vista: define, classifica, compara, descreve processos, geralmente no presente e na terceira pessoa. A nomenclatura varia entre autores; o que importa é perceber se o texto apenas explica ou se quer convencer.",
+      "Injunção orienta o leitor a fazer algo: instrui, recomenda ou ordena. Suas marcas são verbos no imperativo (acesse, clique), no infinitivo com valor de instrução (desligar o aparelho, aguardar a luz verde) ou no presente com valor de ordem, além da organização em passos. Pegadinha frequente: a ausência de imperativo não descaracteriza a injunção; manuais e receitas escritos no infinitivo continuam sendo injuntivos.",
+      "Um mesmo gênero quase sempre combina vários tipos, e a classificação se faz pelo tipo predominante. A notícia combina narração dos fatos e exposição de dados; a crônica mistura narração e reflexão; a receita traz a lista de ingredientes e o modo de preparo, este injuntivo. Por isso, a questão costuma perguntar qual tipo predomina, e não qual tipo aparece.",
+      "Gêneros do cotidiano mais cobrados: notícia (relata fato recente de interesse público, em terceira pessoa, com o primeiro parágrafo, o lide, respondendo o quê, quem, quando, onde, como e por quê); reportagem (aprofunda um tema com entrevistas e dados); artigo de opinião (texto argumentativo assinado, que expressa a posição do autor); editorial (texto argumentativo que expressa a opinião do próprio veículo e, em geral, não é assinado); crônica (texto curto, de linguagem leve, a partir de fatos do dia a dia); carta do leitor; manual de instruções; bula; anúncio publicitário, que procura persuadir o consumidor.",
+      "Na administração pública, os gêneros têm finalidade e destinatário definidos. Ofício: comunicação oficial expedida por uma autoridade a outra autoridade ou a particulares. Requerimento: pedido formal que o interessado, inclusive o cidadão, dirige a uma autoridade para obter um direito ou uma providência; traz o destinatário, a qualificação do requerente, a exposição do pedido e fórmulas tradicionais de fecho, como “Nestes termos, pede deferimento”. Circular: comunicação de mesmo teor dirigida a vários destinatários. Edital: ato que torna públicos avisos, convocações ou regras, como as de um concurso ou licitação.",
+      "Ata: registro resumido e fiel do que ocorreu em uma reunião, com data, local, presentes, assuntos e deliberações; tradicionalmente é lavrada em texto contínuo, sem parágrafos nem espaços em branco, para impedir acréscimos, e eventuais erros são corrigidos com “digo” ou, ao final, com “em tempo”. Parecer: manifestação técnica ou jurídica fundamentada sobre uma questão submetida a análise, que termina com uma conclusão ou recomendação. Relatório: exposição organizada de fatos ou atividades, com análise e, se for o caso, recomendações. Na redação oficial federal, o Manual de Redação da Presidência da República orienta o fecho “Respeitosamente” para autoridades de hierarquia superior e “Atenciosamente” para as de mesma hierarquia ou inferior.",
+      "Em todos os gêneros oficiais valem clareza, concisão, impessoalidade e norma-padrão. Na prova, identifique o gênero pela finalidade (quem escreve, para quem e para quê), e não só pela aparência: um texto que pede algo a uma autoridade é requerimento, ainda que use linguagem de carta; um texto que registra o que aconteceu em uma reunião é ata, ainda que se pareça com um relatório."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Texto: “Retire o equipamento da caixa, conecte o cabo de energia e aguarde a luz verde acender antes de ligar o computador.” Qual o tipo predominante e um gênero compatível?",
+        "resolucao": "Tipo injuntivo: verbos no imperativo (retire, conecte, aguarde) e sequência de passos para orientar o leitor. Gênero compatível: manual de instruções ou guia de instalação."
+      },
+      {
+        "enunciado": "Um cidadão quer pedir à Secretaria de Obras a poda de uma árvore em frente à sua casa. Qual gênero usar e por quê?",
+        "resolucao": "Requerimento, porque é o pedido formal de um interessado a uma autoridade. Deve conter o destinatário, a qualificação do requerente, a exposição do pedido com sua justificativa, o fecho, o local, a data e a assinatura. Ofício não serve, pois é comunicação expedida por autoridade, e ata registra reuniões."
+      },
+      {
+        "enunciado": "Texto: “A sala era estreita, as paredes tinham manchas de umidade e uma única janela dava para o pátio.” Narração ou descrição?",
+        "resolucao": "Descrição: os verbos indicam estado (era, tinham, dava para, no sentido de estar voltada), estão no pretérito imperfeito e não há sucessão de acontecimentos; o trecho apresenta a sala como um retrato."
+      }
+    ],
+    "conceitos": [
+      { "t": "Tipo textual", "d": "Modo de organização do texto definido por traços linguísticos: narração, descrição, argumentação, exposição, injunção." },
+      { "t": "Gênero textual", "d": "Forma relativamente estável de texto ligada a uma prática social, como notícia, ofício ou receita." },
+      { "t": "Injunção", "d": "Tipo que orienta o leitor a agir, com verbos no imperativo, no infinitivo ou no presente com valor de instrução." },
+      { "t": "Dissertação argumentativa", "d": "Tipo que defende uma tese com argumentos para convencer o leitor." },
+      { "t": "Exposição", "d": "Tipo que apresenta e explica informações sem defender ponto de vista." },
+      { "t": "Ofício", "d": "Comunicação oficial expedida por autoridade a outra autoridade ou a particulares." },
+      { "t": "Requerimento", "d": "Pedido formal de um interessado a uma autoridade para obter direito ou providência." },
+      { "t": "Ata", "d": "Registro resumido e fiel das presenças, discussões e deliberações de uma reunião." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Classificar, sem consulta, cinco trechos curtos pelo tipo predominante, apontando a marca linguística que justifica cada escolha.",
+      "Dizer a finalidade de ofício, requerimento, circular, ata, edital e parecer em uma frase cada."
+    ]
+  },
+  "lp-coesao": {
+    "objetivos": [
+      "Ao final, você consegue distinguir coesão (ligação linguística entre as partes) de coerência (unidade de sentido).",
+      "Ao final, você consegue identificar o referente de pronomes, sinônimos, hiperônimos e elipses.",
+      "Ao final, você consegue reconhecer a relação lógica de um conectivo e trocá-lo por outro equivalente, com os ajustes necessários.",
+      "Ao final, você consegue avaliar se um texto progride sem repetição vazia, contradição ou salto de tema."
+    ],
+    "explicacao": [
+      "Coesão é o conjunto de mecanismos linguísticos que ligam as partes do texto: pronomes, sinônimos, elipses, conectivos, tempos verbais. Coerência é a unidade de sentido: as ideias não se contradizem, mantêm o tema, acrescentam informação e fazem sentido na situação comunicativa. As duas costumam andar juntas, mas não se confundem: um texto pode ter frases bem ligadas e ser incoerente, e um texto com poucos conectivos explícitos pode ser perfeitamente coerente.",
+      "A coesão referencial retoma ou antecipa elementos. Anáfora é a retomada de algo já mencionado; catáfora é a antecipação de algo que ainda vai aparecer, como em “O pedido foi este: revisar todos os contratos”. Os principais recursos são os pronomes (ele, o, lhe, isso, que, o qual), a substituição por sinônimo, o hiperônimo (palavra de sentido mais geral: computador, depois equipamento), o hipônimo (sentido mais específico), as expressões nominais que acrescentam informação ou avaliação (o prefeito, depois o chefe do Executivo municipal) e a elipse, que omite um termo facilmente recuperável: “Os agentes visitaram as casas e, à tarde, organizaram os dados”.",
+      "Os demonstrativos têm valor coesivo próprio. Em regra, “este” anuncia o que vai ser dito (catáfora) e “esse” retoma o que já foi dito (anáfora). Quando se retomam dois elementos já mencionados, “este” aponta o mais próximo e “aquele” o mais distante: “Ana e Rui foram promovidos; este para a gerência, aquela para a diretoria”. Cuidado com a ambiguidade referencial, outra pegadinha frequente: em “O diretor conversou com o assessor sobre seu relatório”, não se sabe de quem é o relatório.",
+      "A coesão sequencial é feita por conectivos, que explicitam a relação lógica entre as partes. Adição: e, nem, além disso, não só… mas também. Oposição ou adversidade: mas, porém, contudo, todavia, entretanto, no entanto. Concessão: embora, ainda que, mesmo que, apesar de, conquanto, posto que. Causa: porque, já que, visto que, uma vez que, como (no início do período). Consequência: tão… que, de modo que, de sorte que. Conclusão: logo, portanto, por isso, assim, pois (depois do verbo). Explicação: pois (antes do verbo), porque, que. Condição: se, caso, contanto que, desde que (com subjuntivo). Finalidade: para que, a fim de que. Tempo: quando, enquanto, assim que, desde que (com indicativo). Proporção: à medida que, à proporção que. Conformidade: conforme, segundo, consoante.",
+      "Pegadinhas de conectivos: “desde que” é temporal com indicativo (“Desde que cheguei, tudo mudou”) e condicional com subjuntivo (“Desde que haja verba, o curso será oferecido”); “posto que”, na norma-padrão, é concessivo, e não causal; “à medida que” indica proporção, enquanto “na medida em que” indica causa; “como” pode ser causal, comparativo ou conformativo; “pois” é explicativo antes do verbo e conclusivo quando vem deslocado depois dele (“É, pois, necessário revisar o edital”).",
+      "Substituir um conectivo exige manter a mesma relação lógica e fazer os ajustes de estrutura. Trocar “porém” por “embora” mantém a ideia de contraste, mas obriga a mudar o verbo para o subjuntivo e a reorganizar o período: “O orçamento foi aprovado, porém o cronograma será revisto” passa a “Embora o orçamento tenha sido aprovado, o cronograma será revisto”. Na troca por “apesar de”, usa-se o infinitivo, e a norma-padrão recomenda não contrair a preposição com o artigo do sujeito: “apesar de o prazo ser curto”.",
+      "A coerência se apoia em quatro princípios: continuidade (o tema é retomado ao longo do texto), progressão (cada trecho acrescenta informação nova ao que já foi dito), não contradição (nenhuma afirmação anula outra, nem os tempos verbais e os fatos se chocam) e relação (as ideias são pertinentes entre si e à situação). Progressão textual é justamente o equilíbrio entre o dado e o novo: o texto que apenas reformula a mesma frase fica circular, e o que salta de assunto sem ligação perde a continuidade.",
+      "Nas provas, a incoerência quase sempre aparece em três formas: conectivo que contradiz a relação real entre as ideias (“A impressora estava sem tinta; por isso, os relatórios foram impressos normalmente”), pronome sem referente claro ou com referente errado, e repetição que não acrescenta nada. Para resolver, pergunte qual é a relação de fato entre as duas partes (causa, oposição, concessão, conclusão) e confira se o conectivo usado a expressa."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Texto: “Os técnicos instalaram os novos computadores na escola. Os equipamentos chegaram com uma semana de atraso, mas ainda a tempo do início das aulas.” Que mecanismos de coesão aparecem?",
+        "resolucao": "“Os equipamentos” retoma “os novos computadores” por hiperônimo (computador é um tipo de equipamento), em anáfora. “Mas” liga as ideias com relação de oposição: houve atraso, porém ele não comprometeu o início das aulas."
+      },
+      {
+        "enunciado": "Reescreva com “embora”, mantendo o sentido: “O orçamento foi aprovado, porém o cronograma precisará ser revisto.”",
+        "resolucao": "“Embora o orçamento tenha sido aprovado, o cronograma precisará ser revisto.” A relação de contraste se mantém; o verbo da oração com “embora” passa ao subjuntivo (tenha sido) e a oração concessiva vai para o início."
+      },
+      {
+        "enunciado": "Corrija a incoerência: “Como o servidor estava de férias, ele compareceu a todas as reuniões da semana.”",
+        "resolucao": "“Como” anteposto indica causa, mas estar de férias não explica comparecer às reuniões; a relação real é de concessão (contrário ao esperado). Correção: “Embora estivesse de férias, o servidor compareceu a todas as reuniões da semana.”"
+      }
+    ],
+    "conceitos": [
+      { "t": "Coesão", "d": "Ligação linguística entre as partes do texto, por referência ou por sequenciação." },
+      { "t": "Coerência", "d": "Unidade de sentido do texto: continuidade, progressão, não contradição e relação entre as ideias." },
+      { "t": "Anáfora", "d": "Retomada de um termo já mencionado no texto." },
+      { "t": "Catáfora", "d": "Antecipação de um termo que ainda será apresentado." },
+      { "t": "Elipse", "d": "Omissão de um termo facilmente recuperável pelo contexto." },
+      { "t": "Hiperônimo", "d": "Palavra de sentido mais geral usada para retomar outra mais específica (veículo para ônibus)." },
+      { "t": "Conectivo", "d": "Conjunção, preposição, advérbio ou locução que explicita a relação lógica entre partes do texto." },
+      { "t": "Progressão textual", "d": "Acréscimo de informação nova ao que já foi dito, sem perder o tema." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Classificar, sem consulta, a relação expressa por 15 conectivos comuns, incluindo os casos de “desde que”, “posto que” e “pois”.",
+      "Reescrever uma frase trocando conectivo adversativo por concessivo, com o ajuste correto do modo verbal."
+    ]
+  },
+  "lp-classes": {
+    "objetivos": [
+      "Ao final, você consegue identificar a classe de uma palavra pelo seu emprego na frase, e não pela forma isolada.",
+      "Ao final, você consegue aplicar as regras de flexão de gênero, número e grau de substantivos e adjetivos, inclusive os casos especiais.",
+      "Ao final, você consegue empregar pronomes pessoais retos, oblíquos e de tratamento conforme a norma-padrão.",
+      "Ao final, você consegue reconhecer verbos, advérbios, preposições e conjunções e o valor que cada um assume na frase."
+    ],
+    "explicacao": [
+      "A gramática tradicional reconhece dez classes de palavras: substantivo, adjetivo, artigo, numeral, pronome, verbo, advérbio, preposição, conjunção e interjeição. As seis primeiras são variáveis (flexionam-se); advérbio, preposição, conjunção e interjeição são invariáveis. A classe é definida pelo emprego na frase: em “O jantar está pronto”, jantar é substantivo; em “Ela fala baixo”, baixo é advérbio; em “Ela é baixa”, é adjetivo. Essa mudança de classe sem alteração da forma chama-se derivação imprópria ou conversão.",
+      "Substantivo nomeia seres, objetos, lugares, ações, estados e sentimentos. Pode ser comum ou próprio, concreto (ser de existência independente: mesa, fada) ou abstrato (ação, estado, qualidade ou sentimento: saída, beleza, saudade), simples ou composto, primitivo ou derivado, e coletivo (cardume, acervo, alcateia). Quanto ao gênero, há biformes (aluno, aluna), heterônimos (bode, cabra), comuns de dois gêneros, que mudam apenas o determinante (o estudante, a estudante; o colega, a colega), sobrecomuns, com um só gênero para ambos os sexos (a criança, a testemunha, o cônjuge, a vítima), e epicenos, nomes de animais que recebem macho ou fêmea (a cobra macho, o jacaré fêmea). Há palavras cujo gênero muda o sentido (o capital e a capital; o grama, unidade de massa, e a grama, vegetação) e outras de gênero que costuma confundir: são masculinos o eclipse, o telefonema e o dó; são femininos a alface e a cal.",
+      "No plural dos substantivos simples, as terminações em -ão podem fazer -ões, -ães ou -ãos (botões, pães, cidadãos), e algumas admitem mais de uma forma (anciões, anciães, anciãos). Palavras em -al, -el, -ol e -ul trocam o l por -is (jornais, papéis); em -il, a oxítona faz -is (funis) e a paroxítona faz -eis (fósseis, répteis). Terminadas em -r, -z ou -s oxítono recebem -es (mares, luzes, países); as paroxítonas em -s ou -x ficam invariáveis (o lápis, os lápis; o tórax, os tórax). Nos compostos, variam os dois elementos quando são substantivo, adjetivo ou numeral (obras-primas, cachorros-quentes, segundas-feiras); varia só o segundo quando o primeiro é verbo ou palavra invariável (guarda-chuvas, beija-flores, abaixo-assinados, vice-diretores).",
+      "Adjetivo atribui qualidade, estado ou característica ao substantivo e concorda com ele em gênero e número. Locução adjetiva é a expressão com valor de adjetivo (de pai, paterno; de rio, fluvial; de chuva, pluvial). Nos adjetivos compostos, só o último elemento varia (acordos luso-brasileiros, equipes médico-cirúrgicas), com a exceção de surdo-mudo, que faz surdos-mudos; azul-marinho e azul-celeste são invariáveis, e o adjetivo de cor cujo último elemento é substantivo também não varia (blusas verde-musgo). No grau, há comparativo de superioridade, igualdade e inferioridade (mais… que, tão… quanto, menos… que) e superlativo relativo (o mais competente da equipe) e absoluto, analítico (muito fácil) ou sintético (facílimo, paupérrimo, celebérrimo, nobilíssimo). Bom, mau, grande e pequeno têm comparativos sintéticos (melhor, pior, maior, menor); “mais bom” e “mais grande” só se admitem quando se comparam duas qualidades do mesmo ser: “Ele é mais bom do que esperto”. A posição também pode mudar o sentido: “homem grande” e “grande homem”.",
+      "Pronome substitui ou acompanha o nome e indica a pessoa do discurso. Os pessoais retos (eu, tu, ele, nós, vós, eles) funcionam como sujeito; os oblíquos átonos (me, te, se, o, a, lhe, nos, vos, os, as, lhes) e tônicos (mim, ti, si, conosco, convosco) funcionam como complemento, os tônicos sempre com preposição. Pegadinhas: depois de preposição usa-se oblíquo tônico (“entre mim e você”), mas, se o pronome for sujeito de infinitivo, usa-se o reto (“trouxeram o relatório para eu revisar”); na norma-padrão, “o” e “a” são objeto direto e “lhe” é objeto indireto (“Eu o vi”, e não “Eu lhe vi”); “Encontrei ele” é uso coloquial, e a norma-padrão pede “Encontrei-o”. Pronomes de tratamento (você, Vossa Senhoria, Vossa Excelência) referem-se à pessoa com quem se fala, mas levam verbos e possessivos para a terceira pessoa: “Vossa Excelência está convidado e sua presença é aguardada”. Usa-se “Vossa” ao falar com a autoridade e “Sua” ao falar sobre ela.",
+      "Os demais pronomes: possessivos (meu, teu, seu, nosso; “seu” pode gerar ambiguidade, resolvida com “dele” ou “dela”); demonstrativos, que situam no espaço (este, perto de quem fala; esse, perto de quem ouve; aquele, distante de ambos), no tempo (este para o presente, esse para passado ou futuro próximos, aquele para tempo distante) e no texto (este anuncia, esse retoma); indefinidos (algum, nenhum, outro, certo, qualquer, cada, alguém, ninguém, tudo, nada), lembrando que “algum” depois do substantivo tem valor negativo (“sem dúvida alguma”); interrogativos (que, quem, qual, quanto); e relativos (que, quem, o qual, cujo, onde), estudados em tópico próprio.",
+      "Verbo é a palavra que exprime ação, estado, mudança de estado ou fenômeno natural, situando o fato no tempo; é a classe que mais se flexiona: número, pessoa, modo, tempo e voz (a conjugação e o uso de tempos e vozes têm tópico próprio). As formas nominais (infinitivo, gerúndio e particípio) podem assumir papel de outras classes: o infinitivo funciona como substantivo (“O caminhar diário faz bem”), o particípio como adjetivo (“documento assinado”) e o gerúndio como advérbio (“Caminhando, chegaremos a tempo”). Locução verbal é a combinação de verbo auxiliar flexionado com forma nominal (vou revisar, tinha saído, está chegando). Verbos de ligação (ser, estar, parecer, permanecer, ficar, continuar, andar) ligam o sujeito a uma característica; o mesmo verbo pode ser de ligação em “Ele anda preocupado” e significativo em “Ele anda pela praça”.",
+      "Advérbio modifica o verbo, o adjetivo, outro advérbio ou a oração inteira, indicando circunstância de tempo, lugar, modo, intensidade, afirmação, negação ou dúvida; é invariável. Locução adverbial é a expressão com esse valor (às pressas, de repente, à noite). Pegadinhas: “meio” como advérbio não varia (“Ela ficou meio cansada”), mas como numeral concorda (“meia porção”); “bastante” é advérbio invariável junto de adjetivo (“bastante caros”) e pronome variável junto de substantivo (“bastantes livros”); “menos” é sempre invariável (não existe “menas”); adjetivo com valor de advérbio fica invariável (“Elas falaram alto”). Em dois advérbios em -mente coordenados, é comum só o último receber o sufixo: “Agiu rápida e eficientemente”.",
+      "Preposição é palavra invariável que liga dois termos, subordinando o segundo ao primeiro. As essenciais são a, ante, após, até, com, contra, de, desde, em, entre, para, perante, por, sem, sob, sobre e trás; as acidentais são palavras de outras classes que funcionam como preposição (conforme, segundo, durante, mediante, exceto, salvo). A preposição pode unir-se a outra palavra sem perda de som (combinação: ao, aonde) ou com perda (contração: do, no, pelo, à). Não se contrai a preposição com o artigo que pertence ao sujeito de um infinitivo: “Chegou a hora de o candidato assinar”. Conjunção liga orações ou termos de mesma função: as coordenativas são aditivas, adversativas, alternativas, conclusivas e explicativas; as subordinativas são integrantes (que, se, introduzindo oração substantiva) ou adverbiais (causais, concessivas, condicionais, conformativas, comparativas, consecutivas, finais, proporcionais e temporais). A mesma forma muda de classe conforme o emprego: “que” é pronome relativo em “o relatório que enviei”, conjunção integrante em “Espero que volte”, consecutiva em “tão baixo que ninguém ouviu” e explicativa em “Saia logo, que vai chover”."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Classifique a palavra “baixo” em “Ela fala baixo” e em “O muro é baixo”, e explique a concordância.",
+        "resolucao": "Em “Ela fala baixo”, a palavra modifica o verbo, indicando modo: é advérbio e, por isso, invariável (não se diz “fala baixa”). Em “O muro é baixo”, caracteriza o substantivo: é adjetivo e concorda com ele (“a parede é baixa”)."
+      },
+      {
+        "enunciado": "Complete segundo a norma-padrão: “Senhor Secretário, Vossa Senhoria ___ (receber) nesta data o relatório e poderá encaminhar ___ (pronome possessivo) parecer até sexta-feira.”",
+        "resolucao": "“Vossa Senhoria receberá… seu parecer”. Pronome de tratamento refere-se à pessoa com quem se fala, mas o verbo e o possessivo vão para a terceira pessoa; “recebereis” e “vosso” estariam errados."
+      },
+      {
+        "enunciado": "Dê o plural de: cidadão, pão, fóssil, lápis, país, guarda-chuva e obra-prima.",
+        "resolucao": "Cidadãos, pães, fósseis (paroxítona em -il faz -eis), lápis (paroxítona em -s não varia), países (oxítona em -s recebe -es), guarda-chuvas (verbo mais substantivo: só o segundo varia) e obras-primas (substantivo mais adjetivo: os dois variam)."
+      }
+    ],
+    "conceitos": [
+      { "t": "Derivação imprópria", "d": "Mudança de classe de uma palavra sem alteração de forma, como em “o jantar” ou “falou alto”." },
+      { "t": "Substantivo sobrecomum", "d": "Tem um só gênero gramatical para os dois sexos: a criança, a testemunha, o cônjuge." },
+      { "t": "Comum de dois gêneros", "d": "Mesma forma para os dois gêneros, distinguidos pelo determinante: o estudante, a estudante." },
+      { "t": "Epiceno", "d": "Nome de animal com um só gênero, que recebe macho ou fêmea: a cobra macho." },
+      { "t": "Locução adjetiva", "d": "Expressão, geralmente preposição mais substantivo, com valor de adjetivo: de rio (fluvial)." },
+      { "t": "Pronome de tratamento", "d": "Refere-se à pessoa com quem se fala, mas leva verbo e possessivo à terceira pessoa." },
+      { "t": "Preposição acidental", "d": "Palavra de outra classe empregada como preposição: conforme, segundo, durante, exceto." },
+      { "t": "Conjunção integrante", "d": "“Que” ou “se” que introduz oração substantiva: “Espero que volte”; “Não sei se virá”." }
+    ],
+    "dominio": [
+      "Acertar ao menos 8 das 10 questões do tópico.",
+      "Classificar, sem consulta, as palavras “que”, “meio” e “bastante” em três frases diferentes cada, justificando pela função.",
+      "Formar corretamente o plural de 10 substantivos simples e compostos e explicar a regra de cada um."
+    ]
+  },
+  "lp-formacao": {
+    "objetivos": [
+      "Ao final, você consegue identificar radical, afixos, vogal temática e desinências de uma palavra.",
+      "Ao final, você consegue distinguir derivação prefixal, sufixal, prefixal e sufixal, parassintética, regressiva e imprópria.",
+      "Ao final, você consegue diferenciar composição por justaposição e por aglutinação.",
+      "Ao final, você consegue reconhecer hibridismo, onomatopeia, abreviação, sigla e empréstimo."
+    ],
+    "explicacao": [
+      "Para analisar a formação de uma palavra, identifique seus elementos mórficos. Radical é o núcleo de significado, comum às palavras da mesma família (terr- em terra, terreno, enterrar, chamadas cognatas). Afixos são acrescentados ao radical: prefixos antes (re-, des-, in-) e sufixos depois (-eiro, -mente, -ção). Vogal temática é a vogal que, unida ao radical, forma o tema: nos verbos, -a-, -e- e -i- indicam a conjugação (cantar, vender, partir); nos nomes, são as vogais átonas finais (mesa, dente, livro). Desinências indicam flexões: nominais (gênero e número) e verbais (modo e tempo; número e pessoa). Em “cantávamos”, cant- é radical, -a- é vogal temática, -va- é desinência modo-temporal e -mos é desinência número-pessoal.",
+      "Derivação é a formação de palavra nova a partir de uma palavra primitiva. Na prefixal, acrescenta-se prefixo (reler, desfazer, infeliz); na sufixal, sufixo (livraria, felizmente, jardineiro); na prefixal e sufixal, há prefixo e sufixo, mas cada um poderia ser acrescentado sozinho, porque as formas intermediárias existem: infelizmente (há infeliz e felizmente), deslealdade (há desleal e lealdade), desonestidade (há desonesto e honestidade).",
+      "Na derivação parassintética, prefixo e sufixo entram ao mesmo tempo, e a palavra não existiria com apenas um deles: entardecer (não existem “entarde” nem “tardecer”), anoitecer, amanhecer, emagrecer, entristecer, apedrejar, desalmado. O teste prático é retirar o prefixo e, depois, o sufixo: se nenhuma das formas restantes existe na língua, a derivação é parassintética; se as duas existem, é prefixal e sufixal. Essa distinção é a pegadinha mais cobrada do tópico.",
+      "A derivação regressiva forma a palavra nova pela redução da primitiva. O caso típico são substantivos que indicam ação, derivados de verbos: ajudar dá ajuda, comprar dá compra, procurar dá procura, debater dá debate, combater dá combate, perder dá perda, atrasar dá atraso. Regra prática: se o substantivo indica ação, ele provavelmente vem do verbo (regressiva); se indica objeto ou ser concreto, é o verbo que vem dele (âncora dá ancorar, por derivação sufixal). A derivação imprópria, ou conversão, muda a classe da palavra sem alterar sua forma: “o jantar”, “um não firme”, “o porquê da decisão”, “o olhar atento”, “falou alto”.",
+      "Composição é a junção de dois ou mais radicais para formar uma palavra com sentido próprio. Na justaposição, os elementos se juntam sem perder sons e mantêm sua acentuação: passatempo, pontapé, guarda-roupa, segunda-feira, girassol (a duplicação do s em girassol é apenas ajuste ortográfico para manter o som). Na aglutinação, pelo menos um elemento perde fonema ou acento, fundindo-se ao outro: planalto (plano + alto), aguardente (água + ardente), embora (em boa hora), boquiaberto (boca + aberto), pernalta (perna + alta). A presença ou ausência de hífen não define o tipo de composição.",
+      "Hibridismo é a palavra formada por elementos de línguas diferentes: automóvel (grego autós e latim mobilis), sociologia (latim socius e grego lógos), televisão (grego tele e latim visio), burocracia (francês bureau e grego kratía). Outros processos: onomatopeia, que imita sons (tique-taque, zum-zum, miau); abreviação vocabular, que reduz a palavra sem mudar o sentido (moto, foto, metrô, pneu); sigla, formada pelas iniciais de uma expressão (ONU, IBGE), que pode gerar derivados (celetista, de CLT); empréstimo ou estrangeirismo, palavra de outra língua usada em português, às vezes aportuguesada (software, mouse; futebol, abajur); neologismo, palavra nova criada ou adotada pela língua.",
+      "Os afixos têm significado, e isso ajuda nas questões de sentido. Prefixos: anti- e contra- (oposição), pré- e ante- (anterioridade), pós- (posterioridade), sub- e hipo- (posição inferior, deficiência), super-, sobre- e hiper- (excesso, posição superior), in- e des- (negação, ação contrária), re- (repetição), bi- e di- (dois). Sufixos: -ção, -mento e -agem (ação ou resultado), -eiro e -ista (profissão ou agente), -dade e -eza (qualidade), -vel (possibilidade), -mente (forma advérbios a partir de adjetivos), -ecer (início de ação ou mudança de estado), -inho e -ão (grau).",
+      "Resumo das pegadinhas: infelizmente é prefixal e sufixal, e não parassintética; entardecer é parassintética; ajuda (de ajudar) é regressiva, enquanto ajudante é sufixal; amanhecer é parassintético como verbo, mas “o amanhecer” é derivação imprópria; planalto é aglutinação e passatempo é justaposição; automóvel é hibridismo. Quando a questão pedir “o processo de formação”, analise a última etapa que gerou a palavra, comparando-a com a palavra da qual ela provém diretamente."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Compare a formação de “infelizmente” e de “entardecer”.",
+        "resolucao": "Em “infelizmente”, retirando o sufixo sobra “infeliz” e retirando o prefixo sobra “felizmente”: as duas formas existem, logo é derivação prefixal e sufixal. Em “entardecer”, nem “tardecer” nem “entarde” existem: prefixo e sufixo entraram juntos, logo é derivação parassintética."
+      },
+      {
+        "enunciado": "Em “O cancelamento da compra foi rápido”, como se formaram “cancelamento” e “compra”?",
+        "resolucao": "“Cancelamento” vem de cancelar com o sufixo -mento: derivação sufixal. “Compra” vem de comprar pela redução da forma verbal, sem acréscimo de afixo: derivação regressiva, típica de substantivos que indicam ação."
+      },
+      {
+        "enunciado": "Por que “planalto” é aglutinação e “passatempo” é justaposição?",
+        "resolucao": "Em “planalto”, a palavra “plano” perde a vogal final ao se unir a “alto”: houve perda de fonema, o que caracteriza aglutinação. Em “passatempo”, “passa” e “tempo” se juntam sem perder sons: justaposição."
+      }
+    ],
+    "conceitos": [
+      { "t": "Radical", "d": "Elemento que concentra o significado básico, comum às palavras da mesma família." },
+      { "t": "Afixo", "d": "Elemento acrescentado ao radical: prefixo, se vem antes; sufixo, se vem depois." },
+      { "t": "Derivação parassintética", "d": "Acréscimo simultâneo de prefixo e sufixo, sem que a palavra exista com só um deles: entardecer." },
+      { "t": "Derivação regressiva", "d": "Formação por redução da palavra primitiva, típica de substantivos de ação: ajudar, ajuda." },
+      { "t": "Derivação imprópria", "d": "Mudança de classe sem mudança de forma: o jantar, um não." },
+      { "t": "Justaposição", "d": "Composição em que os radicais se unem sem perder sons: passatempo, guarda-roupa." },
+      { "t": "Aglutinação", "d": "Composição em que ao menos um radical perde fonema ou acento: planalto, aguardente." },
+      { "t": "Hibridismo", "d": "Palavra formada por elementos de línguas diferentes: automóvel, sociologia." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Aplicar, sem consulta, o teste de retirar prefixo e sufixo para separar derivação parassintética de prefixal e sufixal em cinco palavras.",
+      "Dar dois exemplos próprios de derivação regressiva, derivação imprópria, justaposição, aglutinação e hibridismo."
+    ]
+  },
+  "lp-variacao": {
+    "objetivos": [
+      "Ao final, você consegue reconhecer variação regional, social, histórica e situacional em exemplos concretos.",
+      "Ao final, você consegue diferenciar norma-padrão, norma culta e variedades populares sem tratar diferença como deficiência.",
+      "Ao final, você consegue avaliar se um registro é adequado ao interlocutor, à situação e ao gênero, distinguindo adequação de correção."
+    ],
+    "explicacao": [
+      "Toda língua viva varia, e a variação não é deturpação: cada variedade segue regras próprias e é eficiente para a comunidade que a usa. Os fatores de variação recebem nomes técnicos que as provas cobram: variação regional ou geográfica (diatópica), social (diastrática), histórica (diacrônica) e situacional ou estilística (diafásica). Alguns autores tratam ainda da diferença entre fala e escrita como variação de modalidade.",
+      "A variação regional aparece na pronúncia (o r e o s pronunciados de modos diferentes conforme a região), no vocabulário (mandioca, aipim e macaxeira; tangerina, mexerica e bergamota), no uso de pronomes (tu ou você) e em expressões próprias de cada lugar, como o “uai” associado à fala mineira.",
+      "A variação social está ligada a características dos grupos de falantes: escolaridade, faixa etária, profissão, classe social, comunidade. Incluem-se aqui a gíria, associada sobretudo a grupos jovens, e o jargão, vocabulário técnico de uma profissão (na TI, deploy, bug, rollback; no Direito, termos processuais). Construções como “os menino” ou “nós vai” são marcas de variedades populares; elas têm regularidade própria, mas são socialmente desprestigiadas, e julgar a capacidade ou o caráter de alguém por isso é preconceito linguístico.",
+      "A variação histórica mostra que a língua muda com o tempo: “Vossa Mercê” virou “vosmecê”, depois “você” e, na fala, “cê”; grafias antigas como “pharmacia” deram lugar a “farmácia”; palavras caem em desuso (arcaísmos) e outras surgem (neologismos), muitas vezes ligadas à tecnologia. Comparar textos de épocas diferentes é a forma típica de cobrar esse tipo de variação.",
+      "A variação situacional é a adaptação que um mesmo falante faz conforme o interlocutor, o assunto, o lugar e o gênero do texto. Ela vai do registro informal (conversa entre amigos, mensagens rápidas) ao formal (reunião de trabalho, documento oficial, entrevista de emprego). Atenção: fala não é sinônimo de informal, nem escrita de formal. Um bilhete na geladeira é escrito e informal; uma palestra ou uma sustentação oral é falada e formal.",
+      "Norma-padrão é o modelo idealizado de língua descrito e prescrito por gramáticas normativas e dicionários; é a referência para documentos oficiais, textos técnicos, provas e concursos. Norma culta, em sentido descritivo, é o conjunto de usos reais de falantes escolarizados em situações monitoradas, que nem sempre coincide com a norma-padrão: começar frase com pronome oblíquo, como em “Me empresta o relatório”, é comum até na fala culta, mas a norma-padrão prescreve “Empresta-me”. As variedades populares são as usadas por falantes com menor acesso à escolarização formal.",
+      "Adequação e correção são critérios diferentes. Correção é a conformidade com a norma-padrão; adequação é o ajuste da linguagem à situação. Uma frase pode estar gramaticalmente correta e ser inadequada, como um tratamento cerimonioso em um churrasco de família, ou ser informal e perfeitamente adequada a uma conversa entre amigos. Na comunicação oficial, a adequação exige norma-padrão, clareza, impessoalidade e formalidade.",
+      "Nas provas, desconfie de alternativas extremas: é falso que a norma-padrão seja a única forma legítima de falar e que as demais variedades estejam erradas em qualquer situação; também é falso que, por existir variação, qualquer forma sirva em qualquer contexto. A posição esperada é a da adequação: todas as variedades são legítimas, e cabe ao falante escolher a mais apropriada à situação, com a norma-padrão reservada às situações formais e aos textos oficiais."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Em uma conversa no interior de Minas Gerais: “Ô, sô, cê vai lá na praça hoje?” Que variações aparecem?",
+        "resolucao": "Regional: o vocativo “sô”, forma reduzida de “senhor”, é característico da fala mineira. Histórica: “cê” é o ponto final de um percurso que começou em “Vossa Mercê”. Situacional: o registro é informal, adequado a uma conversa entre conhecidos."
+      },
+      {
+        "enunciado": "Um servidor escreve à chefia: “E aí, chefe, beleza? Preciso faltar amanhã, pode ser?” Qual o problema e como corrigi-lo?",
+        "resolucao": "Não há erro grave de gramática, e sim inadequação de registro: a comunicação de trabalho com a chefia pede formalidade. Uma versão adequada: “Prezada senhora, solicito autorização para me ausentar amanhã, pelo motivo exposto a seguir.”"
+      },
+      {
+        "enunciado": "Na equipe de TI: “O deploy falhou porque o build quebrou.” Que tipo de variação é essa e quando ela é adequada?",
+        "resolucao": "É jargão profissional, um caso de variação social ligada à profissão. É adequado entre colegas da área, porque é preciso e econômico; em um aviso ao cidadão, seria inadequado e deveria ser trocado por algo como “a atualização do sistema não pôde ser concluída”."
+      }
+    ],
+    "conceitos": [
+      { "t": "Variação diatópica", "d": "Variação regional ou geográfica: diferenças de pronúncia, vocabulário e expressões entre lugares." },
+      { "t": "Variação diastrática", "d": "Variação social: diferenças ligadas a escolaridade, idade, profissão e grupo, como gírias e jargões." },
+      { "t": "Variação diacrônica", "d": "Variação histórica: mudanças da língua ao longo do tempo." },
+      { "t": "Variação diafásica", "d": "Variação situacional: ajuste do registro, do informal ao formal, conforme a situação." },
+      { "t": "Norma-padrão", "d": "Modelo de língua prescrito por gramáticas e dicionários, referência para situações formais e textos oficiais." },
+      { "t": "Norma culta", "d": "Usos efetivos de falantes escolarizados em situações monitoradas, que nem sempre coincidem com a norma-padrão." },
+      { "t": "Preconceito linguístico", "d": "Julgamento negativo de pessoas por causa da variedade linguística que usam." },
+      { "t": "Adequação linguística", "d": "Escolha do registro apropriado ao interlocutor, à situação e ao gênero do texto." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Classificar, sem consulta, cinco falas pelo tipo de variação predominante, justificando cada uma.",
+      "Reescrever um recado informal em registro formal, adequado a um e-mail institucional."
+    ]
+  },
+  "lp-verbos": {
+    "objetivos": [
+      "Ao final, você consegue reconhecer as flexões do verbo (número, pessoa, modo, tempo e voz) e classificá-lo como regular, irregular, anômalo, defectivo ou abundante.",
+      "Ao final, você consegue conjugar os irregulares mais cobrados e seus derivados (ter, vir, ver, pôr, haver, fazer, querer, caber), sobretudo no pretérito perfeito e no futuro do subjuntivo.",
+      "Ao final, você consegue correlacionar tempos e modos em períodos condicionais, temporais e de ordem ou desejo.",
+      "Ao final, você consegue distinguir voz ativa, passiva analítica, passiva sintética e reflexiva e converter uma na outra sem mudar o tempo verbal."
+    ],
+    "explicacao": [
+      "O verbo é a classe que mais se flexiona: varia em número (singular e plural), pessoa (primeira, segunda e terceira), modo, tempo e voz. Os modos são três: o indicativo apresenta o fato como certo (“Ele revisa o código”); o subjuntivo, como hipótese, dúvida ou desejo (“Talvez ele revise”, “Espero que revise”); o imperativo, como ordem, pedido ou conselho (“Revise o código”). No indicativo há presente, pretérito perfeito, imperfeito e mais-que-perfeito, futuro do presente e futuro do pretérito; no subjuntivo, presente, pretérito imperfeito e futuro. Os tempos compostos usam ter ou haver mais particípio (tenho revisado, tinha revisado, terei revisado). As formas nominais são infinitivo, gerúndio e particípio. Há três conjugações, pela vogal temática: -ar, -er e -ir; pôr e seus derivados (compor, propor, supor, dispor) pertencem à segunda, porque vêm da antiga forma “poer”.",
+      "Verbo regular mantém o radical e segue o paradigma da conjugação (cantar, vender, partir). Irregular altera o radical ou as desinências em alguma forma (fazer: faço, fiz; caber: caibo, coube; dizer: digo, disse). Anômalo muda profundamente de radical: ser (sou, fui, era) e ir (vou, fui, ia). Defectivo não tem todas as formas: abolir não tem a primeira pessoa do singular do presente do indicativo, nem, por consequência, o presente do subjuntivo; falir, reaver e precaver, no presente do indicativo, só têm as formas arrizotônicas, com a tonicidade fora do radical (falimos, falis; reavemos, reaveis; precavemos, precaveis). Reaver só existe nas formas em que haver tem a letra v (reouve, reouvesse, reaverei), e precaver não deriva de ver nem de vir: “precavenho” e “precavejo” não existem. Abundante tem mais de uma forma, em geral no particípio: aceitado e aceito, entregado e entregue, imprimido e impresso, elegido e eleito, matado e morto. A regra tradicional manda usar o particípio regular com ter e haver (“tinha aceitado”) e o irregular com ser e estar (“foi aceito”). Ganhar, gastar e pagar hoje preferem ganho, gasto e pago com qualquer auxiliar.",
+      "Os derivados seguem o verbo primitivo. De ter: deter, conter, manter, obter, reter (mantive, obteve, se ele mantiver, se eles contiverem). De vir: intervir, provir, convir (interveio, intervieram, se ele intervier); o particípio e o gerúndio de vir são iguais, “vindo”. De ver: prever, rever (previu, se eu previr, quando ele revir). De pôr: compor, propor, supor (propus, supuseram, se ele propuser). De fazer: satisfazer, desfazer (satisfiz, se ele satisfizer). Pegadinhas clássicas: requerer não segue querer no pretérito (requeri, requereu, se ele requerer), só no presente (requeiro); prover segue ver apenas no presente (provejo) e é regular no pretérito (provi, proveu). Mediar, ansiar, remediar, incendiar e odiar recebem “ei” nas formas rizotônicas (medeio, anseia, odeiam), assim como os verbos em -ear (passeio, receio).",
+      "Saber de onde vêm os tempos evita a maioria dos erros. Da primeira pessoa do singular do presente do indicativo deriva o presente do subjuntivo: faço, faça; digo, diga; caibo, caiba; mantenho, mantenha. Da terceira pessoa do plural do pretérito perfeito, retirada a terminação -ram, derivam o mais-que-perfeito, o imperfeito do subjuntivo e o futuro do subjuntivo: fizeram, fizera, fizesse, fizer; puseram, pusera, pusesse, puser; viram (de ver), vira, visse, vir; vieram (de vir), viera, viesse, vier. Por isso se diz “quando eu vir o resultado” (ver) e “quando eu vier à reunião” (vir), e “se ele mantiver”, nunca “se ele manter”. No imperativo afirmativo, tu e vós vêm do presente do indicativo sem o s (revisa tu, revisai vós), e as demais pessoas vêm do presente do subjuntivo (revise você, revisemos, revisem vocês); o imperativo negativo vem todo do presente do subjuntivo (não revises, não revise, não revisem). Não se misturam tratamentos na mesma frase: “Mantenha a senha e não a compartilhe” (você), e não “Mantém a senha e não a compartilhe”.",
+      "A correlação entre modos e tempos é a combinação esperada entre a oração principal e a subordinada. Hipótese possível no futuro: futuro do subjuntivo com futuro do presente (“Se o teste passar, publicaremos a versão”). Hipótese pouco provável ou irreal no presente: pretérito imperfeito do subjuntivo com futuro do pretérito (“Se o teste passasse, publicaríamos a versão”). Hipótese irreal no passado: mais-que-perfeito composto do subjuntivo com futuro do pretérito composto (“Se o teste tivesse passado, teríamos publicado a versão”). Em orações temporais que se referem ao futuro, usa-se o futuro do subjuntivo (“Quando o relatório ficar pronto, enviarei”). A conjunção “caso” pede presente ou imperfeito do subjuntivo, nunca o futuro: “caso ele venha”, “caso ele viesse”, e não “caso ele vier”. Verbos de ordem, pedido ou desejo na principal levam a subordinada ao subjuntivo: presente com presente (“Peço que revise”), pretérito com imperfeito (“Pedi que revisasse”).",
+      "Outros usos de prova: o mais-que-perfeito indica fato anterior a outro já passado (“Quando cheguei, a reunião já terminara” ou “já tinha terminado”); o futuro do pretérito também exprime incerteza ou polidez (“Haveria cerca de duzentos inscritos”; “Gostaria de solicitar uma cópia”). Na fala, o imperfeito do indicativo costuma substituir o futuro do pretérito (“Se pudesse, eu ia”), mas em texto formal a norma-padrão pede “iria”. O uso de “vou estar enviando” no lugar de “enviarei” ou “vou enviar”, o chamado gerundismo, é considerado inadequado em textos formais.",
+      "Voz verbal é a relação entre o verbo e o sujeito. Na voz ativa, o sujeito pratica a ação (“A comissão aprovou o edital”). Na passiva, o sujeito sofre a ação; a passiva analítica forma-se com ser mais particípio, e quem pratica a ação é o agente da passiva, introduzido por “por” ou “pelo” (“O edital foi aprovado pela comissão”). A passiva sintética, ou pronominal, forma-se com verbo transitivo direto mais o pronome apassivador “se”, e o verbo concorda com o sujeito paciente (“Aprovou-se o edital”; “Aprovaram-se os editais”). Na conversão da ativa para a passiva analítica, o objeto direto vira sujeito, o sujeito vira agente, o verbo ser assume exatamente o tempo e o modo do verbo da ativa e o particípio concorda com o novo sujeito: “A banca corrigirá as provas” passa a “As provas serão corrigidas pela banca”; “A banca tinha corrigido as provas” passa a “As provas tinham sido corrigidas pela banca”. Em regra, só verbo transitivo direto (ou direto e indireto) admite passiva.",
+      "Na voz reflexiva, o sujeito pratica e sofre a ação ao mesmo tempo (“O técnico feriu-se com a ferramenta”); na reflexiva recíproca, dois ou mais seres agem um sobre o outro (“Os candidatos cumprimentaram-se”). Cuidado com as funções do “se”: com verbo transitivo direto, é pronome apassivador e o verbo concorda com o sujeito (“Vendem-se casas”, “Instalaram-se os programas”); com verbo transitivo indireto, intransitivo ou de ligação, é índice de indeterminação do sujeito e o verbo fica na terceira pessoa do singular (“Precisa-se de técnicos”, “Trata-se de casos graves”, “Vive-se bem aqui”). O “se” também pode ser parte integrante de verbo pronominal (queixar-se, arrepender-se), pronome reflexivo ou conjunção (“Não sei se ele virá”)."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Passe para a voz passiva analítica, mantendo o tempo verbal: “A prefeitura terá concluído as obras até março.”",
+        "resolucao": "“As obras terão sido concluídas pela prefeitura até março.” O objeto direto “as obras” vira sujeito; “a prefeitura” vira agente da passiva; o futuro do presente composto “terá concluído” é mantido no auxiliar (“terão sido”), que concorda com o novo sujeito plural, e o particípio vai ao feminino plural (“concluídas”)."
+      },
+      {
+        "enunciado": "Complete conforme a norma-padrão: “Se o servidor ___ (manter) a média e ___ (vir) a todas as reuniões, a chefia o ___ (indicar) para a promoção.”",
+        "resolucao": "“mantiver”, “vier” e “indicará”. Manter segue ter (tiveram, tiver: mantiveram, mantiver); vir faz vieram, vier. A condição possível no futuro, com “se” mais futuro do subjuntivo, correlaciona-se com o futuro do presente na oração principal."
+      },
+      {
+        "enunciado": "Corrija, se necessário: “Vende-se terrenos” e “Precisam-se de estagiários”.",
+        "resolucao": "“Vendem-se terrenos”: vender é transitivo direto, o “se” é apassivador e “terrenos” é o sujeito, com o qual o verbo concorda (“terrenos são vendidos”). “Precisa-se de estagiários”: precisar é transitivo indireto, o “se” é índice de indeterminação do sujeito e o verbo fica no singular."
+      }
+    ],
+    "conceitos": [
+      { "t": "Verbo anômalo", "d": "Verbo com mudanças profundas de radical na conjugação: ser e ir." },
+      { "t": "Verbo defectivo", "d": "Verbo que não tem todas as formas, como abolir, falir, reaver e precaver." },
+      { "t": "Verbo abundante", "d": "Verbo com mais de uma forma equivalente, em geral no particípio: aceitado e aceito." },
+      { "t": "Tempos derivados", "d": "Tempos formados a partir de primitivos: o presente do subjuntivo vem da 1ª pessoa do presente do indicativo; o futuro do subjuntivo, da 3ª do plural do pretérito perfeito." },
+      { "t": "Passiva analítica", "d": "Voz passiva com ser mais particípio, podendo trazer agente da passiva: “O edital foi aprovado pela comissão”." },
+      { "t": "Passiva sintética", "d": "Voz passiva com verbo transitivo direto mais o pronome apassivador “se”; o verbo concorda com o sujeito: “Aprovaram-se os editais”." },
+      { "t": "Índice de indeterminação do sujeito", "d": "“Se” junto a verbo transitivo indireto, intransitivo ou de ligação, com o verbo na 3ª pessoa do singular: “Precisa-se de técnicos”." },
+      { "t": "Correlação verbal", "d": "Combinação esperada de tempos e modos entre orações: “Se estudasse, passaria”; “Se estudar, passará”." }
+    ],
+    "dominio": [
+      "Acertar ao menos 8 das 10 questões do tópico.",
+      "Conjugar, sem consulta, o pretérito perfeito e o futuro do subjuntivo de ter, vir, ver, pôr, fazer, querer e caber e de um derivado de cada um.",
+      "Converter cinco frases da voz ativa para a passiva analítica e para a sintética, mantendo o tempo verbal e a concordância."
+    ]
+  },
+  "lp-discursos": {
+    "objetivos": [
+      "Ao final, você consegue distinguir discurso direto, indireto e indireto livre pelas marcas de pontuação, pessoa, tempo e presença do verbo de elocução.",
+      "Ao final, você consegue transpor uma fala do discurso direto para o indireto, e vice-versa, ajustando pessoa, tempo, modo, pronomes e advérbios.",
+      "Ao final, você consegue explicar o efeito de sentido produzido pela escolha do verbo de elocução."
+    ],
+    "explicacao": [
+      "Discursos direto, indireto e indireto livre são as três maneiras de inserir num texto a fala ou o pensamento de alguém. No discurso direto, a fala é reproduzida literalmente, separada da voz do narrador por marcas gráficas: dois-pontos e travessão, ou aspas. Em geral vem acompanhada de verbo de elocução (disse, perguntou, respondeu), que pode aparecer antes, no meio ou depois da fala: “— Já terminei o relatório — disse o técnico.” A fala conserva a primeira e a segunda pessoa, vocativos, interjeições, perguntas e exclamações. O efeito é de vivacidade e fidelidade, e, em textos jornalísticos, de atribuição da responsabilidade pela afirmação a quem a fez.",
+      "No discurso indireto, o narrador relata com as próprias palavras o que a personagem disse. A fala se torna uma oração subordinada substantiva objetiva direta do verbo de elocução, introduzida por “que” nas declarações (“O técnico disse que já terminara o relatório”) e por “se” ou por pronome ou advérbio interrogativo nas perguntas (“perguntou se”, “perguntou quando”, “perguntou por que”). Desaparecem o travessão, as aspas e o ponto de interrogação; vocativos e interjeições são eliminados ou convertidos em expressões do narrador (“exclamou, surpreso, que…”). Uma ordem no imperativo passa ao subjuntivo: “— Saiam! — mandou o chefe” vira “O chefe mandou que saíssem”.",
+      "O discurso indireto livre mistura as duas vozes: a fala ou o pensamento da personagem aparece dentro da narração, sem verbo de elocução, sem travessão e sem aspas, mas com marcas da subjetividade dela, como perguntas, exclamações, expressões afetivas e coloquiais. Em geral mantém a terceira pessoa e o tempo do narrador. Exemplo: “Clara fechou o processo. Aquilo de novo? Não, não ia aceitar outra vez a mesma desculpa.” As frases “Aquilo de novo?” e “não ia aceitar outra vez” exprimem o que se passa na mente de Clara, embora não haja “pensou” nem “disse”. É recurso típico da narrativa moderna, que aproxima leitor e personagem.",
+      "A transposição do direto para o indireto, quando o verbo de elocução está no passado, exige ajustes sistemáticos. Pessoa: primeira e segunda passam à terceira (eu, ele; nós, eles; meu, seu ou dele). Tempos: presente do indicativo passa a pretérito imperfeito (“estou”, “estava”); pretérito perfeito passa a mais-que-perfeito (“terminei”, “terminara” ou “tinha terminado”); futuro do presente passa a futuro do pretérito (“farei”, “faria”); imperativo e presente do subjuntivo passam a imperfeito do subjuntivo (“feche”, “que fechasse”); futuro do subjuntivo também costuma passar ao imperfeito do subjuntivo (“quando terminar”, “quando terminasse”). Pretérito imperfeito, mais-que-perfeito e futuro do pretérito permanecem.",
+      "Também mudam as palavras que dependem da situação de fala, os dêiticos. Demonstrativos: este e esse passam a aquele; isto e isso, a aquilo. Advérbios de lugar: aqui passa a ali ou lá. De tempo: agora passa a naquele momento ou então; hoje, a naquele dia; ontem, a na véspera ou no dia anterior; amanhã, a no dia seguinte; “este mês”, a “naquele mês”. Exemplo completo: “— Amanhã eu trago aqui este documento — prometeu a servidora” passa a “A servidora prometeu que no dia seguinte traria ali aquele documento”. Atenção: se o verbo de elocução estiver no presente (“Ele diz que…”), os tempos não precisam recuar: “— Estou cansado — diz ele” passa a “Ele diz que está cansado”.",
+      "A transposição inversa, do indireto para o direto, refaz o caminho: a oração com “que” ou “se” volta a ser fala autônoma, marcada por dois-pontos e travessão ou por aspas; a terceira pessoa que se refere ao falante ou ao interlocutor volta à primeira ou à segunda; o imperfeito do subjuntivo de uma ordem volta ao imperativo; os dêiticos retomam a perspectiva de quem fala. Uma pergunta indireta com “se” vira pergunta direta, com ponto de interrogação: “O chefe perguntou ao estagiário se ele tinha terminado o relatório” passa a “— Você terminou o relatório? — perguntou o chefe ao estagiário”.",
+      "Verbos de elocução, ou dicendi, são os que introduzem ou acompanham a fala. Há os que declaram (dizer, afirmar, declarar), perguntam (perguntar, indagar, questionar), respondem (responder, retrucar, replicar), ordenam ou pedem (mandar, ordenar, pedir, suplicar), exclamam (exclamar, gritar), indicam o modo de falar (sussurrar, murmurar, gaguejar), concordam ou discordam (concordar, objetar, contestar) e os que avaliam a fala (admitir, confessar, alegar, insinuar, ironizar). A escolha não é neutra: “afirmou” e “disse” são imparciais; “admitiu” e “confessou” sugerem que algo foi dito a contragosto; “alegou” apresenta a fala como justificativa cuja veracidade o narrador não assume. Em reportagens, o verbo de elocução pode revelar a posição do jornalista.",
+      "Pontuação do discurso direto: com verbo anteposto, usam-se dois-pontos e, na linha seguinte, travessão (ou aspas): “O técnico avisou: — A rede vai cair às dez.” Com verbo intercalado, ele fica entre travessões ou vírgulas, e a pontuação exigida pela frase vem depois do segundo travessão: “— Não posso atender agora — explicou a recepcionista —, mas volto em dez minutos.” Com verbo posposto ou intercalado, o sujeito costuma vir depois do verbo (“disse o técnico”, e não “o técnico disse”). Em notícias, é comum o discurso direto entre aspas seguido de vírgula e verbo: “A obra termina em março”, informou a secretaria."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Transponha para o discurso indireto: “— Eu entrego este relatório amanhã — garantiu a analista.”",
+        "resolucao": "“A analista garantiu que entregaria aquele relatório no dia seguinte.” Mudanças: “eu” passa à terceira pessoa (sujeito oculto, retomando “a analista”); o presente com valor de futuro (“entrego”) passa ao futuro do pretérito (“entregaria”); “este” passa a “aquele”; “amanhã” passa a “no dia seguinte”; o travessão dá lugar à oração iniciada por “que”."
+      },
+      {
+        "enunciado": "Identifique o tipo de discurso em: “O analista releu o código pela terceira vez. Onde estava o erro, afinal? Não podia ser tão difícil assim.”",
+        "resolucao": "Discurso indireto livre. As frases “Onde estava o erro, afinal?” e “Não podia ser tão difícil assim” expressam o pensamento do analista, com pergunta e tom de impaciência, mas não há verbo de elocução, travessão nem aspas, e a terceira pessoa e o pretérito do narrador são mantidos."
+      },
+      {
+        "enunciado": "Transponha para o discurso indireto: “— Desliguem os computadores antes de sair! — ordenou o coordenador aos estagiários.”",
+        "resolucao": "“O coordenador ordenou aos estagiários que desligassem os computadores antes de sair.” O imperativo (“desliguem”) passa ao pretérito imperfeito do subjuntivo (“desligassem”), porque o verbo de elocução está no pretérito; a exclamação desaparece."
+      }
+    ],
+    "conceitos": [
+      { "t": "Discurso direto", "d": "Reprodução literal da fala, marcada por travessão ou aspas, geralmente com verbo de elocução." },
+      { "t": "Discurso indireto", "d": "O narrador relata a fala com suas palavras, em oração subordinada iniciada por “que”, “se” ou palavra interrogativa." },
+      { "t": "Discurso indireto livre", "d": "Fala ou pensamento da personagem inserido na narração, sem verbo de elocução nem marca gráfica." },
+      { "t": "Verbo de elocução (dicendi)", "d": "Verbo que introduz ou acompanha uma fala: dizer, perguntar, responder, alegar, admitir." },
+      { "t": "Transposição", "d": "Passagem de um tipo de discurso a outro, com ajustes de pessoa, tempo, modo, pronomes e advérbios." },
+      { "t": "Dêiticos", "d": "Palavras cujo sentido depende da situação de fala, como eu, aqui, hoje, este; mudam na transposição." }
+    ],
+    "dominio": [
+      "Acertar ao menos 8 das 9 questões do tópico.",
+      "Transpor cinco falas do direto para o indireto, apontando cada mudança de pessoa, tempo, pronome e advérbio.",
+      "Reconhecer um trecho de discurso indireto livre numa narrativa curta e justificar com duas marcas linguísticas."
+    ]
+  },
+  "lp-periodo": {
+    "objetivos": [
+      "Ao final, você consegue identificar os termos essenciais, integrantes e acessórios da oração, inclusive os tipos de sujeito e de predicado.",
+      "Ao final, você consegue distinguir coordenação de subordinação e classificar orações coordenadas, substantivas, adjetivas e adverbiais.",
+      "Ao final, você consegue reconhecer a relação de sentido criada por uma conjunção e avaliar se uma reescrita a preserva."
+    ],
+    "explicacao": [
+      "Oração é o enunciado organizado em torno de um verbo ou locução verbal; período é a frase formada por uma ou mais orações. Período simples tem uma só oração (absoluta); período composto tem duas ou mais, e contá-las equivale a contar verbos ou locuções verbais. Os termos essenciais são sujeito e predicado. O sujeito pode ser simples (um núcleo), composto (dois ou mais núcleos), oculto ou desinencial (identificado pela terminação do verbo: “Revisamos o código”) e indeterminado, quando existe mas não se identifica: verbo na terceira pessoa do plural sem referente (“Ligaram para você”) ou terceira do singular com “se” junto a verbo não transitivo direto (“Precisa-se de técnicos”). Há oração sem sujeito com verbos impessoais: haver no sentido de existir ou de tempo decorrido (“Houve falhas”, “Há anos não chove”), fazer e estar indicando tempo ou clima (“Faz dois anos”, “Está frio”), ser indicando tempo (“É uma hora”) e verbos de fenômeno da natureza (“Choveu muito”).",
+      "O predicado é verbal quando o núcleo é um verbo significativo (“O técnico configurou a rede”); nominal, quando há verbo de ligação mais predicativo do sujeito (“O sistema está lento”); e verbo-nominal, quando há verbo significativo e um predicativo (“O técnico chegou cansado”; “A banca considerou o recurso procedente”, em que “procedente” é predicativo do objeto). Quanto à transitividade, o verbo é intransitivo (não pede complemento), transitivo direto (complemento sem preposição obrigatória), transitivo indireto (complemento com preposição exigida pelo verbo), transitivo direto e indireto (os dois) ou de ligação (ser, estar, parecer, permanecer, ficar, continuar, andar, quando ligam o sujeito a uma característica).",
+      "Termos integrantes completam o sentido de verbos e nomes: objeto direto, objeto indireto, complemento nominal e agente da passiva. Complemento nominal completa substantivo abstrato, adjetivo ou advérbio, sempre com preposição (“respeito às normas”, “favorável ao acordo”, “paralelamente ao projeto”). Termos acessórios são o adjunto adnominal (determina o substantivo: artigos, adjetivos, pronomes, numerais e locuções adjetivas), o adjunto adverbial (circunstância de tempo, lugar, modo, causa etc.) e o aposto (explica, especifica ou resume outro termo: “Ana, a coordenadora, aprovou o plano”). O vocativo é o chamamento e fica fora da estrutura da oração. Para distinguir complemento nominal de adjunto adnominal junto de substantivo abstrato: se o termo preposicionado sofre a ação, é complemento nominal (“a análise dos dados”: os dados são analisados); se pratica a ação ou indica posse, é adjunto adnominal (“a opinião do técnico”: o técnico opina). Termo preposicionado ligado a adjetivo ou advérbio é sempre complemento nominal.",
+      "Na coordenação, as orações são sintaticamente independentes, isto é, nenhuma exerce função na outra. Podem ser assindéticas, sem conjunção (“Cheguei, liguei o computador, comecei a trabalhar”), ou sindéticas: aditivas (e, nem, não só… mas também), adversativas (mas, porém, contudo, todavia, entretanto, no entanto), alternativas (ou… ou, ora… ora, quer… quer), conclusivas (logo, portanto, por isso, assim, e pois quando deslocado para depois do verbo) e explicativas (pois antes do verbo, porque, que, geralmente depois de ordem ou opinião). Pegadinhas: “pois” é explicativo em “Leve o guarda-chuva, pois vai chover” e conclusivo em “O prazo acabou; o pedido será, pois, arquivado”; “e” pode ter valor adversativo (“Estudou muito e não passou”).",
+      "Na subordinação, uma oração exerce função sintática em outra, a principal. As substantivas funcionam como substantivo e podem ser trocadas por “isso”; são introduzidas pelas conjunções integrantes “que” e “se”. Classificam-se pela função: subjetiva, sujeito da principal (“É necessário que todos votem”; “Convém que revisem”); objetiva direta (“Espero que volte”); objetiva indireta (“Lembre-se de que o prazo acaba hoje”); completiva nominal (“Tenho certeza de que ele virá”); predicativa (“O problema é que ninguém testou”); apositiva (“Só peço isto: que revisem o texto”). As adjetivas, introduzidas por pronome relativo, funcionam como adjunto adnominal. A restritiva, sem vírgulas, delimita o antecedente (“Os servidores que faltaram foram advertidos”: só os que faltaram); a explicativa, entre vírgulas, acrescenta informação sobre todo o antecedente (“Os servidores, que faltaram, foram advertidos”: todos faltaram). A vírgula, portanto, muda o sentido.",
+      "As adverbiais funcionam como adjunto adverbial e se classificam pela circunstância: causal (porque, como no início do período, já que, visto que, uma vez que); consecutiva (tão, tal ou tanto… que; de modo que); concessiva (embora, ainda que, mesmo que, conquanto, se bem que, em geral com subjuntivo); condicional (se, caso, desde que e contanto que com subjuntivo); conformativa (conforme, segundo, consoante, como no sentido de conforme); comparativa (como, assim como, mais… do que, menos… do que); final (para que, a fim de que); proporcional (à medida que, à proporção que, quanto mais… mais); temporal (quando, enquanto, logo que, assim que, depois que, desde que com indicativo). Várias conjunções têm mais de um valor: “como” pode ser causal, comparativo ou conformativo; “desde que” é temporal com indicativo (“desde que mudou de setor”) e condicional com subjuntivo (“desde que confirme a senha”); “se” é condicional ou integrante. Não confunda “à medida que” (proporção) com “na medida em que” (causa).",
+      "Orações reduzidas têm o verbo numa forma nominal e não trazem conectivo; o sentido sai do contexto. “Terminada a reunião, saímos” (temporal reduzida de particípio, equivalente a “Depois que a reunião terminou”); “Ao chegar, assinou o ponto” (temporal reduzida de infinitivo); “Estudando, passará” (condicional reduzida de gerúndio, “se estudar”); “É importante revisar o texto” (subjetiva reduzida de infinitivo). Desenvolver a reduzida, isto é, reescrevê-la com conjunção e verbo flexionado, é uma boa forma de classificá-la.",
+      "Muitas questões pedem reescrita com troca de conector e manutenção do sentido. A relação lógica precisa ser preservada, e a sintaxe precisa ser ajustada ao novo conector: “embora” pede subjuntivo; “apesar de”, infinitivo ou substantivo; “mas” coordena orações com indicativo. Assim, “O sistema é novo, mas apresenta falhas” equivale a “Embora o sistema seja novo, apresenta falhas” e a “Apesar de ser novo, o sistema apresenta falhas”. Causa e consequência podem trocar de posição: “Como choveu, o jogo foi adiado” equivale a “Choveu, de modo que o jogo foi adiado”. Trocar “portanto” por “porque” inverte causa e conclusão, e trocar “embora” por “se” transforma concessão em condição; nos dois casos o sentido muda."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Classifique as orações de “Embora o prazo fosse curto, a equipe entregou o sistema, pois trabalhou nos fins de semana.”",
+        "resolucao": "“a equipe entregou o sistema” é a oração principal. “Embora o prazo fosse curto” é subordinada adverbial concessiva (fato contrário que não impede a entrega). “pois trabalhou nos fins de semana” é coordenada sindética explicativa (justifica a afirmação anterior; “pois” vem antes do verbo)."
+      },
+      {
+        "enunciado": "Explique a diferença de sentido entre “Os técnicos que estavam de plantão resolveram a falha” e “Os técnicos, que estavam de plantão, resolveram a falha”.",
+        "resolucao": "Na primeira, a adjetiva é restritiva: havia outros técnicos, e só os de plantão resolveram a falha. Na segunda, é explicativa: todos os técnicos mencionados estavam de plantão, e a oração apenas acrescenta essa informação."
+      },
+      {
+        "enunciado": "Classifique o termo destacado em “a leitura do relatório” e em “a leitura do professor”.",
+        "resolucao": "Em “a leitura do relatório”, o relatório é lido, sofre a ação: complemento nominal. Em “a leitura do professor”, o professor é quem lê, pratica a ação: adjunto adnominal."
+      }
+    ],
+    "conceitos": [
+      { "t": "Oração sem sujeito", "d": "Oração com verbo impessoal (haver = existir, fazer e ser indicando tempo, fenômenos naturais), na 3ª pessoa do singular." },
+      { "t": "Predicativo do objeto", "d": "Característica atribuída ao objeto por meio do verbo: “Consideraram o recurso procedente”." },
+      { "t": "Complemento nominal", "d": "Termo com preposição que completa substantivo abstrato, adjetivo ou advérbio e, junto de substantivo, indica o alvo da ação." },
+      { "t": "Adjunto adnominal", "d": "Termo que determina o substantivo; preposicionado, indica agente ou posse: “a opinião do técnico”." },
+      { "t": "Coordenada sindética", "d": "Oração independente ligada por conjunção coordenativa: aditiva, adversativa, alternativa, conclusiva ou explicativa." },
+      { "t": "Subordinada substantiva", "d": "Oração com função de substantivo, introduzida por “que” ou “se” integrante e substituível por “isso”." },
+      { "t": "Adjetiva restritiva e explicativa", "d": "A restritiva, sem vírgula, delimita o antecedente; a explicativa, entre vírgulas, refere-se a ele por inteiro." },
+      { "t": "Oração reduzida", "d": "Oração sem conectivo e com verbo no infinitivo, gerúndio ou particípio." }
+    ],
+    "dominio": [
+      "Acertar ao menos 8 das 10 questões do tópico.",
+      "Classificar, sem consulta, todas as orações de cinco períodos compostos, justificando pelo conectivo e pela função.",
+      "Reescrever três períodos trocando o conector (mas, embora, apesar de) sem alterar o sentido nem a correção."
+    ]
+  },
+  "lp-concordancia": {
+    "objetivos": [
+      "Ao final, você consegue aplicar a regra geral da concordância verbal e nominal mesmo com sujeito posposto ou afastado do verbo.",
+      "Ao final, você consegue resolver os casos especiais mais cobrados: sujeito composto, expressões partitivas, “um dos que”, porcentagem, verbos impessoais, passiva sintética e verbo ser.",
+      "Ao final, você consegue concordar corretamente meio, bastante, anexo, obrigado, mesmo, só, possível e as expressões “é proibido” e “é necessário”."
+    ],
+    "explicacao": [
+      "Regra geral da concordância verbal: o verbo concorda em número e pessoa com o núcleo do sujeito, esteja ele antes ou depois do verbo. As bancas exploram o sujeito posposto (“Chegaram ontem os novos equipamentos”; “Faltam três dias para a prova”; “Ocorreram falhas no sistema”) e o sujeito longo, em que o verbo deve concordar com o núcleo e não com a palavra mais próxima (“O resultado das análises feitas pelos técnicos foi divulgado”). Com o pronome relativo “que”, o verbo concorda com o antecedente (“Fui eu que resolvi”; “Fomos nós que resolvemos”); com “quem”, a forma mais tradicional é a terceira pessoa do singular (“Fui eu quem resolveu”), embora também se aceite a concordância com o antecedente (“Fui eu quem resolvi”).",
+      "Sujeito composto anteposto leva o verbo ao plural (“O diretor e a secretária chegaram”). Posposto, admite plural ou concordância com o núcleo mais próximo (“Chegaram o diretor e a secretária” ou “Chegou o diretor e a secretária”). Com pessoas gramaticais diferentes, a primeira prevalece sobre as outras (“Eu e você iremos”) e a segunda sobre a terceira (“Tu e ele ireis”, também aceito “irão”). Núcleos sinônimos ou em gradação admitem o singular (“Uma palavra, um gesto, um olhar bastava”). Núcleos resumidos por tudo, nada ou ninguém levam o verbo ao singular (“Documentos, computadores, móveis, tudo foi vistoriado”). Com “ou”, o verbo fica no singular se houver exclusão (“Pedro ou Paulo será eleito presidente”) e vai ao plural se houver inclusão (“Café ou chá fazem mal em excesso”). Com “nem… nem”, prefere-se o plural.",
+      "Expressões partitivas (a maioria de, grande parte de, metade de, parte de) seguidas de termo no plural admitem o verbo no singular, concordando com a expressão, ou no plural, concordando com o especificador: “A maioria dos candidatos faltou” ou “faltaram”. “Mais de um” leva o verbo ao singular (“Mais de um candidato faltou”), salvo ideia de reciprocidade. Com porcentagem, o verbo concorda com o numeral ou com o termo que o segue (“Trinta por cento do eleitorado votou” ou “votaram”; “Um por cento dos servidores faltou” ou “faltaram”); se o numeral vier determinado por artigo ou pronome, concorda com ele (“Os 30% restantes ficaram”). Em “um dos que”, a concordância preferida é o plural (“Ele é um dos que mais trabalham”), aceitando-se o singular para destacar o indivíduo. Nomes próprios no plural com artigo levam o verbo ao plural (“Os Estados Unidos anunciaram”); sem artigo, ao singular (“Minas Gerais exporta café”). A silepse é a concordância com a ideia, e não com a forma: “Os brasileiros somos otimistas” (pessoa), “Vossa Excelência está preocupado” (gênero).",
+      "Verbos impessoais ficam na terceira pessoa do singular, e a impessoalidade passa ao auxiliar da locução: haver no sentido de existir, ocorrer ou de tempo decorrido (“Houve falhas”; “Havia muitos candidatos”; “Há anos não chove”; “Deve haver soluções”; “Vai haver mudanças”) e fazer indicando tempo ou clima (“Faz três meses que o contrato venceu”; “Vai fazer dez anos”; “Fez dias muito frios”). Já existir, ocorrer, acontecer e bastar são pessoais e concordam com o sujeito (“Existem soluções”; “Devem existir soluções”; “Ocorreram falhas”; “Bastam duas assinaturas”). Haver como auxiliar de tempo composto também concorda (“Eles haviam saído”). Verbos de fenômeno natural em sentido figurado têm sujeito e concordam (“Choveram críticas ao projeto”).",
+      "Com o pronome “se”, a concordância depende da transitividade. Verbo transitivo direto com “se” forma passiva sintética: o termo que parece objeto é o sujeito paciente e o verbo concorda com ele (“Alugam-se salas”; “Consertam-se computadores”; “Instalou-se o programa”). O teste é passar para a analítica: “salas são alugadas”. Verbo transitivo indireto, intransitivo ou de ligação com “se” tem sujeito indeterminado e fica no singular (“Precisa-se de técnicos”; “Trata-se de casos graves”; “Confia-se nos resultados”). Em locução verbal com infinitivo de verbo transitivo direto, aceitam-se as duas formas: “Devem-se analisar os casos” ou “Deve-se analisar os casos”.",
+      "O verbo ser tem concordância própria. Com sujeito tudo, isto, isso, aquilo ou o que e predicativo no plural, prefere-se o plural (“Tudo são flores”; “Isso são detalhes”; “O que preocupa a equipe são os prazos”). Em horas, datas e distâncias, concorda com o numeral (“É uma hora”; “São dez horas”; “Daqui até a sede são dois quilômetros”); nas datas, aceita-se também o singular, subentendida a palavra dia (“Hoje é 12 de maio” ou “Hoje são 12 de maio”). Com expressões de quantidade como é muito, é pouco, é suficiente, fica no singular (“Cinco dias é pouco”; “Dez reais é suficiente”). Quando um dos termos é pronome pessoal, o verbo concorda com ele (“O responsável sou eu”).",
+      "Regra geral da concordância nominal: artigo, adjetivo, numeral, pronome e particípio concordam em gênero e número com o substantivo a que se referem. Adjetivo posposto a dois ou mais substantivos concorda com o mais próximo ou vai ao plural, no masculino se houver substantivo masculino (“Comprou computador e impressora nova” ou “novos”; “Estudou a história e a cultura mineira” ou “mineiras”). Adjetivo anteposto concorda com o mais próximo (“Escolheu boa hora e lugar”), salvo quando se refere a nomes de pessoas (“os simpáticos Ana e Pedro”). Particípio de oração reduzida concorda com o substantivo (“Feitas as correções, o texto foi publicado”).",
+      "Casos especiais nominais. Meio: como numeral ou adjetivo (metade) varia (“meia hora”, “meio-dia e meia”); como advérbio (um pouco) não varia (“Ela ficou meio preocupada”). Bastante: como pronome ou adjetivo (muitos, suficientes) varia (“bastantes motivos”); como advérbio, junto de adjetivo ou verbo, não varia (“bastante cansados”). Anexo, incluso, obrigado, mesmo, próprio e quite são adjetivos e concordam (“Seguem anexas as planilhas”; “Muito obrigada, disse a servidora”; “Elas mesmas decidiram”; “Estamos quites”); “em anexo” é invariável. Menos é sempre invariável. Só varia quando significa sozinho (“Elas ficaram sós”) e não varia quando significa somente (“Só elas ficaram”); “a sós” é invariável. É proibido, é necessário, é bom, é preciso ficam invariáveis se o substantivo não tiver determinante (“É proibido entrada”; “Água é bom”) e concordam se tiver (“É proibida a entrada”; “A água é boa”). Possível acompanha o artigo da expressão superlativa: “instruções o mais claras possível” (artigo no singular) ou “instruções as mais claras possíveis” (artigo no plural); “as mais claras possível” é erro."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Corrija: “Haviam muitos candidatos, e devem haver vagas suficientes; fazem dois anos que não ocorria concurso.”",
+        "resolucao": "“Havia muitos candidatos, e deve haver vagas suficientes; faz dois anos que não ocorria concurso.” Haver no sentido de existir e fazer indicando tempo são impessoais e ficam no singular, e a impessoalidade passa ao auxiliar (“deve haver”). Se o verbo fosse existir, o plural seria obrigatório: “devem existir vagas”."
+      },
+      {
+        "enunciado": "Corrija, se necessário: “Segue anexo as notas fiscais” e “É proibido a entrada de visitantes”.",
+        "resolucao": "“Seguem anexas as notas fiscais” (ou “Seguem, em anexo, as notas fiscais”): o sujeito posposto é plural e “anexo” é adjetivo, que concorda com “notas”. “É proibida a entrada de visitantes”: havendo artigo antes de “entrada”, a expressão concorda; sem artigo, seria “É proibido entrada de visitantes”."
+      },
+      {
+        "enunciado": "Explique a concordância em “Mais de um técnico participou do treinamento” e em “A maioria dos técnicos participou (participaram) do treinamento”.",
+        "resolucao": "“Mais de um” leva o verbo ao singular, concordando com o numeral “um”. Já a expressão partitiva “a maioria de” seguida de plural admite o singular, concordando com “maioria”, ou o plural, concordando com “técnicos”; as duas formas são corretas."
+      }
+    ],
+    "conceitos": [
+      { "t": "Concordância por atração", "d": "Concordância com o termo mais próximo, admitida, por exemplo, com sujeito composto posposto." },
+      { "t": "Silepse", "d": "Concordância com a ideia, e não com a forma gramatical: “Os brasileiros somos otimistas”." },
+      { "t": "Expressão partitiva", "d": "Expressão como “a maioria de” ou “parte de”; com especificador plural, admite verbo no singular ou no plural." },
+      { "t": "Verbo impessoal", "d": "Verbo sem sujeito, sempre na 3ª pessoa do singular: haver (existir, tempo) e fazer (tempo, clima)." },
+      { "t": "Passiva sintética", "d": "Verbo transitivo direto com “se”; o verbo concorda com o sujeito paciente: “Alugam-se salas”." },
+      { "t": "Meio e bastante", "d": "Variam como numeral, adjetivo ou pronome; não variam como advérbio, junto de adjetivo ou verbo." },
+      { "t": "É proibido, é necessário", "d": "Invariáveis sem determinante (“É proibido entrada”); concordam com determinante (“É proibida a entrada”)." }
+    ],
+    "dominio": [
+      "Acertar ao menos 8 das 10 questões do tópico.",
+      "Corrigir, sem consulta, dez frases com erros de concordância envolvendo haver, fazer, passiva sintética, “mais de um” e verbo ser, justificando cada correção.",
+      "Explicar a diferença entre “meio” e “bastante” variáveis e invariáveis com um exemplo de cada uso."
+    ]
+  }
+}

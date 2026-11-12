@@ -1,0 +1,406 @@
+{
+  "rl-proposicoes": {
+    "objetivos": [
+      "Ao final, você consegue distinguir uma proposição de sentenças que não são proposições (perguntas, ordens, exclamações e sentenças abertas) e classificá-la como simples ou composta.",
+      "Ao final, você consegue reconhecer os conectivos ¬, ∧, ∨, ⊻, → e ↔ nas suas formas em português e calcular o valor lógico de uma proposição composta.",
+      "Ao final, você consegue montar a tabela-verdade de uma proposição composta, sabendo quantas linhas ela terá, e classificá-la como tautologia, contradição ou contingência.",
+      "Ao final, você consegue negar corretamente proposições simples e compostas, sem confundir negação com ideia contrária."
+    ],
+    "explicacao": [
+      "Proposição é toda sentença declarativa à qual se pode atribuir um, e somente um, valor lógico: verdadeiro (V) ou falso (F). A lógica clássica se apoia em três princípios: identidade (uma proposição verdadeira é verdadeira), não contradição (nenhuma proposição é V e F ao mesmo tempo) e terceiro excluído (toda proposição é V ou F, sem terceira possibilidade). A proposição não precisa ser verdadeira, basta poder ser julgada: “O número 7 é par” é uma proposição falsa. Não são proposições as perguntas (“Que horas são?”), as ordens (“Feche a janela.”), as exclamações (“Que dia lindo!”), as sentenças abertas, que têm variável ou sujeito indeterminado (“x + 2 = 5”, “Ele é auditor”), e os paradoxos (“Esta frase é falsa”).",
+      "Proposição simples expressa uma única afirmação e é representada por letra minúscula (p, q, r…): “Contagem fica em Minas Gerais”. Proposição composta é formada por duas ou mais proposições simples ligadas por conectivos e costuma ser representada por letra maiúscula (P, Q…): “Contagem fica em Minas Gerais e Belo Horizonte é capital”. Cuidado com o “e” que apenas relaciona termos de uma mesma ideia, como em “Ana e Bia são irmãs” (uma relação entre as duas), que não forma duas proposições independentes.",
+      "Os conectivos e suas tabelas, que precisam ser memorizadas: negação ¬p (“não p”, “não é verdade que p”) inverte o valor de p. Conjunção p ∧ q (“p e q”; também “p, mas q”, “p, porém q”) é verdadeira só quando p e q são V. Disjunção inclusiva p ∨ q (“p ou q”) é falsa só quando p e q são F. Disjunção exclusiva p ⊻ q (“ou p, ou q”; “p ou q, mas não ambos”) é verdadeira quando p e q têm valores diferentes e falsa quando têm valores iguais.",
+      "Condicional p → q (“se p, então q”; “q, se p”; “quando p, q”; “p implica q”; “p é condição suficiente para q”; “q é condição necessária para p”) é falsa só quando p é V e q é F; em todas as outras linhas é verdadeira. p é o antecedente e q o consequente. Duas consequências práticas: se o antecedente é falso, o condicional é verdadeiro qualquer que seja q; se o consequente é verdadeiro, o condicional é verdadeiro qualquer que seja p. Bicondicional p ↔ q (“p se e somente se q”; “p é condição necessária e suficiente para q”) é verdadeira quando p e q têm valores iguais (V e V, ou F e F) e falsa quando diferem.",
+      "Tabela-verdade lista todas as combinações de valores das proposições simples e o valor da composta em cada uma. Com n proposições simples distintas, a tabela tem 2ⁿ linhas: 2 para uma, 4 para duas, 8 para três, 16 para quatro. Conte letras distintas, não ocorrências: em (p ∧ q) → (r ∨ ¬p) há três (p, q, r), logo 8 linhas. Para montar, a primeira coluna alterna metade V e metade F, a segunda alterna em blocos com a metade do tamanho, e assim por diante até a última, que alterna V, F, V, F. Resolva primeiro o que está entre parênteses; sem parênteses, a ordem usual é ¬, depois ∧ e ∨, depois →, por fim ↔.",
+      "Classificação pelo resultado da última coluna: tautologia é a composta sempre verdadeira (ex.: p ∨ ¬p; p → (p ∨ q)); contradição é a sempre falsa (ex.: p ∧ ¬p); contingência é a que tem ao menos um V e ao menos um F (ex.: p → q). Quando os valores das simples já são dados, não é preciso montar a tabela inteira: substitua os valores e resolva de dentro para fora. Com p V e q F, por exemplo, p → q é F, p ∨ q é V e p ↔ q é F.",
+      "Negar uma proposição é formar outra que tem sempre o valor oposto. A negação de “João é alto” é “João não é alto” (ou “Não é verdade que João é alto”), e não “João é baixo”: esta é uma ideia contrária, pois João pode ser de altura mediana. Do mesmo modo, a negação de “x > 5” é “x ≤ 5”, e não “x < 5”. A dupla negação volta ao original: ¬(¬p) ≡ p.",
+      "Negação das compostas (leis de De Morgan e afins): ¬(p ∧ q) ≡ ¬p ∨ ¬q (nega as duas e troca “e” por “ou”); ¬(p ∨ q) ≡ ¬p ∧ ¬q (nega as duas e troca “ou” por “e”), que em português equivale a “nem p, nem q”; ¬(p → q) ≡ p ∧ ¬q (mantém o antecedente, nega o consequente e troca “se… então” por “e”); ¬(p ↔ q) ≡ p ⊻ q (ou p, ou q, mas não ambos); ¬(p ⊻ q) ≡ p ↔ q. Exemplo: a negação de “Se estudo, então passo” é “Estudo e não passo”.",
+      "Pegadinhas frequentes: a negação de um condicional nunca é outro condicional (“Se não estudo, então não passo” não nega “Se estudo, então passo”); “p ∨ q” é inclusiva, então p e q verdadeiras ao mesmo tempo tornam a disjunção verdadeira; “mas” e “porém” têm valor lógico de conjunção; e “ou… ou…” com repetição indica disjunção exclusiva."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Sabendo que p é verdadeira, q é falsa e r é falsa, determine o valor lógico de (p ∧ ¬q) → (r ∨ q).",
+        "resolucao": "Antecedente: ¬q é V, então p ∧ ¬q = V ∧ V = V. Consequente: r ∨ q = F ∨ F = F. O condicional fica V → F, que é a única combinação falsa do “se… então”. Resultado: a proposição é falsa."
+      },
+      {
+        "enunciado": "Classifique (p ∧ q) → p como tautologia, contradição ou contingência.",
+        "resolucao": "Há duas proposições, logo 4 linhas. p V, q V: (V) → V = V. p V, q F: (F) → V = V. p F, q V: (F) → F = V. p F, q F: (F) → F = V. A última coluna é toda V, portanto a proposição é uma tautologia. Note que, sempre que o antecedente p ∧ q é verdadeiro, p também é, então a linha V → F nunca ocorre."
+      },
+      {
+        "enunciado": "Negue as proposições: (a) “Se Carla estuda, então ela é aprovada”; (b) “Paulo é analista e Rita não é programadora”.",
+        "resolucao": "(a) Forma p → q; a negação é p ∧ ¬q: “Carla estuda e não é aprovada”. (b) Forma p ∧ ¬q; por De Morgan, ¬(p ∧ ¬q) ≡ ¬p ∨ q: “Paulo não é analista ou Rita é programadora”. Em (b), a negação de “Rita não é programadora” é “Rita é programadora” (dupla negação)."
+      }
+    ],
+    "conceitos": [
+      { "t": "Proposição", "d": "Sentença declarativa que admite um, e só um, valor lógico: V ou F." },
+      { "t": "Sentença aberta", "d": "Sentença com variável ou sujeito indeterminado (ex.: “x + 1 = 4”); não é proposição enquanto a variável não for definida ou quantificada." },
+      { "t": "Proposição composta", "d": "Proposição formada por duas ou mais proposições simples ligadas por conectivos." },
+      { "t": "Conectivo lógico", "d": "Operador que forma proposições compostas: ¬ (não), ∧ (e), ∨ (ou), ⊻ (ou… ou), → (se… então), ↔ (se e somente se)." },
+      { "t": "Tabela-verdade", "d": "Quadro com todas as 2ⁿ combinações de valores das n proposições simples e o valor resultante da composta." },
+      { "t": "Tautologia", "d": "Proposição composta verdadeira em todas as linhas da tabela-verdade." },
+      { "t": "Contradição", "d": "Proposição composta falsa em todas as linhas da tabela-verdade." },
+      { "t": "Contingência", "d": "Proposição composta que é verdadeira em algumas linhas e falsa em outras." }
+    ],
+    "dominio": [
+      "Acertar ao menos 8 das 10 questões do tópico.",
+      "Escrever sem consulta, em menos de dois minutos, a tabela-verdade dos conectivos ∧, ∨, ⊻, → e ↔.",
+      "Negar corretamente, sem consulta, uma conjunção, uma disjunção, um condicional e um bicondicional escritos em português."
+    ]
+  },
+  "rl-equivalencias": {
+    "objetivos": [
+      "Ao final, você consegue reconhecer e aplicar as equivalências notáveis (contrapositiva, p → q ≡ ¬p ∨ q, De Morgan, bicondicional) para reescrever frases em português.",
+      "Ao final, você consegue distinguir equivalência lógica (≡) de implicação lógica (⇒) e verificar cada uma pela tabela-verdade.",
+      "Ao final, você consegue negar proposições com os quantificadores “todo”, “algum” e “nenhum”, inclusive dentro de proposições compostas."
+    ],
+    "explicacao": [
+      "Duas proposições P e Q são equivalentes (P ≡ Q) quando têm exatamente a mesma tabela-verdade, isto é, o mesmo valor lógico em todas as linhas. Dito de outro modo, P ≡ Q quando o bicondicional P ↔ Q é uma tautologia. Para provar uma equivalência, compare as colunas finais das duas tabelas; para derrubar uma suposta equivalência, basta encontrar uma única linha em que os valores diferem.",
+      "Equivalências do condicional, as mais cobradas: p → q ≡ ¬q → ¬p (contrapositiva: inverte a ordem e nega as duas partes); p → q ≡ ¬p ∨ q (troca “se… então” por “ou”, negando só o antecedente); p → q ≡ ¬(p ∧ ¬q). Exemplo: “Se chove, a rua molha” equivale a “Se a rua não molha, não choveu” e a “Não chove ou a rua molha”. Atenção: a recíproca (q → p) e a inversa (¬p → ¬q) NÃO equivalem ao condicional original, embora sejam equivalentes entre si.",
+      "Outras equivalências úteis: dupla negação, ¬¬p ≡ p; leis de De Morgan, ¬(p ∧ q) ≡ ¬p ∨ ¬q e ¬(p ∨ q) ≡ ¬p ∧ ¬q; comutatividade de ∧, ∨ e ↔; distributividade, p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r) e p ∨ (q ∧ r) ≡ (p ∨ q) ∧ (p ∨ r); absorção, p ∨ (p ∧ q) ≡ p e p ∧ (p ∨ q) ≡ p. Com condicionais de mesmo consequente ou antecedente: (p → r) ∧ (q → r) ≡ (p ∨ q) → r e (p → q) ∧ (p → r) ≡ p → (q ∧ r).",
+      "Equivalências do bicondicional: p ↔ q ≡ (p → q) ∧ (q → p), ou seja, “se e somente se” é um condicional nos dois sentidos; também p ↔ q ≡ ¬p ↔ ¬q. Sua negação é ¬(p ↔ q) ≡ p ↔ ¬q ≡ p ⊻ q (“ou p, ou q, mas não ambos”).",
+      "Implicação lógica (P ⇒ Q, “P implica Q”) ocorre quando não existe linha da tabela em que P seja V e Q seja F; equivalentemente, quando P → Q é tautologia. A diferença é de natureza: → é um conectivo que forma uma nova proposição, que pode ser V ou F; ⇒ é uma relação entre proposições, que afirma que Q decorre necessariamente de P. Exemplos clássicos: p ∧ q ⇒ p (simplificação), p ⇒ p ∨ q (adição) e (p → q) ∧ p ⇒ q (modus ponens). Equivalência é implicação nos dois sentidos: P ≡ Q quando P ⇒ Q e Q ⇒ P. Pegadinha: p ∨ q não implica p, porque a linha p F, q V torna p ∨ q verdadeira e p falsa.",
+      "Quantificadores transformam sentenças abertas em proposições. O universal ∀ (“todo”, “qualquer que seja”, “para todo”) afirma algo de todos os elementos; o existencial ∃ (“algum”, “existe”, “pelo menos um”) afirma que há ao menos um elemento com a propriedade. “Nenhum A é B” significa que não existe A que seja B, o mesmo que “Todo A não é B”. “Todo A é B” pode ser lido como o condicional “para todo x, se x é A, então x é B”.",
+      "Negações com quantificadores: a negação de “Todo A é B” é “Algum A não é B” (ou “Existe A que não é B”, “Pelo menos um A não é B”). A negação de “Algum A é B” é “Nenhum A é B”. A negação de “Nenhum A é B” é “Algum A é B”. A negação de “Algum A não é B” é “Todo A é B”. Em símbolos: ¬∀x P(x) ≡ ∃x ¬P(x) e ¬∃x P(x) ≡ ∀x ¬P(x). A pegadinha clássica é trocar a negação pelo contrário: “Nenhum A é B” não nega “Todo A é B”, porque as duas podem ser falsas ao mesmo tempo (basta que alguns A sejam B e outros não).",
+      "Quantificadores dentro de compostas seguem as mesmas regras de conectivos. A negação de “Todo analista conhece SQL e algum técnico usa Linux” aplica De Morgan e nega cada parte: “Algum analista não conhece SQL ou nenhum técnico usa Linux”. A negação de “Existe x tal que x > 3 e x < 5” é “Para todo x, x ≤ 3 ou x ≥ 5”."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Escreva duas proposições equivalentes a “Se o servidor está fora do ar, então o sistema não responde”.",
+        "resolucao": "Com p: “o servidor está fora do ar” e q: “o sistema não responde”, a frase é p → q. Contrapositiva (¬q → ¬p): “Se o sistema responde, então o servidor não está fora do ar”. Forma disjuntiva (¬p ∨ q): “O servidor não está fora do ar ou o sistema não responde”. Note que ¬q, a negação de “o sistema não responde”, é “o sistema responde”."
+      },
+      {
+        "enunciado": "Verifique se (p → q) ∧ p implica logicamente q.",
+        "resolucao": "Procure uma linha em que (p → q) ∧ p seja V e q seja F. Para a conjunção ser V, é preciso p V e p → q V; com p V, o condicional só é V se q for V. Logo, sempre que a premissa é verdadeira, q é verdadeira: não há linha V/F, e a implicação vale. É o modus ponens."
+      },
+      {
+        "enunciado": "Negue: “Nenhum candidato chegou atrasado ou todos os fiscais estavam presentes”.",
+        "resolucao": "A forma é A ∨ B; a negação é ¬A ∧ ¬B. ¬(Nenhum candidato chegou atrasado) = “Algum candidato chegou atrasado”. ¬(Todos os fiscais estavam presentes) = “Algum fiscal não estava presente”. Resultado: “Algum candidato chegou atrasado e algum fiscal não estava presente”."
+      }
+    ],
+    "conceitos": [
+      { "t": "Equivalência lógica (≡)", "d": "Relação entre duas proposições que têm a mesma tabela-verdade; P ≡ Q quando P ↔ Q é tautologia." },
+      { "t": "Contrapositiva", "d": "Para p → q, é ¬q → ¬p; sempre equivalente ao condicional original." },
+      { "t": "Recíproca", "d": "Para p → q, é q → p; não é equivalente ao condicional original." },
+      { "t": "Leis de De Morgan", "d": "¬(p ∧ q) ≡ ¬p ∨ ¬q e ¬(p ∨ q) ≡ ¬p ∧ ¬q." },
+      { "t": "Implicação lógica (⇒)", "d": "P ⇒ Q quando não há linha com P verdadeira e Q falsa; equivale a P → Q ser tautologia." },
+      { "t": "Quantificador universal (∀)", "d": "Expressa “todo”, “para todo”, “qualquer que seja”; sua negação é existencial com a propriedade negada." },
+      { "t": "Quantificador existencial (∃)", "d": "Expressa “algum”, “existe”, “pelo menos um”; sua negação é “nenhum” (universal com a propriedade negada)." }
+    ],
+    "dominio": [
+      "Acertar ao menos 8 das 10 questões do tópico.",
+      "Reescrever, sem consulta, um condicional em português na forma contrapositiva e na forma com “ou”, e apontar por que a recíproca não serve.",
+      "Negar corretamente frases com “todo”, “algum”, “nenhum” e “algum… não”, inclusive quando ligadas por “e” ou “ou”."
+    ]
+  },
+  "rl-argumentos": {
+    "objetivos": [
+      "Ao final, você consegue identificar premissas e conclusão de um argumento e representá-lo em linguagem simbólica.",
+      "Ao final, você consegue aplicar as regras de inferência (modus ponens, modus tollens, silogismo hipotético, silogismo disjuntivo e dilema construtivo) para deduzir conclusões a partir de premissas verdadeiras.",
+      "Ao final, você consegue decidir se um argumento é válido e reconhecer as falácias formais de afirmação do consequente e negação do antecedente."
+    ],
+    "explicacao": [
+      "Argumento é um conjunto de proposições em que algumas, as premissas (P1, P2, …, Pn), são apresentadas como razão para aceitar outra, a conclusão (C). Palavras como “logo”, “portanto”, “assim”, “conclui-se que” costumam introduzir a conclusão; “pois”, “porque”, “já que”, “visto que” costumam introduzir premissas. A conclusão nem sempre vem no fim: em “O relatório não está corrompido, pois não gerou erro”, ela aparece primeiro.",
+      "Um argumento é válido quando é impossível que todas as premissas sejam verdadeiras e a conclusão seja falsa. Em linguagem simbólica, o argumento é válido quando (P1 ∧ P2 ∧ … ∧ Pn) → C é uma tautologia, isto é, quando as premissas implicam logicamente a conclusão. A validade depende apenas da forma, não do conteúdo. Por isso, validade não é o mesmo que verdade: um argumento válido pode ter premissa falsa e conclusão falsa, e um argumento inválido pode ter conclusão verdadeira por acaso. O que a validade garante é que, se as premissas forem verdadeiras, a conclusão também será. Quando a questão diz “considere verdadeiras as premissas”, todas devem ser tomadas como V.",
+      "Regras de inferência válidas que mais aparecem: modus ponens (p → q; p; logo q); modus tollens (p → q; ¬q; logo ¬p); silogismo hipotético (p → q; q → r; logo p → r); silogismo disjuntivo (p ∨ q; ¬p; logo q); simplificação (p ∧ q; logo p); conjunção (p; q; logo p ∧ q); adição (p; logo p ∨ q); dilema construtivo (p → q; r → s; p ∨ r; logo q ∨ s).",
+      "Falácias formais são formas inválidas que parecem válidas. Afirmação do consequente: p → q; q; logo p (inválida, porque q pode ser V com p F: “Se chove, a rua molha; a rua molhou; logo choveu” falha se alguém lavou a rua). Negação do antecedente: p → q; ¬p; logo ¬q (inválida pelo mesmo motivo). Também é inválido concluir ¬q de p ∨ q e p, porque a disjunção inclusiva admite p e q verdadeiras; isso só valeria com “ou… ou…” exclusivo.",
+      "Método das premissas verdadeiras (encadeamento): assuma todas as premissas como V. Comece pela premissa simples ou pela conjunção, cujos valores ficam determinados, e propague: em um condicional verdadeiro, antecedente V obriga consequente V, e consequente F obriga antecedente F; em uma disjunção verdadeira, se uma parte é F a outra é V. Ao final, teste as alternativas com os valores obtidos. É o método mais rápido para questões do tipo “pode-se concluir que…”.",
+      "Método da conclusão falsa (tentativa de invalidar): suponha a conclusão F e tente tornar todas as premissas V ao mesmo tempo. Se conseguir, encontrou um contraexemplo e o argumento é inválido; se surgir contradição, o argumento é válido. Funciona muito bem quando a conclusão é um condicional (só é F com antecedente V e consequente F) ou uma disjunção (só é F com as duas partes F). Para argumentos com poucas proposições simples, a tabela-verdade completa também resolve: localize as linhas em que todas as premissas são V e confira se a conclusão é V em todas elas.",
+      "Argumentos com “todo”, “algum” e “nenhum” (categóricos) são analisados com diagramas, assunto do tópico de diagramas lógicos, mas a lógica é a mesma: válido é o que não admite cenário com premissas verdadeiras e conclusão falsa. “Todo A é B; todo B é C; logo, todo A é C” é válido. “Todo A é B; algum C é B; logo, algum C é A” é inválido, pois os C que são B podem estar fora de A.",
+      "Pegadinhas: a questão pede o que decorre necessariamente, não o que é plausível ou provável; a alternativa correta pode estar escrita como contrapositiva ou na forma com “ou” de algo que você deduziu; alternativas que afirmam o consequente ou negam o antecedente são armadilhas frequentes; e uma conclusão verdadeira no mundo real não torna válido um argumento de forma inválida."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Premissas verdadeiras: “Se chove, o jogo é adiado.” “Se o jogo é adiado, a final será no domingo.” “A final não será no domingo.” O que se conclui?",
+        "resolucao": "Símbolos: c → a; a → d; ¬d. Como d é F e a → d é V, a precisa ser F (modus tollens): o jogo não é adiado. Como a é F e c → a é V, c precisa ser F: não chove. Conclusão: “Não chove e o jogo não é adiado”."
+      },
+      {
+        "enunciado": "O argumento “Se Lia estudou, foi aprovada. Lia foi aprovada. Logo, Lia estudou.” é válido?",
+        "resolucao": "Forma: p → q; q; logo p. Tente conclusão falsa com premissas verdadeiras: p F e q V. Então p → q = F → V = V e q = V, ambas premissas verdadeiras, com conclusão falsa. Há contraexemplo, logo o argumento é inválido (afirmação do consequente)."
+      },
+      {
+        "enunciado": "Premissas verdadeiras: “Marcos viaja ou trabalha.” “Se Marcos trabalha, entrega o relatório.” “Marcos não viajou.” O que se conclui?",
+        "resolucao": "Símbolos: v ∨ t; t → r; ¬v. Pelo silogismo disjuntivo, de v ∨ t e ¬v, conclui-se t: Marcos trabalha. Pelo modus ponens, de t → r e t, conclui-se r: Marcos entrega o relatório."
+      }
+    ],
+    "conceitos": [
+      { "t": "Argumento", "d": "Conjunto de premissas apresentado para sustentar uma conclusão." },
+      { "t": "Premissa", "d": "Proposição tomada como ponto de partida, oferecida como razão para a conclusão." },
+      { "t": "Conclusão", "d": "Proposição que se pretende estabelecer a partir das premissas." },
+      { "t": "Argumento válido", "d": "Aquele em que é impossível ter todas as premissas verdadeiras e a conclusão falsa." },
+      { "t": "Modus ponens", "d": "De p → q e p, conclui-se q." },
+      { "t": "Modus tollens", "d": "De p → q e ¬q, conclui-se ¬p." },
+      { "t": "Silogismo disjuntivo", "d": "De p ∨ q e ¬p, conclui-se q." },
+      { "t": "Falácia formal", "d": "Forma de argumento inválida que parece válida, como afirmar o consequente ou negar o antecedente." }
+    ],
+    "dominio": [
+      "Acertar ao menos 8 das 10 questões do tópico.",
+      "Diante de um argumento com condicional, dizer sem consulta se ele é modus ponens, modus tollens, afirmação do consequente ou negação do antecedente.",
+      "Mostrar, pelo método da conclusão falsa, um contraexemplo para um argumento inválido com até três proposições simples."
+    ]
+  },
+  "rl-numeros": {
+    "objetivos": [
+      "Ao final, você consegue classificar um número como natural, inteiro, racional, irracional ou real, inclusive dízimas e raízes.",
+      "Ao final, você consegue resolver expressões com inteiros, frações e decimais respeitando a regra de sinais e a ordem das operações.",
+      "Ao final, você consegue aplicar as propriedades de potências e radicais, simplificar radicais e calcular valor absoluto.",
+      "Ao final, você consegue usar as propriedades dos números naturais (sucessor, paridade, fechamento) para julgar afirmativas."
+    ],
+    "explicacao": [
+      "Conjuntos numéricos: naturais N = {0, 1, 2, 3, …}; inteiros Z = {…, −2, −1, 0, 1, 2, …}; racionais Q, os números que podem ser escritos como a/b, com a e b inteiros e b ≠ 0, o que inclui os inteiros, os decimais exatos (0,75 = 3/4) e as dízimas periódicas (0,333… = 1/3); irracionais, os decimais infinitos e não periódicos, como √2, √7 e π; reais R, a união de racionais e irracionais. Vale N ⊂ Z ⊂ Q ⊂ R. Pegadinhas: √9 = 3 é natural, embora apareça com raiz; uma dízima periódica é racional; a raiz quadrada de um natural que não é quadrado perfeito é irracional; N* indica os naturais sem o zero.",
+      "Propriedades dos naturais: todo natural n tem sucessor n + 1, e todo natural diferente de 0 tem antecessor em N. A adição e a multiplicação de naturais sempre dão natural (fechamento), mas a subtração e a divisão não (3 − 5 = −2 e 3 ÷ 2 = 1,5 não são naturais). Valem comutatividade, associatividade, elemento neutro (0 na adição, 1 na multiplicação) e distributividade: a·(b + c) = a·b + a·c. Paridade: par + par = par, ímpar + ímpar = par, par + ímpar = ímpar; um produto é ímpar só quando todos os fatores são ímpares, por isso o produto de dois naturais consecutivos é sempre par.",
+      "Operações com inteiros: na multiplicação e na divisão, sinais iguais dão resultado positivo e sinais diferentes, negativo. Na adição de números de sinais diferentes, subtraem-se os módulos e mantém-se o sinal do de maior módulo: −9 + 4 = −5. Subtrair um negativo é somar: 7 − (−3) = 10. Ordem das operações: primeiro parênteses, colchetes e chaves; depois potências e raízes; depois multiplicações e divisões, na ordem em que aparecem; por fim adições e subtrações.",
+      "Frações e decimais: para somar frações, use o MMC dos denominadores (1/4 + 1/6 = 3/12 + 2/12 = 5/12); para multiplicar, multiplique numeradores e denominadores; para dividir, multiplique pelo inverso da segunda. Na soma de decimais, alinhe as vírgulas; no produto, o resultado tem tantas casas quanto a soma das casas dos fatores (0,3 × 0,02 = 0,006). Decimal exato vira fração com potência de 10 (0,25 = 25/100 = 1/4). Dízima simples: período sobre tantos 9 quantos forem os algarismos do período (0,444… = 4/9; 0,1212… = 12/99). Dízima composta: (número formado pela parte não periódica seguida do período − parte não periódica) sobre tantos 9 quanto o período e tantos 0 quanto a parte não periódica (0,2333… = (23 − 2)/90 = 21/90 = 7/30). Multiplicar por número entre 0 e 1 diminui o valor; dividir por ele aumenta (6 ÷ 0,5 = 12).",
+      "Potenciação: aⁿ é o produto de n fatores iguais a a. Regras: a⁰ = 1 (a ≠ 0); a¹ = a; a⁻ⁿ = 1/aⁿ; aᵐ · aⁿ = aᵐ⁺ⁿ; aᵐ ÷ aⁿ = aᵐ⁻ⁿ; (aᵐ)ⁿ = aᵐ·ⁿ; (a·b)ⁿ = aⁿ·bⁿ. Base negativa com expoente par dá resultado positivo, com expoente ímpar, negativo: (−2)⁴ = 16 e (−2)³ = −8. Pegadinha clássica: −3² = −9, porque o expoente atua só sobre o 3, enquanto (−3)² = 9. Outra: (2³)² = 2⁶ = 64, diferente de 2^(3²) = 2⁹ = 512.",
+      "Radiciação: ⁿ√a = b quando bⁿ = a. Propriedades: √(a·b) = √a · √b; √(a/b) = √a / √b; ⁿ√(aᵐ) = a^(m/n). Para simplificar, procure o maior quadrado perfeito que divide o radicando: √72 = √(36·2) = 6√2. Só se somam radicais semelhantes (mesmo índice e mesmo radicando): 3√2 + 5√2 = 8√2, mas √2 + √3 não é √5. A raiz quadrada de número negativo não é real, e √(x²) = |x|. Para racionalizar 1/√2, multiplique em cima e embaixo por √2: √2/2.",
+      "Valor absoluto (módulo) é a distância do número até o zero na reta: |a| = a se a ≥ 0 e |a| = −a se a < 0. Assim, |−7| = 7, |7| = 7 e |0| = 0. A distância entre dois pontos a e b da reta é |a − b|. O módulo nunca é negativo; já −|x| nunca é positivo (|−4| = 4, mas −|4| = −4). Na comparação de negativos, o maior é o de menor módulo: −3 > −8.",
+      "Pegadinhas frequentes: comparar decimais casa a casa (0,5 > 0,48, pois 0,50 > 0,48); esquecer que o zero é natural e inteiro; tratar 0,999… como menor que 1, quando 0,999… = 9/9 = 1; e resolver da esquerda para a direita ignorando a prioridade da multiplicação."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Calcule 2³ − (−3)² + 4 · (−2) + √49.",
+        "resolucao": "Potências e raiz primeiro: 2³ = 8, (−3)² = 9 e √49 = 7. Multiplicação: 4 · (−2) = −8. Então 8 − 9 − 8 + 7 = −2."
+      },
+      {
+        "enunciado": "Calcule 0,333… + 1/6 e dê a resposta na forma decimal.",
+        "resolucao": "0,333… = 3/9 = 1/3. Com MMC 6: 1/3 + 1/6 = 2/6 + 1/6 = 3/6 = 1/2 = 0,5."
+      },
+      {
+        "enunciado": "Simplifique √50 + √18 − √8.",
+        "resolucao": "√50 = √(25·2) = 5√2; √18 = √(9·2) = 3√2; √8 = √(4·2) = 2√2. Como os radicais ficaram semelhantes: 5√2 + 3√2 − 2√2 = 6√2."
+      }
+    ],
+    "conceitos": [
+      { "t": "Número natural", "d": "Elemento de N = {0, 1, 2, 3, …}; N* exclui o zero." },
+      { "t": "Número inteiro", "d": "Elemento de Z: os naturais e seus opostos negativos." },
+      { "t": "Número racional", "d": "Número que pode ser escrito como a/b, com a e b inteiros e b ≠ 0; inclui decimais exatos e dízimas periódicas." },
+      { "t": "Número irracional", "d": "Decimal infinito e não periódico, como √2 e π; não pode ser escrito como fração de inteiros." },
+      { "t": "Número real", "d": "Elemento de R, a união dos racionais com os irracionais." },
+      { "t": "Dízima periódica", "d": "Decimal infinito com bloco que se repete; é racional e tem fração geratriz." },
+      { "t": "Valor absoluto", "d": "Distância do número até o zero; |a| é sempre maior ou igual a zero." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Classificar sem consulta dez números (incluindo dízimas e raízes) nos conjuntos N, Z, Q, irracionais e R.",
+      "Resolver uma expressão com potência de base negativa, raiz e multiplicação sem errar a ordem das operações."
+    ]
+  },
+  "rl-divisibilidade": {
+    "objetivos": [
+      "Ao final, você consegue decompor um número natural em fatores primos e contar seus divisores.",
+      "Ao final, você consegue aplicar os critérios de divisibilidade por 2, 3, 4, 5, 6, 8, 9, 10 e 11.",
+      "Ao final, você consegue calcular MDC e MMC e reconhecer, no enunciado, qual dos dois resolve o problema."
+    ],
+    "explicacao": [
+      "Número primo é o natural maior que 1 que tem exatamente dois divisores naturais: 1 e ele mesmo. Os primeiros são 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 e 37. O 2 é o único primo par. O 1 não é primo nem composto, pois tem um único divisor. Número composto tem mais de dois divisores. Pelo teorema fundamental da aritmética, todo natural maior que 1 é primo ou se escreve como produto de primos de modo único, a menos da ordem dos fatores. Para decompor, divida sucessivamente pelo menor primo possível: 360 = 2 · 2 · 2 · 3 · 3 · 5 = 2³ · 3² · 5.",
+      "Múltiplos e divisores: a é múltiplo de b quando a = b · k para algum natural k; nesse caso, b é divisor de a. O zero é múltiplo de todos os números; o 1 é divisor de todos. O conjunto dos múltiplos de um número é infinito; o dos divisores é finito. Quantidade de divisores naturais: se n = pᵃ · qᵇ · rᶜ (p, q, r primos), n tem (a + 1)(b + 1)(c + 1) divisores. Para 360 = 2³ · 3² · 5¹: 4 · 3 · 2 = 24 divisores.",
+      "Critérios de divisibilidade: por 2, se termina em algarismo par; por 3, se a soma dos algarismos é múltiplo de 3; por 4, se os dois últimos algarismos formam múltiplo de 4 (ou são 00); por 5, se termina em 0 ou 5; por 6, se é divisível por 2 e por 3; por 8, se os três últimos algarismos formam múltiplo de 8; por 9, se a soma dos algarismos é múltiplo de 9; por 10, se termina em 0; por 11, se a diferença entre a soma dos algarismos de ordem ímpar e a soma dos de ordem par é múltiplo de 11 (por exemplo, 2.574: (4 + 5) − (7 + 2) = 0, divisível).",
+      "Pegadinha dos critérios combinados: ser divisível por dois números garante divisibilidade pelo produto deles só quando eles são primos entre si. Por 2 e 3 garante por 6, e por 3 e 5 garante por 15; mas por 4 e 6 não garante por 24: 12 é divisível por 4 e por 6 e não é por 24. Nesse caso, garante-se apenas a divisibilidade pelo MMC, 12.",
+      "MDC (máximo divisor comum) é o maior número que divide todos os dados. Pela fatoração, tome os primos comuns com os menores expoentes: 84 = 2² · 3 · 7 e 126 = 2 · 3² · 7 dão MDC = 2 · 3 · 7 = 42. Também se obtém o MDC por divisões sucessivas (algoritmo de Euclides). Os divisores comuns de dois números são exatamente os divisores do MDC deles.",
+      "MMC (mínimo múltiplo comum) é o menor número positivo que é múltiplo de todos os dados. Pela fatoração, tome todos os primos, comuns e não comuns, com os maiores expoentes: MMC(4, 6, 10) = 2² · 3 · 5 = 60. Para dois números, vale MDC(a, b) · MMC(a, b) = a · b. Números primos entre si (MDC = 1) têm MMC igual ao produto.",
+      "Como escolher: MDC resolve problemas de dividir, cortar ou agrupar em partes iguais do maior tamanho possível, sem sobra; o número de partes é a soma dos quocientes de cada quantidade pelo MDC. MMC resolve problemas de eventos periódicos que voltam a coincidir e de encontrar a menor quantidade divisível por vários números. Se “sobra sempre r” ao agrupar de a em a, de b em b etc., o número é um múltiplo do MMC somado a r.",
+      "Pegadinhas: em problemas de datas, o MMC dá o intervalo, que deve ser somado à data inicial contando os dias de cada mês; se os eventos coincidem às 8 h e o MMC é 12 h, a próxima coincidência é às 20 h, não às 12 h; e a pergunta pode pedir o tamanho de cada parte (o MDC) ou o número de partes (a soma dos quocientes)."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Decomponha 360 em fatores primos e determine quantos divisores naturais ele tem.",
+        "resolucao": "360 ÷ 2 = 180; ÷ 2 = 90; ÷ 2 = 45; ÷ 3 = 15; ÷ 3 = 5; ÷ 5 = 1. Logo 360 = 2³ · 3² · 5. Divisores: (3 + 1)(2 + 1)(1 + 1) = 4 · 3 · 2 = 24."
+      },
+      {
+        "enunciado": "Duas barras de ferro de uma obra, com 84 cm e 120 cm, serão cortadas em pedaços iguais, do maior tamanho possível, sem sobra. Qual o tamanho de cada pedaço e quantos pedaços serão obtidos?",
+        "resolucao": "84 = 2² · 3 · 7 e 120 = 2³ · 3 · 5, então MDC = 2² · 3 = 12 cm. Pedaços: 84 ÷ 12 = 7 e 120 ÷ 12 = 10, total de 17."
+      },
+      {
+        "enunciado": "Três rotinas de backup rodam a cada 6, 8 e 12 horas e rodaram juntas à 0 h. Quando voltam a rodar juntas?",
+        "resolucao": "6 = 2 · 3, 8 = 2³, 12 = 2² · 3. MMC = 2³ · 3 = 24 horas. Voltam a coincidir à 0 h do dia seguinte."
+      }
+    ],
+    "conceitos": [
+      { "t": "Número primo", "d": "Natural maior que 1 com exatamente dois divisores: 1 e ele mesmo." },
+      { "t": "Número composto", "d": "Natural maior que 1 com mais de dois divisores." },
+      { "t": "Múltiplo", "d": "a é múltiplo de b quando a = b · k, com k natural." },
+      { "t": "Divisor", "d": "b é divisor de a quando a divisão de a por b é exata." },
+      { "t": "MDC", "d": "Maior divisor comum; produto dos primos comuns com os menores expoentes." },
+      { "t": "MMC", "d": "Menor múltiplo comum positivo; produto de todos os primos com os maiores expoentes." },
+      { "t": "Primos entre si", "d": "Números cujo MDC é 1; seu MMC é o produto deles." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Decompor um número de três algarismos e contar seus divisores em menos de dois minutos.",
+      "Explicar, diante de um problema, por que ele pede MDC ou MMC antes de calcular."
+    ]
+  },
+  "rl-razao": {
+    "objetivos": [
+      "Ao final, você consegue escrever e interpretar razões, inclusive escalas, e resolver proporções pela propriedade fundamental.",
+      "Ao final, você consegue reconhecer se duas grandezas são diretamente proporcionais, inversamente proporcionais ou não proporcionais.",
+      "Ao final, você consegue dividir um valor em partes diretamente ou inversamente proporcionais a números dados."
+    ],
+    "explicacao": [
+      "Razão entre a e b (b ≠ 0) é o quociente a/b, que compara as duas quantidades por divisão; a ordem importa (“de a para b”). Razões especiais: escala = medida no desenho / medida real, nas mesmas unidades (escala 1:200 significa que 1 cm no desenho vale 200 cm = 2 m na realidade); velocidade média = distância / tempo; densidade demográfica = habitantes / área.",
+      "Proporção é a igualdade entre duas razões: a/b = c/d. Os termos a e d são os extremos; b e c, os meios. Propriedade fundamental: o produto dos meios é igual ao produto dos extremos, a · d = b · c, o que permite achar um termo desconhecido. Propriedade da soma: se a/b = c/d, então (a + c)/(b + d) = a/b; é útil quando se conhece a razão entre duas partes e o total. Se a razão entre analistas e técnicos é 3/5 e o total é 40, as partes são 3k e 5k com 8k = 40.",
+      "Grandezas diretamente proporcionais variam na mesma razão: a razão entre os valores correspondentes é constante (y/x = k). Dobrando uma, a outra dobra; reduzindo uma à terça parte, a outra também se reduz à terça parte. Exemplo: quantidade de resmas compradas e valor total pago, com preço unitário fixo.",
+      "Grandezas inversamente proporcionais variam em razão inversa: o produto dos valores correspondentes é constante (x · y = k). Dobrando uma, a outra cai pela metade. Exemplos: número de máquinas iguais e tempo para concluir a mesma tarefa; velocidade e tempo para percorrer a mesma distância.",
+      "Pegadinha: nem toda grandeza que cresce junto com outra é proporcional. Idade e altura de uma criança crescem juntas, mas a razão entre elas não é constante. Para decidir, teste: razão constante indica proporção direta; produto constante, proporção inversa; nenhum dos dois, não há proporcionalidade.",
+      "Divisão em partes diretamente proporcionais: para dividir N em partes proporcionais a a, b e c, faça as partes iguais a a·k, b·k e c·k, com k = N/(a + b + c). Exemplo: R$ 7.200 proporcionalmente a 2, 3 e 4 dá k = 7.200/9 = 800 e partes de R$ 1.600, R$ 2.400 e R$ 3.200.",
+      "Divisão em partes inversamente proporcionais: dividir N inversamente a a, b e c é dividir diretamente proporcional a 1/a, 1/b e 1/c. Para evitar frações, multiplique os inversos pelo MMC dos denominadores. Exemplo: 260 inversamente a 2, 3 e 4 equivale a dividir proporcionalmente a 1/2, 1/3, 1/4, ou, multiplicando por 12, a 6, 4 e 3; k = 260/13 = 20, e as partes são 120, 80 e 60. Note que quem tem o maior número recebe a menor parte.",
+      "Divisão composta: quando a parte deve ser diretamente proporcional a uma grandeza e inversamente a outra, use como peso o quociente das duas (por exemplo, horas trabalhadas ÷ faltas). Quando é diretamente proporcional a duas grandezas, use o produto delas."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Em um mapa na escala 1:25.000, duas escolas estão a 8 cm de distância. Qual a distância real?",
+        "resolucao": "Cada centímetro do mapa vale 25.000 cm. 8 · 25.000 = 200.000 cm = 2.000 m = 2 km."
+      },
+      {
+        "enunciado": "Um prêmio de R$ 7.200 será dividido entre três equipes em partes diretamente proporcionais a 2, 3 e 4 projetos entregues. Quanto recebe cada equipe?",
+        "resolucao": "k = 7.200 / (2 + 3 + 4) = 800. Partes: 2 · 800 = R$ 1.600; 3 · 800 = R$ 2.400; 4 · 800 = R$ 3.200. Conferência: 1.600 + 2.400 + 3.200 = 7.200."
+      },
+      {
+        "enunciado": "Divida 260 em partes inversamente proporcionais a 2, 3 e 4.",
+        "resolucao": "Inversos: 1/2, 1/3, 1/4. Multiplicando por 12 (MMC): 6, 4, 3. k = 260 / (6 + 4 + 3) = 20. Partes: 120, 80 e 60. Conferência: 2 · 120 = 3 · 80 = 4 · 60 = 240, produto constante."
+      }
+    ],
+    "conceitos": [
+      { "t": "Razão", "d": "Quociente a/b (b ≠ 0) que compara duas quantidades na ordem dada." },
+      { "t": "Proporção", "d": "Igualdade entre duas razões, a/b = c/d." },
+      { "t": "Propriedade fundamental", "d": "Em a/b = c/d, o produto dos extremos é igual ao dos meios: a · d = b · c." },
+      { "t": "Grandezas diretamente proporcionais", "d": "Grandezas cuja razão entre valores correspondentes é constante." },
+      { "t": "Grandezas inversamente proporcionais", "d": "Grandezas cujo produto entre valores correspondentes é constante." },
+      { "t": "Escala", "d": "Razão entre a medida no desenho e a medida real, nas mesmas unidades." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Dizer, para cinco pares de grandezas, se são direta, inversamente ou não proporcionais, justificando pela razão ou pelo produto constante.",
+      "Dividir um valor em partes inversamente proporcionais a três números, conferindo que os produtos ficaram iguais."
+    ]
+  },
+  "rl-regra-tres": {
+    "objetivos": [
+      "Ao final, você consegue montar e resolver regras de três simples, decidindo se a relação é direta ou inversa.",
+      "Ao final, você consegue resolver regras de três compostas comparando cada grandeza com a incógnita.",
+      "Ao final, você consegue evitar os erros de unidade e de tempo (horas e minutos) que costumam aparecer nesses problemas."
+    ],
+    "explicacao": [
+      "Regra de três simples resolve problemas com duas grandezas proporcionais em que se conhecem três valores e se procura o quarto. Monte duas colunas, uma por grandeza, com a mesma unidade em cada coluna, e coloque os valores correspondentes na mesma linha.",
+      "Para decidir se a relação é direta ou inversa, pergunte: se uma grandeza dobra, a outra dobra (direta) ou cai pela metade (inversa)? Mais páginas exigem mais tempo de impressão (direta); mais servidores trabalhando terminam a mesma tarefa em menos dias (inversa); maior velocidade percorre o mesmo trajeto em menos tempo (inversa).",
+      "Direta: as razões são iguais e se multiplica em cruz. Se 5 resmas custam R$ 120, 8 resmas custam x, com 5/8 = 120/x, logo 5x = 960 e x = R$ 192. Inversa: inverte-se uma das razões antes de multiplicar em cruz, o que equivale a dizer que o produto é constante. Se 4 técnicos instalam um laboratório em 9 h, 6 técnicos levam x com 4 · 9 = 6 · x, logo x = 6 h.",
+      "Regra de três composta envolve três ou mais grandezas. Método: coloque a coluna da incógnita como referência; compare cada outra grandeza com a incógnita, isoladamente, supondo as demais fixas, e marque se é direta ou inversa; escreva a razão da incógnita igual ao produto das outras razões, invertendo as que forem inversas. A comparação é sempre com a incógnita, nunca entre as outras grandezas.",
+      "Método alternativo para composta: em problemas de trabalho, a expressão (pessoas · horas por dia · dias) / (quantidade de trabalho) permanece constante. Assim, (P₁ · H₁ · D₁) / T₁ = (P₂ · H₂ · D₂) / T₂. Exemplo: 6 pedreiros, 8 h/dia, 15 dias, 120 m² dão 6 · 8 · 15 / 120 = 6; com 10 pedreiros, 6 h/dia e 200 m², 10 · 6 · D / 200 = 6, logo D = 20 dias.",
+      "Fatores que aumentam a produção (eficiência, rendimento) entram como as pessoas; fatores que a dificultam (dificuldade, dureza do terreno) entram como a quantidade de trabalho. Se o enunciado diz que a nova equipe é duas vezes mais eficiente, ela faz em metade do tempo o que a original faria.",
+      "Pegadinhas de unidades: não misture minutos e horas na mesma coluna; converta antes. Lembre que 1 h 20 min = 80 min, e não 1,2 h; 0,5 h = 30 min. Na resposta, converta de volta: 7,5 h = 7 h 30 min. Confira também se a resposta faz sentido: com mais pessoas, o tempo deve diminuir."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Cinco resmas de papel custam R$ 120,00. Quanto custam oito resmas?",
+        "resolucao": "Grandezas diretamente proporcionais (mais resmas, maior custo). 5/8 = 120/x → 5x = 960 → x = R$ 192,00."
+      },
+      {
+        "enunciado": "Quatro técnicos instalam um laboratório em 9 horas. Em quanto tempo seis técnicos, no mesmo ritmo, fazem a mesma instalação?",
+        "resolucao": "Inversamente proporcionais (mais técnicos, menos tempo). Produto constante: 4 · 9 = 6 · x → x = 36/6 = 6 horas."
+      },
+      {
+        "enunciado": "Seis pedreiros, trabalhando 8 h por dia, levantam 120 m² de muro em 15 dias. Em quantos dias dez pedreiros, trabalhando 6 h por dia, levantam 200 m²?",
+        "resolucao": "Em relação aos dias: mais pedreiros → menos dias (inversa); menos horas por dia → mais dias (inversa); mais muro → mais dias (direta). D = 15 · (6/10) · (8/6) · (200/120) = 15 · 0,6 · (4/3) · (5/3) = 20 dias."
+      }
+    ],
+    "conceitos": [
+      { "t": "Regra de três simples", "d": "Cálculo do quarto valor em uma proporção entre duas grandezas." },
+      { "t": "Regra de três composta", "d": "Cálculo de um valor desconhecido envolvendo três ou mais grandezas proporcionais." },
+      { "t": "Relação direta", "d": "Quando uma grandeza aumenta, a outra aumenta na mesma razão." },
+      { "t": "Relação inversa", "d": "Quando uma grandeza aumenta, a outra diminui na razão inversa; o produto é constante." },
+      { "t": "Incógnita", "d": "Valor procurado; é a referência com a qual cada grandeza é comparada." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Montar uma regra de três composta com quatro grandezas e indicar, para cada uma, se é direta ou inversa em relação à incógnita.",
+      "Converter corretamente entre horas decimais e horas e minutos ao dar a resposta."
+    ]
+  },
+  "rl-porcentagem": {
+    "objetivos": [
+      "Ao final, você consegue calcular porcentagens de um valor e a taxa percentual que uma parte representa de um todo.",
+      "Ao final, você consegue usar fatores multiplicativos para aumentos e descontos, inclusive sucessivos, e recuperar o valor original.",
+      "Ao final, você consegue calcular variações percentuais e distinguir porcentagem de ponto percentual."
+    ],
+    "explicacao": [
+      "Porcentagem é uma razão de denominador 100: 25% = 25/100 = 0,25. Para calcular x% de V, faça (x/100) · V. Atalhos: 10% é dividir por 10; 1% é dividir por 100; 50% é a metade; 25%, a quarta parte; 20%, a quinta parte. Para 35% de 840: 10% = 84, então 30% = 252 e 5% = 42, total 294.",
+      "Para saber quantos por cento uma parte representa do todo, divida a parte pelo todo e multiplique por 100. Se 24 de 160 computadores têm defeito, a taxa é 24/160 = 0,15 = 15%.",
+      "Fator multiplicativo: um aumento de i% multiplica o valor por (1 + i/100); um desconto de i% multiplica por (1 − i/100). Aumento de 6%: × 1,06; desconto de 20%: × 0,80. Para recuperar o valor original a partir do final, divida pelo fator: se após 20% de desconto o preço é R$ 960, o original é 960 ÷ 0,8 = R$ 1.200. Erro comum: somar 20% de 960 ao preço final, o que dá R$ 1.152, porque a base dos 20% era o preço original.",
+      "Aumentos e descontos sucessivos se combinam multiplicando os fatores, nunca somando as taxas. Aumentos de 10% e de 20%: 1,10 · 1,20 = 1,32, aumento acumulado de 32%. Aumento de 20% seguido de desconto de 20%: 1,2 · 0,8 = 0,96, queda de 4% em relação ao início. A ordem dos fatores não altera o resultado.",
+      "Variação percentual = (valor final − valor inicial) / valor inicial · 100. A base é sempre o valor inicial. De 80 para 100, a variação é 20/80 = +25%; de 100 para 80, é −20/100 = −20%. Por isso, se A é 25% maior que B, então B é 20% menor que A.",
+      "Desconto que anula um aumento: depois de um aumento de i%, o desconto necessário para voltar ao valor original é menor que i%. Após +25% (fator 1,25), o fator de volta é 1/1,25 = 0,8, ou seja, desconto de 20%.",
+      "Ponto percentual (p.p.) mede a diferença entre duas taxas; porcentagem mede a variação relativa. Se a taxa de aprovação passa de 40% para 50%, ela subiu 10 pontos percentuais, o que é um aumento de 10/40 = 25% em relação à taxa inicial.",
+      "Pegadinhas: somar taxas sucessivas; aplicar o desconto sobre o valor final em vez do original; confundir “x% de” com “x% a mais que” (30% a mais que 200 é 260, e não 60); e calcular a variação sobre o valor final."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Um notebook de R$ 3.000 teve aumento de 10% e, depois, desconto de 10%. Qual o preço final?",
+        "resolucao": "3.000 · 1,10 · 0,90 = 3.000 · 0,99 = R$ 2.970. O preço final é 1% menor que o inicial, e não igual a ele."
+      },
+      {
+        "enunciado": "Após desconto de 15%, uma cadeira custou R$ 1.700. Qual era o preço original?",
+        "resolucao": "Fator do desconto: 0,85. Original = 1.700 ÷ 0,85 = R$ 2.000. Conferência: 15% de 2.000 = 300; 2.000 − 300 = 1.700."
+      },
+      {
+        "enunciado": "O número de inscritos em um curso passou de 1.250 para 1.500. Qual a variação percentual?",
+        "resolucao": "(1.500 − 1.250) / 1.250 = 250 / 1.250 = 0,20, ou seja, aumento de 20%."
+      }
+    ],
+    "conceitos": [
+      { "t": "Porcentagem", "d": "Razão com denominador 100; x% = x/100." },
+      { "t": "Fator de aumento", "d": "Multiplicador 1 + i/100 que aplica um aumento de i%." },
+      { "t": "Fator de desconto", "d": "Multiplicador 1 − i/100 que aplica um desconto de i%." },
+      { "t": "Variação percentual", "d": "(final − inicial) / inicial · 100; a base é o valor inicial." },
+      { "t": "Taxa acumulada", "d": "Resultado de variações sucessivas, obtido multiplicando os fatores." },
+      { "t": "Ponto percentual", "d": "Diferença absoluta entre duas taxas percentuais." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Calcular de cabeça, por atalhos de 10%, 5% e 1%, porcentagens de valores redondos.",
+      "Explicar por que um aumento de 20% seguido de desconto de 20% não devolve o valor original."
+    ]
+  },
+  "rl-medidas": {
+    "objetivos": [
+      "Ao final, você consegue converter unidades de comprimento, massa e capacidade do sistema métrico decimal.",
+      "Ao final, você consegue relacionar capacidade e volume (1 dm³ = 1 L; 1 m³ = 1.000 L).",
+      "Ao final, você consegue operar com medidas de tempo no sistema sexagesimal e converter horas decimais em horas e minutos."
+    ],
+    "explicacao": [
+      "O sistema métrico decimal usa prefixos que multiplicam a unidade-base por potências de 10: quilo (k) = 1.000; hecto (h) = 100; deca (da) = 10; deci (d) = 1/10; centi (c) = 1/100; mili (m) = 1/1.000. Na “escada” km, hm, dam, m, dm, cm, mm, cada degrau para a direita multiplica por 10 e cada degrau para a esquerda divide por 10. A mesma escada vale para o grama (kg, hg, dag, g, dg, cg, mg) e para o litro (kL, hL, daL, L, dL, cL, mL).",
+      "Comprimento: a unidade-base é o metro. 1 km = 1.000 m; 1 m = 100 cm = 1.000 mm; 1 cm = 10 mm. Para somar medidas, converta tudo para a mesma unidade: 2,5 km + 750 m = 2.500 m + 750 m = 3.250 m.",
+      "Massa: a unidade-base do SI é o quilograma; o grama é a referência dos prefixos. 1 kg = 1.000 g; 1 g = 1.000 mg; 1 tonelada (t) = 1.000 kg. Exemplo: 48 pacotes de 250 g somam 12.000 g = 12 kg.",
+      "Capacidade e volume: 1 L = 1.000 mL. A ligação com o volume é 1 dm³ = 1 L, logo 1 m³ = 1.000 dm³ = 1.000 L e 1 cm³ = 1 mL. Atenção: em unidades de área, cada degrau da escada vale 100 (1 m² = 100 dm²); em unidades de volume, vale 1.000 (1 m³ = 1.000 dm³). Um reservatório de 2 m × 1,5 m × 1 m tem 3 m³ = 3.000 L.",
+      "Tempo: o sistema é sexagesimal, não decimal. 1 h = 60 min; 1 min = 60 s; 1 h = 3.600 s; 1 dia = 24 h; 1 semana = 7 dias. Por isso, 1,5 h = 1 h 30 min (e não 1 h 50 min), 0,25 h = 15 min e 0,75 h = 45 min. Para somar horários, some minutos com minutos e horas com horas, e a cada 60 minutos acrescente 1 hora; passando de 24 h, desconte 24 e conte o dia seguinte.",
+      "Quantidade: algumas palavras indicam quantidades fixas: dezena (10), dúzia (12), meia dúzia (6), centena (100) e milhar (1.000). Em problemas, converta-as em números antes de operar.",
+      "Estratégia: identifique a unidade pedida na resposta, converta todos os dados para ela no início e só então calcule. Em velocidade, lembre que km/h ÷ 3,6 = m/s (72 km/h = 20 m/s), porque 1 km/h = 1.000 m / 3.600 s.",
+      "Pegadinhas: tratar minutos como decimais (7 h 45 min não é 7,45 h, e sim 7,75 h); esquecer que área e volume não seguem a escada de 10 em 10; e trocar mL por cL ou dm³ por m³."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Converta 3,75 h em horas e minutos.",
+        "resolucao": "A parte inteira são 3 h. A parte decimal: 0,75 · 60 = 45 min. Resultado: 3 h 45 min."
+      },
+      {
+        "enunciado": "Uma caixa d'água tem 2 m de comprimento, 1,5 m de largura e 1 m de altura. Quantos litros ela comporta?",
+        "resolucao": "Volume = 2 · 1,5 · 1 = 3 m³. Como 1 m³ = 1.000 L, a capacidade é 3.000 L."
+      },
+      {
+        "enunciado": "Some 2,4 kg + 650 g + 0,35 kg e dê o resultado em quilogramas.",
+        "resolucao": "Em gramas: 2.400 + 650 + 350 = 3.400 g. Em quilogramas: 3.400 ÷ 1.000 = 3,4 kg."
+      }
+    ],
+    "conceitos": [
+      { "t": "Metro (m)", "d": "Unidade-base de comprimento; 1 km = 1.000 m e 1 m = 100 cm." },
+      { "t": "Quilograma (kg)", "d": "Unidade-base de massa do SI; 1 kg = 1.000 g." },
+      { "t": "Litro (L)", "d": "Unidade de capacidade; 1 L = 1.000 mL = 1 dm³." },
+      { "t": "Metro cúbico (m³)", "d": "Unidade de volume; 1 m³ = 1.000 L." },
+      { "t": "Sistema sexagesimal", "d": "Base 60 usada no tempo: 1 h = 60 min e 1 min = 60 s." },
+      { "t": "Prefixos decimais", "d": "Quilo (1.000), hecto (100), deca (10), deci (1/10), centi (1/100), mili (1/1.000)." }
+    ],
+    "dominio": [
+      "Acertar ao menos 7 das 9 questões do tópico.",
+      "Converter sem consulta entre km, m, cm e mm; kg, g e mg; L, mL, dm³ e m³.",
+      "Somar horários com virada de dia e converter horas decimais em horas e minutos sem erro."
+    ]
+  }
+}

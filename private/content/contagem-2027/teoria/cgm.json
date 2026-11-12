@@ -1,0 +1,578 @@
+{
+  "cgm-historia": {
+    "objetivos": [
+      "Ao final, você consegue explicar a origem de Contagem a partir do posto fiscal conhecido como Registro das Abóboras e do arraial de São Gonçalo.",
+      "Ao final, você consegue ordenar os marcos jurídicos de 1854, 1911, 1938 e 1948 e dizer o que cada um mudou na situação do território.",
+      "Ao final, você consegue relacionar a criação da Cidade Industrial, em 1941, e as lutas operárias à formação do município moderno."
+    ],
+    "explicacao": [
+      "Origem: o próprio IBGE registra que a história de Contagem tem versões diversas. Uma delas fala de uma família de sobrenome “Abóboras” que teria construído a igreja original, mas essa versão não tem documentação suficiente. A versão mais aceita liga a cidade a um posto fiscal da Coroa portuguesa (um “registro”) instalado às margens do Ribeirão das Abóboras, em terras da sesmaria do capitão João de Souza Souto Maior, para fazer a contagem do gado que vinha da região do Rio São Francisco em direção às minas. Daí vêm os nomes “Registro das Abóboras” e “Contagem”. Atenção à data: o histórico do IBGE fala em 1701 para a instalação do posto; o Atlas Escolar de Contagem (pesquisa da PUC Minas) cita documento segundo o qual as primeiras entradas pelo Registro datam de agosto de 1716; a Prefeitura fala apenas em “início do século XVIII”. Em prova, prefira “início do século XVIII” quando a alternativa não trouxer o ano.",
+      "O povoado do Registro: segundo o IBGE, a partir de 1716 o entorno do posto atraiu senhores de escravizados, mineradores, funcionários do Registro, religiosos e comerciantes, com negócio de gado, ouro em pó e barras de ouro. Mas o volume de ouro estocado ali era pequeno em comparação com outros postos da Comarca de Sabará, e o povoado não se expandiu; ele definhou com o fechamento do posto, por volta de 1759. A Prefeitura acrescenta que no Registro se registrava e taxava ouro e outras mercadorias, inclusive gado e pessoas escravizadas. O imóvel hoje chamado Casa da Cultura Nair Mendes Moreira é considerado a casa mais antiga da cidade (por volta de 1716); o IBGE identifica o local do posto com a atual Casa da Cultura, enquanto o texto da Prefeitura diz que a Casa do Registro funcionava próximo dali.",
+      "O arraial de São Gonçalo: perto do posto, em terras públicas, formou-se outro povoado em torno de uma capela dedicada a São Gonçalo do Amarante, protetor dos viajantes, cujos primeiros registros são de 1725. Como havia muitos “São Gonçalos” na Capitania, o lugar passou a ser identificado pelo ribeirão e pelo registro: São Gonçalo do Ribeirão das Abóboras, São Gonçalo da Contagem e, por fim, Arraial de São Gonçalo da Contagem das Abóboras. Esse arraial é o núcleo original da cidade e corresponde à atual região da Sede. A capela foi substituída por construção maior em 1825 e, em 1854, elevada a Matriz, separando-se da Paróquia da Boa Viagem, do Curral del Rei.",
+      "Distrito (1854): pela Lei Provincial nº 671, de 29/04/1854, foi criado o distrito de Contagem dos Abóboras, subordinado ao município de Santa Quitéria (atual Esmeraldas). Ou seja: antes de ter autonomia, Contagem era distrito de outro município.",
+      "Autonomia (1911): a Lei Estadual nº 556, de 30/08/1911, sancionada pelo presidente do Estado Júlio Bueno Brandão, reorganizou a divisão administrativa de Minas e elevou Contagem à categoria de vila (na linguagem da época, a sede de um município), desmembrada de Santa Quitéria. A nova unidade tinha quatro distritos: Contagem, Campanha, Vargem da Pantana e Vera Cruz. É por isso que a Prefeitura comemora o aniversário e a emancipação política em 30 de agosto: em 2026, a cidade completou 115 anos. Pegadinha: o IBGE escreve “elevado à categoria de vila” e a Prefeitura escreve “emancipação política”; os dois textos tratam do mesmo ato de 1911.",
+      "Mudanças territoriais e perda da autonomia: a Lei Estadual nº 843, de 07/09/1923, transferiu o distrito de Vera Cruz para o novo município de Pedro Leopoldo, criou o distrito de Neves (anexado a Contagem) e mudou o nome de Vargem da Pantana para Ibirité. Em seguida veio o ponto que mais cai em prova: o Decreto-Lei Estadual nº 148, de 17/12/1938, assinado pelo governador Benedito Valadares, fixou nova divisão territorial e extinguiu a vila de Contagem, cujo território foi anexado a Betim como simples distrito. Contagem, portanto, não foi município de forma contínua desde 1911.",
+      "Cidade Industrial (1941): o Decreto-Lei Estadual nº 770, de 20/03/1941, assinado por Benedito Valadares e Israel Pinheiro, declarou de utilidade pública cerca de 270 hectares em terras então pertencentes a Belo Horizonte e Betim para a construção do “Parque Industrial”. Contagem não aparece no decreto porque, naquele momento, era distrito de Betim. A Prefeitura apresenta a Cidade Industrial Juventino Dias como o primeiro distrito industrial planejado do país, com traçado inspirado em Canberra (Austrália); a primeira empresa instalada foi a Companhia de Cimento Portland Itaú, seguida de Magnesita, laboratório Osório de Moraes, Estamparia S.A. e Companhia de Tecidos Santa Elizabeth. Há divergências: uma notícia da Prefeitura de 2025 atribui a idealização a Juscelino Kubitschek, e a página da secretaria de desenvolvimento econômico cita 1946 como ano de inauguração; o ato legal de 1941 traz as assinaturas de Valadares e Israel Pinheiro.",
+      "Restauração e distritos atuais: a Lei Estadual nº 336, de 27/12/1948, sancionada pelo governador Milton Campos, criou novamente o município de Contagem, desmembrado de Betim e instalado em 1º/01/1949. Pela Lei Estadual nº 1.039, de 12/12/1953, foi criado o distrito de Parque Industrial (ex-povoado de Cidade Industrial). Desde então, segundo o IBGE, o município tem dois distritos: Contagem (sede) e Parque Industrial.",
+      "Marcos sociais do século XX: a industrialização trouxe também organização operária. Segundo a Prefeitura, em abril de 1968 cerca de 1,6 mil trabalhadores da Belgo Mineira, na Cidade Industrial, entraram em greve por reajuste salarial, a primeira greve registrada no país após a instauração do regime militar de 1964. Em 1975, moradores de bairros como Eldorado, JK, Glória e Novo Eldorado se mobilizaram contra a poluição das fábricas; a fábrica de cimento Itaú foi desativada na década de 1970 após essas mobilizações. Linha do tempo para memorizar: 1725 (capela) → 1854 (distrito) → 1911 (vila/município) → 1938 (distrito de Betim) → 1941 (Cidade Industrial) → 1948 (município restaurado) → 1953 (distrito de Parque Industrial)."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Um colega afirma: “Contagem é município sem interrupção desde 30 de agosto de 1911”. A afirmação está correta?",
+        "resolucao": "Não. A Lei Estadual nº 556/1911 deu autonomia a Contagem, mas o Decreto-Lei nº 148, de 17/12/1938, extinguiu a vila e anexou o território a Betim como distrito. A autonomia só voltou com a Lei nº 336, de 27/12/1948, com instalação em 1º/01/1949. O aniversário de 30 de agosto homenageia a primeira emancipação, de 1911."
+      },
+      {
+        "enunciado": "Por que o Decreto-Lei nº 770/1941, que preparou a área da Cidade Industrial, fala em terrenos de Belo Horizonte e Betim, e não de Contagem?",
+        "resolucao": "Porque, entre 1938 e 1948, Contagem não era município: era distrito de Betim. O decreto, portanto, só podia mencionar os municípios então existentes. A Cidade Industrial passou a integrar o município de Contagem quando ele foi restaurado em 1948, e em 1953 virou o distrito de Parque Industrial."
+      },
+      {
+        "enunciado": "Ordene cronologicamente: (1) elevação da capela de São Gonçalo a Matriz e criação do distrito; (2) primeiros registros da capela de São Gonçalo; (3) extinção da vila; (4) restauração do município.",
+        "resolucao": "2 (1725) → 1 (1854, ano em que a capela virou Matriz e em que a Lei Provincial nº 671 criou o distrito) → 3 (1938) → 4 (1948). Repare que 1854 concentra dois fatos diferentes, um religioso e um administrativo."
+      }
+    ],
+    "conceitos": [
+      { "t": "Registro", "d": "Posto fiscal da Coroa portuguesa onde se contavam e taxavam mercadorias, gado e ouro; em Contagem, o Registro das Abóboras." },
+      { "t": "Sesmaria", "d": "Grande lote de terra concedido pela Coroa; o posto de Contagem ficava na sesmaria do capitão João de Souza Souto Maior." },
+      { "t": "Arraial", "d": "Povoado colonial formado em torno de capela ou atividade econômica; aqui, o Arraial de São Gonçalo da Contagem das Abóboras." },
+      { "t": "Distrito", "d": "Divisão territorial subordinada a um município; Contagem foi distrito de Santa Quitéria (1854) e de Betim (1938–1948)." },
+      { "t": "Vila", "d": "Na divisão administrativa da época, a sede de um município; foi a categoria dada a Contagem pela Lei nº 556/1911." },
+      { "t": "Emancipação política", "d": "Separação de um território que passa a ser município autônomo; em Contagem, celebrada em 30 de agosto (1911)." },
+      { "t": "Desmembramento", "d": "Retirada de parte do território de um município para formar ou ampliar outro, como de Santa Quitéria (1911) e de Betim (1948)." }
+    ],
+    "dominio": [
+      "Acertar ao menos 8 das 10 questões do tópico.",
+      "Escrever, sem consulta, a linha do tempo 1725 – 1854 – 1911 – 1938 – 1941 – 1948 – 1953 com o fato e o ato legal de cada ano.",
+      "Explicar por que há anos diferentes (1701 e 1716) associados ao Registro das Abóboras."
+    ],
+    "fontes": [
+      { "titulo": "IBGE – Biblioteca: Contagem (MG), histórico e formação administrativa", "url": "https://biblioteca.ibge.gov.br/visualizacao/dtb/minasgerais/contagem.pdf" },
+      { "titulo": "ALMG – Lei nº 556, de 30/08/1911 (divisão administrativa do Estado)", "url": "https://www.almg.gov.br/legislacao-mineira/texto/LEI/556/1911/" },
+      { "titulo": "ALMG – Decreto-Lei nº 148, de 17/12/1938 (divisão territorial 1939–1943)", "url": "https://www.almg.gov.br/legislacao-mineira/texto/DEL/148/1938/" },
+      { "titulo": "ALMG – Decreto-Lei nº 770, de 20/03/1941 (terrenos do Parque Industrial)", "url": "https://www.almg.gov.br/legislacao-mineira/texto/DEL/770/1941/" },
+      { "titulo": "ALMG – Lei nº 336, de 27/12/1948 (divisão administrativa e judiciária 1949–1953)", "url": "https://www.almg.gov.br/legislacao-mineira/texto/LEI/336/1948/" },
+      { "titulo": "Prefeitura de Contagem – Acontece: Contagem celebra 115 anos", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/84373/acontece-contagem-celebra-115-anos-com-entregas-cultura-e-olhar-voltado-para-o-futuro" },
+      { "titulo": "Prefeitura de Contagem – Casa da Cultura Nair Mendes Moreira – Museu Histórico de Contagem", "url": "https://portal.contagem.mg.gov.br/portal/turismo/0/9/66981/casa-da-cultura-nair-mendes-moreira---museu-historico-de-contagem" },
+      { "titulo": "Prefeitura de Contagem – Igreja Matriz de São Gonçalo", "url": "https://portal.contagem.mg.gov.br/portal/turismo/0/9/66973/igreja-matriz-de-sao-goncalo" },
+      { "titulo": "Prefeitura de Contagem – Região Sede: onde a história da cidade começou", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/82058/regiao-sede-onde-a-historia-da-cidade-comeca-e-o-progresso-se-fez-nos-ultimos-114-anos" },
+      { "titulo": "Prefeitura de Contagem – Palco de lutas nacionais dos trabalhadores, Cidade Industrial surge em 1941", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/32739/palco-de-lutas-nacionais-dos-trabalhadores-cidade-industrial-surge-em-1941-como-a-primeira-da-america-latina" },
+      { "titulo": "Prefeitura de Contagem – Industrial: conheça melhor a história da região", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/82091/industrial-conheca-melhor-a-historia-da-regiao-que-leva-o-nome-da-principal-vocacao-da-cidade" },
+      { "titulo": "Prefeitura de Contagem – Chaminés da Itaú", "url": "https://portal.contagem.mg.gov.br/portal/turismo/0/9/66979/chamines-da-itau" },
+      { "titulo": "Prefeitura de Contagem – SEDECON (distritos industriais)", "url": "https://portal.contagem.mg.gov.br/portal/paginas-dinamicas-categoria/54/sedecon" },
+      { "titulo": "Atlas Escolar de Contagem (pesquisa PUC Minas) – Nossa história", "url": "https://sites.google.com/view/atlas-escolar-contagem/descubra-contagem/nossa-hist%C3%B3ria" }
+    ]
+  },
+  "cgm-geografia": {
+    "objetivos": [
+      "Ao final, você consegue localizar Contagem nas divisões regionais do IBGE e na Região Metropolitana de Belo Horizonte, citando os municípios limítrofes.",
+      "Ao final, você consegue descrever relevo, clima e hidrografia do município, incluindo as quatro bacias e o papel de Vargem das Flores e da Pampulha.",
+      "Ao final, você consegue explicar o que é georreferenciamento e como a Prefeitura o aplica no GeoContagem."
+    ],
+    "explicacao": [
+      "Localização e divisões do IBGE: Contagem fica no estado de Minas Gerais, na Região Sudeste. Na divisão regional antiga do IBGE, pertence à mesorregião Metropolitana de Belo Horizonte e à microrregião de Belo Horizonte; na divisão atual (regiões geográficas), integra a região imediata e a região intermediária de Belo Horizonte. No estudo Regiões de Influência das Cidades (REGIC 2018), aparece como município integrante do Arranjo Populacional de Belo Horizonte, classificado como Metrópole (1C). A sede está aproximadamente em 19°55' de latitude sul e 44°03' de longitude oeste, segundo o Atlas Escolar de Contagem.",
+      "Região metropolitana e limites: a Lei Complementar Estadual nº 89, de 12/01/2006, lista 34 municípios na Região Metropolitana de Belo Horizonte (RMBH), e Contagem é um deles. Os municípios limítrofes de Contagem são cinco: Belo Horizonte, Betim, Ibirité, Esmeraldas e Ribeirão das Neves. Pegadinha comum: Nova Lima, Sabará e Santa Luzia são da RMBH, mas não fazem divisa com Contagem.",
+      "Território: a área territorial oficial do IBGE é de 194,732 km² (valor publicado para 2024 e 2025; até 2023 o IBGE usava 194,746 km², diferença causada por revisão cartográfica). Em 2022, a área urbanizada medida pelo IBGE era de 104,85 km², ou seja, mais da metade do território. Mesmo assim, há zona rural: o novo Plano Diretor criou as macrozonas urbana e rural e elevou a zona rural de 25% para 28% do município, segundo a Prefeitura. Para fins administrativos, o município tem dois distritos (Contagem e Parque Industrial) e oito administrações regionais: Sede, Eldorado, Industrial, Nacional, Petrolândia, Ressaca, Riacho e Vargem das Flores.",
+      "Relevo e altitude: segundo o Atlas Escolar de Contagem (com base em dados do CPRM), o município está na unidade de relevo Depressão de Belo Horizonte, com predomínio de colinas amplas e suaves e, numa pequena área a noroeste, colinas dissecadas e morros baixos. A geologia é do Complexo Belo Horizonte, com rochas pré-cambrianas como gnaisses e granitoides. A maior parte do território fica entre 850 e 950 metros de altitude; a sede da Prefeitura está a cerca de 950 m e a lagoa de Vargem das Flores a cerca de 838 m.",
+      "Clima e vegetação: com base nas normais climatológicas do INMET (1991–2020), o Atlas Escolar classifica o clima como mesotérmico, predominando o tipo Cwb (verões brandos e chuvosos) e, em pequenas áreas a nordeste, o tipo Cwa (verões quentes e chuvosos). Na classificação de Köppen, o “w” indica inverno seco. Os parques do município reúnem elementos de Mata Atlântica e de Cerrado; há duas Áreas de Proteção Ambiental (Vargem das Flores e Parque Fernão Dias).",
+      "Hidrografia: a rede hídrica de Contagem pertence à bacia do Rio São Francisco, por meio de dois afluentes: o Rio Paraopeba e o Rio das Velhas. Dentro do município, a Prefeitura identifica quatro bacias: Arrudas, Imbiruçu, Vargem das Flores e Pampulha. O reservatório de Vargem das Flores abastece cidades da RMBH. Contagem responde por mais de 54% do volume de água que chega à Lagoa da Pampulha, que fica em Belo Horizonte. Em 2026, o programa Contagem das Nascentes (criado em 2015) somava 743 nascentes cadastradas, a maioria nas bacias da Pampulha (390) e de Vargem das Flores (291).",
+      "Georreferenciamento (conceito): georreferenciar é associar uma informação (um lote, uma nascente, uma escola, uma imagem) a coordenadas em um sistema de referência conhecido, de modo que ela possa ser localizada e cruzada com outras informações no mapa. Um Sistema de Informação Geográfica (SIG) organiza esses dados em camadas sobrepostas (por exemplo: lotes, zoneamento, áreas de risco, nascentes). Imagens de satélite e de sobrevoo servem de base para esse trabalho.",
+      "Georreferenciamento em Contagem: a Prefeitura mantém o GeoContagem, plataforma de geoprocessamento criada pela Secretaria Municipal de Tecnologia da Informação (Diretoria de Geoprocessamento) e divulgada em 2022, com dados geoespaciais, serviços on-line e imagens de satélite e de sobrevoo de todo o território. Entre as ferramentas estão “Informações Urbanísticas por Lote” (zoneamento e parâmetros de cada lote) e “Camadas Urbanísticas”, mapa interativo com 21 camadas. Em fevereiro de 2026, a Prefeitura divulgou a ferramenta “Temperatura Média por Bairro”, integrada ao GeoContagem e feita com imagens dos satélites Landsat 8 e 9 (2024–2025), com resolução de 100 metros; as regiões com maior concentração de calor foram Ressaca, Sede, Eldorado e Industrial. O cadastro de nascentes também usa georreferenciamento.",
+      "Resumo para a prova: RMBH (34 municípios, LC 89/2006); cinco limítrofes (BH, Betim, Ibirité, Esmeraldas, Ribeirão das Neves); cerca de 194,7 km²; Depressão de Belo Horizonte; clima predominante Cwb; bacia do São Francisco via Paraopeba e Velhas; quatro bacias internas; GeoContagem como plataforma de geoprocessamento."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Uma alternativa afirma que “Contagem faz divisa com Belo Horizonte, Betim, Nova Lima, Esmeraldas e Ribeirão das Neves”. Está correta?",
+        "resolucao": "Não. O quinto município limítrofe é Ibirité, e não Nova Lima. Nova Lima pertence à RMBH, mas não faz divisa com Contagem. Memorize os cinco: BH, Betim, Ibirité, Esmeraldas e Ribeirão das Neves."
+      },
+      {
+        "enunciado": "A Lagoa da Pampulha fica em Belo Horizonte. Por que ela aparece em questões sobre a geografia de Contagem?",
+        "resolucao": "Porque a bacia da Pampulha também ocupa parte de Contagem, e, segundo a Prefeitura, Contagem responde por mais de 54% do volume de água que chega à lagoa. A bacia da Pampulha é, além disso, a que concentra mais nascentes cadastradas no município (390 de 743, em 2026)."
+      },
+      {
+        "enunciado": "A Prefeitura quer saber quais lotes estão em área de preservação e perto de nascentes. Que recurso de geoprocessamento resolve o problema?",
+        "resolucao": "Sobrepor camadas georreferenciadas em um SIG: a camada de lotes com a de nascentes e a de áreas de preservação. Como todas estão no mesmo sistema de coordenadas, o cruzamento mostra os lotes afetados. É o tipo de consulta oferecido pelo GeoContagem."
+      }
+    ],
+    "conceitos": [
+      { "t": "Região Metropolitana de Belo Horizonte (RMBH)", "d": "Conjunto de 34 municípios definido pela Lei Complementar Estadual nº 89/2006, do qual Contagem faz parte." },
+      { "t": "Município limítrofe", "d": "Município que faz divisa direta com outro; os de Contagem são BH, Betim, Ibirité, Esmeraldas e Ribeirão das Neves." },
+      { "t": "Depressão de Belo Horizonte", "d": "Unidade de relevo de colinas amplas e suaves onde se insere a maior parte de Contagem." },
+      { "t": "Cwb", "d": "Clima subtropical de altitude (Köppen): inverno seco e verão brando e chuvoso; predomina em Contagem." },
+      { "t": "Bacia hidrográfica", "d": "Área drenada por um rio e seus afluentes; Contagem tem as bacias Arrudas, Imbiruçu, Vargem das Flores e Pampulha." },
+      { "t": "Georreferenciamento", "d": "Associação de uma informação a coordenadas em um sistema de referência conhecido, permitindo localizá-la no mapa." },
+      { "t": "SIG (Sistema de Informação Geográfica)", "d": "Sistema que armazena e cruza dados georreferenciados organizados em camadas." },
+      { "t": "GeoContagem", "d": "Plataforma de geoprocessamento da Prefeitura de Contagem, com mapas, camadas urbanísticas e serviços on-line." }
+    ],
+    "dominio": [
+      "Acertar ao menos 8 das 10 questões do tópico.",
+      "Citar, sem consulta, os cinco municípios limítrofes e as quatro bacias do território.",
+      "Explicar com suas palavras o que é georreferenciamento e dar um exemplo de uso no GeoContagem."
+    ],
+    "fontes": [
+      { "titulo": "IBGE – API de Localidades: município de Contagem (3118601)", "url": "https://servicodados.ibge.gov.br/api/v1/localidades/municipios/3118601" },
+      { "titulo": "IBGE – API de Indicadores (Cidades@): área territorial, área urbanizada e hierarquia urbana de Contagem", "url": "https://servicodados.ibge.gov.br/api/v1/pesquisas/indicadores/29167%7C95335%7C87529/resultados/3118601" },
+      { "titulo": "ALMG – Lei Complementar nº 89, de 12/01/2006 (Região Metropolitana de Belo Horizonte)", "url": "https://www.almg.gov.br/legislacao-mineira/texto/LCP/89/2006/" },
+      { "titulo": "Atlas Escolar de Contagem (pesquisa PUC Minas) – Aspectos geográficos", "url": "https://sites.google.com/view/atlas-escolar-contagem/descubra-contagem/aspectos-geogr%C3%A1ficos" },
+      { "titulo": "Prefeitura de Contagem – Contagem reforça ações de preservação no Dia Mundial da Água", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/83436/contagem-reforca-acoes-de-preservacao-no-dia-mundial-da-agua-223" },
+      { "titulo": "Prefeitura de Contagem – Regionais", "url": "https://portal.contagem.mg.gov.br/portal/paginas-dinamicas-categoria/7/regionais" },
+      { "titulo": "Prefeitura de Contagem – Portal oferece serviços on-line e informações de localização geográfica (GeoContagem)", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/76845/portal-oferece-servicos-on-line-e-informacoes-de-localizacao-geografica-de-orgaos-publicos-da-cidade" },
+      { "titulo": "Prefeitura de Contagem – Tecnologia facilita a vida do cidadão e agiliza aplicação do novo Plano Diretor", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/79167/tecnologia-facilita-a-vida-do-cidadao-e-agiliza-aplicacao-do-novo-plano-diretorem-contagem/" },
+      { "titulo": "Prefeitura de Contagem – Ferramenta identifica bairros mais e menos quentes em Contagem", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/83256/ferramenta-identifica-bairros-mais-e-menos-quentes-em-contagem" },
+      { "titulo": "IBGE – Biblioteca: Contagem (MG), formação administrativa (distritos)", "url": "https://biblioteca.ibge.gov.br/visualizacao/dtb/minasgerais/contagem.pdf" }
+    ]
+  },
+  "cgm-simbolos": {
+    "objetivos": [
+      "Ao final, você consegue identificar a lei que instituiu o escudo de armas de Contagem e a lei de 2019 que a alterou.",
+      "Ao final, você consegue explicar o significado dos principais elementos do brasão, inclusive o lema em latim.",
+      "Ao final, você consegue reconhecer a autora da letra do hino e os temas que ele exalta, sabendo onde as fontes divergem."
+    ],
+    "explicacao": [
+      "Quais são os símbolos: o edital cobra os “símbolos municipais”, e o programa deste tópico trata de bandeira, brasão (escudo de armas) e hino. Todos representam o município, aparecem em documentos e cerimônias oficiais e, em Contagem, foram criados por leis municipais de épocas diferentes.",
+      "Brasão – base legal: o escudo de armas de Contagem foi instituído pela Lei Municipal nº 499, de 23 de maio de 1963. Em 2019, a Câmara Municipal votou o Projeto de Lei nº 020/2019, do vereador Alessandro Henrique, que “altera a Lei nº 499 de 23 de maio de 1963, que institui o escudo de armas do Município de Contagem”; ele resultou na Lei nº 5.024, de 1º de outubro de 2019, que passou a descrever o brasão em terminologia heráldica em um anexo. Pegadinha: a lei de 2019 alterou a de 1963; não criou um brasão novo nem tratou do hino.",
+      "Brasão – elementos e significados (segundo a Prefeitura, 2025): os cruzados de ouro representam a origem portuguesa do município; a chaminé, no centro, simboliza a força da indústria na história econômica da cidade; as estrelas fazem referência à espiritualidade e à proteção de Nossa Senhora das Dores, padroeira da cidade; a jabuticabeira remete às origens rurais, à agricultura e ao turismo local. Fontes locais detalham que são três cruzados de ouro, que o campo é azul (lembrança da tradição portuguesa) e que, na parte superior (o “chefe”), há sete estrelas, número que representa as sete dores de Nossa Senhora. Ao responder, guarde a lógica: passado português (cruzados), vocação industrial (chaminé), origem rural (jabuticabeira) e fé (estrelas).",
+      "Brasão – lema: o listel (faixa) traz a inscrição latina “Per Populum Omnis Potestas a Deo”, traduzida pela Prefeitura como “Todo poder vem de Deus, pelo povo”. Segundo a Prefeitura, o lema expressa o espírito democrático, coletivo e espiritual da cidade. Em 2025, o brasão foi redesenhado com cores mais vibrantes, mantendo os elementos históricos, e virou a base da nova identidade visual da Prefeitura.",
+      "Bandeira e cores: descrições disponíveis (Wikimedia Commons, Diário de Contagem e Símbolos Municipais) apresentam a bandeira como branca, com o brasão ao centro. Não localizamos o texto oficial da lei da bandeira; por isso, trate com cautela questões sobre sua lei de criação. Já as cores do município aparecem em notícia oficial da Câmara: a Lei nº 5.202/2021, que regula a publicidade institucional, determina que prédios públicos, veículos oficiais, documentos e material escolar usem as cores da bandeira e do brasão de Contagem — branco, verde e azul.",
+      "Hino – autoria e lei: a Prefeitura informa que a professora Nair Mendes Moreira escreveu a letra do hino “Exaltação a Contagem”. Nair nasceu em Pará de Minas em 3 de abril de 1914, mudou-se para Contagem após o casamento, em 1946, atuou como professora, supervisora, inspetora e diretora escolar e faleceu em 5 de junho de 1981; a Casa da Cultura (Museu Histórico de Contagem) leva o seu nome. Fontes locais (jornal O Folha e site Símbolos Municipais) atribuem a música a Gil Vidigal e Augusto Braz Pereira, mas não encontramos essa informação em página oficial.",
+      "Hino – divergência sobre a lei: todas as fontes citam a Lei Municipal nº 750 como a que oficializou o hino, mas divergem na data. A página oficial da Prefeitura (Casa da Cultura) fala em 1º de dezembro de 1966; o jornal O Folha e o site Símbolos Municipais falam em 1º de janeiro de 1976. Em prova, se aparecer, confira se a banca pede o número (750, consenso) ou a data (ponto de divergência).",
+      "Hino – conteúdo: segundo o jornal O Folha, a letra tem três estrofes, cada uma seguida de refrão, e termina com o brado “Viva Contagem”. Os versos exaltam o passado, a cultura e os brasões da cidade, o trabalho e o progresso, os campos e as fábricas — os mesmos valores que o brasão representa com a jabuticabeira e a chaminé. O refrão começa por “Teu progresso está patente”, ideia que resume o tom ufanista do hino."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Uma questão afirma: “O brasão de Contagem foi criado pela Lei nº 5.024/2019”. Está correta?",
+        "resolucao": "Não. O escudo de armas foi instituído pela Lei nº 499, de 23/05/1963. A Lei nº 5.024, de 1º/10/2019, originada do PL nº 020/2019, apenas alterou a lei de 1963, trazendo a descrição heráldica em anexo."
+      },
+      {
+        "enunciado": "Associe: (1) chaminé; (2) jabuticabeira; (3) cruzados de ouro; (4) estrelas. Significados: (a) origem portuguesa; (b) indústria; (c) Nossa Senhora das Dores; (d) origens rurais.",
+        "resolucao": "1-b, 2-d, 3-a, 4-c. Lembre a sequência histórica da cidade: colonização portuguesa, fé na padroeira, vida rural e, depois, industrialização."
+      },
+      {
+        "enunciado": "Traduza o lema “Per Populum Omnis Potestas a Deo” e diga o que ele expressa.",
+        "resolucao": "“Todo poder vem de Deus, pelo povo”. Segundo a Prefeitura, expressa o espírito democrático, coletivo e espiritual da cidade: a origem do poder é divina, mas ele se exerce por meio do povo."
+      }
+    ],
+    "conceitos": [
+      { "t": "Escudo de armas (brasão)", "d": "Símbolo heráldico do município; em Contagem, instituído pela Lei nº 499/1963 e alterado pela Lei nº 5.024/2019." },
+      { "t": "Listel", "d": "Faixa do brasão onde se escreve o lema; em Contagem traz “Per Populum Omnis Potestas a Deo”." },
+      { "t": "Chefe", "d": "Faixa superior do escudo, na linguagem heráldica; no brasão de Contagem é onde ficam as estrelas." },
+      { "t": "Cruzados de ouro", "d": "Elementos do brasão que representam a origem portuguesa do município." },
+      { "t": "Jabuticabeira", "d": "Árvore do brasão que remete às origens rurais, à agricultura e ao turismo local." },
+      { "t": "Exaltação a Contagem", "d": "Título do hino municipal citado pela Prefeitura, com letra de Nair Mendes Moreira e oficializado pela Lei nº 750." }
+    ],
+    "dominio": [
+      "Acertar ao menos 8 das 10 questões do tópico.",
+      "Explicar, sem consulta, o significado da chaminé, da jabuticabeira, dos cruzados e das estrelas do brasão.",
+      "Citar a lei do brasão (nº 499/1963), a lei que a alterou (nº 5.024/2019) e a autora da letra do hino."
+    ],
+    "fontes": [
+      { "titulo": "Prefeitura de Contagem – Prefeitura apresenta nova identidade visual (brasão e lema)", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/81978/trabalho-todo-dia-prefeitura-apresenta-nova-identidade-visual-que-une-historia-e-compromisso-com-a-cidade" },
+      { "titulo": "Câmara Municipal de Contagem – Ordem do Dia (PL nº 020/2019, altera a Lei nº 499/1963)", "url": "https://www.cmc.mg.gov.br/?p=15244" },
+      { "titulo": "Câmara Municipal de Contagem – Projeto propõe identificação das escolas nos uniformes (cores da bandeira e do brasão)", "url": "https://www.cmc.mg.gov.br/?p=20460" },
+      { "titulo": "Prefeitura de Contagem – Casa da Cultura Nair Mendes Moreira (biografia e hino)", "url": "https://portal.contagem.mg.gov.br/portal/turismo/0/9/66981/casa-da-cultura-nair-mendes-moreira---museu-historico-de-contagem" },
+      { "titulo": "Prefeitura de Contagem – Protagonismo feminino na cultura de Contagem", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/79669/protagonismo-feminino-mulheres-se-destacam-como-forca-criativa-na-cultura-de-contagem" },
+      { "titulo": "Jornal O Folha – Brasão (Escudo de Armas)", "url": "https://www.jornalofolha.com.br/sobre-contagem/brasao-escudo-de-armas/" },
+      { "titulo": "Jornal O Folha – Hino Oficial de Contagem", "url": "https://www.jornalofolha.com.br/sobre-contagem/hino-oficial-de-contagem/" },
+      { "titulo": "Símbolos Municipais – Bandeira, Brasão e Hino de Contagem", "url": "https://simbolosmunicipais.com.br/mg/contagem/simbolos-municipais" },
+      { "titulo": "Diário de Contagem – Hinos e Símbolos de Contagem", "url": "https://www.diariodecontagem.com.br/Hinos-e-Simbolos-de-Contagem" },
+      { "titulo": "Wikimedia Commons – Contagem Brasão.png (descrição e base legal)", "url": "https://commons.wikimedia.org/wiki/File:Contagem_Bras%C3%A3o.png" }
+    ]
+  },
+  "cgm-economia": {
+    "objetivos": [
+      "Ao final, você consegue citar a população do Censo 2022, a área e os principais indicadores sociais de Contagem, sempre com o ano de referência.",
+      "Ao final, você consegue descrever o tamanho e a composição da economia do município segundo o PIB dos Municípios do IBGE.",
+      "Ao final, você consegue explicar a vocação industrial e logística de Contagem: distritos industriais, CeasaMinas e exportações."
+    ],
+    "explicacao": [
+      "População (IBGE): o Censo Demográfico 2022 contou 621.863 habitantes em Contagem, contra 603.442 no Censo 2010 (crescimento de cerca de 3%). Em 2022, Contagem foi o terceiro município mais populoso de Minas Gerais, atrás de Belo Horizonte (2.315.560) e Uberlândia (713.224) e à frente de Juiz de Fora (540.756). Depois do Censo, as estimativas anuais do IBGE indicam 651.718 habitantes em 2025 e 652.973 em 2026. Cuidado: Censo é contagem; estimativa é projeção. Questão que pede “população do Censo 2022” quer 621.863. O gentílico é contagense.",
+      "Território e densidade: a área oficial é de 194,732 km² (IBGE, 2025). Com a população do Censo 2022 e a área usada pelo IBGE naquele ano (194,746 km²), a densidade fica em cerca de 3.193 habitantes por km²; no Censo 2010, o IBGE registrava 3.090,33 hab./km². A densidade alta combina com os dados de ocupação: em 2022, a área urbanizada medida pelo IBGE era de 104,85 km², mais da metade do território, e o município integra o Arranjo Populacional de Belo Horizonte.",
+      "Indicadores sociais (IBGE, Censo 2022): taxa de escolarização de 6 a 14 anos de 98,69%; 94,04% da população em domicílios com esgotamento sanitário por rede geral, rede pluvial ou fossa ligada à rede; 71,2% dos domicílios urbanos em vias com arborização. No mercado formal, o salário médio mensal era de 2,4 salários mínimos (Cadastro Central de Empresas, 2021), e o pessoal ocupado correspondia a 41,18% da população (2022). Sempre leia o ano: indicador sem ano não serve para comparação.",
+      "PIB (IBGE, PIB dos Municípios, ano de referência 2023): o PIB de Contagem foi de cerca de R$ 45,09 bilhões (R$ 45.092.393 mil), o equivalente a 4,64% do PIB de Minas Gerais e 0,41% do PIB do Brasil. Contagem ficou em 30º lugar entre os municípios brasileiros. Em Minas, os dados do IBGE mostram Belo Horizonte (R$ 130,2 bilhões), Betim (R$ 52,6 bilhões) e Uberlândia (R$ 51,1 bilhões) à frente de Contagem. O PIB per capita de 2023 foi de R$ 72.511,78. Atenção: uma notícia da Prefeitura (fev. 2026) diz que Contagem é a 3ª economia de Minas, atrás de BH e Betim; a tabela do IBGE, porém, coloca Uberlândia ligeiramente acima, o que deixa Contagem em 4º lugar.",
+      "Composição da economia: no último ano com valor adicionado detalhado disponível na tabela consultada (2021), os serviços (exceto administração pública) responderam por cerca de 59% do valor adicionado bruto, a indústria por 30,81%, a administração pública (defesa, educação, saúde e seguridade) por 10,07% e a agropecuária por apenas 0,01%. Leitura correta: Contagem é conhecida pela vocação industrial, e a indústria pesa muito mais ali do que na média das cidades, mas o setor de serviços é o maior em valor adicionado.",
+      "Polo industrial: a Cidade Industrial Coronel Juventino Dias, criada a partir do decreto estadual de 1941, é apresentada pela Prefeitura como o primeiro distrito industrial planejado do país; a primeira empresa instalada foi a Companhia de Cimento Portland Itaú. A Secretaria de Desenvolvimento Econômico (Sedecon) lista ainda o CINCO – Centro Industrial Francisco Firmo de Matos Filho (1976, cerca de 3 milhões de m²), o Cinquinho (1990), o Cincão (1993), o Riacho das Pedras (1998) e o Doutor Hélio Pentagna Guimarães (2000). Segundo a Prefeitura, a TSEA Energia está entre as maiores indústrias da cidade.",
+      "Logística e comércio exterior: a CeasaMinas tem sede e foro em Contagem, onde fica o seu maior entreposto (a empresa tem seis entrepostos operacionais no estado). Segundo a Prefeitura (com dados da Sedecon), a indústria de Contagem exportou cerca de US$ 385 milhões entre janeiro e outubro de 2025, com destaque para materiais refratários, transformadores e conversores elétricos, produtos químicos anticorrosivos, máquinas para construção civil e fios de aço; os Estados Unidos receberam mais de 50% das manufaturas exportadas no primeiro semestre de 2025.",
+      "Como estudar números: decore poucos valores-chave com o ano (621.863 – Censo 2022; R$ 45 bilhões – PIB 2023; 30º PIB do país – 2023; R$ 72,5 mil – PIB per capita 2023; 194,7 km²). Em prova, a banca costuma trocar o ano, confundir Censo com estimativa ou atribuir à indústria a maior fatia do PIB. Desconfie de alternativas que façam isso."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Uma alternativa diz: “Segundo o Censo 2022, Contagem tem cerca de 652 mil habitantes”. Está correta?",
+        "resolucao": "Não. O Censo 2022 contou 621.863 habitantes. Os valores próximos de 652 mil são estimativas do IBGE para 2025 (651.718) e 2026 (652.973). Censo e estimativa são produtos diferentes."
+      },
+      {
+        "enunciado": "Se Contagem é chamada de cidade industrial, a indústria é o maior setor do seu valor adicionado?",
+        "resolucao": "Não. Em 2021, a indústria respondeu por 30,81% do valor adicionado bruto, enquanto os serviços (exceto administração pública) responderam por cerca de 59%. A indústria tem peso alto, mas os serviços são o maior setor."
+      },
+      {
+        "enunciado": "Calcule, de forma aproximada, a densidade demográfica de Contagem no Censo 2022.",
+        "resolucao": "Divida a população pela área: 621.863 ÷ 194,746 ≈ 3.193 hab./km². Arredondando, cerca de 3,2 mil habitantes por quilômetro quadrado."
+      }
+    ],
+    "conceitos": [
+      { "t": "Censo Demográfico", "d": "Contagem de toda a população feita pelo IBGE; o mais recente é de 2022 (621.863 habitantes em Contagem)." },
+      { "t": "Estimativa populacional", "d": "Projeção anual do IBGE entre censos; não substitui o resultado do Censo." },
+      { "t": "PIB", "d": "Soma dos bens e serviços finais produzidos em um período; em Contagem, cerca de R$ 45,09 bilhões em 2023." },
+      { "t": "PIB per capita", "d": "PIB dividido pela população; R$ 72.511,78 em Contagem (2023)." },
+      { "t": "Valor adicionado bruto (VAB)", "d": "Valor que cada setor acrescenta à produção; mostra o peso de serviços, indústria, administração pública e agropecuária." },
+      { "t": "Densidade demográfica", "d": "Habitantes por km²; cerca de 3,2 mil em Contagem no Censo 2022." },
+      { "t": "Distrito industrial", "d": "Área planejada para instalação de indústrias; a Cidade Industrial é o mais antigo de Contagem." }
+    ],
+    "dominio": [
+      "Acertar ao menos 8 das 10 questões do tópico.",
+      "Dizer, sem consulta, a população do Censo 2022, o PIB de 2023 e o setor com maior valor adicionado, com os anos corretos.",
+      "Explicar a diferença entre Censo e estimativa populacional."
+    ],
+    "fontes": [
+      { "titulo": "IBGE – API de Indicadores (Cidades@): população, área, PIB per capita e indicadores sociais de Contagem", "url": "https://servicodados.ibge.gov.br/api/v1/pesquisas/indicadores/96385%7C29171%7C29167%7C47001%7C29765%7C60036%7C60045%7C60030%7C60029%7C29168/resultados/3118601" },
+      { "titulo": "IBGE – API de Indicadores: população do Censo 2022 de BH, Uberlândia, Contagem, Juiz de Fora e Betim", "url": "https://servicodados.ibge.gov.br/api/v1/pesquisas/indicadores/96385/resultados/3106200%7C3170206%7C3118601%7C3136702%7C3106705" },
+      { "titulo": "IBGE/SIDRA – Tabela 5938 (PIB dos Municípios), Contagem, 2023", "url": "https://apisidra.ibge.gov.br/values/t/5938/n6/3118601/v/all/p/2023/f/n" },
+      { "titulo": "IBGE/SIDRA – Tabela 5938, PIB 2023 dos municípios de Minas Gerais", "url": "https://apisidra.ibge.gov.br/values/t/5938/n6/in%20n3%2031/v/37/p/2023/f/n" },
+      { "titulo": "IBGE/SIDRA – Tabela 5938, PIB 2023 de todos os municípios", "url": "https://apisidra.ibge.gov.br/values/t/5938/n6/all/v/37/p/2023/f/n" },
+      { "titulo": "IBGE/SIDRA – Tabela 5938, série do PIB e do valor adicionado de Contagem", "url": "https://apisidra.ibge.gov.br/values/t/5938/n6/3118601/v/37,498,513,516,517,520,6575,525,528/p/all/f/n" },
+      { "titulo": "Prefeitura de Contagem – Desenvolvimento: Contagem está entre as maiores economias do Brasil", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/83217/desenvolvimento-contagem-esta-entre-as-maiores-economias-do-brasil" },
+      { "titulo": "Prefeitura de Contagem – Contagem atinge US$ 385 milhões em exportações", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/83834/contagem-atinge-u-385-milhoes-em-exportacoes/" },
+      { "titulo": "Prefeitura de Contagem – Com DNA industrial, Contagem acelera de forma competitiva", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/84603/com-dna-industrial-contagem-acelera-de-forma-competitiva-e-inovadora-rumo-ao-futuro/" },
+      { "titulo": "Prefeitura de Contagem – SEDECON (distritos industriais)", "url": "https://portal.contagem.mg.gov.br/portal/paginas-dinamicas-categoria/54/sedecon" },
+      { "titulo": "Prefeitura de Contagem – Cidade Industrial surge em 1941", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/32739/palco-de-lutas-nacionais-dos-trabalhadores-cidade-industrial-surge-em-1941-como-a-primeira-da-america-latina" },
+      { "titulo": "BNDES – Desestatização da CeasaMinas", "url": "https://www.bndes.gov.br/wps/portal/site/home/transparencia/desestatizacao/projetos-em-andamento/desestatizacao-ceasaminas" }
+    ]
+  },
+  "cgm-cultura": {
+    "objetivos": [
+      "Ao final, você consegue reconhecer os principais bens do patrimônio material de Contagem e o que cada um representa.",
+      "Ao final, você consegue explicar a importância da Comunidade Quilombola dos Arturos e do Jubileu de Nossa Senhora das Dores como patrimônio imaterial.",
+      "Ao final, você consegue relacionar movimentos artísticos e sociais (Casa de Cacos, Coluna Bracher, greve de 1968, luta contra a poluição) à história da cidade."
+    ],
+    "explicacao": [
+      "Patrimônio do centro histórico: a Casa da Cultura Nair Mendes Moreira – Museu Histórico de Contagem é considerada a casa mais antiga da cidade, construída por volta de 1716, na Praça Vereador Josias Belém, região da Sede. Foi tombada pelo Decreto Municipal nº 10.060, de 14/12/1998, reinaugurada em 2021 após reforma e abriga o Departamento de História, Memória e Patrimônio Cultural do município. Ao lado, a Igreja Matriz de São Gonçalo (Praça Silviano Brandão) tem origem na capela registrada em 1725, reconstruída em 1825 e elevada a Matriz em 1854; guarda imaginária em madeira do século XVIII e retábulo em estilo rococó vindo da Igreja da Boa Viagem.",
+      "Outros espaços culturais: o Centro Cultural Prefeito Francisco Firmo Mattos Filho reúne três casarões (Casa Amarela e Casa Rosa, do século XIX, e a Casa Azul, de estilo eclético, de cerca de 1936). A Estação Bernardo Monteiro, antiga estação ferroviária, virou espaço cultural que preserva a memória ferroviária. O Parque Gentil Diniz, inaugurado em 5 de junho de 1991, conserva um casarão do século XIX de pau a pique.",
+      "Casa de Cacos (arte popular): na rua Ignês Glansman, no bairro Bernardo Monteiro, Carlos Luís de Almeida, o “Seu Carlos”, revestiu sua casa com fragmentos de cerâmica, cacos de louça e outros materiais ao longo de mais de 30 anos; ele morreu em 1989, antes de concluir o projeto. A casa é tombada desde 1991, ficou fechada de 2005 a 2021 e foi devolvida à cidade em 27 de agosto de 2022, após cerca de 16 meses de recuperação. Recebeu visitas de Juscelino Kubitschek e Chacrinha, segundo a Prefeitura.",
+      "Memória industrial e luta ambiental: as Chaminés da Itaú são as quatro chaminés da Companhia de Cimento Portland Itaú, primeira fábrica instalada na Cidade Industrial, erguidas entre as décadas de 1940 e 1960. A fábrica foi desativada na década de 1970, após mobilizações populares contra a poluição, e demolida em 1998; as chaminés e o prédio administrativo foram tombados pelo Decreto nº 10.186, de 17/06/1999. A Prefeitura registra que, em 1975, moradores de bairros como Eldorado, Santa Cruz Industrial, JK, Glória e Novo Eldorado se mobilizaram contra a poluição e levaram uma ação popular ao Fórum de Contagem.",
+      "Movimento operário: em abril de 1968, cerca de 1,6 mil trabalhadores da Belgo Mineira, na Cidade Industrial, fizeram greve por reajuste salarial. Segundo a Prefeitura, foi a primeira greve registrada no país após a instauração do regime militar, em 1964. A antiga fábrica Lafersa abriga hoje o Centro de Memória do Trabalhador da Indústria. Esses episódios mostram que a industrialização formou também uma cultura de organização popular e operária.",
+      "Comunidade Quilombola dos Arturos: localizada no bairro Jardim Vera Cruz, reúne cerca de 230 famílias descendentes de Artur Camilo Silvério e Carmelinda Maria da Silva. Em maio de 2014, o Iepha-MG reconheceu a comunidade como Patrimônio Cultural Imaterial de Minas Gerais — o primeiro registro de uma comunidade tradicional na categoria de lugares —, com a Festa de Nossa Senhora do Rosário, o Reinado/Congado e o Rito da Benzeção. Em 3 de junho de 2025, o Conselho Estadual do Patrimônio Cultural (Conep) revalidou o título por unanimidade. Entre as manifestações estão a Festa de Nossa Senhora do Rosário (em outubro), a Festa da Abolição (13 de maio, data da Lei Áurea, celebrada como festa de resistência), a Festa do João do Mato, a Folia de Reis, o batuque e as guardas de Congo e Moçambique. As fontes divergem sobre o ano de fundação da comunidade, então não o memorize como fato certo.",
+      "Coluna Bracher (artes visuais): na Via Expressa, no bairro Novo Eldorado, a coluna de cerca de 12 metros foi projetada pelo arquiteto Gustavo Pena e concluída em dezembro de 2000. Os artistas Carlos Bracher e Fani Bracher fizeram o mosaico de 2.400 azulejos (quatro painéis de 600), em homenagem à Comunidade dos Arturos. É um exemplo de diálogo entre arte contemporânea e cultura afro-brasileira local.",
+      "Jubileu de Nossa Senhora das Dores: segundo a Câmara Municipal, a celebração foi autorizada pelo papa Pio VII em 1806, depois que Antônio Joaquim de Santana Filho, morador do arraial, levou o pedido a Roma. Ocorre na Matriz de São Gonçalo e termina na sexta-feira anterior à Sexta-feira da Paixão, data que é feriado municipal pela Lei nº 3.484, de 19/12/2001. A Lei nº 5.057, de 19/07/2019, reconheceu o Jubileu como patrimônio cultural e imaterial de Contagem, e ele foi inscrito no Livro de Bens Imateriais em 2024. Em 2026, foi realizado o 220º Jubileu (20 a 27 de março). A devoção dialoga com o brasão, cujas estrelas homenageiam Nossa Senhora das Dores, padroeira da cidade."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Qual a diferença entre o reconhecimento da Comunidade dos Arturos e o tombamento das Chaminés da Itaú?",
+        "resolucao": "Os Arturos foram reconhecidos como patrimônio imaterial (registro de saberes, festas, ritos e modos de vida) pelo Estado, via Iepha-MG, em 2014, revalidado em 2025. As Chaminés da Itaú são patrimônio material, protegido por tombamento municipal (Decreto nº 10.186/1999). Registro protege práticas; tombamento protege bens físicos."
+      },
+      {
+        "enunciado": "Por que a Festa da Abolição dos Arturos acontece em 13 de maio?",
+        "resolucao": "Porque 13 de maio é a data da assinatura da Lei Áurea (1888). Segundo a Prefeitura, a comunidade trata a festa como um ato político de resistência, lembrando o que a lei não garantiu à população negra."
+      },
+      {
+        "enunciado": "Uma alternativa afirma que o Jubileu de Nossa Senhora das Dores é feriado nacional. Está correta?",
+        "resolucao": "Não. É feriado municipal, instituído pela Lei nº 3.484/2001, e o Jubileu foi reconhecido como patrimônio cultural e imaterial de Contagem pela Lei nº 5.057/2019."
+      }
+    ],
+    "conceitos": [
+      { "t": "Patrimônio material", "d": "Bens físicos (edifícios, conjuntos, objetos) protegidos, em geral por tombamento, como a Casa da Cultura e as Chaminés da Itaú." },
+      { "t": "Patrimônio imaterial", "d": "Saberes, celebrações, formas de expressão e lugares protegidos por registro, como a Comunidade dos Arturos e o Jubileu." },
+      { "t": "Tombamento", "d": "Ato do poder público que protege um bem material de valor histórico ou cultural contra destruição ou descaracterização." },
+      { "t": "Comunidade quilombola", "d": "Grupo de ancestralidade negra com trajetória própria e relação histórica com o território, como os Arturos." },
+      { "t": "Congado / Reinado", "d": "Manifestação afro-brasileira com cortejos, guardas, cantos e danças em louvor a Nossa Senhora do Rosário." },
+      { "t": "Jubileu", "d": "Celebração religiosa periódica; em Contagem, o de Nossa Senhora das Dores, autorizado por Pio VII em 1806." },
+      { "t": "Iepha-MG", "d": "Instituto Estadual do Patrimônio Histórico e Artístico de Minas Gerais, que registrou os Arturos em 2014." }
+    ],
+    "dominio": [
+      "Acertar ao menos 8 das 10 questões do tópico.",
+      "Diferenciar, com um exemplo de Contagem para cada, patrimônio material e patrimônio imaterial.",
+      "Citar, sem consulta, dois movimentos sociais e dois movimentos artísticos ligados à história do município."
+    ],
+    "fontes": [
+      { "titulo": "Prefeitura de Contagem – Turismo (atrativos culturais)", "url": "https://portal.contagem.mg.gov.br/portal/turismo" },
+      { "titulo": "Prefeitura de Contagem – Casa da Cultura Nair Mendes Moreira – Museu Histórico de Contagem", "url": "https://portal.contagem.mg.gov.br/portal/turismo/0/9/66981/casa-da-cultura-nair-mendes-moreira---museu-historico-de-contagem" },
+      { "titulo": "Prefeitura de Contagem – Igreja Matriz de São Gonçalo", "url": "https://portal.contagem.mg.gov.br/portal/turismo/0/9/66973/igreja-matriz-de-sao-goncalo" },
+      { "titulo": "Prefeitura de Contagem – Casa de Cacos", "url": "https://portal.contagem.mg.gov.br/portal/turismo/0/9/66978/casa-de-cacos" },
+      { "titulo": "Prefeitura de Contagem – Chaminés da Itaú", "url": "https://portal.contagem.mg.gov.br/portal/turismo/0/9/66979/chamines-da-itau" },
+      { "titulo": "Prefeitura de Contagem – Conheça Contagem e sua história: Coluna Bracher", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/69984/conheca-contagem-e-sua-historia-coluna-bracher" },
+      { "titulo": "Prefeitura de Contagem – Cidade Industrial surge em 1941 (greve de 1968 e luta contra a poluição)", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/32739/palco-de-lutas-nacionais-dos-trabalhadores-cidade-industrial-surge-em-1941-como-a-primeira-da-america-latina" },
+      { "titulo": "Prefeitura de Contagem – Industrial: conheça melhor a história da região", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/82091/industrial-conheca-melhor-a-historia-da-regiao-que-leva-o-nome-da-principal-vocacao-da-cidade" },
+      { "titulo": "Iepha-MG – Comunidade Quilombola dos Arturos", "url": "https://www.mg.gov.br/iepha/bem/bem-registrado/comunidade-quilombola-dos-arturos" },
+      { "titulo": "Prefeitura de Contagem – Título de Patrimônio Cultural Imaterial concedido aos Arturos é revalidado", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/81773/titulo-de-patrimonio-cultural-imaterial-de-minas-gerais-concedido-a-comunidade-dos-arturos-e-revalidado" },
+      { "titulo": "Prefeitura de Contagem – Comunidade dos Arturos enaltece Nossa Senhora do Rosário", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/45884/comunidade-dos-arturos-enaltece-nossa-senhora-do-rosario-e-mantem-viva-as-tradicoes-de-um-povo" },
+      { "titulo": "Prefeitura de Contagem – Filme “13 de Maio” homenageia os Arturos", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/81454/filme-13-de-maio-homenageia-os-arturos-e-exalta-a-forca-das-tradicoes-afrodescendentes" },
+      { "titulo": "Prefeitura de Contagem – Região Sede: onde a história da cidade começou", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/82058/regiao-sede-onde-a-historia-da-cidade-comeca-e-o-progresso-se-fez-nos-ultimos-114-anos" },
+      { "titulo": "Câmara Municipal de Contagem – Jubileu de N. Sra. das Dores é reconhecido patrimônio imaterial e cultural", "url": "https://www.cmc.mg.gov.br/?p=14543" },
+      { "titulo": "Prefeitura de Contagem – Jubileu de Nossa Senhora das Dores reforça a tradição", "url": "https://portal.contagem.mg.gov.br/portal/noticias/0/3/83499/jubileu-de-nossa-senhora-das-dores-reforca-a-tradicao-e-enaltece-patrimonio-cultural-da-cidade" }
+    ]
+  },
+  "cgm-lei-organica-1": {
+    "objetivos": [
+      "Ao final, você consegue enunciar os princípios fundamentais da Lei Orgânica de Contagem: autonomia, poderes do Município, preceitos de participação popular e objetivos prioritários.",
+      "Ao final, você consegue separar as competências privativas do Município (art. 6º) das competências comuns com a União e o Estado (art. 7º).",
+      "Ao final, você consegue aplicar as regras da Lei Orgânica sobre bens municipais, vedações, território, distritos e Administrações Regionais."
+    ],
+    "explicacao": [
+      "O texto cobrado: a Lei Orgânica do Município de Contagem (LOM) foi promulgada em 20 de março de 1990 e funciona como a “constituição” do Município. O texto consolidado publicado no portal de legislação da Prefeitura (e indicado pelo site da Câmara) registra 44 emendas, da nº 01/1990 à nº 44, de 10/12/2024, que é a mais recente listada. Nesse texto, a redação antiga aparece riscada e a vigente vem acompanhada da nota “(Redação dada pela Emenda…)”; estude sempre a redação vigente. O preâmbulo apresenta a LOM como lei basilar de uma ordem municipal autônoma e democrática, fundada na participação direta da sociedade civil e voltada à descentralização e à desconcentração do poder político.",
+      "Princípios fundamentais (art. 1º): o Município de Contagem integra, com autonomia política, administrativa e financeira, a República Federativa do Brasil e o Estado de Minas Gerais. Todo o poder do Município emana do seu povo, que o exerce por representantes eleitos ou diretamente (§1º). O Município se organiza observando, entre outros preceitos (§3º): sufrágio universal e voto direto e secreto com valor igual para todos; plebiscito; referendo; iniciativa popular no processo legislativo; participação popular nas decisões do Município; e ação fiscalizadora sobre a administração pública. A Cidade de Contagem é a sede do Governo do Município e lhe dá o nome (§4º).",
+      "Poderes, autonomia e objetivos: são poderes do Município, independentes e harmônicos entre si, o Legislativo e o Executivo (art. 2º). Pegadinha clássica: não existe Poder Judiciário municipal. Salvo exceções da própria LOM, é vedado a qualquer dos Poderes delegar atribuição (parágrafo único). A autonomia se configura especialmente pela elaboração e promulgação da Lei Orgânica, pela eleição do Prefeito, do Vice-Prefeito e dos Vereadores e pela organização de seu Governo e Administração (art. 3º). Entre os objetivos prioritários (art. 4º) estão: garantir os direitos fundamentais com transparência, moralidade, participação popular e descentralização administrativa; colaborar com a União e o Estado na construção de uma sociedade livre, justa e solidária; priorizar as demandas sociais de educação, saúde, transporte, moradia, abastecimento, lazer e assistência social; e preservar a identidade cultural e artística do Município.",
+      "Direitos e garantias (Título II, art. 5º): o Município assegura, em seu território, os direitos e garantias das Constituições da República e do Estado. Destaques: ninguém pode ser prejudicado por litigar com órgão ou entidade municipal; o agente público que deixar, sem justificativa, de sanar em 30 dias omissão que inviabilize o exercício de direito constitucional fica sujeito à destituição do mandato administrativo ou do cargo de direção; nos processos administrativos observam-se publicidade, contraditório, defesa ampla e decisão motivada; o direito de petição e a obtenção de certidão para defesa de direito independem de taxa; e todos podem reunir-se pacificamente, sem armas, em locais abertos ao público, sem autorização, bastando prévio aviso à autoridade.",
+      "Competência privativa (art. 6º): cabe ao Município prover tudo o que diga respeito ao seu peculiar interesse. A lista inclui, entre outras: legislar sobre assuntos de interesse local; suplementar a legislação federal e estadual no que couber; promover o ordenamento territorial (Plano Diretor, uso, ocupação e parcelamento do solo, normas de edificação); criar, organizar e suprimir distritos, observada a legislação estadual; licenciar e fiscalizar estabelecimentos, com poder de polícia administrativa; elaborar plano plurianual, diretrizes orçamentárias e orçamento com ampla participação popular; instituir e arrecadar seus tributos; organizar e prestar, diretamente ou por concessão ou permissão, os serviços de interesse local (transporte coletivo, táxi, saneamento, iluminação pública, serviços funerários e cemitérios); criar guarda municipal para proteger bens, serviços e instalações municipais; e organizar os quadros e o regime jurídico único dos servidores.",
+      "Competência comum (art. 7º): é exercida pelo Município junto com a União e o Estado, observada a lei complementar federal. Exemplos: zelar pela guarda da Constituição, das leis e das instituições democráticas; cuidar da saúde e da proteção das pessoas com deficiência; proteger bens de valor histórico, artístico e cultural; proteger o meio ambiente e combater a poluição; preservar florestas, fauna e flora; fomentar a produção agropecuária e organizar o abastecimento; promover moradia e saneamento básico; combater as causas da pobreza; fiscalizar concessões de exploração de recursos hídricos e minerais; fixar, com os municípios confinantes, os limites territoriais, respeitada a legislação estadual; e implantar política de educação para a segurança do trânsito. Atenção: “legislar sobre interesse local” e “criar guarda municipal” são privativos, não comuns.",
+      "Domínio público (arts. 8º a 14): bens municipais são todas as coisas móveis e imóveis, direitos e ações que, a qualquer título, pertençam ao Município. Cabe ao Prefeito administrá-los, respeitada a competência da Câmara quanto aos usados em seus serviços (art. 9º). A aquisição de imóvel a título oneroso depende de avaliação prévia e de autorização legislativa; para a alienação, exige-se ainda licitação, salvo permuta e doação (art. 10). A alienação de bem móvel depende de avaliação prévia e de licitação, dispensável na doação e na permuta (§1º). O uso especial de bem por terceiro se faz, na forma da lei, por concessão, permissão, cessão ou autorização (§2º). Imóveis públicos edificados de valor histórico, arquitetônico ou artístico só podem ser usados mediante autorização e para finalidades culturais (art. 11); o cadastro dos bens deve ser atualizado anualmente (art. 12); e é vedado edificar, descaracterizar ou abrir vias em praças, parques, reservas ecológicas e espaços tombados pelo Município, salvo construções necessárias à sua preservação (art. 13).",
+      "Vedações (art. 15): ao Município é vedado, entre outros pontos, estabelecer ou subvencionar cultos religiosos ou igrejas, embaraçar-lhes o funcionamento ou manter com eles relação de dependência ou aliança (ressalvada a colaboração de interesse público, na forma da lei); recusar fé aos documentos públicos; criar distinções entre brasileiros; financiar com recursos públicos propaganda político-partidária; manter publicidade oficial sem caráter educativo, informativo ou de orientação social ou que caracterize promoção pessoal de autoridade ou servidor; e conceder isenções, anistias fiscais ou remissão de dívidas sem interesse público justificado, sob pena de nulidade.",
+      "Território, distritos e Administrações Regionais (arts. 16 a 23): é mantido o atual território do Município, cujos limites só podem ser alterados nos termos da Constituição do Estado; a criação, organização e supressão de distritos ou subdistritos depende de lei, observada a legislação estadual (art. 16). O Município pode ser dividido em Administrações Regionais, por lei de iniciativa do Executivo, e cada uma é designada pelo nome da respectiva sede (art. 17). São condições para instalar uma Regional (art. 18): população local superior a 25.000 habitantes; mais de 10.000 eleitores; pelo menos 5.000 moradias, escola pública e unidade de saúde; e atendimento às diretrizes do Plano Diretor. Nos serviços públicos, a permissão é sempre a título precário, autorizada por decreto e por prazo não superior a 90 dias, após edital de chamamento; a concessão só é feita com autorização legislativa, mediante contrato (art. 21). Obra pública pode ser executada direta ou indiretamente, mas a execução direta não dispensa licitação para compra do material (art. 23)."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "A Prefeitura quer vender um terreno municipal a uma empresa. Pela Lei Orgânica, quais requisitos se aplicam?",
+        "resolucao": "Pelo art. 10, a operação com imóvel exige avaliação prévia e autorização legislativa e, por se tratar de alienação, também licitação, que só é afastada nos casos de permuta e doação. Como é uma venda, a licitação é obrigatória. Some-se a isso o art. 72, XXVI, segundo o qual compete à Câmara aprovar previamente a alienação de bem público."
+      },
+      {
+        "enunciado": "Uma região do Município tem 30 mil habitantes, 12 mil eleitores, 6 mil moradias e escola pública, mas nenhuma unidade de saúde. Pode ser instalada ali uma Administração Regional?",
+        "resolucao": "Ainda não. O art. 18 exige, cumulativamente, população superior a 25.000 habitantes, mais de 10.000 eleitores, pelo menos 5.000 moradias, escola pública e unidade de saúde, além de atendimento às diretrizes do Plano Diretor. Falta a unidade de saúde (e é preciso verificar o Plano Diretor). Lembre também que a Regional é criada por lei de iniciativa do Executivo e leva o nome da sua sede (art. 17)."
+      },
+      {
+        "enunciado": "Classifique como competência privativa (art. 6º) ou comum (art. 7º): (a) legislar sobre assuntos de interesse local; (b) proteger o meio ambiente e combater a poluição; (c) criar guarda municipal; (d) fixar, com os municípios vizinhos, os limites territoriais.",
+        "resolucao": "(a) privativa (art. 6º, I); (b) comum (art. 7º, VI); (c) privativa (art. 6º, XVI); (d) comum (art. 7º, XII), respeitada a legislação estadual. Dica: o que envolve “legislar”, “organizar” e “prestar” serviços locais tende a estar no art. 6º; o que é dever compartilhado de proteção e promoção social está no art. 7º."
+      }
+    ],
+    "conceitos": [
+      {
+        "t": "Lei Orgânica do Município",
+        "d": "Lei fundamental do Município, promulgada pela Câmara; a de Contagem é de 20/03/1990, com emendas até a nº 44/2024."
+      },
+      {
+        "t": "Autonomia municipal",
+        "d": "Capacidade política, administrativa e financeira do Município, que elabora sua Lei Orgânica, elege seus governantes e organiza sua administração (arts. 1º e 3º)."
+      },
+      {
+        "t": "Competência privativa",
+        "d": "Atribuição exclusiva do Município ligada ao interesse local, listada no art. 6º (ex.: Plano Diretor, distritos, guarda municipal)."
+      },
+      {
+        "t": "Competência comum",
+        "d": "Atribuição administrativa exercida em conjunto com a União e o Estado, listada no art. 7º (ex.: meio ambiente, saúde, patrimônio histórico)."
+      },
+      {
+        "t": "Bens municipais",
+        "d": "Todas as coisas móveis e imóveis, direitos e ações que, a qualquer título, pertençam ao Município (art. 8º)."
+      },
+      {
+        "t": "Administração Regional",
+        "d": "Divisão administrativa criada por lei de iniciativa do Executivo, com o nome de sua sede e requisitos mínimos do art. 18."
+      },
+      {
+        "t": "Permissão de serviço",
+        "d": "Delegação sempre a título precário, autorizada por decreto, por prazo não superior a 90 dias, após edital de chamamento (art. 21, §2º)."
+      },
+      {
+        "t": "Concessão de serviço",
+        "d": "Delegação feita somente com autorização legislativa, mediante contrato e observada a legislação de licitação (art. 21, §3º)."
+      }
+    ],
+    "dominio": [
+      "Acertar ao menos 8 das 10 questões do tópico.",
+      "Recitar, sem consulta, os seis preceitos do art. 1º, §3º, e os três elementos da autonomia do art. 3º.",
+      "Listar as quatro condições do art. 18 para instalar uma Administração Regional e as quatro formas de uso especial de bem por terceiro (art. 10, §2º)."
+    ],
+    "fontes": [
+      {
+        "titulo": "Prefeitura de Contagem – Legislação: Lei Orgânica do Município de Contagem (texto consolidado até a Emenda nº 44/2024)",
+        "url": "https://legislacao.contagem.mg.gov.br/legislacao/view/471413"
+      },
+      {
+        "titulo": "Câmara Municipal de Contagem (SAPL) – Lei Orgânica do Município nº 1, de 20/03/1990 (texto integral)",
+        "url": "https://sapl.contagem.mg.leg.br/media/sapl/public/normajuridica/1990/4259/4259_texto_integral.pdf"
+      },
+      {
+        "titulo": "Câmara Municipal de Contagem – portal (menu Legislação > Lei Orgânica)",
+        "url": "https://www.cmc.mg.gov.br/"
+      }
+    ]
+  },
+  "cgm-lei-organica-2": {
+    "objetivos": [
+      "Ao final, você consegue descrever a composição e o funcionamento da Câmara Municipal de Contagem e as regras de mandato dos Vereadores segundo a Lei Orgânica.",
+      "Ao final, você consegue aplicar os quóruns e prazos do processo legislativo municipal: emenda à Lei Orgânica, lei complementar, sanção, veto e urgência.",
+      "Ao final, você consegue explicar posse, substituição, sucessão, atribuições e responsabilidade do Prefeito, além das regras da Lei Orgânica sobre administração pública e servidores."
+    ],
+    "explicacao": [
+      "Câmara Municipal: o Poder Legislativo é exercido pela Câmara, composta por representantes do povo eleitos (art. 56). Desde a Emenda nº 43/2022, a Lei Orgânica fixa em 25 o número de vereadores, observados os limites do art. 29, IV, da Constituição da República (§1º); esse número é fixado pela Câmara até o final da legislatura e não vigora na legislatura em que for fixado (§2º). Cada legislatura dura quatro anos (§3º). A Câmara se reúne em sessão ordinária, independentemente de convocação, de 1º de fevereiro a 30 de junho e de 1º de agosto a 15 de dezembro (art. 58). No primeiro ano da legislatura, reúne-se em 1º de janeiro para dar posse aos Vereadores, ao Prefeito e ao Vice-Prefeito e eleger a Mesa Diretora para mandato de dois anos (§1º). As deliberações são tomadas por maioria de votos, presente a maioria dos membros, salvo exceções (art. 60); o Presidente só vota nas votações secretas e, em caso de empate, nas públicas. A convocação extraordinária cabe ao Prefeito (urgência e interesse público relevante) ou ao Presidente da Câmara (intervenção no Município, posse do Prefeito e do Vice, ou urgência a requerimento da maioria dos membros); nela, só se delibera sobre a matéria da convocação (art. 59).",
+      "Vereadores: são invioláveis, no exercício do mandato e na circunscrição do Município, por suas opiniões, palavras e votos (art. 63). Há proibições desde a expedição do diploma e desde a posse (art. 64), como firmar contrato com pessoa jurídica de direito público, autarquia, empresa pública ou concessionária de serviço público municipal (salvo contrato de cláusulas uniformes) ou ser titular de mais de um cargo ou mandato eletivo. Perde o mandato o Vereador que (art. 65): infringir essas proibições; usar o mandato para corrupção ou improbidade; faltar com o decoro; sofrer condenação criminal transitada em julgado; tiver a perda decretada pela Justiça Eleitoral; deixar de comparecer, em cada sessão legislativa, à terça parte das reuniões, salvo licença ou missão autorizada; perder ou tiver suspensos os direitos políticos; ou fixar residência fora do Município. Nos casos dos incisos I, II, III, IV e VIII, a perda é decidida pela Câmara, por voto secreto e maioria de seus membros, mediante provocação da Mesa; nos incisos V, VI e VII, é declarada pela Mesa. Não perde o mandato (art. 66) o Vereador investido em cargo de Ministro, Secretário de Estado ou do Município (entre outros), afastando-se da vereança; o licenciado por doença; o licenciado para interesse particular por até 120 dias por sessão legislativa, sem remuneração; e, desde a Emenda nº 44/2024, quem assume temporariamente, como suplente, mandato de deputado estadual, deputado federal ou senador, ficando automaticamente licenciado. O suplente é convocado em caso de vaga, de investidura nesses cargos ou de licença superior a 120 dias; havendo vaga sem suplente, faz-se eleição se faltarem mais de 15 meses para o fim do mandato.",
+      "Comissões e atribuições: a Câmara tem comissões permanentes e temporárias, com participação proporcional dos partidos tanto quanto possível (art. 69). As comissões podem votar projeto que dispense o Plenário, salvo recurso de 1/3 dos membros da Câmara, e realizar audiências públicas inclusive nas regiões do Município. As Comissões Parlamentares de Inquérito são criadas a requerimento de 1/3 dos membros, para apurar fato determinado e por prazo certo, com poderes de investigação próprios das autoridades judiciais; suas conclusões vão ao Ministério Público ou a outra autoridade competente (art. 70). O art. 71 lista as matérias que a Câmara regula com sanção do Prefeito (plano diretor, plano plurianual, orçamentos, tributos, criação de cargos, secretarias, divisão regional, bens). Já o art. 72 lista as competências privativas, sem sanção, como: eleger a Mesa e elaborar o Regimento; dar posse ao Prefeito e ao Vice e conhecer de sua renúncia; autorizar o Prefeito a ausentar-se do Município (e o Vice, do Estado) por mais de 15 dias; julgar anualmente as contas do Prefeito e do Presidente da Câmara, mediante parecer prévio do Tribunal de Contas do Estado; aprovar por dois terços a escolha do Defensor do Povo; autorizar referendo e convocar plebiscito; e sustar atos normativos do Executivo que exorbitem do poder regulamentar. O subsídio dos Vereadores tem teto de 75% do fixado para os Deputados Estaduais, e o total da remuneração dos vereadores não pode ultrapassar 5% da receita do Município (art. 72, VI).",
+      "Processo legislativo e emenda à Lei Orgânica: o processo legislativo compreende emenda à Lei Orgânica, lei complementar, lei ordinária, decreto legislativo e resolução (art. 73). A LOM pode ser emendada mediante proposta de, no mínimo, 1/3 dos membros da Câmara, do Prefeito ou da maioria do eleitorado do Município (art. 74). A proposta é discutida e votada em dois turnos, com interstício mínimo de 10 dias, e aprovada se obtiver, em ambos, 3/5 dos votos dos membros da Câmara; a emenda é promulgada pela Mesa, com número de ordem. Não se emenda a LOM durante estado de sítio, estado de defesa ou intervenção estadual. O referendo à emenda ocorre se requerido em até 90 dias da promulgação pela maioria dos membros da Câmara, pelo Prefeito ou por 5% do eleitorado. A lei complementar é aprovada por maioria dos membros da Câmara (art. 75, §1º) e abrange, entre outras, o Plano Diretor, o Código Tributário, o Código de Obras, o Código de Posturas, o Estatuto dos Servidores e o do Magistério e a lei de organização administrativa. A iniciativa popular de lei exige, no mínimo, 5% do eleitorado do Município ou de bairros, quando de interesse local (art. 77).",
+      "Iniciativa, sanção e veto: são de iniciativa privativa do Prefeito, entre outras matérias, a criação de cargos e funções na administração direta, autárquica e fundacional, o regime jurídico dos servidores, a criação e a extinção de Secretarias, o plano plurianual, as diretrizes orçamentárias, os orçamentos anuais e a matéria tributária que reduza a receita (art. 76, II); à Mesa da Câmara cabem, por resolução, o regulamento geral da Secretaria da Câmara, a autorização para o Prefeito se ausentar e a mudança temporária da sede da Câmara (art. 76, I). O Prefeito pode pedir urgência: se a Câmara não se manifestar em até 45 dias, o projeto entra na ordem do dia, sobrestando os demais assuntos; o prazo não corre no recesso (art. 79). A proposição aprovada vai ao Prefeito, que tem 15 dias úteis para sancionar ou vetar; o silêncio importa sanção (art. 80). O veto parcial abrange texto integral de artigo, parágrafo, inciso ou alínea; o Prefeito comunica os motivos ao Presidente da Câmara em 48 horas; a Câmara decide em 30 dias, em escrutínio secreto, e só rejeita o veto pelo voto da maioria de seus membros. Se o Prefeito não promulgar a lei em 48 horas, promulga o Presidente da Câmara e, se este não o fizer, o Vice-Presidente. Matérias sobre empréstimos, concessão de privilégios ou interesse particular exigem 2/3 dos membros (art. 83).",
+      "Poder Executivo: é exercido pelo Prefeito, auxiliado pelos Secretários Municipais (art. 84). O mandato é de quatro anos, admitida a reeleição para um único período subsequente (art. 85). Prefeito e Vice tomam posse em 1º de janeiro do ano seguinte ao da eleição, perante a Câmara; se ela não se reunir, perante o Juiz de Direito da Comarca; se em 10 dias o eleito não assumir, salvo força maior, o cargo é declarado vago (art. 86). O Vice-Prefeito substitui o Prefeito no impedimento e o sucede na vaga (art. 86, §3º). No impedimento ou na vacância de ambos, é chamado ao exercício do Governo o Presidente da Câmara (art. 87). Vagando os dois cargos, há eleição 90 dias depois da última vaga; se a vacância ocorrer nos dois últimos anos do mandato, a eleição para ambos é feita pela Câmara, 30 dias depois da última vaga, e os eleitos completam o período (art. 88). O Prefeito deve residir no Município e não pode ausentar-se dele por mais de 15 dias sem autorização da Câmara, sob pena de perda do mandato (art. 89). Pode ser convocado pela Câmara ou por iniciativa popular de 2% do eleitorado para prestar informações (art. 91). Entre suas atribuições privativas (art. 92): representar o Município; nomear e exonerar Secretários; sancionar, promulgar e publicar leis e expedir decretos; vetar proposições; enviar à Câmara o plano plurianual e o orçamento até 30 de setembro e o projeto de diretrizes orçamentárias até 15 de maio; enviar as contas à Câmara e ao Tribunal de Contas em 60 dias da abertura da sessão legislativa; e decretar situação de emergência e estado de calamidade pública.",
+      "Responsabilidade do Prefeito e órgãos auxiliares: os crimes de responsabilidade são definidos em lei federal; o Prefeito é processado e julgado perante a Câmara se a acusação for admitida por dois terços de seus membros, e, nos crimes comuns, perante o Tribunal de Justiça (art. 93, §2º); durante o mandato, não responde por ato estranho às suas funções. As infrações político-administrativas (art. 94) incluem impedir o funcionamento da Câmara, desatender suas convocações, deixar de apresentar a proposta orçamentária, descumprir o orçamento, ausentar-se além do permitido e residir fora do Município. Qualquer cidadão pode apresentar denúncia; a Comissão Processante tem cinco Vereadores sorteados entre os desimpedidos e de partidos diferentes; o Vereador denunciante fica impedido de integrá-la; e a condenação exige dois terços dos membros da Câmara, com decreto legislativo de cassação. O Secretário Municipal deve ser brasileiro, maior de 18 anos, no pleno gozo dos direitos políticos, vedada a nomeação de inelegíveis (art. 97). A Procuradoria-Geral é subordinada ao Prefeito e o ingresso na carreira de Procurador se dá por concurso de provas e títulos (art. 99). O Conselho de Governo, órgão superior de consulta do Prefeito, reúne o Vice-Prefeito, o Presidente da Câmara, dois Vereadores eleitos pelos pares, o Procurador-Geral e três cidadãos brasileiros natos com mais de 35 anos (um nomeado pelo Prefeito e dois eleitos pela Câmara), com mandato de dois anos, vedada a recondução (art. 100). O controle externo cabe à Câmara, com auxílio do Tribunal de Contas do Estado, cujo parecer prévio sobre as contas do Prefeito só deixa de prevalecer por 2/3 dos votos da Câmara (arts. 104 e 106).",
+      "Administração pública: pela redação da Emenda nº 19/2000, a administração dos Poderes do Município e das entidades descentralizadas obedece aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência; a redação original falava em “razoabilidade” no lugar de “eficiência” (art. 24). O agente deve motivar o ato, explicitando fundamento legal, fático e finalidade. A administração direta compete aos órgãos dos Poderes (art. 25); a indireta, a autarquias, sociedades de economia mista, empresas públicas, fundações públicas e demais entidades sob controle do Município (art. 26). Depende de lei a instituição e a extinção de autarquia e fundação, e o Município só pode instituir ou manter fundação com natureza de direito público (art. 27). O Prefeito, o Vice, os Vereadores, os ocupantes de cargo em comissão ou função de confiança, seus cônjuges e parentes até o segundo grau ou por adoção e os servidores não podem contratar com o Município, proibição que subsiste até seis meses após o fim das funções (art. 33). A ação administrativa do Executivo segue os critérios de descentralização, regionalização e participação popular, e a Secretaria Municipal é o órgão central do sistema administrativo (arts. 34 e 35).",
+      "Servidores públicos: a investidura em cargo ou emprego depende de concurso de provas ou de provas e títulos, ressalvados os cargos em comissão de livre nomeação e a admissão de agentes comunitários de saúde e de combate às endemias por processo seletivo público (art. 37, §1º); o concurso vale dois anos, prorrogável uma vez por igual período (§2º). As funções de confiança são exercidas exclusivamente por ocupantes de cargo efetivo e os cargos em comissão destinam-se a direção, chefia e assessoramento (art. 39); é vedada a nomeação de inelegíveis para cargos de direção ou chefia. A remuneração e os subsídios só são fixados ou alterados por lei específica, assegurada a revisão anual sempre em 1º de maio, sem distinção de índices (art. 40, na redação da Emenda nº 43/2022). A LOM reserva 10% dos cargos e empregos públicos à pessoa com deficiência (art. 43, Emenda nº 42/2019). São estáveis após três anos de efetivo exercício os nomeados por concurso, com avaliação especial de desempenho obrigatória (art. 51). Entre os direitos próprios do Município estão férias-prêmio de três meses a cada cinco anos de efetivo exercício, admitida a conversão em espécie, e adicional de 10% sobre o vencimento a cada cinco anos de efetivo exercício (art. 48), além de licença de 120 dias para servidora adotante de criança de 0 a 2 anos (art. 55)."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Com 25 vereadores, quantos parlamentares precisam assinar uma proposta de emenda à Lei Orgânica e quantos votos ela precisa para ser aprovada?",
+        "resolucao": "A proposta parlamentar exige, no mínimo, 1/3 dos membros: 25 ÷ 3 = 8,33, logo 9 vereadores (art. 74, I). A aprovação exige 3/5 dos membros em cada um dos dois turnos: 3/5 de 25 = 15 votos, com interstício mínimo de 10 dias entre os turnos (art. 74, §2º). Aprovada, a emenda é promulgada pela Mesa da Câmara (§4º), sem sanção do Prefeito."
+      },
+      {
+        "enunciado": "O Prefeito recebeu uma proposição de lei e deixou passar o prazo sem se manifestar. Ele depois também não promulgou a lei. O que acontece?",
+        "resolucao": "Decorridos os 15 dias úteis, o silêncio importa sanção (art. 80, §1º). Se o Prefeito não promulgar a lei em 48 horas, o Presidente da Câmara a promulga; se este também não o fizer em igual prazo, cabe ao Vice-Presidente (art. 80, §8º)."
+      },
+      {
+        "enunciado": "Um cidadão denuncia o Prefeito por residir fora do Município. Qual o quórum para admitir a acusação e para cassar o mandato numa Câmara de 25 vereadores?",
+        "resolucao": "Residir fora do Município é infração político-administrativa (art. 94, IX). A acusação só é admitida por 2/3 dos membros (§3º) e a condenação também exige 2/3 (§11): 2/3 de 25 = 16,67, ou seja, 17 votos em cada caso. A Comissão Processante tem cinco vereadores sorteados entre os desimpedidos e de partidos diferentes (§4º)."
+      }
+    ],
+    "conceitos": [
+      {
+        "t": "Legislatura",
+        "d": "Período de quatro anos que coincide com o mandato dos Vereadores (art. 56, §3º, e art. 58, §1º)."
+      },
+      {
+        "t": "Sessão legislativa",
+        "d": "Período anual de funcionamento ordinário: 1º/02 a 30/06 e 1º/08 a 15/12 (art. 58)."
+      },
+      {
+        "t": "Mesa Diretora",
+        "d": "Órgão de direção da Câmara, eleito para mandato de dois anos; promulga as emendas à Lei Orgânica."
+      },
+      {
+        "t": "Comissão Parlamentar de Inquérito",
+        "d": "Comissão criada por requerimento de 1/3 dos membros, para fato determinado e prazo certo, com poderes de investigação de autoridade judicial (art. 70)."
+      },
+      {
+        "t": "Sanção tácita",
+        "d": "Efeito do silêncio do Prefeito após 15 dias úteis do recebimento da proposição de lei (art. 80, §1º)."
+      },
+      {
+        "t": "Veto parcial",
+        "d": "Recusa de parte da proposição, que deve abranger texto integral de artigo, parágrafo, inciso ou alínea (art. 80, §4º)."
+      },
+      {
+        "t": "Infração político-administrativa",
+        "d": "Conduta do Prefeito julgada pela Câmara e sancionada com perda do mandato, por 2/3 dos membros (art. 94)."
+      },
+      {
+        "t": "Conselho de Governo",
+        "d": "Órgão superior de consulta do Prefeito, com mandato de dois anos para os cidadãos membros, vedada a recondução (art. 100)."
+      }
+    ],
+    "dominio": [
+      "Acertar ao menos 8 das 10 questões do tópico.",
+      "Montar, sem consulta, a tabela de quóruns: 1/3 (proposta de emenda e CPI), 3/5 (aprovação de emenda), maioria dos membros (lei complementar e rejeição de veto) e 2/3 (admissão e condenação do Prefeito).",
+      "Explicar a ordem de substituição do Prefeito (Vice-Prefeito e, na falta de ambos, Presidente da Câmara) e as duas formas de eleição do art. 88."
+    ],
+    "fontes": [
+      {
+        "titulo": "Prefeitura de Contagem – Legislação: Lei Orgânica do Município de Contagem (texto consolidado até a Emenda nº 44/2024)",
+        "url": "https://legislacao.contagem.mg.gov.br/legislacao/view/471413"
+      },
+      {
+        "titulo": "Câmara Municipal de Contagem (SAPL) – Lei Orgânica do Município nº 1, de 20/03/1990 (texto integral)",
+        "url": "https://sapl.contagem.mg.leg.br/media/sapl/public/normajuridica/1990/4259/4259_texto_integral.pdf"
+      },
+      {
+        "titulo": "Câmara Municipal de Contagem (SAPL) – Emenda à Lei Orgânica nº 43, de 29/11/2022",
+        "url": "https://sapl.contagem.mg.leg.br/media/sapl/public/normajuridica/2022/2839/2839_texto_integral.pdf"
+      },
+      {
+        "titulo": "Câmara Municipal de Contagem (SAPL) – Emenda à Lei Orgânica nº 44, de 10/12/2024",
+        "url": "https://sapl.contagem.mg.leg.br/media/sapl/public/normajuridica/2024/4213/4213_texto_integral.pdf"
+      }
+    ]
+  },
+  "cgm-politica": {
+    "objetivos": [
+      "Ao final, você consegue identificar quem chefiava o Executivo e o Legislativo de Contagem em 2026 e explicar, com base na Lei Orgânica, as mudanças ocorridas nesse ano.",
+      "Ao final, você consegue citar as oito Administrações Regionais de Contagem e reconhecer a estrutura de secretarias e entidades da administração indireta divulgada pela Prefeitura.",
+      "Ao final, você consegue relacionar fatos políticos recentes às regras de sucessão e substituição previstas na Lei Orgânica."
+    ],
+    "explicacao": [
+      "Os dois Poderes: pela Lei Orgânica, são poderes do Município o Legislativo, exercido pela Câmara Municipal, e o Executivo, exercido pelo Prefeito com o auxílio dos Secretários Municipais (arts. 2º, 56 e 84). Segundo o portal da Prefeitura, o Gabinete do Prefeito e boa parte das secretarias funcionam na Praça Presidente Tancredo Neves, 200, bairro Camilo Alves. A Câmara Municipal fica na Praça São Gonçalo, 18, no Centro. Atenção: os dados políticos mudam; este tópico reflete as fontes oficiais consultadas em novembro de 2026.",
+      "Mandato 2025–2028: a Câmara registra a 20ª Legislatura, de 2025 a 2028, com eleição em 6 de outubro de 2024. Segundo a Câmara, Ricardo Faria venceu as eleições municipais em chapa com Marília Campos (PT) em 2020 e em 2024, como vice-prefeito. A Lei Orgânica fixa em 25 o número de vereadores (art. 56, §1º, na redação da Emenda nº 43/2022).",
+      "Mudança na chefia do Executivo em 2026: em 26 de março de 2026, a Câmara realizou sua 1ª Reunião Extraordinária do ano, na qual foi lida a carta de renúncia de Marília Campos (PT), que deixou o cargo de prefeita para se candidatar ao Senado Federal. Em seguida, em reunião solene presidida pelo presidente da Câmara, Bruno Barreiro (PV), o vice-prefeito Ricardo Faria (PSD) tomou posse como prefeito. No juramento, ele prometeu manter, defender e cumprir as Constituições da República e do Estado e a Lei Orgânica do Município. Na Lei Orgânica, isso corresponde à regra de que o Vice-Prefeito sucede o Prefeito no caso de vaga (art. 86, §3º) e à competência da Câmara para conhecer da renúncia do Prefeito (art. 72, VIII).",
+      "Substituição temporária em outubro de 2026: com a posse de Ricardo Faria, o cargo de vice-prefeito ficou vago. Por isso, quando o prefeito tirou férias de 6 a 18 de outubro de 2026 (pedido feito à Câmara pelo Ofício nº 489/2026), quem assumiu temporariamente a chefia do Executivo foi o presidente da Câmara, Bruno Barreiro. A Câmara fundamentou a substituição na Lei Orgânica e no Regimento Interno: no impedimento do Prefeito e do Vice, ou na vacância dos cargos, é chamado ao Governo o Presidente da Câmara (art. 87). Enquanto isso, a 1ª vice-presidente, vereadora Carol do Teteco (MDB), presidiu o Legislativo, conforme a Portaria da Mesa nº 05/2026.",
+      "Mesa Diretora da Câmara: a Mesa é eleita para mandato de dois anos (LOM, art. 58, §1º). Em 2026 (2ª sessão legislativa da 20ª Legislatura), segundo o sistema legislativo da Câmara, ela era composta por Bruno Barreiro (PV), presidente; Carol do Teteco (MDB), 1ª vice-presidente; Pastor Itamar (PRD), 2º vice-presidente; Léo da Academia (PDT), 1º secretário; e Junior Zica (União), 2º secretário. Em 1º de outubro de 2026, em eleição antecipada e chapa única aprovada por unanimidade, foi eleita a Mesa para o biênio 2027/2028: Bruno Barreiro (PV) reconduzido à presidência, Carol do Teteco (MDB) na 1ª vice-presidência, Adilson Lamounier (União) na 2ª vice-presidência, Pastor Itamar (PRD) como 1º secretário e Junior Zica (União) como 2º secretário.",
+      "Secretarias: a Lei Orgânica define a Secretaria Municipal como órgão central do sistema administrativo (art. 35, §1º) e reserva ao Prefeito a iniciativa de lei para criar, estruturar e extinguir Secretarias (art. 76, II, “d”). Em novembro de 2026, o portal da Prefeitura lista, entre outros órgãos, a Chefia de Gabinete, a Secretaria-Geral do Município, a Secretaria Municipal de Governo, as Secretarias de Administração, Fazenda, Planejamento, Orçamento e Gestão, Educação, Saúde, Tecnologia da Informação, Defesa Social, Obras, Serviços Urbanos, Habitação, Cultura, Esporte e Lazer, Meio Ambiente e Desenvolvimento Sustentável, Desenvolvimento Econômico, Desenvolvimento Urbano, Desenvolvimento Social e Segurança Alimentar, Direitos Humanos e Cidadania, Trabalho e Geração de Renda, Mulher e Juventude, Comunicação e Licitação e Contratos, além da Controladoria-Geral e da Procuradoria-Geral do Município.",
+      "Administração indireta: na mesma página, o portal da Prefeitura agrupa sob o título “Autarquias” a Fundação de Ensino de Contagem (Funec), a Autarquia Municipal de Trânsito e Transportes de Contagem (Transcon), a Autarquia Municipal de Parques e Praças de Contagem (Conparq) e o Instituto de Previdência dos Servidores Públicos do Município de Contagem (Iprevicon). Pela Lei Orgânica, a instituição e a extinção de autarquia e de fundação dependem de lei (art. 27, I), e o Município só pode instituir ou manter fundação com natureza de pessoa jurídica de direito público (art. 27, §1º).",
+      "Administrações Regionais: o portal da Prefeitura apresenta as regionais como o principal contato dos moradores com a administração municipal e lista oito: Sede, Eldorado, Industrial, Nacional, Petrolândia, Ressaca, Riacho e Vargem das Flores. Como manda a Lei Orgânica, cada uma leva o nome de sua sede (art. 17, parágrafo único). Exemplos de bairros atendidos, segundo o portal: a Regional Sede (Praça Silviano Brandão, 21, Centro) atende Centro, Bernardo Monteiro e Camilo Alves; a Eldorado atende Eldorado, JK, Água Branca e o Cinco; a Ressaca atende Jardim Laguna, o Entreposto da Ceasa e o Distrito Industrial Ressaca (Polo Moveleiro); a Vargem das Flores atende Nova Contagem, Retiro das Esperanças e áreas rurais como Campo Alegre e Capim Rasteiro; e a Nacional atende Nacional, Xangrilá e Pedra Azul. Pegadinha: desconfie de nomes que não estão nessa lista de oito, como “Barreiro”, que não é regional de Contagem."
+    ],
+    "exemplos": [
+      {
+        "enunciado": "Por que, em outubro de 2026, o presidente da Câmara, e não um vice-prefeito, assumiu temporariamente a Prefeitura de Contagem?",
+        "resolucao": "Porque o cargo de vice-prefeito estava vago: Ricardo Faria, que era vice, tornou-se prefeito em 26/03/2026 com a renúncia de Marília Campos. Pela Lei Orgânica, no impedimento do Prefeito e do Vice ou na vacância dos cargos, é chamado ao exercício do Governo o Presidente da Câmara (art. 87). Assim, Bruno Barreiro exerceu a chefia do Executivo de 6 a 18/10/2026, e a 1ª vice-presidente, Carol do Teteco, presidiu a Câmara."
+      },
+      {
+        "enunciado": "Um morador de Nova Contagem e outro do bairro JK querem levar uma demanda à sua Administração Regional. A qual regional cada um deve recorrer?",
+        "resolucao": "Segundo a lista de bairros do portal da Prefeitura, Nova Contagem é atendida pela Regional Vargem das Flores e o JK, pela Regional Eldorado. Lembre que Contagem tem oito regionais (Sede, Eldorado, Industrial, Nacional, Petrolândia, Ressaca, Riacho e Vargem das Flores)."
+      },
+      {
+        "enunciado": "A Mesa Diretora eleita em 1º/10/2026 começa a atuar quando e por quanto tempo?",
+        "resolucao": "Ela foi eleita para o biênio 2027/2028, ou seja, para os dois anos seguintes da 20ª Legislatura, o que é coerente com o mandato de dois anos da Mesa previsto na Lei Orgânica (art. 58, §1º). A eleição foi antecipada por requerimento aprovado na 31ª Reunião Ordinária."
+      }
+    ],
+    "conceitos": [
+      {
+        "t": "Renúncia",
+        "d": "Abandono voluntário do mandato; a Câmara conhece da renúncia do Prefeito (LOM, art. 72, VIII). Foi o caso de Marília Campos em 2026."
+      },
+      {
+        "t": "Sucessão",
+        "d": "Ocupação definitiva do cargo vago; o Vice-Prefeito sucede o Prefeito na vaga (art. 86, §3º)."
+      },
+      {
+        "t": "Substituição",
+        "d": "Exercício temporário do cargo durante impedimento; sem Vice, o Presidente da Câmara substitui o Prefeito (art. 87)."
+      },
+      {
+        "t": "Mesa Diretora",
+        "d": "Órgão de direção da Câmara, eleito para dois anos; em 2026 e no biênio 2027/2028, presidido por Bruno Barreiro (PV)."
+      },
+      {
+        "t": "Administração Regional",
+        "d": "Unidade descentralizada da Prefeitura, nomeada pela sede; Contagem tem oito."
+      },
+      {
+        "t": "Autarquia",
+        "d": "Entidade da administração indireta criada por lei, como a Transcon e a Conparq."
+      }
+    ],
+    "dominio": [
+      "Acertar ao menos 8 das 10 questões do tópico.",
+      "Contar, sem consulta, a sequência de 2026: renúncia de Marília Campos e posse de Ricardo Faria (26/03), substituição por Bruno Barreiro (6 a 18/10) e eleição da Mesa 2027/2028 (1º/10).",
+      "Listar as oito Administrações Regionais e citar um bairro atendido por pelo menos quatro delas."
+    ],
+    "fontes": [
+      {
+        "titulo": "Câmara Municipal de Contagem (SAPL) – Legislaturas (20ª: 2025–2028, eleição em 06/10/2024)",
+        "url": "https://sapl.contagem.mg.leg.br/api/parlamentares/legislatura/"
+      },
+      {
+        "titulo": "Câmara Municipal de Contagem – Câmara empossa Ricardo Faria como prefeito (23/03/2026)",
+        "url": "https://www.cmc.mg.gov.br/?p=28584"
+      },
+      {
+        "titulo": "Câmara Municipal de Contagem – Câmara dá posse a Ricardo Faria (27/03/2026)",
+        "url": "https://www.cmc.mg.gov.br/?p=28630"
+      },
+      {
+        "titulo": "Câmara Municipal de Contagem – Bruno Barreiro assume temporariamente a Prefeitura (07/10/2026)",
+        "url": "https://www.cmc.mg.gov.br/?p=29814"
+      },
+      {
+        "titulo": "Câmara Municipal de Contagem – Carol do Teteco preside o Legislativo durante afastamento de Bruno Barreiro (09/10/2026)",
+        "url": "https://www.cmc.mg.gov.br/?p=29823"
+      },
+      {
+        "titulo": "Câmara Municipal de Contagem – Câmara elege Mesa Diretora para o biênio 2027/2028 (02/10/2026)",
+        "url": "https://www.cmc.mg.gov.br/?p=29790"
+      },
+      {
+        "titulo": "Câmara Municipal de Contagem (SAPL) – Mesa Diretora",
+        "url": "https://sapl.contagem.mg.leg.br/mesa-diretora/"
+      },
+      {
+        "titulo": "Prefeitura de Contagem – Secretarias / Departamentos",
+        "url": "https://portal.contagem.mg.gov.br/portal/secretarias"
+      },
+      {
+        "titulo": "Prefeitura de Contagem – Regionais",
+        "url": "https://portal.contagem.mg.gov.br/portal/paginas-dinamicas-categoria/7/regionais"
+      },
+      {
+        "titulo": "Prefeitura de Contagem – Legislação: Lei Orgânica do Município de Contagem (texto consolidado até a Emenda nº 44/2024)",
+        "url": "https://legislacao.contagem.mg.gov.br/legislacao/view/471413"
+      }
+    ]
+  }
+}
