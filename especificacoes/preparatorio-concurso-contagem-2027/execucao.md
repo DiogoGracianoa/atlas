@@ -109,3 +109,11 @@ vermelho por asserção antes da implementação.
 - **Validação:** `npm run validate` ok; `checar-leva.mjs` nas 4 disciplinas;
   `npx vitest run` 524/524; lint e tipos ok; build, tamanho (127,9 KB),
   segredos e privacidade ok; `npx playwright test` 108/108.
+
+## Extensão 2026-11-12 — CI após o push para `main`
+
+Commit `4cf379b` no repositório renomeado (`DiogoGracianoa/letrume`): o
+workflow `validate` (run 43290381144) terminou com sucesso nos três jobs,
+`qualidade`, `e2e` e `banco`. O job `banco` executou a migration 0002 e os
+cenários S24–S26 em PostgreSQL 16, fechando a lacuna declarada acima
+(Docker local sem daemon).
