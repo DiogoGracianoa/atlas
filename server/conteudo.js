@@ -37,13 +37,18 @@ export async function serveContent(request, { config = process.env.VITE_SUPABASE
     }
     const params = new URL(request.url).searchParams.getAll("arquivo");
     const file = params[0] ?? "";
-    if (params.length !== 1 || !/^content\/(areas\.json|[a-z0-9-]+\/curriculum\.json)$/.test(file))
+    // Concurso (K-C1): além do concurso.json, a pasta do concurso tem
+    // discursiva.json, teoria/<disciplina>.json e questoes/<disciplina>.json.
+    const concursoFile = /^content\/([a-z0-9-]+)\/(discursiva\.json|(?:teoria|questoes)\/[a-z0-9-]+\.json)$/.exec(file);
+    if (params.length !== 1 || !(/^content\/(areas\.json|[a-z0-9-]+\/(curriculum|concurso)\.json)$/.test(file) || concursoFile))
         return error(404, "Arquivo não encontrado.");
     try {
         const manifest = await readFile(join(root, "private", "content", "areas.json"), "utf8");
         const areas = JSON.parse(manifest).areas;
-        const allowed = new Set(["content/areas.json", ...areas.flatMap(a => [a.arquivo, ...(a.subtemas ?? []).map(s => s.arquivo)]).filter(Boolean)]);
-        if (!allowed.has(file))
+        const leaves = areas.flatMap(a => [a, ...(a.subtemas ?? [])]);
+        const allowed = new Set(["content/areas.json", ...leaves.map(a => a.arquivo).filter(Boolean)]);
+        const concursos = new Set(leaves.filter(a => a.tipo === "concurso" && a.arquivo === `content/${a.slug}/concurso.json`).map(a => a.slug));
+        if (!allowed.has(file) && !(concursoFile && concursos.has(concursoFile[1])))
             return error(404, "Arquivo não encontrado.");
         const body = file === "content/areas.json" ? manifest : await readFile(join(root, "private", file), "utf8");
         return new Response(body, { headers: { ...noStore, "Content-Type": "application/json; charset=utf-8" } });

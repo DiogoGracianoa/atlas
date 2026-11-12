@@ -7,12 +7,14 @@ import { Mapa } from "./pages/Mapa";
 import { Grupo } from "./pages/Grupo";
 import { Capa } from "./pages/Capa";
 import { Item } from "./pages/Item";
+import { ConcursoLazy } from "./concurso/lazy";
 
 function Vista() {
   const { view } = useAtlas();
   if (view === "grupo") return <Grupo />;
   if (view === "capa") return <Capa />;
   if (view === "item") return <Item />;
+  if (view === "concurso") return <ConcursoLazy />;
   return <Mapa />;
 }
 
@@ -24,6 +26,7 @@ export const atlasRoutes: RouteObject[] = [
       { path: ":area", element: <Vista /> },
       { path: ":area/:b", element: <Vista /> },
       { path: ":area/:b/:c", element: <Vista /> },
+      { path: ":area/:b/:c/:d", element: <Vista /> },
     ],
   },
 ];

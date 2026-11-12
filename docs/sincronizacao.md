@@ -62,6 +62,27 @@ editando ao mesmo tempo.
 9. **Sair no meio de um envio** descarta o resultado: o envio guarda o `uid` do
    início e não aplica nada se a sessão mudou.
 
+## Registros do preparatório (ADR-0015)
+
+O preparatório de concursos usa uma quarta tabela, `registros`
+(migration 0002), com a mesma regra "vence o mais recente":
+
+- **Chave:** `(user_id, tipo, registro_id)`. Estados (`topico`, `revisao`,
+  `erro`, `plano`) são linhas mutáveis; eventos (`tentativa`, `sessao`,
+  `replanejamento`, `simulado`, `discursiva`) têm id único e nunca são
+  reescritos, então dois aparelhos nunca brigam por eles.
+- **No aparelho:** chave `atlas-registros-v1`, separada do `atlas-v3`. Cada
+  registro entra na mesma fila de saída (`r|tipo|id`) e sobe na hora.
+- **Busca:** a cada ciclo, linhas remotas mais novas substituem as locais; as
+  locais mais novas ou ausentes no servidor sobem de novo.
+- **Zerar tudo:** cada registro vira uma marca de exclusão (`{"apagado":
+  true}`) com o horário do Zerar; linha remota anterior a ele e desconhecida
+  no aparelho também vira exclusão.
+- **Limite:** corpo de até 16 KB; o banco recusa acima disso e o cliente
+  descarta a operação com aviso, sem travar as outras.
+- **Simulado em andamento:** fica só no aparelho (`atlas-simulado-ativo:…`)
+  até terminar; então vira registros.
+
 ## Estados do indicador
 
 | Estado | Quando |

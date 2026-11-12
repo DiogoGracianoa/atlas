@@ -21,6 +21,8 @@ private/content/
 | Ciência | `ciencia` | planejada |
 | Tecnologia (agrupador) | `tecnologia` | disponível |
 | ↳ Arquitetura e liderança técnica | `arquitetura-lideranca-tecnica` | disponível (9 módulos, 82 temas: Liderança técnica, Engenharia e arquitetura, IA aplicada e SDD) |
+| Concursos (agrupador) | `concursos` | disponível |
+| ↳ Contagem/MG 2027 · Analista de TI | `contagem-2027` | disponível (tipo concurso: 72 tópicos do Anexo IV, Ret. nº 02; teoria e questões em levas) |
 
 Área ou subtema planejado fica no manifesto, mas não aparece no site (nem no mapa, nem no menu); um endereço direto para ele se comporta como inexistente. Esta tabela é
 conferida contra `private/content/areas.json` pelos testes: se você mudar o status
@@ -96,7 +98,7 @@ do conteúdo de cada tema: títulos, textos da capa, o texto-base do prompt de
   "arquivo": "content/historia/curriculum.json",
   "titulo": "Atlas de história",
   "subtitulo": "Trilha de história",
-  "tituloPdf": "Atlas de Estudos · História",
+  "tituloPdf": "Letrume · História",
   "capa": {
     "rotulo": "TRILHA DE ESTUDOS",
     "lead": "{modulos} módulos, {temas} temas. …",
@@ -164,6 +166,42 @@ uma lista `subtemas`, e cada subtema tem os mesmos campos de uma área comum.
   subtemas.
 - **Subtema novo:** acrescentar um exige só a entrada em `subtemas` e o
   `curriculum.json`, sem nenhuma mudança de código.
+
+## Concursos (subtemas do tipo concurso)
+
+Um preparatório de concurso é um subtema com `"tipo": "concurso"` dentro do
+agrupador `concursos` ([ADR-0014](adr/0014-concurso-como-subtema-tipado.md)).
+O contrato completo está em
+[`especificacoes/preparatorio-concurso-contagem-2027/contratos.md`](../especificacoes/preparatorio-concurso-contagem-2027/contratos.md) (K-C1).
+
+```
+private/content/<concurso>/
+  concurso.json              edital, fontes, prova, disciplinas › módulos › tópicos, trilha, rotina
+  teoria/<disciplina>.json   { "<tópico>": { objetivos, explicacao, exemplos, conceitos, dominio } }
+  questoes/<disciplina>.json [ { id, topico, enunciado, alternativas[4], gabarito, comentario, origem } ]
+  discursiva.json            [ { id, topicos, caso, pede, espelho } ] (opcional)
+```
+
+- **Edital primeiro:** todo tópico obrigatório tem `fonte` (`ref` a uma
+  entrada de `fontes`, `pagina` e `trecho`) e `validacao`
+  (`verificado`, `pendente` ou `divergente`). O que não está no edital vigente
+  é `"opcional": true` e não entra no progresso.
+- **Trilha:** semanas contíguas de `inicio` a `fim`; cada tópico obrigatório em
+  exatamente uma semana; `revisar` lista tópicos revisitados; toda semana cobre
+  todas as disciplinas (por `topicos` ou `revisar`).
+- **Publicação:** `"publicado": true` só quando o tópico tem teoria completa e
+  de 8 a 10 questões autorais. Questão autoral tem `"origem": "autoral"`;
+  nenhuma é atribuída à banca sem fonte verificável.
+- **Dados da prova:** todo dado (data, quadro, discursiva) tem `fonte`; o
+  `validate` recusa dado sem fonte.
+
+### Como acrescentar um concurso
+
+1. Crie `private/content/<slug>/concurso.json` a partir do edital vigente,
+   registrando a versão de cada documento em `fontes`.
+2. Acrescente o subtema em `concursos.subtemas` no `areas.json`, com `tipo`,
+   `arquivo`, `titulo`, `tituloPdf` e `tradicoes` (uma cor por disciplina).
+3. Rode `npm run validate`; publique teoria e questões em levas.
 
 ## Como acrescentar uma área nova
 

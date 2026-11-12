@@ -54,7 +54,9 @@ describe("mapa (P01)", () => {
     // planejadas (história, economia, filosofia, ciência) não aparecem em lugar nenhum
     expect(screen.queryByText("História")).toBeNull();
     expect(screen.queryByText(/em breve/i)).toBeNull();
-    expect(within(lista).getAllByRole("listitem")).toHaveLength(2);
+    expect(within(lista).getAllByRole("listitem")).toHaveLength(3);
+    // preparatório (S35): agrupador Concursos com o concurso de Contagem
+    expect(within(lista).getByRole("link", { name: /Concursos/ }).getAttribute("href")).toBe("/atlas/concursos");
     const continuar = screen.getByRole("link", { name: /Continuar de onde parei/ });
     expect(continuar.getAttribute("href")).toBe("/atlas/politica/m3e2");
     expect(continuar.textContent).toContain("Módulo 3, tema 2");

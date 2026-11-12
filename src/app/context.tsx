@@ -4,6 +4,7 @@
 import { createContext, useContext, useSyncExternalStore, type ReactNode } from "react";
 import type { State } from "../core/types";
 import type { SyncState } from "../core/sync";
+import type { Registros } from "../core/registros";
 import type { Services } from "./services";
 
 const ServicesContext = createContext<Services | null>(null);
@@ -40,6 +41,18 @@ export function useAppState(): State {
     () => rec.v,
   );
   return store.state;
+}
+
+/** Registros do preparatório; o componente redesenha a cada mudança. */
+export function useRegistros(): Registros {
+  const { registros } = useServices();
+  const rec = versionOf(registros, bump => registros.on(bump));
+  useSyncExternalStore(
+    (cb) => { rec.subs.add(cb); return () => { rec.subs.delete(cb); }; },
+    () => rec.v,
+    () => rec.v,
+  );
+  return registros;
 }
 
 /** Estado da sincronização (status, usuário, erros do link). */

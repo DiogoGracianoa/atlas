@@ -151,3 +151,14 @@ test("applyOps aplica e emite um único lote", () => {
   assert.equal(events.length, 1);
   assert.equal((events[0] as BatchEvent).ops.length, 2);
 });
+
+// Renomeação para Letrume (S08, RN03): as chaves locais não mudam com o nome
+// do produto; trocar qualquer uma delas perderia progresso ou envio pendente.
+test("chaves locais seguem as mesmas depois da renomeação", async () => {
+  const { QUEUE_KEY } = await import("../../src/core/queue");
+  const { ACCOUNT_SEEN_KEY } = await import("../../src/app/account");
+  assert.equal(KEY, "atlas-v3");
+  assert.equal(LEGACY_KEY, "atlas-estudos-v2");
+  assert.equal(QUEUE_KEY, "atlas-v3-queue");
+  assert.equal(ACCOUNT_SEEN_KEY, "atlas-conta-vista");
+});

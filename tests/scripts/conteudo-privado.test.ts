@@ -30,3 +30,11 @@ it("inspeciona o artefato e recusa um trecho de estudo embutido no JavaScript p�
   writeFileSync(join(root, "dist/assets/app.js"), "console.log('shell de login')");
   expect(inspectPublicContent(root)).toEqual([]);
 });
+
+it("o título impresso das áreas usa o nome do produto, Letrume (renomeação, S07)", () => {
+  type A = { tituloPdf?: string; status?: string; subtemas?: A[] };
+  const areas = (JSON.parse(readFileSync("private/content/areas.json", "utf8")) as { areas: A[] }).areas;
+  const folhas = areas.flatMap(a => (a.subtemas?.length ? a.subtemas : [a])).filter(a => a.tituloPdf);
+  expect(folhas.length).toBeGreaterThan(0);
+  for (const a of folhas) expect(a.tituloPdf).toMatch(/^Letrume · /);
+});

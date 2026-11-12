@@ -8,7 +8,14 @@ import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const AXE = require.resolve("axe-core/axe.min.js");
 
-const paginas = ["/", "/atlas", "/atlas/politica", "/atlas/politica/m8e3", "/atlas/politica/m8of", "/entrar"];
+const paginas = ["/", "/atlas", "/atlas/politica", "/atlas/politica/m8e3", "/atlas/politica/m8of", "/entrar",
+  // preparatório de concurso (S49)
+  "/atlas/concursos/contagem-2027", "/atlas/concursos/contagem-2027/trilha", "/atlas/concursos/contagem-2027/topico/ce-redes-ip",
+  "/atlas/concursos/contagem-2027/painel", "/atlas/concursos/contagem-2027/simulado", "/atlas/concursos/contagem-2027/discursiva",
+  // leva 1: tópico publicado (teoria real) e questões
+  "/atlas/concursos/contagem-2027/topico/ce-memorias", "/atlas/concursos/contagem-2027/questoes/rl-proposicoes",
+  // leva 2: tópico ainda não publicado e questões de sub-rede
+  "/atlas/concursos/contagem-2027/topico/ce-poo-conceitos", "/atlas/concursos/contagem-2027/questoes/ce-redes-ip"];
 
 async function prefs(page: Page, theme: "light" | "dark", size: "m" | "xl") {
   await page.addInitScript(([t, s]) => {

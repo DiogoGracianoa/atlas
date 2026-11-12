@@ -33,13 +33,14 @@ describe("backup (P11)", () => {
     HTMLAnchorElement.prototype.click = vi.fn();
   });
 
-  it("exportar gera o backup v3 com todas as áreas", async () => {
+  it("exportar gera o backup v4 (KB4) com todas as áreas e os registros do preparatório", async () => {
     const marks = { "politica/m1e1:def": { done: true, at } };
     const { user } = renderApp("/atlas", { storage: memoryStorage({ "atlas-v3": estado({ marks }) }) });
     await screen.findByRole("heading", { level: 1, name: "Mapa do Atlas" });
     await user.click(within(ferramentas()).getByRole("button", { name: "Exportar" }));
     const out = JSON.parse(await blobs[0]!.text());
-    expect(out.version).toBe(3);
+    expect(out.version).toBe(4);
+    expect(out.registros).toEqual({});
     expect(out.marks["politica/m1e1:def"]).toEqual({ done: true, at });
     expect(await screen.findByText("Backup exportado.")).toBeTruthy();
   });
@@ -60,7 +61,7 @@ describe("backup (P11)", () => {
     const { services } = renderApp("/atlas");
     await screen.findByRole("heading", { level: 1, name: "Mapa do Atlas" });
     fireEvent.change(within(ferramentas()).getByLabelText("Arquivo de backup"), { target: { files: [new File(["{x"], "x.json")] } });
-    expect(await screen.findByText("Não foi possível ler esse arquivo. Selecione um backup exportado pelo Atlas.")).toBeTruthy();
+    expect(await screen.findByText("Não foi possível ler esse arquivo. Selecione um backup exportado pelo Letrume.")).toBeTruthy();
     expect(Object.keys(services.store.state.marks)).toEqual([]);
   });
 });

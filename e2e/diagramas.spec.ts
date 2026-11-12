@@ -6,7 +6,8 @@ import type { Curriculum, Manifest } from "../src/core/types";
 
 const man = JSON.parse(readFileSync("private/content/areas.json", "utf8")) as Manifest;
 const folhas = man.areas.flatMap(a => (a.subtemas?.length ? a.subtemas.map(s => ({ s, pai: a.slug as string | null })) : [{ s: a, pai: null }]))
-  .filter(x => x.s.status === "disponivel" && x.s.arquivo);
+  // concursos (K-C1) não têm currículo nem diagramas
+  .filter(x => x.s.status === "disponivel" && x.s.arquivo && x.s.tipo !== "concurso");
 
 const casos = folhas.flatMap(({ s, pai }) => {
   const cur = JSON.parse(readFileSync("private/" + s.arquivo, "utf8")) as Curriculum;

@@ -1,6 +1,6 @@
 # Arquitetura
 
-O Atlas usa React + TypeScript com Vite e uma **função Node na Vercel** para
+O Letrume usa React + TypeScript com Vite e uma **função Node na Vercel** para
 entregar os materiais. A função valida o bearer no Supabase Auth antes de ler
 os JSONs de `private/content/`. O navegador conversa diretamente com Supabase
 para progresso e anotações, protegidos pelo Row Level Security do Postgres.
@@ -30,7 +30,10 @@ para progresso e anotações, protegidos pelo Row Level Security do Postgres.
 | `core/queue.ts` | fila de saída persistida, uma operação por linha remota, com coalescência | `localStorage` |
 | `core/sync.ts` | ciclo de sincronização: conecta, busca, mescla, envia, tenta de novo; login por link e código | store, queue, merge, supabase-js (sob demanda) |
 | `core/content.ts` | manifesto e currículos sob demanda, índice por área | `fetch` (injetado) |
-| `core/backup.ts` | exportar e importar (v2 e v3) por mescla | merge |
+| `core/backup.ts` | exportar (v4) e importar (v2, v3 e v4) por mescla | merge, registros |
+| `core/registros.ts` | registros do preparatório (estados e eventos), chave local própria | `localStorage` (injetado) |
+| `core/concurso/` | calendário, estudo, desempenho, simulado e índice do concurso (funções puras) | registros |
+| `core/origem.ts` | domínio canônico: redireciona depois de esvaziar a fila ([ADR-0013](adr/0013-dominio-canonico.md)) | sync |
 | `core/legacy.ts` | tradução dos endereços antigos com `#` | — |
 | `app/` | serviços, roteador, moldura, conta, ajustes, avisos | núcleo, `ui/` |
 | `sections/registry.ts` | lista de seções do portal | cada seção |
@@ -77,6 +80,7 @@ vinda de outro aparelho é aplicada quando a pessoa sai do campo.
 | `/atlas` | mapa de áreas |
 | `/atlas/:area` | capa da área |
 | `/atlas/:area/:id` | tema ou oficina |
+| `/atlas/concursos/:concurso/:pagina?/:id?` | preparatório de concurso: capa (hoje), trilha, tópico, questões, erros, revisões, simulado, discursiva e painel ([ADR-0014](adr/0014-concurso-como-subtema-tipado.md)) |
 | `/entrar` | login público obrigatório para acessar as demais telas |
 
 - Área planejada ou desconhecida leva a `/atlas` com aviso; item desconhecido
@@ -113,6 +117,9 @@ função recebe esses arquivos pelo `functions.includeFiles` da Vercel.
 O schema está em [`supabase/migrations/0001_init.sql`](../supabase/migrations/0001_init.sql):
 
 - três tabelas por usuário: `progress`, `notes` e `prefs`;
+- a tabela `registros` do preparatório de concursos
+  ([`0002_registros.sql`](../supabase/migrations/0002_registros.sql),
+  [ADR-0015](adr/0015-registros-genericos-sincronizados.md));
 - a tabela `heartbeat`, de leitura pública, usada pelo keepalive;
 - RLS com a regra `auth.uid() = user_id`;
 - um trigger `BEFORE UPDATE` que descarta escrita mais antiga que a

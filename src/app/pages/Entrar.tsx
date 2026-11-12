@@ -8,7 +8,7 @@ import s from "../conta.module.css";
 export function Entrar() {
   const sync = useSyncState();
   const navigate = useNavigate();
-  useEffect(() => { document.title = "Entrar · Atlas"; }, []);
+  useEffect(() => { document.title = "Entrar · Letrume"; }, []);
   // Entrou (pelo código aqui ou pelo link do e-mail): vai para o atlas.
   useEffect(() => { if (sync.user) void navigate("/atlas", { replace: true }); }, [sync.user, navigate]);
   return (

@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { useAccountSeen } from "../../../app/account";
 import { useServices, useSyncState } from "../../../app/context";
-import { exportBackup, planImport } from "../../../core/backup";
+import { exportBackup, planImport, planImportRegistros } from "../../../core/backup";
 import { LEGACY_AREA } from "../../../core/legacy";
 import type { AreaIndex } from "../../../core/types";
 import { Confirm } from "../../../ui/Confirm";
@@ -22,7 +22,7 @@ function download(name: string, text: string) {
 }
 
 export function AtlasTools({ area, onAction, onPrint }: { area: AreaIndex | null; onAction?: () => void; onPrint?: () => void }) {
-  const { store, content } = useServices();
+  const { store, content, registros } = useServices();
   const sync = useSyncState();
   const seen = useAccountSeen();
   const toast = useToast();
@@ -35,7 +35,8 @@ export function AtlasTools({ area, onAction, onPrint }: { area: AreaIndex | null
   async function onFile(file: File) {
     try {
       const o: unknown = JSON.parse(await file.text());
-      const legacy = !!o && typeof o === "object" && (o as { version?: unknown }).version !== 3;
+      const versao = !!o && typeof o === "object" ? (o as { version?: unknown }).version : undefined;
+      const legacy = versao !== 3 && versao !== 4;
       if (legacy && content.isAvailable(LEGACY_AREA)) await content.loadArea(LEGACY_AREA).catch(() => null);
       const loaded = new Map<string, AreaIndex>();
       for (const a of content.areas()) {
@@ -50,7 +51,7 @@ export function AtlasTools({ area, onAction, onPrint }: { area: AreaIndex | null
       planImport(store.state, o, { now: new Date().toISOString(), isKnownItem });
       setPendingImport({ backup: o, isKnownItem });
     } catch {
-      toast("Não foi possível ler esse arquivo. Selecione um backup exportado pelo Atlas.");
+      toast("Não foi possível ler esse arquivo. Selecione um backup exportado pelo Letrume.");
     }
   }
 
@@ -59,7 +60,7 @@ export function AtlasTools({ area, onAction, onPrint }: { area: AreaIndex | null
       <p className={s.toolsTitle}>Seu progresso</p>
       <div className={s.toolsGrid}>
         <button type="button" className={s.tool} onClick={() => {
-          download(BACKUP_FILE, JSON.stringify(exportBackup(store.state, new Date().toISOString()), null, 2));
+          download(BACKUP_FILE, JSON.stringify(exportBackup(store.state, new Date().toISOString(), registros.todos()), null, 2));
           toast("Backup exportado.");
         }}>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" /></svg>
@@ -94,7 +95,9 @@ export function AtlasTools({ area, onAction, onPrint }: { area: AreaIndex | null
           if (!p) return;
           const ops = planImport(store.state, p.backup, { now: new Date().toISOString(), isKnownItem: p.isKnownItem });
           store.applyOps(ops);
-          toast(ops.length ? `Progresso importado (${ops.length} ${ops.length === 1 ? "alteração" : "alterações"}).` : "Nada novo no backup.");
+          const regs = registros.applyOps(planImportRegistros(p.backup));
+          const n = ops.length + regs.length;
+          toast(n ? `Progresso importado (${n} ${n === 1 ? "alteração" : "alterações"}).` : "Nada novo no backup.");
         }}
       >
         Mesclar o backup com o progresso deste aparelho? Entradas mais recentes vencem e nada é apagado.
@@ -109,6 +112,7 @@ export function AtlasTools({ area, onAction, onPrint }: { area: AreaIndex | null
         onConfirm={() => {
           setConfirmReset(false);
           store.resetAll();
+          registros.resetAll();
           onAction?.();
           void navigate("/atlas");
           toast("Progresso zerado.");

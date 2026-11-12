@@ -4,6 +4,7 @@ import "./ui/global.css";
 import { App } from "./app/App";
 import { createServices } from "./app/services";
 import { legacyToPath } from "./core/legacy";
+import { createCanonicalRedirect } from "./core/origem";
 import { sections } from "./sections/registry";
 import { applyPrefs, installTheme } from "./ui/theme";
 
@@ -28,6 +29,9 @@ createRoot(root).render(
 );
 
 void services.sync.init();
+
+// Endereço antigo → domínio canônico, só depois de enviar as pendências (KO1).
+createCanonicalRedirect({ canonical: import.meta.env.VITE_ORIGEM_CANONICA, win: window, sync: services.sync });
 
 // Offline (ADR-007): o service worker só existe no build de produção.
 if (import.meta.env.PROD && "serviceWorker" in navigator) {

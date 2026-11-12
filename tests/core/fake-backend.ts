@@ -4,15 +4,17 @@
 // descartada não volta na resposta) e o formato de horário do Postgres.
 // (Portado de tests/app/fake-backend.mjs, mesmo comportamento.)
 import { createStore } from "../../src/core/store";
+import { createRegistros } from "../../src/core/registros";
 import { createSync, type QueryResult, type Session, type SupabaseLike, type SyncWindow } from "../../src/core/sync";
 
 type Row = Record<string, unknown> & { user_id: string; updated_at: string };
-type TableName = "progress" | "notes" | "prefs";
+type TableName = "progress" | "notes" | "prefs" | "registros";
 
 const PK: Record<TableName, (r: Row) => string> = {
   progress: r => r.user_id + "|" + r.item_id + "|" + r.mark,
   notes: r => r.user_id + "|" + r.item_id,
   prefs: r => r.user_id,
+  registros: r => r.user_id + "|" + r.tipo + "|" + r.registro_id,
 };
 const pg = (at: string) => new Date(at).toISOString().replace("Z", "000+00:00");
 const NET = (): QueryResult => ({ data: null, error: { message: "TypeError: Failed to fetch" }, status: 0 });
@@ -24,8 +26,10 @@ export interface DeviceState {
   listeners: ((event: string, session: Session | null) => void)[];
 }
 
-export function createBackend() {
-  const tables: Record<TableName, Row[]> = { progress: [], notes: [], prefs: [] };
+// semRegistros: banco sem a migration 0002 (PostgREST responde 404, PGRST205).
+export function createBackend({ semRegistros = false }: { semRegistros?: boolean } = {}) {
+  const SEM_TABELA = (): QueryResult => ({ data: null, error: { message: "Could not find the table public.registros", code: "PGRST205" }, status: 404 });
+  const tables: Record<TableName, Row[]> = { progress: [], notes: [], prefs: [], registros: [] };
   const calls: string[] = [];
   let failNext: QueryResult | null = null;
   const backend = {
@@ -53,12 +57,14 @@ export function createBackend() {
           return {
             select: async () => {
               calls.push(dev.name + ":select:" + table);
+              if (semRegistros && table === "registros") return SEM_TABELA();
               if (!dev.online) return NET();
               return { data: tables[table].filter(r => r.user_id === uid()).map(r => ({ ...r })), error: null, status: 200 };
             },
             upsert: (rows: object[]) => ({
               select: async (): Promise<QueryResult> => {
                 calls.push(dev.name + ":upsert:" + table + ":" + rows.length);
+                if (semRegistros && table === "registros") return SEM_TABELA();
                 if (!dev.online) return NET();
                 if (failNext) { const f = failNext; failNext = null; return f; }
                 const written: Row[] = [];
@@ -140,17 +146,19 @@ export function createDevice(backend: Backend, { name, clock, loggedIn = true, s
     addEventListener: (ev, fn) => { (handlers[ev] ||= []).push(fn); },
   };
   const store = createStore({ storage, now: clock.nowIso });
+  let seq = 0;
+  const registros = createRegistros({ storage, now: clock.nowIso, uuid: () => name + "-" + ++seq });
   const client = backend.clientFor(dev);
   const sync = createSync({
     config: { url: "https://proj.supabase.co", anonKey: "anon" },
-    store, win, storage,
+    store, registros, win, storage,
     loadSupabase: async () => ({ createClient: () => client }),
     now: clock.nowIso, nowMs: clock.nowMs,
     timers: { setTimeout: clock.setTimeout, clearTimeout: clock.clearTimeout },
     fmt: (at) => at.slice(11, 16),
   });
   return {
-    name, dev, store, sync, storage, win,
+    name, dev, store, registros, sync, storage, win,
     goOffline() { dev.online = false; (handlers.offline || []).forEach(fn => fn()); },
     async goOnline() { dev.online = true; (handlers.online || []).forEach(fn => fn()); await sync.whenIdle(); },
     async becomeVisible() { (handlers["doc:visibilitychange"] || []).forEach(fn => fn()); await sync.whenIdle(); },

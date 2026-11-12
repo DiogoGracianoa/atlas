@@ -11,6 +11,7 @@
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join, dirname, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
+import { validateConcurso, existsUnder } from "./validate-concurso.mjs";
 
 const args = process.argv.slice(2);
 const rootArg = args.indexOf("--root");
@@ -49,6 +50,11 @@ function checkUrls(value, where) {
 }
 
 function validateArea(area) {
+  if (area.tipo === "concurso") {
+    validateConcurso(area, { readJSON, exists: existsUnder(ROOT), err, checkUrls });
+    return;
+  }
+  if (area.tipo !== undefined && area.tipo !== "curriculo") { err(area.slug, "tipo inválido: " + area.tipo); return; }
   const slug = area.slug;
   for (const f of AREA_REQUIRED) if (!present(area[f])) err(slug, "campo obrigatório no manifesto: " + f);
   const trad = area.tradicoes && typeof area.tradicoes === "object" ? area.tradicoes : {};

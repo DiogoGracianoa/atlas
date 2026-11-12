@@ -65,7 +65,7 @@ export type StoreEvent =
 
 /* ---------- linhas do Supabase (contrato K3) ---------- */
 
-export type Table = "progress" | "notes" | "prefs";
+export type Table = "progress" | "notes" | "prefs" | "registros";
 
 export interface ProgressRow {
   area: string;
@@ -87,10 +87,20 @@ export interface PrefsRow {
   updated_at: string;
 }
 
+/** Linha de `registros` (contrato K-R1). */
+export interface RegistroRow {
+  area: string;
+  tipo: string;
+  registro_id: string;
+  corpo: Record<string, unknown>;
+  updated_at: string;
+}
+
 export type QueueOp =
   | { table: "progress"; row: ProgressRow }
   | { table: "notes"; row: NoteRow }
-  | { table: "prefs"; row: PrefsRow };
+  | { table: "prefs"; row: PrefsRow }
+  | { table: "registros"; row: RegistroRow };
 
 export type QueueItem = QueueOp & { key: string };
 
@@ -114,6 +124,8 @@ export interface AreaMeta {
   capa?: { rotulo: string; lead: string; passos: { t: string; d: string }[] };
   tradicoes?: Record<string, Tradicao>;
   promptBase?: string;
+  /** "concurso" (K1 v3): o arquivo é um concurso.json (K-C1), não um currículo. */
+  tipo?: "curriculo" | "concurso";
   /** Agrupador (K1 v2): a área não tem currículo próprio; cada subtema tem. */
   subtemas?: AreaMeta[];
 }

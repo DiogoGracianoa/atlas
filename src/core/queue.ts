@@ -3,10 +3,11 @@
 import type { QueueItem, QueueOp, StorageLike, Table } from "./types";
 
 export const QUEUE_KEY = "atlas-v3-queue";
-export const TABLES: readonly Table[] = ["progress", "notes", "prefs"];
+export const TABLES: readonly Table[] = ["progress", "notes", "prefs", "registros"];
 
-export function rowKey(table: Table, row: { item_id?: string; mark?: string }): string {
+export function rowKey(table: Table, row: { item_id?: string; mark?: string; tipo?: string; registro_id?: string }): string {
   if (table === "progress") return "p|" + row.item_id + "|" + row.mark;
+  if (table === "registros") return "r|" + row.tipo + "|" + row.registro_id;
   if (table === "notes") return "n|" + row.item_id;
   return "f";
 }
@@ -37,7 +38,7 @@ export function createQueue({ storage, key = QUEUE_KEY }: { storage: StorageLike
 
   return {
     put(op) {
-      const k = rowKey(op.table, op.row as { item_id?: string; mark?: string });
+      const k = rowKey(op.table, op.row as { item_id?: string; mark?: string; tipo?: string; registro_id?: string });
       const cur = items.get(k);
       if (cur && cur.row.updated_at > op.row.updated_at) return;
       items.set(k, { table: op.table, row: { ...op.row } } as QueueOp);

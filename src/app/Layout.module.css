@@ -13,5 +13,5 @@
   font-family: var(--font-read); font-weight: 700; font-size: 1.15rem; letter-spacing: -.01em;
   min-height: 44px;
 }
-.logo { width: 26px; height: 26px; fill: none; stroke: var(--brand); stroke-width: 1.6; }
+.logo { width: 26px; height: 26px; fill: none; stroke: var(--brand); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .main { outline: none; min-height: calc(100vh - var(--header-h)); }

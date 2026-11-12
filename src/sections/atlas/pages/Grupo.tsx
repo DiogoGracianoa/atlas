@@ -16,7 +16,7 @@ export function Grupo() {
   const { group, paths } = useAtlas();
   const state = useAppState();
   const hid = useId();
-  useTitle(group ? `${group.nome} · Atlas` : "Atlas");
+  useTitle(group ? `${group.nome} · Letrume` : "Atlas de estudos · Letrume");
   if (!group) return null;
   return (
     <div className={s.page}>
@@ -30,19 +30,20 @@ export function Grupo() {
         {/* só o que existe: subtemas planejados não aparecem */}
         {(group.subtemas ?? []).filter(sub => sub.status === "disponivel" && !!sub.arquivo).map(sub => {
           const p = areaProgress(sub.slug, state.marks, state.totals[sub.slug]);
+          const concurso = sub.tipo === "concurso";
           return (
             <li key={sub.slug}>
               <Link to={paths.areaPath(sub.slug)} className={s.areaCard}>
                 <Arte seed={sub.slug} colors={leafColors(sub)} height={96} className={s.cardArt} />
                 <div className={s.cardRow}>
                   <div className={s.cardText}>
-                    <Tag>Subtema</Tag>
+                    <Tag>{concurso ? "Preparatório" : "Subtema"}</Tag>
                     <h3>{sub.nome}</h3>
                     {sub.resumo && <p>{sub.resumo}</p>}
                   </div>
-                  {p.total ? <ProgressRing value={p.done} max={p.total} label={`Progresso em ${sub.nome}`} size={58} color="var(--success)" /> : null}
+                  {!concurso && p.total ? <ProgressRing value={p.done} max={p.total} label={`Progresso em ${sub.nome}`} size={58} color="var(--success)" /> : null}
                 </div>
-                {!p.total && <span className={s.muted}>{p.done} {p.done === 1 ? "marco concluído" : "marcos concluídos"}</span>}
+                {!concurso && !p.total && <span className={s.muted}>{p.done} {p.done === 1 ? "marco concluído" : "marcos concluídos"}</span>}
               </Link>
             </li>
           );

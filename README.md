@@ -1,4 +1,4 @@
-# Atlas
+# Letrume
 
 **An authenticated study portal with progress synced across devices.**
 Each topic comes with a long-form explanation, a curated video and a book, plus
@@ -14,7 +14,7 @@ architecture notes and this README are written for a broader audience.
 
 ## Overview and motivation
 
-Atlas started as a single HTML file I used to study politics and economics:
+Letrume (formerly Atlas) started as a single HTML file I used to study politics and economics:
 one long page per topic, checkboxes for *read the definition → watch the
 video → read the book*, and notes in `localStorage`. It worked, until I wanted
 the same progress on my phone and my laptop, and more study areas than one.
@@ -38,7 +38,7 @@ without losing what made it useful:
 
 | Portal | Topic page (light) |
 |---|---|
-| ![Portal home with the Atlas and Dossiers sections](docs/img/portal.png) | ![Topic page with the learning path, definition and progress](docs/img/tema-claro.png) |
+| ![Portal home with the study atlas section](docs/img/portal.png) | ![Topic page with the learning path, definition and progress](docs/img/tema-claro.png) |
 
 | Area cover (dark) | Phone (dark) |
 |---|---|
@@ -61,6 +61,7 @@ without losing what made it useful:
 - **Notes** saved on every keystroke. A remote update never overwrites the
   text you are typing; it is applied when you leave the field.
 - **Search** within an area or across all areas.
+- **Exam prep (concursos):** a typed sub-theme of the atlas with the official syllabus traced to the edital (document, version, page, validation state), a 10-week plan with a daily focus, topic status kept apart from reading and confidence, study sessions, an authored question bank with an error notebook, spaced review, timed mock exams weighted like the real test, a discursive self-assessment and a dashboard. All of it offline-first and synced through a generic `registros` table.
 - **Offline-first sync:**
   - local writes first, then per-row upserts;
   - checkmarks sync immediately, notes after an 800 ms debounce;
@@ -265,6 +266,9 @@ context, alternatives, decision, consequences and a review trigger:
 | [0010](docs/adr/0010-conteudo-em-public.md) | Content served as static JSON from `public/content` |
 | [0011](docs/adr/0011-versoes-de-dependencias.md) | Exact dependency versions, at least two weeks old |
 | [0012](docs/adr/0012-acesso-e-conteudo-autenticados.md) | Required login and authenticated, uncached content delivery; supersedes public materials |
+| [0013](docs/adr/0013-dominio-canonico.md) | Renamed to Letrume; canonical domain `letrume.com.br`, redirecting only after pending changes are synced |
+| [0014](docs/adr/0014-concurso-como-subtema-tipado.md) | Exam prep as a typed sub-theme of the study atlas |
+| [0015](docs/adr/0015-registros-genericos-sincronizados.md) | Generic synced study records (`registros` table, backup v4) |
 
 ## Roadmap
 

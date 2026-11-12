@@ -18,7 +18,7 @@ import { AtlasNav } from "./components/AtlasNav";
 import { RoteiroImpresso, usePrint } from "./print/RoteiroImpresso";
 import s from "./Atlas.module.css";
 
-export type AtlasView = "mapa" | "grupo" | "capa" | "item";
+export type AtlasView = "mapa" | "grupo" | "capa" | "item" | "concurso";
 
 export interface AtlasContext {
   manifest: Manifest;
@@ -28,6 +28,8 @@ export interface AtlasContext {
   group: AreaMeta | null;
   /** ID curto do item aberto, se houver. */
   itemId: string | null;
+  /** Concurso (K-C1): slug, página e id da rota /atlas/{grupo}/{concurso}/{página}/{id}. */
+  concurso?: { slug: string; pagina: string | null; id: string | null };
   view: AtlasView;
   paths: Paths;
 }
@@ -37,10 +39,10 @@ export const useAtlas = () => useOutletContext<AtlasContext>();
 const available = (m: AreaMeta | undefined | null) => !!(m && m.status === "disponivel" && m.arquivo && !m.subtemas?.length);
 
 type Resolved =
-  | { kind: "ok"; view: AtlasView; leaf?: string; group: AreaMeta | null; itemId: string | null }
+  | { kind: "ok"; view: AtlasView; leaf?: string; group: AreaMeta | null; itemId: string | null; concurso?: AtlasContext["concurso"] }
   | { kind: "redirect"; to: string; message?: string };
 
-function resolve(manifest: Manifest | null, a?: string, b?: string, c?: string): Resolved {
+function resolve(manifest: Manifest | null, a?: string, b?: string, c?: string, d?: string): Resolved {
   if (!a) return { kind: "ok", view: "mapa", group: null, itemId: null };
   const top = manifest?.areas.find(x => x.slug === a);
   if (!manifest) return { kind: "ok", view: "mapa", group: null, itemId: null };
@@ -51,9 +53,11 @@ function resolve(manifest: Manifest | null, a?: string, b?: string, c?: string):
     if (!b) return { kind: "ok", view: "grupo", group: top, itemId: null };
     const sub = top.subtemas.find(x => x.slug === b);
     if (!sub || !available(sub)) return { kind: "redirect", to: "/atlas/" + a, message: "Subtema não encontrado." };
+    if (sub.tipo === "concurso") return { kind: "ok", view: "concurso", group: top, itemId: null, concurso: { slug: sub.slug, pagina: c ?? null, id: d ?? null } };
+    if (d) return { kind: "redirect", to: "/atlas/" + a + "/" + b };
     return { kind: "ok", view: c ? "item" : "capa", leaf: b, group: top, itemId: c ?? null };
   }
-  if (c) return { kind: "redirect", to: "/atlas/" + a };
+  if (c || d) return { kind: "redirect", to: "/atlas/" + a };
   return { kind: "ok", view: b ? "item" : "capa", leaf: a, group: null, itemId: b ?? null };
 }
 
@@ -62,10 +66,10 @@ function Carregando() {
 }
 
 export function AtlasLayout() {
-  const { area: a, b, c } = useParams();
+  const { area: a, b, c, d } = useParams();
   const manifest = useManifest();
   const data = manifest.status === "ready" ? manifest.data : null;
-  const r = resolve(data, a, b, c);
+  const r = resolve(data, a, b, c, d);
   const leaf = r.kind === "ok" ? r.leaf : undefined;
   const area = useArea(leaf, !!leaf);
   const paths = useMemo(() => createPaths(data), [data]);
@@ -86,7 +90,16 @@ export function AtlasLayout() {
   if (leaf && area.status === "error") return <RedirectWithToast to={backTo} message="Esta área precisa de conexão na primeira abertura." />;
   if (leaf && area.status === "loading") return <Carregando />;
 
-  const ctx: AtlasContext = { manifest: manifest.data, area: current, group: r.group, itemId: r.itemId, view: r.view, paths };
+  const ctx: AtlasContext = { manifest: manifest.data, area: current, group: r.group, itemId: r.itemId, view: r.view, paths, concurso: r.concurso };
+  // Concurso: telas próprias, sem o menu de módulos do atlas.
+  if (r.view === "concurso") {
+    return (
+      <div className={s.concursoShell}>
+        <style>{manifest.data.areas.flatMap(x => (x.subtemas?.length ? x.subtemas : [x])).map(traditionCss).join("\n")}</style>
+        <Outlet context={ctx} />
+      </div>
+    );
+  }
   const prog = current ? areaMarks(current, state) : null;
   const pct = prog && prog.total ? Math.round((100 * prog.done) / prog.total) : null;
   const title = current ? current.meta.nome : r.group ? r.group.nome : "Mapa do Atlas";

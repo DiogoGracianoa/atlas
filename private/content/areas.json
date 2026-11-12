@@ -8,7 +8,7 @@
       "arquivo": "content/politica/curriculum.json",
       "titulo": "Atlas de política, economia e marxismo",
       "subtitulo": "Trilha de política, economia e marxismo",
-      "tituloPdf": "Atlas de Estudos · Política, Economia e Marxismo",
+      "tituloPdf": "Letrume · Política, Economia e Marxismo",
       "capa": {
         "rotulo": "TRILHA DE ESTUDOS",
         "lead": "Oito módulos, {temas} temas. Cada tema traz a explicação completa do assunto, depois a aula em vídeo e por fim o livro — nessa ordem, para que você chegue à leitura já sabendo o que procurar.",
@@ -105,7 +105,7 @@
           "arquivo": "content/arquitetura-lideranca-tecnica/curriculum.json",
           "titulo": "Atlas de arquitetura e liderança técnica",
           "subtitulo": "Trilha de liderança técnica, arquitetura e IA aplicada",
-          "tituloPdf": "Atlas de Estudos · Arquitetura e Liderança Técnica",
+          "tituloPdf": "Letrume · Arquitetura e Liderança Técnica",
           "capa": {
             "rotulo": "TRILHA DE ESTUDOS",
             "lead": "{modulos} módulos, {temas} temas, em três trilhas: liderança técnica, engenharia e arquitetura, e IA aplicada. Cada tema traz a explicação completa do assunto e só depois a aula e o livro. Antes de ir fundo numa trilha, passe pelo nível fundamental das três: buraco na base aparece sempre na pior hora.",
@@ -142,6 +142,47 @@
             }
           },
           "promptBase": "Você é meu tutor socrático de liderança técnica e arquitetura de software, em português do Brasil. Sou tech lead e sigo uma trilha com três frentes: liderança técnica, engenharia e arquitetura, e IA aplicada com desenvolvimento orientado a especificação. Use exemplos de times de software reais, não presuma o tamanho da minha empresa e não recomende ferramentas ou fornecedores sem que eu peça.\n\n"
+        }
+      ]
+    },
+    {
+      "slug": "concursos",
+      "nome": "Concursos",
+      "resumo": "Preparatórios para concursos públicos, com o programa do edital, trilha semanal, questões e simulados.",
+      "status": "disponivel",
+      "subtemas": [
+        {
+          "slug": "contagem-2027",
+          "nome": "Contagem/MG 2027 · Analista de TI",
+          "resumo": "Prefeitura de Contagem, Edital PMC nº 01/2026 (IBGP), cargo 501. Prova prevista para 24/01/2027.",
+          "status": "disponivel",
+          "tipo": "concurso",
+          "arquivo": "content/contagem-2027/concurso.json",
+          "titulo": "Preparatório Contagem/MG 2027",
+          "subtitulo": "Analista de TI · cargo 501",
+          "tituloPdf": "Letrume · Concurso Contagem/MG 2027",
+          "tradicoes": {
+            "lp": {
+              "nome": "Língua Portuguesa",
+              "cor": "#A4213A",
+              "corEscura": "#F2869C"
+            },
+            "rl": {
+              "nome": "Raciocínio Lógico",
+              "cor": "#8F5E0D",
+              "corEscura": "#E2B058"
+            },
+            "cgm": {
+              "nome": "Conhecimentos Gerais do Município",
+              "cor": "#1C7458",
+              "corEscura": "#71CDA9"
+            },
+            "ce": {
+              "nome": "Conhecimentos Específicos",
+              "cor": "#1D5EA8",
+              "corEscura": "#82B7F1"
+            }
+          }
         }
       ]
     }

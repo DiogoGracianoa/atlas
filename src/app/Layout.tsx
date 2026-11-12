@@ -28,12 +28,12 @@ export function Layout() {
       <ScrollRestoration />
       <a href="#conteudo" className="skip-link">Pular para o conteúdo</a>
       <header className={s.header}>
-        <Link to="/" className={s.brand} aria-label="Atlas, página inicial">
+        <Link to="/" className={s.brand} aria-label="Letrume, página inicial">
           <svg viewBox="0 0 32 32" aria-hidden="true" className={s.logo}>
-            <circle cx="16" cy="16" r="13" />
-            <path d="M3 16h26M16 3c4 4 5.5 8.5 5.5 13S20 25 16 29M16 3c-4 4-5.5 8.5-5.5 13S12 25 16 29" />
+            <path d="M16 4.5c2.3 2.6 3.4 4.7 3.4 6.6a3.4 3.4 0 0 1-6.8 0c0-1.9 1.1-4 3.4-6.6z" />
+            <path d="M16 18v8.5M12 26.5h8" />
           </svg>
-          <span>Atlas</span>
+          <span>Letrume</span>
         </Link>
         <HeaderActions />
       </header>

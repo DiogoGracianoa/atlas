@@ -1,0 +1,237 @@
+{
+  "concurso": {
+    "nome": "Concurso Público da Prefeitura de Contagem/MG",
+    "orgao": "Prefeitura Municipal de Contagem/MG",
+    "edital": "Edital PMC nº 01/2026",
+    "banca": "IBGP",
+    "cargo": { "codigo": "501", "nome": "Analista de TI" }
+  },
+  "fontes": [
+    { "id": "anexo4-r2", "documento": "Anexo IV – Conteúdos Programáticos", "versao": "Retificação nº 02", "data": "2026-11-09", "url": "https://portal.contagem.mg.gov.br/editais/04_-_anexo_iv_-_conteudos_programAt_retif_2_09040313.pdf" },
+    { "id": "anexo3-r1", "documento": "Anexo III – Quadro de Provas", "versao": "Retificação nº 01", "data": "2026-10-14", "url": "https://portal.contagem.mg.gov.br/editais/03_-_anexo_iii_-_quadro_de_provas_retif_1_14045602.pdf" },
+    { "id": "edital-r2", "documento": "Edital nº 01/2026 consolidado", "versao": "até a Retificação nº 02", "data": "2026-11-09", "url": "https://portal.contagem.mg.gov.br/editais/00_-_edital_01-2026_-_contagem_retif_2_09035848.pdf" },
+    { "id": "ret02", "documento": "Retificação nº 02 consolidada", "versao": "Retificação nº 02", "data": "2026-11-09", "url": "https://portal.contagem.mg.gov.br/editais/retificacao_n_02_concurso_contagem_consolidado_09042004.pdf" }
+  ],
+  "prova": {
+    "data": "2027-01-24",
+    "fuso": "America/Sao_Paulo",
+    "turno": "tarde, das 14h45 às 18h45 (portões das 13h30 às 14h30)",
+    "fonte": { "ref": "edital-r2", "item": "9.2.1" },
+    "objetiva": {
+      "questoes": 45,
+      "alternativas": 4,
+      "minimo": 60,
+      "duracaoMin": 240,
+      "fonte": { "ref": "anexo3-r1", "pagina": 2 },
+      "disciplinas": [
+        { "id": "lp", "questoes": 10, "peso": 2 },
+        { "id": "rl", "questoes": 5, "peso": 2 },
+        { "id": "cgm", "questoes": 10, "peso": 1 },
+        { "id": "ce", "questoes": 20, "peso": 3 }
+      ]
+    },
+    "discursiva": {
+      "questoes": 2,
+      "pontos": 15,
+      "linhas": 10,
+      "minimoPct": 60,
+      "fonte": { "ref": "edital-r2", "item": "9.4" },
+      "criterios": [
+        { "id": "cp", "nome": "Conhecimento do conteúdo e propriedade da resposta", "max": 6 },
+        { "id": "pr", "nome": "Pertinência e relevância dos argumentos", "max": 3 },
+        { "id": "cl", "nome": "Compreensão linguística (Português)", "max": 1.5 },
+        { "id": "el", "nome": "Estruturação lógica e coerente", "max": 3 },
+        { "id": "ec", "nome": "Expressão clara e concisa", "max": 1.5 }
+      ]
+    }
+  },
+  "disciplinas": [
+    {
+      "id": "lp", "nome": "Língua Portuguesa", "sigla": "LP",
+      "modulos": [
+        { "id": "lp-texto", "nome": "Texto e discurso", "topicos": [
+          { "id": "lp-interpretacao", "titulo": "Compreensão e interpretação de textos", "subtopicos": ["Ideia central e informações implícitas", "Inferência e pressuposição", "Intenção do autor"], "fonte": { "ref": "anexo4-r2", "pagina": 3, "trecho": "Compreensão e interpretação de textos." }, "validacao": "verificado", "publicado": true },
+          { "id": "lp-generos", "titulo": "Gêneros e tipos de textos", "subtopicos": ["Narração, descrição, dissertação, injunção e exposição", "Gêneros do cotidiano e da administração pública"], "fonte": { "ref": "anexo4-r2", "pagina": 3, "trecho": "Gêneros e tipos de textos." }, "validacao": "verificado", "publicado": true },
+          { "id": "lp-variacao", "titulo": "Variação linguística", "subtopicos": ["Variação regional, social, histórica e situacional", "Norma-padrão e adequação"], "fonte": { "ref": "anexo4-r2", "pagina": 3, "trecho": "Variação linguística: diversidade de usos da língua." }, "validacao": "verificado", "publicado": true },
+          { "id": "lp-discursos", "titulo": "Discursos direto, indireto e indireto livre", "subtopicos": ["Transposição entre discursos", "Verbos de elocução"], "fonte": { "ref": "anexo4-r2", "pagina": 3, "trecho": "Discursos direto, indireto e indireto livre." }, "validacao": "verificado", "publicado": true },
+          { "id": "lp-coesao", "titulo": "Coerência e coesão textuais", "subtopicos": ["Referenciação", "Conectivos e relações lógicas", "Progressão textual"], "fonte": { "ref": "anexo4-r2", "pagina": 3, "trecho": "Coerência e coesão textuais." }, "validacao": "verificado", "publicado": true },
+          { "id": "lp-argumentacao", "titulo": "Estratégias argumentativas", "subtopicos": ["Tese e argumentos", "Tipos de argumento", "Contra-argumentação"], "fonte": { "ref": "anexo4-r2", "pagina": 3, "trecho": "Estratégias argumentativas." }, "validacao": "verificado" }
+        ] },
+        { "id": "lp-morfologia", "nome": "Palavras e flexões", "topicos": [
+          { "id": "lp-formacao", "titulo": "Processos de formação de palavras", "subtopicos": ["Derivação", "Composição", "Outros processos"], "fonte": { "ref": "anexo4-r2", "pagina": 3, "trecho": "Processos de formação de palavras." }, "validacao": "verificado", "publicado": true },
+          { "id": "lp-classes", "titulo": "Classes de palavras", "subtopicos": ["Substantivos e adjetivos", "Pronomes", "Advérbios", "Preposições e conjunções"], "fonte": { "ref": "anexo4-r2", "pagina": 3, "trecho": "Classes de palavras: identificação, flexão e emprego de substantivos, adjetivos, pronomes, verbos, advérbios, preposições e conjunções." }, "validacao": "verificado", "publicado": true },
+          { "id": "lp-verbos", "titulo": "Verbo: flexão, conjugação, tempos, modos e vozes", "subtopicos": ["Conjugação regular e irregular", "Correlação entre modos e tempos", "Vozes ativa, passiva e reflexiva"], "fonte": { "ref": "anexo4-r2", "pagina": 3, "trecho": "Verbo: flexão, conjugação, correlação dos modos e tempos verbais, vozes." }, "validacao": "verificado", "publicado": true }
+        ] },
+        { "id": "lp-sintaxe", "nome": "Sintaxe", "topicos": [
+          { "id": "lp-periodo", "titulo": "Estrutura da oração e do período", "subtopicos": ["Termos da oração", "Coordenação e subordinação", "Aspectos semânticos"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Estrutura da oração e do período: aspectos sintáticos e semânticos." }, "validacao": "verificado", "publicado": true },
+          { "id": "lp-concordancia", "titulo": "Concordância verbal e nominal", "subtopicos": ["Regras gerais", "Casos especiais"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Concordância verbal e nominal." }, "validacao": "verificado", "publicado": true },
+          { "id": "lp-regencia", "titulo": "Regência verbal e nominal", "subtopicos": ["Verbos de regência variável", "Regência nominal"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Regência verbal e nominal." }, "validacao": "verificado" },
+          { "id": "lp-relativos", "titulo": "Uso dos pronomes relativos", "subtopicos": ["Que, quem, o qual, cujo, onde", "Preposição antes do relativo"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Uso dos pronomes relativos." }, "validacao": "verificado" },
+          { "id": "lp-colocacao", "titulo": "Colocação dos pronomes oblíquos átonos", "subtopicos": ["Próclise, mesóclise e ênclise", "Locuções verbais"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Colocação dos pronomes pessoais oblíquos átonos." }, "validacao": "verificado" },
+          { "id": "lp-crase", "titulo": "Crase", "subtopicos": ["Casos obrigatórios", "Casos proibidos e facultativos"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Emprego do sinal indicativo da crase." }, "validacao": "verificado" }
+        ] },
+        { "id": "lp-norma", "nome": "Pontuação e ortografia", "topicos": [
+          { "id": "lp-pontuacao", "titulo": "Usos da pontuação", "subtopicos": ["Vírgula", "Ponto e vírgula, dois-pontos e travessão"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Usos da pontuação." }, "validacao": "verificado" },
+          { "id": "lp-ortografia", "titulo": "Ortografia oficial e acentuação gráfica", "subtopicos": ["Acordo Ortográfico", "Regras de acentuação", "Hífen"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Ortografia oficial. Acentuação gráfica." }, "validacao": "verificado" }
+        ] }
+      ]
+    },
+    {
+      "id": "rl", "nome": "Raciocínio Lógico", "sigla": "RL",
+      "modulos": [
+        { "id": "rl-aritmetica", "nome": "Números e operações", "topicos": [
+          { "id": "rl-numeros", "titulo": "Conjuntos numéricos e operações", "subtopicos": ["Naturais, inteiros, racionais e reais", "Potenciação e radiciação", "Decimais e valor absoluto", "Propriedades dos naturais"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Conjuntos numéricos: naturais, inteiros, racionais e reais. Operações de adição, subtração, multiplicação, divisão, potenciação e radiciação; números decimais; valor absoluto; propriedades no conjunto dos números naturais" }, "validacao": "verificado", "publicado": true },
+          { "id": "rl-divisibilidade", "titulo": "Fatoração, múltiplos, divisores, MDC e MMC", "subtopicos": ["Decomposição em fatores primos", "Critérios de divisibilidade", "MDC e MMC em problemas"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "decomposição de um número natural em fatores primos; múltiplos e divisores; máximo divisor comum e mínimo múltiplo comum." }, "validacao": "verificado", "publicado": true },
+          { "id": "rl-razao", "titulo": "Razões, proporções e grandezas proporcionais", "subtopicos": ["Grandezas direta e inversamente proporcionais", "Divisão proporcional"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Razões e proporções: grandezas direta e inversamente proporcionais" }, "validacao": "verificado", "publicado": true },
+          { "id": "rl-regra-tres", "titulo": "Regra de três simples e composta", "subtopicos": ["Simples direta e inversa", "Composta"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "regra de três simples e composta." }, "validacao": "verificado", "publicado": true },
+          { "id": "rl-porcentagem", "titulo": "Porcentagem", "subtopicos": ["Aumentos e descontos sucessivos", "Variação percentual"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Porcentagem." }, "validacao": "verificado", "publicado": true },
+          { "id": "rl-medidas", "titulo": "Grandezas e medidas", "subtopicos": ["Quantidade e tempo", "Comprimento, capacidade e massa", "Conversão de unidades"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Grandezas e medidas: quantidade, tempo, comprimento, capacidade e massa." }, "validacao": "verificado", "publicado": true },
+          { "id": "rl-equacoes", "titulo": "Equações, sistemas e função do 1º grau", "subtopicos": ["Equação do 1º grau", "Sistemas com duas incógnitas", "Função afim em problemas"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Equações do 1º grau, sistemas de equações do 1º grau e função do 1º grau: resolução de problemas." }, "validacao": "verificado" },
+          { "id": "rl-medias", "titulo": "Média aritmética simples e ponderada", "subtopicos": ["Média simples", "Média ponderada"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Média aritmética simples e ponderada." }, "validacao": "verificado" }
+        ] },
+        { "id": "rl-logica", "nome": "Lógica", "topicos": [
+          { "id": "rl-proposicoes", "titulo": "Proposições, conectivos, tabelas-verdade e negação", "subtopicos": ["Proposições simples e compostas", "Conectivos", "Tabelas-verdade", "Negação de proposições"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Noções de lógica matemática: proposições simples e compostas; conectivos lógicos; tabelas-verdade; negação de proposições" }, "validacao": "verificado", "publicado": true },
+          { "id": "rl-equivalencias", "titulo": "Equivalências, implicações e quantificadores", "subtopicos": ["Equivalências notáveis", "Implicação lógica", "Quantificadores e suas negações"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "equivalências e implicações lógicas; quantificadores." }, "validacao": "verificado", "publicado": true },
+          { "id": "rl-argumentos", "titulo": "Argumentação lógica e validade", "subtopicos": ["Premissas e conclusões", "Inferências", "Validade de argumentos"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Argumentação lógica: premissas e conclusões; inferências; análise e validade de argumentos." }, "validacao": "verificado", "publicado": true },
+          { "id": "rl-diagramas", "titulo": "Diagramas lógicos", "subtopicos": ["Todo, algum, nenhum", "Diagramas de Venn em argumentos"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Diagramas lógicos." }, "validacao": "verificado" },
+          { "id": "rl-conjuntos", "titulo": "Linguagem e operações com conjuntos", "subtopicos": ["Pertinência e inclusão", "Conjunto vazio, unitário, universo e das partes", "União, interseção, diferença e complementar"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Linguagem dos conjuntos: notação e representação; [...] operações com conjuntos - união, interseção, diferença e complementar." }, "validacao": "verificado" },
+          { "id": "rl-sequencias", "titulo": "Sequências lógicas e raciocínio sequencial", "subtopicos": ["Sequências de números e letras", "Sequências de palavras e figuras", "Problemas de raciocínio sequencial"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Sequências lógicas com números, letras, palavras e figuras. [...] Resolução de problemas envolvendo raciocínio lógico e sequencial." }, "validacao": "verificado" },
+          { "id": "rl-associacao", "titulo": "Associação lógica, verdades e mentiras", "subtopicos": ["Tabelas de associação", "Problemas de verdades e mentiras"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Problemas de associação lógica e de verdades e mentiras." }, "validacao": "verificado" }
+        ] },
+        { "id": "rl-contagem", "nome": "Contagem e probabilidade", "topicos": [
+          { "id": "rl-combinatoria", "titulo": "Análise combinatória", "subtopicos": ["Princípio fundamental da contagem", "Arranjos", "Permutações", "Combinações"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Análise combinatória: princípio fundamental da contagem, arranjos, permutações e combinações." }, "validacao": "verificado" },
+          { "id": "rl-probabilidade", "titulo": "Probabilidade", "subtopicos": ["Espaço amostral finito", "Eventos complementares e união", "Probabilidade condicional básica"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Probabilidade: conceitos básicos e cálculo de probabilidades em espaços amostrais finitos." }, "validacao": "verificado" }
+        ] }
+      ]
+    },
+    {
+      "id": "cgm", "nome": "Conhecimentos Gerais do Município", "sigla": "CGM",
+      "modulos": [
+        { "id": "cgm-municipio", "nome": "O município de Contagem", "topicos": [
+          { "id": "cgm-historia", "titulo": "História e formação de Contagem", "subtopicos": ["Origens e formação", "Emancipação e marcos históricos"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "aspectos [...] históricos [...] do Município." }, "validacao": "verificado", "publicado": true },
+          { "id": "cgm-geografia", "titulo": "Geografia e aspectos físicos", "subtopicos": ["Localização e região metropolitana", "Relevo, hidrografia e clima", "Georreferenciamento"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "aspectos geográficos, [...] físicos [...] do Município." }, "validacao": "verificado", "publicado": true },
+          { "id": "cgm-economia", "titulo": "Economia, sociedade e indicadores", "subtopicos": ["Atividades econômicas e polo industrial", "População e indicadores estatísticos"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "aspectos [...] econômicos, sociais [...] e estatísticos do Município." }, "validacao": "verificado", "publicado": true },
+          { "id": "cgm-politica", "titulo": "Aspectos políticos e organização administrativa", "subtopicos": ["Poderes municipais", "Regionais administrativas"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "aspectos [...] políticos [...] do Município." }, "validacao": "verificado", "publicado": true },
+          { "id": "cgm-cultura", "titulo": "Cultura, patrimônio e humanidades", "subtopicos": ["Patrimônio e manifestações culturais", "Movimentos artísticos, culturais e sociais"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Humanidades: movimentos artísticos, culturais e sociais do Município." }, "validacao": "verificado", "publicado": true },
+          { "id": "cgm-simbolos", "titulo": "Símbolos municipais", "subtopicos": ["Bandeira, brasão e hino"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Símbolos municipais." }, "validacao": "verificado", "publicado": true },
+          { "id": "cgm-cidadania", "titulo": "Cidadania e realidade socioambiental", "subtopicos": ["Noções de cidadania", "Realidade econômica, cultural, histórica, geográfica e socioambiental"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Noções de cidadania. [...] Questões da realidade, econômica, cultural, história, geográfica e socioambiental do Município." }, "validacao": "verificado" },
+          { "id": "cgm-atualidades", "titulo": "Atualidades de Contagem", "subtopicos": ["Economia, ecologia, meio ambiente e turismo", "Política, justiça e segurança pública", "Saúde, educação, cultura, religião e esportes", "Qualidade de vida, georreferenciamento e inovação"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Atualidades nos assuntos relacionados a economia, ecologia, história, política, meio ambiente, justiça, segurança pública, saúde, cultura, educação, religião, qualidade de vida, esportes, turismo, georreferenciamento, inovações tecnológicas e científicas do Município." }, "validacao": "verificado", "nota": "O item \"Notícias em Geral: Site da Prefeitura\" foi revogado na versão vigente." },
+          { "id": "cgm-desenvolvimento-local", "titulo": "Desenvolvimento local", "subtopicos": ["Planejamento e desenvolvimento do município"], "opcional": true, "nota": "Não consta do Anexo IV vigente; reforço opcional." }
+        ] },
+        { "id": "cgm-legislacao", "nome": "Legislação municipal", "topicos": [
+          { "id": "cgm-lei-organica-1", "titulo": "Lei Orgânica: fundamentos, competências e organização do município", "subtopicos": ["Princípios e direitos (arts. 1º a 4º)", "Competências privativa e comum", "Bens, território, distritos e regionais"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Lei Orgânica do Município de Contagem/MG." }, "validacao": "verificado", "publicado": true },
+          { "id": "cgm-lei-organica-2", "titulo": "Lei Orgânica: administração pública, poderes e fiscalização", "subtopicos": ["Administração pública e servidores", "Poder Legislativo e Poder Executivo", "Fiscalização e controle"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Lei Orgânica do Município de Contagem/MG." }, "validacao": "verificado", "publicado": true },
+          { "id": "cgm-estatuto", "titulo": "Estatuto dos Servidores (Lei nº 2.160/1990)", "subtopicos": ["Provimento e vacância", "Direitos e vantagens", "Deveres e regime disciplinar"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Estatuto dos Servidores Públicos do Município de Contagem/MG (Lei Municipal nº 2.160/1990)." }, "validacao": "verificado" },
+          { "id": "cgm-pccs", "titulo": "Plano de Cargos, Carreira e Salários (Lei nº 105/2011)", "subtopicos": ["Estrutura das carreiras", "Progressão e promoção"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Plano de Cargos, Carreira e Salários do Município de Contagem/MG (Lei Municipal nº 105/2011 e atualizações)." }, "validacao": "pendente", "nota": "O edital diz \"Lei Municipal nº 105/2011\"; o planejamento original dizia \"Lei Complementar\". Conferir a espécie normativa no texto da lei." }
+        ] }
+      ]
+    },
+    {
+      "id": "ce", "nome": "Conhecimentos Específicos – Analista de TI", "sigla": "CE",
+      "modulos": [
+        { "id": "ce-web", "nome": "Internet e tecnologias web", "topicos": [
+          { "id": "ce-internet", "titulo": "Internet, intranet, extranet e padrões web", "subtopicos": ["URL, links, sites e portais", "Segurança e navegação", "Intranet e extranet"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Internet: conceitos básicos: (URL, links, sites, portais, segurança, navegação, conceito e padrões da tecnologia Web, Intranets e Extranets)" }, "validacao": "verificado" },
+          { "id": "ce-navegadores-email", "titulo": "Navegadores, correio eletrônico e mecanismos de busca", "subtopicos": ["Principais navegadores", "Correio eletrônico", "Mecanismos de busca"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "utilização dos principais navegadores e correio eletrônico; utilização dos mecanismos de busca (Google, Yahoo, Bing, etc.)." }, "validacao": "verificado" }
+        ] },
+        { "id": "ce-hardware", "nome": "Hardware e arquitetura", "topicos": [
+          { "id": "ce-componentes", "titulo": "Componentes, periféricos e entrada e saída", "subtopicos": ["Conceitos e componentes", "Periféricos", "Dispositivos de entrada e saída"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Hardware: conceitos, componentes e periféricos [...] dispositivos de entrada e saída." }, "validacao": "verificado", "publicado": true },
+          { "id": "ce-memorias", "titulo": "Memórias, bits e bytes", "subtopicos": ["RAM, ROM, cache e virtual", "Memória interna e auxiliar; primária e secundária", "Bit e byte", "Programas em ROM", "Tempo de acesso e ciclo de memória"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "tipos de memória (RAM, ROM, etc.); bit, bytes; memórias: cache, virtual, internas e auxiliar; programas em memória ROM; tempo de acesso e ciclo de memória." }, "validacao": "verificado", "publicado": true },
+          { "id": "ce-cpu", "titulo": "Unidade Central de Processamento", "subtopicos": ["Organização e execução de instruções", "Registradores e clock", "Barramentos, padrões e interfaces"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Unidade Central de Processamento: organização, execução de instruções; registradores; clock; barramentos, padrões e interfaces" }, "validacao": "verificado", "publicado": true },
+          { "id": "ce-armazenamento", "titulo": "Armazenamento, placas, portas, drivers e sistemas de arquivos", "subtopicos": ["Dispositivos de armazenamento e placas", "Portas serial, paralela, USB e PS-2", "Drivers de dispositivos", "Sistemas de arquivos"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Funcionalidade dos drivers de dispositivos. [...] dispositivos de armazenamento, placas. Portas: serial, paralela, USB; PS-2 [...] sistemas de arquivos" }, "validacao": "verificado", "publicado": true },
+          { "id": "ce-montagem", "titulo": "Montagem, Setup, manutenção, multimídia e impressão", "subtopicos": ["Configuração de Setup e do sistema operacional", "Montagem, configuração e manutenção", "Multimídia e impressão"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "multimídia e impressão; configuração de Setup e do sistema operacional [...] Montagem, configuração e manutenção de microcomputadores." }, "validacao": "verificado" }
+        ] },
+        { "id": "ce-sistemas", "nome": "Software e sistemas operacionais", "topicos": [
+          { "id": "ce-software", "titulo": "Software básico, utilitário e aplicativo", "subtopicos": ["Software básico e sistema operacional", "Utilitários e aplicativos", "Interfaces"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Software: Software básico, sistema operacional, software utilitário, software aplicativo e interfaces." }, "validacao": "verificado", "publicado": true },
+          { "id": "ce-windows", "titulo": "Windows XP/Vista", "subtopicos": ["Ambiente gráfico, janelas, barras e menus", "Painel de controle e configuração", "Pastas, arquivos, atalhos e área de transferência", "Rede, compartilhamento, mapeamento e impressão"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "MS Windows XP/Vista (em português): conceitos; configuração, uso de ambiente gráfico [...]" }, "validacao": "verificado", "publicado": true },
+          { "id": "ce-backup", "titulo": "Armazenamento de dados e cópia de segurança (backup)", "subtopicos": ["Dispositivos de armazenamento", "Tipos e rotinas de backup"], "fonte": { "ref": "anexo4-r2", "pagina": 5, "trecho": "Dispositivos para armazenamento de dados e para realização de cópia de segurança (backup)" }, "validacao": "verificado" },
+          { "id": "ce-linux", "titulo": "Software livre e Linux", "subtopicos": ["Conceitos e filosofia do software livre", "Comandos Linux"], "fonte": { "ref": "anexo4-r2", "pagina": 5, "trecho": "Software Livre: conceitos; filosofia. Linux: comandos." }, "validacao": "verificado", "publicado": true }
+        ] },
+        { "id": "ce-escritorio", "nome": "Aplicativos de escritório", "topicos": [
+          { "id": "ce-word", "titulo": "MS Word 2007/2010", "subtopicos": ["Área de trabalho e barras", "Estrutura básica dos documentos"], "fonte": { "ref": "anexo4-r2", "pagina": 5, "trecho": "MS Word 2007/2010: conceitos e operações básicas [...]" }, "validacao": "verificado" },
+          { "id": "ce-excel", "titulo": "MS Excel 2007/2010", "subtopicos": ["Células, linhas, colunas e pastas", "Fórmulas e gráficos"], "fonte": { "ref": "anexo4-r2", "pagina": 5, "trecho": "MS Excel 2007/2010: conceitos e operações; estrutura das planilhas, conceitos de células, linhas, colunas, pastas e gráficos." }, "validacao": "verificado" },
+          { "id": "ce-ppt-access", "titulo": "MS PowerPoint e MS Access 2007/2010", "subtopicos": ["PowerPoint: usabilidade e conceitos", "Access: usabilidade e conceitos"], "fonte": { "ref": "anexo4-r2", "pagina": 5, "trecho": "MS Power Point 2007/2010 e MS Access 2007/2010: usabilidade e conceitos básicos." }, "validacao": "verificado" },
+          { "id": "ce-broffice", "titulo": "BrOffice.org 2.1 e StarOffice 5.1", "subtopicos": ["Writer, Calc e Impress", "Equivalências com o MS Office"], "fonte": { "ref": "anexo4-r2", "pagina": 5, "trecho": "BrOffice.Org 2.1 e Star Office 5.1." }, "validacao": "verificado" }
+        ] },
+        { "id": "ce-redes", "nome": "Redes", "topicos": [
+          { "id": "ce-redes-conceitos", "titulo": "Redes: conceitos, hardware, roteadores e switches", "subtopicos": ["Noções e conceitos", "Hardware de redes", "Configuração de roteadores e switches", "Funcionamento dos equipamentos"], "fonte": { "ref": "anexo4-r2", "pagina": 5, "trecho": "Redes: noções e conceitos. Hardware de Redes. Configuração de roteadores e Switches. Funcionamento básico dos equipamentos de rede." }, "validacao": "verificado", "publicado": true },
+          { "id": "ce-redes-ip", "titulo": "Endereçamento IP, máscaras e sub-redes", "subtopicos": ["Endereços IPv4", "Máscaras e CIDR", "Cálculo de sub-redes"], "fonte": { "ref": "anexo4-r2", "pagina": 5, "trecho": "Endereçamento: IP, máscaras e sub-rede" }, "validacao": "verificado", "publicado": true },
+          { "id": "ce-redes-protocolos", "titulo": "Arquiteturas, topologias e protocolos", "subtopicos": ["Modelos OSI e TCP/IP", "Topologias", "Protocolos de rede"], "fonte": { "ref": "anexo4-r2", "pagina": 5, "trecho": "arquiteturas, topologias e protocolos." }, "validacao": "verificado", "publicado": true }
+        ] },
+        { "id": "ce-programacao", "nome": "Programação", "topicos": [
+          { "id": "ce-estruturada", "titulo": "Programação estruturada, modularização e refinamentos", "subtopicos": ["Características da programação estruturada", "Divisão modular", "Refinamentos sucessivos"], "fonte": { "ref": "anexo4-r2", "pagina": 5, "trecho": "Características da programação estruturada e desenvolvimento de algoritmos através de divisão modular e refinamentos sucessivos." }, "validacao": "verificado", "publicado": true },
+          { "id": "ce-algoritmos", "titulo": "Tipos de dados, cadeias e estruturas de controle", "subtopicos": ["Tipos de dados", "Cadeias de caracteres", "Seleção e repetição"], "fonte": { "ref": "anexo4-r2", "pagina": 5, "trecho": "Desenvolvimento de programas através do uso de: tipos de dados, cadeias de caracteres, estruturas de controle de seleção e repetição" }, "validacao": "verificado", "publicado": true },
+          { "id": "ce-vetores-funcoes", "titulo": "Vetores, matrizes, funções, bibliotecas e ponteiros", "subtopicos": ["Vetores e matrizes", "Funções e bibliotecas", "Ponteiros"], "fonte": { "ref": "anexo4-r2", "pagina": 5, "trecho": "vetores, matrizes, funções, bibliotecas e ponteiros." }, "validacao": "verificado" },
+          { "id": "ce-ambientes", "titulo": "Linguagens, compiladores, ambientes e prototipação", "subtopicos": ["Linguagem estruturada", "Compiladores e interpretadores", "Ambientes de desenvolvimento", "Prototipação de sistemas"], "fonte": { "ref": "anexo4-r2", "pagina": 5, "trecho": "Uso de linguagem de programação estruturada, compiladores, ambientes de desenvolvimento de programas e prototipação de sistemas." }, "validacao": "verificado" },
+          { "id": "ce-poo-conceitos", "titulo": "Orientação a objetos: conceitos, classes e objetos", "subtopicos": ["POO × estruturada", "Classes e objetos", "Comunicação entre objetos"], "fonte": { "ref": "anexo4-r2", "pagina": 5, "trecho": "Diferenciação das características da programação orientada a objetos e estruturada. Sintetização dos conceitos de orientação a objetos em uma linguagem de programação. [...] Classes e objetos. Comunicação." }, "validacao": "verificado" },
+          { "id": "ce-poo-relacoes", "titulo": "Associação, agregação, herança, polimorfismo e reuso", "subtopicos": ["Associações e agregações", "Herança", "Polimorfismo e sobrecarga", "Reuso e elaboração de programas OO"], "fonte": { "ref": "anexo4-r2", "pagina": 5, "trecho": "Elaboração de programas orientados a objetos. [...] Associações e agregações. Herança. Polimorfismo. Sobrecarga. Reuso." }, "validacao": "verificado" }
+        ] },
+        { "id": "ce-seguranca-lgpd", "nome": "Segurança e LGPD", "topicos": [
+          { "id": "ce-seguranca", "titulo": "Segurança: vírus, prevenção e antivírus", "subtopicos": ["Conceitos de segurança", "Vírus e pragas eletrônicas", "Cuidados, prevenção e antivírus"], "fonte": { "ref": "anexo4-r2", "pagina": 4, "trecho": "Segurança: conceitos, vírus eletrônico, cuidados e prevenção, antivírus." }, "validacao": "verificado" },
+          { "id": "ce-lgpd", "titulo": "Lei Geral de Proteção de Dados (Lei nº 13.709/2018)", "subtopicos": ["Princípios e bases legais", "Direitos do titular", "Tratamento pelo poder público", "ANPD e sanções"], "fonte": { "ref": "anexo4-r2", "pagina": 5, "trecho": "Lei Federal nº 13.709 (Lei Geral de Proteção de Dados)." }, "validacao": "verificado" }
+        ] }
+      ]
+    }
+  ],
+  "trilha": {
+    "inicio": "2026-11-16",
+    "fim": "2027-01-23",
+    "horasSemana": 10,
+    "semanas": [
+      { "n": 1, "inicio": "2026-11-16", "fim": "2026-11-22", "titulo": "Fundamentos e diagnóstico",
+        "topicos": ["lp-interpretacao", "lp-generos", "lp-coesao", "rl-proposicoes", "ce-componentes", "ce-memorias", "ce-cpu", "ce-armazenamento", "cgm-historia", "cgm-geografia", "cgm-simbolos"],
+        "meta": "Diagnóstico inicial e 60 questões." },
+      { "n": 2, "inicio": "2026-11-23", "fim": "2026-11-29", "titulo": "Lógica e sistemas operacionais",
+        "topicos": ["lp-classes", "lp-formacao", "lp-variacao", "rl-equivalencias", "rl-argumentos", "ce-software", "ce-windows", "ce-linux", "cgm-economia", "cgm-cultura"],
+        "meta": "80 questões e primeira revisão acumulada." },
+      { "n": 3, "inicio": "2026-11-30", "fim": "2026-12-06", "titulo": "Matemática e redes",
+        "topicos": ["lp-verbos", "lp-discursos", "rl-numeros", "rl-divisibilidade", "ce-redes-conceitos", "ce-redes-ip", "ce-redes-protocolos", "cgm-lei-organica-1"],
+        "meta": "80 questões e exercício de sub-redes." },
+      { "n": 4, "inicio": "2026-12-07", "fim": "2026-12-13", "titulo": "Gramática, algoritmos e legislação",
+        "topicos": ["lp-periodo", "lp-concordancia", "rl-razao", "rl-regra-tres", "rl-porcentagem", "rl-medidas", "ce-estruturada", "ce-algoritmos", "cgm-lei-organica-2", "cgm-politica"],
+        "meta": "100 questões e um simulado parcial." },
+      { "n": 5, "inicio": "2026-12-14", "fim": "2026-12-20", "titulo": "Programação orientada a objetos",
+        "topicos": ["lp-regencia", "lp-crase", "lp-relativos", "rl-equacoes", "rl-medias", "ce-vetores-funcoes", "ce-ambientes", "ce-poo-conceitos", "ce-poo-relacoes", "cgm-estatuto"],
+        "meta": "100 questões e revisão das semanas 1 a 4." },
+      { "n": 6, "inicio": "2026-12-21", "fim": "2026-12-27", "titulo": "Tecnologia web e aplicativos",
+        "topicos": ["lp-colocacao", "lp-ortografia", "lp-pontuacao", "rl-sequencias", "rl-diagramas", "rl-conjuntos", "rl-associacao", "ce-internet", "ce-navegadores-email", "ce-word", "ce-excel", "ce-ppt-access", "ce-broffice", "cgm-pccs"],
+        "revisar": ["cgm-estatuto"],
+        "meta": "80 questões e revisão curta durante o Natal." },
+      { "n": 7, "inicio": "2026-12-28", "fim": "2027-01-03", "titulo": "Segurança, LGPD e combinatória",
+        "topicos": ["lp-argumentacao", "rl-combinatoria", "ce-seguranca", "ce-backup", "ce-lgpd", "ce-montagem", "cgm-atualidades", "cgm-cidadania", "cgm-desenvolvimento-local"],
+        "revisar": ["ce-componentes", "ce-memorias", "lp-interpretacao"],
+        "meta": "100 questões e simulado geral." },
+      { "n": 8, "inicio": "2027-01-04", "fim": "2027-01-10", "titulo": "Probabilidade e consolidação",
+        "topicos": ["rl-probabilidade"],
+        "revisar": ["lp-classes", "lp-verbos", "lp-periodo", "lp-concordancia", "lp-regencia", "lp-crase", "lp-interpretacao", "rl-conjuntos", "rl-proposicoes", "ce-redes-ip", "ce-windows", "ce-linux", "ce-estruturada", "ce-poo-conceitos", "ce-poo-relacoes", "cgm-lei-organica-1", "cgm-lei-organica-2", "cgm-estatuto", "cgm-pccs", "cgm-atualidades"],
+        "notas": { "lp": "Revisão geral de gramática e interpretação.", "rl": "Probabilidade, conjuntos, lógica e revisão de matemática.", "ce": "Revisão de redes, sistemas operacionais, programação estruturada e POO.", "cgm": "Revisão das três leis municipais e atualidades." },
+        "meta": "120 questões e simulado completo." },
+      { "n": 9, "inicio": "2027-01-11", "fim": "2027-01-17", "titulo": "Revisão estratégica",
+        "topicos": [],
+        "revisar": ["lp-interpretacao", "lp-pontuacao", "lp-crase", "rl-combinatoria", "rl-probabilidade", "rl-equivalencias", "rl-porcentagem", "ce-componentes", "ce-redes-protocolos", "ce-algoritmos", "ce-lgpd", "ce-seguranca", "cgm-estatuto", "cgm-lei-organica-2", "cgm-atualidades"],
+        "notas": { "lp": "Questões de todos os tópicos, com foco nos erros.", "rl": "Lógica, matemática, combinatória e probabilidade.", "ce": "Todo o conteúdo específico, com foco nas maiores dificuldades; treino da discursiva.", "cgm": "Legislação municipal e fatos importantes." },
+        "meta": "150 questões, simulado completo e treino da discursiva." },
+      { "n": 10, "inicio": "2027-01-18", "fim": "2027-01-23", "titulo": "Reta final",
+        "topicos": [],
+        "revisar": ["lp-colocacao", "lp-regencia", "lp-concordancia", "rl-equivalencias", "rl-proposicoes", "ce-memorias", "ce-redes-ip", "ce-poo-relacoes", "ce-lgpd", "cgm-atualidades", "cgm-pccs", "cgm-estatuto"],
+        "notas": { "lp": "Regras e erros recorrentes.", "rl": "Fórmulas, equivalências lógicas e exercícios selecionados.", "ce": "Resumos de hardware, redes, sistemas, programação e LGPD.", "cgm": "Resumos legais e atualidades." },
+        "meta": "Último simulado no início da semana; descanso e organização na véspera." }
+    ]
+  },
+  "rotina": {
+    "seg": { "foco": ["lp"], "horas": 1 },
+    "ter": { "foco": ["rl"], "horas": 1 },
+    "qua": { "foco": ["ce"], "horas": 1.5 },
+    "qui": { "foco": ["cgm"], "horas": 1 },
+    "sex": { "foco": ["ce", "exercicios"], "horas": 1.5 },
+    "sab": { "foco": ["revisao", "questoes", "simulado"], "horas": 3 },
+    "dom": { "foco": ["erros", "revisao"], "horas": 1 }
+  },
+  "revisao": { "dias": [1, 7, 21] },
+  "atividades": {
+    "exercicios": "Exercícios",
+    "revisao": "Revisão",
+    "questoes": "Questões",
+    "simulado": "Simulado",
+    "erros": "Correção de erros"
+  }
+}

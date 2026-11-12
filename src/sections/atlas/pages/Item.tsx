@@ -155,7 +155,7 @@ export function Item() {
   const { area: a, itemId: id, paths } = useAtlas();
   const { store } = useServices();
   const n = a && id ? a.byId[id] : undefined;
-  useTitle(n && a ? `${itemName(n)} · ${a.meta.tituloPdf || a.meta.nome}` : "Atlas");
+  useTitle(n && a ? `${itemName(n)} · ${a.meta.tituloPdf || a.meta.nome}` : "Letrume");
   useEffect(() => { if (n) store.setLastAt(n.key); }, [n, store]);
   if (!a) return null;
   if (!n) return <Navigate to={paths.areaPath(a.slug)} replace />;

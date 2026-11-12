@@ -35,6 +35,7 @@ export function renderApp(path: string, opts: {
   fetchJSON?: FetchJSON;
   config?: SyncOptions["config"];
   syncOptions?: Partial<SyncOptions>;
+  agora?: () => string;
 } = {}) {
   const sections = opts.sections ?? defaultSections;
   const storage = opts.storage ?? memoryStorage();
@@ -47,6 +48,7 @@ export function renderApp(path: string, opts: {
     fetchJSON: opts.fetchJSON ?? diskFetch,
     config: opts.config === undefined ? CONFIG : opts.config,
     syncOptions: defaultAuth ? { loadSupabase: defaultAuth.loadSupabase, ...opts.syncOptions } : opts.syncOptions,
+    ...(opts.agora ? { agora: opts.agora } : {}),
   });
   const router = createMemoryRouter(buildRoutes(sections), { initialEntries: [path] });
   const user = userEvent.setup();

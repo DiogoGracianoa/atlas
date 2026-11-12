@@ -8,15 +8,23 @@
 // - Ao abrir, ao voltar ao primeiro plano e ao reconectar: busca tudo, mescla
 //   por entrada (vence o mais recente, anotações divergentes são preservadas)
 //   e só então envia a fila (RN10, RN24, RN31).
-import { planPull, markRow, noteRow, prefsRow, fmtStamp, type FormatTime, type RemoteData } from "./merge";
+import { planPull, markRow, noteRow, prefsRow, fmtStamp, normAt, type FormatTime, type RemoteData } from "./merge";
+
+interface RemoteRegistro { area: string; tipo: string; registro_id: string; corpo: unknown; updated_at: string }
 import { createQueue, classify, rowKey, TABLES, type ResultLike } from "./queue";
 import type { Store } from "./store";
+import type { Registro, Registros } from "./registros";
 import type { IsoTime, QueueItem, StorageLike, StoreEvent, Table } from "./types";
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const CODE = /^\d{6,10}$/;
 const AUTH_PARAMS = ["code", "error", "error_code", "error_description"];
-const CONFLICT: Record<Table, string> = { progress: "user_id,item_id,mark", notes: "user_id,item_id", prefs: "user_id" };
+const CONFLICT: Record<Table, string> = { progress: "user_id,item_id,mark", notes: "user_id,item_id", prefs: "user_id", registros: "user_id,tipo,registro_id" };
+
+/** PostgREST sem a tabela (404 / PGRST205). */
+const semTabela = (r: QueryResult | undefined) => !!r && !!r.error && (r.status === 404 || r.error.code === "PGRST205");
+
+const regRow = (r: Registro) => ({ area: r.area, tipo: r.tipo, registro_id: r.id, corpo: r.corpo, updated_at: r.at });
 
 /* ---------- fronteira com o supabase-js (só o que o app usa) ---------- */
 
@@ -112,6 +120,8 @@ export interface Sync {
 export interface SyncOptions {
   config: { url?: string; anonKey?: string } | null;
   store: Store;
+  /** Registros do preparatório (K-R1); sem eles, a tabela é ignorada. */
+  registros?: Registros;
   win?: SyncWindow;
   storage?: StorageLike;
   loadSupabase?: () => Promise<SupabaseModule>;
@@ -130,7 +140,7 @@ const defaultTimers: Timers = {
 };
 
 export function createSync({
-  config, store,
+  config, store, registros,
   win = globalThis.window as SyncWindow | undefined,
   storage = globalThis.localStorage,
   loadSupabase = defaultLoader,
@@ -254,6 +264,15 @@ export function createSync({
   }
   store.on(enqueueFromEvent);
 
+  registros?.on(e => {
+    if (!queue) return;
+    if (e.type === "registro") queue.put({ table: "registros", row: regRow(e.reg) });
+    else if (!e.silent) e.regs.forEach(r => queue.put({ table: "registros", row: regRow(r) }));
+    else return;
+    recompute();
+    void flush();
+  });
+
   function debounceFlush() {
     if (debounceT) timers.clearTimeout(debounceT);
     debounceT = timers.setTimeout(() => { debounceT = null; void flush(); }, debounceMs);
@@ -271,7 +290,7 @@ export function createSync({
 
   function afterWrite(table: Table, items: QueueItem[], data: unknown) {
     const q = queue as NonNullable<typeof queue>;
-    const written = new Set(((data as { item_id?: string; mark?: string }[] | null) || []).map(r => rowKey(table, r)));
+    const written = new Set(((data as { item_id?: string; mark?: string; tipo?: string; registro_id?: string }[] | null) || []).map(r => rowKey(table, r)));
     for (const i of items) {
       q.ack(i.key, i.row.updated_at);
       if (!written.has(i.key)) needsPull = true; // o servidor tinha versão mais nova
@@ -290,6 +309,8 @@ export function createSync({
       if (!batch.length) continue;
       if (!state.user || state.user.id !== uid) return "parou";
       const res = await send(table, batch, uid);
+      // Banco sem a migration 0002: os registros esperam na fila, sem descarte.
+      if (table === "registros" && semTabela(res)) continue;
       const c = classify(res);
       if (c === "drop" && batch.length > 1) {
         // um item inválido não pode derrubar os outros: tenta um a um
@@ -357,7 +378,9 @@ export function createSync({
           try { return await c.from(t).select("*"); }
           catch (err) { return { error: { message: String(err) }, status: 0 }; }
         }));
-        const bad = results.find(r => r.error);
+        const iReg = TABLES.indexOf("registros");
+        const regsAusente = semTabela(results[iReg]);
+        const bad = results.find((r, i) => r.error && !(i === iReg && regsAusente));
         if (!state.user || state.user.id !== uid) {
           // saiu da conta (ou trocou) durante a busca: descarta o resultado
         } else if (bad) {
@@ -367,11 +390,13 @@ export function createSync({
         } else {
           netError = false;
           ok = true;
-          const [p, n, f] = results.map(r => (r.data as unknown[] | null) || []);
+          const [p, n, f, rg] = results.map(r => (r.data as unknown[] | null) || []);
           const remote = { progress: p, notes: n, prefs: (f && f[0]) || null } as RemoteData;
           const plan = planPull(store.state, remote, { now: now(), fmt });
           if (plan.ops.length) store.applyOps(plan.ops, { silent: true });
           plan.uploads.forEach(u => queue?.put(u));
+          if (registros && !regsAusente) mergeRegistros(registros, (rg || []) as RemoteRegistro[]);
+          else if (registros && regsAusente) console.warn("Tabela registros ausente no servidor: aplique a migration 0002.");
         }
       } finally {
         busy--;
@@ -382,6 +407,28 @@ export function createSync({
       if (pullAgain) { pullAgain = false; await pull({ force: true }); }
     })();
     return pulling;
+  }
+
+  // Registros: vence o horário mais recente; o local mais novo (ou ausente no
+  // servidor) sobe de novo.
+  function mergeRegistros(regs: Registros, rows: RemoteRegistro[]) {
+    const remotos: Registro[] = [];
+    const vistos = new Map<string, string>();
+    for (const r of rows) {
+      if (!r || typeof r.tipo !== "string" || typeof r.registro_id !== "string") continue;
+      const at = normAt(r.updated_at);
+      vistos.set(r.tipo + ":" + r.registro_id, at);
+      remotos.push({ tipo: r.tipo, id: r.registro_id, area: r.area, corpo: (r.corpo ?? {}) as Record<string, unknown>, at });
+    }
+    // Linha anterior a um "Zerar tudo" e desconhecida aqui: vira exclusão (como nas marcações).
+    const resetAt = regs.resetAt;
+    const antigas = resetAt ? remotos.filter(r => r.at < resetAt && r.corpo.apagado !== true && !regs.todos().some(l => l.tipo === r.tipo && l.id === r.id)) : [];
+    regs.applyOps(remotos.filter(r => !antigas.includes(r)), { silent: true });
+    if (antigas.length && resetAt) regs.applyOps(antigas.map(r => ({ ...r, corpo: { apagado: true }, at: resetAt })), { silent: false });
+    for (const l of regs.todos()) {
+      const at = vistos.get(l.tipo + ":" + l.id);
+      if (!at || l.at > at) queue?.put({ table: "registros", row: regRow(l) });
+    }
   }
 
   async function whenIdle() {

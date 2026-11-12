@@ -4,6 +4,7 @@
 import { LEGACY_AREA } from "./legacy";
 import { conflictBody, fmtStamp, validAt, type FormatTime } from "./merge";
 import type { IsoTime, LastAt, MarkEntry, Op, State } from "./types";
+import { registroValido, type Registro } from "./registros";
 
 export const NOTE_MAX = 200000;
 const MARKS = ["def", "vid", "book", "do"];
@@ -19,17 +20,42 @@ export interface BackupV3 {
   lastAt: LastAt | null;
 }
 
-export function exportBackup(state: Partial<State>, now: IsoTime): BackupV3 {
+/** v4 (KB4): v3 + registros do preparatório, por "tipo:id". */
+export interface BackupV4 extends Omit<BackupV3, "version"> {
+  version: 4;
+  registros: Record<string, { area: string; corpo: Record<string, unknown>; at: IsoTime }>;
+}
+
+export function exportBackup(state: Partial<State>, now: IsoTime): BackupV3;
+export function exportBackup(state: Partial<State>, now: IsoTime, registros: Registro[]): BackupV4;
+export function exportBackup(state: Partial<State>, now: IsoTime, registros?: Registro[]): BackupV3 | BackupV4 {
   const notes: BackupV3["notes"] = {};
   for (const [k, n] of Object.entries(state.notes || {})) notes[k] = { body: n.body, at: n.at };
-  return {
-    app: "Atlas de Estudos",
+  const v3: BackupV3 = {
+    app: "Letrume",
     version: 3,
     exportedAt: now,
     marks: { ...(state.marks || {}) },
     notes,
     lastAt: state.lastAt || null,
   };
+  if (!registros) return v3;
+  const regs: BackupV4["registros"] = {};
+  for (const r of registros) regs[r.tipo + ":" + r.id] = { area: r.area, corpo: r.corpo, at: r.at };
+  return { ...v3, version: 4, registros: regs };
+}
+
+/** Registros válidos de um backup v4 (vazio nas versões anteriores). */
+export function planImportRegistros(o: unknown): Registro[] {
+  if (!isObj(o) || o.version !== 4 || !isObj(o.registros)) return [];
+  const out: Registro[] = [];
+  for (const [k, v] of Object.entries(o.registros)) {
+    const i = k.indexOf(":");
+    if (i < 1 || !isObj(v)) continue;
+    const r = { tipo: k.slice(0, i), id: k.slice(i + 1), area: v.area, corpo: v.corpo, at: v.at };
+    if (registroValido(r)) out.push(r);
+  }
+  return out;
 }
 
 type Obj = Record<string, unknown>;
@@ -44,7 +70,7 @@ interface Normalized {
 function normalize(o: unknown, now: IsoTime): Normalized {
   if (!isObj(o)) throw new Error("estrutura");
   const marks: Normalized["marks"] = {}, notes: Normalized["notes"] = {};
-  if (o.version === 3) {
+  if (o.version === 3 || o.version === 4) {
     if (!isObj(o.marks) || !isObj(o.notes)) throw new Error("estrutura");
     for (const [k, v] of Object.entries(o.marks)) {
       const [item, mark] = k.split(":");

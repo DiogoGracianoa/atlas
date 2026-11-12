@@ -117,9 +117,75 @@ exception when insufficient_privilege then
 end $$;
 reset role;
 
+-- ---------- registros do preparatório (S24–S26, migration 0002) ----------
+set role authenticated;
+set request.jwt.claim.sub = '11111111-1111-1111-1111-111111111111';
+insert into public.registros (user_id, area, tipo, registro_id, corpo, updated_at)
+values ('11111111-1111-1111-1111-111111111111', 'contagem-2027', 'topico', 'contagem-2027/lp-crase', '{"estado":"em-andamento"}', '2026-12-01 10:05:00+00')
+on conflict (user_id, tipo, registro_id) do update set area = excluded.area, corpo = excluded.corpo, updated_at = excluded.updated_at;
+-- S25: escrita mais antiga descartada pelo trigger
+with r as (
+  insert into public.registros (user_id, area, tipo, registro_id, corpo, updated_at)
+  values ('11111111-1111-1111-1111-111111111111', 'contagem-2027', 'topico', 'contagem-2027/lp-crase', '{"estado":"nao-iniciado"}', '2026-12-01 10:00:00+00')
+  on conflict (user_id, tipo, registro_id) do update set area = excluded.area, corpo = excluded.corpo, updated_at = excluded.updated_at
+  returning 1
+) select t.eq((select count(*) from r)::int, 0, 'S25 registros: upsert mais antigo não retorna linha');
+select t.eq(corpo->>'estado', 'em-andamento', 'S25 registros: valor mais novo preservado') from public.registros where registro_id = 'contagem-2027/lp-crase';
+with r as (
+  insert into public.registros (user_id, area, tipo, registro_id, corpo, updated_at)
+  values ('11111111-1111-1111-1111-111111111111', 'contagem-2027', 'topico', 'contagem-2027/lp-crase', '{"estado":"concluido"}', '2026-12-01 10:10:00+00')
+  on conflict (user_id, tipo, registro_id) do update set area = excluded.area, corpo = excluded.corpo, updated_at = excluded.updated_at
+  returning corpo->>'estado' as e
+) select t.eq((select e from r), 'concluido', 'S25 registros: upsert mais novo aplicado');
+-- evento com o mesmo id e tipo diferente convive
+insert into public.registros (user_id, area, tipo, registro_id, corpo, updated_at)
+values ('11111111-1111-1111-1111-111111111111', 'contagem-2027', 'tentativa', 'contagem-2027/lp-crase', '{"acerto":true}', '2026-12-01 10:00:00+00');
+select t.eq(count(*)::int, 2, 'chave inclui o tipo') from public.registros;
+-- S26: corpo acima de 16 KB é recusado
+do $$
+begin
+  insert into public.registros (user_id, area, tipo, registro_id, corpo)
+  values ('11111111-1111-1111-1111-111111111111', 'contagem-2027', 'sessao', 'grande', jsonb_build_object('x', repeat('a', 17000)));
+  raise exception 'FALHOU: S26 corpo grande aceito';
+exception when check_violation then
+  raise notice 'ok: S26 corpo acima de 16 KB recusado';
+end $$;
+-- tipo fora do formato é recusado
+do $$
+begin
+  insert into public.registros (user_id, area, tipo, registro_id, corpo)
+  values ('11111111-1111-1111-1111-111111111111', 'contagem-2027', 'Tipo Ruim', 'x', '{}');
+  raise exception 'FALHOU: tipo inválido aceito';
+exception when check_violation then
+  raise notice 'ok: tipo inválido recusado';
+end $$;
+-- S24: U2 não lê nem escreve registros de U1
+set request.jwt.claim.sub = '22222222-2222-2222-2222-222222222222';
+select t.eq(count(*)::int, 0, 'S24 RLS: U2 não lê registros de U1') from public.registros;
+do $$
+begin
+  insert into public.registros (user_id, area, tipo, registro_id, corpo)
+  values ('11111111-1111-1111-1111-111111111111', 'contagem-2027', 'topico', 'contagem-2027/x', '{}');
+  raise exception 'FALHOU: S24 RLS permitiu U2 inserir registro de U1';
+exception when insufficient_privilege then
+  raise notice 'ok: S24 RLS: U2 não insere registro de U1';
+end $$;
+reset role;
+set role anon;
+reset request.jwt.claim.sub;
+do $$
+begin
+  perform 1 from public.registros;
+  raise exception 'FALHOU: anon leu registros';
+exception when insufficient_privilege then
+  raise notice 'ok: anon sem acesso a registros';
+end $$;
+reset role;
+
 -- usuário removido leva junto suas linhas
 delete from auth.users where id = '11111111-1111-1111-1111-111111111111';
 select t.eq(count(*)::int, 0, 'on delete cascade em progress') from public.progress;
 select t.eq(count(*)::int, 0, 'on delete cascade em notes') from public.notes;
+select t.eq(count(*)::int, 0, 'on delete cascade em registros') from public.registros;
 
 \echo 'TODOS OS TESTES DO BANCO PASSARAM'

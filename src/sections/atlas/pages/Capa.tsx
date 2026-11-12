@@ -11,7 +11,7 @@ import s from "../Page.module.css";
 export function Capa() {
   const { area: a, paths } = useAtlas();
   const state = useAppState();
-  useTitle(a ? (a.meta.tituloPdf || a.meta.nome) : "Atlas");
+  useTitle(a ? (a.meta.tituloPdf || a.meta.nome) : "Letrume");
   if (!a) return null;
   const capa = a.meta.capa;
   const p = areaMarks(a, state);

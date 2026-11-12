@@ -62,3 +62,42 @@ describe("entrega privada de conteúdo", () => {
     expect(await response.text()).not.toContain("internal details");
   });
 });
+
+describe("arquivos de concurso (preparatório, K-C1)", () => {
+  async function raiz(): Promise<string> {
+    const { mkdtempSync, mkdirSync, writeFileSync } = await import("node:fs");
+    const { tmpdir } = await import("node:os");
+    const { join } = await import("node:path");
+    const root = mkdtempSync(join(tmpdir(), "atlas-srv-"));
+    const put = (rel: string, body: unknown) => { const p = join(root, "private", rel); mkdirSync(join(p, ".."), { recursive: true }); writeFileSync(p, JSON.stringify(body)); };
+    put("content/areas.json", { areas: [{ slug: "concursos", status: "disponivel", subtemas: [{ slug: "teste-2027", tipo: "concurso", status: "disponivel", arquivo: "content/teste-2027/concurso.json" }] }, { slug: "politica", status: "disponivel", arquivo: "content/politica/curriculum.json" }] });
+    put("content/teste-2027/concurso.json", { ok: "concurso" });
+    put("content/teste-2027/teoria/lp.json", { ok: "teoria" });
+    put("content/teste-2027/questoes/lp.json", [{ ok: "questoes" }]);
+    put("content/teste-2027/discursiva.json", [{ ok: "discursiva" }]);
+    put("content/politica/teoria/lp.json", { vazou: true });
+    return root;
+  }
+
+  it.each([
+    ["content/teste-2027/concurso.json", "concurso"],
+    ["content/teste-2027/teoria/lp.json", "teoria"],
+    ["content/teste-2027/questoes/lp.json", "questoes"],
+    ["content/teste-2027/discursiva.json", "discursiva"],
+  ])("entrega %s de um concurso do manifesto", async (file, marca) => {
+    const response = await serveContent(request(file), { config, authFetch, root: await raiz() });
+    expect(response.status).toBe(200);
+    expect(await response.text()).toContain(marca);
+    expect(response.headers.get("cache-control")).toBe("private, no-store");
+  });
+
+  it.each(["content/politica/teoria/lp.json", "content/teste-2027/teoria/../../politica/curriculum.json", "content/teste-2027/outro.json", "content/teste-2027/teoria/LP.json"])("não entrega %s", async file => {
+    const response = await serveContent(request(file), { config, authFetch, root: await raiz() });
+    expect(response.status).toBe(404);
+  });
+
+  it("concurso sem sessão não é entregue", async () => {
+    const response = await serveContent(request("content/teste-2027/questoes/lp.json", "forged-token"), { config, authFetch, root: await raiz() });
+    expect(response.status).toBe(401);
+  });
+});

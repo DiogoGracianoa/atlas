@@ -18,3 +18,6 @@ arquivo novo cita o antigo.
 | [0010](0010-conteudo-em-public.md) | Conteúdo como JSON estático em public/content |
 | [0011](0011-versoes-de-dependencias.md) | Versões exatas e publicadas há pelo menos 14 dias |
 | [0012](0012-acesso-e-conteudo-autenticados.md) | Login obrigatório e entrega autenticada de materiais, com conexão |
+| [0013](0013-dominio-canonico.md) | Nome Letrume e domínio canônico, com redirecionamento só depois de enviar as pendências |
+| [0014](0014-concurso-como-subtema-tipado.md) | Concurso como subtema tipado do Atlas (preparatório de concursos) |
+| [0015](0015-registros-genericos-sincronizados.md) | Registros genéricos sincronizados (tabela `registros`, backup v4) |

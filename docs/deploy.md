@@ -19,10 +19,13 @@ Tudo no painel (`supabase.com/dashboard`).
    [`supabase/migrations/0001_init.sql`](../supabase/migrations/0001_init.sql) →
    *Run*. Em *Table Editor*, confira `progress`, `notes`, `prefs` e
    `heartbeat`, todas com RLS ligado.
+   Depois, rode também [`supabase/migrations/0002_registros.sql`](../supabase/migrations/0002_registros.sql)
+   (registros do preparatório de concursos, ADR-0015) e confira a tabela
+   `registros` com RLS ligado. Em um projeto já em uso, rode só a 0002.
 3. **Criar a sua conta antes de fechar os cadastros.** *Authentication* →
    *Users* → *Add user* → *Create new user*: seu e-mail, uma senha inicial
    segura e *Auto Confirm User* marcado. Depois de entrar, a senha pode ser
-   definida ou alterada no painel de sincronização do Atlas.
+   definida ou alterada no painel de sincronização do Letrume.
 4. **Desligar novos cadastros.** *Authentication* → *Sign In / Providers* →
    desligue *Allow new users to sign up*. O app também pede login com
    `shouldCreateUser: false`.
@@ -35,7 +38,7 @@ Tudo no painel (`supabase.com/dashboard`).
    *Magic Link*:
 
    ```html
-   <h2>Entrar no Atlas</h2>
+   <h2>Entrar no Letrume</h2>
    <p><a href="{{ .ConfirmationURL }}">Entrar neste aparelho</a></p>
    <p>Ou digite o código: <b>{{ .Token }}</b></p>
    ```
@@ -61,6 +64,7 @@ Tudo no painel (`supabase.com/dashboard`).
    |---|---|
    | `VITE_SUPABASE_URL` | URL do projeto |
    | `VITE_SUPABASE_ANON_KEY` | chave pública |
+   | `VITE_ORIGEM_CANONICA` | `https://letrume.com.br` (só depois do passo 2.1) |
 
 3. *Deploy*. Anote o endereço e use-o no passo 5 do Supabase.
 4. Cada push em `main` publica de novo. Depois de mudar uma variável, refaça o
@@ -69,6 +73,32 @@ Tudo no painel (`supabase.com/dashboard`).
 
 Em desenvolvimento, as mesmas variáveis vão em `.env.local` (copie de
 `.env.example`), que nunca é versionado.
+
+## 2.1. Domínio letrume.com.br (ADR-0013)
+
+Feito pelo autor; nenhuma etapa é automática.
+
+1. **Vercel:** *Project* → *Settings* → *Domains* → *Add* `letrume.com.br` (e
+   `www.letrume.com.br`, redirecionando para o domínio sem `www`). A Vercel
+   mostra os registros DNS a criar.
+2. **registro.br:** em *DNS* do domínio, crie os registros indicados pela
+   Vercel (em geral `A` para o domínio raiz e `CNAME` para `www`). Espere a
+   Vercel marcar o domínio como válido e emitir o certificado.
+3. **Não** configure redirecionamento do endereço `*.vercel.app` para o domínio
+   novo na Vercel: os dois devem servir o mesmo deploy. Quem leva ao domínio
+   novo é o próprio app, depois de enviar o que está pendente no aparelho.
+4. **Variável:** em *Environment Variables*, acrescente
+   `VITE_ORIGEM_CANONICA` = `https://letrume.com.br` e refaça o deploy.
+5. **Supabase:** atualize *Site URL* e *Redirect URLs* (passo 5 da seção 1) e o
+   título dos modelos de e-mail para "Letrume".
+6. **Verificação (S15 da renomeação):**
+   - [ ] `https://letrume.com.br` abre o portal com o nome e o ícone Letrume.
+   - [ ] Pedir código em `/entrar`: o e-mail diz "Letrume" e o link volta para
+     `letrume.com.br`.
+   - [ ] Entrar no domínio novo: as marcações sincronizadas aparecem.
+   - [ ] No celular, abrir o endereço antigo com uma anotação feita offline:
+     ao reconectar, a anotação sobe e só então o navegador vai ao domínio novo.
+   - [ ] Reinstalar o app pela tela inicial a partir de `letrume.com.br`.
 
 ## 3. GitHub
 
@@ -118,7 +148,7 @@ Com dois aparelhos (celular e PC):
 - [ ] **Login pelo link no celular:** em `/entrar`, peça o login e abra o link
   no mesmo aparelho.
 - [ ] **Livro no celular, PC depois:** marque um livro como lido no celular,
-  abra o Atlas no PC e confira que está marcado.
+  abra o Letrume no PC e confira que está marcado.
 - [ ] **Sessão intercalada:** escreva uma anotação no PC e marque um vídeo no
   celular. Os dois aparelhos devem ter as duas coisas.
 - [ ] **Modo avião:**

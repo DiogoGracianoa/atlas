@@ -45,7 +45,7 @@ export function Mapa() {
   const { manifest } = useAtlas();
   const state = useAppState();
   const hid = useId();
-  useTitle("Mapa do Atlas · Atlas");
+  useTitle("Mapa do Atlas · Letrume");
   const isGroup = (a: AreaMeta) => !!a.subtemas?.length;
   const folhaAberta = (a: AreaMeta) => a.status === "disponivel" && !!a.arquivo;
   // só o que existe: agrupador aparece se tiver subtema disponível; planejado não aparece

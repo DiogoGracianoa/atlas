@@ -1,0 +1,70 @@
+/* Telas do preparatório: mesmas cores, fontes e medidas das páginas do atlas. */
+.tabs {
+  max-width: calc(var(--measure) + 2 * var(--gutter)); margin: 0 auto; padding: 12px var(--gutter) 0;
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.tabs a {
+  display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border-radius: 999px;
+  border: 1px solid var(--line); color: var(--text); text-decoration: none; font-weight: 600; font-size: .9rem;
+}
+.tabs a[aria-current="page"] { background: var(--brand); color: var(--on-brand); border-color: var(--brand); }
+
+.cards { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+@media (min-width: 640px) { .cards.two { grid-template-columns: 1fr 1fr; } }
+.box { padding: 16px 18px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
+.box h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.box p { margin: 0 0 6px; line-height: 1.55; }
+.big { font-family: var(--font-read); font-size: 1.6rem; font-weight: 700; margin: 0 0 4px; }
+.note { color: var(--muted); font-size: .9rem; line-height: 1.5; margin: 6px 0 0; }
+
+.selo, .sugestao {
+  display: inline-flex; align-items: center; padding: 2px 10px; border-radius: 999px; font-size: .78rem; font-weight: 700;
+  border: 1px solid currentColor;
+}
+.selo[data-v="verificado"] { color: var(--success); }
+.selo[data-v="pendente"], .selo[data-v="divergente"] { color: var(--danger, #A4213A); }
+.selo[data-v="opcional"] { color: var(--muted); }
+.sugestao { color: var(--muted); font-weight: 600; }
+
+.semana { padding: 16px 18px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--surface); }
+.semana[aria-current="true"] { border-color: var(--brand); box-shadow: 0 0 0 1px var(--brand); }
+.semana h3 { margin: 0 0 4px; font-size: 1.08rem; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 8px 0; }
+.discs { display: grid; gap: 8px; margin: 10px 0 0; }
+.disc { border-left: 3px solid var(--accent, var(--brand)); padding-left: 10px; }
+.disc b { display: block; font-size: .85rem; letter-spacing: .04em; }
+.topicos { margin: 4px 0 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+.topicos a { color: var(--text); }
+.estado { color: var(--muted); font-size: .85rem; margin-left: 6px; }
+
+.form { display: grid; gap: 6px; margin-top: 10px; min-width: 0; }
+.form label { font-weight: 600; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.input, .select, .textarea {
+  min-height: 44px; padding: 0 12px; border-radius: var(--radius-sm); border: 1px solid var(--control);
+  background: var(--bg); color: var(--text); font: inherit; max-width: 100%;
+}
+.input { width: 8em; }
+.select { width: 100%; min-width: 0; text-overflow: ellipsis; }
+.textarea { width: 100%; min-height: 96px; padding: 10px 12px; }
+.controls { display: grid; gap: 14px; min-width: 0; }
+@media (min-width: 640px) { .controls { grid-template-columns: 1fr 1fr; } }
+.ok { color: var(--success); margin: 0; min-height: 1.4em; }
+.erro { color: var(--danger, #A4213A); margin: 0; min-height: 1.4em; }
+
+.alternativas { border: 0; margin: 12px 0; padding: 0; display: grid; gap: 8px; }
+.alternativas legend { font-weight: 700; margin-bottom: 6px; }
+.alt {
+  display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border-radius: var(--radius-sm);
+  border: 1px solid var(--line); background: var(--surface); cursor: pointer; line-height: 1.5;
+}
+.alt input { margin-top: 4px; }
+.alt[data-r="certa"] { border-color: var(--success); }
+.alt[data-r="errada"] { border-color: var(--danger, #A4213A); }
+.resultado { margin-top: 12px; }
+.timer { font-variant-numeric: tabular-nums; font-weight: 700; }
+.lista { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+
+/* Textos do concurso trazem endereços IP/IPv6, comandos e URLs sem espaço:
+   quebram em qualquer ponto para não criar rolagem lateral a 320 px. */
+.texto p, .texto li, .texto dd, .texto dt, .texto span, .texto legend { overflow-wrap: anywhere; }

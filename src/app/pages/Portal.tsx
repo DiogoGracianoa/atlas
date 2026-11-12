@@ -33,7 +33,7 @@ export function Portal({ sections }: { sections: Section[] }) {
     <div className={s.page}>
       <section className={s.hero} aria-labelledby="portal-titulo">
         <p className={s.kicker}>Portal de estudos</p>
-        <h1 id="portal-titulo" className={s.title}>Atlas</h1>
+        <h1 id="portal-titulo" className={s.title}>Letrume</h1>
         <p className={s.lead}>
           Trilhas para estudar por conta própria, com explicação, vídeo e livro em cada tema,
           progresso salvo no aparelho e funcionamento offline.

@@ -110,6 +110,8 @@ it("oferece senha por padrão e permite entrar sem envio de e-mail", async () =>
   const fake = fakeSupabase();
   const view = renderApp("/entrar", { config: CONFIG, syncOptions: { loadSupabase: fake.loadSupabase } });
   await boot(view);
+  expect(document.title).toBe("Entrar · Letrume");
+  expect(screen.getByText(/acessar o Letrume/)).toBeTruthy();
   await view.user.type(screen.getByLabelText("E-mail"), "eu@exemplo.com");
   await view.user.type(screen.getByLabelText("Senha"), "senha correta");
   await view.user.click(screen.getByRole("button", { name: "Entrar" }));

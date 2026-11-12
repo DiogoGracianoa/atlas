@@ -111,7 +111,7 @@ export function LoginForm({ onDone }: { onDone?: () => void }) {
   }
   if (step === "senha") return (
     <form className={s.form} onSubmit={entrarSenha}>
-      <p>Entre com seu e-mail e senha para acessar o Atlas.</p>
+      <p>Entre com seu e-mail e senha para acessar o Letrume.</p>
       <label htmlFor={emailId} className={s.label}>E-mail</label>
       <input id={emailId} className={s.field} type="email" autoComplete="email" value={email} onChange={e => setEmail(e.target.value)} />
       <label htmlFor={codeId} className={s.label}>Senha</label>
@@ -123,7 +123,7 @@ export function LoginForm({ onDone }: { onDone?: () => void }) {
   );
   return (
     <form className={s.form} onSubmit={pedir}>
-      <p>Entre com seu e-mail para acessar o Atlas. Enviamos um link e um código de 6 dígitos.</p>
+      <p>Entre com seu e-mail para acessar o Letrume. Enviamos um link e um código de 6 dígitos.</p>
       <label htmlFor={emailId} className={s.label}>E-mail</label>
       <input id={emailId} className={s.field} type="email" autoComplete="email" inputMode="email"
         placeholder="seu@email.com" value={email} onChange={e => setEmail(e.target.value)} />

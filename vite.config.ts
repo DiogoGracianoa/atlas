@@ -27,8 +27,9 @@ export default defineConfig(({ mode }) => {
         globIgnores: ["content/**", "assets/diagramas/**"],
       },
       manifest: {
-        name: "Atlas · Portal de estudos",
-        short_name: "Atlas",
+        id: "/",
+        name: "Letrume",
+        short_name: "Letrume",
         description: "Trilhas de estudo autodirigido com progresso salvo e sincronizado.",
         lang: "pt-BR",
         start_url: "/",

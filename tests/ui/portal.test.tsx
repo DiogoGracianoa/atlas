@@ -6,7 +6,8 @@ import { axeViolations, memoryStorage, renderApp } from "./harness";
 describe("portal", () => {
   it("lista só as seções que existem: Atlas com link; Dossiês (planejada) não aparece", async () => {
     renderApp("/");
-    expect(await screen.findByRole("heading", { level: 1, name: "Atlas" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { level: 1, name: "Letrume" })).toBeTruthy();
+    expect(screen.getByRole("link", { name: "Letrume, página inicial" }).getAttribute("href")).toBe("/");
     const lista = screen.getByRole("list", { name: "Seções" });
     const atlas = within(lista).getByRole("link", { name: /Atlas de estudos/ });
     expect(atlas.getAttribute("href")).toBe("/atlas");

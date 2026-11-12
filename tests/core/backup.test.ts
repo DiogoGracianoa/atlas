@@ -25,7 +25,7 @@ const state = () => ({
 
 test("exporta v3 com todas as áreas e horários, sem base", () => {
   const out = exportBackup(state(), NOW);
-  assert.equal(out.app, "Atlas de Estudos");
+  assert.equal(out.app, "Letrume");
   assert.equal(out.version, 3);
   assert.equal(out.exportedAt, NOW);
   assert.deepEqual(out.marks, state().marks);
@@ -34,6 +34,12 @@ test("exporta v3 com todas as áreas e horários, sem base", () => {
     "historia/m2of": { body: "", at: "2026-11-04T10:00:00.000Z" }
   });
   assert.equal(out.lastAt!.route, "politica/m1e1");
+});
+
+test("v3 exportado com o nome antigo (Atlas de Estudos) continua importável", () => {
+  const antigo = { app: "Atlas de Estudos", version: 3, exportedAt: NOW, marks: { "historia/m3e1:def": { done: true, at: "2026-11-05T00:00:00.000Z" } }, notes: {}, lastAt: null };
+  const ops = planImport(state(), antigo, { now: NOW, fmt });
+  assert.deepEqual(ops, [{ type: "mark", key: "historia/m3e1:def", value: { done: true, at: "2026-11-05T00:00:00.000Z" } }]);
 });
 
 test("v2: mescla marcações, prefixa politica/ e usa o horário da importação", () => {
@@ -96,4 +102,19 @@ test("conflictBody: lados vazios não geram marcador", () => {
   assert.equal(conflictBody("B", "", "2026-11-04T10:00:00.000Z", fmt), "B");
   assert.equal(conflictBody("", "A", "2026-11-04T10:00:00.000Z", fmt), "— versão de outro aparelho (04/11/2026 10:00) —\nA");
   assert.equal(conflictBody("A", "A", "2026-11-04T10:00:00.000Z", fmt), "A");
+});
+
+// Preparatório (S48, KB4): o backup leva e traz os registros.
+test("v4: exporta registros e importa só os mais recentes", async () => {
+  const { exportBackup: exp, planImportRegistros } = await import("../../src/core/backup");
+  const regs = [{ tipo: "topico", id: "contagem-2027/lp-crase", area: "contagem-2027", corpo: { estado: "concluido" }, at: "2026-12-01T10:00:00.000Z" }];
+  const out = exp(state(), NOW, regs);
+  assert.equal(out.version, 4);
+  assert.equal(out.app, "Letrume");
+  assert.deepEqual((out as { registros: unknown }).registros, { "topico:contagem-2027/lp-crase": { area: "contagem-2027", corpo: { estado: "concluido" }, at: "2026-12-01T10:00:00.000Z" } });
+  const ops = planImport(state(), out, { now: NOW, fmt });
+  assert.deepEqual(ops, []);
+  assert.deepEqual(planImportRegistros(out), regs);
+  assert.deepEqual(planImportRegistros({ version: 3, marks: {}, notes: {} }), []);
+  assert.deepEqual(planImportRegistros({ version: 4, marks: {}, notes: {}, registros: { "topico:x": { area: "A B", corpo: {}, at: NOW }, "ruim": 3 } }), []);
 });

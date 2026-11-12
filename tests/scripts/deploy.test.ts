@@ -61,3 +61,30 @@ describe(".vercelignore", () => {
     for (const p of ["index.html", "src", "public", "package.json", "package-lock.json", "vite.config.ts", "tsconfig.json"]) expect(has(p), p).toBe(false);
   });
 });
+
+describe("manifesto do app instalado (renomeação, S04)", () => {
+  const cfg = readFileSync("vite.config.ts", "utf8");
+  it("chama o app de Letrume e mantém a identidade do app instalado", () => {
+    expect(cfg).toMatch(/\bname: "Letrume"/);
+    expect(cfg).toMatch(/\bshort_name: "Letrume"/);
+    expect(cfg).toMatch(/\bid: "\/"/);
+    expect(cfg).toMatch(/start_url: "\/"/);
+  });
+  it("título da página é Letrume", () => {
+    expect(readFileSync("index.html", "utf8")).toContain("<title>Letrume</title>");
+  });
+});
+
+describe("ícone Letrume (renomeação, S10)", () => {
+  it("o ícone do site é a chama aprovada, não o globo", () => {
+    const svg = readFileSync("public/icon.svg", "utf8");
+    expect(svg).not.toContain('r="150"');
+    expect(svg).toContain("M256 92c34 40 50 72 50 100");
+  });
+  it("o logo do cabeçalho também é a chama", () => {
+    const layout = readFileSync("src/app/Layout.tsx", "utf8");
+    expect(layout).not.toContain('r="13"');
+    expect(layout).toMatch(/className=\{s\.logo\}/);
+    expect(layout).toContain("M16 4.5");
+  });
+});

@@ -2,7 +2,7 @@
 import { expect, test } from "./fixtures";
 
 const paginas: [string, string][] = [
-  ["/", "Atlas"],
+  ["/", "Letrume"],
   ["/atlas", "Mapa do Atlas"],
   ["/atlas/politica", "Atlas de política, economia e marxismo"],
   ["/atlas/politica/m8e3", "Marx: dívida pública, impostos e capital fictício"],
